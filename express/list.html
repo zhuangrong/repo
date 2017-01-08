@@ -10,7 +10,9 @@
 <script>
 $(function(){
 	$.TabChange("tabs",1)
-	/*tabs切换组件*/
+	
+})
+/*tabs切换组件*/
 	$.TabChange = function(obj,num){
 		$("li","#" + obj).each(function(index){
 				$(this).click(function(i){
@@ -19,7 +21,6 @@ $(function(){
 				})													
 		})
 	}
-})
 </script>
 </head>
 <body>
@@ -31,16 +32,27 @@ $(function(){
 		<li>定制订单</li>
 	</ul>
 </div>
-<div class="tab-box1">
-	<div>内容1</div>
-	<div>内容2</div>
-	<div>内容3</div>
+<div class="tab-box1 tab-centent">
+	<div>
+		<div class="list-item">
+			<dl>
+				<dt>订单编号：HHFOHUGFJIP689567980</dt>
+				<dd>
+					<p>商品名称：快递xxx</p>
+					<p>下单日期：2017年1月3日 17:44 </p>
+					<p>支付金额：5元</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div style="display:none">内容2</div>
+	<div style="display:none">内容333333</div>
 </div>
 <!--导航-->
 <nav>
-	<a href="#" class="active"><i class="icon-home"></i>首页</a>
+	<a href="#"><i class="icon-home"></i>首页</a>
 	<a href="#"><i class="icon-push"></i>发布</a>
-	<a href="#"><i class="icon-user"></i>个人中心</a>
+	<a href="#" class="active"><i class="icon-user"></i>个人中心</a>
 </nav>
 <!--//导航-->
 </body>
