@@ -1,0 +1,178 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size: 16px;
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+ 
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+ 
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-user-select:none;
+	border:none;
+  outline:0;
+}
+input[type=text], textarea {
+	background-color: #fff;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.text-right {
+	text-align: right;
+}
+.inline {
+	display: inline-block !important;
+}
+.clearfix {
+ *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+
+/*内容*/
+.banner{
+	position: relative;
+	height: 194px;
+	background-image: url(../images/banner.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:cover !important;
+}
+.module{
+	padding:0 10px 5px;
+}
+.module a{
+	display: block;
+	margin-top: 5px;
+}
+/*导航*/
+/*flex-tab*/
+nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	height: 44px;
+	border-top: 1px solid  #ccc;
+}
+nav a{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	width:0%;/*必须有*/
+	display: block;
+	height:44px;
+	line-height: 44px;
+	text-align:center;
+	color: #808080;
+}
+nav a.active{
+	color: #02b2f8;
+}
+nav a i{
+	display: inline-block;
+	width: 20px;
+	height: 35px;	
+	vertical-align: middle;
+	margin: 0 5px 5px;
+}
+nav a i.icon-home{	
+	background-image: url(../images/icon-home.png);
+}
+nav a.active i.icon-home{	
+	background-image: url(../images/icon-home-active.png);
+}
+nav a i.icon-push{	
+	background-image: url(../images/icon-push.png);
+}
+nav a.active i.icon-push{	
+	background-image: url(../images/icon-push-active.png);
+}
+nav a i.icon-user{	
+	background-image: url(../images/icon-user.png);
+}
+nav a.active i.icon-user{	
+	background-image: url(../images/icon-user-active.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
