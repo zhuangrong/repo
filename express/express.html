@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/express.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+	//添加一个编号
+	var postalCode = '<li>'
+											+'<span></span>'
+											+'<input type="text">'
+											+'<button class="add none"></button>'
+										+'</li>'
+	
+	$("#add").one("click",function(){
+		 $(this).parent().after(postalCode)
+	})
+})
+</script>
+</head>
+<body class="bgWhite">
+<div class="banner"></div>
+<!--温馨提示-->
+<div class="tips c2">
+	<p>温馨提示：</p>
+	<p>快递代寄5元每次，快递代拿3元每次，2个快递3元（限本 人）。有任何问题可咨询客服。</p>
+</div>
+<!--充值-->
+<div class="payment">
+	<ul>
+		<li>
+			<span>姓&nbsp;&nbsp;&nbsp;&nbsp;名</span>
+			<input type="text" placeholder="">
+		</li>
+		<li>
+			<span>联系方式</span>
+			<input type="text" placeholder="">
+		</li>
+		<li>
+			<span>快递公司</span>
+			<input type="text" placeholder="">
+		</li>
+		<li>
+			<span>四位编号</span>
+			<input type="text" placeholder="">
+			<button class="add" id="add"></button>
+		</li>
+		<li>
+			<span>送达地址</span>
+			<textarea name="payipt"></textarea>
+		</li>
+		<li>
+			<button class="btn">完成</button>
+		</li>
+	</ul>
+</div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-home"></i>首页</a>
+	<a href="#"><i class="icon-push"></i>发布</a>
+	<a href="#"><i class="icon-user"></i>个人中心</a>
+</nav>
+<!--//导航-->
+</body>
+</html>
