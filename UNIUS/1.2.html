@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>unius</title>
+<link rel="stylesheet" href="css/unius.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	
+})
+</script>
+</head>
+<body>
+<div class="app-name">名称名称22</div>
+<div class="header">
+	<a href="#" class="icon-search"></a>
+	<a href="#" class="icon-comment"></a>
+  <input type="text">
+</div>
+<div class="intro-padding">
+  <!-- introduce -->
+  <div id="introduce" class="swiper-container intro-wrap bh2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="info-box">
+          <img src="images/pic.png">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="info-box">2</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="info-box">3</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="info-box">4</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="info-box">5</div>
+      </div>
+    </div>
+  </div>
+	<script>
+  var swiper2 = new Swiper('#introduce', {
+        slidesPerView : 'auto',
+        centeredSlides: true,
+        paginationClickable: true,
+        loop : true,
+        loopedSlides :5, 
+        spaceBetween: 20
+  });
+  </script>
+  <!-- //introduce -->
+</div>
+<div class="guide-wrap">
+<!-- guideline -->
+<div id="guideline" class="swiper-container guide">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="guide-box">指南</div>
+    </div>
+    <div class="swiper-slide">
+      <div class="guide-box">定制</div>
+    </div>
+    <div class="swiper-slide">
+      <div class="guide-box">评价</div>
+    </div>
+    <div class="swiper-slide">
+      <div class="guide-box">其他</div>
+    </div>
+    <div class="swiper-slide">
+      <div class="guide-box">信息</div>
+    </div>
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script>
+var swiper3 = new Swiper('#guideline', {
+      slidesPerView : 3,
+      paginationClickable: true,
+      loop : true,
+      loopedSlides :5, 
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      spaceBetween: 20
+});
+</script>
+<!-- //guideline -->
+<!-- 列表 -->
+<div class="list">
+	<dl>
+  	<dt><img src="images/avatar.png"></dt>
+    <dd>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</dd>
+  </dl>
+	<dl>
+  	<dt><img src="images/avatar.png"></dt>
+    <dd>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</dd>
+  </dl>
+	<dl>
+  	<dt><img src="images/avatar.png"></dt>
+    <dd>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</dd>
+  </dl>
+</div>
+<!-- //列表 -->
+
+<div class=""></div>
+</div>
+</body>
+</html>

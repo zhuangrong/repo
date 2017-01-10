@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>unius</title>
+<link rel="stylesheet" href="css/unius.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	
+})
+</script>
+</head>
+<body>
+<div class="app-name">名称名称</div>
+<div class="header">
+	<a href="#" class="icon-search"></a>
+	<a href="#" class="icon-comment"></a>
+  <input type="text">
+</div>
+<!--company -->
+<div id="company" class="swiper-container comp-wrap">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称1</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称2</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称3</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称4</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称5</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称6</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称7</label>
+    </div>
+    <div class="swiper-slide">
+    	<i class="comp-pic" style="background-image:url(images/logo.png)"></i><label>名称8</label>
+    </div>
+  </div>
+</div>
+<script>
+var swiper1 = new Swiper('#company', {
+        slidesPerView : 'auto',
+        centeredSlides: true,
+        paginationClickable: true,
+        loop : true,
+        loopedSlides :5, 
+        spaceBetween: 0
+});
+</script>
+<!-- //company -->
+<!--产品-->
+<div class="nav-title">产品项目<i class="icon-back"></i></div>
+<div class="product">
+	<ul>
+  	<li>文字文字文字文字</li>
+  	<li>文字文字文字文字</li>
+  	<li>文字文字文字文字文字文</li>
+  	<li>文字文字文字文字</li>
+  	<li>文字文字文字文字</li>
+  	<li>文字文字文字文字</li>
+  </ul>
+</div>
+<!--//产品-->
+</body>
+</html>
