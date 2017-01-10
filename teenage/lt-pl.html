@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+
+<script>
+
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	//分享
+	$("#icon-share").click(function(){
+		$(".share-pop").show();	
+	})
+	$(".share-pop").click(function(e){
+		e.preventDefault();
+		$(".share-pop").hide();	
+	})
+	//评论
+	$("#icon-comment").click(function(){
+		$("#comment-box").show();
+		$("#mask").show();
+		$("#comment-tool").fadeOut("15");
+	})
+	$("#mask").on("click",function(e){
+		 	e.preventDefault();
+			$("#comment-box").hide();
+			$("#comment-tool").show();
+			$("#mask").hide();
+	})
+	//分享
+	$(".share-pop").click(function(e){
+		e.preventDefault();
+		$(".share-pop").hide();	
+	})
+	
+	//加载更多
+	$("#load-more").click(function(){
+		   $(".load-more-wrap").html("<i></i><span>正在加载中...</span>");
+	})
+
+})
+</script>
+<style>
+/*2016-7-7*/
+.load-more-wrap{
+	padding:10px 0;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: box;
+	box-orient: horizontal;
+	box-pack: center;
+	box-align: center;
+}
+.load-more-wrap i,.load-more-wrap span{
+	display:inline-block;
+	margin:0 2px;
+}
+.load-more-wrap i{
+	width:18px;
+	height:18px;
+	vertical-align:middle;
+	margin:0 5px 3px 0;
+	background:url(images/loading.gif) no-repeat;
+	background-size:contain;
+	-webkit-animation: loadding 1.8s linear infinite;
+}
+@-webkit-keyframes loadding {
+    from { -webkit-transform:rotateZ(0deg); }
+    50% { -webkit-transform:rotateZ(180deg); }
+    to { -webkit-transform:rotateZ(360deg); }
+}
+</style>
+</head>
+<body class="bg-personal body-pb">
+<header class="personal">
+	<div class="avatar-header"><i style="background-image:url(images/avatar.png)"></i>用户名称</div>
+    <a href="javascript:void(0)" class="icon-fav-header">收藏</a>
+</header>
+<div class="news-title"> 
+	<h3>帖子标题XXXXXX</h3>
+    <small>2016-06-08  11:17</small>
+</div>
+<div class="activity-banner">
+    <img src="images/activity-pic-l.png">
+</div>
+<div class="activity-detail bg-white c-black">
+	<p>少年时是面向1-15岁儿童的亲子活动服务平台</p>
+    <p>结合海外素质教育方式</p>
+    <p>结合海外素质教育方式</p>
+    <div class="reader-number">
+        阅读数：20
+    </div>
+</div>
+<!--comment list-->
+<div class="comment-title">全部评论</div>
+<div class="activity-list comment-list comment-md">
+    <ul>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="activity-info">
+            <dt>用户名称<label>2016-06-11  11:17</label></dt>
+            <dd class="summary">
+                <p>活动不错，有趣。</p>
+            </dd>
+          </dl>
+       </li>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="activity-info">
+            <dt>用户名称<label>2016-06-11  11:17</label></dt>
+            <dd class="summary">
+                <p>活动不错，有趣。</p>
+            </dd>
+          </dl>
+       </li>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="activity-info">
+            <dt>用户名称<label>2016-06-11  11:17</label></dt>
+            <dd class="summary">
+                <p>活动不错，有趣。</p>
+            </dd>
+          </dl>
+       </li>
+    </ul>
+</div>
+<div class="load-more-wrap">
+	<button class="btn-default" id="load-more">加载更多</button>
+</div>
+<!--comment list-->
+<div class="comment-tool" id="comment-tool">
+	<ul>
+    	<li><i class="icon-like-l"><label>500</label></i></li>
+    	<li id="icon-comment"><i class="icon-comment"></i></li>
+    	<li id="icon-share"><i class="icon-share"></i></li>
+    </ul>
+</div>
+<div class="share-pop" style="display:none">
+	<img src="images/share.png">
+</div>
+<div class="comment" id="comment-box" style="display:none">
+    <input type="text" placeholder="请发送评论">
+    <button class="btn-send">发送</button>
+</div>
+<div id="mask"></div>
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

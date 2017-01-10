@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/iscroll.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	//document.body.addEventListener('touchstart', function(){});
+	$.TabChange("activity-tabs",1)
+	$.TabChange("sub-tabs",2)
+	
+	/*Siwper幻灯片*/
+	var swiper = new Swiper('#slide01', {
+						pagination: '.swiper-pagination',
+					 });
+					 
+	/*Siwper幻灯片 论坛*/		
+	$("#tabs-lt").one("click", function(){
+			var swiper = new Swiper('#slide02', {
+							pagination: '.ts2',
+						 });
+	});
+
+})
+/*tabs切换*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab_box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+				if(index==1){
+					setTimeout(function () {
+                            myScroll.refresh();
+					}, 0)
+				}
+			})													
+	})
+}
+/*iscroll*/
+
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper',{
+			tap:true,
+			click:false, 
+			preventDefaultException:{tagName:/.*/}//解除默认事件锁定，调用tab，click等事件,不支持swipeleft
+		});
+}
+
+
+</script>
+<style>
+body {
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	height: 69px;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller {
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	padding-bottom:10px;
+}
+
+/*update 7-26*/
+#slide01,#slide02,#slide03{
+	height:auto;
+	background:#ddd;
+}
+.swiper-pagination{
+	top:auto;
+	bottom:5px !important;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.swiper-pagination-bullet{
+	width:5px !important;
+	height:5px !important;
+	background:#fff !important;
+	margin:0 3px !important;
+}
+.swiper-pagination-bullet-active {
+	background: #fff !important;
+}
+
+</style>
+
+
+</head>
+<body class="bg-personal" onload="loaded()">
+
+<div class="activity-tabs t3">
+    <ul id="activity-tabs">
+        <li class="curr">资讯</li>
+        <li id="tabs-lt">论坛</li>
+        <li><i class="icon-man"></i></li>
+    </ul>
+</div>
+
+
+<div class="tab_box1">
+  <div>
+    <!--资讯-->
+    <!--幻灯片-->
+    <section class="swiper-container" id="slide01">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+           </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </section>
+    <!--//幻灯片-->
+    <!--sub tabs-->
+    <div data-role="tabs-content">
+       <div class="activity-tabs t5 bg-none swiper-container">
+        <ul id="sub-tabs"  class="swiper-wrapper">
+            <li class="swiper-slide curr">少年1</li>
+            <li class="swiper-slide">少年2</li>
+            <li class="swiper-slide">少年3</li>
+            <li class="swiper-slide">少年4</li>
+            <li class="swiper-slide">少年5</li>
+            <li class="swiper-slide">少年6</li>
+            <li class="swiper-slide">少年7</li>
+            <li class="swiper-slide">少年8</li>
+            <li class="swiper-slide">少年9</li>
+        </ul>
+       </div>  
+		<script>
+        var swiper = new Swiper('.t5', {
+            slidesPerView: 5,
+            freeMode: true
+        });
+        </script>
+        <div class="tab_box2">
+        	<div>
+               <div class="activity-list list-blank">
+                <ul>
+                  <li>
+                  	  <a href="lt-zxxq.html">
+                          <div class="activity-pic" style="background-image:url(images/activity-pic.png)"></div>
+                          <dl class="activity-info">
+                            <dt>资讯标题XXXXXX</dt>
+                            <dd>
+                                <p>帖子简介：</p>
+                                <p>XXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            </dd>
+                            <dd>
+                                <i class="icon-like"></i>
+                                <span class="c-red">500</span>
+                                <label class="info-tips">2016-06-08</label>
+                            </dd>
+                          </dl>
+                      </a>
+                  </li>
+                  <li>
+                  	  <a href="lt-zxxq.html">
+                          <div class="activity-pic" style="background-image:url(images/activity-pic.png)"></div>
+                          <dl class="activity-info">
+                            <dt>资讯标题XXXXXX</dt>
+                            <dd>
+                                <p>帖子简介：</p>
+                                <p>XXXXXXXXXXXXXXXXXXXXXXXX</p>
+                            </dd>
+                            <dd>
+                                <i class="icon-like"></i>
+                                <span class="c-red">500</span>
+                                <label class="info-tips">2016-06-08</label>
+                            </dd>
+                          </dl>
+                      </a>
+                  </li>
+                 </ul>
+                </div>
+            </div>
+        	<div style="display:none">少年2</div>
+        	<div style="display:none">少年3</div>
+        	<div style="display:none">少年4</div>
+        	<div style="display:none">少年5</div>
+        	<div style="display:none">少年6</div>
+        	<div style="display:none">少年7</div>
+        	<div style="display:none">少年8</div>
+        	<div style="display:none">少年9</div>
+        </div>
+    </div>
+    <!--//sub tabs-->
+    <!--//资讯-->
+  </div>
+  <div  style="display:none">
+    <!--论坛-->
+    <!--幻灯片-->
+    <section class="swiper-container" id="slide02">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/activity-pic-l.png">
+           </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination ts2"></div>
+    </section>
+    <!--//幻灯片-->
+    <!--顶-->
+    <div class="article-ding" id="wrapper">
+        <ul id="scroller">
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+            <li><a href="lt-pl.html"><i class="ding"></i> 帖子标题帖子标题帖子标题XXXXXX帖子标题XXXXXX</a></li>
+        </ul>
+    </div>
+    <!--//顶-->
+    <div data-role="lt-comb"> 
+        <div class="activity-list comment-list list-sm">
+            <ul>
+              <li>
+                  <div class="activity-pic" style="background-image:url(images/avatar.png)"></div>
+                  <dl class="activity-info">
+                    <dt>用户名称</dt>
+                    <dd>2016-06-11 11:17</dd>
+                  </dl>
+               </li>
+            </ul>
+        </div>
+        <div class="activity-list list-blank">
+            <ul>
+              <li>
+              	<a href="lt-pl.html">
+                  <div class="activity-pic" style="background-image:url(images/activity-pic.png)"></div>
+                  <dl class="activity-info">
+                    <dt>帖子标题XXXXXX</dt>
+                    <dd>
+                        <p>帖子简介：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                    </dd>
+                    <dd>
+                        <i class="icon-like"></i>
+                        <span class="c-red">500</span>
+                        <label class="info-tips"><em class="c-blue">xx</em> 评论</label>
+                    </dd>
+                  </dl>
+                 </a>  
+              </li>
+             </ul>
+         </div>
+     </div>
+     <a href="lt-ft.html" class="icon-publish"></a>
+    <!--//b-->
+  </div>
+  <div style="display:none">
+    <!--c-->
+  	c
+    <!--//c-->
+  </div>
+</div>
+
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

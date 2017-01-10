@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/iscroll.js"></script> 
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	
+	/*弹出导航菜单*/
+	$("#city").on("click",function(e){
+		 	e.preventDefault();
+			$("#city-pop").show();
+			$("#mask").show();
+	})
+	
+	$("#mask").on("click",function(e){
+		 	e.preventDefault();
+			$("#city-pop").hide();
+			$("#mask").hide();
+	})
+	$("#city-pop li").on("click",function(){
+			$("#mask").hide();
+			$("#city-pop").fadeOut("15");
+	})
+	/*分类选择*/
+	var flag;
+	$("#category-tabs li").each(function(index){
+		$(this).click(function(e){
+			e.preventDefault();
+			if($(this).hasClass("active")){
+				$(".dropdown-mask").hide();	
+				$("#dropdown div").eq(index).hide();
+				$("#category-tabs li").removeClass("active");
+			}else{
+				$(".dropdown-mask").show();
+				$(this).addClass("active").siblings().removeClass("active");
+				$("#dropdown > div").eq(index).show().siblings().hide();
+				if(index==0){
+					setTimeout(function () {
+                            myScroll.refresh();
+					}, 0)	
+				}
+			}
+			flag=index;
+		})	
+	})
+	
+	$(".dropdown-mask").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dropdown div").eq(flag).hide();
+		$("#category-tabs li").removeClass("active");
+	})
+	
+	$("#dropdown li").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dropdown div").eq(flag).fadeOut("15");
+		$("#category-tabs li").removeClass("active");
+	})
+	
+})
+//滚动
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper',{
+			tap:true,
+			click:false, 
+			preventDefaultException:{tagName:/.*/}//解除默认事件锁定，调用tab，click等事件,不支持swipeleft
+		});
+}
+
+</script>
+<style>
+#wrapper {
+	position:absolute;
+	height: 120px;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+#scroller {
+	position: absolute;
+	left:5px;
+	right:5px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+</style>
+
+</head>
+<body onload="loaded()">
+<!--header-->
+<header class="activity-header">
+	<a href="javascript:void(0)" class="city-select" id="city">厦门市</a>
+    <a href="hd-wz.html"><i class="icon-location"></i>厦门市思明区xx路xx广场</a>
+	<a href="javascript:void(0)" class="icon-search"></a>
+</header>
+<!--//header-->
+<!--城市选择-->
+<div class="dropdown city-pop" id="city-pop" style="display:none">
+    <div>
+        <ul>
+            <li>厦门市</li>
+            <li>福州市</li>
+            <li>泉州市</li>
+        </ul>
+    </div>
+</div>
+<div id="mask"></div>
+<!--//城市选择-->
+<div class="dropdown-mask"></div>
+<div class="category">
+	<div class="category-tabs" id="category-tabs">
+        <ul>
+            <li>活动分类<i></i></li>
+            <li>偏好选择<i></i></li>
+            <li>适用年龄<i></i></li>
+        </ul>
+    </div>
+    <div id="dropdown" class="dropdown">
+        <div style="display:none" id="wrapper">
+            <ul id="scroller">
+            	<li><i class="icon-s-c1"></i>全部活动</li>
+            	<li><i class="icon-s-c2"></i>亲子旅游</li>
+            	<li><i class="icon-s-c3"></i>亲子周边游</li>
+            	<li><i class="icon-s-c4"></i>兴趣班</li>
+            	<li><i class="icon-s-c5"></i>兴趣班</li>
+            	<li><i class="icon-s-c6"></i>夏令营</li>
+            	<li><i class="icon-s-c7"></i>教学</li>
+            	<li><i class="icon-s-c8"></i>团队定制</li>
+            </ul>
+        </div>
+        <div style="display:none">
+            <ul>
+            	<li><i class="icon-s-c21"></i>价格最低</li>
+            	<li><i class="icon-s-c22"></i>距离最近</li>
+            	<li><i class="icon-s-c23"></i>时间最近</li>
+            </ul>
+        </div>
+        <div style="display:none">
+            	<li><i class="icon-s-c31"></i>不限年龄</li>
+            	<li><i class="icon-s-c32"></i>0-3岁</li>
+            	<li><i class="icon-s-c33"></i>4-7岁</li>
+            	<li><i class="icon-s-c34"></i>8-11岁</li>
+            	<li><i class="icon-s-c35"></i>12-15岁</li>
+            	<li><i class="icon-s-c36"></i>16-18岁</li>
+        </div>
+    </div>
+</div>
+<div class="system-msg">
+	<i class="icon-msg-o"></i>系统消息:XXXXXXXXXXXXXXXXXXXXX
+</div>
+<!--全部-->
+<div class="activity-list">
+<ul>
+  <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称1<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+   <li>
+      <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"><span class="pic-tip">推荐</span></div>
+      <dl class="activity-info">
+        <dt>活动名称2<label>1.31千米</label></dt>
+        <dd>
+            <p>适用年龄：7-15岁 </p>
+            <p>活动时间：2016-06-08 </p>
+        </dd>
+        <dd>
+            <i class="icon-rmb"></i>
+            <span class="c-red">2000</span>
+            <label class="info-tips">已报名3/20总名额</label>
+        </dd>
+      </dl>
+   </li>
+ </ul>
+</div>
+<!--//全部-->
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

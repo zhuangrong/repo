@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+})
+</script>
+</head>
+<body class="bg-personal">
+<!--header-->
+<header class="personal">
+	<a href="javascript:void(0)" class="icon-back"></a>
+    填写订单
+</header>
+<!--//header-->
+
+<!--title1-->
+<div class="teen-tit">基本资料</div>
+<div class="teen-row teen-form">
+	<label>姓名：</label>
+    <input type="text" class="teen-ipt" placeholder="请输入您昵称">
+</div>
+<div class="teen-row teen-form row-line">
+	<label>电话:</label>
+    <input type="text" class="teen-ipt" placeholder="请输入电话">	
+</div>
+
+<!--title2-->
+<div class="teen-tit">选择地点/时间</div>
+<label class="highline-none">
+  <div class="teen-row pt01">
+    <span class="pull-left">
+        厦门市思明区xx路xx广场   <label class="pl01">12:30</label>
+      </span>
+      <input type="checkbox" class="teen-check pull-right" name="time">
+  </div>
+</label>
+<label class="highline-none">
+  <div class="teen-row pt01 row-line">
+    <span class="pull-left">
+        厦门市思明区xx路xx广场   <label class="pl01">12:30</label>
+      </span>
+      <input type="checkbox" class="teen-check pull-right" name="time">
+  </div>
+</label>
+<!--title3-->
+<div class="teen-tit">参与成员（大人）</div>
+<a href="#" class="teen-row row-active row-v-center">
+	<i class="icon-plus"></i> <label class="c-blue">增加成员信息</label>
+</a>
+
+<!--title4-->
+<div class="teen-tit">参与成员（小孩）</div>
+<a href="#" class="teen-row row-active row-v-center row-link">
+	某某某
+</a>
+<a href="#" class="teen-row row-active row-v-center row-line">
+	<i class="icon-plus"></i> <label class="c-blue">增加成员信息</label>
+</a>
+
+<!--activity name-->
+<div class="biz-row bg-white clearfix mt01">
+    <img src="images/biz.png">
+    <span class="c-black">活动名称</span>
+    <p>活动时间：2016/06/08-2016/06/10</p>
+</div>
+<div class="act-number n3 bg-white row-line">
+    <ul>
+        <li class="c-black">
+            <p>活动编号</p>
+            <label class="c-blue">3157</label>
+        </li>
+        <li class="c-black">
+            <p>参与人数</p>
+            <label class="c-blue">3</label>
+        </li>
+        <li class="c-black">
+            <p>费用合计</p>
+            <label class="c-blue">2000</label>
+        </li>
+    </ul>
+</div>
+
+<!--addr check-->
+<label class="highline-none">
+    <div class="teen-row pt01 row-line">
+        <span class="pull-left c-blue">
+            可用55积分抵用0.55元
+        </span>
+        <input type="checkbox" class="teen-check pull-right">
+    </div>
+</label>
+
+<!--remark-->
+<div class="teen-tit">备注</div>
+<div class="teen-row teen-form">
+    <input type="text" class="teen-ipt" placeholder="请添加备注">
+</div>
+
+<!--order-tool-->
+<div class="order-tool row-v-center">
+	<i class="icon-rmb"></i> 总计：2000
+    <button class="btn-default pull-right">提交订单</button>
+</div>
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

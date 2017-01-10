@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	
+	$.TabChange("activity-tabs",1)
+	
+	//分享
+	$("#icon-share").click(function(){
+		$(".share-pop").show();	
+	})
+	$(".share-pop").click(function(e){
+		e.preventDefault();
+		$(".share-pop").hide();	
+	})
+})
+/*tabs切换*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab_box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+
+</script>
+</head>
+<body class="bg-personal body-pb">
+<div class="tabs-wraper">
+	<i class="icon-back"></i>
+    <div class="activity-tabs t3">
+        <ul id="activity-tabs">
+            <li class="curr"><i class="icon-wdxq"></i>活动详情</li>
+            <li><i class="icon-wdjs"></i>活动介绍</li>
+            <li><i class="icon-wdfw"></i>服务约定</li>
+        </ul>
+    </div>
+</div>
+<img src="images/activity-pic-l.png">
+<div class="tab_box1">
+  <div>
+    <!--a-->
+  	<div class="activity-list">
+     <ul>
+       <li>
+          <dl class="activity-info activity-row">
+            <dt>活动名称 <label>1.31千米</label></dt>
+            <dd>
+            	<p>适用年龄：7-15岁</p>
+            	<p>活动时间：2016-06-08   13：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">大人35元 小孩15元</span>
+            </dd>
+          </dl>
+       </li>
+      </ul>
+    </div>
+    <div class="activity-addr bg-white">
+    	<div class="pull-left c-black">活动地址：</div>
+        <div class="pull-right">厦门市思明区厦禾路明发广场<i class="icon-location2"></i></div>
+    </div>
+    <div class="act-number bg-white mt01">
+    	<ul>
+        	<li class="c-black">
+            	<p><label class="c-blue">xx</label>人</p>
+                 活动名额
+            </li>
+        	<li class="c-black">
+            	<p><label class="c-blue">xx</label>人</p>
+                报名参加
+            </li>
+        </ul>
+    </div>
+    <div class="comment-number bg-white c-black row-line">
+    	用户评论区(<label class="c-blue">8</label>)
+    </div>
+    <div class="phone-row bg-white clearfix">
+    	<div class="pull-left c-black"><i class="icon-telephone"></i> 客服热线</div>
+    	<div class="pull-right"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=593483805&amp;site=qq&amp;menu=yes">400-400-2016</a></div>
+    </div>
+    <div class="biz-row bg-white c-black clearfix">
+        <img src="images/biz.png"><span>商户信息</span>
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=593483805&amp;site=qq&amp;menu=yes"><i class="icon-telephone2"></i></a>
+    </div>
+    <!--//a -->
+  </div>
+  <div style="display:none">
+    <!--b-->
+    <div class="activity-detail bg-white c-black">
+        <p>少年时是面向1-15岁</p>
+        <p>儿童的亲子活动服务平台</p>
+        <p>结合海外素质教育方式</p>
+        <p>推荐最具特色的亲子活动</p>
+        <p>少年时是面向1-15岁儿童的亲子活</p>
+    </div>
+    <!--//b -->
+  </div>
+  <div style="display:none">
+    <!--c-->
+    <!--b-->
+    <div class="activity-detail bg-white c-black">
+        <p>少年时是面向1-15岁</p>
+        <p>儿童的亲子活动服务平台</p>
+        <p>结合海外素质教育方式</p>
+        <p>结合海外素质教育方式</p>
+        <p>推荐最具特色的亲子活动</p>
+        <p>推荐最具特色的亲子活动</p>
+        <p>少年时是面向1-15岁儿童的亲子活</p>
+        <p>少年时是面向1-15岁儿童的亲子活</p>
+        <p>少年时是面向1-15岁儿童的亲子活</p>
+    </div>
+    <!--//b -->
+    <!--//c -->
+  </div>
+</div>
+<!--share-->
+<div class="sign-tool">
+	<ul>
+    	<li><i class="icon-fav-footer"></i>收藏</li>
+     	<li id="icon-share"><i class="icon-share-footer"></i>分享</li>
+        <li><button class="btn-default">立即报名</button></li>
+   </ul>
+</div>
+<!--//share-->
+<div class="share-pop" style="display:none">
+	<img src="images/share.png">
+</div>
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>
