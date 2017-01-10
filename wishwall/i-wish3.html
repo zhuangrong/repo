@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/wishwall.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	//许愿内容填写 --弹窗
+	$("#my-wish").click(function(){
+		$("#pop-submit").show();	
+	})
+	//填写许愿内容
+	$("#texta").focus(function(){
+			$(this).text("")
+	})
+	//愿望提交成功 --弹窗
+	$("#wish-submit").click(function(){
+		$("#submit-success").show();	
+	})
+	//我知道了
+	$(".btn-iknow").click(function(){
+		$(".pop-mask").hide();	
+	})
+});
+</script>
+</head>
+<body class="iwish-bg">
+<div class="blank-guide"></div>
+<!--iwish-->
+<div id="iwish" class="swiper-container guide">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <img src="images/iwish-swiper-bg.png">
+        <label>内容1</label>
+    </div>
+    <div class="swiper-slide">
+        <img src="images/iwish-swiper-bg.png">
+        <label>内容2</label>
+    </div>
+    <div class="swiper-slide">
+        <img src="images/iwish-swiper-bg.png">
+        <label>内容3</label>
+    </div>
+    <div class="swiper-slide">
+        <img src="images/iwish-swiper-bg.png">
+        <label>内容4</label>
+    </div>
+    <div class="swiper-slide">
+        <img src="images/iwish-swiper-bg.png">
+        <label>内容5</label>
+    </div>
+  </div>
+</div>
+<script>
+var swiper3 = new Swiper('#iwish', {
+      slidesPerView : 2,
+			centeredSlides: true,
+			effect: 'coverflow',
+      grabCursor: true,
+      paginationClickable: true,
+      loop : true,
+			loopedSlides:5,
+      spaceBetween: -50, /*缩小间距可以放大图片*/
+			coverflow: {
+					rotate: 0,
+					stretch: 56,  /*两边图片集拉伸的距离*/
+					depth: 200,   /*每张图片z-轴的距离*/
+					modifier: 2,  
+					slideShadows : false
+        }
+});
+</script>
+<!-- //iwish -->
+    <div class="iwish-wrap">
+        <span class="iwish-heart">17</span>
+    </div>	
+    <a href="#" class="btn-iwish" id="my-wish"></a>
+    <div class="iwish-total">格雷已经收集xxxx个愿望</div>
+<!--许愿内容填写－弹窗-->
+<div class="pop-mask" id="pop-submit">
+	<div class="pop-box pop-submit">
+		<div class="pop-content">
+			<textarea id="texta">请输入您的愿望，字数限于25字以内</textarea>
+		</div>
+		<button class="btn-submit" id="wish-submit"></button>
+  </div>
+</div>
+<!--愿望提交成功－弹窗-->
+<div class="pop-mask" id="submit-success">
+	<div class="pop-box pop-contact">
+		<div class="pop-content">
+			您的心愿已经提交成功，您可以在愿望清单里 找到它哦！
+		</div>
+		<button class="btn-iknow"></button>
+  </div>
+</div>
+</body>
+</html>

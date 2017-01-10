@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/wishwall.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	
+	//中奖通知 --弹窗
+	$("#btn-prize").click(function(){
+		$("#pop-prize").show();	
+	})
+	
+	//分享 --弹窗
+	$("#share").click(function(){
+		$("#pop-share").show();	
+	})
+	//活动结束 --弹窗
+	$("#btn-gameover").click(function(){
+		$("#pop-gameover").show();	
+	})
+});
+</script>
+<style>
+@-webkit-keyframes scale-pop{
+	0% {-webkit-transform:scale(0.5)}
+	100% { -webkit-transform:scale(1)}
+}
+.pop-box{
+	-webkit-animation:scale-pop 1s linear;
+}
+</style>
+</head>
+<body class="main-bg">
+new site
+	<div class="blank01"></div>
+	<a href="i-wish.html" class="go"></a>
+	<div class="item">
+		<a href="wish-list.html"></a>
+		<a href="top.html"></a>
+		<a href="promotion.html"></a>
+		<a href="javascript:" id="share"></a>
+	</div>
+	<button id="btn-prize">点击弹出中奖通知</button>
+	<button id="btn-gameover" style="display:block">点击弹活动结束</button>
+
+<!--中奖通知－弹窗-->
+<div class="pop-mask" id="pop-prize">
+	<div class="pop-box pop-prize">
+		<div class="pop-content">
+			恭喜您获得本期奖品，赶紧快马加鞭去领走你的奖品吧！
+		</div>
+		<button class="btn-prize"></button>
+  </div>
+</div>
+
+<!--分享朋友－弹窗-->
+<div class="pop-mask" id="pop-share">
+	<div class="pop-box pop-share">
+		<div class="pop-content">
+			快点从这里跑进去把这个好消息告诉你的好朋友吧！
+		</div>
+		<button class="btn-iknow"></button>
+  </div>
+</div>
+
+<!--活动结束－弹窗-->
+<div class="pop-mask" id="pop-gameover">
+	<div class="pop-box pop-share pop-gameover">
+		<div class="pop-content">
+			本期许愿墙已结束，欢迎下次赶早哦！
+		</div>
+		<button class="btn-view"></button>
+  </div>
+</div>
+
+<!--您已点赞过－弹窗-->
+<div class="pop-mask" style="display:block">
+	<div class="pop-box pop-gameover" style="top: 1.1rem;height: 21.25rem;">
+		<div class="pop-content" style="padding-top:14.7rem">
+			您已点过赞 ！1111111
+		</div>
+		<button class="btn-ok"></button>
+  </div>
+</div>
+
+</body>
+</html>
