@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/wishwall.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	//许愿内容填写 --弹窗
+	$("#my-wish").click(function(){
+		$("#pop-submit").show();	
+	})
+	//填写许愿内容
+	$("#texta").focus(function(){
+			$(this).text("")
+	})
+	//愿望提交成功 --弹窗
+	$("#wish-submit").click(function(){
+		$("#submit-success").show();	
+	})
+	//我知道了
+	$(".btn-iknow").click(function(){
+		$(".pop-mask").hide();	
+	})
+	
+	//引导 --弹窗
+	$("#guide-pop").show();	
+	var times = 1;
+	$("#guide-pop").click(function(){
+			if(times < 2){
+				$(".guide-box").css({"background-image":"url(images/guide02.png)"});
+				times++;
+				console.log(times)
+			}else{
+				$("#guide-pop").hide();	
+			}
+	});	
+	
+});
+</script>
+</head>
+<body class="iwish-bg">
+<div class="blank-guide"></div>
+<!--iwish-->
+<div id="iwish" class="swiper-container guide">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      此处为愿望详情文案 此处为愿望详情文案 此处为愿望详情文案 
+    </div>
+    <div class="swiper-slide">
+      此处为愿望详情文案 此处为愿望详情文案 此处为愿望详情文案 
+    </div>
+    <div class="swiper-slide">
+      此处为愿望详情文案 此处为愿望详情文案 此处为愿望详情文案 
+    </div>
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script>
+var swiper3 = new Swiper('#iwish', {
+      slidesPerView : 1,
+      paginationClickable: true,
+      loop : true,
+      loopedSlides :5, 
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      spaceBetween: 20
+});
+</script>
+<!-- //iwish -->
+    <div class="iwish-wrap">
+        <span class="iwish-heart">17</span>
+    </div>	
+    <a href="#" class="btn-iwish" id="my-wish"></a>
+    <div class="iwish-total">格雷已经收集xxxx个愿望</div>
+<!--许愿内容填写－弹窗-->
+<div class="pop-mask" id="pop-submit">
+	<div class="pop-box pop-submit">
+		<div class="pop-content">
+			<textarea id="texta">请输入您的愿望，字数限于25字以内</textarea>
+		</div>
+		<button class="btn-submit" id="wish-submit"></button>
+  </div>
+</div>
+<!--愿望提交成功－弹窗-->
+<div class="pop-mask" id="submit-success">
+	<div class="pop-box pop-contact">
+		<div class="pop-content">
+			您的心愿已经提交成功，您可以在愿望清单里 找到它哦！
+		</div>
+		<button class="btn-iknow"></button>
+  </div>
+</div>
+<!--引导－弹窗-->
+<div class="pop-mask" id="guide-pop">
+	<div class="guide-box"></div>
+</div>
+</body>
+</html>

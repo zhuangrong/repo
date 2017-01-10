@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	$.TabChange("activity-tabs",1)
+	
+	//评论
+	$("#comment").click(function(){
+		$("#comment-box").show();
+		$("#mask").show();
+	})
+	$("#mask").on("click",function(e){
+		 	e.preventDefault();
+			$("#comment-box").hide();
+			$("#mask").hide();
+	})
+})
+/*tabs切换*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab_box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+
+</script>
+</head>
+<body>
+<!--header-->
+<header class="personal">
+	<a href="javascript:void(0)" class="icon-back"></a>
+    我的活动
+</header>
+<!--//header-->
+<div class="activity-tabs">
+    <ul id="activity-tabs">
+        <li class="curr">全部</li>
+        <li>未付款</li>
+        <li>未评价</li>
+        <li>已退款</li>
+    </ul>
+</div>
+<div class="tab_box1">
+  <div>
+    <!--全部-->
+  	<div class="activity-list">
+    <ul>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"></div>
+          <dl class="activity-info">
+            <dt>活动名称1</dt>
+            <dd>
+            	<p>适用年龄：7-15岁 </p>
+            	<p>活动时间：2016-06-08  11：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">2000</span>
+                <label class="info-tips">未付款</label>
+            </dd>
+          </dl>
+          <div class="list-tool">
+          	<button class="btn-default">立即付款</button>
+          	<a href="#" class="btn-cancel">取消报名</a>
+          </div>
+       </li>
+       <li>
+          <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"></div>
+          <dl class="activity-info">
+            <dt>活动名称2</dt>
+            <dd>
+            	<p>适用年龄：7-15岁 </p>
+            	<p>活动时间：2016-06-08  11：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">2000</span>
+                <label class="info-tips">已付款</label>
+            </dd>
+          </dl>
+       </li>
+     </ul>
+    </div>
+    <!--//全部-->
+
+  </div>
+  <div style="display:none">
+    <!--未付款-->
+  	<div class="activity-list">
+    <ul>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"></div>
+          <dl class="activity-info">
+            <dt>活动名称1</dt>
+            <dd>
+            	<p>适用年龄：7-15岁 </p>
+            	<p>活动时间：2016-06-08  11：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">2000</span>
+                <label class="info-tips">未付款</label>
+            </dd>
+          </dl>
+          <div class="list-tool">
+          	<button class="btn-default">立即付款</button>
+          	<button class="btn-cancel">取消报名</button>
+          </div>
+      </li>
+     </ul>
+    </div>
+    <!--//未付款-->
+  </div>
+  <div style="display:none">
+    <!--未评价-->
+  	<div class="activity-list">
+    <ul>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"></div>
+          <dl class="activity-info">
+            <dt>活动名称1</dt>
+            <dd>
+            	<p>适用年龄：7-15岁 </p>
+            	<p>活动时间：2016-06-08  11：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">2000</span>
+                <label class="info-tips">未付款</label>
+            </dd>
+          </dl>
+          <div class="list-tool singlebtn">
+          	<button class="btn-default" id="comment">立即评价</button>
+          </div>
+      </li>
+     </ul>
+    </div>
+    <!--//未评价-->
+  </div>
+  <div style="display:none">
+    <!--已退款-->
+  	<div class="activity-list">
+    <ul>
+      <li>
+          <div class="activity-pic" style="background-image:url(images/activity-pic2.png)"></div>
+          <dl class="activity-info">
+            <dt>活动名称1</dt>
+            <dd>
+            	<p>适用年龄：7-15岁 </p>
+            	<p>活动时间：2016-06-08  11：20</p>
+            </dd>
+            <dd>
+            	<i class="icon-rmb"></i>
+                <span class="c-red">2000</span>
+                <label class="info-tips">已退款</label>
+            </dd>
+          </dl>
+      </li>
+     </ul>
+    </div>
+    <!--//已退款-->
+  </div>
+</div>
+
+<div id="mask"></div>
+<div class="comment" id="comment-box" style="display:none">
+    <input type="text" placeholder="请发送评论">
+    <button class="btn-send">发送</button>
+</div>
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

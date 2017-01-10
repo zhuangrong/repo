@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/zxxFile.js"></script> 
+<script>
+$(function(){
+})
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div class="article-tool">
+	<a href="javascript:void(0)">取消</a>
+	<a href="javascript:void(0)">发布</a>
+</div>
+<div class="article-title">
+	<input type="text" maxlength="50" placeholder="请输入标题(4-25字)">
+</div>
+<div class="article-box">
+	<textarea  maxlength="200" id="texta" placeholder="."></textarea>
+</div>
+<div class="pics-wraper">
+	  <div class="pics-title"><i class="icon-camera"></i>添加图片（第一张默认为封面图，最多传三张）</div>
+    <div class="pics-upload">
+     <form id="uploadForm" action="" method="post" enctype="multipart/form-data">
+      <label class="btn-add" id="btn-add" > <img src="images/add.png">
+        <input id="fileImage" type="file" size="30" name="fileselect[]" multiple />
+      </label>
+      <div id="preview" class="upload_preview"></div>
+     </form> 
+    </div>
+</div>
+
+<script src="js/zxxFile.js"></script> 
+<script>
+/*图片上传*/
+var params = {
+	fileInput: $("#fileImage").get(0),
+	url: $("#uploadForm").attr("action"),
+	filter: function(files) {
+		var arrFiles = [];
+		for (var i = 0, file; file = files[i]; i++) {
+			if (file.type.indexOf("image") == 0) {
+				if (file.size >= 11512000) {
+					alert('您这张"'+ file.name +'"图片大小过大，应小于500k');	
+				} else {
+					arrFiles.push(file);	
+				}			
+			} else {
+				alert('文件"' + file.name + '"不是图片。');	
+			}
+		}
+		return arrFiles;
+	},
+	onSelect: function(files) {
+		var html = '', i = 0;
+		$("#preview").html('<div class="upload_loading"></div>');
+		var funAppendImage = function() {
+			file = files[i];
+			if (file) {
+				var reader = new FileReader()
+				reader.onload = function(e) {
+					html = html + '<div id="uploadList_'+ i +'" class="upload_append_list">'+ 
+						'<a href="javascript:" class="upload_delete" " data-index="'+ i +'"></a>' +
+						'<img id="uploadImage_' + i + '" src="' + e.target.result + '" class="upload_image" />'+ 
+					'</div>';
+					
+					i++;
+					funAppendImage();
+				}
+				reader.readAsDataURL(file);
+			} else {
+				$("#preview").html(html);
+				if (html) {
+					//删除方法
+					$(".upload_delete").click(function() {
+						ZXXFILE.funDeleteFile(files[parseInt($(this).attr("data-index"))]);
+						return false;	
+					});
+				} else {
+				}
+			}
+		};
+		funAppendImage();		
+	},
+	onDelete: function(file) {
+		$("#uploadList_" + file.index).fadeOut();
+	},
+	onComplete: function() {
+		//file控件value置空
+		$("#uploadInf").append("<p>当前图片全部上传完毕，可继续添加上传。</p>");
+	}
+};
+ZXXFILE = $.extend(ZXXFILE, params);
+ZXXFILE.init();
+</script>
+</body>
+</html>

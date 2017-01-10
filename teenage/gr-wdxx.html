@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/teen.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	$.TabChange("activity-tabs",1)
+})
+/*tabs切换*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab_box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+
+</script>
+</head>
+<body>
+<!--header-->
+<header class="personal">
+	<a href="javascript:void(0)" class="icon-back"></a>
+    我的消息
+</header>
+<!--//header-->
+<div class="activity-tabs t3">
+    <ul id="activity-tabs">
+        <li class="curr">订单消息</li>
+        <li>社区消息</li>
+        <li>系统消息</li>
+    </ul>
+</div>
+<div class="tab_box1">
+  <div>
+  	<!--msg item-->
+  	<div class="msg-list">
+        <ul>
+            <li>
+              <img src="images/icon-list.png">
+              <div>
+                <label>2016-06-11  11:17 </label>
+                <p>您已经成功报名:xxxx活动，请准时参加。</p>
+              </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div style="display:none">
+  	<div class="msg-list">
+        <ul>
+            <li>
+              <img src="images/icon-user.png">
+              <div>
+                <label>2016-06-11  11:17</label>
+                <p>XXX评论了您的帖子:XXX活动名称。</p>
+              </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div style="display:none">
+  	<div class="msg-list">
+        <ul>
+            <li>
+              <img src="images/icon-msg.png">
+              <div>
+                <label>2016-05-03</label>
+                <p>系统消息系统消息系统消息</p>
+              </div>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+	<a href="#">首页</a> &nbsp; | &nbsp; 
+	<a href="#">个人中心</a> &nbsp; | &nbsp; 
+	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">登录</a>
+    <p>微信公众号：少年时 </p>
+</footer>
+</body>
+</html>

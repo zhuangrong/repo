@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>UNIUS金融</title>
+<link rel="stylesheet" href="css/unius.css">
+<script src="js/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script>
+$(function(){
+	$(".icon-search").click(function(){
+		var sokey=$("#search").val();
+		if(!sokey){
+			alert('请输入搜索内容');
+			return false;
+		}else{
+			window.location.href="/index.php?s=Home/Index/search/sokey/"+sokey;
+		}
+
+	})
+})
+</script>
+</head>
+<body>
+<div class="app-name">香港保险</div>
+<div class="header"> <a href="#" class="icon-search"></a> <a href="https://static.meiqia.com/dist/standalone.html?eid=42962" class="icon-comment"></a>
+		<input type="text" id="search">
+</div>
+
+<!--company -->
+<div id="company" class="swiper-container comp-wrap">
+		<div class="swiper-wrapper">
+				<div class="swiper-slide"   data="1"> <i class="comp-pic" style="background-image:url(/Uploads/Picture/2016-12-19/5857f89f5b419.jpg)"></i>
+						<label>法国安盛</label>
+				</div>
+				<div class="swiper-slide"   data="2"> <i class="comp-pic" style="background-image:url(/Uploads/Picture/2016-12-19/5857f98e272ec.jpg)"></i>
+						<label>英国保诚</label>
+				</div>
+				<div class="swiper-slide"   data="4"> <i class="comp-pic" style="background-image:url(/Uploads/Picture/2016-12-19/5857fc9e994b4.jpg)"></i>
+						<label>美国友邦</label>
+				</div>
+				<div class="swiper-slide"   data="6"> <i class="comp-pic" style="background-image:url(/Uploads/Picture/2016-12-20/585812e08c0b9.jpg)"></i>
+						<label>富通保险</label>
+				</div>
+				<div class="swiper-slide"   data="5"> <i class="comp-pic" style="background-image:url(/Uploads/Picture/2016-12-20/585812051089d.jpg)"></i>
+						<label>加拿大宏利</label>
+				</div>
+		</div>
+</div>
+<script>
+	 var anum=0;
+var swiper1 = new Swiper('#company', {
+        slidesPerView : 'auto',
+        centeredSlides: true,
+        paginationClickable: true,
+        loop : true,
+        loopedSlides :5, 
+        spaceBetween: 0,
+				onSlideChangeEnd: function(swiper){
+					id=swiper.activeIndex;
+					newdiv=$(".swiper-wrapper").find("div:eq("+id+")");
+					var id=newdiv.attr('data');
+					$.ajax({
+							url: "http://bx.icarexm.com/index.php?s=/Home/Index/getde.html",   
+							dataType: "json",  
+							async: false, 
+							data: { "id": id }, 
+							type: "GET",    
+							success: function(reqtemp) {
+								req=$.parseJSON(reqtemp);
+								 $("#bannerid").attr('src',req.com.img);
+								 $("#info").html('');
+								 $.each(req.pro, function(i, item) {
+									 anum=anum+1;
+										 if(item.cflag){
+										troyflag='troy';
+									 }else{
+										troyflag='';
+									 }
+									$("#info").append('<div class="swiper-slide"><div class="info-box">		<h3>'+item.title+'</h3> <a href="index.php?s=Home/Index/showfirst/id/'+item.id+'" >	<article>'+item.detail+'</article></a><div class="toolbar"><a href="index.php?s=Home/Index/lists/id/'+item.id+'">	<i class="icon-list"></i></a><i class="icon-fav'+troyflag+'" data="'+item.id+'"></i>	<a href="index.php?s=Home/Index/show/id/'+item.id+'/msg/1"><i class="icon-comment2"></i></a></div> </div></div>');
+					});
+
+							} 
+				});
+			var swiper2 = new Swiper('#introduce', {
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				paginationClickable: true,
+				loop:true,
+				loopedSlides:anum,
+				spaceBetween: 20
+			});
+		//  alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+		}
+});
+</script> 
+<!-- //company --> 
+<!-- banner -->
+<div class="banner-wrap">
+		<div class="banner"><img id="bannerid" src="/Uploads/Picture/2016-12-20/58590531ea960.jpg"></div>
+</div>
+<!-- //banner --> 
+<!-- introduce -->
+<div id="introduce" class="swiper-container intro-wrap">
+		<div class="swiper-wrapper" id="info"> <a href="/index.php?s=/Home/Index/showfirst/id/1.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>安盛AXA 简介</h3>
+								<article> AXA安盛集团是全球第一大金融保险集团,
+										为客户提供涵盖人寿、健康、财产的全面保障，
+										以及财富管理和退休方案，帮助客户实现安稳
+										及丰富的生活。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/1.html"> <i class="icon-list" data="1"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/1/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/12.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>癌症治療保障II 癌症及中風治療保障 </h3>
+								<article> 我們都希望保持強健體魄，讓自己能專注追求人生目標， 與摯愛一同享受生活。然而，即使維持健康的生活習慣，疾病往往
+										防不勝防。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/12.html"> <i class="icon-list" data="12"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/12/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/2.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>储蓄系列：全蓄 II</h3>
+								<article> 全蓄 II 儲蓄系列為您提供三項保費供款年期選擇，讓您坐擁理想回報，助您迅速又穩健地達成個人儲蓄目標。此外，投保申請手續簡便，毋須提交任何財務及健康證明，獲取多項收益，向遠大的目標奔馳。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/2.html"> <i class="icon-list" data="2"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/2/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/10.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「倍關懷」意外保險</h3>
+								<article> 意外是無法預知或控制的。您必須為您及您摯愛的家人作好準備，為隨時隨地都會發生的意外作出經濟保障。「倍關懷」意外保險正是您的最佳選擇。這計劃是為18至60歲的人士而設，保障範圍廣泛。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/10.html"> <i class="icon-list" data="10"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/10/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/11.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「倍為您」 意外保險附加契約</h3>
+								<article> 意外防不勝防，一旦遇上突發事件，往往會影響您的大計。「倍為您」意外保險附加契約( 「此附加契約」) 為您提供意外保障，讓您及摰愛家人在經濟上獲得支援，減輕財務壓力。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/11.html"> <i class="icon-list" data="11"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/11/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/13.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>兒童意外保險</h3>
+								<article> 父母疼愛子女，除給予他們無微不至的照顧外，亦會設法防止他們受到傷害。可是意外往往是突如其來及無可避免的。假若遇到不幸事故，「兒童意外保險」1 將可提供財政支援，助您
+										渡過時艱。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/13.html"> <i class="icon-list" data="13"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/13/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/14.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>傷病入息保障 傷病入息特級保障</h3>
+								<article> 「傷病入息保障」及「傷病入息特級保障」可在您失去工
+										作能力時，提供完善的保障。若您不幸地因疾病或意外受傷而導致完全傷殘，我們會每月給予賠償，助您應付日常開支，賠償額最高可達月薪之7成。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/14.html"> <i class="icon-list" data="14"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/14/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/15.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>早期嚴重疾病保障II 附加契約</h3>
+								<article> 身體健康就是財富，倘若不幸患上嚴重疾病，足以令人措手不及。早期嚴重疾病保障II附加契約 (「本附加契約」) 特別涵蓋早期嚴重疾病及嚴重疾病，提供經濟支援，讓您安心休養，盡快康復。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/15.html"> <i class="icon-list" data="15"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/15/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/16.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「享未來」 人壽保障</h3>
+								<article> 「享未來」人壽保障 提供一站式儲蓄及人壽保障方案。基本計劃更與「享未來」意外保險附加契約(「意外附加契約」)1 同時繕發，讓您兼享周全的意外保障，輕鬆邁向人生目標。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/16.html"> <i class="icon-list" data="16"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/16/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/17.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「惠未來」 人壽保障</h3>
+								<article> 您總希望為家人做到最好，為他們的未來提供安枕無憂的生活。透過「惠未來」人壽保障( 「惠未來」)，即以固定保費同時獲享人壽保障及穩健儲蓄增長，輕鬆計劃無憂人生。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/17.html"> <i class="icon-list" data="17"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/17/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/18.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>寰宇特選 II 醫療計劃</h3>
+								<article> 疾病或受傷事故往往不期而至，「寰宇特選 II 醫療計劃」提供3個保障級別以供選擇，無論是保障地區或自付額，您都可以靈活挑選，讓您尊享最切合需要的醫療保障及服務。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/18.html"> <i class="icon-list" data="18"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/18/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/19.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>康齊危疾保障</h3>
+								<article> AXA安盛的「康齊危疾保障」 (「基本計劃」) 與其附加契約「康齊多倍保障附加契約」 (「附加契約」)1 同時繕發 (統稱「康齊」)，致力為您提供全面的危疾保障。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/19.html"> <i class="icon-list" data="19"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/19/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/20.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>康諾嚴重疾病保障</h3>
+								<article> 現今醫療科技發展一日千里，很多嚴重疾病已可在早期發現及治理，但所涉及的高昂治療費用往往為不少家庭帶來財政壓力。「康諾嚴重疾病保障」連同其兩項自選附加契約，正是您明智之選。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/20.html"> <i class="icon-list" data="20"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/20/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/21.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>康綽住院現金保障</h3>
+								<article> 若不幸入院接受治療，期間無法工作，更須面對日常開支等財務問題。「康綽住院現金保障」 為您提供住院現金，每份保單可發放高達2,000日的賠償，讓您靈活運用，減輕住院期間的財務負擔。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/21.html"> <i class="icon-list" data="21"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/21/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/22.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>康采嚴重疾病保障</h3>
+								<article> 「康采嚴重疾病保障」及其兩項附加契約，涵蓋嚴重疾病、早期嚴重疾病及非嚴重疾病，並提供多次賠償，在不幸患病時提供經濟支援，讓您安心接受治療，繼續向人生目標進發。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/22.html"> <i class="icon-list" data="22"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/22/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/23.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>嚴重疾病保障</h3>
+								<article> 針對嚴重疾病而設的保障計劃，讓您獲享涵蓋45種嚴重疾病的周全保障。為照顧不同人士的需要，我們提供三項嚴重疾病保障計劃，分別為「真智康寧保險」、「金裝康寧保險」及「金裝康愉保險」。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/23.html"> <i class="icon-list" data="23"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/23/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/24.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>安盛安心 醫療計劃</h3>
+								<article> 我們明白擁有優質的醫療保障至為重要，因此特意呈獻安盛安心醫療計劃，以相宜的保費為您提供卓越的醫療保障。此計劃更提供方便快捷的免找數服務，讓您安心休養，早日康復。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/24.html"> <i class="icon-list" data="24"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/24/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/25.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>真智精選 定期保險 真智定期保險</h3>
+								<article> 。為自己及家人設想，一份保費相宜的保險計劃，自然是您的最佳選擇。真智精選定期保險 (為非吸煙人士而設)；真智定期保險 (為吸煙人士而設)。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/25.html"> <i class="icon-list" data="25"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/25/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/26.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「真智珍寶III」 儲蓄系列 「真智豐盛III」 儲蓄系列</h3>
+								<article> 「真智珍寶III」儲蓄系列及「真智豐盛III」儲蓄系列設有不同的壽險儲蓄計劃，提供人壽保障至100歲及保證現金儲蓄，助您實現夢想，並讓您安穩邁向未來。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/26.html"> <i class="icon-list" data="26"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/26/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/27.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>「真智珍寶III」 儲蓄系列 (簡化版)</h3>
+								<article> 「真智珍寶III」儲蓄系列(簡化版) 提供設有保證現金回報的壽險儲蓄計劃，令您有把握地實現夢想。加上毋須健康聲明，您可輕鬆邁向安穩未來。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/27.html"> <i class="icon-list" data="27"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/27/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/28.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>智倩女性保障</h3>
+								<article> 作為精明能幹的時代女性，妥善籌劃自己的財務，好讓未來精彩無憂！「智倩女性保障」的免費定期健康檢查，以及涵蓋女性癌病、系統性紅斑狼瘡及多達45種嚴重疾病的廣泛保障，給妳無微不至的保障。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/28.html"> <i class="icon-list" data="28"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/28/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/29.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>真智醫療保障</h3>
+								<article> 「真智醫療保障」特設兩項保障計劃，切合客戶的需要。「真智安心醫療保障」為您提供支付實際醫療保障費用至100歲，而「真智住院現金保障」讓您獲享保障至75歲，在您住院期間提供每日定額現金保障。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/29.html"> <i class="icon-list" data="29"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/29/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/30.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>真智惠保20 II 人壽保障計劃</h3>
+								<article> 「真智惠保20 II」人壽保障計劃讓您在短時間內為您與家人提供長遠的經濟保障。只需繳付20年相宜的保費，您便可兼享人壽保障至100歲及穩步的財富增值，讓您真正安心，盡享優悠。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/30.html"> <i class="icon-list" data="30"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/30/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/31.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>真智惠保 II 人壽保障計劃</h3>
+								<article> 精明的您，自然明白經濟保障的重要性。「真智惠保II」人壽保障計劃，一個精明而保費相宜的保障計劃，可助您實現夢想並為您與家人的未來建立安穩經濟基礎，同時為您提供人壽保障至100歲。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/31.html"> <i class="icon-list" data="31"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/31/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				</a><a href="/index.php?s=/Home/Index/showfirst/id/32.html" >
+				<div class="swiper-slide">
+						<div class="info-box">
+								<h3>安進儲蓄計劃</h3>
+								<article> AXA安盛深明您的需要。「安進儲蓄計劃」(「此計劃」) 為分紅壽險計劃，致力為您提供中長期的儲蓄增值潛力，助您輕鬆累積財富，早日達成目標。 </article>
+								<div class="toolbar"> <a href="/index.php?s=/Home/Index/lists/id/32.html"> <i class="icon-list" data="32"></i></a> <i class="icon-fav"></i> <a href="/index.php?s=/Home/Index/show/id/32/msg/1.html"> <i class="icon-comment2" ></i></a> </div>
+						</div>
+				</div>
+				196+440+ </a> </div>
+</div>
+<script>
+ 
+			var nid=1;
+			$.ajax({
+					url: "http://bx.icarexm.com/index.php?s=/Home/Index/getde.html",   
+					dataType: "json",  
+					async: false, 
+					data: { "id": nid }, 
+					type: "GET",    
+					success: function(reqtemp) {
+						req=$.parseJSON(reqtemp);
+						 $("#bannerid").attr('src',req.com.img);
+						 $("#info").html('');
+						 $.each(req.pro, function(i, item) {
+							 anum=anum+1;
+							 if(item.cflag){
+								troyflag='troy';
+							 }else{
+								troyflag='';
+							 }
+							$("#info").append('<div class="swiper-slide">	<div class="info-box">		<h3>'+item.title+'</h3> <a href="index.php?s=Home/Index/showfirst/id/'+item.id+'"><article>'+item.detail+'</article></a><div class="toolbar"><a href="index.php?s=Home/Index/lists/id/'+item.id+'">	<i class="icon-list"></i></a><i class="icon-fav'+troyflag+'" data="'+item.id+'"></i>	<a href="index.php?s=Home/Index/show/id/'+item.id+'/msg/1"><i class="icon-comment2"></i></a></div> </div></div>');
+						});
+
+					} 
+			});
+			var swiper3 = new Swiper('#introduce', {
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				paginationClickable: true,
+				loop:true,
+				loopedSlides:anum,
+				spaceBetween: 20
+			});
+		 
+
+</script> 
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+
+<!-- //introduce -->
+</body>
+</html>
