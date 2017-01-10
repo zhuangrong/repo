@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/gouda.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//点击问题项
+	var n = 0;
+	$("#question span").each(function(index){
+			$(this).click(function(){
+				n = index + 1;
+				$("#chat-question").css("background-image","url(images/scene06/chat-scene-question0" + n +".png)");
+				$("#chat-reponse").css("background-image","url(images/scene06/chat-scene-reponse0" + n +".png)");
+				$(".chat-scene").css("top","-3.8rem");
+				$("#chat-question").addClass("chats");
+			})
+	})
+
+	/*自动回复*/
+	$("#chat-question")[0].addEventListener("webkitAnimationEnd", function(){ 
+		setTimeout(function(){
+			$(".chat-scene").css("top","-7rem");
+			$("#chat-reponse").addClass("chats");
+		},1000)
+	}, false); 
+	/*监听最后一条跳转*/
+	$("#chat-reponse")[0].addEventListener("webkitAnimationEnd", function(){ 
+		setTimeout(function(){
+				window.location="chat-male07.html"
+		},1500)
+	}, false); 
+	
+	
+})
+</script>
+<style>
+.chat-scene.s01 label:nth-child(1){
+	top:0;
+	background-image: url(images/scene06/chat-scene-01.png);
+}
+.chat-scene.s01 label:nth-child(2){
+	top:3.2rem;
+	background-image: url(images/scene06/chat-scene-02.png);
+}
+.chat-scene.s01 label:nth-child(3){
+	top:6.5rem;
+	background-image: url(images/scene06/chat-scene-03.png);
+}
+.chat-scene.s01 label:nth-child(4){
+	top:9.8rem;
+	background-image: url(images/scene06/chat-scene-04.png);
+}
+.chat-scene.s01 label:nth-child(5){
+	top:13.2rem;
+	background-image: url(images/scene06/chat-scene-05.png);
+}
+/*底部3个选项*/
+.question-item.s01 span:nth-child(1){
+	width:14rem;
+	background-image: url(images/scene06/question-item1.png);
+}
+.question-item.s01 span:nth-child(2){
+	width:13.71875rem;
+	background-image: url(images/scene06/question-item2.png);
+}
+.question-item.s01 span:nth-child(3){
+	width:14.65625rem;
+	background-image: url(images/scene06/question-item3.png);
+}
+/*自动回复*/
+#chat-question{
+	top:16.5rem;
+	opacity:0;
+}
+#chat-reponse{
+	top:20.0rem;
+	opacity:0;
+}
+/*起始对话框位置*/
+.chat-scene label:nth-child(odd){
+	left:0.5rem;
+}
+.chat-scene label:nth-child(even){
+	right:0.5rem;
+}
+
+</style>
+</head>
+<body>
+<div class="blank-chat"></div>
+<div class="chat-scene s01">
+	<label><i class="avatar-man left"></i></label>
+	<label><i class="avatar-woman right"></i></label>
+	<label><i class="avatar-man left"></i></label>
+	<label><i class="avatar-woman right"></i></label>
+	<label><i class="avatar-man left"></i></label>
+	<label id="chat-question"><i class="avatar-woman right"></i></label>
+	<label id="chat-reponse"><i class="avatar-man left"></i></label>
+</div>
+<img class="chat-keyboard" src="images/chat-keyboard.png">
+
+<div class="question-item s01" id="question">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+</body>
+</html>

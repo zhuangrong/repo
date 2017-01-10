@@ -1,0 +1,106 @@
+<include file="header" />
+<script type="text/javascript">
+$(function(){
+	//点击问题项
+	var n = 0;
+	$("#question span").each(function(index){
+			$(this).click(function(){
+				n = index + 1;
+				$("#chat-question").css("background-image","url(__PUBLIC__/Home/images/scene04/chat-scene-question0" + n +".png)");
+				$("#chat-reponse").css("background-image","url(__PUBLIC__/Home/images/scene04/chat-scene-reponse0" + n +".png)");
+				$(".chat-scene").css("top","-3.8rem");
+				$("#chat-question").addClass("chats");
+			})
+	})
+	
+	/*自动回复*/
+	$("#chat-question")[0].addEventListener("webkitAnimationEnd", function(){ 
+		setTimeout(function(){
+			$(".chat-scene").css("top","-7rem");
+			$("#chat-reponse").addClass("chats");
+		},1000)
+	}, false); 
+	/*监听最后一条跳转*/
+	$("#chat-reponse")[0].addEventListener("webkitAnimationEnd", function(){ 
+		setTimeout(function(){
+				window.location="index.php?s=Home/Index/chat/id/<?php echo $id+1; ?>/xx/{$xx},"+n;
+		},1500)
+	}, false); 
+	
+})
+</script>
+<style>
+.chat-scene.s01 label:nth-child(1){
+	top:0;
+	background-image: url(__PUBLIC__/Home/images/scene04/chat-scene-01.png);
+}
+.chat-scene.s01 label:nth-child(2){
+	top:3.2rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/chat-scene-02.png);
+}
+.chat-scene.s01 label:nth-child(3){
+	top:6.5rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/chat-scene-03.png);
+}
+.chat-scene.s01 label:nth-child(4){
+	top:9.8rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/chat-scene-04.png);
+}
+.chat-scene.s01 label:nth-child(5){
+	top:13.2rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/chat-scene-05.png);
+}
+/*底部3个选项*/
+.question-item.s01 span:nth-child(1){
+	width:15.71875rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/question-item1.png);
+}
+.question-item.s01 span:nth-child(2){
+	width:13.9375rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/question-item2.png);
+}
+.question-item.s01 span:nth-child(3){
+	width:12.875rem;
+	background-image: url(__PUBLIC__/Home/images/scene04/question-item3.png);
+}
+/*自动回复*/
+#chat-question{
+	top:16.5rem;
+	opacity:0;
+}
+#chat-reponse{
+	top:20.0rem;
+	opacity:0;
+}
+/*起始对话框位置*/
+.chat-scene label:nth-child(odd){
+	left:0.5rem;
+}
+.chat-scene label:nth-child(even){
+	right:0.5rem;
+}
+
+</style>
+</head>
+<body>
+<div class="blank-chat"></div>
+<div class="chat-scene s01">
+	<label></label>
+	<label></label>
+	<label></label>
+	<label></label>
+	<label></label>
+	<label id="chat-question"></label>
+	<label id="chat-reponse"></label>
+</div>
+<img class="chat-keyboard" src="__PUBLIC__/Home/images/chat-keyboard.png">
+
+<div class="question-item s01" id="question" style="display:none">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+<include file="chatadd" />
+<include file="shareold" />
+</body>
+</html>
