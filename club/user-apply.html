@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>club</title>
+<link rel="stylesheet" href="css/club.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+	/*弹出层-登记*/
+	$("#level").on("focus",function(e){
+		 	e.preventDefault();
+			$(".city-pop").show();
+			$("#mask").show();
+	})
+	
+	$("#mask").on("click",function(e){
+		 	e.preventDefault();
+			$(".city-pop").hide();
+			$("#mask").hide();
+	})
+	
+	  $("#level-list li").each(function(index){	
+		  $(this).on("click",function(e){
+				e.preventDefault();
+				$(".city-pop").fadeOut("15");
+				$("#mask").hide();
+				$("#level").val($(this).text());
+			})
+	  })
+})
+</script>
+<style>
+.user-title,.user-subTitle{
+  position:relative;
+	z-index:99999;
+}
+.user-subTitle{
+  background:#F2F1EF
+}
+#tit02{
+	z-index:0;
+  background:none;
+}
+.city-pop{
+  top:70px;
+}
+</style>
+</head>
+<body>
+<div class="user-title">&gt;&gt;&gt; 申请成为会员</div>
+<div class="user-subTitle">标记*号的部分为必填项</div>
+<!--等级-弹出层-->
+<div class="mask" id="mask"></div>
+<div class="city-pop">
+  <ul class="c-item" id="level-list">
+      <li class="active"><span>A级</span></li>
+      <li><span>B级</span></li>
+      <li><span>C级</span></li>
+      <li><span>D级</span></li>
+      <li><span>E级</span></li>
+      <li><span>F级</span></li>
+      <li><span>G级</span></li>
+      <li><span>H级</span></li>
+      <li><span>I级</span></li>
+      <li><span>J级</span></li>
+      <li><span>K级</span></li>
+      <li><span>L级</span></li>
+      <li><span>M级</span></li>
+      <li><span>N级</span></li>
+      <li><span>O级</span></li>
+      <li><span>P级</span></li>
+      <li><span>特殊</span></li>
+  </ul>
+</div>
+<!--//等级-弹出层-->
+<div class="user-list">
+	<ul>
+    	<li>
+        	<label class="icon-user01">姓名*</label>
+            <input type="text" >
+        </li>
+    	<li>
+        	<label class="icon-user02">电话*</label>
+            <input type="text" maxlength="15" >
+            <button  class="btn">发送验证</button>
+        </li>
+        <li class="auth-code">
+        	<input type="text"  placeholder="输入验证码">
+            <button class="btn">点击确定</button>
+        </li>
+    	<li>
+        	<label class="icon-user03">地 址</label>
+            <input type="text" >
+        </li>
+    	<li>
+        	<label class="icon-user04">车牌号</label>
+            <input type="text" >
+        </li>
+    	<li>
+        	<label class="icon-user05">车型</label>
+            <input type="text" >
+        </li>
+    	<li>
+        	<label class="icon-user06">车架号</label>
+            <input type="text" >
+        </li>
+    	<li>
+        	<label class="icon-user07">会员等级*</label>
+            <input type="text" id="level" >
+        </li>
+    	<li>
+        	<label class="icon-user08">所属门店*</label>
+        </li>
+    	<li class="user-select">
+           <select>
+           	   <option>城市</option>
+               <option>福州</option>
+               <option>厦门</option>
+           </select>  
+           <select>
+           	   <option>县市</option>
+               <option>福清</option>
+               <option>连江</option>
+           </select>  
+           <select>
+           	   <option>门店</option>
+               <option>东大门</option>
+               <option>城隍庙</option>
+           </select>  
+        </li>
+    </ul>
+</div>
+<div class="user-subTitle"  id="tit02">*请联系您意向加入的门店，我们会有专员与您取得联系。</div>
+<div class="text-center">
+	<button class="btn btn-apply">申请会员</button>
+</div>
+</body>
+</html>

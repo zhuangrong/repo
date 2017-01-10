@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>club</title>
+<link rel="stylesheet" href="css/club.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+	/*解决移动端active伪类效果*/
+	document.body.addEventListener('touchstart', function(){});
+	//tabs
+	$.TabChange("news-tabs",1)
+})
+/*tabs切换*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab_box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+<style>
+body{background:#fff}
+</style>
+</head>
+<body>
+<div class="banner">
+ <img src="images/banner.png">
+</div>
+<div class="nav">
+	<ul>
+    	<li><a href="#"><span class="nav01"></span></a></li>
+    	<li><a href="#"><span class="nav02"></span></a></li>
+    	<li><a href="#"><span class="nav03"></span></a></li>
+  </ul>
+	<ul>
+    	<li><a href="#"><span class="nav04"></span></a></li>
+    	<li><a href="#"><span class="nav05"></span></a></li>
+    	<li><a href="#"><span class="nav06"></span></a></li>
+  </ul>
+</div>
+<div class="ad-wrap">
+	<div class="ad02">
+		<ul>
+			<li><a href="#"><img src="images/ad02a.png"></a><a href="#"><img src="images/ad02b.png"></a></li>
+			<li><a href="#"><img src="images/ad03a.png"></a><a href="#"><img src="images/ad03b.png"></a></li>
+		</ul>
+	</div>
+</div>
+<img src="images/ad01.png">
+<img src="images/ad01b.png">
+<!--家具健康-->
+<div class="hotlink">
+	<ul>
+			<li><a href="#"><img src="images/hotlink01.png"></a><a href="#"><img src="images/hotlink02.png"></a></li>
+			<li><a href="#"><img src="images/hotlink03.png"></a><a href="#"><img src="images/hotlink04.png"></a></li>
+  </ul>
+</div>
+<!--//家具健康-->
+<!--新广告位-->
+<div class="new-ad">
+	<img src="images/new-ad01.png">
+	<img src="images/new-ad02.png">
+	<img src="images/new-ad03.png">
+	<img src="images/new-ad04.png">
+	<img src="images/new-ad05.png">
+	<img src="images/new-ad06.png">
+</div>
+<!--//新广告位-->
+<!--新闻-->
+<div class="news-header">
+	<h1>新闻中心<a href="news-list.html">更多</a></h1>
+</div>
+<div class="news-tab">
+	<ul id="news-tabs">
+		<li class="curr">热点</li>
+		<li>专栏2</li>
+		<li>要闻3</li>
+		<li>排行4</li>
+		<li>专栏5</li>
+		<li>要闻6</li>
+		<li>排行7</li>
+	</ul>
+</div>
+<div class="tab_box1">
+	<div>
+		<div class="news-list">
+			<ul>
+				<li>
+					<a href="news-detail.html">
+					<div class="pic01"><img src="images/news-pic.png"></div>
+					<div class="info01">
+						<h3>重虹极品新闻</h3>
+						<p>重虹极品新闻详情重虹极品新闻详情重虹极品新闻详情</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="news-detail.html">
+					<div class="pic01"><img src="images/news-pic.png"></div>
+					<div class="info01">
+						<h3>重虹极品新闻</h3>
+						<p>重虹极品新闻详情重虹极品新闻详情重虹极品新闻详情</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="news-detail.html">
+					<div class="pic01"><img src="images/news-pic.png"></div>
+					<div class="info01">
+						<h3>重虹极品新闻</h3>
+						<p>重虹极品新闻详情重虹极品新闻详情重虹极品新闻详情</p>
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+  <div style="display:none">专栏2</div>
+  <div style="display:none">要闻3</div>
+  <div style="display:none">排行4</div>
+  <div style="display:none">专栏5</div>
+  <div style="display:none">要闻6</div>
+  <div style="display:none">排行7</div>
+</div>	
+<!--//新闻-->
+<footer>Copyright 2016 by 重虹极品</footer>
+<img src="images/addr.png">
+</body>
+</html>

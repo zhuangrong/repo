@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>club</title>
+<link rel="stylesheet" href="css/club.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+	 /*弹出层-门店信息*/
+	$("#exchange").on("click",function(e){
+		 	e.preventDefault();
+			$(".shop-pop").show();
+			$("#mask").show();
+	})
+	
+	$("#mask,#close").on("click",function(e){
+		 	e.preventDefault();
+			$(".shop-pop").hide();
+			$("#mask").hide();
+	})
+	
+})
+</script>
+<style>
+.shop-pop{
+	position:relative;
+	display: none;
+	width: 300px;
+	height:240px;
+	position: fixed;
+	z-index: 999;
+	top: 32%;
+	left: 50%;
+	margin-left: -140px;
+	text-align: center;
+	background:#fff;
+	border-radius:10px;
+	padding:35px 30px 15px;
+}
+.shop-pop span{
+	display:block;
+	padding-top:30px;
+	padding-bottom:15px;
+	font-size:20px;
+}
+.shop-pop a{
+  color:#FFBA00;
+	font-size:20px;
+}
+.shop-pop i{
+	position:absolute;
+	top:10px;
+	right:10px;
+  display:block;
+	width:25px;
+	height:25px;
+	line-height:20px;
+	border:2px solid #ccc;
+	font-size:25px;
+	border-radius:50%;
+	font-style:normal;
+	cursor:pointer;
+	text-align:center;
+	color:#ccc;
+	padding:0;
+	margin:0;
+}
+</style>
+</head>
+<body>
+<div class="pro-ad">
+	<img src="images/pro-ad.png">
+</div>
+<div class="pro-subTitle">
+	台湾进口77牌蜜兰诺松塔192g/盒零食千层酥 饼干曲奇塔192g/盒零食千层酥 饼干曲奇
+    <div class="shop-buy-wrap">
+    	<label>2000</label>
+        <a href="#" class="btn" id="exchange">立刻兑换</a>
+    </div>
+</div>
+<div class="user-title">&gt;&gt;&gt;商品介绍</div>
+<div class="pro-detail">
+	<img src="images/pro-detail02.png">
+</div>
+<div class="mask" id="mask"></div>
+<div class="shop-pop">
+	  <span>如需兑换该商品，请联系所在门店！</span>
+    <a href="member.html">=>点我联系门店</a>
+    <i id="close">x</i>
+</div>
+</body>
+</html>
