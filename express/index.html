@@ -7,12 +7,33 @@
 <title>ing</title>
 <link rel="stylesheet" href="css/express.css"> 
 <script src="js/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript" src="js/jquery.barrager.js"></script> 
 <script>
-
+$(function(){
+	//弹幕初始
+	$('canvas').barrager([{"msg":"弹幕11111。。。。"},{"msg":"弹幕22222。。。。"},{"msg":"弹幕33333"},{"msg":"弹幕555"},{"msg":"弹幕555"},{"msg":"弹幕77777"},{"msg":"弹幕88888"},{"msg":"弹幕99999"},{"msg":"弹幕00000"}])
+	//间隔几秒后再生成
+	setInterval(function(){
+		$('canvas').barrager([{"msg":"弹幕11111。。。。"},{"msg":"弹幕22222。。。。"},{"msg":"弹幕33333"},{"msg":"弹幕555"},{"msg":"弹幕666"},{"msg":"弹幕77777"}])
+ },3990)
+	
+	//添加内容
+	$('#addBarr').click(function(){
+		var newBarr = $("#barrTxt").val();
+		if(newBarr != ''){
+			$('canvas').barrager([{"msg":newBarr}]);
+			$("#barrTxt").val("")
+		}
+	});
+	
+})
 </script>
 </head>
-<body>
-<div class="banner"></div>
+<body class="barrPad">
+<div class="banner">
+	<!--	弹幕-->
+	<canvas style="width: 100%;height: 194px;">你的浏览器不支持canvas</canvas>
+</div>
 
 <div class="module">
 	<a href=""><img src="images/module00.png"></a>	
@@ -26,5 +47,11 @@
 	<a href="#"><i class="icon-user"></i>个人中心</a>
 </nav>
 <!--//导航-->
+<!--发布-->
+<div class="flex-search">
+	<input type="text" id="barrTxt" placeholder="请输入内容">
+	<button id="addBarr">发布</button>
+</div>
+<!--//发布-->
 </body>
 </html>
