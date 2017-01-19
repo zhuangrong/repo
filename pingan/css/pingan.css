@@ -1,0 +1,187 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size: 16px;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+}
+body{
+	background-color: #f2f2f2;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+ 
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+ 
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-user-select:none;
+	border:none;
+  outline:0;
+}
+input[type=text], textarea {
+	background-color: #fff;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.text-right {
+	text-align: right;
+}
+.inline {
+	display: inline-block !important;
+}
+.clearfix {
+ *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+html,body{
+	height: 100%;
+}
+/*内容*/
+.bg{
+	background-image: url(../images/bg.png);
+	background-size: cover !important;
+	background-position: top left;
+}
+.fu-box{
+	position: relative;
+	width: 15rem;
+	height: 29rem;
+	margin: 2rem auto;
+	background-color: #EAA21A;
+	background-size: 10rem !important;
+	background-position: 70% center;
+	border-radius: 1.5rem;
+}
+.fu-name{
+	position: absolute;
+	top: 1.2rem;
+	left: 1.2rem;
+	width: 2.5rem;
+	height: 6.875rem;
+	text-align: center;
+	font-size: 1.5rem;
+	background-color: rgba(255,255,255,0.5);
+	display:-webkit-flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.btn-wrap{
+	text-align: center;
+}
+.btn-save{
+	width: 7.1875rem;
+	height: 2.1875rem;
+	background-image: url(../images/btn-save.png);
+}
+
+/*订单列表*/
+.item-list{
+	
+}
+.item-list dl{
+	border-bottom: 1px solid #F2F2F2;
+	background-color: #fff;
+	padding: 0.625rem;
+	overflow: hidden;
+}
+.item-list dt{
+	float: left;
+	width: 7.5rem;
+	height: 4.6875rem;
+}
+.item-list dd{
+	position: relative;
+	margin-left: 7.5rem;	
+	padding-left: 1rem;
+}
+.item-list dd .info-title{
+	padding-top: 0.2rem;
+}	
+.item-list dd .info-txt{
+	padding-top: 0.3rem;
+	color: #808080;
+	font-size: 13px;
+}
+.btn-share{
+	position: absolute;
+	top: 0.5rem;
+	right: 0;
+	width: 4.5rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #C71523;
+}
+
+/*底部导航*/
+
+
+
+
+
+
+
+
+
+
+
+
+
