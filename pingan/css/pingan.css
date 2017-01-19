@@ -21,6 +21,7 @@ body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section
 }
 body{
 	background-color: #f2f2f2;
+	padding-bottom: 55px;
 }
 li {
 	list-style: none;
@@ -172,10 +173,38 @@ html,body{
 }
 
 /*底部导航*/
+.footer-nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 0.625rem;
+	height: 3.375rem;
+	background-color: #fff;
+	text-align: center;
+}
+.btn-index,
+.btn-mine,
+.btn-platform{
+	width: 6.5625rem;
+	height: 2.1875rem;
+	margin: 0 0rem;
+}
+.btn-index{
+	background-image: url(../images/btn-index.png)
+}
+.btn-mine{
+	background-image: url(../images/btn-mine.png)
+}
+.btn-platform{
+	background-image: url(../images/btn-platform.png)
+}
 
-
-
-
+@media screen and (max-width: 320px) {
+	html {
+		font-size:14px;
+	}
+}
 
 
 
