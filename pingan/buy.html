@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>pingan</title>
+<link rel="stylesheet" href="css/pingan.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/jquery.Spinner.js"></script> 
+<script>
+$(function(){
+	/***query.Spinner***/
+	$(".spinner").Spinner();
+
+	$(document).on("click",".spinner a",function(){
+		$("#price").text($(".spinner").find(".Amount").val()*100);/*获取数字*/
+	})
+})
+
+</script>
+</head>
+<body>
+<div class="header">
+	<i class="icon-tip"></i>购买须知
+</div>
+<div class="intro">
+	此处是平安符的文字介绍此处是平安符的文字介绍此处是平安符的文字介绍此处是平安符的文字介绍此处是平安符的文字介绍此
+</div>
+<!--价格-->
+<div class="buy-wrap">
+	<div class="buy-clear">
+		<div class="price">价格：<span id="price">0</span></div>
+		<div class="spinner"></div>
+	</div>
+	<button class="btn-buy">支付</button>
+</div>
+
+<!--底部导航	-->
+<div class="footer-nav">
+	<button class="btn-index"></button>
+	<button class="btn-mine"></button>
+	<button class="btn-platform"></button>
+</div>
+</body>
+</html>

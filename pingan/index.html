@@ -5,19 +5,54 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes">
 <title>pingan</title>
-<link rel="stylesheet" href="css/pingan.css"> 
+<link rel="stylesheet" href="css/pingan.css">
+<link rel="stylesheet" href="css/swiper.min.css" />  
 <script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
 <script>
+$(function(){
+	/*Siwper*/
+		var swiper2 = new Swiper('#slide01', {
+					pagination: '.swiper-pagination',
+					autoplay:2000
+				});
+	
+					 
+});
 </script>
 </head>
-<body class="bg">
-	<div class="fu-box" style="background-image: url(images/fu.png)">
-		<div class="fu-name">某某某</div>
-	</div>
-	<div class="btn-wrap">
-		<button class="btn-save"></button>
-		
-	</div>
-	
+<body>
+<!--swipe-->
+<section class="swiper-container" id="slide01">
+		<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/banner01.png">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/banner01.png">
+				</div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+</section>
+<!--//swipe-->	
+<!--符列表-->
+<div class="fu-list">
+	<ul>
+		<li><span>平安符平安符平安符平安符</span><img src="images/fu-s.png"></li>
+		<li><span>平安符</span><img src="images/fu-s.png"></li>
+		<li><span>平安符</span><img src="images/fu-s.png"></li>
+		<li><span>平安符</span><img src="images/fu-s.png"></li>
+		<li><span>平安符</span><img src="images/fu-s.png"></li>
+	</ul>
+</div>
+<!--//符列表-->
+<!--底部导航	-->
+<div class="footer-nav">
+	<button class="btn-index"></button>
+	<button class="btn-mine"></button>
+	<button class="btn-platform"></button>
+</div>
+<!--//底部导航	-->	
 </body>
 </html>
