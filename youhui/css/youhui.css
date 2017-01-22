@@ -329,11 +329,20 @@ nav a.active i.icon-user{
 	background-image: url(../images/icon-fav-active.png);
 }
 
-
-
-
-
-
+/*************注册***************/
+.bg-reg{
+	background-image: url(../images/bg-reg.png);
+	background-size: cover !important;
+}
+.reg-title{
+	display: block;
+	width: 119px;
+	height: 28px;
+	margin: 140px auto 80px;
+}
+.reg-title.gr{
+	background-image: url(../images/reg-gr.png);
+}
 
 
 
