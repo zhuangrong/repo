@@ -1,0 +1,345 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size: 16px;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+}
+body{
+	background-color: #f2f2f2;
+	padding-bottom: 50px;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+ 
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+ 
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-user-select:none;
+	border:none;
+  outline:0;
+}
+input[type=text], textarea {
+	background-color: #fff;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.text-right {
+	text-align: right;
+}
+.inline {
+	display: inline-block !important;
+}
+.clearfix {
+ *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+
+/*内容*/
+.bgWhite{
+	background-color: #fff;
+}
+/*导航*/
+nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	height: 44px;
+	background-color: #fff;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px -2px 10px 0px rgba(10, 2, 4, 0.2);
+}
+nav a{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	width:0%;/*必须有*/
+	display: block;
+	height:44px;
+	line-height: 44px;
+	text-align:center;
+	font-size: 13px;
+	color: #808080;
+}
+nav a.active{
+	color: #dd313c;
+}
+nav a i{
+	display: inline-block;
+	width: 20px;
+	height: 35px;	
+	vertical-align: middle;
+	margin: 0 5px 5px;
+}
+nav a i.icon-home{	
+	background-image: url(../images/icon-home.png);
+}
+nav a.active i.icon-home{	
+	background-image: url(../images/icon-home-active.png);
+}
+nav a i.icon-push{	
+	background-image: url(../images/icon-push.png);
+}
+nav a.active i.icon-push{	
+	background-image: url(../images/icon-push-active.png);
+}
+nav a i.icon-user{	
+	background-image: url(../images/icon-user.png);
+}
+nav a.active i.icon-user{	
+	background-image: url(../images/icon-user-active.png);
+}
+
+/**************个人中心**************/
+/*头像 */
+.avatar-wrap{
+	height: 180px;
+	padding-top: 16px;
+	color: #fff;
+	background-image: url(../images/avatar-bg.png);
+	background-size: cover !important;
+	text-align: center;
+}
+.avatar-wrap .avatar{
+	display: block;
+  width: 90px;
+  height: 90px;
+	border-radius: 50%;
+	border: 1px solid  #fff;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.avatar-wrap span{
+	display: block;
+	margin-top: 5px;
+}
+.avatar-wrap label{
+	display: inline-block;
+	min-width: 40px;
+	margin: 5px auto 0;
+	padding: 1px 3px;
+	border-radius: 8px;
+	border: 1px solid  #fff;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+
+/*用户信息 list*/
+.list{
+	margin-top: 10px;
+	background-color: #fff;
+}
+.list ul li{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;	
+	padding: 0 0 0 15px;
+	color: #808080;
+	border-bottom: 1px solid #F2F2F2;
+}
+.list ul li .cell{
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	display: block;
+	padding: 10px 10px 10px 0;
+	overflow: hidden;
+	color: inherit;	
+	background-image: url(../images/item-arrow.png);
+	background-repeat: no-repeat !important;
+	background-position: right center !important;
+	-webkit-background-size: 16px !important;
+	-webkit-background-origin: content-box;
+	background-origin: content-box;
+}
+.list ul li:nth-last-child(1) .cell{
+	border-bottom: none;
+}
+.list ul li .cell .tip{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	padding-right: 30px;
+	color: #aaa;
+}
+.list ul li div.cell{
+	background-image: none;
+}
+.list ul li:active{
+	background-color: #f8f8f8;
+}
+.list ul li.no-link:active{
+	background-color: transparent;
+}
+/*图标*/
+.list ul li i.icon-list{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin:0 10px 0 0;
+}
+.list ul li i.icon-list.icon-list-fav{
+	background-image: url(../images/icon-list-fav.png)
+}
+.list ul li i.icon-list.icon-list-sale{
+	background-image: url(../images/icon-list-sale.png)
+}
+.list ul li i.icon-list.icon-list-buy{
+	background-image: url(../images/icon-list-buy.png)
+}
+
+/*************出售求购***************/
+.flex-tab ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.flex-tab li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+ 	flex:1;
+	width:0%;/*必须有*/	
+	height: 44px;
+	line-height: 44px;
+	background-color: #B3B3B3;
+	text-align:center;
+	color: #fff;
+}
+.flex-tab li.curr{
+	background-color: #DD313C;
+}
+.tab-centent{
+	padding: 10px;
+}
+
+/*列表项*/
+.list-item{
+	padding: 15px 20px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	color: #808080;
+	background-color: #fff;
+}
+.list-item .title{
+	color: #dd313c;
+}
+.list-item .title span{
+	float: right;
+}
+.list-item .box{
+	padding: 10px 0;
+	overflow: hidden;
+}
+.list-item .box .pic{
+	float: left;
+	width: 140px;
+}
+.list-item .box .info{
+	margin-left: 165px;
+	line-height: 1.8;
+}
+.list-item .item-ft{
+	overflow: hidden;
+}
+.list-item .item-ft dt{
+	float: right;
+	font-size: 13px;
+}
+.list-item .item-ft dd{
+	float: left;
+}
+
+.icon-fav{
+	display: block;
+	margin: 0 auto;
+	width: 22px;
+	height: 22px;	
+	vertical-align: middle;
+	background-image: url(../images/icon-fav.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+}
+.icon-fav.active{
+	background-image: url(../images/icon-fav-active.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
