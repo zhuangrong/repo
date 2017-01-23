@@ -196,8 +196,8 @@ nav a.active i.icon-user{
 	display: flex;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	align-items: center;	
-	padding: 0 0 0 15px;
+	align-items: center;
+	padding: 0 30px 0 30px;
 	color: #808080;
 	border-bottom: 1px solid #F2F2F2;
 }
@@ -299,6 +299,10 @@ nav a.active i.icon-user{
 	float: left;
 	width: 140px;
 }
+.list-item .box .pic img{
+	width: 140px;
+	height: 90px;
+}
 .list-item .box .info{
 	margin-left: 165px;
 	line-height: 1.8;
@@ -333,6 +337,7 @@ nav a.active i.icon-user{
 .bg-reg{
 	background-image: url(../images/bg-reg.png);
 	background-size: cover !important;
+	background-position: top left !important;
 }
 .reg-title{
 	display: block;
@@ -343,6 +348,213 @@ nav a.active i.icon-user{
 .reg-title.gr{
 	background-image: url(../images/reg-gr.png);
 }
+.btn-reg{
+	display: block;
+	width: 260px;
+	height: 40px;
+	line-height: 40px;
+	padding:0 15px;
+	margin:0 auto 25px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;	
+	overflow: hidden;
+	color: #fff;
+	background-color: rgba(255,255,255,0.20);
+	border: 1px solid  #fff;
+}
+
+/*************发布***************/
+.publish-wrap{
+	padding: 10px 30px;
+}
+.publish li label{
+	display: block;
+	padding: 15px 0 3px;
+	color: #dd313c;
+}
+.publish li .ipt{
+	width: 100%;
+	line-height: 2.0;
+	border-bottom: 1px solid  #b2b2b2;	
+}
+.publish li .selector{
+	position: relative;
+}
+.publish li .selector:after{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/icon-selector.png);
+	background-size: 15px !important;
+}
+.publish li.separate{
+	width:46.5%;
+	display: inline-block;	
+}
+.publish li.separate.mr{
+	float: right;
+	margin-left: 15px;
+}
+/*类型选择-弹出*/
+.pop{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	border: 1px solid  #b2b2b2;
+	background-color: #fff;
+	display: none;
+}
+.pop li{
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.pop li:nth-last-child(1){
+	border: none;
+}
+.pop li:active{
+	background-color: #eee;
+}
+
+/*图片上传*/
+.upload-wrap{
+	position: relative;
+	min-height: 118px;
+}
+.btn-file{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 10px;
+	margin-left: 12px;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	border: none;
+/*	opacity: 0;*/
+}
+.btn-file:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -12px;
+	width: 200px;
+	height: 100px;
+	border: 1px solid #b2b2b2;
+	border-radius: 10px;
+	background-color: #fff;
+	 background-image: url(../images/icon-plus.png); 
+	background-size: 30px !important;
+}
+.btn-file:before{
+	content: "点击加号添加图片";
+	position: absolute;
+	top: 69px;
+	left: 40px;
+	z-index: 999;
+	width: 120px;
+	font-size: 14px;
+	color: #b2b2b2;
+}
+.photo{ 
+	position: absolute;
+	top: 0;
+	left: 0;	
+	z-index: -1;
+	width: 200px;
+	height: 100px;
+	vertical-align: middle;
+	margin-right: 15px;
+	display: none;
+}
+.photo img{ 
+	width: 200px;
+	height: 100px;
+	border-radius: 10px;
+	border: 1px solid  #b2b2b2;
+}
+.btn-warp{
+	text-align: center;
+}
+.btn-publish{
+	display: inline-block;
+	width: 110px;
+	height: 40px;
+	line-height: 40px;
+	margin:0 auto;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	overflow: hidden;
+	color: #fff;
+	background-color: #DD313C;
+}
+
+/*************个人注册***************/
+.reg-title-sub{
+	height: 100px;
+	background-image: url(../images/bg-reg-title.png);
+	background-size: cover !important;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.reg-title-sub span{
+	display: block;
+	width: 119px;
+	height: 28px;
+}
+.reg-title-sub span.gr{
+	background-image: url(../images/reg-gr.png)	
+}
+.reg-title-sub span.qy{
+	background-image: url(../images/reg-qy.png)	
+}
+
+/*************翻页***************/
+.pagination{
+	text-align: center;
+	padding:0 0 10px;
+}
+.pagination a{
+	display: inline-block;
+	margin: 0 2px;
+	width: 20px;
+	height: 20px;
+	line-height: 22px;
+	vertical-align: middle;
+	text-align: center;
+	color: #b2b2b2;
+}
+.pagination a:first-child{
+	background-image: url(../images/page-prev.png);
+	background-size: 14px !important;
+}
+.pagination a:last-child{
+	background-image: url(../images/page-next.png);
+	background-size: 14px !important;
+}
+
+/*************我的出售***************/
+.my-title{
+	height: 44px;
+	line-height: 44px;
+	background-color: #DD323B;
+	color: #fff;
+	text-align: center;
+}
+.list-wrap{
+	padding: 10px;
+}
+
 
 
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<link rel="stylesheet" href="css/youhui.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript">
+$(function() {
+	$('#img').change(function() {
+			var file = this.files[0];
+			var r = new FileReader();
+			r.readAsDataURL(file);
+			$(r).load(function() {
+					$('#img').css({"opacity":"0"});
+					$('#photo').show();
+					$('#photo').html('<img src="' + this.result + '" />');
+			})
+	})
+	
+	//类型选择
+	$(".selector").on("click",function(){
+		  $(".pop").show();
+	})
+	$(".pop li").on("click",function(e){
+	 	 e.stopPropagation();
+		 var txt = $(this).text();
+		 $("#category").val(txt)
+		 $(".pop").hide(30);
+	})
+})
+</script>
+</head>
+<body class="bgWhite">
+<!--发布-->
+<div class="publish-wrap">
+	<div class="publish">
+		<ul>
+			<li>
+				<label>类型选择</label>
+				<div class="selector">
+					<input type="text" class="ipt" id="category" placeholder="请选择类型">
+					<div class="pop">
+						<ul>
+							<li>出售</li>
+							<li>求购</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<label>商品名称</label>
+				<input type="text" class="ipt" placeholder="请输入该商品的名称">
+			</li>
+			<li>
+				<label>联系方式</label>
+				<input type="text" class="ipt" placeholder="请输入您的联系方式">
+			</li>
+			<li class="separate">
+				<label>数量</label>
+				<input type="text" class="ipt" placeholder="请输入数量">
+			</li>
+			<li  class="separate mr">
+				<label>价格</label>
+				<input type="text" class="ipt" placeholder="请输入价格">
+			</li>
+			<li>
+				<label>商品图片添加</label>
+				<div class="upload-wrap">
+					<div id="photo" class="photo"></div>
+					<input id="img" class="btn-file" type="file" accept="image/*">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="btn-warp">
+		<button class="btn-publish">确认发布</button>
+	</div>	
+</div>
+<!--导航-->
+<nav>
+	<a href="#"><i class="icon-home"></i>首页</a>
+	<a href="#" class="active"><i class="icon-push"></i>发布</a>
+	<a href="#"><i class="icon-user"></i>个人中心</a>
+</nav>
+<!--//导航-->
+</body>
+</html>
