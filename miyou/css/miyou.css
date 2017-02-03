@@ -109,8 +109,7 @@ button {
 	font-size: 12px;
 	border: 1px solid  #008ff8;
 }
-/**************头像**************/
-/*居中**/
+/*头像居中*/
 .avatar-wrap{
 	height: 150px;
 	padding-top: 15px;
@@ -132,13 +131,145 @@ button {
 	margin-top: 5px;
 }
 
+/*用户信息*/
+.user-item{
+	margin-top: 6px;
+	overflow: hidden;
+}
+.user-item a{
+	float: left;
+	width:50%;
+	min-height: 90px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.user-item a i{
+	display: block;
+	width: 44px;
+	height: 44px;	
+	vertical-align: middle;
+	margin: 10px auto 5px;
+	background-image: url(../images/icon-user011.png);
+}
 
+/*******************列表********************/
+.list{
+	margin-top: 6px;
+	background-color: #fff;
+}
+.list ul li{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;	
+	padding: 0 0 0 15px;
+}
+.list ul li .cell{
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	display: block;
+	padding: 10px 10px 10px 0;
+	overflow: hidden;
+	border-bottom: 1px solid  #f2f2f2;
+	color: inherit;	
+}
+.list ul li:nth-last-child(1) .cell{
+	border-bottom: none;
+}
+.list ul li .cell .tip{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	padding-right: 30px;
+	color: #aaa;
+}
+.list ul li div.cell{
+	background-image: none;
+}
+.list ul li:active{
+	background-color: #eee;
+}
+.list ul li.no-link:active{
+	background-color: transparent;
+}
+/*图标*/
+.list ul li i.icon-list{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin:0 10px 0 0;
+}
+.list ul li i.icon-list.icon01{
+	background-image: url(../images/icon-user011.png)
+}
 
+/*******************兑换商品********************/
+/*标题栏*/
+.header2{
+	height: 44px;
+	line-height: 44px;
+	background-color: #fff;
+	color: #000;
+	font-size: 18px;
+	margin-bottom: 1px;
+	text-align: center;
+	position: relative;
+}
+.header2 a{
+	display: block;
+	width: 44px;
+	height: 44px;
+}
+.header2 a:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.header2 a:last-child{
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+.header2 .icon-back{
+	background-image: url(../images/icon-back.png);
+}
 
+.header2 .icon-share{
+	color: #000;
+}
 
+.goods-pic{
+	background-color: #fff;
+	padding: 10px 0;
+	text-align: center;
+}
 
-
-
+.goods-info{
+	padding: 0 10px;
+	background-color: #fff;
+	border-top: 1px solid  #f2f2f2;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.goods-info dd,
+.goods-info dt{
+	padding: 15px 0 0;
+	font-size: 16px;
+	color: #008ff8;
+}
+.goods-info dd{
+	font-size: 12px;
+	padding: 15px 0 15px 10px;
+}
+.goods-info dd label{
+	padding-left: 20px;
+	color: #000;
+}
 
 
 
