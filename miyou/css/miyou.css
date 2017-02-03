@@ -1,0 +1,166 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	background-color: #f2f2f2;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size: 16px;
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-user-select:none;
+	border:none;
+  outline:0;
+}
+input[type=text], textarea {
+	background-color: #fff;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+
+/*内容**/
+
+
+/*******************个人中心*******************/
+/*标题栏*/
+.header{
+	height: 44px;
+	line-height: 44px;
+	background-color: #008FF8;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	position: relative;
+}
+
+/*flex布局*/
+.flex-wrap ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	background-color: #fff;
+}
+.flex-wrap li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	min-height:150px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.user-tip{
+	color: #008ff8;
+	text-align: center;
+}
+.user-tip label{
+	display: block;
+	min-width: 63px;
+	height: 19px;
+	line-height: 19px;
+	border-radius: 10px;
+	margin-bottom: 8px;
+	font-size: 12px;
+	border: 1px solid  #008ff8;
+}
+/**************头像**************/
+/*居中**/
+.avatar-wrap{
+	height: 150px;
+	padding-top: 15px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+}
+.avatar-wrap .avatar{
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border: 2px solid  #008ff8;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.avatar-wrap span{
+	display: block;
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
