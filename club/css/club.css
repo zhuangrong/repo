@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 body, html {
 	color: #000;
 	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,7 +8,7 @@ html {
 	font-size:14px;
 }
 body {
-	background:#f2f1ef
+	background: #f2f2f2;
 }
 body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
 	margin: 0;
@@ -188,23 +188,25 @@ button {
 /* 申请会员*/
 .btn{
 	display:inline-block;
-	background:#FFB900;
+	background: #008ff8;
 	outline: 0;
 	border: none;
-	border-radius:5px;
-	min-width:78px;
+	border-radius: 12px;
+	min-width: 95px;
 	min-height:26px;
 	line-height:26px;
-	color:#000;
+	color: #fff;
 	text-decoration:none;
 	text-align:center;
+	/* border: 1px solid #fff; */
 }
 .btn:active{
 	background:#e5a600
 }
 .user-title{
 	padding:5px 10px;
-	background:#FFB900
+	background: #008ff8;
+	color: #fff;
 }
 .user-subTitle{
 	color:#808080;
@@ -291,15 +293,15 @@ button {
 
 /*联盟商家vip*/
 .search-wrap{
-	background:#141414;
-	padding:10px;	
+	background: #008FF8;
+	padding:10px;
 }
 .search{
 	background:#fff;
 	height:26px;
 	border:none;
 	border-radius:3px;
-	color:#000;
+	color: #008ff8;
 	text-align:center;
 	width:100%;
 	background-image: url(../images/icon-so.png);
@@ -327,15 +329,19 @@ button {
 	padding:10px;
 }
 .vip-detail{
-	background:#fff;
+	float: left;
+	/* background:#fff; */
 	border-bottom:1px solid #E0E0E0;
 	overflow:hidden;
 	margin-bottom:10px;
+	width: 50%;
+	padding: 0 8px;
 }
 .vip-detail .vip-pic{
 	height:150px;
 	overflow:hidden;
 	position:relative;
+	background: #fff;
 }
 .vip-star{
 	display:block;
@@ -370,14 +376,18 @@ button {
 	background-position: 0 -60px;
 }
 .vip-detail dl{
-	padding:10px;
+	padding: 18px;
+	background: #fff;
 }
 .vip-detail dl dt{
-	font-weight:bold;
+	/* font-weight:bold; */
+	font-size: 15px;
+	color: #008ff8;
+	text-align: center;
 }
 .vip-detail dl dt label{
 	float:right;
-	color:#ffb900;
+	color: #008ff8;
 }
 .vip-detail dl dd{
 	paddint-top:5px;
@@ -386,7 +396,7 @@ button {
 	float:right;
 }
 .vip-detail dl dd:last-child{
-	padding:10px 0 0;
+	padding: 5px 0 0;
 	text-align:center;
 }
 
@@ -400,7 +410,7 @@ button {
 	left:0;
 	right:0;
 	z-index:99999;
-	background:rgba(0,0,0,.9);
+	background: rgba(20,20,20,.9);
 	padding:10px 0;
 	min-height:150px;
 }
@@ -411,8 +421,8 @@ button {
 }
 .category-tabs{
 	height:35px;
-	overflow:hidden;	
-	background:#141414;
+	overflow:hidden;
+	background: #7FC7FB;
 }
 .category-tabs li{
 	float:left;
@@ -424,7 +434,7 @@ button {
 	color:#fff;
 }
 .category-tabs li.active{
-	color:#ffb900;
+	color: #008FF8;
 }
 .category-tabs li i{
 	width:10px;
@@ -455,8 +465,8 @@ button {
 	text-align:center;
 }
 .c-item li.active span,.c-item li:active span{
-	border:1px solid #ffb900;
-	color:#ffb900;
+	border: 1px solid #008FF8;
+	color: #008FF8;
 }
 .c-item2{
 	width:300px;
@@ -470,7 +480,7 @@ button {
 	color:#fff;
 }
 .c-item2 li.active,.c-item2 li:active{
-	color:#ffb900;
+	color: #008ff8;
 }
 
 .dropdown-mask{
@@ -486,8 +496,8 @@ button {
 }
 .location{
 	position:relative;
-	background:#141414;
-	color:#ffb900;
+	background: #008FF8;
+	color: #fff;
 	padding:0 10px;
 	height:35px;
 	line-height:35px;
@@ -505,7 +515,7 @@ button {
 	position:absolute;
 	top:6px;
 	right:10px;
-	min-width:45px;
+	min-width: 52px;
 }
 
 /*会员全免费-详情*/
@@ -515,7 +525,7 @@ button {
 }
 .free-info h3{
 	font-size:18px;
-	color:#ffb900;
+	color: #008ff8;
 	padding:5px 0;
 }
 .free-info li{
@@ -532,17 +542,17 @@ button {
 }
 .shop-info-outline{
 	padding:8px;
-	border:2px solid #ffb900;
+	border: 2px solid #008ff8;
 	background:#fff;
 }
 .shop-info{
 	padding:15px;
-	border:1px solid #ffb900;
+	border: 1px solid #008ff8;
 }
 .shop-info .name{
 	text-align:center;
-	border-bottom:1px solid #ffb900;
-	padding:10px 0
+	border-bottom: 1px solid #008ff8;
+	padding:10px 0;
 }
 .shop-info .telephone{
 	padding:10px 0;
@@ -583,11 +593,10 @@ button {
 	float:left;
 	width:50px;
 	height:50px;
-	border:1px solid #141414;
+	border: 1px solid #008ff8;
 	background-repeat:no-repeat;
 	background-size:100%;
 	border-radius:50%;
-	
 }
 .comment-list li .info{
 	margin-left:60px;
@@ -613,7 +622,7 @@ button {
 	right:0;
 	height:35px;
 	padding:6px 0 0;
-	background:rgba(0,0,0,.9);
+	background: #808080;
 	text-align:center;
 }
 
@@ -644,13 +653,13 @@ button {
 .qrcode-pop span{
 	display:block;
 	margin-top:10px;
-	color:#ffb900
+	color: #008ff8;
 }
 
 /*优惠券列表*/
 .coupon-tabs{
 	height:35px;
-	background:#141414;
+	background: #848683;
 }
 .coupon-tabs li{
 	float:left;
@@ -666,7 +675,7 @@ button {
 	width:50%;
 }
 .coupon-tabs li.curr{
-	background:#FFB900;
+	background: #008FF8;
 }
 
 .coupon-list{
@@ -697,10 +706,11 @@ button {
 	text-align:center;
 	width:130px;
 	font-size:13px;
-	font-weight:bold;
+	/* font-weight:bold; */
 	padding-top:20px;
 	padding-left:20px;
 	text-align:left;
+	color: #fff;
 }
 .coupon-list li div.txt02{
 	line-height:1.7
@@ -727,7 +737,7 @@ button {
 	right:0;
 	height:75px;
 	padding:10px;
-	background:rgba(0,0,0,.9);
+	background: #808080;
 	text-align:center;
 }
 .comment-star {
@@ -863,7 +873,7 @@ button {
 
 /*会员中心首页*/
 .profile{
-	padding:10px;
+	padding: 18px;
 	background:#fff;
 	font-size:15px;
 	overflow:hidden;
@@ -872,13 +882,13 @@ button {
 }
 .profile .pic{
 	float:left;
-	width:72px;
-	height:72px;
+	width: 80px;
+	height: 80px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size:100%;
 	border-radius:50%;
-	border:2px solid #000;
+	border: 2px solid #008ff8;
 }
 .profile .info{
 	margin-left:90px;
@@ -955,7 +965,7 @@ button {
 	padding:15px 0;
 }
 .member-auth dd span{
-	color:#ffd900;
+	color: #008ff8;
 	font-size:30px;
 	display:block;
 }
@@ -986,7 +996,7 @@ button {
 /*积分商城*/
 .total-score{
 	height:40px;
-	background:#141414;
+	background: #008FF8;
 }
 .total-score li{
 	float:left;
@@ -994,10 +1004,10 @@ button {
 	padding-top:10px;
 	width:50%;
 	text-align:center;
-	color:#ffb900;
+	color: #fff;
 }
 .total-score li a{
-	color:#ffb900;
+	color: #fff;
 	text-decoration:none;
 }
 .shop-title{
@@ -1019,20 +1029,20 @@ button {
 	color:#000;
 	padding:10px 50px 10px 10px;
 	font-size:12px;
-	border-top:1px solid #e0e0e0
+	/* border-top:1px solid #e0e0e0 */
 }
 .shop-list li div label{
 	display:block;
-	position:absolute;
-	top:10px;
-	right:10px;
-	padding:0 0 0 20px;
+	/* position:absolute; */
+	/* top:10px; */
+	/* right:10px; */
+	/* padding:0 0 0 20px; */
 	height:16px;
-	background-image: url(../images/icon-member02.png);
+	/* background-image: url(../images/icon-member02.png); */
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size:16px 16px;
-	color:#ffb900;
+	color: #008ff8;
 }
 .shop-buy-wrap{
 	padding:5px 3px 0 0;
@@ -1209,7 +1219,6 @@ header.personal{
 	font-size:9px;
 	color:#b3b3b3;
 }
-
 .hotlink li{
 	padding-top:3px;
 	display: -webkit-flex;
@@ -1218,3 +1227,93 @@ header.personal{
 .hotlink li a:nth-child(2){
 	padding-left:3px;
 }
+
+/*2017-2-3 miyou*/
+.icon-records,
+.icon-scores{
+	display: inline-block;
+	width: 16px;
+	height: 16px;	
+	vertical-align: -3px;
+	background-image: url(../images/icon-scores.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	margin-right: 5px;
+}
+.icon-records{
+	background-image: url(../images/icon-records.png);
+}
+
+/*幻灯片*/
+.swiper01{
+	max-height: 175px;
+	background-color: #ccc;
+}
+.swiper01 .swiper-pagination-bullet{
+	width:5px !important;
+	height:5px !important;
+	background:#fff !important;
+	margin:0 3px !important;
+}
+.swiper01 .swiper-pagination-bullet-active {
+	background:rgba(255,255,255,0.6) !important;
+}
+
+/*翻页*/
+.pagination{
+	padding: 0 10px;
+	color: #808080;
+	text-align: center;
+}
+.pagination .pagination-go,
+.pagination .pagination-item{
+	display: inline-block;
+}
+
+.pagination a.page-prev,
+.pagination a.page-next{
+	display: inline-block;
+	height: 18px;
+	margin: 0 10px;
+	color: #808080;
+	background-repeat: no-repeat;
+	background-size: 16px;
+}
+.pagination a.page-prev{
+	padding-left: 16px;
+	background-image: url(../images/icon-page-prev.png);
+	background-position: left bottom;
+}
+.pagination a.page-next{
+	padding-right: 16px;
+	background-image: url(../images/icon-page-next.png);
+	background-position: right bottom;
+}
+
+.pagination .pagination-item em{
+	color: #008ff8;
+	font-style: normal;
+}
+.pagination .pagination-go input{
+	width: 38px;
+	height: 19px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #f2f2f2;
+	background-repeat: no-repeat;
+	border: 1px solid  #808080;
+}
+.pagination .pagination-go a{	
+	color: #008ff8;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
