@@ -1247,7 +1247,7 @@ header.personal{
 
 /*幻灯片*/
 .swiper01{
-	height: 175px;
+	max-height: 175px;
 	background-color: #ccc;
 }
 .swiper01 .swiper-pagination-bullet{

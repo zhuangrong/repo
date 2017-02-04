@@ -1,4 +1,3 @@
-/* jQuery.Spinner V1.0 CopyRight (c) 2014 by:Loyaoo Taobao:http://isseven.taobao.com */
 
 (function($) {
 	
