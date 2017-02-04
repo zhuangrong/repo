@@ -6,7 +6,7 @@ body, html {
 	-webkit-font-smoothing: antialiased
 }
 html {
-	font-size: 16px;
+	font-size: 15px;
 }
 body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
 	margin: 0;
@@ -145,15 +145,34 @@ button {
 	background-color: #fff;
 	border-bottom: 1px solid  #f2f2f2;
 }
+.user-item a:nth-child(even){
+	border-left: 1px solid  #f2f2f2;
+}
 .user-item a i{
 	display: block;
 	width: 44px;
 	height: 44px;	
 	vertical-align: middle;
 	margin: 10px auto 5px;
-	background-image: url(../images/icon-user011.png);
 }
-
+.icon-user01{
+	background-image: url(../images/icon-user01.png);
+}
+.icon-user02{
+	background-image: url(../images/icon-user02.png);
+}
+.icon-user03{
+	background-image: url(../images/icon-user03.png);
+}
+.icon-user04{
+	background-image: url(../images/icon-user04.png);
+}
+.icon-user05{
+	background-image: url(../images/icon-user05.png);
+}
+.icon-user06{
+	background-image: url(../images/icon-user06.png);
+}
 /*******************列表********************/
 .list{
 	margin-top: 6px;
@@ -205,8 +224,11 @@ button {
 	height: 22px;
 	margin:0 10px 0 0;
 }
-.list ul li i.icon-list.icon01{
-	background-image: url(../images/icon-user011.png)
+.list ul li i.icon-list.icon07{
+	background-image: url(../images/icon-user07.png)
+}
+.list ul li i.icon-list.icon08{
+	background-image: url(../images/icon-user08.png)
 }
 
 /*******************兑换商品********************/
@@ -223,24 +245,25 @@ button {
 }
 .header2 a{
 	display: block;
-	width: 44px;
-	height: 44px;
+	width: 22px;
+	height: 22px;
 }
 .header2 a:first-child{
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 12px;
+	left: 5px;
 }
 .header2 a:last-child{
 	position: absolute;
 	top: 0;
-	right: 10px;
+	right: 20px;
 }
 .header2 .icon-back{
 	background-image: url(../images/icon-back.png);
 }
 
 .header2 .icon-share{
+	word-break: keep-all;
 	color: #000;
 }
 
@@ -256,21 +279,239 @@ button {
 	border-top: 1px solid  #f2f2f2;
 	border-bottom: 1px solid  #f2f2f2;
 }
-.goods-info dd,
+
 .goods-info dt{
 	padding: 15px 0 0;
 	font-size: 16px;
+	text-indent: -6px;
 	color: #008ff8;
 }
 .goods-info dd{
 	font-size: 12px;
-	padding: 15px 0 15px 10px;
+	padding: 15px 0 15px 0;
+	color: #008ff8;
 }
 .goods-info dd label{
 	padding-left: 20px;
 	color: #000;
 }
 
+/*地址未填写*/
+.address{
+	display: block;
+	padding: 10px;
+	font-size: 12px;
+	color: #b2b2b2;
+	background-color: #fff;
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat !important;
+	background-position: right center !important;
+	-webkit-background-size: 16px !important;
+	-webkit-background-origin: content-box;
+	background-origin: content-box;
+}
+
+.goods-detail{
+	background-color: #fff;
+	margin-top: 10px;
+}
+.goods-detail .goods-detail-btn{
+	padding: 20px 20px 10px;
+	text-align: center;	
+}
+.goods-detail h3{
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #fff;
+	background-color: #008FF8;
+	
+}
+.goods-detail .goods-detail-content{
+	padding:10px;
+	line-height: 1.8;
+	font-size: 12px;
+}
+
+.btn{
+	display: inline-block;
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+	padding:0 15px;
+	margin:0 auto;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 15px;	
+	overflow: hidden;
+	color: #fff;
+	background-color: #008FF8;
+}
+
+/*******************分销--分销订单********************/
+/*标题栏*/
+.header-sale{
+	position: relative;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 26px;
+	margin-bottom: 1px;
+	text-align: left;
+	background-color: #fff;
+}
+.header-sale a{
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+.header-sale a:first-child{
+	position: absolute;
+	top: 12px;
+	left: 3px;
+}
+.header-sale .icon-back{
+	background-image: url(../images/icon-back2.png);
+}
+
+/*分销订单*/
+.pic-list-wrap{
+	overflow: hidden;
+	background-color: #fff;
+}
+.pic-list-wrap h3{
+	padding: 10px 10px 0;
+	font-size: 13px;
+	font-weight: normal;
+	color: #b2b2b2;
+}
+/*图文列表*/
+.pic-list{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	padding: 10px;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.pic-list .pic{
+	width: 90px;
+	height: 60px;
+	background-image: url(../images/pic01.png)
+}
+.pic-list .info{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	padding: 0 15px;
+}
+.pic-list .info p:last-child{
+	color: #808080;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.pic-list .info p:last-child span{
+	float: right;
+	font-size: 15px;
+}
+
+/*******************分销--佣金明细*******************/
+/*选项卡tabs*/
+.tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	width:0%;/*必须有*/
+	height:35px;
+	line-height: 35px;
+	text-align:center;
+	color: #fff;
+	background-color: #848683;
+}
+.tabs li.curr{
+	background-color: #008FF8;
+}
+div[class*="tab-box"] > div:not(:first-child){
+	display:none
+}
+
+/*money-list*/
+.money-list{
+	padding: 10px;
+	color: #808080;
+	background-color: #fff;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.money-list .money-code span{
+	float: right;
+	color: #000;
+}
+.money-list .money-num{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	padding-top: 10px;
+}
+.money-list .money-num p{
+	-webkit-box-flex:2;
+	-webkit-flex:2;
+	flex:2;
+	text-align: center;
+}
+.money-list .money-num p:first-child{
+	text-align: left;
+	color: #000;
+}
+.money-list .money-num p:last-child{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	color: #008ff8;
+	text-align: right;
+}
+
+
+/*******************分销--我的团队*******************/
+.sale-team{
+	margin-top: 10px;
+	background-color: #fff;
+}
+.sale-team h3{
+	font-size: 15px;
+	padding: 10px;
+	font-weight: normal;
+	border-bottom: 1px solid  #f2f2f2;	
+}
+
+/*头像居左*/
+.avatar-wrap2{
+	padding: 10px;
+}
+.avatar-wrap2 .avatar{
+	display: inline-block;
+  width: 55px;
+  height: 55px;
+	border-radius: 50%;
+	border: 1px solid  #008ff8;
+	vertical-align:middle;
+}
+.avatar-wrap2 span{
+	display: inline-block;
+	padding-top: 0;
+	padding-left: 10px;
+	vertical-align:middle;
+	line-height: 1.5;
+}
+.avatar-wrap2 span em{
+	display: block;
+	color: #808080;
+	font-style: normal;
+}
 
 
 
