@@ -9,77 +9,52 @@
 <link rel="stylesheet" href="css/miyou.css"> 
 <script src="js/jquery-2.1.4.min.js"></script> 
 <script>
-/*tabs切换组件*/
-$.TabChange = function(obj,num){
-	$("li","#" + obj).each(function(index){
-			$(this).click(function(i){
-			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
-				$(this).addClass("curr").siblings().removeClass("curr");
-			})													
-	})
-}
-$(function(){
-	$.TabChange("tabs",1)
-})
+
 </script>
 </head>
 <body>
-<div class="header-sale">
-	<a class="icon-back" href="javascrit:"></a>
-	佣金明细（0）
+<!--佣金header-->
+<div class="money">
+	<div class="money-title">可提现佣金（元）</div>
+	<div class="money-total">
+	    <span>0.00</span>
+	    <a class="money-view" href="sale-money-list.html">查看明细</a>
+	</div>
+	<div class="money-success">成功提现：0.00</div>
 </div>
-<!--tabs-->
-<div class="tabs" id="tabs">
+<!--//佣金header-->
+<div class="money-statistics">
 	<ul>
-		<li class="curr">全部</li>
-		<li>待审核</li>
-		<li>待打款</li>
-		<li>已打款</li>
-		<li>无效</li>
+		<li>
+			累计佣金
+			<p>0.00 </p>
+			<span>所有佣金</span>
+		</li>
+		<li>
+			累计佣金
+			<p>0.00 </p>
+			<span>所有佣金</span>
+		</li>
+		<li>
+			累计佣金
+			<p>0.00 </p>
+			<span>所有佣金</span>
+		</li>
+		<li>
+			累计佣金
+			<p>0.00 </p>
+			<span>所有佣金</span>
+		</li>
 	</ul>
 </div>
-<div class="tab-box1">
-	<div>
-		<!--全部-->
-		<div class="money-list">
-			<div class="money-code">编号：CAHH4567891888888<span>+0.00</span></div>
-			<div class="money-num">
-				<p>申请佣金：2.00</p>
-				<p>2016-10-11 17:58</p>
-				<p>待审核</p>
-			</div>
-		</div>
-		<div class="money-list">
-			<div class="money-code">编号：CAHH4567891888888<span>+0.00</span></div>
-			<div class="money-num">
-				<p>申请佣金：2.00</p>
-				<p>2016-10-11 17:58</p>
-				<p>待打款</p>
-			</div>
-		</div>
-		<div class="money-list">
-			<div class="money-code">编号：CAHH4567891888888<span>+0.00</span></div>
-			<div class="money-num">
-				<p>申请佣金：2.00</p>
-				<p>2016-10-11 17:58</p>
-				<p>已打款</p>
-			</div>
-		</div>
-		<div class="money-list">
-			<div class="money-code">编号：CAHH4567891888888<span>+0.00</span></div>
-			<div class="money-num">
-				<p>申请佣金：2.00</p>
-				<p>2016-10-11 17:58</p>
-				<p>无效</p>
-			</div>
-		</div>
-		<!--//全部-->
-	</div>
-	<div>待审核</div>
-	<div>待打款</div>
-	<div>已打款</div>
-	<div>无效</div>
+
+<!--注意-->
+<div class="money-remark">
+	买家确认收货后，立即获得分销佣金。结算期（7天） 后，佣金可提现。结算期内，买家退货，佣金将自动 扣除。  
+	<p> 注意： 可用现金满 <span class="c01">1000</span> 元后才能申请提现</p>
 </div>
-<!--//tabs-->
+<div class="money-btn-wrap">
+	<button class="btn">我要提现</button>
+</div>
 </body>
 </html>
