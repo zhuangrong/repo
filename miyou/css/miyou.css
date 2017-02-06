@@ -345,7 +345,10 @@ em{
 	line-height: 1.8;
 	font-size: 12px;
 }
-
+.btn-wrap{
+	padding: 20px 0;
+	text-align: center;
+}
 .btn{
 	display: inline-block;
 	width: 100px;
@@ -571,6 +574,12 @@ div[class*="tab-box"] > div:not(:first-child){
 	padding: 10px;
 	color: #008ff8;
 	background-color: #fff;
+}
+.apply-detail{
+	padding: 10px 10px 20px;
+	line-height: 1.6;
+	background-color: #fff;
+	border-top: 1px solid  #f2f2f2;
 }
 
 .list ul li div.cell p{
@@ -950,7 +959,7 @@ nav a{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	flex-direction:column;  /*纵向*/
+	flex-direction:column; /*纵向*/
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
@@ -1043,9 +1052,10 @@ nav a i.icon-nav04{
 	min-width: 80px;
 	height: 25px;
 	line-height: 25px;
+	padding: 0 5px;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 5px;	
+	border-radius: 5px;
 	overflow: hidden;
 	color: #fff;
 	background-color: #008FF8;
@@ -1241,7 +1251,11 @@ nav a i.icon-nav04{
 	margin-bottom: 7px;
 	text-align: right;
 }
-.shop-car .product-num .spinner a{
+/*spinner数量加减*/
+.spinner{
+	overflow: hidden;
+}
+.spinner a{
 	display: inline-block;
 	width: 19px;
 	height: 19px;
@@ -1249,14 +1263,14 @@ nav a i.icon-nav04{
 	vertical-align: middle;
 	margin: 0 0 0.3rem;
 }
-.shop-car .product-num .spinner a.DisDe,
-.shop-car .product-num .spinner a.Decrease{
+.spinner a.DisDe,
+.spinner a.Decrease{
 	background-image: url(../images/icon-decrease.png)
 }
-.shop-car .product-num .spinner a.Increase{
+.spinner a.Increase{
 	background-image: url(../images/icon-increase.png)
 }
-.shop-car .product-num .spinner input{
+.spinner input{
 	display: inline-block;
 	width: 38px;
 	height: 19px;
@@ -1275,6 +1289,7 @@ nav a i.icon-nav04{
 	display: flex;
 	padding: 5px 12px;
 	background-color: #fff;
+	border-bottom: 1px solid  #f2f2f2;
 }
 .order-show .product-pic{
 	max-width: 90px;
@@ -1284,12 +1299,21 @@ nav a i.icon-nav04{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
 	flex:1;
-	padding: 5px 10px 0;
-	line-height: 1.7;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: flex-start; /*左对齐*/
+	-webkit-box-align: center;
+	justify-content: center;
+	flex-direction:column; /*纵向*/
+	padding: 0 10px ;
 }
 .order-show .product-num{
 	color: #808080;
 	margin-top: 35px;
+}
+.order-show .product-check{
+	padding:20px 15px 0 0;
 }
 
 /*配送方式*/
@@ -1370,14 +1394,14 @@ nav a i.icon-nav04{
 	line-height: 1.5;
 }
 .radio{
-	width: 22px;
-	height: 22px;
+	width: 20px;
+	height: 20px;
 	vertical-align: middle;
 	background-image: url(../images/radio.png);
 	background-position: 0 0;
 }
 .radio:checked{
-	background-position: 0 -22px;
+	background-position: 0 -20px;
 }
 .icon-edit{
 	display: block;
@@ -1402,23 +1426,173 @@ nav a i.icon-nav04{
 	background-image: url(../images/icon-add.png);
 }
 
+.message{
+	padding: 10px 10px 40px;
+	margin-top: 5px;
+	background-color: #fff;
+}
+.message h3{
+	color: #008ff8;
+	padding-bottom: 9px;
+}
+.message .texta{
+	width: 100%;
+	height: 125px;
+	padding: 10px;
+	border: 1px solid  #b2b2b2;
+	border-radius: 11px;
+}
+.message .remark{
+	padding-top: 5px;
+	font-size: 12px;
+	color: #b3b3b3;
+}
+
+/*提交订单*/
+.order-bar{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 44px;
+	background-color: #B3B3B3;
+}
+.order-bar div{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;	
+	height: 44px;
+	line-height: 44px;
+	padding: 0 10px;
+}
+.order-bar a{
+	width: 95px;
+	line-height: 44px;
+	text-align: center;
+	background-color: #008FF8;
+}
+.order-blank{
+	height: 80px;
+}
+
+/*******************填写地址********************/
+.address-submit{
+	background-color: #fff;
+}
+.address-submit ul li{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 45px;
+	padding: 0 8px;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.address-submit ul li input{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	height: 100%;
+	margin: 0 10px;
+	padding: 0 5px;
+	border: none;
+}
+.address-submit ul li input::-webkit-input-placeholder{
+	color: #000;
+}
+
+.icon-address04,
+.icon-address03,
+.icon-address02,
+.icon-address01{
+	width: 22px;
+	height: 22px;	
+}
+.icon-address01{
+	background-image: url(../images/icon-address01.png)
+}
+.icon-address02{
+	background-image: url(../images/icon-address02.png)
+}
+.icon-address03{
+	background-image: url(../images/icon-address03.png)
+}
+.icon-address04{
+	background-image: url(../images/icon-address04.png)
+}
 
 
+/*******************购物车列表********************/
+/*购物车标题*/
+.order-title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	padding: 5px 10px 5px 13px;
+	margin-bottom: 5px;
+	background-color: #fff;
+}
+.order-title span{
+	webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	padding-left: 13px;
+}
+.order-title a{
+	color: #008ff8;
+}
+
+/*购物车-列表*/
+.order-bar.choose dl{
+	webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	padding: 0 15px 0 10px;
+}
+.order-bar.choose dl dt {
+	float: left;
+	padding-top: 10px;
+	font-size: 12px;
+}
+.order-bar.choose dl dt input[type=checkbox]{
+	vertical-align: middle;
+	margin: 3px 6px 7px 0;
+}
+.order-bar.choose dl dd {
+	float: right;
+	padding-top: 5px;
+	text-align: right;
+}
+.order-bar.choose dl dd em{
+	display: block;
+	font-size: 12px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*******************购物车编辑********************/
+.order-bar.choose a.del-car{
+	background-color: #FF4443;
+}
+.order-show .product-del{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	width: 50px;
+	margin:-5px -12px -5px 0;
+	color: #fff;
+	background-color: #FF4443	;
+}
 
 
 

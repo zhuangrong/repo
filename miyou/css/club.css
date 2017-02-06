@@ -327,6 +327,7 @@ button {
 }
 .vip-detail-wrap{
 	padding:10px;
+	overflow: hidden;
 }
 .vip-detail{
 	float: left;
@@ -1266,6 +1267,7 @@ header.personal{
 	color: #808080;
 	text-align: center;
 }
+.pagination .pagination-item span,
 .pagination .pagination-go,
 .pagination .pagination-item{
 	display: inline-block;
@@ -1274,8 +1276,9 @@ header.personal{
 .pagination a.page-prev,
 .pagination a.page-next{
 	display: inline-block;
-	height: 18px;
+	height: 16px;
 	margin: 0 10px;
+	vertical-align: middle;
 	color: #808080;
 	background-repeat: no-repeat;
 	background-size: 16px;
@@ -1283,12 +1286,12 @@ header.personal{
 .pagination a.page-prev{
 	padding-left: 16px;
 	background-image: url(../images/icon-page-prev.png);
-	background-position: left bottom;
+	background-position: left center;
 }
 .pagination a.page-next{
 	padding-right: 16px;
 	background-image: url(../images/icon-page-next.png);
-	background-position: right bottom;
+	background-position: right center;
 }
 
 .pagination .pagination-item em{
