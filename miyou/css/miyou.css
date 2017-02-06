@@ -244,36 +244,30 @@ em{
 /*******************兑换商品********************/
 /*标题栏*/
 .header2{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
 	height: 44px;
-	line-height: 44px;
-	background-color: #fff;
-	color: #000;
-	font-size: 18px;
+	padding: 0 10px 0 5px;
 	margin-bottom: 1px;
+	color: #000;
+	background-color: #fff;
+}
+.header2 span{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
 	text-align: center;
-	position: relative;
-}
-.header2 a{
-	display: block;
-	width: 22px;
-	height: 22px;
-}
-.header2 a:first-child{
-	position: absolute;
-	top: 12px;
-	left: 5px;
-}
-.header2 a:last-child{
-	position: absolute;
-	top: 0;
-	right: 20px;
 }
 .header2 .icon-back{
+	width: 22px;
+	height: 22px;
 	background-image: url(../images/icon-back.png);
 }
-
 .header2 .icon-share{
-	width: 26px;
 	word-break: keep-all;
   white-space: nowrap;
 	color: #000;
@@ -284,7 +278,6 @@ em{
 	padding: 10px 0;
 	text-align: center;
 }
-
 .goods-info{
 	padding: 0 10px;
 	background-color: #fff;
@@ -537,7 +530,6 @@ div[class*="tab-box"] > div:not(:first-child){
 	text-align: center;
 	padding-bottom: 10px;
 }
-
 .apply-form{
 	width: 290px;
 	margin: 0 auto 10px;
