@@ -22,6 +22,10 @@ $(function(){
 	$("#share").click(function(){
 		$("#pop-share").show();	
 	})
+	//弹窗-分享好友
+	$(".pop-btn-share").click(function(){
+		$("#pop-share").hide();	
+	})
 });
 </script>
 </head>
@@ -32,12 +36,13 @@ $(function(){
   <div class="btn-wrap">
       <a href="rule.html" class="btn-rule"></a>
       <a href="gain.html" class="btn-gain"></a>
-      <a href="prize.html" class="btn-share"></a>
+      <a id="share" class="btn-share"></a>
   </div>
   
+<!--
   <button  id="gameover">活动结束</button>
   <button  id="winner">中奖通知</button>
-  <button  id="share">分享好友</button>
+-->
 <!--弹窗-活动结束--> 
 <div class="pop-mask" id="pop-end">
 	<div class="pop-box">

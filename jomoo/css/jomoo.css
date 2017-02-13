@@ -337,6 +337,7 @@ button{
 .video-title{
 	margin:10px 0 0;
 	color:#fff;
+	font-size: 16px;
 }
 .btn-wrap{
 	text-align:center;
@@ -419,6 +420,7 @@ button{
 	color:#fff;
 	text-align:center;
 	padding:3rem 0 0;
+	font-size: 16px;
 }
 
 /*8-1点击去领取*/

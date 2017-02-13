@@ -27,7 +27,7 @@ li {
 	-webkit-user-select: none;
 }
 a {
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-tap-highlight-color: transparent;
@@ -73,6 +73,9 @@ em{
 	font-style: normal;
 }
 
+a.cf{
+  color: #fff;
+}
 /*******************个人中心*******************/
 /*标题栏*/
 .header{
@@ -1109,6 +1112,7 @@ nav a i.icon-nav04{
   flex:1;
 	padding: 0 5px;
 }
+
 .icon-search-list{
 	display: inline-block;
 	width: 16px;
