@@ -1591,6 +1591,24 @@ nav a i.icon-nav04{
 }
 
 
-
-
-
+/*******************20170217 商城首页产品滑动********************/
+.swiper-container-horizontal>.swiper-pagination{
+	bottom: 2px !important;
+}
+/*幻灯片*/
+.swiper06 .swiper-pagination-bullet,
+.swiper05 .swiper-pagination-bullet,
+.swiper03 .swiper-pagination-bullet{
+	width:7px !important;
+	height:7px !important;
+	background:#b2b2b2 !important;
+	margin:0 5px 0 !important;
+}
+.swiper06 .swiper-pagination-bullet-active,
+.swiper05 .swiper-pagination-bullet-active,
+.swiper03 .swiper-pagination-bullet-active {
+	background:rgba(0,0,0,0.36) !important;
+}
+nav{
+	z-index: 99999999;
+}
