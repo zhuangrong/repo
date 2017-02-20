@@ -241,8 +241,14 @@ div[class*="tab-box"] > div:not(:first-child){
 	background-origin: content-box;
 }
 .list .pic{
+	position: relative;
 	width: 90px;
 	height: 65px;
+}
+.list .pic i{
+	position: absolute;
+  bottom: 5px;
+  right: 0;
 }
 .list .info{
 	-webkit-box-flex:1;
@@ -485,6 +491,33 @@ div[class*="tab-box"] > div:not(:first-child){
 .vip-star.s5{
 	background-position: 0 -60px;
 }
+
+/*星级*/
+.vip-star2{
+	display:block;
+	position:absolute;
+	width:85px;
+	height:15px;
+	background-image: url(../images/star2.png);
+	background-repeat: no-repeat;
+	background-size:100% !important;	
+}
+.vip-star2.s1{
+	background-position: 0 0;
+}
+.vip-star2.s2{
+	background-position: 0 -15px;
+}
+.vip-star2.s3{
+	background-position: 0 -30px;
+}
+.vip-star2.s4{
+	background-position: 0 -45px;
+}
+.vip-star2.s5{
+	background-position: 0 -60px;
+}
+
 .comment-list{
 	padding-bottom: 10px;
 	margin-top: 5px;
