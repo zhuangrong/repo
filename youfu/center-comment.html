@@ -10,6 +10,19 @@
 <link rel="stylesheet" href="css/youfu.css"> 
 <script src="js/jquery-2.1.4.min.js"></script> 
 <script>
+$(function(){
+	$("#comment").on("click",function(){
+		$(".comment-wrap").show();
+	})
+	
+  //评论星
+	$("#level li").each(function(index){
+		var n = index + 1;
+		$(this).click(function(){
+			$("#level").attr("class","vip-star s" + n)
+		})
+	})
+})
 </script>
 </head>
 <body>
@@ -20,7 +33,7 @@
 	<a class="icon-man" href="#"></a>
 </div>
 <!--//头部-标题栏-->
-<!--详情-评价-->
+<!--服务标题-->
 <div class="server-title-wrap">
 	<div class="server-title">
 		<h3>发布时间：2017/01/18 11:22 <span>浏览人数：3000</span></h3>
@@ -30,7 +43,83 @@
 		<i class="icon-fav"></i>收藏
 	</div>
 </div>
-<!--//详情-评价-->
+<!--//服务标题-->
+<!--服务项目--->
+<div class="server-item">
+	<ul>
+		<li>
+			<label>服务类型：</label>
+			<p>家政/搬运</p>
+		</li>
+		<li>
+			<label>服务地区：</label>
+			<p>厦门</p>
+		</li>
+		<li>
+			<label>服务商家：</label>
+			<p>好康家政</p>
+		</li>
+		<li>
+			<label>服务评星：</label>
+			<p><i class="vip-star s2"></i></p>
+		<li>
+			<label>服务评分：</label>
+			<p>4.3</p>
+		</li>
+	</ul>
+</div>
+<!--//服务项目-->
+<!--服务信息-->
+<div class="server-detail">
+	<h3>详细信息</h3>
+	<p>此处为图文信息此处为图文信息此处为图文信息此处为图 文信息。</p>
+	<p>此处为图文信息此处为图文信息此处为图文信息此处为图 文信息此处为</p>
+</div>
+<!--//服务信息-->
+<!--评价列表-->
+<div class="comment-list">
+    <ul>
+      <li>
+          <div class="pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="info">
+            <dt>用户名<i class="vip-star"></i></dt>
+            <dd>
+              很不错的第一家服务商，值得推荐，赞
+            </dd>
+          </dl>
+       </li>
+      <li>
+          <div class="pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="info">
+            <dt>用户名<i class="vip-star"></i></dt>
+            <dd>
+              很不错的第一家服务商，值得推荐，赞
+            </dd>
+          </dl>
+       </li>
+    </ul>
+</div>
+<!--//评价列表-->
+<button class="btn-comment" id="comment">立即评价</button>
+<!--评论-->
+<div class="comment-wrap" style="display: none">
+	<div class="comment-star">
+        <span>评星</span>
+        <ul class="vip-star s1" id="level">
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="comment">
+        <input type="text" placeholder="点此发表评论">
+       
+        <button class="btn">发表</button>
+    </div>
+</div>
+<!--//评论-->
 
 </body>
 </html>
