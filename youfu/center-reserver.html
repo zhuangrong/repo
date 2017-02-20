@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>youfu</title>
+<link rel="stylesheet" href="css/youfu.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+  //tabs切换
+	$.TabChange("tabs",1)
+	
+  //弹出层
+	$("#view-detail").on("click",function(){
+		 $("#dialog").fadeIn(200)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask,.close").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog").fadeOut(200)		 
+	})
+})
+</script>
+</head>
+<body>
+<!--tabs-->
+<div class="tabs" id="tabs">
+	<ul>
+		<li class="curr">预约中</li>
+		<li>服务中</li>
+		<li>已完成</li>
+	</ul>
+</div>
+
+<div class="tab-box1">
+	<div>
+		<!--预约中-->
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：等待商家接受</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">取消预约</a>
+				<a href="#" class="btn-list" id="view-detail">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：等待商家接受</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">取消预约</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：等待商家接受</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">取消预约</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<!--弹出层-订单详情-->
+		<div id="dialog" style=" display:none">
+			<div class="mask"></div>
+			<div class="dialog">
+				<span class="close">×</span>
+				<div class="dialog-header">订单详情</div>
+				<div class="dialog-body">
+					<!--订单详情-->
+					<div class="form-show">
+						<ul>
+							<li>
+								<span>商家电话：</span>
+								<div><a href="tel:13163999995">13163999995</a></div>
+								<a class="icon-phone" href="tel:13163999995"></a>
+							</li>
+							<li>
+								<span>商家地址：</span>
+								<div>厦门思明区XXXXXXXXXXXXX</div>
+								<a href="#" class="icon-location"></a>
+							</li>
+							<li>
+								<span>订单状态：</span>
+								<div>等待商家接受</div>
+							</li>
+							<li></li>
+							<li>
+								<span>买家姓名：</span>
+								<div>朱德明</div>
+							</li>
+							<li>
+								<span>买家电话：</span>
+								<div>13163999995</div>
+							</li>
+							<li>
+								<span>预约时间：</span>
+								<div>2017-3-5</div>
+							</li>
+							<li>
+								<span>预约概述：</span>
+								<div>我需要辆双排货车，从厦门出发运到漳州</div>
+							</li>
+
+						</ul>
+					</div>
+					<!--//订单详情-->
+				</div>
+			</div>
+		</div>
+		<!--//弹出层-订单详情-->
+	  <!--//预约中-->
+	</div>
+	<div>
+		<!--服务中-->
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：商家服务中</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">发起终止服务</a>
+				<a href="#" class="btn-list" id="view-detail">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：商家请求终止服务</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">同意终止服务</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：商家发起验收</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">确认验收</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<!--//服务中-->
+	</div>
+	<div>
+		<!--已完成-->
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：已完成</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">评价服务</a>
+				<a href="#" class="btn-list">删除订单</a>
+				<a href="#" class="btn-list" id="view-detail">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：已完成</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">评价服务</a>
+				<a href="#" class="btn-list">删除订单</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<div class="list-wrap">
+			<div class="list">
+				<div class="pic" style="background-image: url(images/pic01.png)"></div>
+				<div class="info">
+					<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+					<div class="info-detail">
+						编号：YE201702231<span class="state">状态：已终止</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-op">
+				<a href="#" class="btn-list">删除订单</a>
+				<a href="#" class="btn-list">查看详情</a>
+			</div>
+		</div>
+		<!--//已完成-->
+	</div>
+</div>
+<!--//tabs-->
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>黄页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

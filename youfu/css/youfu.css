@@ -1,0 +1,439 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html {
+	font-size: 15px;
+}
+body{
+	background-color: #f2f2f2
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #000;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-appearance: none;
+	background-color: transparent;;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-user-select:none;
+	border:none;
+  outline:0;
+}
+input[type=text], textarea {
+	background-color: #fff;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+em,h3{
+	font:inherit
+}
+/*内容*/
+/*导航栏*/
+nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 44px;
+	line-height: 1.1;
+	background-color: #fff;
+}
+nav a{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	text-align:center;
+	font-size: 14px;
+	color: #808080;
+}
+nav a i{
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+nav a i.icon-nav01{	
+	background-image: url(../images/icon-nav01.png);
+}
+nav a i.icon-nav02{	
+	background-image: url(../images/icon-nav02.png);
+}
+nav a i.icon-nav03{	
+	background-image: url(../images/icon-nav03.png);
+}
+nav a i.icon-nav04{	
+	background-image: url(../images/icon-nav04.png);
+}
+.nav-blank{
+	height: 80px;
+}
+
+/*选项卡tabs*/
+.tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	width:0%;/*必须有*/
+	height:35px;
+	line-height: 35px;
+	text-align:center;
+	color: #fff;
+	background-color: #808080;
+}
+.tabs li.curr{
+	background-color: #ed780c;
+}
+div[class*="tab-box"] > div:not(:first-child){
+	display:none
+}
+.tabs li:nth-child(2){
+	border-left:2px solid #fff;
+	border-right:2px solid #fff;
+}
+.tabs li:after{
+	content: '';
+	width: 11px;
+	height: 7px;
+	display: inline-block;
+	margin: 0 0 1px 5px;
+	background-image: url(../images/arrow02.png)
+}
+
+.tabs li.curr:after{
+	background-image: url(../images/arrow01.png)
+}
+/*遮罩层*/
+.mask {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+/*头部-标题栏*/
+.header{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	height: 44px;
+	color: #fff;
+	background-color: #ED770D;
+}
+.header span{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	padding: 0 10px;
+}
+.header span input[type=text]{
+	width: 100%;
+  height: 28px;
+	line-height: 28px;
+	padding-left: 32px;
+  border-radius: 5px;
+  text-align: center;
+	font-size: 14px;
+  color: #000;
+	background: #fff;
+	border: 1px solid #ddd;	
+  background-image: url(../images/icon-search.png);
+  background-position: 22% 60%;
+  background-size: 18px 18px !important;	
+}
+.header span input[type=text]:focus{	
+	background-position: 5px 60%;
+	text-align: left;
+}
+.header a.icon-man{
+	width: 22px;
+	height: 22px;
+	margin: 0 15px;
+}
+.header .icon-man{
+	background-image: url(../images/icon-man.png);
+}
+.header .city-sel{ /*用于文字*/
+	word-break: keep-all;
+  white-space: nowrap;
+	color: #fff;
+	padding: 0 0 0 10px;
+}
+.header .city-sel:after{ 
+	content: '';
+	width: 11px;
+	height: 7px;
+	display: inline-block;
+	margin: 0 0 1px 3px;
+	background-image: url(../images/arrow01.png)
+}
+
+/*------------------------4个人中心-1.我的预约------------------------*/
+/*我的预约*/
+.list{
+	display: 
+	-webkit-box;
+	display: 
+	-webkit-flex;
+	display: flex;
+	padding: 10px;
+	background-color: #fff;
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat !important;
+	background-position: right center !important;
+	-webkit-background-size: 16px !important;
+	-webkit-background-origin: content-box;
+	background-origin: content-box;
+}
+.list .pic{
+	width: 90px;
+	height: 65px;
+}
+.list .info{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	padding: 0px 0px 0 10px;
+}
+.list .info .info-title{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	line-height: 1.2;
+	padding: 5px 0 0;
+	font-size: 14px;
+}
+.list .info .info-detail{
+	padding-top: 7px;
+	color: #B3B3B3;
+	font-size: 11px;
+}
+.list .info .info-detail span{
+	padding-left: 11px;
+}
+.list .info .info-detail span.state{
+	float: right;
+}
+
+.list-op{
+	padding: 0 10px 10px;
+	background-color: #fff;
+	text-align: right;
+	border-bottom: 1px solid #f2f2f2;
+}
+.list-op a,
+.list-op button{
+	margin-left: 10px;
+}
+
+.btn-list{
+	display: inline-block;
+	min-width: 65px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 8px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #fff;
+	background-color: #ed780c;
+}
+
+/*弹出层*/
+.dialog {
+	position: fixed;
+	z-index: 9999;
+	width: 80%;
+	max-width: 300px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	text-align: center;
+	border-radius: 8px;
+}
+.dialog span.close{
+	position: absolute;
+	display: block;
+	top: -15px;
+	right: -15px;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ED770D;
+}
+.dialog .dialog-header{
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+	background-color: #ED770D;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.dialog .dialog-body{
+	padding: 20px;
+	text-align: left;
+	min-height: 150px;
+	color: #404040;
+}	
+.dialog .dialog-header:after{
+	content: '';
+	width: 11px;
+	height: 7px;
+	display: inline-block;
+	margin: 0 0 1px 5px;
+	background-image: url(../images/arrow01.png)
+}
+
+/*订单详情*/
+.form-show li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	/*子元素垂直居中*/
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: flex-start;
+	padding: 5px 0;
+}
+.form-show li div{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;	
+	width: 100%;
+	padding: 0 10px;
+}
+.form-show li span{
+	width: 75px;
+	color: #ed770d;
+}
+.icon-phone{
+	width: 24px;
+	height: 24px;	
+	background-image: url(../images/icon-phone.png);
+}
+.icon-location{
+	width: 24px;
+	height: 24px;	
+	background-image: url(../images/icon-location.png);
+}
+
+
+
+/*------------------------4个人中心-4.服务评价页------------------------*/
+.server-title-wrap{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 10px;
+	background-color: #fff;
+}
+.server-title-wrap .server-title{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	padding-right: 20px;
+}
+.server-title-wrap .server-title h3{
+	color: #b2b2b2;
+	font-size: 11px;
+}
+.server-title-wrap .server-title h3 span{
+	float: right;
+}
+.server-title-wrap .server-title p{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.server-title-wrap .server-fav{
+	text-align: center;
+	color: #b2b2b2;
+	font-size: 12px;
+}
+.icon-fav{
+	display: block;
+	width: 25px;
+	height: 25px;	
+	background-image: url(../images/icon-fav.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
