@@ -732,7 +732,173 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 
 
+/*------------------------4个人中心-分销中心------------------------*/
+body.bgf{
+	background-color: #fff;
+}
+/*头像居左*/
+.avatar-wrap2{
+	padding: 10px;
+}
+.avatar-wrap2 .avatar{
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	border: 1px solid  #ED770D;
+	vertical-align:middle;
+}
+.avatar-wrap2 span{
+	display: inline-block;
+	padding-top: 0;
+	padding-left: 10px;
+	vertical-align:middle;
+	line-height: 1.5;
+	color: #ED770D;
+}
+.avatar-wrap2 span em{
+	display: block;
+	color: #808080;
+	font-size: 12px;
+}
 
+/*分销积分*/
+.money{
+	padding: 10px;
+	font-size: 16px;
+	overflow: hidden;
+	color: #fff;
+	background-color: #ED770D;
+}
+.money-title{
+	padding: 10px 10px 30px 0;
+}
+.money-title2{
+	float: left;
+}
+.money-title2 span{
+	display: block;
+	font-size: 37px;
+}
+.money-total2{
+	float: right;
+	overflow: hidden;
+	padding: 16px 0 0px;
+}
+.money-total2 a.btn2{
+	float: right;
+	display: inline-block;
+	width: 100px;
+	height: 43px;
+	line-height: 43px;
+	padding:0 15px;
+	margin:0 auto;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;	
+	overflow: hidden;
+	color: #ED770D;
+	background-color: #F2F2F2;
+}
 
+/*分销中心功能*/
+.money-item{
+	background-color: #fff;
+	overflow: hidden;
+}
+.money-item a{
+	float: left;
+	width: 50%;
+	min-height: 100px;
+	border: 1px solid  #f2f2f2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	flex-direction:column;
+	color: #000;
+}
+.money-item a:nth-child(even){
+	border-left: 1px solid  #f2f2f2;	
+}
+.money-item a p{
+	display: block;	
+}
+.money-item a span{
+	display: block;
+	font-size: 12px;
+}
+.money-item a i{
+	display: inline-block;
+	width: 44px;
+	height: 44px;	
+	vertical-align: middle;
+}
+.icon-money01{
+	background-image: url(../images/icon-money01.png);
+}
 
+.icon-money02{
+	background-image: url(../images/icon-money02.png);
+}
 
+.icon-money03{
+	background-image: url(../images/icon-money03.png);
+}
+
+.icon-money04{
+	background-image: url(../images/icon-money04.png);
+}
+
+/*------------------------4个人中心-分销中心-二维码------------------------*/
+.qr-text{
+	position: relative;
+	z-index: 99;
+	text-align: center;
+	margin-top: -71px;
+	color: #ED770D;
+}
+
+/*------------------------4个人中心-分销中心-我的团队------------------------*/
+/*标题栏*/
+.header-sale{
+	position: relative;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 26px;
+	margin-bottom: 1px;
+	text-align: left;
+	background-color: #fff;
+}
+.header-sale a{
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+.header-sale a:first-child{
+	position: absolute;
+	top: 11px;
+	left: 3px;
+}
+.header-sale .icon-back{
+	background-image: url(../images/icon-back2.png);
+}
+
+.sale-team{
+	margin-top: 10px;
+	background-color: #fff;
+}
+.sale-team h3{
+	font-size: 15px;
+	padding: 10px;
+	border-bottom: 1px solid  #f2f2f2;	
+}
+
+.ava3 .avatar{
+	border-radius: 0;
+}
+.ava3 span{
+	color: #000;
+}
