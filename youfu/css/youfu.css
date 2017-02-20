@@ -101,6 +101,13 @@ nav a i{
 nav a i.icon-nav01{	
 	background-image: url(../images/icon-nav01.png);
 }
+nav a.active i.icon-nav01{
+	color: #ED770D;
+	background-image: url(../images/icon-nav01-active.png);
+}
+nav a.active{
+	color: #ED770D;
+}
 nav a i.icon-nav02{	
 	background-image: url(../images/icon-nav02.png);
 }
@@ -225,6 +232,10 @@ div[class*="tab-box"] > div:not(:first-child){
 
 /*------------------------4个人中心-1.我的预约------------------------*/
 /*我的预约*/
+.list-wrap{
+	overflow: hidden;
+	border-bottom: 1px solid #f2f2f2;
+}
 .list{
 	display: 
 	-webkit-box;
@@ -278,11 +289,28 @@ div[class*="tab-box"] > div:not(:first-child){
 	float: right;
 }
 
+.list .category{
+	float: left;
+	padding-top: 12px;
+}
+.cg01{
+	display: inline-block;
+	min-width: 35px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 8px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #fff;
+	background-color: #629DD5;
+}
 .list-op{
 	padding: 0 10px 10px;
 	background-color: #fff;
 	text-align: right;
-	border-bottom: 1px solid #f2f2f2;
 }
 .list-op a,
 .list-op button{
@@ -618,17 +646,90 @@ div[class*="tab-box"] > div:not(:first-child){
 	min-width: 75px;
 	height: 28px;
 	line-height: 28px;
-	padding:0 15px;
+	padding: 0 5px;
 	margin:0 auto;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 5px;	
+	border-radius: 5px;
 	overflow: hidden;
 	color: #fff;
 	background-color: #ED770D;
 }
 
 
+/*------------------------4个人中心-黄页管理------------------------*/
+/*flex布局*/
+.flex-wrap ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	background-color: #fff;
+}
+.flex-wrap li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	min-height:190px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.user-tip{
+	text-align: left;
+}
+.user-tip label{
+	display: block;
+	color: #808080;
+	margin-bottom: 3px;
+}
+/*头像居中*/
+.avatar-wrap{
+	height: 150px;
+	padding-top: 15px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+}
+.avatar-wrap .avatar{
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border: 2px solid  #ed770d;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.avatar-wrap span{
+	display: block;
+	margin-top: 5px;
+}
+.icon-edit{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: -3px;
+	margin-right: 3px;
+	background-image: url(../images/icon-edit.png);
+}
+
+.company-wrap{
+	padding: 5px 10px;
+	margin-top: 5px;
+	text-align: center;
+	background-color: #fff;
+}
+.company-wrap a{
+	margin: 0px 3px;
+}
+.company-detail{
+	line-height: 1.4;
+	padding: 5px 15px;
+	margin-top: 5px;
+	background-color: #fff;
+}
 
 
 
