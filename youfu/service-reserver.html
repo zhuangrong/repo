@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>youfu</title>
+<link rel="stylesheet" href="css/youfu.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+	//弹出层
+	$("#reserver").on("click",function(){
+		 $("#dialog").fadeIn(200)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask,.close").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog").fadeOut(200)		 
+	})
+	
+})
+</script>
+</head>
+<body>
+<!--头部-标题栏-->
+<div class="header">
+	<a class="city-sel" href="javascrit:;">厦门</a>
+	<span><input type="text" placeholder="搜索企业黄页信 息"></span>
+	<a class="icon-man" href="#"></a>
+</div>
+<!--//头部-标题栏-->
+<!--服务标题-->
+<div class="server-title-wrap">
+	<div class="server-title">
+		<h3>发布时间：2017/01/18 11:22 <span>浏览人数：3000</span></h3>
+		<p>厦门双排小火车载货，搬家，搬厂，搬钢琴，地 毯清洗，服务满意，价格超低</p>
+	</div>
+	<div class="server-fav">
+		<i class="icon-fav"></i>收藏
+	</div>
+</div>
+<!--//服务标题-->
+<!--服务项目--->
+<div class="server-item">
+	<ul>
+		<li>
+			<label>服务类型：</label>
+			<p>家政/搬运</p>
+		</li>
+		<li>
+			<label>服务地区：</label>
+			<p>厦门</p>
+		</li>
+		<li>
+			<label>服务商家：</label>
+			<p>好康家政</p>
+		</li>
+		<li>
+			<label>服务评星：</label>
+			<p><i class="vip-star s2"></i></p>
+		</li>
+		<li>
+			<label>服务评分：</label>
+			<p>4.3</p>
+		</li>
+	</ul>
+</div>
+<!--//服务项目-->
+<!--服务信息-->
+<div class="server-detail">
+	<h3>详细信息</h3>
+	<p>此处为图文信息此处为图文信息此处为图文信息此处为图 文信息。</p>
+	<p>此处为图文信息此处为图文信息此处为图文信息此处为图 文信息此处为</p>
+</div>
+<!--//服务信息-->
+<!--评价列表-->
+<div class="comment-list">
+    <ul>
+      <li>
+          <div class="pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="info">
+            <dt>用户名<i class="vip-star"></i></dt>
+            <dd>
+              很不错的第一家服务商，值得推荐，赞
+            </dd>
+          </dl>
+       </li>
+      <li>
+          <div class="pic" style="background-image:url(images/avatar.png)"></div>
+          <dl class="info">
+            <dt>用户名<i class="vip-star"></i></dt>
+            <dd>
+              很不错的第一家服务商，值得推荐，赞
+            </dd>
+          </dl>
+       </li>
+    </ul>
+</div>
+<!--//评价列表-->
+<button class="btn-comment" id="reserver">立即预约</button>
+<!--弹出层-订单详情-->
+<div id="dialog" style=" display:none">
+	<div class="mask"></div>
+	<div class="dialog">
+		<span class="close">×</span>
+		<div class="dialog-header">填写资料</div>
+		<div class="dialog-body">
+			<!--订单详情-->
+			<div class="form-show">
+				<ul>
+					<li>
+						<span>买家姓名：</span>
+						<input type="text" placeholder="请输入姓名">
+					</li>
+					<li>
+						<span>买家电话：</span>
+						<input type="text" placeholder="请输入电话">
+					</li>
+					<li>
+						<span>&nbsp;</span>
+						<button>发送验证码</button>
+					</li>
+					<li>
+						<span>&nbsp;</span>
+						<input type="text" placeholder="请输入验证码">
+					</li>
+					<li>
+						<span>预约时间： </span>
+						<input type="text" placeholder="请选择预约时间">
+					</li>
+					<li>
+						<span>预约描述： </span>
+						<textarea placeholder="请输入描述文字"></textarea>
+					</li>
+				</ul>
+				<a href="javascript:;" class="btn3">提交预约</a>
+			</div>
+			<!--//订单详情-->
+		</div>
+	</div>
+</div>
+<!--//弹出层-订单详情-->
+
+</body>
+</html>

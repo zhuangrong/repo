@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>youfu</title>
+<link rel="stylesheet" href="css/youfu.css"> 
+<link rel="stylesheet" href="css/swiper.min.css" />  
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	/*Siwper*/
+	var swiper = new Swiper('.swiper01', {
+										pagination: '.swiper-pagination',
+										autoplay:2000
+									});
+  
+	//过滤组件
+	$.Filter("tabs",1)
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+		e.stopPropagation()	
+		$(".mask").fadeOut(200)	
+		$("div.tab-box1 > div").hide()
+		$("#tabs li").removeClass("curr")
+	})
+});
+	
+	
+/*filter过滤组件*/
+$.Filter = function(obj,num){
+	$("li","#" + obj).each(function(index){
+		$(this).click(function(i){
+			if($(this).hasClass("curr")){
+				$(this).removeClass("curr")
+				$("div.tab-box" + num + " > div").hide()
+				$(".mask").fadeOut(200)	
+			}else{
+				$("div.tab-box" + num + " > div").eq(index).show().siblings().hide()
+				$(this).addClass("curr").siblings().removeClass("curr")
+				$(".mask").fadeIn(200)
+			}
+		})
+	})
+}	
+</script>
+</head>
+<body>
+<!--头部-标题栏-->
+<div class="header">
+	<a class="city-sel" href="javascrit:;">厦门</a>
+	<span><input type="text" placeholder="搜索企业黄页信息"></span>
+	<a class="icon-man" href="center.html"></a>
+</div>
+<!--//头部-标题栏-->
+
+<!--swiper-->
+<section class="swiper-container swiper01">
+	<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/banner02.png">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/banner02.png">
+			</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</section>
+<!--//swiper-->
+<!--服务过滤-->
+<section class="filter">
+	<div class="filter-tab" id="tabs">
+		<ul>
+			<li>服务类别</li>
+			<li>更多筛选</li>
+		</ul>
+	</div>
+	<div class="tab-box1">
+		<div class="filter-content">
+			<ul>
+				<li><a href="#" class="active">家政类</a></li>
+				<li><a href="#">搬运类</a></li>
+				<li><a href="#">婚庆摄影</a></li>
+				<li><a href="#">教育培训</a></li>
+			</ul>
+		</div>
+		<div class="filter-content">
+			<ul>
+				<li><a href="#" class="active">离我最近</a></li>
+				<li><a href="#">评分最高</a></li>
+				<li><a href="#">最新发布</a></li>
+				<li><a href="#">销量最高</a></li>
+			</ul>
+		</div>
+	</div>	
+</section>
+<div class="mask" style="display: none;opacity: 0"></div>
+<!--//服务过滤-->
+<!--服务-->
+<div class="list-wrap">
+	<div class="list">
+		<div class="pic" style="background-image: url(images/pic01.png)">
+			<i class="vip-star2 s1"></i>
+		</div>
+		<div class="info">
+			<div class="info-detail">
+				2017/01/18<span class="state">服务满意度：4</span>
+			</div>
+			<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+		</div>
+	</div>
+</div>
+<div class="list-wrap">
+	<div class="list">
+		<div class="pic" style="background-image: url(images/pic01.png)">
+			<i class="vip-star2 s1"></i>
+		</div>
+		<div class="info">
+			<div class="info-detail">
+				2017/01/18<span class="state">服务满意度：4</span>
+			</div>
+			<div class="info-title">厦门双排小火车载货，搬家，搬厂，搬钢 琴，地毯清洗，服务满意，价格超低</div>
+		</div>
+	</div>
+</div>
+<!--//服务-->
+<a href="#" class="icon-publish"></a>
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#"><i class="icon-nav01"></i><span>黄页</span></a>
+	<a href="#" class="active"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

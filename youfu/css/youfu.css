@@ -116,6 +116,12 @@ nav a i.icon-nav04{
 nav a.active i.icon-nav01{
 	background-image: url(../images/icon-nav01-active.png);
 }
+nav a.active i.icon-nav02{
+	background-image: url(../images/icon-nav02-active.png);
+}
+nav a.active i.icon-nav03{
+	background-image: url(../images/icon-nav03-active.png);
+}
 nav a.active i.icon-nav04{
 	background-image: url(../images/icon-nav04-active.png);
 }
@@ -291,6 +297,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	padding-top: 7px;
 	color: #B3B3B3;
 	font-size: 11px;
+	overflow: hidden;
 }
 .list .info .info-detail span{
 	padding-left: 11px;
@@ -394,6 +401,9 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 
 /*订单详情*/
+.form-show ul{
+	margin-bottom: 5px
+}
 .form-show li {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -425,7 +435,40 @@ div[class*="tab-box"] > div:not(:first-child){
 	height: 24px;	
 	background-image: url(../images/icon-location.png);
 }
-
+.form-show li input{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;	
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 20px;
+	border-radius: 5px;
+	background-color: #F2F2F2;
+}
+.form-show li button{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;	
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 20px;
+	border-radius: 5px;
+	font-size: 13px;
+	color: #fff;
+	background-color: #ED770D;
+}
+.form-show li textarea{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;	
+	width: 100%;
+	min-height: 60px;
+	padding: 0 20px;
+	border-radius: 5px;
+	background-color: #F2F2F2;
+}
 
 
 /*------------------------4个人中心-4.服务评价页------------------------*/
@@ -1012,7 +1055,7 @@ body.bgf{
 .swiper01 .swiper-pagination-bullet-active {
 	background:rgba(255,255,255,0.6) !important;
 }
-
+/*入驻黄页*/
 .icon-home{
 	position: absolute;
 	right: 15px;
@@ -1023,12 +1066,36 @@ body.bgf{
 	border-radius: 50%;
 	background-image: url(../images/icon-home.png);
 	background-size: 25px !important;
+	box-shadow: 0px 4px 16px 0px rgba(10, 2, 4, 0.3);
 }
 .icon-home:after{
 	position: absolute;
 	top: 40px;
 	left: -5px;
 	content: '入驻黄页';
+	color: #ED770D;
+	font-size: 12px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+/*发布服务*/
+.icon-publish{
+	position: absolute;
+	right: 15px;
+	bottom: 75px;
+	width: 40px;
+	height: 40px;
+	background-color: #ED770D;
+	border-radius: 50%;
+	background-image: url(../images/icon-publish.png);
+	background-size: 25px !important;
+	box-shadow: 0px 4px 16px 0px rgba(10, 2, 4, 0.3);
+}
+.icon-publish:after{
+	position: absolute;
+	top: 40px;
+	left: -5px;
+	content: '发布服务';
 	color: #ED770D;
 	font-size: 12px;
 	word-break: keep-all;
@@ -1044,7 +1111,7 @@ body.bgf{
 	z-index: 99999;
 	
 }
-.filter{
+.filter-box{
 	display: -webkit-box; 
 	display: -webkit-flex;
 	display: flex;
@@ -1059,12 +1126,12 @@ body.bgf{
 	padding: 25px 10px;
 	background-color: rgba(0,0,0,0.9);
 }
-.filter a{
+.filter-box a{
 	color: #fff;
 	padding: 0 5px;
 	margin-bottom: 5px;
 }
-.filter a.active{
+.filter-box a.active{
 	color: #ED770D;
 }
 
@@ -1086,8 +1153,8 @@ body.bgf{
 	border-bottom: 1px solid #f2f2f2;
 }
 .form li span{
-	padding-top: 8px;
-	width:88px;	
+	padding-top: 6px;
+	width:88px;
 }
 .form li input[type=text]{
 	-webkit-box-flex: 1;
@@ -1209,6 +1276,191 @@ a.btn3{
 	width: 86px;
 	height: 86px;
 }
+
+
+/*------------------------服务板块------------------------*/
+/*过滤排序*/
+.filter{
+		position: relative;
+		z-index: 999999;
+}
+.filter-tab ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.filter-tab li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	height:40px;
+	line-height: 40px;
+	text-align:center;
+	color: #fff;
+	background-color: #ED770D;
+}
+.filter-tab li.curr{
+	color: #ED770D;
+	background-color: #121212;
+}
+.filter-tab li:after{
+	content: '';
+	width: 11px;
+	height: 7px;
+	display: inline-block;
+	margin: 0 0 1px 5px;
+	background-image: url(../images/arrow01.png);
+}
+.filter-tab li.curr:after {
+    background-image: url(../images/arrow03.png);
+}
+.filter div[class*="tab-box"] > div{
+	display:none
+}
+.filter-content{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	padding: 10px 10px 15px;
+  background-color: rgba(0,0,0,0.9);
+	overflow: hidden;
+}
+.filter-content ul li{
+	float: left;
+	width: 25%;
+	padding:0 5px;
+	font-size: 13px;
+	white-space: nowrap;
+}
+.filter-content ul li a{
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	text-align: center;
+	color: #7E7E7E;
+	border: 1px solid #7e7e7e;
+	border-radius: 3px;
+}
+.filter-content ul li a.active{
+	color: #ED770D;
+	border: 1px solid #ED770D;
+}
+
+/*------------------------服务预约提醒------------------------*/
+.reserved{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	width: 100%;
+	height: 44px;
+	color: #fff;
+	z-index: 999999;
+	background-color: #ED770D;
+	text-align: center;
+}
+.reserved span{
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	font-size: 12px;
+}
+.reserved .phone-location{
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+.icon-location2,
+.icon-phone2{
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.icon-location2:after,
+.icon-phone2:after{
+	position: absolute;
+	top: 20px;
+	left: -15px;
+	color: #fff;
+	font-size: 12px;
+	word-break: keep-all;
+	white-space: nowrap;
+	font-style: normal;
+}
+.icon-phone2{
+	background-image: url(../images/icon-phone2.png);
+}
+.icon-phone2:after{
+	content: '联系商家';
+}
+.icon-location2{
+	background-image: url(../images/icon-location2.png);
+}
+.icon-location2:after{
+	content: '一键导航';
+}
+
+.reserve-pop{
+	padding: 50px 50px 60px;
+	color: #fff;
+	background-color: #EC770D;
+	border-radius: 8px;
+	text-align: center;
+}
+.phone-location-wrap{
+	padding: 10px;
+	height: 30px;
+}
+
+/*------------------------服务发布------------------------*/
+.icon-select{
+	display: inline-block;
+	position: relative;
+	width: 15px;
+	height: 15px;
+	margin-top: 10px;
+	margin-left: 50px;
+	background-image: url(../images/icon-selector.png);
+	background-size: 15px !important;
+}
+.icon-select:after{
+	content: '请选择';
+	position: absolute;
+	top: -1px;
+	left: -39px;
+	color: #B2B2B2;
+	font-size: 12px;
+	word-break: keep-all;
+	white-space: nowrap;
+	font-style: normal;
+}
+.sel-pop{
+	position: relative;
+}
+.sel-pop dl{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	background-color: #fff;
+}
+.sel-pop dl dd{
+	padding: 5px 10px 5px 108px;
+	border-bottom: 1px solid #f2f2f2
+}
+
+
+
+
 
 
 
