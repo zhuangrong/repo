@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>youfu</title>
+<link rel="stylesheet" href="css/youfu.css"> 
+<link rel="stylesheet" href="css/swiper.min.css" />  
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	/*Siwper*/
+	var swiper = new Swiper('.swiper01', {
+										pagination: '.swiper-pagination',
+										autoplay:2000
+									});
+  /*筛选*/
+	$("#filter").on("click",function(){
+		if($(".filter-pop").is(":visible")){
+			$(".filter-pop").hide()
+		}else{
+			$(".filter-pop").show()
+		}
+		
+	})
+	//阻止冒泡
+	$(".filter").on("click",function(e){
+				e.stopPropagation()
+	})
+	//点击隐藏
+	$(".filter-pop").on("click",function(e){
+			$(".filter-pop").fadeOut(200)		 
+	})
+});
+</script>
+</head>
+<body>
+<!--头部-标题栏-->
+<div class="header">
+	<a class="city-sel" href="javascrit:;">厦门</a>
+	<span><input type="text" placeholder="搜索企业黄页信息"></span>
+	<a class="city-sel" href="javascrit:;" id="filter">筛选</a>
+  <!--筛选-->
+	<div class="filter-pop" style=" display:none ">
+		<div class="filter">               
+			<a href="javascript:;" class="active">生活家居服务</a>
+			<a href="javascript:;">餐饮娱乐休闲</a>
+			<a href="javascript:;">食品饮料快消</a>
+			<a href="javascript:;">互联网</a>
+			<a href="javascript:;">医疗健康美容</a>
+			<a href="javascript:;">教育培训</a>
+		</div>
+	</div>
+  <!--//筛选-->
+</div>
+<!--//头部-标题栏-->
+<!--swiper-->
+<section class="swiper-container swiper01">
+	<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/banner01.png">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/banner01.png">
+			</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</section>
+<!--//swiper-->
+<!--图文列表-->
+<a href="center-yellowpage.html" class="list b-line">
+	<div class="pic" style="background-image: url(images/pic02.png)"></div>
+	<div class="info">
+		<div class="info-title2">在乎（厦门）信息技术有限公司</div>
+		<div class="info-detail">
+			提供H5数字营销的全案服务，包括策略咨询、 创意策划、视觉设计、游戏开发等，是一家互
+		</div>
+	</div>
+</a>
+<a href="center-yellowpage.html" class="list b-line">
+	<div class="pic" style="background-image: url(images/pic02.png)"></div>
+	<div class="info">
+		<div class="info-title2">在乎（厦门）信息技术有限公司</div>
+		<div class="info-detail">
+			提供H5数字营销的全案服务，包括策略咨询、 创意策划、视觉设计、游戏开发等，是一家互
+		</div>
+	</div>
+</a>
+<!--//图文列表-->
+<a href="#" class="icon-home"></a>
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>黄页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
