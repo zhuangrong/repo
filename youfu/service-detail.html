@@ -62,7 +62,7 @@ $(function(){
 		<li>
 			<label>服务评星：</label>
 			<p><i class="vip-star s2"></i></p>
-		</li>	
+		</li>
 		<li>
 			<label>服务评分：</label>
 			<p>4.3</p>
@@ -101,32 +101,49 @@ $(function(){
     </ul>
 </div>
 <!--//评价列表-->
-<!--已预约-->
-<div class="reserved">
-	<span>已预约</span>
-	<div class="phone-location">
-		<i class="icon-phone2"></i>
-		<i class="icon-location2"></i>
-	</div>
-</div>
-<!--//已预约-->
-
-<!--弹出层-预约提醒-->
-<div id="dialog" >
+<button class="btn-comment" id="reserver">立即预约</button>
+<!--弹出层-预约-->
+<div id="dialog" style=" display:none">
 	<div class="mask"></div>
 	<div class="dialog">
 		<span class="close">×</span>
-		<div class="reserve-pop">
-			<h3>您已提交预约， <br>请等待服务商接受订单</h3>
-			<div class="phone-location-wrap">
-				<i class="icon-phone2"></i>
-				<i class="icon-location2"></i>
+		<div class="dialog-header">填写资料</div>
+		<div class="dialog-body">
+			<!--预约信息-->
+			<div class="form-show">
+				<ul>
+					<li>
+						<span>买家姓名：</span>
+						<input type="text" placeholder="请输入姓名">
+					</li>
+					<li>
+						<span>买家电话：</span>
+						<input type="text" placeholder="请输入电话">
+					</li>
+					<li>
+						<span>&nbsp;</span>
+						<button>发送验证码</button>
+					</li>
+					<li>
+						<span>&nbsp;</span>
+						<input type="text" placeholder="请输入验证码">
+					</li>
+					<li>
+						<span>预约时间： </span>
+						<input type="text" placeholder="请选择预约时间">
+					</li>
+					<li>
+						<span>预约描述： </span>
+						<textarea placeholder="请输入描述文字"></textarea>
+					</li>
+				</ul>
+				<a href="javascript:;" class="btn3">提交预约</a>
 			</div>
+			<!--//预约信息-->
 		</div>
-		
-		</div>
+	</div>
 </div>
-<!--//弹出层-预约提醒-->
+<!--//弹出层-预约-->
 
 </body>
 </html>

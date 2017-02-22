@@ -45,7 +45,7 @@ $(function(){
 	$(".sel-pop dd").on("click",function(e){
 	 	 e.stopPropagation();
 		 var txt = $(this).text();
-		 $("#region").val(txt)
+		 $("#region").text(txt)
 		 $("#rgn").hide(30);
 	})
 })
@@ -58,7 +58,7 @@ $(function(){
 	<ul>
 		<li>
 			<span>所在区域</span>
-			<input type="text" placeholder="" id="region">
+			<div class="text-show" id="region"></div>
 			<i class="icon-select"></i>
 		</li>
 		<li class="sel-pop" id="rgn" style="display: none">
@@ -70,7 +70,7 @@ $(function(){
 		</li>
 		<li>
 			<span>服务类型</span>
-			<input type="text" placeholder="">
+			<div class="text-show"></div>
 			<i class="icon-select"></i>
 		</li>
 		<li>
@@ -102,10 +102,10 @@ $(function(){
 <div class="nav-blank"></div>
 <!--导航-->
 <nav>
-	<a href="#"><i class="icon-nav01"></i><span>黄页</span></a>
-	<a href="#"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
-	<a href="#"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
-	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+	<a href="yellowpages.html"><i class="icon-nav01"></i><span>黄页</span></a>
+	<a href="service.html"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
+	<a href="message.html"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
+	<a href="center.html" class="active"><i class="icon-nav04"></i><span>我的</span></a>
 </nav>
 <!--//导航-->
 </body>

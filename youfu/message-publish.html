@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -36,31 +37,49 @@ $(function(){
 		$(document).on("click", ".del", function(){
 			 $(this).parent().remove();
 		})
+		
+	//类型选择
+	$(".icon-select").on("click",function(){
+		  $("#rgn").show();
+	})	
+	$(".sel-pop dd").on("click",function(e){
+	 	 e.stopPropagation();
+		 var txt = $(this).text();
+		 $("#region").text(txt)
+		 $("#rgn").hide(30);
+	})
 })
 
 </script>
 </head>
 <body>
-
 <!--黄页发布-->
 <div class="form">
 	<ul>
 		<li>
-			<span>公司名称</span>
-			<input type="text" placeholder="请输入公司名称">
+			<span>所在地区</span>
+			<div class="text-show" id="region"></div>
+			<i class="icon-select"></i>
+		</li>
+		<li class="sel-pop" id="rgn" style="display: none">
+			<dl>
+				<dd>鼓楼</dd>
+				<dd>台江</dd>
+				<dd>仓山</dd>
+			</dl>
 		</li>
 		<li>
-			<span>公司logo</span>
-			<div class="pic-show">
-				 <div id="photo" class="photo"></div>
-			</div>
-			<div class="upload-wrap">
-				<input id="img" class="btn-file" type="file" accept="image/*">
-			</div>
+			<span>消息类型</span>
+			<div class="text-show"></div>
+			<i class="icon-select"></i>
 		</li>
 		<li>
-			<span>公司介绍</span>
-			<textarea class="texta" placeholder="请输入公司介绍文字"></textarea>
+			<span>消息标题</span>
+			<input type="text" placeholder="标题长度为4-25个字">
+		</li>
+		<li>
+			<span>消息内容</span>
+			<textarea class="texta" placeholder="请输入10-700个字"></textarea>
 			<div class="upload-wrap">
 				<input id="img2" class="btn-file" type="file" accept="image/*">
 			</div>
@@ -69,25 +88,12 @@ $(function(){
 			<div id="photo2" class="photo"></div>
 		</li>
 		<li>
-			<span>产品介绍</span>
-			<textarea class="texta" placeholder="请输入产品介绍文字"></textarea>
-		</li>
-		<li>
-			<span>最新动态</span>
-			<textarea class="texta" placeholder="请输入公司最新动态文字"></textarea>
-		</li>
-		<li>
 			<span>联系电话</span>
 			<input type="text" placeholder="请输入电话号码">
-			<button class="btn-list">获取验证码</button>
 		</li>
 		<li>
-			<span>验证码</span>
-			<input type="text" placeholder="请输入验证码">
-		</li>
-		<li>
-			<span>公司地址</span>
-			<input type="text" placeholder="请输入公司地址">
+			<span>门店坐标</span>
+			<input type="text" placeholder="请输入门店坐标">
 		</li>
 	</ul>
 </div>

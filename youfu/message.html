@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>youfu</title>
+<link rel="stylesheet" href="css/youfu.css"> 
+<link rel="stylesheet" href="css/swiper.min.css" />  
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.min.js"></script> 
+<script>
+$(function(){
+	/*Siwper*/
+	var swiper = new Swiper('.swiper01', {
+										pagination: '.swiper-pagination',
+										autoplay:2000
+									});
+  
+});
+</script>
+</head>
+<body>
+<!--头部-标题栏-->
+<div class="header">
+	<a class="city-sel" href="javascrit:;">厦门</a>
+	<span><input type="text" placeholder="搜索企业黄页信息"></span>
+	<a class="icon-man" href="center.html"></a>
+</div>
+<!--//头部-标题栏-->
+<!--swiper-->
+<section class="swiper-container swiper01">
+	<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/banner02.png">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/banner02.png">
+			</div>
+	</div>
+	<div class="swiper-pagination"></div>
+</section>
+<!--//swiper-->
+<!--公司介绍项-->
+<div class="company-wrap">
+	<a href="#" class="btn">悬赏消息</a>
+	<a href="#" class="btn">公益消息</a>
+	<a href="#" class="btn">互动消息</a>
+</div>
+<!--//公司介绍项-->
+<!--全部分类-->
+<div class="category-wrap">
+	<div>
+		<button class="btn-category">全部分类</button>
+	</div>
+	<div>
+		<button class="btn-follow">关注</button>
+	</div>
+</div>
+<!--//全部分类-->
+<!--消息-->
+<div class="list-wrap">
+	<div class="list">
+		<div class="category" >
+			<label class="cg02">生活类</label>
+		</div>
+		<div class="info">
+			<div class="info-detail">
+				发布时间：2017/01/18 &nbsp; 11:22
+			</div>
+			<div class="info-title">1月28号从厦门带十斤烤鸭到漳州，悬赏5元。</div>
+		</div>
+	</div>
+</div>
+<div class="list-wrap">
+	<div class="list">
+		<div class="category" >
+			<label class="cg03">家政类</label>
+		</div>
+		<div class="info">
+			<div class="info-detail">
+				发布时间：2017/01/18 &nbsp; 11:22
+			</div>
+			<div class="info-title">1月28号从厦门带十斤烤鸭到漳州，悬赏5元。</div>
+		</div>
+	</div>
+</div>
+<!--//消息-->
+<a href="message-publish.html" class="icon-message"></a>
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="yellowpages.html"><i class="icon-nav01"></i><span>黄页</span></a>
+	<a href="service.html"><i class="icon-nav02"></i><span>服务<br>精选</span></a>
+	<a href="message.html" class="active"><i class="icon-nav03"></i><span>互动<br>社区</span></a>
+	<a href="center.html"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

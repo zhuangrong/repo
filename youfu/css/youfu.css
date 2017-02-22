@@ -66,6 +66,9 @@ em,h3{
 	font:inherit
 }
 /*内容*/
+.c01{
+	color: #ED770D;
+}
 /*导航栏*/
 nav{
 	position: fixed;
@@ -310,6 +313,8 @@ div[class*="tab-box"] > div:not(:first-child){
 	float: left;
 	padding-top: 12px;
 }
+.cg03,
+.cg02,
 .cg01{
 	display: inline-block;
 	min-width: 35px;
@@ -323,6 +328,12 @@ div[class*="tab-box"] > div:not(:first-child){
 	font-size: 12px;
 	color: #fff;
 	background-color: #629DD5;
+}
+.cg02{
+	background-color: #B3D465;
+}
+.cg03{
+	background-color: #FFCC00;
 }
 .list-op{
 	padding: 0 10px 10px;
@@ -689,6 +700,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	right:0;
 	width: 100%;
 	height: 44px;
+	line-height: 44px;
 	color: #fff;
 	background-color: #ED770D;
 	text-align: center;
@@ -1032,8 +1044,10 @@ body.bgf{
 
 
 .btn-lg{
+	display: inline-block;
 	width: 100%;
 	height: 44px;
+	line-height: 44px;
 	margin-top: 5px;
 	color: #fff;
 	background-color: #ED770D;
@@ -1192,6 +1206,13 @@ body.bgf{
 }
 .form li.upload-list .photo{
 	margin: 10px 0 0 10px;
+}
+.form div.text-show {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	height: 32px;
+	line-height: 32px;
 }
 .icon-camera{
 	width: 50px;
@@ -1458,9 +1479,90 @@ a.btn3{
 	border-bottom: 1px solid #f2f2f2
 }
 
+/*------------------------消息版块------------------------*/
 
+.category-wrap{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; /*左对齐*/
+	-webkit-box-align: center;
+	justify-content: center;
+	padding: 5px 10px;
+	background-color: #fff;
+	border-top: 1px solid  #f2f2f2;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.category-wrap > div{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+}
 
+.btn-category{
+	height: 28px;
+	line-height: 28px;
+	padding:0 15px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;	
+}
+.btn-category:after{
+	content: '';
+	width: 11px;
+	height: 7px;
+	display: inline-block;
+	margin: 0 0 1px 5px;
+	background-image: url(../images/arrow04.png)
+}
+.btn-follow{
+	float: right;
+	display: block;
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+	padding:0 15px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;	
+	overflow: hidden;
+	color: #ED770D;
+	background-color: #fff;
+	border: 1px solid  #ED770D;
+}
 
+/*发布服务*/
+.icon-message{
+	position: absolute;
+	right: 15px;
+	bottom: 75px;
+	width: 40px;
+	height: 40px;
+	background-color: #ED770D;
+	border-radius: 50%;
+	background-image: url(../images/icon-message.png);
+	background-size: 25px !important;
+	box-shadow: 0px 4px 16px 0px rgba(10, 2, 4, 0.3);
+}
+.icon-message:after{
+	position: absolute;
+	top: 40px;
+	left: -5px;
+	content: '发布消息';
+	color: #ED770D;
+	font-size: 12px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
 
+.icon-contact{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background-image: url(../images/icon-phone2.png);
+
+}
 
 
