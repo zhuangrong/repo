@@ -1,4 +1,9 @@
 @charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
 html{
   font-size: 100px;
 }
@@ -50,12 +55,13 @@ header{
 }
 header .logo{
   float: left;
-  width: 0.66rem;
+  width: 1.66rem;
 }
 
 /*导航*/
 nav{
   float: left;
+	padding-left: 50px;
 }
 nav li{
   display: inline-block;
@@ -114,7 +120,7 @@ nav li a{
   color: #000;
 }
 .icon-zhongwen{
-  color: #17438C !important;
+  color: #16438C !important;
 }
 /*幻灯片*/
 .banner{
@@ -144,6 +150,9 @@ nav li a{
   html{
     font-size: 50px;
   }
+	body{
+		font-size: 14px;
+	}
   .nav-toggle{
     display: block;
     color: #00f;
@@ -155,6 +164,7 @@ nav li a{
     right: 0;
     z-index: 999;
     display: none;
+		padding-left: 0;
   }
   nav li{
     display: block;
