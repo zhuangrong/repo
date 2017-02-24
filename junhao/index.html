@@ -8,12 +8,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="fonts/iconfont.css">
 <link rel="stylesheet" href="css/junhao.css">
 <script src="js/jquery.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
 <script src="js/common.js"></script> 
 <script></script>
 <title>junhao</title>
+<style>
+html, body {
+  position: relative;
+  height: 100%;
+}
+</style>
 </head>
 <body>
 <header class="header">
@@ -57,6 +65,34 @@
     </div>
   </div>
 </header>
-<div>ssa</div>
+<div class="banner">
+  
+
+<!--swiper-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(http://www.runfastone.com/upload/banner/5690715dc06ac.jpg)">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical'
+    });
+</script>
+<!--//swiper-->
+</div>
 </body>
 </html>
