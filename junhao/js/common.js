@@ -1,10 +1,10 @@
 $(function(){
   //移动端-导航点击
   $(".nav-toggle").on("click",function(){
-    if($("nav").is(":visible")){
-      $("nav").css('display','none') 
+    if($(".nav").is(":visible")){
+      $(".nav").css('display','none') 
     }else{
-     $("nav").css('display','block')
+     $(".nav").css('display','block')
     }
   })
   

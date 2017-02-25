@@ -16,12 +16,6 @@
 <script src="js/common.js"></script> 
 <script></script>
 <title>junhao</title>
-<style>
-html, body {
-  position: relative;
-  height: 100%;
-}
-</style>
 </head>
 <body>
 <!--头部-->
@@ -32,7 +26,7 @@ html, body {
     </a>
     <div class="nav" id="nav">
       <ul>
-        <li  class="active"><a href="index.html">首页</a></li>
+        <li><a href="index.html">首页</a></li>
         <li>
           <a href="about-profile.html">关于我们</a>
           <div class="nav-sub-wrap"></div>
@@ -70,35 +64,51 @@ html, body {
   </div>
 </div>
 <!--//头部-->
-<div class="banner">
-<!--swiper-->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url(http://www.runfastone.com/upload/banner/5690715dc06ac.jpg)">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+<!--banner-->
+<div class="banner-sub" style="background-image: url(images/banner-profile.png)"></div>
+<!--//banner-->
+<div class="blank"></div>
+<!--内容-->
+<div class="container m-art">
+	<div class="col-md-2">
+		<!--侧边导航-->
+		<div class="aside">
+			  <div class="aside-title">
+			  	<i class="icon iconfont icon-guanyuwomen1"></i>
+			  	<span>
+			  		<em>ABOUT  US</em>
+			  		<p>关于我们</p>
+			  	</span>
+			  </div>
+			  <div class="sub-nav">
+			  	<ul>
+			  		<li class="active"><a href="#">企业简介</a></li>
+			  		<li><a href="#">企业文化</a></li>
+			  		<li><a href="#">组织架构</a></li>
+			  		<li><a href="#">管理团队</a></li>
+			  		<li><a href="#">发展战略</a></li>
+			  	</ul>
+			  </div>
+		</div>
+		<!--//侧边导航-->
+	</div>
+	<div class="col-md-10">
+		<!--文章-->
+		<div class="article-wrap">
+			<h3 class="c01">君昊煤焦贸易有限责任公司</h3>
+			<div class="article">
+				<p>柳林县君昊煤焦贸易有限责任公司（以下简称“君昊公司”或“公司”）成立于2012年10月16日，统一社会信用1141125054198956K，住所吕梁市柳林县红星煤焦有限责任公司院内，法定代表人郭相暘，注册资本人民币66万元，公司主营业务为煤炭购销。</p>
+				<p>公司地处中国优质焦煤产地山西省柳林县，新的历史发展机遇下，公司按照“立足焦煤、走向世界”的发展战略，依靠自有研发的环保优质焦煤混配技术，加大与上下游企业的战略联合，实现专业化管理、产业化运营、市场化交易、信息化支撑和国际化发展，不断培育和提升自身的核心竞争力，支撑公司持续稳定发展，力争发展成为在国内市场居领先地位，具有国际竞争力的“现代化焦煤清洁高效利用环保科技企业”。</p>
+				
+				<p class="art-pic">
+					<img src="images/about-pic01.png" alt="">
+				</p>
+			</div>
+		</div>
+		
+		<!--//文章-->
+	</div>
 </div>
-<script>
-  var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        direction: 'vertical'
-    });
-</script>
-<!--//swiper-->
-</div>
-<!--项目-->
-<div class="container item-wrap">
-	 <div class="row">
-	 	  <div class="col-sm-12 col-md-2 col-lg-3">3</div>
-	 	  <div class="col-sm-12 col-md-4 col-lg-3" style="background-color: #ff0">3</div>
-	 	  <div class="col-sm-12 col-md-4 col-lg-3" style="background-color: #00f">3</div>
-	 	  <div class="col-sm-12 col-md-2 col-lg-3">3</div>
-	 </div>
-</div>
-<!--项目-->
+<!--//内容-->
 </body>
 </html>
