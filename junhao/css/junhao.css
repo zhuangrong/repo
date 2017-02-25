@@ -54,6 +54,9 @@ em,h3{
 .c01{
 	color: #16438c;
 }
+.tc{
+	text-align: center;
+}
 /*覆盖bootstrap*/
 .container{
   padding-left: 0;
@@ -236,17 +239,72 @@ em,h3{
 .article-wrap h3{
 	font-size: 24px;
 	padding: 10px 0;
+	overflow: hidden;
+}
+.article-wrap h5{
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-indent: -8px;
 }
 .article-wrap p{
-	padding:0 0 15px;
+	padding: 0 0 10px;
 }
-
+.article-wrap h6{
+	font-size: 18px;
+	line-height: 1.6;
+}
+.article-wrap h6 span{
+	display: block;
+	font-size: 16px;
+	color: #888;
+}
 .article{
 	margin: 35px 0;
-	text-align:justify
+	overflow: hidden;
+	text-align:justify;
 }
 .art-pic{
 	padding:60px 0 !important;
+}
+.article-wrap b.c01{
+	padding-right: 16px;
+}
+.dash-line{
+	margin: .4rem 0px;
+	height: 1px;
+	border-bottom: 1px dashed #D3D3D3;
+}
+
+/*底部*/
+.footer{
+	padding: 15px 10px;
+	font-size: 12px;
+	overflow: hidden;
+	background-color: #16438C;
+}
+.footer,
+.footer a{
+	color: #fff;
+}
+.footer .f-nav{
+	float: left;
+}
+.footer .f-info{
+	float: right;
+}
+.footer .f-info span{
+	padding-left: 20px;
+}
+
+/*-----------------------企业文化-----------------------*/
+.art-txt{
+	float: left;
+}
+.art-pic-l{
+	float: left;
+}
+.art-pic-r{
+	float: right;
 }
 
 /*-----------------------mobile 小于820px-----------------------*/
@@ -374,13 +432,47 @@ em,h3{
 	}
 	.article{
 		margin: 5px 0;
+		font-size: 13px;
 	}
 	.article-wrap h3{
+		font-size: 15px;
+	}
+	.article-wrap h5{
 		font-size: 15px;
 	}
 	.art-pic{
 		padding:25px 0 !important;
 	}
+	.pic-clear{
+		float: none;
+		clear: both;
+		padding: 30px 0 !important;
+		text-align: center;
+	}
+	.pic-clear img{
+		width: 50%;
+	}
+	.art-txt p{
+		padding: 0 0 8px;
+	}
+	.m-none{
+		display: none;
+	}
+	.article-wrap b.c01{
+		display: block;
+	}
+  /*底部*/
+	.footer{
+		text-align: center;
+	}
+	.footer .f-nav{
+		float: none
+	}
+	.footer .f-info{
+		padding-top: 5px;
+		font-size: 9px;
+	}
+	
 }
 /*-----------------------pc 大于820px-----------------------*/
 @media (min-width: 820px){
@@ -397,6 +489,9 @@ em,h3{
 		display: inline-block;
 		font-family: "iconfont" !important;
 		-webkit-font-smoothing: antialiased;
+	}
+	.pc-none{
+		display: none;
 	}
 }
 
