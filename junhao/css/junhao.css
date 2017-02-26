@@ -62,6 +62,11 @@ em,h3{
   padding-left: 0;
   padding-right: 0;
 }
+@media (min-width: 1200px){
+	.container {
+		width: 1200px;
+	}
+}
 /*--------------头部*--------------*/
 .header{
   height: 0.88rem;
@@ -169,6 +174,11 @@ em,h3{
 	background-color: #eee;
 }
 /*-----------------------二级页面-----------------------*/
+
+.m-art [class^=col-md]{
+	padding-left: 0;
+	padding-right: 0;
+}
 .banner-sub{
 	height: 4rem;
 	background-size: cover;
@@ -303,11 +313,40 @@ em,h3{
 .art-pic-l{
 	float: left;
 }
-.art-pic-r{
-	float: right;
-}
 
-/*-----------------------mobile 小于820px-----------------------*/
+/*-----------------------新闻动态-----------------------*/
+.article-pr0{
+	padding-right: 0;
+}
+.news-summary-wrap{
+	overflow: hidden;
+}
+.news-pic{
+	float: left;
+}
+.news-summary{
+	float: right;
+	max-width: 410px;
+	line-height: 1.6;
+}
+.news-summary h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.btn-news{
+	display: block;
+	min-width: 1.56rem;
+	height: .6rem;
+	line-height: .6rem;
+	padding:0 .15rem;
+	margin:0 auto;
+	text-align: center;
+	text-decoration: none;	
+	overflow: hidden;
+	color: #fff;
+	background-color: #f60;
+}*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px){
   html{
     font-size: 50px;
@@ -373,6 +412,7 @@ em,h3{
 		background-position: left 43px !important;
 		margin-top: 60px;
 		margin-left: 30px;
+		white-space: nowrap;
 	}
 	.aside .aside-title .icon{
 		display: inline-block;
@@ -415,15 +455,8 @@ em,h3{
 		font-size: 13px;
 		text-align: center;
 	}
-	.sub-nav li:nth-child(8),
-	.sub-nav li:nth-child(7),
-	.sub-nav li:nth-child(6),
-	.sub-nav li:nth-child(5){
+	.sub-nav li.bnone{
 		border-bottom: none;
-	}
-	.m-art [class^=col-md]{
-		padding-left: 0;
-		padding-right: 0;
 	}
 	/*文章内容*/
 	.article-wrap{
@@ -492,6 +525,15 @@ em,h3{
 	}
 	.pc-none{
 		display: none;
+	}
+  /*二级导航*/
+	.sub-nav li a{
+		min-width: 100px;
+	}
+	/*企业文化*/
+	.art-pic-r{
+		float: left;
+		margin-left: 150px;
 	}
 }
 
