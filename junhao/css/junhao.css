@@ -177,13 +177,51 @@ em,h3{
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
-/*项目*/
+/*快速入口*/
 .item-wrap{
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
 	right: 10px;
-	background-color: #eee;
+	height: 190px;
+	overflow: hidden;
+}
+.item-wrap .item{
+	position: relative;
+	float: left;
+	width: 271px;
+}
+.item-wrap .item.news-item{
+	width: 372px;
+	margin: 0 5px;
+	background-color: #fff;
+}
+.filterbox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+	zoom: 1;
+}
+.item-wrap .item:hover .filterbox{
+	opacity: 0;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+}
+
+.trans-5 {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 /*-----------------------二级页面-----------------------*/
 
