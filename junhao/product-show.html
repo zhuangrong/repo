@@ -12,7 +12,9 @@
 <link rel="stylesheet" href="css/junhao.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/common.js"></script> 
-<script></script>
+<script src="js/jquery-plugin-slide.js"></script> 
+<script>、
+  </script>
 <title>junhao</title>
 </head>
 <body>
@@ -77,7 +79,7 @@
 </div>
 <!--//头部-->
 <!--banner-->
-<div class="banner-sub" style="background-image: url(images/banner-product.png)"></div>
+<div class="banner-sub product-banner" style="background-image: url(images/banner-product.png)"></div>
 <!--//banner-->
 <div class="blank"></div>
 <!--内容-->
@@ -86,7 +88,7 @@
 		<!--侧边导航-->
 		<div class="aside">
 			  <div class="aside-title">
-			  	<i class="icon iconfont icon-jiaruwomen1"></i>
+			  	<i class="icon iconfont icon-chanpinzhongxin1"></i>
 			  	<span>
 			  		<em>PRODUCT CENTER</em>
 			  		<p>产品中心</p>
@@ -104,21 +106,52 @@
 	<div class="col-md-10">
 		<!--产品介绍-->
 		<div class="article-wrap article-pr0">
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
+		  <p class="m-none">&nbsp;</p>
+		  <p>&nbsp;</p>
 			<div class="product-show">
-				
+				<div class ="Homeslide">
+          <div class ="Homeslide_bigwrap">
+            <div class="Homeslide_hand0"></div>
+            <div class="Homeslide_hand1"></div>
+            <a target="_blank" class="Homeslide_bigpicdiv_mask"></a>
+            <div class="Homeslide_bigpicdiv">
+              <a href="#" target="_blank"><img src=" "></a>
+            </div>
+          </div>
+          <div class="Homeslide_thumb">
+            <ul></ul>
+          </div>
+        </div>
+        <script type="text/javascript">
+          //数据
+          var home_slide_data = 
+          [
+            {"title":"焦煤-A","url":"","subtitle":"","image":"images\/stone.png","thumb":"images\/stone-thumb01.png"},
+            {"title":"焦煤-B","url":"","subtitle":"","image":"images\/stone.png","thumb":"images\/stone-thumb02.png"},
+            {"title":"焦煤-C","url":"","subtitle":"","image":"images\/stone.png","thumb":"images\/stone-thumb03.png"},
+          ];
+          //实例化
+          $('.Homeslide').homeslide(home_slide_data,true,3000);
+        </script>
 			</div>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
 		</div>
 		<!--//产品介绍-->
 	</div>
 </div>
 <!--//内容-->
+<div class="product-line"></div>
+<div class="container m-art-pro">
+	<div class="col-md-2"></div>
+	<div class="col-md-10">
+		<div class="article-wrap article-pr0 m-art-list">
+      <p class="c01"><b>公司主要产品为环保优质焦煤</b></p>
+      <p>焦煤（coking coal）也称冶金煤，是中等及低挥发分的中等粘结性及强粘结性的一种烟煤。在中国煤炭分类国家标准中，煤炭分为动力煤、焦煤、化工煤，其中焦煤是对煤化度较高，结焦性好的烟煤的称谓。又称主焦煤。从世界范围来说，焦煤的资源比较匮乏，它是必须加以保护的宝贵资源。</p>
+		  <p class="m-none">&nbsp;</p>
+		  <p class="m-none">&nbsp;</p>
+		  <p>&nbsp;</p>
+		</div>
+	</div>
+</div>
 <!--底部-->
 <div class="footer-wrap">
 	<div class="footer">
