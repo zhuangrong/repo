@@ -1218,8 +1218,16 @@ em,h3{
 	}
 }
 
-
-
+/*-----------------------update 2017-02-28-----------------------*/
+.nav-right{
+  float: right;
+}
+.header-tip{
+  float: right;
+}
+.nav{
+  float: left;
+}
 
 
 
