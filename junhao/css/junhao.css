@@ -82,6 +82,9 @@ em,h3{
   line-height: 0.88rem;
   background-color: #fff;
 }
+.header .container{
+  position: relative;
+}
 
 .header {}
 .header .logo{
@@ -91,8 +94,8 @@ em,h3{
 
 /*导航*/
 .nav{
-  float: left;
-	padding-left: 50px;
+  float: right;
+  padding-right: 108px;
 }
 .nav li{
   display: inline-block;
@@ -141,7 +144,10 @@ em,h3{
 }
 /*中英文图标*/
 .language{
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* float: right;*/
 }
 .language li{
   float: left;
@@ -860,6 +866,9 @@ em,h3{
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+  .header .container{
+    position: static;
+  }
   .nav-toggle{
     display: block;
     color: #00f;
@@ -872,6 +881,7 @@ em,h3{
     z-index: 999;
     display: none;
 		padding-left: 0;
+    padding-right: 0;
   }
   .nav li{
     display: block;
@@ -949,6 +959,10 @@ em,h3{
   }
   
   /*中英文图标*/ 
+  .language{
+    position: static;
+    float: right;
+  }
   .language li i{
     font-size: 20px;
   }
