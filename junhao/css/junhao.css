@@ -859,6 +859,11 @@ em,h3{
 	.header{
 		padding-left: 10px;
 		padding-right: 10px;
+		height: 65px;
+		line-height: 65px;
+	}
+	.header .logo{
+		width: 2.35rem;
 	}
   .nav-toggle{
     display: block;
@@ -950,7 +955,7 @@ em,h3{
   
   /*中英文图标*/ 
   .language li i{
-    font-size: 20px;
+    font-size: 26px;
   }
   /*幻灯片*/
   .banner{
@@ -969,7 +974,7 @@ em,h3{
 	.aside .aside-title{
 		width: 116px;
 		background-position: left 43px !important;
-		margin-top: 50px;
+		margin-top: 70px;
 		margin-left: 30px;
 		white-space: nowrap;
 	}
@@ -1002,7 +1007,7 @@ em,h3{
 	}
 	/*二级导航*/
 	.sub-nav{
-		margin-top: -109px;
+		margin-top: -128px;
 		width: 100%;
 		overflow: hidden;
 		border-bottom: 1px solid  #888;
@@ -1010,8 +1015,8 @@ em,h3{
 	.sub-nav li{
 		float: left;
 		width: 25%;
-		line-height: 25px;
-		font-size: 13px;
+		line-height: 32px;
+		font-size: 14px;
 		text-align: center;
 	}
 	.sub-nav li.bnone{
