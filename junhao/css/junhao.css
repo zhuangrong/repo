@@ -112,7 +112,7 @@ em,h3{
 /*二级导航*/
 .nav-sub-wrap{
   position: absolute;
-  top: 88px;
+  top: 93px;
   left: 0;
   right: 0;
   z-index: 999;
@@ -345,10 +345,10 @@ em,h3{
 }
 /*侧边导航*/
 .aside{
-	padding-right: 60px; 
+	padding-right: 30px;
 }
 .aside .aside-title{
-	width: 154px;
+	width: 184px;
 	padding-bottom: 6px;
 	color: #888;
 	background-image: url(../images/aside-line.png);
@@ -376,7 +376,7 @@ em,h3{
 /*二级导航*/
 .sub-nav{
 	margin-top: 10px;
-	width: 154px;
+	width: 184px;
 	display: block;
 }
 .sub-nav li{
