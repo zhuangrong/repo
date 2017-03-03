@@ -161,7 +161,7 @@ em,h3{
 .banner{
   position: absolute;
   z-index: 0;
-  top: 0.88rem;
+  top: 93px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -866,7 +866,7 @@ em,h3{
 		line-height: 50px;
 	}
 	.header .logo{
-		width: 142px;
+		width: 116px;
 	}
   .nav-toggle{
     display: block;
@@ -964,6 +964,7 @@ em,h3{
   /*幻灯片*/
   .banner{
     bottom: auto;
+    top:50px;
     height: 380px;
   }
 	
