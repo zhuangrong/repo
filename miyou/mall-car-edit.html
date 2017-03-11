@@ -12,9 +12,11 @@
 <script>
 $(function(){
 	
+	
 	//spinner组件
 	$(".spinner").Spinner();
 	
+	$("#s1").find(".Amount").val(3)
 	//总金额
 	$(document).on("click",".spinner a",function(){
 		$(this).parent().next().text('￥'+$(this).parent().find(".Amount").val()*2000);/*个数乘以单价*/
@@ -41,7 +43,7 @@ $(function(){
 		<img src="images/pic01.png">
 	</div>
 	<div class="product-name">
-		<p class="spinner"></p>
+		<p class="spinner" id="s1"></p>
 		<p>¥2000</p>
 	</div>
 	<div class="product-del">删除</div>
