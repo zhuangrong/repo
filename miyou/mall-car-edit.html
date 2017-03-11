@@ -16,7 +16,14 @@ $(function(){
 	//spinner组件
 	$(".spinner").Spinner();
 	
-	$("#s1").find(".Amount").val(3)
+	//设置input初始值
+	var s1 = $("#s1").find(".Amount").val(3)
+	var s2 = $("#s2").find(".Amount").val(4)
+	
+	//设置对应的价格
+	$("#sp1").text('￥'+s1.val()*2000)
+	$("#sp2").text('￥'+s2.val()*2000)
+	
 	//总金额
 	$(document).on("click",".spinner a",function(){
 		$(this).parent().next().text('￥'+$(this).parent().find(".Amount").val()*2000);/*个数乘以单价*/
@@ -44,7 +51,7 @@ $(function(){
 	</div>
 	<div class="product-name">
 		<p class="spinner" id="s1"></p>
-		<p>¥2000</p>
+		<p id="sp1">¥2000</p>
 	</div>
 	<div class="product-del">删除</div>
 </div>
@@ -56,8 +63,8 @@ $(function(){
 		<img src="images/pic01.png">
 	</div>
 	<div class="product-name">
-		<p class="spinner"></p>
-		<p>¥2000</p>
+		<p class="spinner" id="s2"></p>
+		<p id="sp2">¥2000</p>
 	</div>
 	<div class="product-del">删除</div>
 </div>
