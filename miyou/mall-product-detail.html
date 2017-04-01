@@ -80,13 +80,13 @@ $(function(){
 <!--购物导航栏-->
 <div class="mall-bar">
 	<a href="#"><i class="icon-mall01"></i>客服</a>
-	<a href="mall-car-list.html"><i class="icon-mall02"></i>购物车</a>
+	<a href="mall-car-list.html"><i class="icon-mall02"><em class="badge">1</em></i>购物车</a>
 	<a href="javascript:;" id="add">加入购物车</a>
 	<a href="mall-order.html">立即购买</a>
 </div>
 <!--//购物导航栏-->
 <!--加入购物车-->
-<div id="shop-car" style="display: none">
+<div id="shop-car" style="display: ">
 	<div class="mask"></div>
 	<div class="shop-car">
 		<div class="product-pic">
@@ -94,11 +94,24 @@ $(function(){
 		</div>
 		<div class="product-name">
 			瑞士军刀书包 
-			<span>购买数量</span>
+			<span class="product-type">
+		 	 	 <dl>
+		 	 	 	<dt>规格：</dt>
+		 	 	 	<dd>
+		 	 	 		 <input type="radio" name="pty" id="t1">	
+						 <label for="t1">红</label>
+		 	 	 	</dd>
+		 	 	 	<dd>
+		 	 	 		 <input type="radio" name="pty" id="t2">	
+						 <label for="t2">黑</label>
+		 	 	 	</dd>
+		 	 	 </dl>
+			</span>
 		</div>
 		<div class="product-num">
 			<span id="price">￥2000</span>
 			<div class="spinner"></div>
+			<a href="#" class="btn-buy" style="float: right">确定</a>
 		</div>
 	</div>
 </div>
