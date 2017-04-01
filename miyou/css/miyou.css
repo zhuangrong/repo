@@ -1612,3 +1612,29 @@ nav a i.icon-nav04{
 nav{
 	z-index: 99999999;
 }
+
+/*******************20170328 二维码********************/
+.qrcode-bg{
+  background-image: url(../images/qrcode-bg.png);
+  background-repeat: top left;
+  background-size: cover !important;
+}
+.qrcode{
+  width: 236px;
+  height: 220px;
+  margin: 0 auto;
+  background-image: url(../images/qrcode-wrap.png);
+}
+.qrcode img{
+  width: 105px;
+  height: 105px;
+  margin:45px 0 0 70px
+}
+.qrcode-text{
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
+  
+}
+
+
