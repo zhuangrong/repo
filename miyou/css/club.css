@@ -23,13 +23,12 @@ li {
  
 }
 a {
-	color:#000;
+	color: #000;
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-tap-highlight-color:transparent;
  /*解决Safari 点击时 标签文本被选中，有底色*/
-    -webkit-user-select:none;
- 
+	-webkit-user-select:none;
 }
 a:active, a:hover {
 	outline: 0;
