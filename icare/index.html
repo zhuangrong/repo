@@ -13,21 +13,46 @@
 <script src="js/swiper.jquery.min.js"></script> 
 <script src="js/common.js"></script> 
 <title>icare</title>
+<script>
+$(function(){
+  
+  // 品牌logo切换
+  $(".brand a").on({
+    mouseenter:function(){
+      var el = $(this).find("img")
+      var urlName = el.attr("src").split(".")[0]
+      el.attr("src",urlName + "-active" + ".png")  
+    },
+    mouseleave:function(){
+      var el = $(this).find("img")
+      var urlName = el.attr("src").split("-")[0]
+      el.attr("src",urlName + ".png")  
+    },
+  })
+  // 切换新闻类型mobile
+  $("#news-tabs > div").each(function(i){
+       $(this).on("click",function(){
+          $(this).addClass("active").siblings().removeClass("active");
+          $(".news-type > div").eq(i).addClass("news-mb").siblings().removeClass("news-mb");
+       })
+  }) 
+})
+</script>
 </head>
 <body>
-<div class="header-wrap">
+<div class="header-wrap" id="top">
 	<div class="header">
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png"></a>
 		</div>
 		<div class="nav">
 			<a href="#" class="hide-mb">H5 互动营销服务商</a>
-			<a href="#" class="hide-mb">首页</a>
-			<a href="#">服务</a>
-			<a href="#">案例</a>
-			<a href="#">关于</a>
-			<a href="#">动态</a>	
-			<a href="#">联系</a>	
+			<a href="index.html" class="hide-mb">首页</a>
+			<a href="server.html">服务</a>
+			<a href="case.html">案例</a>
+			<a href="aboutus.html">关于</a>
+			<a href="news.html">动态</a>	
+			<a href="contact.html">联系</a>	
 		</div>
 		<div class="header-tip hide-pc">
 			  <i class="icon-qq"></i>
@@ -172,7 +197,7 @@
     });
    </script>
 	<!--//成功案例-->
-	<a href="case-more.html" class="case-more"></a>
+	<a href="case.html" class="case-more"></a>
   <!--品牌客户-->
 	<div class="article01">
 		品牌客户
@@ -293,14 +318,17 @@
 			<p>在乎科技成立于2015年，是一家专注于移动互联网品牌互动营销领域的H5互动服务商。</p>
 			<p>我们致力于通过创新的的移动互联网技术和对品牌深刻的商业理解，为企业提供互动营销技术支持与整体解决方案。</p>
 			<p>我们是一支年轻且充满创业热情的团队，不同思维、灵感、脑洞的碰撞，只为客户提供更具竞争力的H5互动营销服务，我们坚信“源于在乎，所以美好”</p>
-		</div>
-		
+		</div>	
   </div>
   <div class="blank"></div>
 	<!--新闻分类-->
+  <div class="news-type-tabs" id="news-tabs">
+    <div class="news-type-title active"><p>INDUSTRY NEWS</p>行业资讯</div>
+    <div class="news-type-title"><p>INDUSTRY OBSERVER</p>行业观察</div>
+		<div class="news-type-title"><p>TECHNOLOGICAL INFORMATION</p>科技资讯</div>
+  </div>
 	<div class="news-type">
-		<div class="news-item">
-			<div class="news-type-title"><p>INDUSTRY NEWS</p>行业资讯</div>
+		<div class="news-item news-mb">
 			<div class="news-list">
 				<ul>
 					<li>
@@ -322,19 +350,18 @@
 			</div>
 		</div>
 		<div class="news-item">
-			<div class="news-type-title"><p>INDUSTRY OBSERVER</p>行业观察</div>
 			<div class="news-list">
 				<ul>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-02 <label>/2017</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-02 <label>/2017</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-02 <label>/2017</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 				</ul>
@@ -344,19 +371,18 @@
 			</div>
 		</div>
 		<div class="news-item">
-			<div class="news-type-title"><p>TECHNOLOGICAL INFORMATION</p>科技资讯</div>
 			<div class="news-list">
 				<ul>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-03 <label>/2018</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-03 <label>/2018</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 					<li>
-						<h3>10-01 <label>/2016</label></h3>
+						<h3>10-03 <label>/2018</label></h3>
 						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
 					</li>
 				</ul>
@@ -369,6 +395,26 @@
 	<!--//新闻分类-->
 	<div class="blank-about"></div>
 </div>
+
+<!-- 浮动层-->
+<div class="widget hide-mb">
+  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2957094485&amp;site=qq&amp;menu=yes" class="icon-w01">
+    <span class="rect">2957094485</span>
+  </a>
+  <a href="#" class="icon-w02">
+    <span class="rect">
+      <img src="images/icare-qrcode.png" alt="">
+    </span>
+  </a>
+  <a href="tel:13163999993" class="icon-w03">
+    <span class="rect">13163999993</span>
+  </a>
+  <a href="#" class="icon-w04">
+  </a>
+  <a href="#top" class="icon-w05">
+  </a>
+</div>
+<!--//浮动层-->
 <div class="line"></div>
 <div class="main">
 	<!--	footer-->
