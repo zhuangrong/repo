@@ -2,8 +2,9 @@
 @import url("global.css");
 
 /*渐变*/
+.news-show a:hover .news-text-wrap,
 .news-detail .news-title,
-.news-tab li.active,
+.news-tab a.active,
 .brand-detail-wrap,
 .case-list  li  .case-text:before,
 .case-text span,
@@ -675,6 +676,7 @@ a:hover {
 .case-list a{
 	flex:0 0 33.3%;
 	padding:0 20px;
+	margin-bottom: .4rem;
 }
 .case-list a .case-pic-thumi{
 	position:relative;
@@ -989,8 +991,6 @@ a:hover {
 .news-tab{
 	position: relative;
 	z-index: 9999999;
-}
-.news-tab ul{
   display: -webkit-box; 
 	display: -webkit-flex;
 	display: flex;
@@ -999,45 +999,45 @@ a:hover {
 	margin-top: -.44rem;
 	box-shadow: -0.837px 11.971px 19.11px 1.89px rgba(0, 0, 0, 0.11);
 }
-.news-tab li{
+.news-tab a{
   flex: 0 0 33.333%;
 	height: 1rem;
 	padding: .15rem .15rem .1rem;
 	line-height: 1;
 }
-.news-tab li:not(:first-child){
+.news-tab a:not(:first-child){
   border-left: 1px solid  #DCDDDD;
 }
 
-.news-tab li i{
+.news-tab a i{
   display: block;
 	width: .4rem;
 	height: .4rem;	
 	vertical-align: middle;
 	margin-bottom: .03rem;
 }
-.news-tab li i.news-tab01{
+.news-tab a i.news-tab01{
 	background-image: url(../images/news-tab01.png);
 }
-.news-tab li i.news-tab02{
+.news-tab a i.news-tab02{
 	background-image: url(../images/news-tab02.png);
 }
-.news-tab li i.news-tab03{
+.news-tab a i.news-tab03{
 	background-image: url(../images/news-tab03.png);
 }
-.news-tab li.active i.news-tab01{
+.news-tab a.active i.news-tab01{
 	background-image: url(../images/news-tab01-active.png);
 }
-.news-tab li.active i.news-tab02{
+.news-tab a.active i.news-tab02{
 	background-image: url(../images/news-tab02-active.png);
 }
-.news-tab li.active i.news-tab03{
+.news-tab a.active i.news-tab03{
 	background-image: url(../images/news-tab03-active.png);
 }
-.news-tab li em{
+.news-tab a em{
  font-size: 10px;
 }
-.news-tab li.active{
+.news-tab a.active{
  color: #fff;
 }
 /*新闻详情*/
@@ -1141,6 +1141,61 @@ a:hover {
 	padding-top: .2rem;
 	padding-left: .1rem;
 }
+/*************动态页*************/
+.news-show {
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0 10px;
+}
+.news-show a{
+	flex:0 0 33.3%;
+	padding:0 20px;
+	margin-bottom: .4rem;
+}
+.news-show a .news-pic-thumi{
+	position:relative;
+	height: 256px;
+	-webkit-background-size: cover !important;
+}
+.news-show a .news-text{
+	padding:.36rem .25rem .3rem;	
+	background-color:#EFEFEF;
+}
+
+.news-show a:hover .news-text-wrap{
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+.news-show a .news-text h3{
+	display: block;
+	font-size: 30px;
+	margin-bottom: .05rem;
+}
+.news-show a .news-text h3 em{
+	font-size: 14px;
+	margin-left: 10px;
+}
+.news-show a .news-text span{
+	font-size: 12px;
+	padding-right: .2rem;
+	overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+	background-image: url(../images/news-dot02.png);
+	background-position: right center;
+	-webkit-background-size: .12rem .16rem;
+	background-size: .12rem .16rem;
+}
+.news-show a:hover .news-text span{
+	background-image: url(../images/news-dot02-active.png);
+}
+
+
+
 
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
@@ -1391,6 +1446,12 @@ a:hover {
 	}
 	.case-list a .case-text span em{
 		font-size: 11px;
+	}
+	/*动态页*/
+	.news-show  a{
+		flex:0 0 100%;
+		padding:0 15px;
+		margin-bottom: 25px;
 	}
   
   /*联系页*/
