@@ -385,7 +385,7 @@ a:hover {
   box-shadow: -0.837px 11.971px 19.11px 1.89px rgba(0, 0, 0, 0.11);
 }
 .btn-news{
-	width: 1.6rem;
+	min-width: 1.8rem;
 	height: 0.46rem;
 	line-height: .46rem;
 	color: #fff;
@@ -878,7 +878,7 @@ a:hover {
   flex:0 0 50%
 }
 .company-info {
-  margin-right: .7rem;
+  margin-right: .68rem;
 }
 .company-info h3{
   font-weight: bold;
@@ -1301,6 +1301,15 @@ a:hover {
 	html {
 		font-size: 50px;
 	}
+  .news-content p{
+    font-size: 11px;
+  }
+  .news-tab a p{
+   font-size: 11px;
+  }
+  .news-tab a em{
+   font-size: 9px !important;
+  }
   /*关于页*/
   .about-tool .about-box{
     float: none;
@@ -1336,6 +1345,7 @@ a:hover {
     width: 26px;
     height: 26px;
     line-height: 23px;
+    font-size: 14px;
   }
 	.header {
 		width: auto;
@@ -1363,6 +1373,7 @@ a:hover {
 		color: #fff;
 		text-align: center;
 		margin: 0 auto;
+    font-size: 14px;
 	}
 	/*banner text*/
 	.swiper01 .swiper-slide .pic01 {
@@ -1546,7 +1557,7 @@ a:hover {
 		height: 6.8rem;
 	}
 	.btn-news{
-		font-size: 13px;
+		font-size: 11px;
 	}
 	/*sub-banner*/
 	.sub-banner{
