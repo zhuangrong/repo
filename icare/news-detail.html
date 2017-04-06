@@ -13,6 +13,23 @@
 <script src="js/swiper.jquery.min.js"></script> 
 <script src="js/common.js"></script> 
 <title>icare</title>
+<script>
+$(function(){
+	//分享弹出层
+	$(".icon-wx2").on("click",function(){		 
+		 $(".mask").show()
+		 $(".share-pop").show()	 
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+			e.stopPropagation()
+		 $(".share-pop").hide()	 	
+	})
+	
+})
+</script>
+
 </head>
 <body class="bg-news">
 <div class="header-wrap">
@@ -44,23 +61,21 @@
 <div class="main">
 	<!--新闻导航-->
 	<div class="news-tab">
-		<ul>
-			<li class="active"> 
-				<i class="news-tab01"></i>
-				<p>行业资讯</p>
-				<em>INDUSTRY NEWS</em>
-			</li>
-			<li> 
-				<i class="news-tab02"></i>
-				<p>行业观察</p>
-				<em>INDUSTRY OBSERVER </em>
-			</li>
-			<li> 
-				<i class="news-tab03"></i>
-				<p>科技资讯</p>
-				<em>TECHNOLOGICAL INFORMATION </em>
-			</li>
-		</ul>
+    <a href="#" class="active"> 
+      <i class="news-tab01"></i>
+      <p>行业资讯</p>
+      <em>INDUSTRY NEWS</em>
+    </a>
+    <a href="#"> 
+      <i class="news-tab02"></i>
+      <p>行业观察</p>
+      <em>INDUSTRY OBSERVER </em>
+    </a>
+    <a href="#"> 
+      <i class="news-tab03"></i>
+      <p>科技资讯</p>
+      <em>TECHNOLOGICAL INFORMATION </em>
+    </a>
 	</div>
 	<!--//新闻导航-->
 	<div class="blank-about"></div>	
@@ -87,6 +102,7 @@
 					<label>打开微信“扫一扫”打开网页后点击屏幕右上角“分享”按钮</label>
 				</div>
 		</div>
+		<div class="mask"></div>
 	</div>
 	<!--//新闻详情-->
 </div>

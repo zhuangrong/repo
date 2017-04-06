@@ -44,7 +44,6 @@
 <div class="main">
 	<!--新闻导航-->
 	<div class="news-tab">
-		
 			<a href="#" class="active"> 
 				<i class="news-tab01"></i>
 				<p>行业资讯</p>
@@ -60,7 +59,6 @@
 				<p>科技资讯</p>
 				<em>TECHNOLOGICAL INFORMATION </em>
 			</a>
-		</ul>
 	</div>
 	<!--//新闻导航-->
 	<div class="blank-about"></div>	
@@ -157,9 +155,84 @@
 			</div>
 		</a>
 	</div>
-	<!--//新闻详情-->
+	<!--//新闻图文-->
+	<!--新闻翻页-->
+	<div class="news-page">
+	  <a href="#" class="news-page-prev">&lt;</a>
+	  <a href="#" class="active">1</a>
+	  <a href="#">2</a>
+	  <a href="#">3</a>
+	  <a href="#">4</a>
+	  <a href="#">5</a>
+	  <a href="#">6</a>
+	  <a href="#" class="news-page-next">&gt;</a>
+	</div>
+	<!--//新闻翻页-->
+	
 </div>
 
+<!--品牌详情-->
+<div class="brand-detail-wrap hide-mb">
+	<div class="main">
+		<!-- Swiper -->
+		<div class="swiper-container swiper05">
+				<div class="swiper-wrapper">
+						<div class="swiper-slide">
+								<img src="images/brand.png" alt="">
+								<span>
+									<em>10-01/2016</em>
+									在乎签约- 可口可乐H5营销服务方案
+								</span>
+						</div>
+						<div class="swiper-slide">
+								<img src="images/brand.png" alt="">
+								<span>
+									<em>10-01/2016</em>
+									在乎签约- 可口可乐H5营销服务方案
+								</span>
+						</div>
+						<div class="swiper-slide">
+								<img src="images/brand.png" alt="">
+								<span>
+									<em>10-01/2016</em>
+									在乎签约- 可口可乐H5营销服务方案
+								</span>
+						</div>
+						<div class="swiper-slide">
+								<img src="images/brand.png" alt="">
+								<span>
+									<em>10-01/2016</em>
+									在乎签约- 可口可乐H5营销服务方案
+								</span>
+						</div>
+						<div class="swiper-slide">
+								<img src="images/brand.png" alt="">
+								<span>
+									<em>10-01/2016</em>
+									在乎签约- 可口可乐H5营销服务方案
+								</span>
+						</div>
+				</div>
+				<div class="swiper-pagination sp5"></div>
+		</div>
+		<!-- //Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper05', {
+					pagination: '.sp5',
+					paginationClickable: true,
+					slidesPerView: 4,
+					spaceBetween: 50,
+					breakpoints: {
+							820: {
+									slidesPerView: 2,
+									spaceBetween: 20
+							}
+					}
+			});
+		 </script>
+	</div>
+</div>
+<!--//品牌详情-->
 <div class="blank hide-mb"></div>
 <div class="main">
 	<!--	footer-->
