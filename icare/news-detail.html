@@ -15,16 +15,22 @@
 <title>icare</title>
 <script>
 $(function(){
+
+  
 	//分享弹出层
 	$(".icon-wx2").on("click",function(){		 
 		 $(".mask").show()
-		 $(".share-pop").show()	 
+		 $(".weixin").show()	 
 	})
-	
+	$(".icon-sina").on("click",function(){		 
+		 $(".mask").show()
+		 $(".sina").show()	 
+	})
 	//点击遮罩层隐藏
 	$(".mask").on("click",function(e){
 			e.stopPropagation()
-		 $(".share-pop").hide()	 
+		 $(".weixin").hide()	 
+		 $(".sina").hide()	 
      $(".mask").hide()
 	})
 	
@@ -40,11 +46,11 @@ $(function(){
 		</div>
 		<div class="nav">
 			<a href="#" class="hide-mb">H5 互动营销服务商</a>
-			<a href="index.html" class="hide-mb">首页</a>
+			<a href="index.html">首页</a>
 			<a href="server.html">服务</a>
 			<a href="case.html">案例</a>
 			<a href="about.html">关于</a>
-			<a href="news.html">动态</a>	
+			<a href="news.html" class="active">动态</a>	
 			<a href="contact.html">联系</a>	
 		</div>
 		<div class="header-tip hide-pc">
@@ -94,20 +100,25 @@ $(function(){
 			<p>程序员主角发言的一直以吐槽的形式体贯穿整体，老板发言部分是说唱的形式，超级搞笑。整个H5看似一直在瞎扯淡，可看完之后“11月13日”“QQ游戏王者大会战”“康熙”三个关键词，你已经在不知不觉中记住了。</p>
 			<p>不得不说说唱是一种音乐艺术配音是H5中非常重要的一个元素，说唱具备搞笑和节奏感的特点让它在一些有搞笑需求的H5中得到了应用。再配合切题的歌词，真的让人看过之后便难以忘记，若是你也想做一个效果出群的H5，不妨试试魔性说唱。</p>
 		</div>
-		<div  class="shareto">
-				<span>分享到：</span>
-				<i class="icon-wx2"></i>
-				<i class="icon-sina"></i>
-				<div class="share-pop">
-					<img src="images/qrcode.png" alt="">
-					<label>打开微信“扫一扫”打开网页后点击屏幕右上角“分享”按钮</label>
-				</div>
-		</div>
-		<div class="mask"></div>
 	</div>
 	<!--//新闻详情-->
+  <div  class="shareto">
+      <span>
+        分享到：
+        <div class="share-pop weixin">
+          <img src="images/qrcode.png" alt="">
+          <label>打开微信“扫一扫”打开网页后点击屏幕右上角“分享”按钮</label>
+        </div>
+        <div class="share-pop sina">
+          <img src="images/qrcode.png" alt="">
+          <label>打开新浪“扫一扫”打开网页后点击屏幕右上角“分享”按钮</label>
+        </div>
+      </span>
+      <i class="icon-wx2"></i>
+      <i class="icon-sina"></i>
+  </div>
+  <div class="mask"></div>
 </div>
-
 <div class="blank hide-mb"></div>
 <div class="main">
 	<!--	footer-->
@@ -117,8 +128,8 @@ $(function(){
 	<div class="footer">
 		<div class="f-phone">
 			<p>13163999993</p>
-			<span>０592-2220980</span>
-			<label>E-MAIL : jarvan@icarexm.com</label>
+			<span>0592-2220980</span>
+			<label class="hide-pc">E-MAIL : jarvan@icarexm.com</label>
 		</div>
 		<div class="f-qrcode">
 			<p>
