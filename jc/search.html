@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>搜索_建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台</title>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="generator" content="m.jc85.com"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileImage" content="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileColor" content="#007AFF">
+<link rel="shortcut icon" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="static/lib/jquery/jquery.mobile.custom.structure.min.css"/>
+<link rel="stylesheet" type="text/css" href="static/style.css"/>
+<script type="text/javascript" src="static/lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function() {
+　　$.mobile.ajaxEnabled = false;
+});
+var AJPath = 'ajax.php';
+var Dbrowser = '';
+</script>
+<script type="text/javascript" src="static/lib/jquery/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/fix.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+</head>
+<body>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='http://m.jc85.com/static/img/logo.png' />
+</div>
+<div data-role="page">
+<div class="suspension-download">
+        <div class="tips-msg">
+            <img width="32" height="32" title="建程网APP" alt="建程网APP" src="static/img/logo.png">
+            <bdo>建程网APP送积分啦！</bdo>
+<a class="tips-download" href="http://jc85.com/mobile/app/com.jiancheng.apk" >立即下载</a>
+                    </div>
+        <div class="tips-close"><img src="static/img/x.png"></div>
+</div>
+<div class="head-bar-fix" id="headdownload"></div>
+<div class="ui-toast"></div>
+<div class="ui-mask"></div>
+<div class="ui-sheet"></div><style type="text/css">
+.search {background:#FFFFFF;padding:20px 10px;}
+.search-btn {background:#FFFFFF;text-align:center;}
+.search-btn div {background:#007AFF;padding:8px;border-radius:4px;font-size:16px;color:#FFFFFF;}
+</style>
+<div id="head-bar">
+<div class="head-bar">
+<div class="head-bar-back">
+<a href="javascript:Dback('index.php');" data-direction="reverse"><img src="static/img/icon-back.png" width="24" height="24"/><span>返回</span></a>
+</div>
+<div class="head-bar-title">搜索</div>
+</div>
+<div class="head-bar-fix"></div>
+</div>
+<div style="background:#FFFFFF;padding:16px;">
+<form action="search.php" method="post" id="dform">
+<input type="hidden" name="ok" value="1"/>
+<select name="action" style="-webkit-appearance:none;width:100%;height:34px;border:#D8D8D8 1px solid;font-size:16px;background:#FFFFFF;">
+<option value="mod6">工程信息</option>
+<option value="mod27">施工队伍</option>
+<option value="mod5">工程机械</option>
+<option value="mod23">整体工程</option>
+<option value="mod50">建程团购</option>
+<option value="mod36">二手买卖</option>
+<option value="mod26">职称挂靠</option>
+<option value="message">消息</option>
+</select>
+<div style="border:#D8D8D8 1px solid;margin:16px 0;padding:2px 6px;border-radius:4px;"><input name="wd" id="wd" type="search" style="width:100%;height:28px;line-height:28px;border:none;font-size:14px;padding:0;" placeholder="请输入关键词" onblur="window.scrollTo(0,0);" autofocus="autofocus"/></div>
+<div style="padding:0;" onclick="Dsearch();">
+<div class="btn-blue">搜 索</div>
+</div>
+</form>
+</div>
+<script type="text/javascript">
+function Dsearch() {
+if(Dd('wd').value.length < 2) {
+Dtoast('请输入关键词');
+return false;
+}
+Dd('dform').submit();
+}
+</script>
+<div class="foot-bar-fix"></div>
+<div class="foot-bar">
+<ul>
+<li class="icon-home"><a href="index.php" data-transition="none"><span>首页</span></a></li>
+<li class="icon-channel"><a href="discovery.php" data-transition="none"><span>发现</span></a></li>
+<li class="icon-publish"><a href="publish.php" data-transition="none"><span>发布</span></a></li>
+<li class="icon-my"><a href="my.php" data-transition="none"><span>个人中心</span></a></li>
+<li class="icon-more"><a href="more.php" data-transition="none"><span>更多</span></a></li>
+</ul>
+</div>
+</div>
+<div style="display:none"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8faafc3340ce7b4bed95be835a47e16d' type='text/javascript'%3E%3C/script%3E"));</script>  <script src="http://s11.cnzz.com/z_stat.php?id=1255461800&web_id=1255461800" language="JavaScript"></script></div>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>个人劳务_第1页_个人劳务_建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台</title>
+<meta name="keywords" content="建程网,个人劳务,造价工程师,监理工程师,电气工程师,安全工程师,结构工程师,建筑工程师"/>
+<meta name="description" content="建程网建筑招聘网提供造价工程师招聘,土建工程师招聘,电气工程师招聘,安全工程师招聘,土木英才招聘,监理员招聘,路桥人才招聘等,获得最新工程人才资讯上建程网"/>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="generator" content="m.jc85.com"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileImage" content="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileColor" content="#007AFF">
+<link rel="shortcut icon" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="static/lib/jquery/jquery.mobile.custom.structure.min.css"/>
+<link rel="stylesheet" type="text/css" href="static/style.css"/>
+<script type="text/javascript" src="static/lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function() {
+　　$.mobile.ajaxEnabled = false;
+});
+var AJPath = 'ajax.php';
+var Dbrowser = 'safari';
+</script>
+<script type="text/javascript" src="static/lib/jquery/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/fix.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+</head>
+<body>
+<div id='wx_pic' style='margin:0 auto;display:none;'> <img src='http://m.jc85.com/static/img/logo.png' /> </div>
+<div data-role="page">
+  <div class="suspension-download">
+    <div class="tips-msg"> <img width="32" height="32" title="建程网APP" alt="建程网APP" src="static/img/logo.png">
+      <bdo>建程网APP送积分啦！</bdo>
+      <a class="tips-download" href="https://itunes.apple.com/cn/app/id1056932953" >立即下载</a> </div>
+    <div class="tips-close"><img src="static/img/x.png"></div>
+  </div>
+  <div class="head-bar-fix" id="headdownload"></div>
+  <div class="ui-toast"></div>
+  <div class="ui-mask"></div>
+  <div class="ui-sheet"></div>
+  <link type="text/css" rel="stylesheet" href="static/demo.css">
+  <script src="static/js/jquery-1.8.2.min.js"></script> 
+  <script src="static/js/demo.js"></script> 
+  <script type="text/javascript">
+function regional(areaid)
+{
+var catid = document.getElementById("catid").value;
+var authid = document.getElementById("authid").value;
+window.location.href="index.php?moduleid=9"+"&areaid="+areaid+"&catid="+catid+"&authentication="+authid;
+}
+function category(catid)
+{
+var areaid = document.getElementById("areaid").value;
+var authid = document.getElementById("authid").value;
+window.location.href="index.php?moduleid=9"+"&areaid="+areaid+"&catid="+catid+"&authentication="+authid;
+}
+function authentication(authid)
+{
+var areaid = document.getElementById("areaid").value;
+var catid = document.getElementById("catid").value;
+window.location.href="index.php?moduleid=9"+"&areaid="+areaid+"&catid="+catid+"&authentication="+authid;
+}
+</script>
+  <div id="head-bar">
+    <div class="head-bar">
+      <div class="head-bar-back"> <a href="channel.php" data-direction="reverse"><img src="static/img/icon-back.png" width="24" height="24"/><span>频道</span></a> </div>
+      <div class="head-bar-title">个人劳务</div>
+      <div class="head-bar-right"> <a href="javascript:Dsheet('<a href=&#34;search.php?action=mod9&catid=0&areaid=0&#34;><span>个人劳务搜索</span></a>|<a href=&#34;category.php?moduleid=9&#34;><span>按分类浏览</span></a>|<a href=&#34;area.php?moduleid=9&#34;><span>按地区浏览</span></a>', '取消');"><img src="static/img/icon-action.png" width="24" height="24"/></a> </div>
+    </div>
+    <div class="head-bar-fix"></div>
+  </div>
+  <div class="screening">
+    <ul class="sgd">
+      <li class="Regional">全国</li>
+      <input id="areaid" type="hidden" value="0" />
+      <li class="Category">工种</li>
+      <input id="catid" type="hidden" value="0" />
+      <li class="Sort">全部认证</li>
+      <input id="authid" type="hidden" value="" />
+    </ul>
+  </div>
+  <div class="head-bar-fix"></div>
+  <!-- End screening --> 
+  <!-- grade -->
+  <div class="grade-eject">
+    <ul class="grade-w" id="gradew">
+      <li onClick="regional(0)">全国</li>
+      <li onClick="regional(1)" id="1"> 北京</li>
+      <li onClick="regional(2)" id="2"> 上海</li>
+      <li onClick="regional(3)" id="3"> 天津</li>
+      <li onClick="regional(4)" id="4"> 重庆</li>
+      <li onClick="grade1(this)" id="5"> 河北</li>
+      <li onClick="grade1(this)" id="6"> 山西</li>
+      <li onClick="grade1(this)" id="7"> 内蒙古</li>
+      <li onClick="grade1(this)" id="8"> 辽宁</li>
+      <li onClick="grade1(this)" id="9"> 吉林</li>
+      <li onClick="grade1(this)" id="10"> 黑龙江</li>
+      <li onClick="grade1(this)" id="11"> 江苏</li>
+      <li onClick="grade1(this)" id="12"> 浙江</li>
+      <li onClick="grade1(this)" id="13"> 安徽</li>
+      <li onClick="grade1(this)" id="14"> 福建</li>
+      <li onClick="grade1(this)" id="15"> 江西</li>
+      <li onClick="grade1(this)" id="16"> 山东</li>
+      <li onClick="grade1(this)" id="17"> 河南</li>
+      <li onClick="grade1(this)" id="18"> 湖北</li>
+      <li onClick="grade1(this)" id="19"> 湖南</li>
+      <li onClick="grade1(this)" id="20"> 广东</li>
+      <li onClick="grade1(this)" id="21"> 广西</li>
+      <li onClick="grade1(this)" id="22"> 海南</li>
+      <li onClick="grade1(this)" id="23"> 四川</li>
+      <li onClick="grade1(this)" id="24"> 贵州</li>
+      <li onClick="grade1(this)" id="25"> 云南</li>
+      <li onClick="grade1(this)" id="26"> 西藏</li>
+      <li onClick="grade1(this)" id="27"> 陕西</li>
+      <li onClick="grade1(this)" id="28"> 甘肃</li>
+      <li onClick="grade1(this)" id="29"> 青海</li>
+      <li onClick="grade1(this)" id="30"> 宁夏</li>
+      <li onClick="grade1(this)" id="31"> 新疆</li>
+      <li onClick="regional(32)" id="32"> 台湾</li>
+      <li onClick="regional(33)" id="33"> 香港</li>
+      <li onClick="regional(34)" id="34"> 澳门</li>
+    </ul>
+    <ul class="grade-t5 grade-t" >
+      <li onClick="regional(5)">全部</li>
+      <li onClick="regional(35)">石家庄市</li>
+      <li onClick="regional(36)">唐山市</li>
+      <li onClick="regional(37)">秦皇岛市</li>
+      <li onClick="regional(38)">邯郸市</li>
+      <li onClick="regional(39)">邢台市</li>
+      <li onClick="regional(40)">保定市</li>
+      <li onClick="regional(41)">张家口市</li>
+      <li onClick="regional(42)">承德市</li>
+      <li onClick="regional(43)">沧州市</li>
+      <li onClick="regional(44)">廊坊市</li>
+      <li onClick="regional(45)">衡水市</li>
+    </ul>
+    <ul class="grade-t6 grade-t" >
+      <li onClick="regional(6)">全部</li>
+      <li onClick="regional(46)">太原市</li>
+      <li onClick="regional(47)">大同市</li>
+      <li onClick="regional(48)">阳泉市</li>
+      <li onClick="regional(49)">长治市</li>
+      <li onClick="regional(50)">晋城市</li>
+      <li onClick="regional(51)">朔州市</li>
+      <li onClick="regional(52)">晋中市</li>
+      <li onClick="regional(53)">运城市</li>
+      <li onClick="regional(54)">忻州市</li>
+      <li onClick="regional(55)">临汾市</li>
+      <li onClick="regional(56)">吕梁市</li>
+    </ul>
+    <ul class="grade-t7 grade-t" >
+      <li onClick="regional(7)">全部</li>
+      <li onClick="regional(57)">呼和浩特市</li>
+      <li onClick="regional(58)">包头市</li>
+      <li onClick="regional(59)">乌海市</li>
+      <li onClick="regional(60)">赤峰市</li>
+      <li onClick="regional(61)">通辽市</li>
+      <li onClick="regional(62)">鄂尔多斯市</li>
+      <li onClick="regional(63)">呼伦贝尔市</li>
+      <li onClick="regional(64)">巴彦淖尔市</li>
+      <li onClick="regional(65)">乌兰察布市</li>
+      <li onClick="regional(66)">兴安盟</li>
+      <li onClick="regional(67)">锡林郭勒盟</li>
+      <li onClick="regional(68)">阿拉善盟</li>
+    </ul>
+    <ul class="grade-t8 grade-t" >
+      <li onClick="regional(8)">全部</li>
+      <li onClick="regional(69)">沈阳市</li>
+      <li onClick="regional(70)">大连市</li>
+      <li onClick="regional(71)">鞍山市</li>
+      <li onClick="regional(72)">抚顺市</li>
+      <li onClick="regional(73)">本溪市</li>
+      <li onClick="regional(74)">丹东市</li>
+      <li onClick="regional(75)">锦州市</li>
+      <li onClick="regional(76)">营口市</li>
+      <li onClick="regional(77)">阜新市</li>
+      <li onClick="regional(78)">辽阳市</li>
+      <li onClick="regional(79)">盘锦市</li>
+      <li onClick="regional(80)">铁岭市</li>
+      <li onClick="regional(81)">朝阳市</li>
+      <li onClick="regional(82)">葫芦岛市</li>
+    </ul>
+    <ul class="grade-t9 grade-t" >
+      <li onClick="regional(9)">全部</li>
+      <li onClick="regional(83)">长春市</li>
+      <li onClick="regional(84)">吉林市</li>
+      <li onClick="regional(85)">四平市</li>
+      <li onClick="regional(86)">辽源市</li>
+      <li onClick="regional(87)">通化市</li>
+      <li onClick="regional(88)">白山市</li>
+      <li onClick="regional(89)">松原市</li>
+      <li onClick="regional(90)">白城市</li>
+      <li onClick="regional(91)">延边朝鲜族自治州</li>
+    </ul>
+    <ul class="grade-t10 grade-t" >
+      <li onClick="regional(10)">全部</li>
+      <li onClick="regional(92)">哈尔滨市</li>
+      <li onClick="regional(93)">齐齐哈尔市</li>
+      <li onClick="regional(94)">鸡西市</li>
+      <li onClick="regional(95)">鹤岗市</li>
+      <li onClick="regional(96)">双鸭山市</li>
+      <li onClick="regional(97)">大庆市</li>
+      <li onClick="regional(98)">伊春市</li>
+      <li onClick="regional(99)">佳木斯市</li>
+      <li onClick="regional(100)">七台河市</li>
+      <li onClick="regional(101)">牡丹江市</li>
+      <li onClick="regional(102)">黑河市</li>
+      <li onClick="regional(103)">绥化市</li>
+      <li onClick="regional(104)">大兴安岭地区</li>
+    </ul>
+    <ul class="grade-t11 grade-t" >
+      <li onClick="regional(11)">全部</li>
+      <li onClick="regional(105)">南京市</li>
+      <li onClick="regional(106)">无锡市</li>
+      <li onClick="regional(107)">徐州市</li>
+      <li onClick="regional(108)">常州市</li>
+      <li onClick="regional(109)">苏州市</li>
+      <li onClick="regional(110)">南通市</li>
+      <li onClick="regional(111)">连云港市</li>
+      <li onClick="regional(112)">淮安市</li>
+      <li onClick="regional(113)">盐城市</li>
+      <li onClick="regional(114)">扬州市</li>
+      <li onClick="regional(115)">镇江市</li>
+      <li onClick="regional(116)">泰州市</li>
+      <li onClick="regional(117)">宿迁市</li>
+      <li onClick="regional(394)">昆山市</li>
+    </ul>
+    <ul class="grade-t12 grade-t" >
+      <li onClick="regional(12)">全部</li>
+      <li onClick="regional(118)">杭州市</li>
+      <li onClick="regional(119)">宁波市</li>
+      <li onClick="regional(120)">温州市</li>
+      <li onClick="regional(121)">嘉兴市</li>
+      <li onClick="regional(122)">湖州市</li>
+      <li onClick="regional(123)">绍兴市</li>
+      <li onClick="regional(124)">金华市</li>
+      <li onClick="regional(125)">衢州市</li>
+      <li onClick="regional(126)">舟山市</li>
+      <li onClick="regional(127)">台州市</li>
+      <li onClick="regional(128)">丽水市</li>
+    </ul>
+    <ul class="grade-t13 grade-t" >
+      <li onClick="regional(13)">全部</li>
+      <li onClick="regional(129)">合肥市</li>
+      <li onClick="regional(130)">芜湖市</li>
+      <li onClick="regional(131)">蚌埠市</li>
+      <li onClick="regional(132)">淮南市</li>
+      <li onClick="regional(133)">马鞍山市</li>
+      <li onClick="regional(134)">淮北市</li>
+      <li onClick="regional(135)">铜陵市</li>
+      <li onClick="regional(136)">安庆市</li>
+      <li onClick="regional(137)">黄山市</li>
+      <li onClick="regional(138)">滁州市</li>
+      <li onClick="regional(139)">阜阳市</li>
+      <li onClick="regional(140)">宿州市</li>
+      <li onClick="regional(141)">巢湖市</li>
+      <li onClick="regional(142)">六安市</li>
+      <li onClick="regional(143)">亳州市</li>
+      <li onClick="regional(144)">池州市</li>
+      <li onClick="regional(145)">宣城市</li>
+    </ul>
+    <ul class="grade-t14 grade-t" >
+      <li onClick="regional(14)">全部</li>
+      <li onClick="regional(146)">福州市</li>
+      <li onClick="regional(147)">厦门市</li>
+      <li onClick="regional(148)">莆田市</li>
+      <li onClick="regional(149)">三明市</li>
+      <li onClick="regional(150)">泉州市</li>
+      <li onClick="regional(151)">漳州市</li>
+      <li onClick="regional(152)">南平市</li>
+      <li onClick="regional(153)">龙岩市</li>
+      <li onClick="regional(154)">宁德市</li>
+    </ul>
+    <ul class="grade-t15 grade-t" >
+      <li onClick="regional(15)">全部</li>
+      <li onClick="regional(155)">南昌市</li>
+      <li onClick="regional(156)">景德镇市</li>
+      <li onClick="regional(157)">萍乡市</li>
+      <li onClick="regional(158)">九江市</li>
+      <li onClick="regional(159)">新余市</li>
+      <li onClick="regional(160)">鹰潭市</li>
+      <li onClick="regional(161)">赣州市</li>
+      <li onClick="regional(162)">吉安市</li>
+      <li onClick="regional(163)">宜春市</li>
+      <li onClick="regional(164)">抚州市</li>
+      <li onClick="regional(165)">上饶市</li>
+    </ul>
+    <ul class="grade-t16 grade-t" >
+      <li onClick="regional(16)">全部</li>
+      <li onClick="regional(166)">济南市</li>
+      <li onClick="regional(167)">青岛市</li>
+      <li onClick="regional(168)">淄博市</li>
+      <li onClick="regional(169)">枣庄市</li>
+      <li onClick="regional(170)">东营市</li>
+      <li onClick="regional(171)">烟台市</li>
+      <li onClick="regional(172)">潍坊市</li>
+      <li onClick="regional(173)">济宁市</li>
+      <li onClick="regional(174)">泰安市</li>
+      <li onClick="regional(175)">威海市</li>
+      <li onClick="regional(176)">日照市</li>
+      <li onClick="regional(177)">莱芜市</li>
+      <li onClick="regional(178)">临沂市</li>
+      <li onClick="regional(179)">德州市</li>
+      <li onClick="regional(180)">聊城市</li>
+      <li onClick="regional(181)">滨州市</li>
+      <li onClick="regional(182)">荷泽市</li>
+    </ul>
+    <ul class="grade-t17 grade-t" >
+      <li onClick="regional(17)">全部</li>
+      <li onClick="regional(183)">郑州市</li>
+      <li onClick="regional(184)">开封市</li>
+      <li onClick="regional(185)">洛阳市</li>
+      <li onClick="regional(186)">平顶山市</li>
+      <li onClick="regional(187)">安阳市</li>
+      <li onClick="regional(188)">鹤壁市</li>
+      <li onClick="regional(189)">新乡市</li>
+      <li onClick="regional(190)">焦作市</li>
+      <li onClick="regional(191)">濮阳市</li>
+      <li onClick="regional(192)">许昌市</li>
+      <li onClick="regional(193)">漯河市</li>
+      <li onClick="regional(194)">三门峡市</li>
+      <li onClick="regional(195)">南阳市</li>
+      <li onClick="regional(196)">商丘市</li>
+      <li onClick="regional(197)">信阳市</li>
+      <li onClick="regional(198)">周口市</li>
+      <li onClick="regional(199)">驻马店市</li>
+    </ul>
+    <ul class="grade-t18 grade-t" >
+      <li onClick="regional(18)">全部</li>
+      <li onClick="regional(200)">武汉市</li>
+      <li onClick="regional(201)">黄石市</li>
+      <li onClick="regional(202)">十堰市</li>
+      <li onClick="regional(203)">宜昌市</li>
+      <li onClick="regional(204)">襄樊市</li>
+      <li onClick="regional(205)">鄂州市</li>
+      <li onClick="regional(206)">荆门市</li>
+      <li onClick="regional(207)">孝感市</li>
+      <li onClick="regional(208)">荆州市</li>
+      <li onClick="regional(209)">黄冈市</li>
+      <li onClick="regional(210)">咸宁市</li>
+      <li onClick="regional(211)">随州市</li>
+      <li onClick="regional(212)">恩施土家族苗族自治州</li>
+      <li onClick="regional(213)">仙桃市</li>
+      <li onClick="regional(214)">潜江市</li>
+      <li onClick="regional(215)">天门市</li>
+      <li onClick="regional(216)">神农架林区</li>
+    </ul>
+    <ul class="grade-t19 grade-t" >
+      <li onClick="regional(19)">全部</li>
+      <li onClick="regional(217)">长沙市</li>
+      <li onClick="regional(218)">株洲市</li>
+      <li onClick="regional(219)">湘潭市</li>
+      <li onClick="regional(220)">衡阳市</li>
+      <li onClick="regional(221)">邵阳市</li>
+      <li onClick="regional(222)">岳阳市</li>
+      <li onClick="regional(223)">常德市</li>
+      <li onClick="regional(224)">张家界市</li>
+      <li onClick="regional(225)">益阳市</li>
+      <li onClick="regional(226)">郴州市</li>
+      <li onClick="regional(227)">永州市</li>
+      <li onClick="regional(228)">怀化市</li>
+      <li onClick="regional(229)">娄底市</li>
+      <li onClick="regional(230)">湘西</li>
+    </ul>
+    <ul class="grade-t20 grade-t" >
+      <li onClick="regional(20)">全部</li>
+      <li onClick="regional(231)">广州市</li>
+      <li onClick="regional(232)">韶关市</li>
+      <li onClick="regional(233)">深圳市</li>
+      <li onClick="regional(234)">珠海市</li>
+      <li onClick="regional(235)">汕头市</li>
+      <li onClick="regional(236)">佛山市</li>
+      <li onClick="regional(237)">江门市</li>
+      <li onClick="regional(238)">湛江市</li>
+      <li onClick="regional(239)">茂名市</li>
+      <li onClick="regional(240)">肇庆市</li>
+      <li onClick="regional(241)">惠州市</li>
+      <li onClick="regional(242)">梅州市</li>
+      <li onClick="regional(243)">汕尾市</li>
+      <li onClick="regional(244)">河源市</li>
+      <li onClick="regional(245)">阳江市</li>
+      <li onClick="regional(246)">清远市</li>
+      <li onClick="regional(247)">东莞市</li>
+      <li onClick="regional(248)">中山市</li>
+      <li onClick="regional(249)">潮州市</li>
+      <li onClick="regional(250)">揭阳市</li>
+      <li onClick="regional(251)">云浮市</li>
+    </ul>
+    <ul class="grade-t21 grade-t" >
+      <li onClick="regional(21)">全部</li>
+      <li onClick="regional(252)">南宁市</li>
+      <li onClick="regional(253)">柳州市</li>
+      <li onClick="regional(254)">桂林市</li>
+      <li onClick="regional(255)">梧州市</li>
+      <li onClick="regional(256)">北海市</li>
+      <li onClick="regional(257)">防城港市</li>
+      <li onClick="regional(258)">钦州市</li>
+      <li onClick="regional(259)">贵港市</li>
+      <li onClick="regional(260)">玉林市</li>
+      <li onClick="regional(261)">百色市</li>
+      <li onClick="regional(262)">贺州市</li>
+      <li onClick="regional(263)">河池市</li>
+      <li onClick="regional(264)">来宾市</li>
+      <li onClick="regional(265)">崇左市</li>
+    </ul>
+    <ul class="grade-t22 grade-t" >
+      <li onClick="regional(22)">全部</li>
+      <li onClick="regional(266)">海口市</li>
+      <li onClick="regional(267)">三亚市</li>
+      <li onClick="regional(268)">五指山市</li>
+      <li onClick="regional(269)">琼海市</li>
+      <li onClick="regional(270)">儋州市</li>
+      <li onClick="regional(271)">文昌市</li>
+      <li onClick="regional(272)">万宁市</li>
+      <li onClick="regional(273)">东方市</li>
+      <li onClick="regional(274)">定安县</li>
+      <li onClick="regional(275)">屯昌县</li>
+      <li onClick="regional(276)">澄迈县</li>
+      <li onClick="regional(277)">临高县</li>
+      <li onClick="regional(278)">白沙黎族自治县</li>
+      <li onClick="regional(279)">昌江黎族自治县</li>
+      <li onClick="regional(280)">乐东黎族自治县</li>
+      <li onClick="regional(281)">陵水黎族自治县</li>
+      <li onClick="regional(282)">保亭黎族苗族自治县</li>
+      <li onClick="regional(283)">琼中黎族苗族自治县</li>
+    </ul>
+    <ul class="grade-t23 grade-t" >
+      <li onClick="regional(23)">全部</li>
+      <li onClick="regional(284)">成都市</li>
+      <li onClick="regional(285)">自贡市</li>
+      <li onClick="regional(286)">攀枝花市</li>
+      <li onClick="regional(287)">泸州市</li>
+      <li onClick="regional(288)">德阳市</li>
+      <li onClick="regional(289)">绵阳市</li>
+      <li onClick="regional(290)">广元市</li>
+      <li onClick="regional(291)">遂宁市</li>
+      <li onClick="regional(292)">内江市</li>
+      <li onClick="regional(293)">乐山市</li>
+      <li onClick="regional(294)">南充市</li>
+      <li onClick="regional(295)">眉山市</li>
+      <li onClick="regional(296)">宜宾市</li>
+      <li onClick="regional(297)">广安市</li>
+      <li onClick="regional(298)">达州市</li>
+      <li onClick="regional(299)">雅安市</li>
+      <li onClick="regional(300)">巴中市</li>
+      <li onClick="regional(301)">资阳市</li>
+      <li onClick="regional(302)">阿坝藏族羌族自治州</li>
+      <li onClick="regional(303)">甘孜藏族自治州</li>
+      <li onClick="regional(304)">凉山彝族自治州</li>
+    </ul>
+    <ul class="grade-t24 grade-t" >
+      <li onClick="regional(24)">全部</li>
+      <li onClick="regional(305)">贵阳市</li>
+      <li onClick="regional(306)">六盘水市</li>
+      <li onClick="regional(307)">遵义市</li>
+      <li onClick="regional(308)">安顺市</li>
+      <li onClick="regional(309)">铜仁地区</li>
+      <li onClick="regional(310)">黔西南布依族苗族自治州</li>
+      <li onClick="regional(311)">毕节地区</li>
+      <li onClick="regional(312)">黔东南苗族侗族自治州</li>
+      <li onClick="regional(313)">黔南布依族苗族自治州</li>
+    </ul>
+    <ul class="grade-t25 grade-t" >
+      <li onClick="regional(25)">全部</li>
+      <li onClick="regional(314)">昆明市</li>
+      <li onClick="regional(315)">曲靖市</li>
+      <li onClick="regional(316)">玉溪市</li>
+      <li onClick="regional(317)">保山市</li>
+      <li onClick="regional(318)">昭通市</li>
+      <li onClick="regional(319)">丽江市</li>
+      <li onClick="regional(320)">思茅市</li>
+      <li onClick="regional(321)">临沧市</li>
+      <li onClick="regional(322)">楚雄彝族自治州</li>
+      <li onClick="regional(323)">红河哈尼族彝族自治州</li>
+      <li onClick="regional(324)">文山壮族苗族自治州</li>
+      <li onClick="regional(325)">西双版纳傣族自治州</li>
+      <li onClick="regional(326)">大理白族自治州</li>
+      <li onClick="regional(327)">德宏傣族景颇族自治州</li>
+      <li onClick="regional(328)">怒江傈僳族自治州</li>
+      <li onClick="regional(329)">迪庆藏族自治州</li>
+      <li onClick="regional(395)">普洱市</li>
+    </ul>
+    <ul class="grade-t26 grade-t" >
+      <li onClick="regional(26)">全部</li>
+      <li onClick="regional(330)">拉萨市</li>
+      <li onClick="regional(331)">昌都地区</li>
+      <li onClick="regional(332)">山南地区</li>
+      <li onClick="regional(333)">日喀则地区</li>
+      <li onClick="regional(334)">那曲地区</li>
+      <li onClick="regional(335)">阿里地区</li>
+      <li onClick="regional(336)">林芝地区</li>
+    </ul>
+    <ul class="grade-t27 grade-t" >
+      <li onClick="regional(27)">全部</li>
+      <li onClick="regional(337)">西安市</li>
+      <li onClick="regional(338)">铜川市</li>
+      <li onClick="regional(339)">宝鸡市</li>
+      <li onClick="regional(340)">咸阳市</li>
+      <li onClick="regional(341)">渭南市</li>
+      <li onClick="regional(342)">延安市</li>
+      <li onClick="regional(343)">汉中市</li>
+      <li onClick="regional(344)">榆林市</li>
+      <li onClick="regional(345)">安康市</li>
+      <li onClick="regional(346)">商洛市</li>
+    </ul>
+    <ul class="grade-t28 grade-t" >
+      <li onClick="regional(28)">全部</li>
+      <li onClick="regional(347)">兰州市</li>
+      <li onClick="regional(348)">嘉峪关市</li>
+      <li onClick="regional(349)">金昌市</li>
+      <li onClick="regional(350)">白银市</li>
+      <li onClick="regional(351)">天水市</li>
+      <li onClick="regional(352)">武威市</li>
+      <li onClick="regional(353)">张掖市</li>
+      <li onClick="regional(354)">平凉市</li>
+      <li onClick="regional(355)">酒泉市</li>
+      <li onClick="regional(356)">庆阳市</li>
+      <li onClick="regional(357)">定西市</li>
+      <li onClick="regional(358)">陇南市</li>
+      <li onClick="regional(359)">临夏回族自治州</li>
+      <li onClick="regional(360)">甘南藏族自治州</li>
+    </ul>
+    <ul class="grade-t29 grade-t" >
+      <li onClick="regional(29)">全部</li>
+      <li onClick="regional(361)">西宁市</li>
+      <li onClick="regional(362)">海东地区</li>
+      <li onClick="regional(363)">海北藏族自治州</li>
+      <li onClick="regional(364)">黄南藏族自治州</li>
+      <li onClick="regional(365)">海南藏族自治州</li>
+      <li onClick="regional(366)">果洛藏族自治州</li>
+      <li onClick="regional(367)">玉树藏族自治州</li>
+      <li onClick="regional(368)">海西蒙古族藏族自治州</li>
+    </ul>
+    <ul class="grade-t30 grade-t" >
+      <li onClick="regional(30)">全部</li>
+      <li onClick="regional(369)">银川市</li>
+      <li onClick="regional(370)">石嘴山市</li>
+      <li onClick="regional(371)">吴忠市</li>
+      <li onClick="regional(372)">固原市</li>
+      <li onClick="regional(373)">中卫市</li>
+    </ul>
+    <ul class="grade-t31 grade-t" >
+      <li onClick="regional(31)">全部</li>
+      <li onClick="regional(374)">乌鲁木齐市</li>
+      <li onClick="regional(375)">克拉玛依市</li>
+      <li onClick="regional(376)">吐鲁番地区</li>
+      <li onClick="regional(377)">哈密地区</li>
+      <li onClick="regional(378)">昌吉回族自治州</li>
+      <li onClick="regional(379)">博尔塔拉蒙古自治州</li>
+      <li onClick="regional(380)">巴音郭楞蒙古自治州</li>
+      <li onClick="regional(381)">阿克苏地区</li>
+      <li onClick="regional(382)">克孜勒苏柯尔克孜自治州</li>
+      <li onClick="regional(383)">喀什地区</li>
+      <li onClick="regional(384)">和田地区</li>
+      <li onClick="regional(385)">伊犁哈萨克自治州</li>
+      <li onClick="regional(386)">塔城地区</li>
+      <li onClick="regional(387)">阿勒泰地区</li>
+      <li onClick="regional(388)">石河子市</li>
+      <li onClick="regional(389)">阿拉尔市</li>
+      <li onClick="regional(390)">图木舒克市</li>
+      <li onClick="regional(391)">五家渠市</li>
+    </ul>
+  </div>
+  <!-- End grade --> 
+  <!-- Category -->
+  <div class="grade-category">
+    <ul class="grade-w" id="gradecategory">
+      <li onClick="category(0)">全部工种</li>
+      <li onClick="gradecategory(this)" id="36"> 技术工种</li>
+      <li onClick="gradecategory(this)" id="37"> 司机/驾驶员</li>
+    </ul>
+    <ul class="grade-t36 grade-t" >
+      <li onClick="category(36)">全部</li>
+      <li onClick="category(39)">电焊工</li>
+      <li onClick="category(40)">爆破工</li>
+      <li onClick="category(41)">木工</li>
+      <li onClick="category(42)">电工</li>
+      <li onClick="category(46)">水电工</li>
+      <li onClick="category(1090)">弱电工</li>
+      <li onClick="category(43)">杂工力工</li>
+      <li onClick="category(48)">防水工</li>
+      <li onClick="category(44)">风炮工</li>
+      <li onClick="category(45)">架子工</li>
+      <li onClick="category(47)">钢筋工</li>
+      <li onClick="category(49)">模板工</li>
+      <li onClick="category(50)">混凝土工</li>
+      <li onClick="category(51)">家装油漆工</li>
+      <li onClick="category(52)">机械设备油漆工</li>
+      <li onClick="category(53)">沥青工</li>
+      <li onClick="category(54)">石工</li>
+      <li onClick="category(55)">水暖工</li>
+      <li onClick="category(56)">抹灰工</li>
+      <li onClick="category(57)">电气设备安装工</li>
+      <li onClick="category(58)">泥瓦工</li>
+      <li onClick="category(59)">机械维修工</li>
+      <li onClick="category(1093)">安装员</li>
+      <li onClick="category(1103)">瓷砖工</li>
+      <li onClick="category(1104)">建筑工</li>
+      <li onClick="category(1116)">绿化员</li>
+      <li onClick="category(1112)">其他</li>
+    </ul>
+    <ul class="grade-t37 grade-t" >
+      <li onClick="category(37)">全部</li>
+      <li onClick="category(60)">挖掘机司机</li>
+      <li onClick="category(61)">混凝土搅拌车司机</li>
+      <li onClick="category(62)">架桥机驾驶员</li>
+      <li onClick="category(63)">压路机司机</li>
+      <li onClick="category(64)">顶管机驾驶员</li>
+      <li onClick="category(65)">装载机司机</li>
+      <li onClick="category(66)">摊铺机司机</li>
+      <li onClick="category(67)">矿用掘进机</li>
+      <li onClick="category(68)">龙门吊驾驶员</li>
+      <li onClick="category(69)">打桩机驾驶员</li>
+      <li onClick="category(70)">推土机司机</li>
+      <li onClick="category(71)">铣刨机司机</li>
+      <li onClick="category(72)">塔吊司机</li>
+      <li onClick="category(73)">平地机司机</li>
+      <li onClick="category(74)">潜孔钻机</li>
+      <li onClick="category(75)">铲运机司机</li>
+      <li onClick="category(76)">沥青搅拌站操作员</li>
+      <li onClick="category(77)">汽车起重机司机</li>
+      <li onClick="category(78)">后八轮司机</li>
+      <li onClick="category(79)">地磅操作员</li>
+      <li onClick="category(1094)">泵车司机</li>
+      <li onClick="category(1109)">叉车司机</li>
+      <li onClick="category(1111)">上土机</li>
+      <li onClick="category(1122)">货车司机</li>
+      <li onClick="category(1113)">其他司机</li>
+      <li onClick="category(1140)">挂车司机</li>
+      <li onClick="category(1768)">其他</li>
+    </ul>
+  </div>
+  <!-- End Category -->
+  <div class="Sort-eject Sort-height">
+    <ul class="Sort-Sort" id="Sort-Sort">
+      <li onClick="authentication(0)">全部认证</li>
+      <li onClick="authentication(1)">手机认证</li>
+      <li onClick="authentication(2)">实名认证</li>
+      <li onClick="authentication(3)">企业认证</li>
+    </ul>
+  </div>
+  <!-- End Category --> 
+  <script type="text/javascript">
+$(function(){   
+	$('.choosebox li a').click(function(){
+		var thisToggle = $(this).is('.size_radioToggle') ? $(this) : $(this).prev();
+		var checkBox = thisToggle.prev();
+		checkBox.trigger('click');
+		$('.size_radioToggle').removeClass('current');
+		thisToggle.addClass('current');
+		return false;
+	});
+	});
+	$(".choosebox li a").click(function(){
+		var text = $(this).html();
+		$(".choosetext span").html(text);
+		$("#result").html("" + getSelectedValue("dress-size"));
+});
+
+function getSelectedValue(id){
+	return 
+	$("#" + id).find(".choosetext span.value").html();
+}
+</script>
+  <div class="list-img">
+    <ul>
+      <li><a href="detail.html"><strong>架子工</strong></a></li>
+      <li class="introduce"><a href="detail.html">简介：看是搭什么架子，最低250一天电话</a></li>
+      <li class="servarea" >广东深圳市</li>
+      <li class="date">2017-04-09</li>
+    </ul>
+  </div>
+  <div class="pages">
+  
+		<a href="http://m.jc85.com/9-0-0-2.html" data-transition="none" id="page-next">下一页</a>
+		<a href="javascript:GoPage(571, 'http://m.jc85.com/9-0-0-{destoon_page}.html');"><b>1</b>/571</a>
+		<a href="http://m.jc85.com/9-0-0-571.html" data-transition="none" id="page-prev">上一页</a> 
+	</div>
+  <div class="foot-bar-fix"></div>
+  <div class="foot-bar">
+    <ul>
+      <li class="icon-home"><a href="index.html" data-transition="none"><span>首页</span></a></li>
+      <li class="icon-channel"><a href="discovery.html" data-transition="none"><span>发现</span></a></li>
+      <li class="icon-publish"><a href="publish.html" data-transition="none"><span>发布</span></a></li>
+      <li class="icon-my"><a href="my.html" data-transition="none"><span>个人中心</span></a></li>
+      <li class="icon-more"><a href="more.html" data-transition="none"><span>更多</span></a></li>
+    </ul>
+  </div>
+</div>
+<div style="display:none"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8faafc3340ce7b4bed95be835a47e16d' type='text/javascript'%3E%3C/script%3E"));</script>  <script src="http://s11.cnzz.com/z_stat.php?id=1255461800&web_id=1255461800" language="JavaScript"></script></div>
+</body>
+</html>

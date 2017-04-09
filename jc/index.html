@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台</title>
+<meta name="keywords" content="建筑工程,工程信息,工程信息网,建筑工程信息,工程网,建设工程,建设工程信息网"/>
+<meta name="description" content="建程网是建设建筑工程行业最大的工程信息服务平台,主要包括：工程信息、施工队伍、工程机械、个人劳务、二手机械、建筑工程、建筑材料、建筑资料、建筑招标、职称挂靠等信息服务"/>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="generator" content="m.jc85.com"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileImage" content="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileColor" content="#007AFF">
+<link rel="shortcut icon" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="static/lib/jquery/jquery.mobile.custom.structure.min.css"/>
+<link rel="stylesheet" type="text/css" href="static/style.css"/>
+<script type="text/javascript" src="static/lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function() {
+　　$.mobile.ajaxEnabled = false;
+});
+var AJPath = 'ajax.php';
+var Dbrowser = '';
+</script>
+<script type="text/javascript" src="static/lib/jquery/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/fix.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+</head>
+<body>
+<div id='wx_pic' style='margin:0 auto;display:none;'> <img src='http://m.jc85.com/static/img/logo.png' /> </div>
+<div data-role="page">
+  <div class="suspension-download">
+    <div class="tips-msg"> <img width="32" height="32" title="建程网APP" alt="建程网APP" src="static/img/logo.png">
+      <bdo>建程网APP送积分啦！</bdo>
+      <a class="tips-download" href="http://jc85.com/mobile/app/com.jiancheng.apk" >立即下载</a> </div>
+    <div class="tips-close"><img src="static/img/x.png"></div>
+  </div>
+  <div class="head-bar-fix" id="headdownload"></div>
+  <div class="ui-toast"></div>
+  <div class="ui-mask"></div>
+  <div class="ui-sheet"></div>
+  <div id="head-bar">
+    <div class="head-bar">
+      <div class="head-bar-left"> <a href="#">福建省</a> </div>
+      <div class="home-search">
+        <div><a href="search.html"><img src="static/img/ico-search.png"/><span>输入关键词搜索</span></a></div>
+      </div>
+    </div>
+    <div class="head-bar-fix"></div>
+  </div>
+  <div id="mobile-slide" class="slide"> <a href="http://m.jc85.com/grade.php" target="_blank" rel="external"><img src="http://jc85.com/file/upload/201611/03/161614521.jpg" alt="" style="width:100%;"/></a> <a href="http://m.jc85.com/50-0-0-1.html" target="_blank" rel="external"><img src="http://jc85.com/file/upload/201610/29/11012497342971.jpg" alt="" style="width:100%;"/></a> <a href="http://m.jc85.com/tg/" target="_blank" rel="external"><img src="http://jc85.com/file/upload/201610/31/103745691.jpg" alt="" style="width:100%;"/></a> </div>
+  <div class="quick">
+    <ul>
+      <li><a href="list.html"><img src="static/img/home_shigongduiwu.png" width="60" height="60"/><span>施工队伍</span></a></li>
+      <li><a href="list.html"><img src="static/img/home_gongchengjixie.png" width="60" height="60"/><span>工程机械</span></a></li>
+      <li><a href="list.html"><img src="static/img/home_gerenlaowu.png" width="60" height="60"/><span>个人劳务</span></a></li>
+      <li><a href="list.html"><img src="static/img/home_danbao.png" width="60" height="60"/><span>投标工程</span></a></li>
+      <li><a href="list.html"><img src="static/img/jx.png" width="60" height="60"/><span>机械出售</span></a></li>
+      <li><a href="list.html"><img src="static/img/zt.png" width="60" height="60"/><span>整体工程</span></a></li>
+      <li><a href="list.html"><img src="static/img/xz.png" width="60" height="60"/><span>职称挂靠</span></a></li>
+      <li><a href="list.html"><img src="static/img/home_hezuo.png" width="60" height="60"/><span>企业信息</span></a></li>
+    </ul>
+  </div>
+  <div id="segment"></div>
+  <div class="channel">
+    <ul>
+      <li class="dingy1"><img src="static/img/home_good_arrow_bottom.png" width="15px" height="15px"/>您可能感兴趣的信息</li>
+      </li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324893-1.html"><strong>云南省玉磨高铁隧道工程找大包</strong></a></li>
+      <li class="introduce"><a href="6-0-324893-1.html">简介：云南省，玉磨高铁隧道工程。一，中标单位是中交集团公司。二，需劳务资质证签约。我方已提供并认可。三，隧道规格13、5x9、5米。</a></li>
+      <li class="servarea" >云南</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324892-1.html"><strong>四川成都温江房建工程找内墙抹灰施工队伍</strong></a></li>
+      <li class="introduce"><a href="6-0-324892-1.html">简介：工程总造价工程总量：工期：需要人数：10人左右单价：9元一方结账方式：完工结清其他详情：本人急需找一组抹灰班组。需要挂网打</a></li>
+      <li class="servarea" >四川成都市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324891-1.html"><strong>山西宁武拉煤到煤厂工程找前四后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324891-1.html">简介：宁武需要前四后八或后八轮，要又手续的车，路上随便超吨，跟项目部直接签合同，从矿上拉煤到煤厂，运距6.8公里6.2元8.6公里7.2元</a></li>
+      <li class="servarea" >山西</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324890-1.html"><strong>山东日照钢结构安装工程找施工队</strong></a></li>
+      <li class="introduce"><a href="6-0-324890-1.html">简介：其他详情：山东日照钢结构安装工程，电，油漆，气，焊条，大型设备都归甲方。咱们只负责承包安装，提供焊机等小型干活工具。工程</a></li>
+      <li class="servarea" >山东日照市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324889-1.html"><strong>山东房建工程找木工班组</strong></a></li>
+      <li class="introduce"><a href="6-0-324889-1.html">简介：工程总造价工程总量：3.8万平方工期：需要人数：10多人单价：面谈结账方式：完工结清其他详情：活在山东，车库3.8万平方，分4期</a></li>
+      <li class="servarea" >山东</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324888-1.html"><strong>山西浑源煤矿土方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324888-1.html">简介：工程总造价工程总量：运距：500--800米路况：土路单价：3块钱一方结账方式：日结食宿：不包其他详情：浑源煤矿活儿，缓下坡，500</a></li>
+      <li class="servarea" >山西</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324887-1.html"><strong>山东青岛旧房保温工程找大包施工队伍</strong></a></li>
+      <li class="introduce"><a href="6-0-324887-1.html">简介：工程总造价工程总量：10万平工期：需要人数：自己定单价：120元/平方结账方式：中秋节前付一次约30%，年底付一次约60%，过年五一</a></li>
+      <li class="servarea" >山东青岛市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324886-1.html"><strong>陕西渭南毛石运输工程找前四后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324886-1.html">简介：工程总造价工程总量：运距：60公里路况：柏油路单价：28元/方结账方式：日结食宿：不包其他详情：急需前四后八15辆，拉40方左右</a></li>
+      <li class="servarea" >陕西渭南市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324885-1.html"><strong>河南郑州土方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324885-1.html">简介：工程总造价工程总量：运距：12-13公里路况：水泥路单价：起步110一公里10结账方式：日结食宿：自理其他详情：郑州有活，路保 要</a></li>
+      <li class="servarea" >河南郑州市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324884-1.html"><strong>山东烟台港土石方爆破项目找大包</strong></a></li>
+      <li class="introduce"><a href="6-0-324884-1.html">简介：烟台港土石方爆破60%松动爆破，每方6元(含距间费，工程量六百万方)，炸药一万以内，柴油比市场价低0.2元，月结，签合同进场预付3</a></li>
+      <li class="servarea" >山东烟台市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324883-1.html"><strong>山东青岛胶州土方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324883-1.html">简介：工程总造价工程总量：运距：67公里 路况：土路单价：5.5元/方结账方式：日结食宿：不包其他详情：前二后八 山东胶州，大量的需要</a></li>
+      <li class="servarea" >山东青岛市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324882-1.html"><strong>山西浑源露天煤矿土方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324882-1.html">简介：工程总造价工程总量：运距：3公里以内路况：土路单价：5元/方、超1公里加0.12元结账方式：日结食宿：不包其他详情：340以上马力</a></li>
+      <li class="servarea" >山西</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324881-1.html"><strong>山东聊城拉土方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324881-1.html">简介：工程总造价工程总量：运距：10公里路况：水泥路单价：45元/公里超1公里10元结账方式：日结食宿：自理其他详情：山东聊城拉土方运</a></li>
+      <li class="servarea" >山东聊城市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324880-1.html"><strong>湖北武汉市土石方工程找前四后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324880-1.html">简介：武汉拉红土需前四后八自卸车20辆 散户也可以 有一台算一台 好卸车一方14.5元日结 一手票 一手交钱 下雨天 拉沙或者拉砖渣 有意车</a></li>
+      <li class="servarea" >湖北武汉市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324879-1.html"><strong>辽宁葫芦岛市房建工程找钢筋工人</strong></a></li>
+      <li class="introduce"><a href="6-0-324879-1.html">简介：工程总造价工程总量：工期：需要人数：56人单价：大工220、230、小工160、170元/天结账方式：完工结清其他详情：葫芦岛市需要钢</a></li>
+      <li class="servarea" >辽宁葫芦岛市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324801-1.html"><strong>山西晋中市土石方工程找前二后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324801-1.html">简介：在山西省昔阳县有土石方场内工程，运距三公里，每车90元，要求可以装20方以上的车，需要前二后八自卸车100台，结算方式先付钱后</a></li>
+      <li class="servarea" >山西晋中市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324878-1.html"><strong>山西太原到黄骅港电煤运输工程找半挂自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324878-1.html">简介：工程总造价工程总量：运距：500多公里路况：很好单价：每吨160元结账方式：日结食宿：不包其他详情：太原到黄骅港 每吨160元，电</a></li>
+      <li class="servarea" >山西太原市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324877-1.html"><strong>河南新乡平原房建工程找砌砖班组</strong></a></li>
+      <li class="introduce"><a href="6-0-324877-1.html">简介：工程总造价工程总量：一万立方工期：需要人数：10人左右单价：面谈结账方式：完工结清其他详情：新乡平原新区有一万立方加机块，</a></li>
+      <li class="servarea" >河南新乡市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324876-1.html"><strong>河北到北京大兴运距工程找前四后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324876-1.html">简介：工程总造价工程总量：运距：涞水高85公里、国道110公里易县160公里 路况：柏油路单价：涞水毛石24.5元/吨、易县沙子35.5元/吨 混</a></li>
+      <li class="servarea" >河北</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <div class="list-img">
+    <ul>
+      <li><a href="6-0-324875-1.html"><strong>浙江杭州土方工程找前四后八自卸车</strong></a></li>
+      <li class="introduce"><a href="6-0-324875-1.html">简介：工程总造价工程总量：运距：50公里路况：水泥路单价：每吨每公里0.45元结账方式：日结食宿：自理其他详情：浙江杭州大量载重50吨</a></li>
+      <li class="servarea" >浙江杭州市</li>
+      <li class="date">2017-04-08</li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+function dslide(id, time) {
+var _this = this;
+this.w = $(document).width();
+this.h = $('#'+id).height();
+heights=(500/755)*this.w;
+this.c = 0;
+this.src = [];
+this.url = [];
+this.alt = [];
+this.tar = [];
+$('#'+id).find('a').each(function(i) {
+_this.src.push($(this).find('img')[0].src);
+_this.alt.push($(this).find('img')[0].alt);
+_this.url.push(this.href);
+_this.tar.push(this.target);
+});
+if(!this.src[0]) return;
+this.max = this.src.length;
+this.htm = '<ul id="'+id+'_ul" style="position:relative;width:'+this.w*(this.max+1)+'px;height:'+heights+'px;z-index:1;overflow:hidden;">';
+for(var i = 0; i < this.max; i++) {
+this.htm += '<li style="float:left;"><a href="'+this.url[i]+'" target="'+this.tar[i]+'"><img src="'+this.src[i]+'" width="'+this.w+'"/></a></li>';
+}
+this.htm += '</ul><div style="clear:both;"></div>';
+if(this.alt[0]) this.htm += '<div style="width:'+this.w+'px;height:24px;line-height:24px;overflow:hidden;z-index:2;position:relative;top:-24px;background:#384349;filter:Alpha(Opacity=80);opacity:0.8;">&nbsp;</div>';
+if(this.alt[0]) this.htm += '<div id="'+id+'_alt" style="width:'+(this.w-12)+'px;height:24px;line-height:24px;overflow:hidden;z-index:3;position:relative;top:-48px;padding:0 6px 0 6px;font-weight:bold;color:#FFFFFF;">'+this.alt[0]+'</div>';
+this.htm += '<div style="width:'+this.w+'px;height:20px;overflow:hidden;z-index:4;position:relative;top:-'+(this.alt[0] ? 68 : 30)+'px;text-align:center;padding-left:6px;">';
+for(var i = 0; i < this.max; i++) {
+this.htm += '<span id="'+id+'_no_'+i+'" style="display:inline-block;width:6px;height:6px;border:1px solid #FFFFFF;border-radius:6px;margin-right:6px;'+(i == this.c ? 'background:#EB4207;' : 'background:#FFFFFF;')+'"></span>';
+}
+this.htm += '</div>';
+$('#'+id).html(this.htm);
+if(this.max == 1) return;
+this.t;
+this.p = 0;
+$('#'+id).mouseover(function() {_this.p=1;});
+$('#'+id).mouseout(function() {_this.p=0;});
+$('#'+id).find('span').each(function(i) {
+$(this).mouseover(function() {
+_this.slide(i);
+});
+});
+this.slide = function(o) {
+if(o == this.c) return;
+if(o < 0 || o >= this.max) return;
+if(o == 0 && this.c == this.max - 1) {
+$('#'+id+'_ul').append($('#'+id+'_ul li:first').clone());
+$('#'+id+'_ul').animate({'left':-this.w*this.max},500,function() {
+$('#'+id+'_ul').css('left','0');
+$('#'+id+'_ul li:last').remove();
+});
+} else {
+$('#'+id+'_ul').animate({'left':-o*this.w},500);
+}
+$('#'+id+'_no_'+this.c).css('background','#FFFFFF');
+$('#'+id+'_no_'+o).css('background','#EB4207');
+if(this.alt[0]) $('#'+id+'_alt').html(this.alt[o]);
+this.c = o;
+}
+this.start = function() {
+if(this.p) return;
+if(this.c == this.max - 1) {
+this.slide(0);
+} else {
+this.slide(this.c+1);
+}
+}
+if(!time) time = 5000;
+this.t = setInterval(function() {_this.start();}, time);
+}
+//$(document).on('pageinit', function(event) {
+$(document).ready(function() {
+var ds = new dslide('mobile-slide');
+$('#mobile-slide').on('swipeleft',function(){
+ds.slide(ds.c+1);
+});
+$('#mobile-slide').on('swiperight',function(){
+ds.slide(ds.c-1);
+});
+$(window).bind('orientationchange.slide', function(e){
+ds.w = $(document).width();
+$('#mobile-slide').find('ul').css('width', ds.w*(ds.max+1));
+$('#mobile-slide').find('img').css('width', ds.w);
+$('#mobile-slide').find('div').css('width', ds.w);
+});
+});
+</script>
+  <div class="foot-bar-fix"></div>
+  <div class="foot-bar">
+    <ul>
+      <li class="icon-home-on"><a href="index.html" data-transition="none"><span>首页</span></a></li>
+      <li class="icon-channel"><a href="discovery.html" data-transition="none"><span>发现</span></a></li>
+      <li class="icon-publish"><a href="publish.html" data-transition="none"><span>发布</span></a></li>
+      <li class="icon-my"><a href="my.html" data-transition="none"><span>个人中心</span></a></li>
+      <li class="icon-more"><a href="more.html" data-transition="none"><span>更多</span></a></li>
+    </ul>
+  </div>
+</div>
+<div style="display:none"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8faafc3340ce7b4bed95be835a47e16d' type='text/javascript'%3E%3C/script%3E"));</script>  <script src="http://s11.cnzz.com/z_stat.php?id=1255461800&web_id=1255461800" language="JavaScript"></script></div>
+</body>
+</html>
