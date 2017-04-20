@@ -1584,8 +1584,12 @@ a:hover {
     background-image: -webkit-linear-gradient(36deg, #4B4948 1%, #4B4948 100%);
     background-image: -ms-linear-gradient(36deg, #4B4948 1%, #4B4948 100%);
   }
-  .news-type-tabs .news-type-title p{
+  .news-type-tabs .news-type-title span{
     font-size: 12px;
+  }
+	.news-type-tabs .news-type-title span:after{
+    content: '';
+		display: block;
   }
   .news-type-tabs .news-type-title.active{
     -webkit-background-clip:text;
