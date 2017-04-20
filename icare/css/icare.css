@@ -994,7 +994,9 @@ a:hover {
   padding: 0 .25rem;
   margin-bottom: .1rem;
   background-color: #E25B43;
+  outline: 0;
 }
+.message textarea::-webkit-input-placeholder,
 .message input::-webkit-input-placeholder {
   color:#fff;
 }
@@ -1675,3 +1677,8 @@ a:hover {
 		height: 450px;
 	}
 }
+
+
+/*-----------------------update2017419  案例详情页-----------------------*/
+
+
