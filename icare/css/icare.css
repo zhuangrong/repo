@@ -2,7 +2,7 @@
 @import url("global.css");
 
 /*渐变*/
-.news-page a.active,
+.news-page .current,
 .news-page a:hover,
 .news-show a:hover .news-text-wrap,
 .news-detail .news-title,
@@ -1244,6 +1244,7 @@ a:hover {
   margin: .8rem 0px;
   text-align: center;
 }
+.news-page span,
 .news-page a{
   display: inline-block;
   width: 38px;
@@ -1255,7 +1256,7 @@ a:hover {
   border: 1px solid  #4B4948;
 }
 .news-page a:hover,
-.news-page a.active{
+.news-page .current{
   color: #fff;
 }
 
@@ -1317,12 +1318,115 @@ a:hover {
   float: none
 }
 
-
+/*-----------------------update2017419  案例详情页-----------------------*/
+.case-banner {
+  position: relative;
+  height: 8rem;
+  background-size: cover;
+  background-position: right center;
+}
+.banner-text {
+  position: absolute;
+  top: 39%;
+  left: -webkit-calc(50% - 7rem);
+  font-size: .5rem;
+  color: #fff;
+}
+.banner-text p {
+  margin-top: .2rem;
+  font-size: .24rem;
+}
+.case-intro-wrap {
+  margin: .7rem 0;
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+  -webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+  background-color: #f5f5f5;
+}
+.case-intro{
+  -webkit-box-flex:0;
+  -webkit-flex: 0 0 67%;
+      -ms-flex: 0 0 67%;
+          flex: 0 0 67%;
+  background-color: #fff;
+  padding: .8rem .6rem;
+}
+.case-intro h3{
+  position: relative;
+  font-size: .24rem;
+  color: #DA391D;
+}
+.case-intro h3:after{
+  content: " ";
+  position: absolute;
+  top: 0.48rem;
+  left: 0;
+  display: block;
+  width: 0.18rem;
+  height: 1px;
+  background-color: #DA391D;
+}
+.case-intro span{
+  display: block;
+  margin-top: 0.3rem;
+  margin-bottom: .3rem;
+  font-size: .18rem;
+}
+.case-intro .case-intro-content p{
+  font-size: .14rem;
+  line-height: 1.6;
+}
+.case-linkto{
+  -webkit-box-flex:0;
+  -webkit-flex: 0 0 33%;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  display:-webkit-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+}
+.case-linkto a{
+  display: block;
+  border: 1px solid  #535353;
+  width: 1.36rem;
+  line-height: .36rem;
+  text-align: center;
+}
+.case-intro-pic {
+  background-color: #fff;
+  padding: 1.2rem .2rem;
+  margin-bottom: 1.3rem;
+  text-align: center;
+}
+.case-intro-pic img {
+  margin: 0 auto;
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
 		font-size: 50px;
 	}
+  /*案例详情页*/
+  .banner-text{
+    left: .2rem;
+  }
+  .banner-text p{
+    font-size: .22rem;
+  }
+  .case-intro,
+  .case-linkto{
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 1rem .5rem;
+  }
+  .case-linkto a{
+    width: 1.8rem;
+    line-height: .5rem;
+  }
   .news-content p{
     font-size: 11px;
   }
@@ -1363,6 +1467,7 @@ a:hover {
     left: 1.65rem;
   }
   /*翻页*/
+  .news-page .current,
   .news-page a{
     width: 26px;
     height: 26px;
@@ -1678,7 +1783,5 @@ a:hover {
 	}
 }
 
-
-/*-----------------------update2017419  案例详情页-----------------------*/
 
 
