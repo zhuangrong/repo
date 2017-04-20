@@ -20,7 +20,7 @@ li {
   list-style: none;
 }
 body {
-  color: #00f;
+  color: #333;
   font-size: 16px;
   line-height: 1.6;
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
@@ -30,7 +30,7 @@ body, span, label, p, a, div, li, dt, dd, i, em, section, article, :after, :befo
   background-size: 100%;
 }
 a {
-  color: #00f;
+  color: #06f;
   text-decoration: none;
   background-color: transparent;
   -webkit-user-select: none;
