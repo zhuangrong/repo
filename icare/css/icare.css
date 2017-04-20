@@ -692,22 +692,36 @@ a:hover {
 	padding:0 20px;
 	margin-bottom: .4rem;
 }
+
 .case-list a .case-pic-thumi{
 	position:relative;
 	height: 380px;
-	-webkit-background-size: cover !important;
+	-webkit-background-size: 100% !important;
+  transition: all .6s ease-in-out;
 }
-.case-list a:hover .case-pic-thumi:after{
+
+.case-list a:hover .case-pic-thumi{
+	-webkit-background-size: 105% !important;
+}
+.case-list a .case-pic-thumi:after{
 	content: " ";
 	position:absolute;
 	top:0;
 	left:0; 
 	right: 0;
 	bottom: 0;
-	background-color: rgba(76,73,72,.68);
-	background-image: url(../images/icon-link.png);
-	background-size: .44rem;
+	background-image:url(../images/icon-link.png);
+  background-color: #4C4948 ;
+  opacity: 0;
+  background-size: .44rem;
+  transition: all .6s ease-in-out;
 }
+.case-list a:hover .case-pic-thumi:after{
+	opacity: .68;
+}
+
+
+
 .case-list a .case-text{
 	position: relative;
 	padding:.36rem .2rem .2rem;

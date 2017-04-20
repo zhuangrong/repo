@@ -228,3 +228,5 @@ junhao/images/index-bg.png
 
 */node_modules/*
 *.bat
+_notes/*
+*.mno
