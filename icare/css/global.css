@@ -8,9 +8,10 @@ html{
 }
 body{
   font-size: 14px;
+  letter-spacing: 1.8px;
 }
 
-body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav, span{
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
