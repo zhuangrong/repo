@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>a</title>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="generator" content="m.jc85.com"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="建程网手机版_建设建筑工程行业最大的工程信息劳务服务平台"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileImage" content="apple-touch-icon-precomposed.png">
+<meta name="msapplication-TileColor" content="#007AFF">
+<link rel="shortcut icon" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="http://jc85.com/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="static/lib/jquery/jquery.mobile.custom.structure.min.css"/>
+<link rel="stylesheet" type="text/css" href="static/style.css"/>
+<script type="text/javascript" src="static/lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function() {
+　　$.mobile.ajaxEnabled = false;
+});
+var AJPath = 'ajax.php';
+var Dbrowser = 'safari';
+</script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+<script type="text/javascript" src="static/lib/jquery/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/fix.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+<style>
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+  background-repeat: no-repeat !important;
+  background-position: center center;
+  background-size: 100% !important;
+}
+input, button, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  background-color: transparent;
+  ;
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: transparent;
+   -webkit-user-select: none;
+  border: none;
+  outline: 0;
+}
+input[type=text], textarea {
+  background-color: #fff;
+}
+button {
+  overflow: visible;
+  border: none;
+  outline: 0;
+}
+.bg-form {
+  background-color: #F2F2F2;
+}
+/*选项卡tabs*/
+.tabs ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.tabs li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 0%;/*必须有*/
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #848683;
+}
+.tabs li.curr {
+  background-color: #008FF8;
+}
+div[class*="tab-box"] > div:not(:first-child) {
+  display: none
+}
+/**************表单**************/
+.form-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+}
+.form-title span {
+  float: right;
+  color: #bbb;
+}
+/*输入框*/
+.form li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  /*子元素垂直居中*/
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.form li span {
+  width: 68px;
+}
+.form li input[type=text] {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border: none;
+}
+/*单选框*/
+.radio {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  background-image: url(static/img/radio.png);
+  background-position: 0 0;
+  margin-right: 5px;
+  outline: 0;
+}
+.radio:checked {
+  background-position: 0 -22px;
+}
+/*多选框*/
+.checkbox {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  background-image: url(static/img/checkbox.png);
+  background-position: 0 0;
+  margin-right: 5px;
+  outline: 0;
+}
+.checkbox:checked {
+  background-position: 0 -22px;
+}
+.form label {
+  margin-bottom: 0 !important;
+}
+.ml10 {
+  margin-left: 10px !important;
+  vertical-align: middle;
+}
+.form li textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
+}
+.btn-wrap {
+  padding: 20px 10px 20px;
+  text-align: center;
+}
+a.btn2 {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #008FF8;
+}
+.select {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  background-color: #fff;
+  background-image: url(static/img/icon-selector.png);
+  background-position: 98% center !important;;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+  padding: 0 10px;
+  border: none;
+}
+/*上传图片*/
+.uploader-wrap {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  min-height: 100px;
+  overflow: hidden;
+}
+.uploader-pic li {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  margin: 0 5px 10px;
+  background-color: #ccc;
+}
+.uploader-file {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 3;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 5px;
+  border: 1px solid #D9D9D9;
+  background-image: url(static/img/icon-plus.png);
+  background-size: 25px !important;
+}
+.uploader-file input[type=file] {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*删除*/
+  .list-img{
+    height: auto;
+  }
+.list-op {
+  padding: 5px 0;
+  text-align: right;
+  clear: both;
+}
+  .btn-list {
+  display: inline-block;
+  min-width: 58px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 8px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #fff !important;
+  background-color: #008FF8;
+}
+</style>
+</head>
+<body class="bg-form">
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+  <img src='http://m.jc85.com/static/img/logo.png' />
+</div>
+<div data-role="page">
+  <!--tabs-->
+  <div class="tabs" id="tabs">
+    <ul>
+      <li class="curr">已发布</li>
+      <li>审核中</li>
+      <li>未发布</li>
+      <li>发布</li>
+    </ul>
+  </div>
+  <div class="tab-box1">
+    <div>
+    <!--已发布-->
+    <div class="list-img">
+      <ul>
+        <li><a href="6-0-324893-1.html"><strong>云南省玉磨高铁隧道工程找大包</strong></a> <button class="btn-list">删除</button></li>
+        <li class="introduce"><a href="6-0-324893-1.html">简介：云南省，玉磨高铁隧道工程。一，中标单位是中交集团公司。二，需劳务资质证签约。我方已提供并认可。三，隧道规格13、5x9、5米。</a></li>
+        <li class="servarea" >云南</li>
+        <li class="date">2017-04-08</li>
+      </ul>
+      <div class="list-op">
+				<a href="#" class="btn-list">删除</a>
+			</div>
+    </div>
+    <div class="list-img">
+      <ul>
+        <li><a href="6-0-324893-1.html"><strong>云南省玉磨高铁隧道工程找大包</strong></a> <button class="btn-list">删除</button></li>
+        <li class="introduce"><a href="6-0-324893-1.html">简介：云南省，玉磨高铁隧道工程。一，中标单位是中交集团公司。二，需劳务资质证签约。我方已提供并认可。三，隧道规格13、5x9、5米。</a></li>
+        <li class="servarea" >云南</li>
+        <li class="date">2017-04-08</li>
+      </ul>
+      <div class="list-op">
+				<a href="#" class="btn-list">删除</a>
+			</div>
+    </div>
+    <div class="list-img">
+      <ul>
+        <li><a href="6-0-324893-1.html"><strong>云南省玉磨高铁隧道工程找大包</strong></a> <button class="btn-list">删除</button></li>
+        <li class="introduce"><a href="6-0-324893-1.html">简介：云南省，玉磨高铁隧道工程。一，中标单位是中交集团公司。二，需劳务资质证签约。我方已提供并认可。三，隧道规格13、5x9、5米。</a></li>
+        <li class="servarea" >云南</li>
+        <li class="date">2017-04-08</li>
+      </ul>
+      <div class="list-op">
+				<a href="#" class="btn-list">删除</a>
+			</div>
+    </div>
+    <!--//已发布-->
+    
+    </div>
+    <div style="display: none">审核中</div>
+    <div style="display: none">未发布</div>
+    <div style="display: none">
+      <h1 class="form-title">标题-表单样式</h1>
+      <div class="form">
+        <ul>
+          <li>
+            <span>姓名</span>
+            <input type="text" placeholder="请输入姓名">
+          </li>
+          <li>
+            <label>
+              <input class="radio" type="radio" name="rad">
+              男</label>
+            <label class="ml10">
+              <input class="radio" type="radio" name="rad">
+              女</label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="" class="checkbox" checked>
+              选项1</label>
+            <label class="ml10">
+              <input type="checkbox" name="" class="checkbox">
+              选项1</label>
+          </li>
+          <li>
+            <span>文本域</span>
+            <textarea class="texta" placeholder="请输入文本" rows="3"></textarea>
+          </li>
+          <li>
+            <span>下拉框</span>
+            <select name="action" class="select" style="">
+              <option value="mod1">请选择</option>
+              <option value="mod2">下拉项2</option>
+              <option value="mod3">下拉项3</option>
+              <option value="mod4">下拉项4</option>
+              <option value="mod5">下拉项5</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <h1 class="form-title">图片上传</h1>
+      <div class="uploader-wrap">
+        <ul class="uploader-pic" id="uploader-pic">
+          <!--<li style="background-image:url(images/avatar.png)"></li>-->
+        </ul>
+        <div class="uploader-file">
+          <input id="uploader-file" type="file" accept="image/*"/>
+        </div>
+      </div>
+      <script>
+        $(function(){
+            //图片上传-
+            var tmpl = '<li style="background-image:url(#url#)"></li>',
+                $uploaderFile = $("#uploader-file"),
+                $uploaderPic = $("#uploader-pic")
+
+            $uploaderFile.on("change", function(e){
+                var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;				
+                    src = url.createObjectURL(files[0]);						
+                    $(".uploader-file").css({"opacity":"0"}); 
+                    $uploaderPic.html($(tmpl.replace('#url#', src)));				
+            });
+
+        });
+        </script>
+      <div class="btn-wrap">
+        <a href="#" href="javascript:;" class="btn2">
+        按钮
+        </a>
+      </div>
+      
+      <!--//表单-->
+      
+    </div>
+  </div>
+  <!--//tabs-->
+  <!--表单-->
+  
+</div>
+<div style="display:none"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8faafc3340ce7b4bed95be835a47e16d' type='text/javascript'%3E%3C/script%3E"));</script>  <script src="http://s11.cnzz.com/z_stat.php?id=1255461800&web_id=1255461800" language="JavaScript"></script></div>
+</body>
+</html>

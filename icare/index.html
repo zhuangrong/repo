@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="apple-mobile-web-app-title" content="Title"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/icare.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+<script src="js/common.js"></script> 
+<title>icare</title>
+<script>
+$(function(){
+  
+  // 品牌logo切换
+  $(".brand a").on({
+    mouseenter:function(){
+      var el = $(this).find("img")
+      var urlName = el.attr("src").split(".")[0]
+      el.attr("src",urlName + "-active" + ".png")  
+    },
+    mouseleave:function(){
+      var el = $(this).find("img")
+      var urlName = el.attr("src").split("-")[0]
+      el.attr("src",urlName + ".png")  
+    },
+  })
+  // 切换新闻类型mobile
+  $("#news-tabs > div").each(function(i){
+       $(this).on("click",function(){
+          $(this).addClass("active").siblings().removeClass("active");
+          $(".news-type > div").eq(i).addClass("news-mb").siblings().removeClass("news-mb");
+       })
+  }) 
+})
+</script>
+</head>
+<body>
+<div class="header-wrap" id="top">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png"></a>
+		</div>
+		<div class="nav">
+			<a href="#" class="hide-mb">H5 互动营销服务商</a>
+			<a href="index.html" class="active">首页</a>
+			<a href="server.html">服务</a>
+			<a href="case.html">案例</a>
+			<a href="about.html">关于</a>
+			<a href="news.html">动态</a>	
+			<a href="contact.html">联系</a>	
+		</div>
+		<div class="header-tip hide-pc">
+			  <i class="icon-qq"></i>
+			  <i class="nav-toggle"></i>
+		</div>
+		
+	</div>	
+</div>
+<!--banner-->
+<div class="banner">
+	<!--swiper-->
+	<div class="swiper-container swiper01">
+			<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)">
+							<img src="images/banner01-text.png" class="pic01">
+					</div>
+					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)"></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination sp1"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper01', {
+					pagination: '.sp1',
+					paginationClickable: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
+</div>
+<!--//banner-->
+<div class="main">
+	<div class="blank"></div>
+	<!--产品和服务-->
+	<div class="article01">
+		产品和服务
+		<div class="small">
+			Products and services
+		</div>
+	</div>
+	<div class="param">
+		<p>在乎科技秉着“源于在乎，所以美好”的企业服务理念 </p>
+		<p>致力于创造有价值的移动互联网产品，为客户提供基于H5互动游戏的移动营销全案服</p>
+	</div>
+	<div class="server-item">
+		<div><img src="images/server01.png" alt=""></div>
+		<div><img src="images/server02.png" alt=""></div>
+		<div><img src="images/server03.png" alt=""></div>
+		<div><img src="images/server04.png" alt=""></div>
+	</div>
+	<!--//产品和服务-->
+</div>
+
+<div class="case-wrap"></div>
+<div class="main">
+  <!--成功案例-->
+	<div class="article02">	
+		成功案例
+		<div class="small">SUCCESSFUL CASES</div>
+	</div>
+	<!-- Swiper -->
+	<div class="swiper-container swiper02">
+			<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="hole">
+							<span></span>
+							<span></span>
+						</div>
+						<div class="case-pic-inbox">
+							<div class="blank-qr"></div>
+							<img src="images/qrcode.png" alt="" class="case-qrcode">
+						</div>
+					</div>
+			</div>
+	</div>
+	<!-- //Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper02', {
+        paginationClickable: true,
+        slidesPerView: 4,
+        spaceBetween: 100,
+        breakpoints: {
+            820: {
+                slidesPerView: 2,
+                spaceBetween: 50
+            },
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            }
+        }
+    });
+   </script>
+	<!--//成功案例-->
+	<a href="case.html" class="case-more"></a>
+  <!--品牌客户-->
+	<div class="article01">
+		品牌客户
+		<div class="small">
+			CLIENTS
+		</div>
+	</div>
+	<div class="brand">
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+		<a href="#" class="hide-mb"><img src="images/brand.png" alt=""></a>
+	</div>
+  <!--//品牌客户-->
+  <!--//关于在乎-->
+	<div class="article01">
+		关于在乎
+		<div class="small">
+			ABOUT US
+		</div>
+	</div>
+  <div class="blank-about"></div>
+  <!--//关于在乎-->
+</div>
+<div class="case-wrap text-mb"></div>
+<div class="main">
+	<div class="about-us aboutus-mb">
+  <!-- Swiper -->
+	<div class="swiper-container swiper03">
+			<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+					<div class="swiper-slide">
+						 <div class="staff" style="background-image:url(images/avatar.png)">
+						 </div>
+						 <span>开发工程师</span>
+					</div>
+			</div>
+			<div class="swiper-pagination sp3"></div>
+	</div>
+	<!-- //Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper03', {
+				pagination: '.sp3',
+        paginationClickable: true,
+        slidesPerView: 5,
+        spaceBetween: 50,
+        breakpoints: {
+            820: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
+    });
+   </script>
+  </div>
+  <div class="article-about">
+  	<div class="hide-pc">
+			<p>在乎科技成立于2015年，</p>
+			<p>是一家专注于移动互联网品牌互动营销领域的H5互动服务商。</p>
+			<p>我们致力于通过创新的的移动互联网技术</p>
+			<p>和对品牌深刻的商业理解，</p>
+			<p>为企业提供互动营销技术支持与整体解决方案。</p>
+			<p>我们是一支年轻且充满创业热情的团队，</p>
+			<p>不同思维、灵感、脑洞的碰撞，</p>
+			<p>只为客户提供更具竞争力的H5互动营销服务，</p>
+			<p>我们坚信“源于在乎，所以美好”</p>	
+  	</div>
+		<div class="hide-mb">
+			<p>在乎科技成立于2015年，是一家专注于移动互联网品牌互动营销领域的H5互动服务商。</p>
+			<p>我们致力于通过创新的的移动互联网技术和对品牌深刻的商业理解，为企业提供互动营销技术支持与整体解决方案。</p>
+			<p>我们是一支年轻且充满创业热情的团队，不同思维、灵感、脑洞的碰撞，只为客户提供更具竞争力的H5互动营销服务，我们坚信“源于在乎，所以美好”</p>
+		</div>	
+  </div>
+  <div class="blank"></div>
+	<!--新闻分类-->
+  <div class="news-type-tabs" id="news-tabs">
+    <div class="news-type-title active"><span>INDUSTRY NEWS</span>行业资讯</div>
+    <div class="news-type-title"><span>INDUSTRY OBSERVER</span>行业观察</div>
+		<div class="news-type-title"><span>TECHNOLOGICAL INFORMATION</span>科技资讯</div>
+  </div>
+	<div class="news-type">
+		<div class="news-item news-mb">
+			<div class="news-list">
+				<ul>
+					<li>
+						<h3>10-01 <label>/2016</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-01 <label>/2016</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-01 <label>/2016</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+				</ul>
+			</div>
+			<div class="news-more-wrap hide-mb">
+				<a href="#" class="btn-news">READ MORE</a>
+			</div>
+		</div>
+		<div class="news-item">
+			<div class="news-list">
+				<ul>
+					<li>
+						<h3>10-02 <label>/2017</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-02 <label>/2017</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-02 <label>/2017</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+				</ul>
+			</div>
+			<div class="news-more-wrap hide-mb">
+				<a href="#" class="btn-news">READ MORE</a>
+			</div>
+		</div>
+		<div class="news-item">
+			<div class="news-list">
+				<ul>
+					<li>
+						<h3>10-03 <label>/2018</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-03 <label>/2018</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+					<li>
+						<h3>10-03 <label>/2018</label></h3>
+						<p>那些过目不忘的魔性说唱H5你看过几个？</p>
+					</li>
+				</ul>
+			</div>
+			<div class="news-more-wrap hide-mb">
+				<a href="#" class="btn-news">READ MORE</a>
+			</div>
+		</div>
+	</div>
+	<!--//新闻分类-->
+	<div class="blank-about"></div>
+</div>
+
+<!-- 浮动层-->
+<div class="widget hide-mb">
+  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2957094485&amp;site=qq&amp;menu=yes" class="icon-w01">
+    <span class="rect">2957094485</span>
+  </a>
+  <a href="#" class="icon-w02">
+    <span class="rect">
+      <img src="images/icare-qrcode.png" alt="">
+    </span>
+  </a>
+  <a href="tel:13163999993" class="icon-w03">
+    <span class="rect">13163999993</span>
+  </a>
+  <a href="#" class="icon-w04">
+  </a>
+  <a href="#top" class="icon-w05">
+  </a>
+</div>
+<!--//浮动层-->
+<div class="line"></div>
+<div class="main">
+	<!--	footer-->
+	<div class="footer-logo hide-mb">
+		<img src="images/logo.png" alt="">
+	</div>
+	<div class="footer">
+		<div class="f-phone">
+			<p>13163999993</p>
+			<span>0592-2220980</span>
+			<label class="hide-pc">E-MAIL : jarvan@icarexm.com</label>
+		</div>
+		<div class="f-qrcode">
+			<p>
+				<img src="images/icare-qrcode.png">
+				<label class="hide-mb">FOLLOW 关注我们</label>
+			</p>
+		</div>
+		<div class="f-more">
+			 <span>厦门市思明区厦禾路362号建设大厦2309室</span>
+			 <a href="#" class="btn-map">查看地图</a>
+		</div>
+	</div>
+	<!--//footer-->
+</div>
+<div class="line hide-mb"></div>
+<div class="main">
+	<!--	版权	-->
+	<div class="coypright-wrap">
+		<div class="coypright">
+			©2017 在乎（厦门）信息技术有限公司 闽ICP备16005000号
+		</div>
+		<div class="email hide-mb">
+			<span>E-MAIL : jarvan@icarexm.com</span>
+			<i class="icon-weixin-ft"></i>
+			<i class="icon-qq-ft"></i>
+		</div>
+	</div>
+	<!--	//版权	-->
+</div>
+<div class="nav-footer-wrap hide-mb">
+	<div class="main">
+		<!--	底部导航	-->
+		<div class="nav-footer">
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">友情链接</a>
+				<a href="#">厦门H5游戏开发</a>
+		</div>
+		<!--	//底部导航	-->
+	</div>
+</div>
+</body>
+</html>

@@ -121,9 +121,6 @@ button{
 		100% { -webkit-transform:translateY(-10px); opacity: 0;}
 }  
 /*主图*/
-.loading,
-.loading:after,
-.question-item label,
 .lock-bg span i,
 .lock-bg:after,
 .qrCode:before,
@@ -172,7 +169,7 @@ button{
 }
 
 .blank-main{
-  height:1rem
+  height:2rem
 }
 .main-pic01{
 	position:relative;
@@ -321,9 +318,9 @@ button{
 .main-pic02{
 	position:relative;
   width:18rem;
-	 
-	margin:0rem auto 0;
-/*	background-image: url(../images/main-pic02.png); */
+	height:9rem;
+	margin:1rem auto 0;
+	background-image: url(../images/main-pic02.png);
 }
 .main-pic02 span{
 	position:absolute;
@@ -331,7 +328,48 @@ button{
 	width:5rem;
 	height:5rem;
 }
-  
+.main-pic02 span:nth-child(1){
+	top:0.5rem;
+	left:3.6rem;
+	background-image: url(../images/main-gou.png);
+	-webkit-animation:gou 2s ease-out 0.5s infinite;
+}
+.main-pic02 span:nth-child(2){
+	top:0.5rem;
+	left:9.3rem;
+	background-image: url(../images/main-da.png);
+	-webkit-animation:da 2s ease-out infinite;
+}
+@-webkit-keyframes gou{
+		0% {
+			-webkit-transform:rotate(0deg);
+			transform:rotate(0deg)
+		}
+		50% {
+			-webkit-transform:rotate(45deg);
+			transform:rotate(45deg)
+		}
+		100% { 
+			-webkit-transform:rotate(0deg);
+			transform:rotate(0deg);
+		}
+}
+@-webkit-keyframes da{
+		0% {opacity: 0}
+		50% { opacity: 1}
+		100% { opacity: 0}
+}
+.main-pic02 label{
+	position:absolute;
+	top:5.21rem;
+	left:0rem;
+  display:block;
+	width:18em;
+	height:3.875rem;
+	opacity:0;
+	background-image: url(../images/main-pic02-text.png);
+	-webkit-animation:pic-show 1s linear 0.5s forwards;
+}
 
 .main-pic03{
   width:18rem;
@@ -427,26 +465,14 @@ button{
 	height:6rem;
 	width:6rem;
 	margin:0 auto;
-	border:3px solid #fff;
-	border-radius: 200px;
-	box-shadow: -3px -3px 18px #fff;
 }
 .human02 li:nth-child(1) a{
 	background-image: url(../images/avatar-male.png);
-	background-color: #fff;
-	-webkit-animation:trandown 3s ease infinite;
-}
-.human02 li:nth-child(1) a:active,.human02 li:nth-child(2):active{
-	transform: scale(1.1);
-	-webkit-animation:scaleChoose 1s ease infinite;
+	-webkit-animation:tranUp 4s linear infinite;
 }
 .human02 li:nth-child(2) a{
 	background-image: url(../images/avatar-female.png);
-	background-color: #fff;
-	-webkit-animation:tranUp 3s ease infinite;
-}
-@-webkit-keyframes scaleChoose{
-	from{transform: scale(1)}to{transform: scale(1.3)}
+	-webkit-animation:trandown 4s linear infinite;
 }
 .human02 li span{
 	display:block;
@@ -458,44 +484,16 @@ button{
 	background-image: url(../images/human-male.png);
 }
 @-webkit-keyframes tranUp{
-	0% { 
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-}
-	0% { 
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-} 
-50% {  
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#ccc;
-}
-100% {  
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-}
+	0% {-webkit-transform:rotate(0deg)}
+	100% { -webkit-transform:rotate(360deg)}
 	
 }
 .human02 li:nth-child(2) span{
 	background-image: url(../images/human-female.png);
 }
 @-webkit-keyframes trandown{
-		0% { 
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-}
-	0% { 
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-} 
-50% {  
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#ccc;
-}
-100% {  
-   box-shadow: 0px 0px 11px 0px #ccc;
-	 border-color:#fff
-}
+	0% {-webkit-transform:rotate(360deg)}
+	100% { -webkit-transform:rotate(0deg)}
 	
 }
 
@@ -533,18 +531,6 @@ button{
 	top:15.85rem;;
 	left:7.125rem;
 	overflow:hidden;
-	-webkit-animation:moveLock 1s ease-in infinite;
-}
-@-webkit-keyframes moveLock{
-	0%{
-		-webkit-transform: translateX(0px);
-	}
-	50%{
-		-webkit-transform: translateX(10px);
-	}
-	100%{
-		-webkit-transform: translateX(0px);
-	}
 }
 .alert-msg{
 	position:absolute;
@@ -571,14 +557,14 @@ button{
 	position:relative;
 	top:0;
 	left:0;
-	-webkit-transition:top 0.3s linear;
+	-webkit-transition:top 0.8s linear;
 }
 .chat-scene label{
 	display:block;
 	width:18rem;
 	height:3.25rem;
 	position:absolute;
-	opacity:1;
+	opacity:0;
 }
 
 
@@ -590,7 +576,7 @@ button{
 	z-index:-1;
 }
 .chats{
-	-webkit-animation:chats 0.3s linear forwards;
+	-webkit-animation:chats 0.8s linear forwards;
 }
 @-webkit-keyframes chats{
 	0% {-webkit-transform:translateY(30px); opacity:0.0}
@@ -603,32 +589,15 @@ button{
 	bottom:1rem;
 	left:50%;
 	margin-left:-9rem;
-	opacity:1;
+	opacity:0;
 	z-index:999;
 }
 .question-item.s01 span{
-	float:right;
-	background-position:right top;
-	text-align:right;
-	width:auto;
 	display:block;
+	width:18rem;
 	height:2.5rem;
 	margin:0.5rem 0 0;
-	box-shadow: 0px 0px 18px 0px rgba(77, 161, 255, 0.8);
-	-webkit-animation: shine1 1.5s infinite alternate ease-in-out;
 }
-@-webkit-keyframes shine1{
-	0% { 
-		 box-shadow: 0px 0px 13px 0px rgba(77, 161, 255, 0.2);
-	} 
-	50% {  
-		 box-shadow: 0px 0px 13px 0px rgba(77, 161, 255, 1.0);
-	}
-	100% {  
-		 box-shadow: 0px 0px 13px 0px rgba(77, 161, 255, 0.2);
-	}
-}
-
 .question{
 	-webkit-animation:question 0.3s linear forwards 0.5s;
 }
@@ -649,6 +618,7 @@ button{
 	background-image: url(../images/share-pic.png);
 }
 .btn-share{
+  display: block;
 	border:none;
 	width:6rem;
 	height:2.5rem;
@@ -735,12 +705,12 @@ button{
 }
 .qrCode label:nth-child(1){
 	background-image: url(../images/qrCode-text01.png);
-	/*-webkit-animation:rotate3d2 1s linear infinite; */
+	-webkit-animation:rotate3d2 1s linear infinite;
 }
 .qrCode label:nth-child(2){
 	top:20.6rem;
 	background-image: url(../images/qrCode-text02.png);
-	/*-webkit-animation:rotate3d1 1s linear infinite;*/
+	-webkit-animation:rotate3d1 1s linear infinite;
 }
 @-webkit-keyframes rotate3d1{
 	0% {-webkit-transform:rotate3d(0,1,0,0deg)}
@@ -850,6 +820,7 @@ button{
 	height:1.5rem;
 }
 .btn-score{
+  display: block;
 	border:none;
 	width:7.5rem;
 	height:2.5rem;
@@ -857,15 +828,15 @@ button{
 	background-image: url(../images/btn-score.png);
 	animation: scoret 2s ease infinite;
 }
-@-webkit-keyframes scoret{
-	0%{
-		-webkit-transform:scale(1)
+@keyframes scoret{
+	0{
+		transform: scale(1);
 	}
 	50%{
-		-webkit-transform:scale(1.2)
+		transform: scale(1.2);
 	}
 	100%{
-		-webkit-transform:scale(1)
+		transform: scale(1);
 	}
 }
 .score-wrap{
@@ -1054,8 +1025,8 @@ button{
 	left:15rem;
   width:1rem;
 	height:1rem;
- 
-	 
+	background-image: url(../images/main-pic02-star.png);
+	-webkit-animation:star 1s linear infinite 0.5s;
 }
 .main-pic02:before{
 	top:3.85rem;
@@ -1280,124 +1251,11 @@ button{
 	top:4.39rem;
 	
 }
-/*11-14*/
-.question-item label{
-  display:block;
-	position:absolute;
-	top:1rem;
-	left:14rem;
-	width:2.5rem;
-	height:3.25rem;
-	background-image:url(../images/hand.png);
-	opacity:0;
-}
-.hand{
-	-webkit-animation-name:hand, handMove2, handMove3;
-	-webkit-animation-duration:100ms, 600ms, 600ms;
-	-webkit-animation-timing-function:linear, linear, linear;
-	-webkit-animation-delay:100ms, 800ms, 800ms;
-	-webkit-animation-iteration-count:1, 1, 1;
-	-webkit-animation-fill-mode:forwards, forwards, forwards;
-}
-
-@-webkit-keyframes hand{
-	0% {opacity:0.0}
-	100% {opacity:1.0}
-}
-@-webkit-keyframes handMove2{
-	0% {-webkit-transform:translateY(0);}
-	100% {-webkit-transform:translateY(50px)}
-}
-@-webkit-keyframes handMove3{
-	0% {-webkit-transform:translateY(50px)}
-	100% {-webkit-transform:translateY(100px);}
-}
-.loading{
-  position:absolute;
-	top:30%;
-	left:50%;
-	margin-left:-4rem;
-	width:8rem;
-	height:6rem;
-	background-image:url(../images/loading.png);
-}
-.loading:after{
-  content:" ";
-	position:absolute;
-	top:4.5625rem;
-	left:5.3125rem;
-	display:block;
-	width:2.375rem;
-	height:1rem;
-	background-image:url(../images/loading-pic.png);
-	-webkit-animation:line-shine 1s linear infinite;
-}
 @media screen and (min-width: 360px) {
 	html {
 		font-size:20px;
 	}
 	.main-pic04{
-		margin:0.625rem auto 0;
+		margin:1.625rem auto 0;
 	}
 }
-/*11-28*/
-.avatar-woman,
-.avatar-man{
-	position:absolute;
-	display:block;
-  width:2.8125rem;
-  height:2.8125rem;
-	top:0.6rem;
-	background-repeat: no-repeat !important;
-	background-position: center center;
-	background-size: 100%  !important;
-	-webkit-animation:shake 1s infinite alternate ease-in-out;
-}
-.avatar-woman{
-	background-image:url(../images/avatar-woman.png);
-}
-.avatar-man.right{
-  right:0;
-	background-image:url(../images/avatar-man-right.png);
-}
-.avatar-woman.right{
-  right:0;
-	background-image:url(../images/avatar-woman-right.png);
-}
-.avatar-man.left{
-  left:0;
-	background-image:url(../images/avatar-man-left.png);
-}
-.avatar-woman.left{
-  left:0;
-	background-image:url(../images/avatar-woman-left.png);
-}
-.question-item{
-	-webkit-animation:question-scale 0.5s linear;
-}
-@-webkit-keyframes shake{
-	0% { 
-		-webkit-transform: rotate(0deg);
-	}
-	33% {  
-		-webkit-transform: rotate(-15deg);
-	}
-	66% {  
-		-webkit-transform: rotate(15deg);
-	}
-	100% {  
-		-webkit-transform: rotate(0deg);
-	}
-}
-@-webkit-keyframes question-scale{
-	0% { 
-		-webkit-transform: scale(0,0);
-	}
-	100% {  
-		-webkit-transform: scale(1,1);
-	}
-}
-
-
-
-

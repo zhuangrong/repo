@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>miyou</title>
+<link rel="stylesheet" type="text/css" href="static/style.css"/>
+<style>
+
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100% !important;
+  margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*******************个人中心*******************/
+/*标题栏*/
+.header{
+	height: 44px;
+	line-height: 44px;
+	background-color: #008ff8;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	position: relative;
+}
+
+/*flex布局*/
+.flex-wrap ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	background-color: #fff;
+}
+.flex-wrap li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	min-height:150px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.user-tip{
+	color: #008ff8;
+	text-align: center;
+}
+.user-tip label{
+	display: block;
+	min-width: 63px;
+	height: 19px;
+	line-height: 19px;
+	border-radius: 10px;
+	margin-bottom: 8px;
+	font-size: 12px;
+	border: 1px solid  #008ff8;
+}
+/*头像居中*/
+.avatar-wrap{
+	height: 150px;
+	padding-top: 15px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+}
+.avatar-wrap .avatar{
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border: 2px solid  #008ff8;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.avatar-wrap span{
+	display: block;
+	margin-top: 5px;
+}
+
+/*用户信息*/
+.user-item{
+	margin-top: 6px;
+	overflow: hidden;
+}
+.user-item a{
+	float: left;
+	width:50%;
+	min-height: 90px;
+	text-align: center;
+	color: #000;
+	background-color: #fff;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.user-item a:nth-child(even){
+	border-left: 1px solid  #f2f2f2;
+}
+.user-item a i{
+	display: block;
+	width: 44px;
+	height: 44px;	
+	vertical-align: middle;
+	margin: 10px auto 5px;
+}
+.icon-user01{
+	background-image: url(static/img/gcxx.png);
+}
+.icon-user02{
+	background-image: url(static/img/home_group.png);
+}
+.icon-user03{
+	background-image: url(static/img/jx.png);
+}
+.icon-user04{
+	background-image: url(static/img/home_gerenlaowu.png);
+}
+.icon-user05{
+	background-image: url(static/img/icon-user05.png);
+}
+.icon-user06{
+	background-image: url(static/img/home_gerenlaowu.png);
+}
+/*******************列表********************/
+.list{
+	margin-top: 6px;
+	background-color: #fff;
+}
+.list ul li{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;	
+	padding: 0 0 0 15px;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.list ul li .cell{
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	display: block;
+	padding: 10px 10px 10px 0;
+	overflow: hidden;
+	color: inherit;	
+}
+.list ul li:nth-last-child(1) .cell{
+	border-bottom: none;
+}
+.list ul li .cell .tip{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	padding-right: 30px;
+	color: #aaa;
+}
+.list ul li div.cell{
+	background-image: none;
+}
+.list ul li:active{
+	background-color: #eee;
+}
+.list ul li.no-link:active{
+	background-color: transparent;
+}
+/*图标*/
+.list ul li i.icon-list{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin: 0px 12px 0 0;
+}
+.list ul li i.icon-list.icon07{
+	background-image: url(static/img/icon-user07.png)
+}
+.list ul li i.icon-list.icon08{
+	background-image: url(static/img/icon-user08.png)
+}
+  
+</style>
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+
+</script>
+</head>
+<body>
+<div class="header">个人中心</div>
+<div class="flex-wrap">
+	<ul>
+	  <li></li>
+		<li>
+		<!--	头像	-->
+		<div class="avatar-wrap">
+			<i class="avatar" style="background-image:url(static/img/avatar2.png);"></i>
+			<span>昵称</span>
+		</div>
+		<!--	//头像	-->
+		</li>
+		<li>
+			<div class="user-tip">
+				<a href="#"><label>账号名</label></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--用户信息-->
+<div class="user-item">
+	<a href="publish-tab.html"><i class="icon-user01"></i>工程信息管理</a>
+	<a href="publish-tab.html"><i class="icon-user02"></i>施工队伍管理</a>
+	<a href="publish-tab.html"><i class="icon-user03"></i>工程机械管理</a>
+	<a href="publish-tab.html"><i class="icon-user04"></i>个人劳务管理</a>
+</div>
+<div class="list">
+	<ul>
+		<li>
+			<i class="icon-list icon07"></i>
+			<a class="cell" href="javascript:">平台规则</a>
+		</li>
+		<li>
+			<i class="icon-list icon08"></i>
+			<a class="cell" href="javascript:">联系客服</a>
+		</li>
+	</ul>
+</div>
+<!--//用户信息-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
