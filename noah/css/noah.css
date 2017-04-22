@@ -95,7 +95,7 @@ em, h3 {
 }
 
 /*
- ************************排行榜************************
+ ************************女神排行榜************************
 */
 /*底部导航*/
 nav{
@@ -149,6 +149,7 @@ nav a i{
 .grid-rank{
 	margin: 0 .2rem;
 }
+
 .grid-rank .g-header{
   background-color: #fff;
   border-radius: .1rem;
@@ -160,7 +161,7 @@ nav a i{
 .grid-rank .g-box{
   background-color: #fff;
   border-radius: .1rem;
-  padding: 0 .4rem;
+  padding: .2rem .4rem;
 }
 .grid-rank .row {
   display: -webkit-box;
@@ -272,12 +273,63 @@ nav a i{
 	top: 1.6rem;
 }
 
+/*
+ ************************竞赛榜单部口排名************************
+*/
+/*
+ ************************竞赛榜单部口排名************************
+*/
+.game-bg{
+	background-image: url(../images/game-bg.jpg);
+}
+.game-blank{
+	height: 6.35rem;
+}
+.game-rank .g-box .row:not(:last-child) {
+	border-bottom-color: #fff	;
+}
+.game-rank .g-header{
+	color: #fff;
+	background: none;
+	background-repeat: no-repeat;
+	background-image: url(../images/game-header.png);
+	background-size: 100% 99%!important;
+}
+.game-rank .g-box{
+	color: #fff;
+	background: none;
+	background-repeat: no-repeat;
+	background-image: url(../images/game-box.png);
+	background-size: 100% 100%!important;
+}
+.game-rank .row{
+	color: #fff;
+}
+.game-rank .col-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 55%;
+  flex: 0 0 55%;
+}
 
+/*
+ ************************排行榜店铺排名************************
+*/
 
+.shop-rank-title{
+	color: #fff;
+	background-repeat: no-repeat;
+	background-image: url(../images/shop-title.png);
+	background-size: 100% 100%!important;
+	line-height: 1rem;
+	margin: 0 1.7rem;
+	text-align: center;
+	font-size: .32rem;
+	font-weight: bold;
+}
 
-
-
-
+.shop-rank-title span{
+	padding-left: .5rem;
+}
 
 
 
