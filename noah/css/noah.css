@@ -7,7 +7,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-size: 50px;
-	height: 100%;
+  height: 100%;
 }
 *,
 *::before,
@@ -22,7 +22,8 @@ li {
 }
 body {
   color: #333;
-	height: 100%;
+  height: 100%;
+	background-color: #FD096A;
   background-image: -webkit-linear-gradient( 90deg, rgb(253,9,106) 0%, rgb(244,48,126) 67%, rgb(235,87,146) 100%);
   font-size: 13px;
   line-height: 1.6;
@@ -281,9 +282,10 @@ nav a i{
 */
 .game-bg{
 	background-image: url(../images/game-bg.jpg);
+	background-color: #95023D;
 }
 .game-blank{
-	height: 6.35rem;
+	height: 6.15rem;
 }
 .game-rank .g-box .row:not(:last-child) {
 	border-bottom-color: #fff	;
@@ -316,6 +318,7 @@ nav a i{
 */
 
 .shop-rank-title{
+	position: relative;
 	color: #fff;
 	background-repeat: no-repeat;
 	background-image: url(../images/shop-title.png);
@@ -323,14 +326,290 @@ nav a i{
 	line-height: 1rem;
 	margin: 0 1.7rem;
 	text-align: center;
-	font-size: .32rem;
 	font-weight: bold;
 }
-
-.shop-rank-title span{
+.shop-rank-title h3{
+	font-size: .32rem;
+}
+.shop-rank-title h3 span{
 	padding-left: .5rem;
 }
 
+.shop-rank-title label{
+	position: absolute;
+	top: -0.63rem;
+	left: -webkit-calc(50% - .4rem);
+	font-size: .4rem;
+	text-shadow:0 0 0.6em rgba(249,252,252,.7);
+}
+.shop-rank-title label:after{
+	content: '';
+	position: absolute;
+	top: 0.1rem;
+	left: -0.7em;
+	width: .4rem;
+	height: .4rem;
+	background-image: url(../images/crown.png);
+}
+
+.shop-rank-title.sm{
+	margin: 0.6rem 2rem 0;
+}
+.shop-rank-title.sm h3{
+	font-size: .26rem;
+}
+.shop-rank-title.sm label{
+  left: -webkit-calc(50% - .3rem);
+  font-size: .3rem;
+}
+.shop-rank-title.sm label:after{
+  display: none;
+}
+
+/*
+ ************************排行榜************************
+*/
+.top-item-wrap{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: space-between;
+	padding: 0 .2rem;
+	margin-top: -.4rem;
+}
+.top-item {
+	position: relative;
+	-webkit-box-flex: 0;
+  -webkit-flex: 0 0 2.1rem;
+          flex: 0 0 2.1rem;
+	color: #fff;
+	font-size: .2rem;
+	text-align: center;
+}
+.top-item i{
+	display: block;
+	width: 1.68rem;
+	height: 1.68rem;
+	line-height: 1.68rem;
+	background-image: url(../images/top-item.png);
+	text-align: center;
+	padding: 0 .3rem;
+	margin: 0 auto;
+}
+.top-item span{
+	margin-left: .1rem;
+}
+.top-item-wrap.t4 {
+	margin-top: 1.2rem;
+}
+.top-item-wrap.t4 .top-item{
+  -webkit-flex: 0 0 1.68rem;
+          flex: 0 0 1.68rem;
+	font-size: .16rem;
+}
+.top-item-wrap.t4 .top-item i{
+	width: 1.28rem;
+	height: 1.28rem;
+	line-height: 1.28rem;
+	padding:0 .2rem;
+}
+.top-item-wrap .top-item em{
+	position: absolute;
+	top: -0.42rem;
+	left: -webkit-calc(50% - .3rem);
+	text-align: center;
+	color: #fff;
+	font-size: .3rem;
+	text-shadow:0 0 0.6em rgba(249,252,252,.7);
+}
+.top-item-wrap.t4 .top-item em{
+	position: absolute;
+	top: -0.42rem;
+	left: -webkit-calc(50% - .18rem);
+	display: block;
+	width: .36rem;
+	height: .36rem;
+	background-color: #fff;
+	text-align: center;
+	color: #f6126c;
+	font-size: .24rem;
+	border-radius: 50%;
+}
+
+.top-item-wrap.t1 {
+	justify-content:space-around;
+}
+.top-item-wrap.t1 .top-item{
+  -webkit-flex: 0 0 2.48rem;
+          flex: 0 0 2.48rem;
+	font-size: .22rem;
+}
+.top-item-wrap.t1 .top-item:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1.23rem;
+  left: -1rem;
+  width: 4.59rem;
+  height: 4.38rem;
+  background-image: url(../images/star-bg.png);
+  z-index: -1;
+}
+.top-item-wrap.t1 .top-item i{
+	width: 2.1rem;
+	height: 2.1rem;
+	line-height: 2.1rem;
+	padding:0 .4rem;
+}
+
+/*
+ ************************活动规则************************
+*/
+.rule-wrap{
+	padding: 0 .2rem;
+}
+.rule{
+	background-color: #fff;
+	border: 1px dashed #550511;
+	border-radius: .05rem;
+	padding: .3rem;
+	margin-bottom: .2rem;
+}
+.rule-title{
+	width: 3.25rem;
+	height: .7rem;
+	background-image: url(../images/rule01.png);
+	margin: 0 auto;
+}
+.rule-title.r2{
+	background-image: url(../images/rule02.png);
+}
+.rule-item{
+	margin-top: .5rem;
+	font-size: .24rem;
+}
+.rule-item dl{
+	margin-top: .08rem;
+}
+.rule-item dt{
+	float: left;
+	background-color: #E12670;
+	color: #fff;
+	text-align: center;
+	width: .34rem;
+	height: .34rem;
+	line-height: .34rem;
+	border-radius: 50%;
+	border: 1px solid  #fff;
+	box-shadow: 0 0 1px #E12670;
+}
+.rule-item dd{
+	margin-left: .5rem;
+}
+
+.rule-info{
+	font-size: .24em;
+	line-height: 1.6;
+}
+.rule-info h3{
+	font-weight: bold;
+	font-size: .26rem;
+	color: #E12670;
+	margin-bottom: .1rem;
+	margin-top: .3rem;
+}
+
+/*
+ ************************投票************************
+*/
+.btn-lg{
+	display: block;
+	background-color: #FC8C64;
+	margin: 0 .5rem;
+	line-height: .76rem;
+	border-radius: 0.38rem;
+	text-align: center;
+	outline: 0;
+	font-size: 0.35rem;
+	color: #fff;
+	font-weight: bold;
+	box-shadow: .05rem 0.12rem 0 #C93D2F;
+}
+
+.vote-tabs{
+	margin: .3rem 1.2rem;
+	height: .7rem;
+	border-radius: 0.4rem;
+	border: 1px solid  #FC8C64;
+	overflow: hidden;
+}
+.vote-tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.vote-tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	line-height: .7rem;
+	text-align:center;
+	color: #fff;
+}
+.vote-tabs li.curr{
+	background-color: #FC8C64;
+}
+div[class*="tab-box"] > div:not(:first-child){
+	display:none
+}
+.vote-list{
+	margin: 0 .2rem;
+}
+.vote-list .vote-item{
+	background-color: #fff;
+	border-radius: .12rem;
+	padding: .15rem .4rem;
+	margin-bottom: .1rem;
+}
+.vote-list .vote-item .avatar{
+	display: inline-block;
+	width: 1.36rem;
+	height: 1.36rem;
+	border-radius: 50%;
+	background-color: #eee;
+	vertical-align:middle;
+	border: 1px dashed #fb0e6d;
+}
+.vote-list .vote-item span{
+	display: inline-block;
+	vertical-align:middle;
+	font-size: 13px;
+	margin: 0 0 0 .15rem;
+}
+.vote-list .vote-item span em{
+	display: block;
+	font-size: 13px;
+	margin-top: .15rem;
+}
+.vote-list .vote-item label{
+	float: right;
+	font-size: .2rem;
+	margin-top: .75rem;
+}
+
+/*
+ ************************iphone5 小于320************************
+*/
+@media (max-width: 320px) {
+	.vote-list > di.vote-itemv .avatar{
+		width: 1.0rem;
+		height: 1.0rem;
+	}
+}
 
 
 
