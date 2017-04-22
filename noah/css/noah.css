@@ -7,6 +7,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-size: 50px;
+	height: 100%;
 }
 *,
 *::before,
@@ -21,7 +22,9 @@ li {
 }
 body {
   color: #333;
-  font-size: 16px;
+	height: 100%;
+  background-image: -webkit-linear-gradient( 90deg, rgb(253,9,106) 0%, rgb(244,48,126) 67%, rgb(235,87,146) 100%);
+  font-size: 13px;
   line-height: 1.6;
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
 }
@@ -91,72 +94,91 @@ em, h3 {
   text-align: center;
 }
 
-/*************************内容*************************/
+/*
+ ************************排行榜************************
+*/
 /*底部导航*/
 nav{
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	height: .88rem;
-	background-color: #0af;
-	border-top: 1px solid  #ccc;
+	height: 1.16rem;
+	background-color: #FC8C64;
 }
 nav a{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
-  flex:1;
+	flex:1;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	flex-direction:column;  /*纵向*/
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
-	font-size: 13px;
+	font-size: 11px;
 	color: #fff;
+	position: relative;
+}
+nav a:not(:last-child):after{
+	content: '';
+	position: absolute;
+	top: 32%;
+	right: 0;
+	width: 1px;
+	overflow: hidden;
+	height: .5rem;
+	background-color: #fff;
 }
 nav a.active{
-	color: #f30;
+	color: #fff;
 }
 nav a i{
-	width: 28px;
-	height: 28px;
-  background-color: #00f;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: -.08rem;
 }
-nav a i.icon-nav01{	
-	background-image: url(images/icon-nav01.png);
+.blank{
+	height: 1.6rem;
 }
-nav a i.icon-nav02{	
-	background-image: url(images/icon-nav02.png);
-}
-nav a i.icon-nav03{	
-	background-image: url(images/icon-nav03.png);
-}
-nav a i.icon-nav04{	
-	background-image: url(images/icon-nav04.png);
-}
-
 /*栅格*/
 .grid-rank{
-  
+	margin: 0 .2rem;
 }
 .grid-rank .g-header{
   background-color: #fff;
-  margin: 0 .2rem;
   border-radius: .1rem;
   line-height: .7rem;
+  padding: 0 .4rem;
+	margin-bottom: .2rem;
+	color: #C93D2F;
+}
+.grid-rank .g-box{
+  background-color: #fff;
+  border-radius: .1rem;
+  padding: 0 .4rem;
 }
 .grid-rank .row {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  text-align: center;
+  flex-wrap: nowrap;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 13px;
+}
+.grid-rank .g-box .row {
+	line-height: 0.6rem;
+}
+.grid-rank .g-box .row:not(:last-child) {
+	border-bottom: 1px dashed #C93D2F;
 }
 .grid-rank .col-1 {
   -webkit-box-flex: 0;
@@ -172,6 +194,92 @@ nav a i.icon-nav04{
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 22%;
           flex: 0 0 22%;
+	
 }
+.avatar-list{
+	display: block;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+/*排行榜统计*/
+.rank-total ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 1rem;
+}
+.rank-total li{
+	position: relative;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column;  /*纵向*/
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	color: #fff;
+}
+.rank-total li span{
+	display: block;
+	font-size: 12px;
+}
+.rank-total li:not(:last-child):after{
+	content: '';
+	position: absolute;
+	top: 32%;
+	right: 0;
+	width: 1px;
+	overflow: hidden;
+	height: .5rem;
+	background-color: #fff;
+}
+.rank-title {
+	margin: 0 .5rem .4rem;
+}
+
+/*banner*/
+.banner{
+	position: relative;
+}
+.icon-tubiaozhizuomoban-1,
+.icon-tubiaozhizuomoban-{
+	position: absolute;
+	top: .6rem;
+	left: .3rem;
+	border: 1px solid  #fff;
+	background-color: #fff;
+	border-radius: 50%;
+	font-size: .8rem;
+	width: .83rem;
+	height: .83rem;
+	color:#080403;
+	z-index: 9999999;
+}
+.icon-tubiaozhizuomoban-1:before,
+.icon-tubiaozhizuomoban-:before {
+    display: block;
+    margin-top: -.22rem;
+    margin-left: 0px;
+}
+.icon-tubiaozhizuomoban-{
+	top: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
