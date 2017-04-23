@@ -251,17 +251,6 @@ nav a i{
 /*banner*/
 .banner{
 	position: relative;
-	margin-bottom: -.6rem;
-}
-.banner:after{
-	content: '';
-	position: absolute;
-	bottom: 0rem;
-	left: 0;
-	right: 0;
-	display: block;
-	height: .7rem;
-	background-color: #F42F7E;
 }
 .banner.lg{
 	z-index: -1;
@@ -282,7 +271,7 @@ nav a i{
 	width: .83rem;
 	height: .83rem;
 	color:#080403;
-	z-index: 9999999;
+	z-index: 999;
 }
 .icon-tubiaozhizuomoban-1:before,
 .icon-tubiaozhizuomoban-:before {
@@ -695,7 +684,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	text-align: center;
 	background-color: #fff;
 	border-radius: .1rem;
-	margin-bottom: .2rem;
+	margin-bottom: .32rem;
 }
 .vote-show-wrap .show-item h3{
 	padding: .15rem 0px;
@@ -1008,7 +997,7 @@ div[class*="tab-box"] > div:not(:first-child){
 /*弹出层*/
 .mask {
 	position: fixed;
-	z-index: 999;
+	z-index: 9999;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -1017,7 +1006,7 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .dialog {
 	position: fixed;
-	z-index: 9999;
+	z-index: 9999999;
 	width: 90%;
 	max-width: 8rem;
 	top: 50%;
@@ -1089,19 +1078,86 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .sel-votes span{
 	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 19%;
+	-webkit-flex: 0 0 24%;
 	flex: 0 0 24%;
 	color: #ED7260;
 	line-height: .7rem;
 	text-align: center;
 	background-color: #fff;
-	border-radius: .05rem;
+	border-radius: .1rem;
 	border: 1px dashed #ED7260;
 	padding: 0 .05rem;
 }
-.sel-votes span:active{
+.sel-votes span.active{
 	background-color: #651E28;
 	color: #fff;
+}
+.sel-votes.sv1 span{
+	-webkit-flex: 0 0 100%;
+	flex: 0 0 100%;
+}
+
+.share{
+	top: 20%;
+	left: 60%;
+	height: 4rem;
+	background: none;
+}
+
+.promotion{
+	position: fixed;
+	z-index: 9999999;
+	width: 100%;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: none;
+}
+.promotion .qrcode{
+	position: absolute;
+	width: 2.8rem;
+	height: 2.8rem;
+	top: 75%;
+	left: 51.5%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 99999;
+	background-color: #fff;
+	border:.1rem solid #fff;
+}
+.slogan{
+	position: relative;
+	border: 1px solid  #fff;
+	text-align: center;
+	padding: .4rem;
+	color: #fff;
+	margin: .4rem .6rem 0;
+}
+.slogan h3{
+	position: absolute;
+	top: -.26rem;
+	left: -webkit-calc(50% - 1.1rem);
+	width: 2.6rem;
+	height: .4rem;
+	background-color: #F42E7D;
+	font-size: .32rem;
+	font-weight: bold;
+}
+.slogan h3:after,
+.slogan h3:before{
+	position: absolute;
+	top: .15rem;
+	left: .15rem;
+	display: block;
+	content: '';
+	width: .18rem;
+	height: .18rem;
+	background-image: url(../images/star-sm.png);
+}
+.slogan h3:after{
+	left: 2.25rem;
+	/* right: .55rem; */
 }
 /*
  ************************iphone5 小于320************************
@@ -1119,6 +1175,10 @@ div[class*="tab-box"] > div:not(:first-child){
     width: 1.9rem;
     height: 1.9rem;
 	}
+	.promotion .qrcode {
+    width: 2rem;
+    height: 2rem;
+}
 }
 
 

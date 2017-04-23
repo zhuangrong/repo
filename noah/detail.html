@@ -30,13 +30,25 @@ $(function(){
 	$("#voteto").on("click",function(){
 		 $("#dialog-vote").fadeIn(200)
 	})
+	//分享对话框
+	$("#share").on("click",function(){
+		 $("#dialog-share").fadeIn(200)
+	})
+	//参与活动对话框
+	$("#promotion").on("click",function(){
+		 $("#dialog-promotion").fadeIn(200)
+	})
 	
 	//点击遮罩层隐藏
 	$(".mask,.close").on("click",function(e){
 			e.stopPropagation()
-			$("#dialog-search,#dialog-vote").fadeOut(200)		 
+			$("#dialog-search,#dialog-vote,#dialog-share,#dialog-promotion").fadeOut(200)		 
 	})
-
+	
+	//选择票数
+	$("#sel-votes span").on("click",function(){
+		$(this).addClass("active").siblings().removeClass("active")
+	})
 });
 </script>
 </head>
@@ -49,6 +61,13 @@ $(function(){
 	<img src="images/banner.png" alt="">
 </div>
 <!--//banner-->
+<!--参赛宣言-->
+<div class="slogan">
+	<h3>1号赵思思</h3>
+	选手参赛宣言
+</div>
+<!--//参赛宣言-->
+
 <!--排行榜统计-->
 <div class="rank-total">
 	<ul>
@@ -62,8 +81,8 @@ $(function(){
 	给TA投票
 </a>
 <div class="btn-wrap">
-	<a href="#" class="btn">我要参加</a>
-	<a href="#" class="btn">帮TA拉票</a>	
+	<a href="javascript:;" class="btn" id="promotion">我要参加</a>
+	<a href="javascript:;" id="share" class="btn">帮TA拉票</a>	
 </div>
 <!--选手-->
 <div class="vote-list">
@@ -130,7 +149,7 @@ $(function(){
 	<!--//视频-->
 </div>
 <!--//图片展示-->
-<!--搜索弹出层-->
+<!--弹出层-搜索-->
 <div id="dialog-search" style=" display: none">
 	<div class="mask"></div>
 	<div class="dialog" style="width: 80%">
@@ -143,16 +162,16 @@ $(function(){
 		</div>
 	</div>
 </div>
-<!--//搜索弹出层-->
+<!--//弹出层-搜索-->
 
-<!--选择票数-->
+<!--弹出层-选择票数-->
 <div id="dialog-vote" style=" display: none">
 	<div class="mask"></div>
 	<div class="dialog">
 		<span class="close">×</span>
 		<div class="dialog-body">
-			 <div class="sel-votes">
-			 		<span>66票</span>
+			 <div class="sel-votes" id="sel-votes">
+			 		<span class="active">66票</span>
 			 		<span>188票</span>
 			 		<span>520票</span>
 			 		<span>1314票</span>
@@ -167,7 +186,28 @@ $(function(){
 		<div class="remark">备注：1票1元，每天第一次可免费投一票</div>
 	</div>
 </div>
-<!--//选择票数-->
+<!--//弹出层-选择票数-->
+
+<!--弹出层-分享-->
+<div id="dialog-share" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog share">
+		<img src="images/share-bg.png" alt="">
+	</div>
+</div>
+<!--//弹出层-分享-->
+
+<!--弹出层-参与活动-->
+<div id="dialog-promotion" style=" display: none">
+	<div class="mask"></div>
+	<div class="promotion">
+		<img src="images/qrcode.png" class="qrcode" alt="">
+		<img src="images/promotion.png" alt="">
+	</div>
+	
+	
+</div>
+<!--//弹出层-参与活动-->
 <div class="blank"></div>
 <nav>
 	<a href="#" class="active"><i class="icon iconfont icon-icon"></i><span>首页</span></a>
