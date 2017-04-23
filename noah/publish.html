@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>noah</title>
+<link rel="stylesheet" href="css/noah.css"> 
+<link rel="stylesheet" href="fonts/iconfont.css">
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+	//门店
+	$("#shop").on("click",function(){
+			$(".mask-pop").fadeIn(300)
+		  $("#shop-pop").fadeIn(200);
+	})	
+	$("#shop-pop dd").on("click",function(e){
+	 	 e.stopPropagation();
+		 var txt = $(this).text();
+		 $("#shop").val(txt)
+		 $("#shop-pop").fadeOut(200);
+		 $(".mask-pop").fadeOut(300)
+	})
+	//部口
+	$("#branch").on("click",function(){
+			$(".mask-pop").fadeIn(300)
+		  $("#branch-pop").fadeIn(200);
+	})	
+	$("#branch-pop dd").on("click",function(e){
+	 	 e.stopPropagation();
+		 var txt = $(this).text();
+		 $("#branch").val(txt)
+		 $("#branch-pop").fadeOut(200);
+		 $(".mask-pop").fadeOut(300)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask-pop").on("click",function(e){
+			e.stopPropagation()
+			$(".mask-pop").fadeOut(300)
+		  $(".sel-pop").fadeOut(200)		
+	})
+	
+	//参赛图片上传
+	$('#img2').change(function() {
+			var file = this.files[0];
+			var r = new FileReader();
+			r.readAsDataURL(file);
+			$(r).load(function() {
+					$('#photo2').show();
+					$('#photo2').append('<div><img src="' + this.result + '" /><i class="del">×</i></div>');
+			})
+	})
+	//删除
+	$(document).on("click", ".del", function(){
+		 $(this).parent().remove();
+	})
+	
+	//上传视频
+	$('#img').change(function() {
+			var file = this.files[0];
+			var r = new FileReader();
+			r.readAsDataURL(file);
+			$(r).load(function() {
+					$('#video').show();
+					$('#video').html('<video controls preload="auto" poster=""  src="' + this.result + '"></video>');
+			})
+	})	
+})
+
+</script>
+
+</head>
+<body>
+<!--音乐&活动规则-->
+<i class="icon iconfont icon-tubiaozhizuomoban-1"></i>
+<i class="icon iconfont icon-tubiaozhizuomoban-"></i>
+<!--banner-->
+<div class="banner">
+	<img src="images/banner.png" alt="">
+</div>
+<!--//banner-->
+<!--发布-->
+<div class="publish-wrap">
+	<div class="f-row c2">
+		<div>
+			<!--门店下拉-->
+			<div class="sel-pop" id="shop-pop" style="display: none">
+				<dl>        
+					<dd>托克拉克</dd>
+					<dd>星秀场</dd>
+					<dd>GT</dd>
+					<dd>T2</dd>
+					<dd>UPARK</dd>
+					<dd>乐府</dd>
+					<dd>星工场</dd>
+				</dl>
+			</div>
+      <!--//门店下拉-->
+      <div class="mask-pop"></div>
+			<input type="text" class="ipt01" id="shop" readonly  placeholder="门店">
+		</div>
+		<div>
+			<!--部口-->
+			<div class="sel-pop" id="branch-pop" style="display: none">
+				<dl>             
+					<dd>行政部口</dd>
+					<dd>营销部口</dd>
+					<dd>佳丽部口</dd>
+					<dd>公主部口</dd>
+				</dl>
+			</div>
+      <!--//部口-->
+			<input type="text" class="ipt01" id="branch" readonly   placeholder="部口">
+		</div>
+	</div>
+	<div class="f-row">
+		<input type="text" class="ipt01" placeholder="请输入选手的姓名">
+	</div>
+	<div class="f-row">
+		<textarea class="texta" placeholder="请输入您的参赛宣言"></textarea>
+	</div>
+	<!--	上传图片-->
+	<div class="f-row">
+		<h3>上传参赛图片(必选项，最多可上传3张)</h3>
+		<div class="upload-wrap">
+				<input id="img2" class="btn-file" type="file" accept="image/*">
+		</div>
+		<div class="upload-list photo" id="photo2">
+		</div>
+	</div>
+	<!--//上传图片-->
+	<div class="f-row">
+		<h3>上传参赛视频(可选项，最多可上传1个视频)</h3>
+		<div class="upload-wrap">
+				<input id="img" class="btn-file" type="file" accept="image/*">
+		</div>
+		<div class="video-show upload-v" id="video">
+		</div>
+	</div>
+	<div class="f-row tc">
+		<button class="btn3">发布</button>
+	</div>
+	
+</div>
+<!--//发布-->
+<div class="blank"></div>
+<nav>
+	<a href="#" class="active"><i class="icon iconfont icon-icon"></i><span>首页</span></a>
+	<a href="#"><i class="icon iconfont icon-paixing"></i><span>排行榜</span></a>
+	<a href="#"><i class="icon iconfont icon-wode"></i><span>我的</span></a>
+	<a href="#"><i class="icon iconfont icon-sousuo_sousuo"></i><span>搜索</span></a>
+</nav>
+</body>
+</html>
