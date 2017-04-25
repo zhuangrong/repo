@@ -1178,7 +1178,11 @@ div[class*="tab-box"] > div:not(:first-child){
 	.promotion .qrcode {
     width: 2rem;
     height: 2rem;
-}
+	}
+	.top-item-wrap.t4 .top-item{
+		-webkit-flex: 0 0 1.48rem;
+  		flex: 0 0 1.48rem;
+	}
 }
 
 
