@@ -1036,7 +1036,7 @@ a:hover {
 .message h3 span{
   display: inline-block;
   margin-left: .2rem;
-  width: -webkit-calc(100% - .5rem);
+  width: -webkit-calc(100% - .2rem);
   height: .36rem;
   line-height: .36rem;
   padding-left: .3rem;
@@ -1852,6 +1852,9 @@ a:hover {
 	.sub-banner{
 		height: 450px;
 	}
+  .bg02{
+    min-width: 1440px
+  }
 }
 
 
