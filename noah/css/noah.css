@@ -267,7 +267,7 @@ nav a i{
 	border: 1px solid  #fff;
 	background-color: #fff;
 	border-radius: 50%;
-	font-size: .8rem;
+	font-size: .8rem !important;
 	width: .83rem;
 	height: .83rem;
 	color:#080403;
