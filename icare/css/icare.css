@@ -395,6 +395,10 @@ a:hover {
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
 }
+.news-type-tabs .news-type-title span{
+	display: block;
+}
+
 .news-type{
 	display: -webkit-box; 
 	display: -webkit-flex;
@@ -1096,7 +1100,7 @@ a:hover {
   flex: 0 0 33.333%;
 	height: 1rem;
 	padding: .15rem .15rem .1rem;
-	line-height: 1;
+	line-height: 1.25;
 }
 .news-tab a:not(:first-child){
   border-left: 1px solid  #DCDDDD;
@@ -1346,6 +1350,7 @@ a:hover {
 	-webkit-flex:1;
   flex:1;
   font-size: 14px;
+  line-height: 1.8;
 }
 .about-tool i{
   display: inline-block;
@@ -1649,10 +1654,13 @@ a:hover {
   }
   
   .news-type-tabs .news-type-title:nth-child(1){
-    flex: 0 0 70px;
+    flex: 0 0 100px;
   }
   .news-type-tabs .news-type-title span{
     font-size: 12px;
+  }
+  .news-type-tabs .news-type-title span em{
+    display: block;
   }
 	.news-type-tabs .news-type-title span:after{
     content: '';
