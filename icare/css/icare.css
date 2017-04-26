@@ -124,6 +124,9 @@ a:hover {
 .nav a.active {
 	color: #DA391D;
 }
+.nav a:first-child:hover {
+	color: #333;
+}
 .nav a:first-child:after{
 	content: " ";
   position: absolute;
@@ -283,12 +286,27 @@ a:hover {
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.8);
 }
+.swiper02 .swiper-wrapper{padding-bottom: 1rem;}
 .swiper02 .swiper-slide {
 	background-color: #fff;
 	text-align: center;
 	height: 4.24rem;
 	border-top-left-radius: .4rem;
 	border-top-right-radius: .4rem;
+}
+
+.swiper02 .swiper-pagination-bullet {
+  width: 0.08rem !important;
+  height: 0.08rem !important;
+  background: rgba(225, 74, 41, 0.3)  !important;
+  margin: 0 0.08rem !important;
+  opacity: 1;
+}
+.swiper02 .swiper-pagination-bullet-active {
+  background: rgba(225, 74, 41, 1) !important;
+}
+.swiper02.swiper-container-horizontal>.swiper-pagination-bullets{
+  bottom: 4px;
 }
 .blank-qr{
 	height: 1.5rem;
@@ -482,9 +500,14 @@ a:hover {
 .footer{
 	text-align:left;
 	font-size: 20px;
+	min-height: 3.2rem;
+	padding-top: .9rem;
 }
 .footer .f-phone p{
-	font-size:36px;   
+	font-size:36px;
+	letter-spacing: 2px;
+	display: block;
+	margin-bottom: 0.32rem;
 }
 .footer .f-phone span{
 	display: block; 
@@ -492,7 +515,7 @@ a:hover {
 }
 .footer .f-qrcode{
 	position: relative;
-  padding:10px 0;
+	padding: .12rem 0;
 }
 .footer .f-qrcode p{
 	text-align: center;
@@ -531,12 +554,16 @@ a:hover {
 	border-bottom: 1px solid  #D2D1D1;
 }
 /*版权*/
+
 .coypright-wrap{
-	overflow: hidden;
-	padding: 25px 0 45px;
+	position: relative;
 }
 .coypright{
-	float: left;
+	position: absolute;
+	top: -55px;
+	right: 0;
+	text-align: right;
+	font-size: 0.16rem;
 }
 .email{
 	float: right;
@@ -980,6 +1007,7 @@ a:hover {
 .contact-info h3{
   font-size: .2rem;
   font-weight: bold;
+  color: #DA391D;
 }
 .contact-info p{
   display: block;
@@ -1580,7 +1608,7 @@ a:hover {
 		width: 39px;
 		height: 29px;
 		vertical-align: middle;
-		margin: 0 3px;
+		margin: 0 -6px 0 0;
 		background-image: url(../images/icon-qq.png);
 	}
 	.nav-toggle {
@@ -1639,8 +1667,6 @@ a:hover {
 	.article02 .small {
 		font-size: 13px;
 	}
-	
-  
   /*新闻分类*/
   .news-type-tabs{
     flex-flow: row nowrap;
@@ -1713,6 +1739,8 @@ a:hover {
   /*底部*/
 	.footer{
 		text-align:center;
+		min-height: auto;
+		padding-top: 0;
 	}
 	.footer .f-phone{
 		margin-top: 60px;
@@ -1720,6 +1748,8 @@ a:hover {
 	}
 	.footer .f-phone p{
 		font-size: 25px;
+		letter-spacing: 0;
+		margin-bottom: 0;
 	}
 	.footer .f-phone span{
 		font-size: 12px;
@@ -1730,6 +1760,8 @@ a:hover {
 	.footer .f-qrcode p{
 		position: static;
 		font-size: 12px;
+		margin-top: .5rem;
+		margin-bottom: .5rem;
 	}
 	.footer .f-qrcode p img{
 		width: 90px;
@@ -1752,6 +1784,7 @@ a:hover {
 		float: none;
 		text-align: center;
 		font-size: 11px;
+		position: static;
 	}
 	.article-about{
 		font-size: 12px;
