@@ -343,14 +343,14 @@ a:hover {
 	display: -webkit-flex;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+/*	justify-content: space-between;*/
 	margin-bottom: .5rem;
 }
 .brand a{
-	flex: 0 0 2.32rem;
+	flex:0 0 20%;
 	height: 1rem;
 	line-height: 1rem;
-	margin: .3rem 0.02rem;
+	margin: .3rem 0;
 	text-align: center;
 }
 .brand a:hover{
@@ -1508,6 +1508,9 @@ a:hover {
 	html {
 		font-size: 50px;
 	}
+  .brand a{
+      flex:0 0 33.333%
+   }
   /*案例详情页*/
   .banner-text{
     left: .2rem;
