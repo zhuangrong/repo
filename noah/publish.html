@@ -50,6 +50,9 @@ $(function(){
 			var r = new FileReader();
 			r.readAsDataURL(file);
 			$(r).load(function() {
+				  if($('#photo2 > div').length == 1){
+						$("#pic-load").css("left","130px")
+					}
 					$('#photo2').show();
 					$('#photo2').append('<div><img src="' + this.result + '" /><i class="del">×</i></div>');
 			})
@@ -69,6 +72,7 @@ $(function(){
 					$('#video').html('<video controls preload="auto" poster=""  src="' + this.result + '"></video>');
 			})
 	})	
+	
 })
 
 </script>
@@ -130,13 +134,14 @@ $(function(){
 				<input id="img2" class="btn-file" type="file" accept="image/*">
 		</div>
 		<div class="upload-list photo" id="photo2">
+			<span class="loading" id="pic-load"></span>
 		</div>
 	</div>
 	<!--//上传图片-->
 	<div class="f-row">
 		<h3>上传参赛视频(可选项，最多可上传1个视频)</h3>
 		<div class="upload-wrap">
-				<input id="img" class="btn-file" type="file" accept="image/*">
+				<input id="img" class="btn-file" type="file" accept="video/*">
 		</div>
 		<div class="video-show upload-v" id="video">
 		</div>
