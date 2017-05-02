@@ -697,6 +697,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	overflow: hidden;
 	border-left: 1px solid #fff;
 	border-right: 1px solid #fff;
+  height: 3.42rem;
 }
 .vote-show-wrap .show-item .vote-ft{
 	text-align: left;
@@ -1158,6 +1159,13 @@ div[class*="tab-box"] > div:not(:first-child){
 .slogan h3:after{
 	left: 2.25rem;
 	/* right: .55rem; */
+}
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+}
+@-webkit-keyframes rotating{
+ from {-webkit-transform: rotate(0deg);}
+ to {-webkit-transform: rotate(360deg);}
 }
 /*
  ************************iphone5 小于320************************

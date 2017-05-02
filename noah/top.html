@@ -13,10 +13,27 @@
 </head>
 <body class="game-bg">
 <!--音乐&活动规则-->
-<i class="icon iconfont icon-tubiaozhizuomoban-1"></i>
+<i class="icon iconfont icon-tubiaozhizuomoban-1 rotate"  id="start"></i>
 <i class="icon iconfont icon-tubiaozhizuomoban-"></i>
 <div class="game-blank"></div>
-
+<audio loop src="images/music.mp3" id="music" autoplay preload=""></audio>
+<script>
+$(function(){
+  //音乐播放
+	var flag = 0;
+	$("#start").click(function(){
+		if(flag==0){
+			$(this).removeClass("rotate");
+			$("#music")[0].pause();
+			flag=1;
+		}else{
+			$("#music")[0].play();
+			$(this).addClass("rotate");
+			flag=0;
+		}
+	})	
+})
+</script>
 <!--排行榜1-->
 <div class="top-item-wrap t1">
 	<div class="top-item">

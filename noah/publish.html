@@ -58,6 +58,10 @@ $(function(){
 	$(document).on("click", ".del", function(){
 		 $(this).parent().remove();
 	})
+  
+//	$(".del").click(function(){
+//		 $(this).parent().remove();
+//	})
 	
 	//上传视频
 	$('#img').change(function() {
@@ -136,7 +140,7 @@ $(function(){
 	<div class="f-row">
 		<h3>上传参赛视频(可选项，最多可上传1个视频)</h3>
 		<div class="upload-wrap">
-				<input id="img" class="btn-file" type="file" accept="image/*">
+				<input id="img" class="btn-file" type="file" accept="video/*">
 		</div>
 		<div class="video-show upload-v" id="video">
 		</div>
