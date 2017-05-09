@@ -1,0 +1,197 @@
+@charset "utf-8";
+body, html {
+	color: #333;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+html{
+  font-size: 100px;
+}
+body{
+  font-size: 14px;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+em,h3{
+	font:inherit
+}
+.c01{
+	color: #16438c;
+}
+.tc{
+	text-align: center;
+}
+/*hide and show*/
+.hide-mb {
+	display: block;
+}
+.hide-pc {
+	display: none;
+}
+/*覆盖bootstrap*/
+.col-md-12,
+.col-md-5,
+.col-md-7,
+.container-fluid,
+.container{
+  padding-left: 0;
+  padding-right: 0;
+}
+.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+@media (min-width: 1200px){
+	.container {
+		width: 1200px;
+	}
+}
+/*--------------首页--------------*/
+/*头部*/
+.header-wrap {
+	background-color: #fff;
+	overflow: hidden;
+}
+.header {
+	width: 1200px;
+	height: .9rem;
+	line-height: .9rem;
+	margin: 0 auto;
+}
+.header .logo {
+	float: left;
+}
+.header-tip{
+	float: right;
+}
+/*导航*/
+.nav {
+	float: right;
+}
+.nav a {
+  position: relative;
+	display: inline-block;
+	height: 1rem;
+	margin: 0 26px;
+}
+.nav a.active {
+	color: #DA391D;
+}
+.nav a:first-child:hover {
+	color: #333;
+}
+.nav a:first-child:after{
+	content: " ";
+  position: absolute;
+  top: 43px;
+  right: -30px;
+  width: 1px;
+  height: 15px;
+  background-color: #CCCCCC;
+}
+/*幻灯片*/
+.banner{
+  position: absolute;
+  z-index: 0;
+  top: 93px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+}
+/*swiper*/
+.swiper01 {
+  width: 100%;
+  height: 100%;
+}
+.swiper01 .swiper-slide{
+  height: 100%;
+  background-position: top center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.swiper01 .swiper-pagination-bullet {
+	width: .33rem !important;
+	height: .04rem !important;
+  border-radius: .02rem !important;
+	background: #fff !important;
+	margin: 0 .08rem !important;
+	opacity: 1;
+}
+.swiper01 .swiper-pagination-bullet-active {
+  background-image: -webkit-linear-gradient( -90deg, rgb(48,128,215) 0%, rgb(11,78,168) 100%) !important;
+}
+.swiper01.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: 2.4rem;
+}
+.footer{
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+/*-----------------------mobile 小于820px-----------------------*/
+@media (max-width: 820px) {
+	html {
+		font-size: 50px;
+	}
+  /*hide and show*/
+	.hide-mb {
+		display: none !important;
+	}
+	.hide-pc {
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
