@@ -12,7 +12,55 @@
 <script src="js/jquery.min.js"></script> 
 <script src="js/swiper.min.js"></script> 
 <script src="js/common.js"></script> 
-<script></script>
+<script>
+$(function(){
+  
+  /**********判断移动设备**********/
+  var u = navigator.userAgent, app = navigator.appVersion;
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+  //移动端事件
+  if(isAndroid == true || isiOS == true){//判断浏览器类型
+    $(".tab-box1 > div").not(':first').hide();
+    $.TabChange("tabs",1)
+  } 
+  
+  /**********企业荣誉-查看大图**********/
+  //点击缩略图
+	$("#honor").on("click", "li", function(){
+      var str = $(this).find("span").css("background-image")
+      var txt = $(this).text();
+      str = str.substring(5, str.length - 2)
+      $("#gallery-honor img").attr("src", str)
+      $("#gallery-honor label").text(txt)
+			$("#gallery-honor").fadeIn(100)
+	})
+  //点击缩略图
+	$("#employee").on("click", "li", function(){
+      var str = $(this).find("span").css("background-image")
+      var txt = $(this).text();
+      str = str.substring(5, str.length - 2)
+      $("#gallery-employee img").attr("src", str)
+      $("#gallery-employee label").text(txt)
+			$("#gallery-employee").fadeIn(100)
+	})
+  
+  $(".close").click(function(){
+     $(this).parent().hide();
+  })
+	
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("a","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("active").siblings().removeClass("active");
+			})													
+	})
+}
+</script>
 <title>richlink</title>
 </head>
 <body>
@@ -22,17 +70,55 @@
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png"></a>
 		</div>
-		<div class="nav">
-			<a href="index.html" class="active">首页</a>
-			<a href="server.html">服务</a>
-			<a href="case.html">案例</a>
-			<a href="about.html">关于</a>
-			<a href="news.html">动态</a>	
-			<a href="contact.html">联系</a>	
-		</div>
+    <div class="nav" id="nav">
+      <ul>
+        <li  class="active"><a href="index.html">首页</a></li>
+        <li>     
+          <a href="about.html">关于我们</a>
+          <div class="nav-sub">
+            <a href="#">公司概况</a>
+            <a href="#">发展历程</a>
+            <a href="#">国内网络</a>
+            <a href="#">企业荣誉</a>
+            <a href="#">企业文化</a>
+            <a href="#">员工风采</a>
+          </div>
+        </li>
+        <li>
+          <a href="news-company.html">新闻动态</a>
+          <div class="nav-sub">
+            <a href="#">公司新闻</a>
+            <a href="#">行业新闻</a>
+            <a href="#">业务新闻</a>
+          </div>
+        </li>
+        <li>
+          <a href="product.html">产品服务</a>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li>
+          <a href="product.html">产品价格</a>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li>
+          <a href="recruit.html">人才招聘</a>
+          <div class="nav-sub-wrap"></div>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+    </div>
 		<div class="header-tip hide-pc">
-			<i class="icon-qq"></i>
-			<i class="nav-toggle"></i>
+			  <i class="nav-toggle"></i>
 		</div>
 	</div>	
 </div>
@@ -44,152 +130,338 @@
 <!--//banner-->
 <!--二级导航-->
 <div class="level2-wrap">
-	<div class="level2 main">
+	<div class="level2 main" id="tabs">
 		<a href="#summary" class="active">公司概况</a>
 		<a href="#history">发展历程</a>
-		<a href="#">国内网络</a>
-		<a href="#">企业荣誉</a>
-		<a href="#">企业文化</a>
-		<a href="#">员工风采</a>
+		<a href="#network">国内网络</a>
+		<a href="#honor">企业荣誉</a>
+		<a href="#culture">企业文化</a>
+		<a href="#employee">员工风采</a>
 	</div>
 </div>
 <!--//二级导航-->
 <div class="blank hide-mb "></div>
-<!--公司概况-->
-<div class="main mb-padd">
-	<div class="about-summary" id="summary">
-		<div class="as-pic">
-			<img src="images/as-pic.jpg" alt="">
-		</div>
-		<div class="as-info">
-			<h3>厦门宝汇供应链管理有限公司</h3>
-			<p>应电子商务大发展时代需求而生的服务公司。为品牌商、电商提供电子商务后端（仓储、物流和系统）服务的全数字化解决方案，协助电商解决电子商务供应链管理的第三方服务公司。</p>
-			<p>宝汇供应链作为电子商务仓配一体的供应商，以降低仓储及运输成本、完善客户购买体验为目的，通过整合、优化仓储及配送，帮助电商企业甩开物流包袱。我们以专业的解决方案，客户至上理念为己任， 依托团队的资源优势，形成高效的仓储配送一体化的服务网络。</p>
-		</div>
-	</div>
-	<div class="as-brand">
-		<h3>宝汇的品牌理念</h3>
-		<ul>
-			<li class="active">
-				<span>敏捷</span>
-				反应力求敏捷
-			</li>
-			<li>
-				<span>高效</span>
-				执行谋求高效
-			</li>
-			<li>
-				<span>持续</span>
-				绩效表现持续
-			</li>
-			<li>
-				<span>创新</span>
-				管理不断创新
-			</li>
-		</ul>
-	</div>
+<div class="tab-box1">
+  <!--公司概况-->
+  <div class="main mb-padd">
+    <div class="about-summary" id="summary">
+      <div class="as-pic">
+        <img src="images/as-pic.jpg" alt="">
+      </div>
+      <div class="as-info">
+        <h3>厦门宝汇供应链管理有限公司</h3>
+        <p>应电子商务大发展时代需求而生的服务公司。为品牌商、电商提供电子商务后端（仓储、物流和系统）服务的全数字化解决方案，协助电商解决电子商务供应链管理的第三方服务公司。</p>
+        <p>宝汇供应链作为电子商务仓配一体的供应商，以降低仓储及运输成本、完善客户购买体验为目的，通过整合、优化仓储及配送，帮助电商企业甩开物流包袱。我们以专业的解决方案，客户至上理念为己任， 依托团队的资源优势，形成高效的仓储配送一体化的服务网络。</p>
+      </div>
+    </div>
+    <div class="as-brand">
+      <h3>宝汇的品牌理念</h3>
+      <ul>
+        <li class="active">
+          <span>敏捷</span>
+          反应力求敏捷
+        </li>
+        <li>
+          <span>高效</span>
+          执行谋求高效
+        </li>
+        <li>
+          <span>持续</span>
+          绩效表现持续
+        </li>
+        <li>
+          <span>创新</span>
+          管理不断创新
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--//公司概况-->
+  <!--发展历程-->
+  <div class="ah-wrap" id="history">
+    <h3 class="about-title"><em>·</em>发展历程<em>·</em></h3>
+    <!--swiper-->
+    <div class="swiper-container sp2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="about-history main">
+                <ul>
+                  <li class="active">
+                    <span class="oneline">1994</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span>1998<br>2001</span>
+                    形成了覆盖大连、天津、青岛、厦门、福州、广州、沈阳、长春的自有分公司和办事处网络
+                  </li>
+                  <li>
+                    <span class="oneline">2000</span>
+                    加入中国国际货运协会（CIFA），成为首批会员，成为FIATA联系会员 
+                  </li>
+                  <li>
+                    <span>2001<br>2003</span>
+                    成立上海、宁波、深圳、潍坊、烟台、威海分公司和办事处
+                  </li>
+                  <li>
+                    <span class="oneline">2003</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span>1998<br>2004</span>
+                    成立连云港、南京、日照、营口办事处
+                  </li>
+                  <li>
+                    <span class="oneline">2005</span>
+                    荣登2004年中国货代百强；荣登2004年中国民营货代15强；成为中国国际货运协会（CIFA）理事单位；成立忠进集团董事会
+                  </li>
+                  <li>
+                    <span>2001<br>2006</span>
+                    加入中国全球物流网络（CGLN），成为世界货运联盟（WCA）成员；荣登2005年中国货代百强；荣登2004年中国民营货代20强
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="about-history main">
+                <ul>
+                  <li>
+                    <span class="oneline">2007</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2008</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2009</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2010</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2011</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2012</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2013</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                  <li>
+                    <span class="oneline">2014</span>
+                    成立并获取外经贸部审批的一级货代资质
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+      var swiper = new Swiper('.sp2', {
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          spaceBetween: 30
+      });
+    </script>
+    <!--//swiper-->
+  </div>
+  <!--//发展历程-->
+  <!--国内网络-->
+  <div class="about-network main tc mb-padd" id="network">
+    <h3 class="about-title"><em>·</em>企业文化<em>·</em></h3>
+    <div class="an-sub">厦门，深圳，泉州，义乌，福州</div>
+    <img class="an-bg" src="images/an-bg.jpg">
+  </div>
+  <!--//国内网络-->
+  <!--企业荣誉-->
+  <div class="ah-wrap ah-t2">
+    <h3 class="about-title"><em>·</em>企业荣誉<em>·</em></h3>
+    <!--swiper-->
+    <div class="swiper-container sp3">
+        <div class="swiper-wrapper"  id="honor">
+            <div class="swiper-slide">
+              <div class="about-honor main">
+                <ul>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业1
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业2
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业3
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业4
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="about-honor main">
+                <ul>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业5
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业6
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/honor.jpg)"></span>
+                    福建省知识产权优势企业7
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+      var swiper = new Swiper('.sp3', {
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev'
+      });
+    </script>
+    <!--//swiper-->
+    <!--大图弹出层-->
+    <div class="gallery-honor" id="gallery-honor">
+      <i class="close">×</i>
+      <img src="">
+      <label></label>
+    </div>
+    <!--//大图弹出层-->
+  </div>
+  <!--//企业荣誉-->
+  <!--企业文化-->
+  <div class="about-culture" id="culture">
+    <h3 class="about-title"><em>·</em>企业文化<em>·</em></h3>
+    <div class="main">
+      <div class="ac-title">"忠以取人，进以兴业"</div>
+      <div class="ac-text">
+        <p>"忠以取人，进以兴业"是董事长于雷先生在忠进成立之初提出来的理念。它生动地体现了做人、做事的根本。十余年来，忠进人一直以此为事业奋斗的宗旨和企业核心价值，并会一如既往地将之延续。</p>
+        <p>四书集注中：尽己之谓忠。从字形可以看出中、心，存心居中，正直不偏，竭诚尽责就是忠。</p>
+        <p>古人谓：忠者，德之正也。惟正己可以化人，故正心所以修身乃至于齐家、治国、平天下。而尽忠者，必能发挥出最大的智慧和才干，因公生明，偏则暗；革除私欲之后，一切事物的道理无不清楚明白。因此无论我们是做大事业，还是在平凡职位上，想真正做好，须臾都不能离开忠字。</p>
+      </div>
+    </div>
+  </div>
+  <!--//企业文化-->
+  <!--企业荣誉-->
+  <div class="ah-wrap ah-t2">
+    <h3 class="about-title"><em>·</em>员工风采<em>·</em></h3>
+    <!--swiper-->
+    <div class="swiper-container sp3">
+        <div class="swiper-wrapper"  id="employee">
+            <div class="swiper-slide">
+              <div class="about-honor main">
+                <ul>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2011港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2012港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2013港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2014港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2015港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2016港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2017港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2018港澳游
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="about-honor main">
+                <ul>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2019港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2020港澳游
+                  </li>
+                  <li>
+                    <span style="background-image: url(images/employee.jpg)"></span>
+                    2021港澳游
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+      var swiper = new Swiper('.sp3', {
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev'
+      });
+    </script>
+    <!--//swiper-->
+    <!--大图弹出层-->
+    <div class="gallery-honor gallery-employee" id="gallery-employee">
+      <i class="close">×</i>
+      <img src="">
+      <label></label>
+    </div>
+    <!--//大图弹出层-->
+  </div>
+  <!--//企业荣誉-->
 </div>
-<!--//公司概况-->
-<!--发展历程-->
-<div class="blank hide-mb"></div>
-<div class="ah-wrap">
-	<!--swiper-->
-	<div class="swiper-container sp2">
-			<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="about-history main" id="history">
-							<h3><em>·</em>发展历程<em>·</em></h3>
-							<ul>
-								<li class="active">
-									<span class="oneline">1994</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span>1998<br>2001</span>
-									形成了覆盖大连、天津、青岛、厦门、福州、广州、沈阳、长春的自有分公司和办事处网络
-								</li>
-								<li>
-									<span class="oneline">2000</span>
-									加入中国国际货运协会（CIFA），成为首批会员，成为FIATA联系会员 
-								</li>
-								<li>
-									<span>2001<br>2003</span>
-									成立上海、宁波、深圳、潍坊、烟台、威海分公司和办事处
-								</li>
-								<li>
-									<span class="oneline">2003</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span>1998<br>2004</span>
-									成立连云港、南京、日照、营口办事处
-								</li>
-								<li>
-									<span class="oneline">2005</span>
-									荣登2004年中国货代百强；荣登2004年中国民营货代15强；成为中国国际货运协会（CIFA）理事单位；成立忠进集团董事会
-								</li>
-								<li>
-									<span>2001<br>2006</span>
-									加入中国全球物流网络（CGLN），成为世界货运联盟（WCA）成员；荣登2005年中国货代百强；荣登2004年中国民营货代20强
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="about-history main">
-							<h3><em>·</em>发展历程<em>·</em></h3>
-							<ul>
-								<li>
-									<span class="oneline">2007</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2008</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2009</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2010</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2011</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2012</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2013</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-								<li>
-									<span class="oneline">2014</span>
-									成立并获取外经贸部审批的一级货代资质
-								</li>
-							</ul>
-						</div>
-					</div>
-			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-	</div>
-	<script>
-    var swiper = new Swiper('.sp2', {
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 30
-    });
-	</script>
-	<!--//swiper-->
+<!-- 浮动层-->
+<div class="widget hide-mb">
+  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2957094485&amp;site=qq&amp;menu=yes" class="icon-w01">
+    <span class="rect">2957094485</span>
+  </a>
+  <a href="#" class="icon-w02">
+    <span class="rect">
+      <img src="images/icare-qrcode.png" alt="">
+    </span>
+  </a>
+  <a href="tel:13163999993" class="icon-w03">
+    <span class="rect">13163999993</span>
+  </a>
+  <a href="#top" class="icon-w05">
+  </a>
 </div>
-<!--//发展历程-->
-<div class="blank"></div>
+<!--//浮动层-->
 <!--底部-->
 <div class="footer">
   Copyright © 2008-2015 厦门宝汇供应链管理有限责任公司 <p class="hide-pc"></p>
