@@ -8,13 +8,12 @@ $(function(){
     }
   })
   
-  //显示隐藏二级导航
+  
+  //pc-显示隐藏二级导航下拉菜单
   $("#nav li").mouseenter(function(){
-    $(this).find(".nav-sub-wrap").stop().fadeIn();
     $(this).find(".nav-sub").stop().fadeIn();
   })
   $("#nav li").mouseleave(function(){
-    $(this).find(".nav-sub-wrap").stop().fadeOut();
     $(this).find(".nav-sub").stop().fadeOut();
   })
   

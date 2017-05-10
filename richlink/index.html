@@ -13,12 +13,20 @@
 <script src="js/swiper.min.js"></script> 
 <script src="js/common.js"></script> 
 <script></script>
-<title>junhao</title>
+<title>richlink</title>
 <style>
 html, body {
   position: relative;
   height: 100%;
 }
+.footer.idx{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	background: none;
+}
+ 
 </style>
 </head>
 <body>
@@ -28,16 +36,54 @@ html, body {
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.png"></a>
 		</div>
-		<div class="nav">
-			<a href="index.html" class="active">首页</a>
-			<a href="server.html">服务</a>
-			<a href="case.html">案例</a>
-			<a href="about.html">关于</a>
-			<a href="news.html">动态</a>	
-			<a href="contact.html">联系</a>	
-		</div>
+    <div class="nav" id="nav">
+      <ul>
+        <li  class="active"><a href="index.html">首页</a></li>
+        <li>     
+          <a href="about-profile.html">关于我们</a>
+          <div class="nav-sub">
+            <a href="#">公司概况</a>
+            <a href="#">发展历程</a>
+            <a href="#">国内网络</a>
+            <a href="#">企业荣誉</a>
+            <a href="#">企业文化</a>
+            <a href="#">员工风采</a>
+          </div>
+        </li>
+        <li>
+          <a href="news-company.html">新闻动态</a>
+          <div class="nav-sub">
+            <a href="#">公司新闻</a>
+            <a href="#">行业新闻</a>
+            <a href="#">业务新闻</a>
+          </div>
+        </li>
+        <li>
+          <a href="product.html">产品服务</a>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li>
+          <a href="product.html">产品价格</a>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li>
+          <a href="recruit.html">人才招聘</a>
+          <div class="nav-sub-wrap"></div>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+    </div>
 		<div class="header-tip hide-pc">
-			  <i class="icon-qq"></i>
 			  <i class="nav-toggle"></i>
 		</div>
 	</div>	
@@ -47,27 +93,59 @@ html, body {
 	<!--swiper-->
 	<div class="swiper-container swiper01">
 			<div class="swiper-wrapper">
-					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)"></div>
-					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)"></div>
+					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)">
+					  <img src="images/banner-text01.png" class="banner-text">
+					</div>
+					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)">
+					  <img src="images/banner-text01.png" class="banner-text">
+					</div>
+					<div class="swiper-slide" style="background-image: url(images/banner01.jpg)">
+					  <img src="images/banner-text01.png" class="banner-text">
+					</div>
 			</div>
 			<!-- Add Pagination -->
 			<div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next hide-mb"></div>
+      <div class="swiper-button-prev hide-mb"></div>
 	</div>
 	<script>
 		var swiper = new Swiper('.swiper01', {
 					pagination: '.swiper-pagination',
 					paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
           autoplay:2000,
           effect: 'fade',
 			});
 	</script>
 	<!--//swiper-->
 </div>
+<!--项目入口-->
+<div class="item-wrap">
+  <div class="items">
+    <ul>
+      <li>
+        <a href="#"><i class="icon-item01"></i>关于我们</a>
+      </li>
+      <li>
+        <a href="#"><i class="icon-item02"></i>新闻动态</a>
+      </li>
+      <li>
+        <a href="#"><i class="icon-item03"></i>产品服务</a>
+      </li>
+      <li>
+        <a href="#"><i class="icon-item04"></i>人才招聘</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--//项目入口-->
 
-<div class="blank"></div>
 <!--底部-->
-<div class="footer">
-  Copyright © 2008-2017  版权所有 闽ICP备15010068号-1       
+<div class="footer idx">
+  Copyright © 2008-2015 厦门宝汇供应链管理有限责任公司 <p class="hide-pc"></p>
+	版权所有 闽ICP备15010068号-1   <span>技术支持：在乎科技 </span>      
 </div>
 <!--//底部-->
 </body>
