@@ -728,6 +728,50 @@ em, h3 {
 .gallery-employee{
   top: .6rem;
 }
+/*新闻动态*/
+.news{
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+  flex-wrap: wrap;
+	-webkit-align-items: center; 
+	-webkit-box-align: center;
+	justify-content: flex-start;
+  font-size: .14rem;
+}
+.news a{
+  position: relative;
+  flex: 0 0 -webkit-calc(33.333% - .3rem);
+  margin-right: .3rem;
+  margin-bottom: .3rem;
+  color: #888;
+  padding: .2rem .2rem .6rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.news a:nth-child(3){
+  margin-right: 0;
+  flex: 0 0 33.333%;
+}
+.news a h3{
+  color: #f08200;
+  font-weight: bold;
+  font-size: .16rem;
+  margin-bottom: .1rem;
+}
+.news a span{
+  display: block;
+  height: 2.3rem;
+  overflow: hidden;
+}
+.news a i.icon-link{
+  position: absolute;
+  bottom: .15rem;
+  right: .2rem;
+  display: block;
+  width: .26rem;
+  height: .26rem;
+  background-image: url(../images/icon-link.png);
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
@@ -749,7 +793,21 @@ em, h3 {
 	}
 	.hide-pc {
 		display: block;
-	}  
+	} 
+  /*新闻动态*/
+  .news{
+    font-size: .24rem;
+  }
+  .news a{
+    flex: 0 0 100%;
+    margin-right: 0;
+    color: #888;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+  .news a:nth-child(3){
+    margin-right: 0;
+    flex: 0 0 33.333%;
+  } 
   /*查看大图*/
   .gallery-honor{
     top: 1.3rem;
