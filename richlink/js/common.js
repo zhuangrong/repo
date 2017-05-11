@@ -2,9 +2,11 @@ $(function(){
   //移动端-导航点击
   $(".nav-toggle").on("click",function(){
     if($(".nav").is(":visible")){
-      $(".nav").css('display','none') 
+      $(".nav").css('display','none')
+      
     }else{
      $(".nav").css('display','block')
+     $(".close-nav").css('display','block')
     }
   })
   
@@ -15,6 +17,11 @@ $(function(){
   })
   $("#nav li").mouseleave(function(){
     $(this).find(".nav-sub").stop().fadeOut();
+  })
+  //导航关闭
+  $(".close-nav").on("click",function(){
+    $(this).hide()
+    $(".nav").hide();
   })
   
 })

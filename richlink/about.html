@@ -35,6 +35,7 @@ $(function(){
       $("#gallery-honor img").attr("src", str)
       $("#gallery-honor label").text(txt)
 			$("#gallery-honor").fadeIn(100)
+			$(".mask").show()
 	})
   //点击缩略图
 	$("#employee").on("click", "li", function(){
@@ -44,12 +45,16 @@ $(function(){
       $("#gallery-employee img").attr("src", str)
       $("#gallery-employee label").text(txt)
 			$("#gallery-employee").fadeIn(100)
+			$(".mask").show()
 	})
   
+  //关闭弹出层
   $(".close").click(function(){
      $(this).parent().hide();
+    $(".mask").hide()
   })
 	
+  
 })
 /*tabs切换组件*/
 $.TabChange = function(obj,num){
@@ -76,38 +81,38 @@ $.TabChange = function(obj,num){
         <li>     
           <a href="about.html">关于我们</a>
           <div class="nav-sub">
-            <a href="#">公司概况</a>
-            <a href="#">发展历程</a>
-            <a href="#">国内网络</a>
-            <a href="#">企业荣誉</a>
-            <a href="#">企业文化</a>
-            <a href="#">员工风采</a>
+            <a href="about.html#summary">公司概况</a>
+            <a href="about.html#history">发展历程</a>
+            <a href="about.html#network">国内网络</a>
+            <a href="about.html#honor">企业荣誉</a>
+            <a href="about.html#culture">企业文化</a>
+            <a href="about.html#employee">员工风采</a>
           </div>
         </li>
         <li>
-          <a href="news-company.html">新闻动态</a>
+          <a href="news.html">新闻动态</a>
           <div class="nav-sub">
-            <a href="#">公司新闻</a>
-            <a href="#">行业新闻</a>
-            <a href="#">业务新闻</a>
+            <a href="news-company.html">公司新闻</a>
+            <a href="news-industry.html">行业新闻</a>
+            <a href="news-biz.html">业务新闻</a>
           </div>
         </li>
         <li>
-          <a href="product.html">产品服务</a>
-          <div class="nav-sub">
-            <a href="#">二级菜单</a>
-            <a href="#">二级菜单</a>
-          </div>
-        </li>
-        <li>
-          <a href="product.html">产品价格</a>
+          <a href="service.html">产品服务</a>
           <div class="nav-sub">
             <a href="#">二级菜单</a>
             <a href="#">二级菜单</a>
           </div>
         </li>
         <li>
-          <a href="recruit.html">人才招聘</a>
+          <a href="price.html">产品价格</a>
+          <div class="nav-sub">
+            <a href="#">二级菜单</a>
+            <a href="#">二级菜单</a>
+          </div>
+        </li>
+        <li>
+          <a href="recruit-jobs.html">人才招聘</a>
           <div class="nav-sub-wrap"></div>
           <div class="nav-sub">
             <a href="#">二级菜单</a>
@@ -120,6 +125,7 @@ $.TabChange = function(obj,num){
 		<div class="header-tip hide-pc">
 			  <i class="nav-toggle"></i>
 		</div>
+		<i class="close-nav hide-pc">×</i>
 	</div>	
 </div>
 <!--//头部-->
@@ -445,6 +451,7 @@ $.TabChange = function(obj,num){
   </div>
   <!--//企业荣誉-->
 </div>
+<div class="mask"></div>
 <!-- 浮动层-->
 <div class="widget hide-mb">
   <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2957094485&amp;site=qq&amp;menu=yes" class="icon-w01">

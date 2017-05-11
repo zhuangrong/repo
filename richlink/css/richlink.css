@@ -89,6 +89,10 @@ em, h3 {
 .tc {
   text-align: center;
 }
+/*字体响应*/
+.fz{
+  font-size: .14rem;
+}
 /*hide and show*/
 .hide-mb {
 	display: block;
@@ -855,7 +859,6 @@ em, h3 {
 /*人才招聘*/
 .recruit-detail{
 	padding: .4rem .9rem;
-	font-size: .14rem;
   line-height: 1.8;
 }
 .btn{
@@ -1013,6 +1016,13 @@ em, h3 {
 	body{
 		font-size: .24rem;
 	}
+  .gallery-honor i.close{
+    font-size: 0.6rem;
+  }
+  /*字体响应*/
+  .fz{
+    font-size: .24rem;
+  }
 	.header,
 	.main{
 		width: auto;
@@ -1030,6 +1040,31 @@ em, h3 {
 	.hide-pc {
 		display: block;
 	}
+  .close-nav{
+    display: none;
+    font-style: normal;
+    position: absolute;
+    top: 0.9rem;
+    right: 0.5rem;
+    font-size: .6rem;
+    text-align: center;
+    color: #fff;
+    z-index: 9999999999;
+  }
+  /*导航*/
+  .nav li a{
+    position: relative;
+  }
+  .nav li.active a:after{
+    content: '';
+    position: absolute;
+    top: 0.8rem;
+    left: 50%;
+    margin-left: -.6rem;
+    height: 2px;
+    width: 1.2rem;
+    background-color: #f08200;
+  }
 	/*产品服务*/
 	.service{
 		background-color: #6D6D6D;
@@ -1133,14 +1168,26 @@ em, h3 {
 	
   /*查看大图*/
   .gallery-honor{
-    top: 1.3rem;
+    top: 0.7rem;
     margin-left: -3rem;
     width: 6rem;
     height: auto;
-    padding: .4rem .2rem .2rem;
+    padding: .7rem .2rem .2rem;
+    z-index: 99999;
+  }
+  .mask{
+    position: fixed;
+    content: '';
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
   }
   .gallery-employee{
-    top: 4.8rem;
+    top: 2.9rem;
   }
   /*国内网络*/
   .about-network .an-sub,
