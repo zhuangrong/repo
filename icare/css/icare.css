@@ -768,6 +768,7 @@ a:hover {
 .case-num span {
 	display: block;	
 	font-size: 48px;
+  font-weight: bold;
 }
 /*案例展示*/
 .case-list {
@@ -1356,6 +1357,7 @@ a:hover {
 .news-page a:hover,
 .news-page .current{
   color: #fff;
+  border:none;
 }
 
 
@@ -1405,6 +1407,7 @@ a:hover {
 .about-tool label{
   display: block;
   margin-bottom: .2rem;
+  font-size: 18px
 }
 .about-tool.about-bg{
   color: #fff;
@@ -1456,6 +1459,7 @@ a:hover {
   position: relative;
   font-size: .24rem;
   color: #DA391D;
+  font-weight: bold;
 }
 .case-intro h3:after{
   content: " ";
@@ -1464,7 +1468,7 @@ a:hover {
   left: 0;
   display: block;
   width: 0.18rem;
-  height: 1px;
+  height: 2px;
   background-color: #DA391D;
 }
 .case-intro span{
@@ -1510,7 +1514,10 @@ a:hover {
 	}
   .brand a{
       flex:0 0 33.333%
-   }
+  }
+  .about-tool label{
+    font-size: 12px
+  }
   /*案例详情页*/
   .banner-text{
     left: .2rem;
@@ -1900,7 +1907,20 @@ a:hover {
 		height: 450px;
 	}
   .bg02{
-    min-width: 1440px
+    min-width: 1280px
+  }
+  .company-wrap{
+    width: 792px;
+  }
+  .company-info{
+    margin-right: .38rem;
+  }
+  .company-info {
+    flex: 0 0 45%;
+  }
+  .message {
+    right: -3.8rem;
+    width: 4.0rem;
   }
 }
 
