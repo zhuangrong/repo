@@ -1,0 +1,12 @@
+$(function(){
+  //移动端-导航点击
+  $(".nav-toggle").on("click",function(){
+    if($(".nav").is(":visible")){
+      $(".nav").css('display','none')
+      $(this).text("首页")
+    }else{
+     $(".nav").css('display','block')
+      $(this).text("关闭")
+    }
+  })
+})

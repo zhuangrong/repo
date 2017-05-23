@@ -115,8 +115,8 @@ em, h3 {
 		width: 1200px;
 	}
 }
-
-/*--------------头部--------------*/
+/*--------------首页--------------*/
+/*头部*/
 .header-wrap {
 	background-color: #fff;
 }
@@ -167,21 +167,85 @@ i.icon-wx{
 i.icon-sina{
   background-position: -32px 0 ;
 }
-
 /*导航*/
 .nav {
 	display: block;
+	padding-bottom: 5px;
 }
 .nav a {
   position: relative;
   display: inline-block;
-  /* margin: 0 15px; */
+  margin: 0 15px;
   font-weight: bold;
   font-size: 14px;
   color: #0c0c0c;
 }
 .nav a.active {
 	color: #f1501a;
+}
+
+.header .nav-toggle{
+  display: none;
+}
+/*banner*/
+.banner {
+	z-index: -1;
+	width: 100%;
+	background-color: #ccc;
+}
+.swiper01 {
+	width: 100%;
+	height: 6.66rem;
+}
+.swiper01 .swiper-slide {
+	position: relative;
+	height: 6.66rem;
+	background-position: top center;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.banner-text{
+  text-align: center;
+  font-size: .5rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+.banner-text p.txt01{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.banner-text p.txt02{
+  padding: 10px;
+  width: 6rem;
+  margin: 0 auto;
+  background-color: rgba(255,153,0,0.5);
+  text-align: center;;
+  margin-bottom: 30px;
+  font-size: .45rem
+}
+.btn-outline{
+  display: block;
+  margin: 0 auto;
+  width: 175px;
+  line-height: 42px;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid  #fff;
+  font-size: 16px;
+}
+.btn-outline2{
+  display: block;
+  margin: 0 auto;
+  width: 175px;
+  line-height: 42px;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  background-color: #ED5E00;
+  border: 1px solid #fff;
+  font-size: 16px;
 }
 
 
@@ -193,7 +257,7 @@ i.icon-sina{
 	margin: 0 auto;
 	width: 1200px;
 }
-.banner {
+.banner-sub {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -394,6 +458,7 @@ i.icon-sina{
   /*头部*/
   .header {
     width: auto;
+    margin-top: 44px;
   }
   .header .logo ul{
     flex-flow: wrap;
@@ -416,12 +481,11 @@ i.icon-sina{
     flex:0 0 100%;
     text-align: center;
   }
-  
-  .tips{
+  .header .nav-toggle{
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     background-color: #F1501A;
     color: #fff;
     text-align: center;
@@ -430,12 +494,23 @@ i.icon-sina{
     width: 100%;
     z-index: 99999;
   }
+  .header .nav-toggle:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/tips.png);
+  }
   /*导航*/
   .nav {
     position: absolute;
     top: 44px;
     left: 0;
     right: 0;
+    display: none;
   }
   .nav a{
     display: block;
@@ -443,6 +518,7 @@ i.icon-sina{
     color: #fff;
     text-align: center;
     padding: .13rem 0;
+    margin: 0;
   }
   .nav a.active{
     color: #fff;
