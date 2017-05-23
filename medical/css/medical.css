@@ -788,6 +788,7 @@ i.icon-hospital03{
 .blog .blog-nav a:before{
 	content: '';
 	display: inline-block;
+	
 }
 .blog .blog-nav a:hover{
 	background-color: #000;
