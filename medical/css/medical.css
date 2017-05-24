@@ -412,7 +412,7 @@ i.icon-sina{
 .footer dl{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
-  flex:0 0 4.5rem;
+	flex: 0 0 25%;
 	text-align:left;
 	font-size: 12px;
 	padding-right: .6rem;
@@ -763,6 +763,9 @@ i.icon-hospital03{
 	background-color: #74CEE4 !important;
 }
 /*博客*/
+.blog{
+  margin-top: .8rem;
+}
 .blog ul{
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -788,10 +791,64 @@ i.icon-hospital03{
 .blog .blog-nav a:before{
 	content: '';
 	display: inline-block;
-	
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/dot02.png);
+	margin: 0 10px;
 }
 .blog .blog-nav a:hover{
 	background-color: #000;
+}
+.blog .blog-list ul{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: center;
+  justify-content: flex-start;
+}
+.blog .blog-list ul li{
+  flex: 0 0 -webkit-calc(25% - .1rem);
+	color: #808080;
+	margin-right: .1rem;
+	margin-bottom: .5rem;
+  text-align: center;
+}
+.blog .blog-list ul li:nth-child(4n){
+	margin-right: 0
+}
+.blog .blog-list ul li img{
+	border: 1px solid  #ccc;
+  padding: 3px;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+/*翻页*/
+.pages{
+  margin: .1rem 0 .3rem;
+}
+.pages span,
+.pages a{
+  display: inline-block;
+  width: 22px;
+  line-height: 22px;
+  margin: 0 3px;
+  text-align: center;
+  border: 1px solid  #666;
+  font-size: 14px;
+}
+.pages a:hover,
+.pages .current{
+  color: #fff;
+  border:none;
+  background-color: #666;
+}
+.pages .next,
+.pages .prev{
+  width: auto;
+  padding: 0 3px;
 }
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
@@ -801,18 +858,32 @@ i.icon-hospital03{
 	body{
 		font-size: .26rem;
 	}
-	/*医院*/
+	/*博客*/
+  .blog ul{
+    padding-bottom: 0;
+  }
+  .blog .blog-list{
+    padding: 0;
+  }
+  .blog .blog-list ul li{
+    flex: 0 0 -webkit-calc(50% - .1rem);
+  }
+  .blog .blog-list ul li:nth-child(2n){
+    margin-right: 0
+  }
 	/*医生*/
 	.doctor li:last-child{
 		padding-left: 0;
 		padding-top: .1rem;
 	}
 	/*骄傲*/
+  .blog ul,
 	.hospital,
 	.honor{
 		padding: 0 .2rem;
 		flex-flow: wrap
 	}
+  .blog li,
 	.hospital a,
 	.story a{
 		flex: 0 0 100%;
@@ -1006,13 +1077,33 @@ i.icon-hospital03{
 }
 
 /*-----------------------大于820-----------------------*/
-@media (min-width: 820px) and (max-width: 1420px){
+@media (min-width: 820px) {
 	.mid-w{
 		width: 930px;
 		margin: .5rem auto;
 	}
+  .scroll-top {
+    position: fixed;
+    right: 15px;
+    bottom: 25px;
+    width: 35px;
+    height: 35px;
+    transition: opacity 400ms ease;
+    z-index: 99;
+  }
+  .scroll-top:before {
+    content: '';
+    background-color: #ef4f19;
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-image: url(../images/scroll-top.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 17px;
+  }
+  
 }
-
 
 
 
