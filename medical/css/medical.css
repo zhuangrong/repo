@@ -954,11 +954,15 @@ i.icon-hospital03{
   margin:50px 0 10px;
   border-top:1px solid #ddd;
   border-bottom:1px solid #ddd;
-  display:flex;
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; /*左对齐*/
+	-webkit-box-align: center;
+	justify-content: space-between;
 }
 .social-tabs a{
-  flex:0 0 -webkit-calc(33.333%  - 10px);
-  margin-right: 10px;
+  flex:0 0 32%;
   text-align:center;
   padding:15px 0;
   color:#fff;
@@ -968,21 +972,253 @@ i.icon-hospital03{
 }
 .social-tabs a i{
   display:inline-block;
-  margin-left:10px;
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.social-tabs a.s-wx{
+  background-color:#00E600;
+}
+.social-tabs a.s-sina{
+  background-color:#EF4F19;
+}
+.social-tabs a.s-qq{
+  background-color:#15ABEB;
 }
 .social-tabs a.s-wx i{
-  background-color:#00E600;
   background-image: url(../images/icon-swx.png)
 }
 .social-tabs a.s-sina i{
-  background-color:#EF4F19;
   background-image: url(../images/icon-ssina.png)
 }
 .social-tabs a.s-qq i{
-  background-color:#15ABEB;
   background-image: url(../images/icon-sqq.png)
 }
+/*作者*/
+.artist{
+	margin-top: 100px;
+	position: relative;
+}
+.artist:after{
+	content: '作者：';
+	position: absolute;
+	top: -50px;
+	left: 0;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+}
+.artist ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.artist li:last-child{
+  webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  padding-left: .3rem;
+}
+.artist li h3{
+  font-size: 20px;
+	font-weight: bold;
+}
+.artist li h3 em{
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+  color: #aaa;
+  padding-top: .06rem;
+}
+.artist li p{
+  font-size: 14px;
+  color: #808080;
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+  line-height: 2.2;
+}
+.artist li span{
+  color: #EF4F19;
+}
+.artist li span:before{
+	content: 'Email';
+	display: inline-block;
+	margin-right: 10px;
+  color: #333;
+}
+/*留言*/
+.feedback{
+	padding-top: .5rem;
+	margin-top: .5rem;
+	border-top: 1px solid #ddd;
+}
+.feedback h3{
+	font-size: 16px;
+	font-weight: bold;
+}
+.feedback h3 span{
+	display: block;
+	float: right;
+	width: 24px;
+	line-height: 24px;
+	background-color: #D3D8DB;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+}
+.feedback textarea{
+	width: 100%;
+	margin-top: 10px;
+	min-height: 60px;
+	padding: 10px;
+	border: 1px solid  #aaa;
+}
+/*医生社区*/
+.doctor-bbs{
+	margin-top: .3rem;
+}
+.doctor-bbs > h3{padding-bottom: 10px;font-weight: bold;color: #EF4F19;}
 
+.doctor-bbs .comment-list{
+	padding: 5px;
+	background-color: #fff;
+}
+.doctor-bbs .comment-list .avatar{
+	display: inline-block;
+  width: 48px;
+  height: 48px;
+	border-radius: 50%;
+	background-color: #eee;
+	vertical-align:middle;
+}
+.doctor-bbs .comment-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 20px;
+	background-color: #fff;
+	border-top:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+}
+.doctor-bbs .comment-list .pic{
+	max-width: 90px;
+	max-height: 60px;
+}
+.doctor-bbs .comment-list .info{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	padding: 0 0 0 15px;
+}
+.doctor-bbs .comment-list .info h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.doctor-bbs .comment-list .info h3 em{
+	color: #aaa;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.doctor-bbs .comment-list .info p{
+	font-size: 14px;
+	color: #666;
+}
+.doctor-bbs .bbs-btn-wrap{
+	padding: 10px 10px 10px 30px;
+}
+.doctor-bbs .bbs-btn-wrap a{
+	display: inline-block;
+	margin: 0 10px;
+	color: #aaa;
+	font-size: 14px;
+	font-weight: bold;
+}
+.line{
+	margin: 50px 0 20px;
+	border-bottom: 1px solid #ddd;
+}
+.title-bg-sub{
+	font-size: 36px;
+	text-align: center;
+	font-weight: normal;
+	padding: 30px -0px;
+}
+/*常见问题*/
+.title-sub{
+	color: #fff;
+	line-height: 1.6rem;
+	font-size: 32px;
+	background-color: #F04A00;
+}
+.question{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.question .q-type{
+	width: 315px;
+}
+.question .q-con{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	padding: 0 0 0 100px;
+}
+.q-search{
+	padding-bottom: 20px;
+}
+.q-search input{
+	width: 100%;
+	line-height: 48px;
+	border: 1px solid  #aaa;
+	padding: 0 10px 0 50px;
+	background-image: url(../images/q-search.png);
+	background-size: 16px;
+	background-position: 20px center;
+}
+.q-type-list h3{
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+.q-type-list a{
+	display: block;
+	font-size: 16px;
+	padding: 15px 0;
+	border-bottom: 1px solid  #e5e5e5;
+}
+.q-type-list a.active{
+	color: #F14B00;
+}
+.q-type-list a i{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background-image: url(../images/q-type.png);
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.q-type-list a i.q-type2{
+	background-image: url(../images/q-type2.png);
+}
+.q-con h3{
+	font-size: 32px;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+.q-con dl{
+	margin-bottom: 20px;
+}
+.q-con dt{
+	color: #F14B00;
+	font-size: 18px;
+}
+.q-con dd{
+	padding: 8px 15px;
+	color: #666;
+	line-height: 1.8;
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
@@ -991,7 +1227,22 @@ i.icon-hospital03{
 	body{
 		font-size: .26rem;
 	}
-  
+	.title-sub{
+		font-size: 24px;
+		padding: 0 20px;
+	}
+/*	常见问题*/
+	.question .q-type{
+		width: 100%;
+	}
+	.question .q-con{
+		flex: 0 0 100%;
+		padding: 0 0 0 0;
+	}	
+	/*作者*/
+	.artist ul{
+		padding: 0 !important;
+	}
 	/*文章*/
   .article-wrap{
     width: auto;
@@ -1016,6 +1267,8 @@ i.icon-hospital03{
 		padding-top: .1rem;
 	}
 	/*骄傲*/
+	.question,
+	.artist ul,
   .blog ul,
 	.hospital,
 	.honor{
@@ -1036,6 +1289,7 @@ i.icon-hospital03{
 		padding: 0 .2rem;
 		flex-flow: wrap
 	}
+	.artist li,
 	.doctor li,
 	.honor a,
 	.story a{
