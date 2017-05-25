@@ -1046,7 +1046,7 @@ i.icon-hospital03{
 	content: 'Email';
 	display: inline-block;
 	margin-right: 10px;
-  color: #333;
+	color: #333;
 }
 /*留言*/
 .feedback{
@@ -1219,6 +1219,104 @@ i.icon-hospital03{
 	color: #666;
 	line-height: 1.8;
 }
+/*套餐页*/
+.hop{
+  margin-top: 0;
+}
+.hop:after{
+  content: none;
+}
+.hop span:before{
+  content: "联系电话:" !important;
+}
+.hop li p{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.hop li h3{
+  padding-bottom: 8px !important;
+}
+.hop ul{
+  padding: 30px 0 30px;
+  border-bottom: 1px solid #E5E5E5
+}
+/*医院*/
+.hop-show a h5{
+  background-image: url(../images/icon-location.png);
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: #aaa;
+}
+/*-----------团队--------------*/
+.team .swiper-slide{
+  text-align: center;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .3);
+  border: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.team .swiper-slide span {
+  display: block;
+  padding: 15px 0 0;
+}
+.team .swiper-slide span em{
+  color: #aaa;
+  display: block;
+  padding: 2px 0 15px;
+}
+.team .swiper-slide a{
+  display: block;
+  margin: 0 auto;
+  width: 112px;
+  line-height: 36px;
+  background-color: #EF4F19;
+  color: #fff;
+}
+.team .swiper-button-next,
+.team .swiper-button-prev{
+  top: 30px;
+  border:1px solid #d5d5d5;
+  width: .5rem;
+  height: .5rem;
+  background-color: #fff;
+  background-size: .25rem;
+}
+.team .swiper-button-prev{
+  left: auto;
+  right: .6rem;
+  background-image: url(../images/swiper-button-prev.png);
+}
+.team .swiper-button-next{
+  right:0;
+  background-image: url(../images/swiper-button-next.png);
+}
+.team .swiper-container{
+  padding-top:1.0rem
+}
+.team h3{
+  font-size: 32px;
+  margin-bottom: -.6rem;
+}
+.team-bg{
+  padding: .8rem 0;
+  margin: .8rem 0;
+  background-color: #FDF5E9;
+}
+/*专家团队*/
+.team-news .swiper-slide{
+  box-shadow: 0px 0 0 0px rgba(0, 0, 0, .3);
+  text-align: left;
+  font-size: 20px;
+  color: #EF4F19;
+  border: none;
+}
+.team-news .swiper-slide span{
+  font-size: 16px;
+  color: #333;
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
@@ -1228,9 +1326,30 @@ i.icon-hospital03{
 		font-size: .26rem;
 	}
 	.title-sub{
-		font-size: 24px;
+		font-size: 22px;
 		padding: 0 20px;
+    margin-bottom: .2rem;
 	}
+  .help-wrap{
+    margin-top: 20px;
+  }
+/*  团队*/
+  .team{
+    padding: 0 .2rem;
+  }
+  .team h3{
+    font-size: .4rem;
+    margin-top: .1rem;
+  }
+/*  套餐*/
+  
+  .hop ul{
+     margin-top: 20px;
+  }
+  .q-con h3{
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
 /*	常见问题*/
 	.question .q-type{
 		width: 100%;
