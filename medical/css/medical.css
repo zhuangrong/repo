@@ -270,6 +270,7 @@ i.icon-sina{
 	font-size: .48rem;
 	color: #fff;
   text-align: center;
+  text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
 }
 
 /*二级导航*/
@@ -369,6 +370,7 @@ i.icon-sina{
 	background-color: #EF4F19;
 	color: #fff;
 	font-size: 18px;
+  text-align: center;
 }
 .btn2{
 	display: block;
@@ -912,6 +914,13 @@ i.icon-hospital03{
   text-align: left;
   margin: .3rem 0;
 }
+.article ul,
+.article li{
+  list-style:disc;
+  text-align: left;
+  padding: 0 10px;
+  margin:0 20px;
+}
 .sign-name{
   text-align: right;
   margin: .5rem 0;
@@ -1254,7 +1263,7 @@ i.icon-hospital03{
 /*-----------团队--------------*/
 .team .swiper-slide{
   text-align: center;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .2);
   border: 1px solid #eee;
   padding-bottom: 20px;
 }
@@ -1317,6 +1326,120 @@ i.icon-hospital03{
   font-size: 16px;
   color: #333;
 }
+
+/*视频*/
+.video-show{
+	width: 7.6rem;
+	height: 4.3rem;
+	background-color: #000000;
+  margin-bottom: 20px;
+}
+.video-show video{
+	width: 7.6rem;
+	height: 4.3rem;
+}
+.icon-edit{
+  display: block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url(../images/icon-edit.png);
+  cursor: pointer;
+}
+.article-bg{
+  padding: .3rem 0;
+  background-color: #FDF3F3;
+  margin: .3rem 0;
+}
+
+/*-----------------预约-----------------*/
+.contact{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.contact .contact-type{
+	width: 370px;
+  background-color: #F14A00;
+  padding: 20px;
+  color: #fff;
+}
+.contact .contact-type h3{
+	font-size: 24px;
+	margin: 10px 0 20px;
+}
+.contact .contact-type dl{
+	margin-bottom: 26px;
+}
+.contact .contact-type dt{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	vertical-align: top;
+}
+.contact .contact-type dt.icon-contact01{
+	background-image: url(../images/icon-contact01.png);
+}
+.contact .contact-type dt.icon-contact02{
+	background-image: url(../images/icon-contact02.png);
+}
+.contact .contact-type dt.icon-contact03{
+	background-image: url(../images/icon-contact03.png);
+}
+.contact .contact-type dt.icon-contact04{
+	background-image: url(../images/icon-contact04.png);
+}
+.contact .contact-type dd{
+	display: inline-block;
+  padding-left: 10px;
+}
+.contact .contact-info{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	padding: 0 0 0 30px;
+}
+.contact .contact-info h3{
+	font-size: 24px;
+  margin: 30px 0;
+}
+.contact .contact-info li{
+	margin-bottom: 20px;
+  overflow: hidden;
+}
+.contact .contact-info input{
+	height: .5rem;
+  line-height: .5rem;
+  padding-left: .4rem;
+  padding-right: .2rem;
+  border:1px solid #aaa;
+  width: 100%;
+  background-size: .2rem;
+  background-position: .1rem center;
+}
+.contact .contact-info .icon-ipt01{
+	background-image: url(../images/icon-ipt01.png);
+}
+.contact .contact-info .icon-ipt02{
+  width: 49%;
+  float: left;
+	background-image: url(../images/icon-ipt02.png);
+}
+.contact .contact-info .icon-ipt03{
+  width: 49%;
+  float: right;
+	background-image: url(../images/icon-ipt03.png);
+}
+.contact .contact-info textarea{
+  padding: .1rem .2rem;
+  border:1px solid #aaa;
+  width: 100%;
+  height: 1rem;
+}
+.btn-contact{
+  
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
@@ -1330,6 +1453,13 @@ i.icon-hospital03{
 		padding: 0 20px;
     margin-bottom: .2rem;
 	}
+/*视频*/
+.video-show{
+	width: 100%;
+}
+.video-show video{
+	width: 100%;
+}
   .help-wrap{
     margin-top: 20px;
   }
