@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="apple-mobile-web-app-title" content="Title"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/medical.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script src="js/common.js"></script> 
+<script></script>
+<title>medical</title>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+
+<!--头部-->
+<div class="header-wrap">
+	<div class="header">
+		<div class="logo">
+		  <ul>
+		    <li>
+			    <a href="index.html"><img src="images/logo.png"></a>
+		    </li>
+		    <li>
+		       美国洛杉矶妇产医疗中心 <span>查尔斯医生 美国妇产科医学博士</span>
+		    </li>
+		    <li>
+		      <i class="icon-qq"></i>
+		      <i class="icon-wx"></i>
+		      <i class="icon-sina"></i>
+		    </li>
+		  </ul>
+		</div>
+		<div class="nav-toggle">首页</div>
+		<div class="nav">
+			<a href="index.html" class="active">首页</a>
+			<a href="#">生产专家</a>
+			<a href="#">生产故事</a>
+			<a href="#">套餐</a>
+			<a href="#">诊所与医院</a>	
+			<a href="#">博客</a>	
+			<a href="#">预约联系</a>	
+			<a href="#">常见问题</a>	
+		</div>
+	</div>	
+</div>
+<!--//头部-->
+<!--子页面标题-->
+<div class="title-sub">
+	<div class="main">关于芳谷医院</div>
+</div>
+<!--//子页面标题-->
+<div class="blank"></div>
+<!--医院介绍-->
+<div class="introduce main">
+  <div class="intro-info">
+     <h3>医院简介</h3>
+     <p>医院是集医疗、教学、科研于一体的大型三级甲等综合医院，是国家卫生计生委指定的全国疑难重症诊治指导中心，也是最早承担高干保健和外宾医疗任务的医院之一，以学科齐全、技术力量雄厚、特色专科突出、多学科综合优势强大享誉海内外。在2009-2015年度复旦大学医院管理研究所公布的“中国最佳医院排行榜”中连续七年名列榜首。</p>
+  	 <h5> “让青春烈火燃烧永恒，让生命闪电划过天空：</h5>
+  	 <ul>
+  	 	<li>我不是诗人，不能用漂亮的诗句讴歌我的职业!我不是诗人，不能用漂亮的诗句讴歌我的职业!我不是诗人，不能用漂亮的诗句讴歌我的职业!</li>
+  	 	<li>我不是诗人，不能用漂亮的诗句讴歌我的职业!我不是诗人，不能用漂亮的诗句讴歌我的职业!我不是诗人，不能用漂亮的诗句讴歌我的职业!</li>
+  	 </ul>
+  </div>
+  <div class="intro-pic">
+			<!--swiper-->
+			<div class="swiper-container gallery-top">
+							<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(images/intro-pic.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-pic.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-pic.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-pic.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-pic.jpg)"></div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next swiper-button-white"></div>
+							<div class="swiper-button-prev swiper-button-white"></div>
+					</div>
+					<div class="swiper-container gallery-thumbs">
+							<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(images/intro-thumb.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-thumb.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-thumb.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-thumb.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/intro-thumb.jpg)"></div>
+							</div>
+					</div>
+			<script>
+					var galleryTop = new Swiper('.gallery-top', {
+							nextButton: '.swiper-button-next',
+							prevButton: '.swiper-button-prev',
+							spaceBetween: 10,
+					});
+					var galleryThumbs = new Swiper('.gallery-thumbs', {
+							spaceBetween: 10,
+							centeredSlides: true,
+							slidesPerView: 'auto',
+							touchRatio: 0.2,
+							slideToClickedSlide: true
+					});
+					galleryTop.params.control = galleryThumbs;
+					galleryThumbs.params.control = galleryTop;
+
+					</script>
+      <!--//swiper-->
+  </div>
+</div>
+<!--//医院介绍-->
+<!--医院历史-->
+<div class="history-wrap">
+  <div class="main">
+		<h3>医院历史</h3>
+		<h5>二十多年来，以0事故，0误诊，得到美国妇产科医学界的认可。不仅如此，查尔斯一直保持着20多年来没有顺产转剖腹产的记录，剖腹产没有子宫摘除的记录，</h5>
+		<div class="his-step" id="tabs">
+			<ul>
+				<li>1970</li>
+				<li class="curr">1987</li>
+				<li>2002</li>
+				<li>Now</li>
+			</ul>
+		</div>
+		<div class="tab-box1">
+			<div style="display: none">1970</div>
+			<div>
+				<!--1987-->
+				<div class="years">
+					<ul>
+						<li>
+							<h3>1987年</h3>
+								<p>二十多年来，以0事故，0误诊，得到美国妇产科医学界的认可。不仅如此，查尔斯一直保持着20多年来没有顺产转剖腹产的记录，剖腹产没有子宫摘除的记录，在美国洛杉矶医生当中成为佼佼者。其剖腹产手术医术精湛，经验的丰富，是洛杉矶最权威的妇产科专家。剖腹产</p>
+								<p>二十多年来，以0事故，0误诊，得到美国妇产科医学界的认可。不仅如此，查尔斯一直保持着20多年来没有顺产转剖腹产的记录，剖腹产没有子宫摘除的记录，在美国洛杉矶医生当中成为佼佼者。其剖腹产手术医术精湛，经验的丰富，是洛杉矶最权威的妇产科专家。剖腹产</p>
+						</li>
+						<li>
+							<img src="images/years-pic.jpg" alt="">
+						</li>
+					</ul>
+				</div>
+				<!--//1987-->
+			</div>
+			<div style="display: none">2002</div>
+			<div style="display: none">Now</div>
+		</div>
+	</div>
+</div>
+<!--//医院历史-->
+<!--好评数-->
+<div class="summary">
+	<ul class="main">
+		<li>
+			<i class="icon-summary01"></i>
+			<span>355</span>
+			<p>好评数</p>
+		</li>
+		<li>
+			<i class="icon-summary02"></i>
+			<span>355</span>
+			<p>医生人数</p>
+		</li>
+		<li>
+			<i class="icon-summary03"></i>
+			<span>355</span>
+			<p>床位数</p>
+		</li>
+		<li>
+			<i class="icon-summary04"></i>
+			<span>355</span>
+			<p>获奖数</p>
+		</li>
+	</ul>
+</div>
+<!--//好评数-->
+<div class="intro-title">
+	国际化专家级的诊疗护理全能团队
+	<p>国际化专家级的诊疗护理全能团队国际化专家级的诊疗护理全能团队</p>
+</div>
+
+<!--团队-->
+<div class="team main intro-team">
+<!-- Swiper -->
+  <div class="swiper-container swiper05">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="images/user.png" alt="">
+              <span>
+                Dr. Charles<em>博士l&nbsp;&nbsp;专家主任</em>
+              </span>
+              <a href="#">在线咨询</a>
+          </div>
+          <div class="swiper-slide">
+              <img src="images/user.png" alt="">
+              <span>
+                Dr. Charles<em>博士l&nbsp;&nbsp;专家主任</em>
+              </span>
+              <a href="#">在线咨询</a>
+          </div>
+          <div class="swiper-slide">
+              <img src="images/user.png" alt="">
+              <span>
+                Dr. Charles<em>博士l&nbsp;&nbsp;专家主任</em>
+              </span>
+              <a href="#">在线咨询</a>
+          </div>
+          <div class="swiper-slide">
+              <img src="images/user.png" alt="">
+              <span>
+                Dr. Charles<em>博士l&nbsp;&nbsp;专家主任</em>
+              </span>
+              <a href="#">在线咨询</a>
+          </div>
+          <div class="swiper-slide">
+              <img src="images/user.png" alt="">
+              <span>
+                Dr. Charles<em>博士l&nbsp;&nbsp;专家主任</em>
+              </span>
+              <a href="#">在线咨询</a>
+          </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+  <!-- //Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper05', {
+        paginationClickable: true,
+        slidesPerView: 4,
+        spaceBetween: 50,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+            820: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            }
+        }
+    });
+   </script>
+</div>
+<!--//团队-->
+<div class="blank"></div>
+<!--底部-->
+<div class="footer">
+	<dl>
+		<dt>关于</dt>
+		<dd>美国洛杉矶妇产医疗中心，优质的医疗服务,优美的医疗环境,及昂贵的医疗费用,是拥有中文助理团队的美国白人医生，方便尔湾周边孕妇得到最优质的妇产生产医疗服务。</dd>
+	</dl>
+	<dl>
+		<dt>新闻发布</dt>
+		<dd>Created especially for you </dd>
+		<dd>October 1, 2</dd>
+		<dd>Awesome theme with endless possibilities. August 28, 2013 </dd>
+	</dl>
+	<dl>
+		<dt>联系方式</dt>
+		<dd><i class="icon-mail"></i>hello@jmsdfgs.com </dd>
+		<dd><i class="icon-phone"></i>1 888 22556 36 12</dd>
+		<dd><i class="icon-addr"></i>Little lomsale ST </dd>
+	</dl>
+	<dl>
+		<dt>最新资讯</dt>
+		<dd>孕期保健常见问题<span>发布日期:2017-05-02</span></dd>
+		<dd>切的坏处<span>发布日期:2017-05-12</span></dd>
+	</dl>
+	
+</div>
+<!--//底部-->
+</body>
+</html>
