@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="css/swiper2.7.6.css">
+<link rel="stylesheet" href="css/market.css">
+<script src="js/jquery.min.js"></script> 
+<title>market</title>
+</head>
+<body>
+<!--头部 -->
+<!--<div class="header-wrap">
+  <div class="header">
+    <a href="#" class="logo"><img src="images/logo.png"></a>
+    <ul class="nav-admin">
+      <li class="oem1">自主OEM</li>
+      <li class="oem2">快速OEM</li>
+      <li>
+        <span class="drop-down">
+          交易管理<i></i>
+          <div>
+            <a href="#">菜单项目</a>
+            <a href="#">菜单项目</a>
+            <a href="#">菜单项目</a>
+          </div>
+        </span>
+      </li>
+      <li>
+        <span class="drop-down">
+          帮助中心<i></i>
+          <div>
+            <a href="#">如何帮助</a>
+            <a href="#">如何帮助</a>
+            <a href="#">如何帮助</a>
+          </div>
+        </span>
+      </li>
+      <li><a href="#" class="c01">退出</a></li>
+    </ul>
+  </div>
+</div>-->
+<!--头部 -->
+<!--账户中心-->
+<div class="main">
+  <div class="f-box">
+    <h3>账户中心</h3>
+    <div class="cont">
+      <div class="t-table">
+        <table cellspacing="0" cellpadding="0" style="width: 450px">
+          <tr>
+            <td class="t-title">用户名：</td>
+            <td width="270"><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">邮箱：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">设置密码：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">确认密码：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//账户中心-->
+<!--新会员注册-->
+<div class="main">
+  <div class="f-box">
+    <h3>新会员注册</h3>
+    <div class="cont">
+      <div class="t-table">
+        <table cellspacing="0" cellpadding="0" style="width: 450px">
+          <tr>
+            <td class="t-title">公司名称：</td>
+            <td width="270"><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">公司所在地：</td>
+            <td class="multi-sel">
+              <!--三级联动-->
+              <select class="province sel">
+                  <option>请选择</option>
+              </select>
+              <select class="city sel">
+                  <option>请选择</option>
+              </select>
+              <select class="district sel">
+                  <option>请选择</option>
+              </select>
+              <script type="text/javascript">
+              $(function(){
+                  $(".multi-sel").each(function(){
+                      var url = "area.json";
+                      var areaJson;
+                      var temp_html;
+                      var oProvince = $(this).find(".province");
+                      var oCity = $(this).find(".city");
+                      var oDistrict = $(this).find(".district");
+                      //初始化省
+                      var province = function(){
+                          $.each(areaJson,function(i,province){
+                              temp_html+="<option value='"+province.p+"'>"+province.p+"</option>";
+                          });
+                          oProvince.html(temp_html);
+                          city();
+                      };
+                      //赋值市
+                      var city = function(){
+                          temp_html = ""; 
+                          var n = oProvince.get(0).selectedIndex;
+                          $.each(areaJson[n].c,function(i,city){
+                              temp_html+="<option value='"+city.ct+"'>"+city.ct+"</option>";
+                          });
+                          oCity.html(temp_html);
+                          district();
+                      };
+                      //赋值县
+                      var district = function(){
+                          temp_html = ""; 
+                          var m = oProvince.get(0).selectedIndex;
+                          var n = oCity.get(0).selectedIndex;
+                          if(typeof(areaJson[m].c[n].d) == "undefined"){
+                              oDistrict.css("display","none");
+                          }else{
+                              oDistrict.css("display","inline");
+                              $.each(areaJson[m].c[n].d,function(i,district){
+                                  temp_html+="<option value='"+district.dt+"'>"+district.dt+"</option>";
+                              });
+                              oDistrict.html(temp_html);
+                          };
+                      };
+                      //选择省改变市
+                      oProvince.change(function(){
+                          city();
+                      });
+                      //选择市改变县
+                      oCity.change(function(){
+                          district();
+                      });
+                      //获取json数据
+                      $.getJSON(url,function(data){
+                          areaJson = data;
+                          province();
+                      });
+                  });
+              });
+              </script>
+              <!--//三级联动-->
+            </td>
+          </tr>
+          <tr>
+            <td class="t-title">详细地址：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">营业执照号：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">营业执照：</td>
+            <td>
+              上传
+            </td>
+          </tr>
+          <tr>
+            <td class="t-title">部门职称：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">联系人姓名：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">联系人电话：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+          <tr>
+            <td class="t-title">短信验证码：</td>
+            <td><input type="text" class="ipt"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//新会员注册-->
+
+</body>
+</html>

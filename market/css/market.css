@@ -1,7 +1,9 @@
 @charset "utf-8";
 html {
+/*
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+*/
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -21,7 +23,8 @@ body {
   padding: 0;
   margin: 0;
   color: #404040;
-  font-size: 12px;
+  background-color: #F9F7FA;
+  font-size: 14px;
   line-height: 1.6;
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
 }
@@ -69,8 +72,10 @@ button, input {
   overflow: visible;
 }
 input[type="radio"], input[type="checkbox"] {
+/*
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+*/
 }
 input[type="radio"]:disabled, input[type="checkbox"]:disabled {
   cursor: not-allowed;
@@ -84,6 +89,8 @@ textarea {
 }
 em, h3 {
   font: inherit;
+  padding: 0;
+  margin: 0;
 }
 .c01 {
   color: #1764CB;
@@ -106,7 +113,7 @@ em, h3 {
   height: 73px;
   width: 906px;
   margin: 0 auto;
-  overflow: hidden;
+  font-size: 12px;
 }
 .header .logo{
   float: left;
@@ -150,6 +157,149 @@ em, h3 {
 	height:41px;
   background-image: url(../images/swiper-arrow.png);
 }
+
+/*----------------注册页----------------*/
+/*管理导航*/
+.nav-admin{
+  float: right;
+  margin-top: 30px;
+}
+.nav-admin li{
+  float: left;
+  margin: 0 10px;
+}
+.oem2,
+.oem1{
+  padding:2px 8px;
+  background-color: #EB6111;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+}
+.oem2{
+  color: #fff;
+  background-color: #888888;
+  
+}
+/*下拉菜单*/
+.drop-down{
+  display: block;
+  padding: 2px 5px;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+}
+.drop-down:hover div{
+  display: block;
+}
+.drop-down i{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-image: url(../images/select.png);
+  margin-left: 3px;
+}
+.drop-down div{
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: -1px;
+  width: 72px;
+  padding: 5px 11px;
+  background-color: #fff;
+  border: 1px solid  #ddd;
+}
+.drop-down div a{
+  display: block;
+  padding: 3px 0;
+}
+.main{
+  width: 906px;
+  margin: 20px auto 0;
+}
+/*表单*/
+.f-box{
+  border: 1px solid  #eee;
+  background-color: #fff;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+.f-box h3{
+  font-size: 16px;
+  color: #EB6111;
+  border-bottom: 1px solid  #eee;
+  height: 35px;
+  padding: 15px 0 0 25px;
+}
+.f-box .cont{
+  padding: 30px;
+  text-align: center;
+}
+
+.ipt{
+  width: 258px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid  #A0A0A0;
+  padding: 0 5px;
+}
+.ipt.sm{
+  w
+}
+/*表格*/
+.t-table{
+  text-align: center;
+}
+.t-table table{
+  margin: 0 auto;
+  table-layout: fixed
+}
+.t-table td{
+  padding: 10px 0;
+  text-align: left;
+}
+.t-table .t-title{
+  width: 100px;
+  padding-right: 10px;
+  text-align: right;
+  word-break: break-all
+}
+
+/*下拉框*/
+.sel{
+  width: 258px;
+  height: 32px;
+  height: auto\0;
+  line-height: 32px;
+  padding-left: 3px;
+  border: 1px solid  #A0A0A0;
+  background-image: url(../images/select.png);
+  background-position: 95% center;
+}
+.multi-sel .sel{
+  width: 81px;
+  width: 85px \0;
+  margin-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
