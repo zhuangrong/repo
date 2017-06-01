@@ -15,6 +15,10 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
+ul,li{
+  padding: 0;
+  margin: 0;
+}
 li {
   list-style: none;
 }
@@ -31,7 +35,7 @@ body {
 body, span, label, p, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input {
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 100%;
+  background-size: auto
 }
 a {
   color: #404040;
@@ -58,7 +62,7 @@ th {
 }
 input, button, select, optgroup, textarea {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 12px;
   -webkit-appearance: none;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -98,6 +102,12 @@ em, h3 {
 .tc {
   text-align: center;
 }
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
 /*----------------首页----------------*/
 .bg-idx{
   background-color: #000;
@@ -128,40 +138,22 @@ em, h3 {
   margin: 0 15px;
 }
 
-/*banner*/
-.banner{
-  min-width: 1280px;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
+
+/*导航*/
+.nav-before{
+  margin-top: 30px;
+  margin-left: 111px;
+  float: left;
 }
-/*swiper*/
-.banner .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.banner .swiper-slide {
-  text-align: center;
-  position: relative;
-}
-.banner .swiper-slide img{
-  margin: 0 auto;
-}
-/*箭头动画*/
-.scroll-tip{
-	position:absolute;
-	left:50%;
-	bottom:120px;
-	margin-left:-21px;
-	width:41px;
-	height:41px;
-  background-image: url(../images/swiper-arrow.png);
+.nav-before a{
+  display: block;
+  float: left;
+  margin: 0 12px;
 }
 
-/*----------------注册页----------------*/
-/*管理导航*/
+/*导航-登录后*/
 .nav-admin{
-  float: right;
+  float: left;
   margin-top: 30px;
 }
 .nav-admin li{
@@ -181,6 +173,11 @@ em, h3 {
   background-color: #888888;
   
 }
+.signOut,
+.signIn{
+  margin-top: 30px;
+  float: right;
+}
 /*下拉菜单*/
 .drop-down{
   display: block;
@@ -196,23 +193,53 @@ em, h3 {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-image: url(../images/select.png);
-  margin-left: 3px;
+  background-image: url(../images/drop-down.png);
+  margin-left: 5px;
 }
 .drop-down div{
   display: none;
   position: absolute;
   top: 23px;
   left: -1px;
-  width: 72px;
-  padding: 5px 11px;
+  width: 65px;
+  padding: 9px 9px;
   background-color: #fff;
   border: 1px solid  #ddd;
 }
 .drop-down div a{
   display: block;
-  padding: 3px 0;
+  padding: 5px 0;
 }
+.drop-down div a:hover{
+  color: #EB6111;
+}
+/*banner*/
+.banner-wrap{
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-position: center top;
+  background-size: auto
+}
+.banner{
+  width: 906px;
+  margin: 0 auto;
+  min-height: 500px;
+  color: #fff;
+  text-align: left;
+  line-height: 2.8
+}
+.banner h3{
+  font-size: 30px;
+  padding: 150px 0 30px 0;
+}
+.banner p{
+ margin: 0;
+ padding: 0;
+}
+
+/*----------------注册页----------------*/
+
 .main{
   width: 906px;
   margin: 20px auto 0;
@@ -236,15 +263,60 @@ em, h3 {
   text-align: center;
 }
 
+/*输入框、按钮*/
 .ipt{
   width: 258px;
-  height: 32px;
-  line-height: 32px;
+  height: 30px;
+  line-height: 30px;
   border: 1px solid  #A0A0A0;
   padding: 0 5px;
+  border-radius: 2px;
 }
 .ipt.sm{
-  w
+  width: 111px;
+}
+.ipt.mini{
+  width: 39px;
+}
+.ipt.rmb{
+  background-image: url(../images/rmb.png);
+  background-position: 5px center;
+  background-size: 12px;
+  padding-left: 20px;
+}
+.btn{
+  margin: 0 auto;
+  width: 240px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #EB6111;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn:hover{
+  color: #fff;
+}
+.btn.sm{
+  width: 108px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+}
+.btn.mini{
+  width: 45px;
+  height: 32px;
+  line-height: 32px;
+}
+.btn.alink{
+  display: block;
+}
+.texta{
+  width: 158px;
+  border: 1px solid  #A0A0A0;
+  padding: 5px;
+  border-radius: 2px;
 }
 /*表格*/
 .t-table{
@@ -259,28 +331,239 @@ em, h3 {
   text-align: left;
 }
 .t-table .t-title{
-  width: 100px;
+  width: 108px;
   padding-right: 10px;
   text-align: right;
   word-break: break-all
+}
+.t-table .td-padd{
+  padding-top: 50px;
+  text-align: center;
 }
 
 /*下拉框*/
 .sel{
   width: 258px;
-  height: 32px;
+  height: 30px;
   height: auto\0;
-  line-height: 32px;
+  padding-top:5px\0;
+  padding-bottom:5px\0;
+  line-height: 30px;
   padding-left: 3px;
   border: 1px solid  #A0A0A0;
   background-image: url(../images/select.png);
-  background-position: 95% center;
+  background-position: 96% center;
 }
 .multi-sel .sel{
   width: 81px;
   width: 85px \0;
   margin-right: 3px;
 }
+.sel.sm{
+  width: 118px;
+}
+/*底部*/
+.footer{
+  text-align: center;
+  padding: 50px 0;
+  font-size: 12px;
+}
+.padd-ckb{
+  padding-left: 130px !important;
+}
+/*多选框*/
+.check:checked,
+.check{
+	background-image:url(../images/check.png);
+	background-repeat:no-repeat;
+}
+.check {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	vertical-align: middle;
+	outline: 0;
+	-webkit-appearance:none;
+}
+.check{
+	background-position: 0 0;
+}
+.check:checked{
+	background-position: 0 -16px;
+}
+
+
+/*----------------登录----------------*/
+.bgw{
+  background-color: #fff;
+}
+.login-wrap{
+  width: 906px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url(../images/login-bg.png);
+  background-position: 0 50px;
+  background-size: 555px auto
+}
+.login{
+  width: 260px;
+  height: 310px;
+  padding: 20px;
+  border: 1px solid  #A0A0A0;
+  background-color: #fff;
+  float: right;
+  margin-top: 35px;
+}
+.login .lg-tab{
+  overflow: hidden;
+}
+.login .lg-tab li{
+  float: left;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 16px;
+  width: 42%;
+  cursor: pointer;
+}
+.login .lg-tab li.line{
+  border-right: 1px solid  #a0a0a0;
+}
+.login .lg-tab li.curr{
+  color: #EB6111;
+}
+.login .lg-con{
+  padding-top: 25px;
+}
+.login .lg-con li{
+  padding: 8px 0;
+  margin: 0;
+}
+.login .lg-con .inb .btn{
+  width: 100%;
+}
+.login .lg-con .forget label{
+  float: left;
+}
+.login .lg-con .forget a{
+  float: right;
+}
+.login .ipt{
+  background-size: 22px;
+  background-position: 10px center;
+  padding-left: 40px;
+  width: 210px;
+}
+.login .lg01{
+  background-image: url(../images/icon-login01.png);
+}
+.login .lg02{
+  background-image: url(../images/icon-login02.png);
+}
+.login .lg03{
+  background-image: url(../images/icon-login03.png);
+}
+
+/*图片验证码*/
+.auth-wrap{
+  position: relative;
+}
+.auth-code{
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  width: 108px;
+  height: 20px;
+  background-color: #fff;
+}
+.auth-code a{
+  color: #888;
+}
+.auth-code a{
+  color: #888;
+  margin-left: 8px;
+}
+.pic-bd{
+  float: left;
+  border: 1px solid  #A0A0A0;
+}
+
+/*忘记密码*/
+.login-psw-wrap{
+  width: 906px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.login-psw{
+  width: 263px;
+  margin: 70px auto 0;
+}
+.login-psw h3{
+  color: #EB6111;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+.login-psw li{
+  padding: 6px 0;
+  width: 273px;
+}
+.login-psw li.inb .btn{
+  width: 100%;
+}
+
+/*图片展示*/
+.pic-show{
+  width: 906px;
+  margin: 10px auto 0;
+  overflow: hidden;
+}
+.pic-show a{
+  width: 218px;
+  height: 370px;
+  display: block;
+  float: left;
+  margin-right: 8px;
+  border: 1px solid  #eee;
+  background-color: #fff;
+}
+.pic-show a:hover{
+  border: 1px solid  #eb6111;
+  color: inherit;
+}
+
+.pic-show h3{
+  padding: 10px;
+  color: #eb6111;
+  font-size: 20px;
+  font-weight: bold;
+}
+.pic-show p{
+  padding: 0 10px;
+}
+.pic-show i{
+  height: 16px;
+  display: block;
+  background-image: url(../images/icon-fav.png);
+  background-position: 0 -16px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-style: normal;
+  padding-left: 20px;
+  font-size: 12px;
+}
+.pic-show i.faved{
+  background-position: 0 0;
+}
+.btn-wrap{
+  text-align: center;
+  padding: 30px 0;
+}
+.last-pic{
+  margin-right: 0 !important;
+}
+
+
 
 
 

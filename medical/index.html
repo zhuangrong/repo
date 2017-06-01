@@ -13,6 +13,12 @@
 <script src="js/swiper.min.js"></script> 
 <script src="js/common.js"></script> 
 <title>medical</title>
+<style>
+.swiper01 .swiper-pagination-bullet {
+	width: 0.2rem !important;
+	height: 0.2rem !important;
+}
+</style>
 </head>
 <body>
 <!--头部-->
@@ -70,9 +76,12 @@
 							</div>
 					</div>
 			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination sp1"></div>
 	</div>
 	<script>
 		var swiper = new Swiper('.swiper01', {
+          pagination: '.sp1',
 					paginationClickable: true,
           autoplay:2000,
           effect: 'fade'
