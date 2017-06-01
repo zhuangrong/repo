@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="css/swiper2.7.6.css">
+<link rel="stylesheet" href="css/market.css">
+<script src="js/jquery.min.js"></script>
+<title>market</title>
+</head>
+<body>
+<!--头部 -->
+<div class="header-wrap">
+  <div class="header"> <a href="#" class="logo"><img src="images/logo.png"></a>
+    <div class="nav-before"> <a href="index-company.html">公司介绍</a> <a href="index-wine.html">葡萄酒介绍</a> <a href="index-house.html">酒庄介绍</a> <a href="#">帮助中心</a> </div>
+    <ul class="nav-admin hide">
+      <li class="oem1">自主OEM</li>
+      <li class="oem2">快速OEM</li>
+      <li> <span class="drop-down"> 交易管理<i></i>
+        <div> <a href="#">账号管理</a> <a href="#">资料管理</a> <a href="#">我的订单</a> </div>
+        </span> </li>
+    </ul>
+    <div class="signIn"><a href="login.html">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.html" class="c01">注册</a></div>
+    <div class="signOut hide"><a href="#" class="c01">退出</a></div>
+  </div>
+</div>
+<!--头部 --> 
+<!--账户中心-->
+<div class="main">
+  <div class="f-box"> 
+    <!--向导-->
+    <div class="guide g02">
+      <ul>
+        <li><em>1</em> 选择酒浆</li>
+        <li><em>2</em> 选择物料和数量</li>
+        <li><em>3</em> 定制酒标设计</li>
+      </ul>
+    </div>
+    <!--//向导-->
+    <div class="bd-table tdtc">
+        <h3  style="width: 670px">已选酒浆：</h3>
+        <table cellspacing="0" cellpadding="0" style="width: 670px">
+          <tr>
+            <th>国家</th>
+            <th>产地</th>
+            <th>等级</th>
+            <th>类型</th>
+            <th>品种</th>
+            <th>年份</th>
+            <th>容量</th>
+            <th>酒精度数</th>
+            <th rowspan="2"  class="bgn"><a href="#">修改</a></th>
+          </tr>
+          <tr>
+            <td>法国</td>
+            <td>波多尔</td>
+            <td>1级</td>
+            <td>干红</td>
+            <td>起泡葡萄酒</td>
+            <td>82年</td>
+            <td>800ml</td>
+            <td>13度</td>
+          </tr>
+        </table>
+    </div>
+    <div class="bd-table tdtc">
+        <h3  style="width: 670px">已选物料：</h3>
+        <table cellspacing="0" cellpadding="0" style="width: 670px">
+          <tr>
+            <th>酒瓶</th>
+            <th>酒帽</th>
+            <th>酒塞</th>
+            <th>酒箱</th>
+            <th>酒标</th>
+            <th>定制数量</th>
+            <th rowspan="2"  class="bgn"><a href="#">修改</a></th>
+          </tr>
+          <tr>
+            <td>普通波多尔瓶</td>
+            <td>红色</td>
+            <td>红色、实木、花纹</td>
+            <td>木箱</td>
+            <td>雅白纸、烫金</td>
+            <td>1000</td>
+          </tr>
+        </table>
+    </div>
+    
+  </div>
+</div>
+<!--//账户中心-->
+<!--定制-->
+<div class="main">
+	<div class="f-box">
+		<div class="cont">
+			<div class="t-table">
+				<table cellspacing="0" cellpadding="0" style="width: 350px">
+					<tr>
+						<td class="t-title">品名（中文）：</td>
+						<td width="270">
+							<input type="text" class="ipt sm">
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">品名（英文）：</td>
+						<td width="270">
+							<input type="text" class="ipt sm">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="f-box">
+		<div class="cont">
+			<div class="t-table">
+				<table cellspacing="0" cellpadding="0" style="width: 350px">
+					<tr>
+						<td colspan="2">酒标设计（三选一）：</td>
+					</tr>
+					<tr>
+						<td class="t-title">自主上传：</td>
+						<td width="270">
+							上传
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">现有酒标：</td>
+						<td width="270">
+							上传
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">在线生成：</td>
+						<td width="270">
+							上传
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="f-box">
+		<div class="cont">
+			<div class="t-table">
+				<table cellspacing="0" cellpadding="0" style="width: 350px">
+					<tr>
+						<td class="t-title">收货地址：</td>
+						<td width="270">
+							<input type="text" class="ipt sm">
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">付款方式：</td>
+						<td width="270">
+							<select class="sel sm">
+									<option>请选择</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">物流方式：</td>
+						<td width="270">
+							<select class="sel sm">
+									<option>请选择</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">其他备注(选填)：</td>
+						<td width="270">
+							<textarea name="" class="texta"></textarea>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="total-price">
+	<ul>
+		<li>代理费用：<span>10000元</span></li>
+		<li>当前组合单价：<span>16</span>/瓶</li>
+		<li>数量：<span>16</span>/瓶</li>
+		<li>总价：<span>10000元</span></li>
+	</ul>
+</div>
+<!--//定制-->
+<div class="btn-wrap">
+  <button class="btn">查看代理协议</button>
+  <div style="padding-top: 10px"><button class="btn">提交代理协议</button></div>
+</div>
+<!--底部-->
+<div class="footer"> ©邻家集市  2017-2067  linjiajishi.com All  Reserved </div>
+<!--//底部-->
+</body>
+</html>
