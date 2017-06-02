@@ -23,16 +23,18 @@ function tools(){
 	var top=$(document).scrollTop(); 
 	if(top > 300){
 		$("#article-nav").addClass("an-float"); 
+		$("#top").addClass("float-h"); 
 	}
 	if(top <= 300){
 		$("#article-nav").removeClass("an-float"); 
+		$("#top").removeClass("float-h"); 
 	}
 }
 </script>
 </head>
 <body>
 <!--头部-->
-<div class="header-wrap">
+<div class="header-wrap" id="top">
 	<div class="header">
 		<div class="logo">
 		  <ul>
@@ -69,7 +71,7 @@ function tools(){
 </div>
 <!--//子页面标题-->
 <div class="blank"></div>
-<div class="article-wrap" style="position: relative">
+<div class="article-wrap" style="position: relative;">
   <!--锚点-->
   <div class="article-nav" id="article-nav">
     <ul>

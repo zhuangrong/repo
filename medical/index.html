@@ -19,6 +19,21 @@
 	height: 0.2rem !important;
 }
 </style>
+<script>
+$(function(){
+	window.onscroll=tools; 
+})
+//浮动导航
+function tools(){
+	var top=$(document).scrollTop(); 
+	if(top > 300){
+		$("#top").addClass("float-h"); 
+	}
+	if(top <= 300){
+		$("#top").removeClass("float-h"); 
+	}
+}
+</script>
 </head>
 <body>
 <!--头部-->
