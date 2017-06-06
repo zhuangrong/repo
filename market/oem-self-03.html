@@ -3,10 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<link rel="stylesheet" href="css/swiper2.7.6.css">
 <link rel="stylesheet" href="css/market.css">
 <script src="js/jquery.min.js"></script>
 <title>market</title>
+<script>
+$(function(){
+	
+	//参赛图片上传
+	$('#img2').change(function() {
+			var file = this.files[0];
+			var r = new FileReader();
+			r.readAsDataURL(file);
+			$(r).load(function() {
+				  if($('#photo2 > div').length == 1){
+						$("#pic-load").css("left","130px")
+					}
+					$('#photo2').show();
+					$('#photo2').append('<div><img src="' + this.result + '" /><i class="del">×</i></div>');
+			})
+	})
+	//删除
+	$(document).on("click", ".del", function(){
+		 $(this).parent().remove();
+	})
+	
+  //点击添加图片
+	$("#plus").on("click",function(){
+			$(".mask-pop").fadeIn(300)
+		  $("#wine-pop").fadeIn(200);
+	})
+	
+	//选中酒标
+	$("#jb-list li").each(function(){
+		$(this).click(function(){
+			 $(this).addClass("active").siblings().removeClass("active")
+		})
+	})
+
+})
+
+</script>
 </head>
 <body>
 <!--头部 -->
@@ -116,7 +152,7 @@
 					</tr>
 					<tr>
 						<td class="t-title">品名（英文）：</td>
-						<td width="270">
+						<td>
 							<input type="text" class="ipt sm">
 						</td>
 					</tr>
@@ -129,18 +165,46 @@
 			<div class="t-table">
 				<table cellspacing="0" cellpadding="0" style="width: 350px">
 					<tr>
-						<td colspan="2">酒标设计（三选一）：</td>
+						<td colspan="2" width="350">酒标设计（三选一）：</td>
 					</tr>
 					<tr>
-						<td class="t-title">自主上传：</td>
+						<td class="t-title td-up">自主上传：</td>
 						<td width="270">
-							上传
+						<!--图片上传-->
+							<div class="upload-wrap">
+									<input id="img2" class="btn-file" type="file" accept="image/*">
+							</div>
+							<div class="upload-list photo" id="photo2">
+								
+							</div>
+						<!--图片上传-->
 						</td>
 					</tr>
 					<tr>
 						<td class="t-title">现有酒标：</td>
-						<td width="270">
-							上传
+						<td>
+							<button class="btn-plus" id="plus"></button>
+							<!--弹出层-->
+							<div class="wine-pop">
+							  <i class="close"></i>
+							  <div class="jb-list" id="jb-list">
+									<ul>
+										<li class="active" style="background-image: url(images/jb01.jpg)"></li>
+										<li style="background-image: url(images/jb02.jpg)"></li>
+										<li style="background-image: url(images/jb03.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+										<li style="background-image: url(images/jb03.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+										<li style="background-image: url(images/jb02.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<button class="btn">预览</button>
+									<button class="btn">确定</button>
+								</div>
+							</div>
+							<!--//弹出层-->
 						</td>
 					</tr>
 					<tr>
