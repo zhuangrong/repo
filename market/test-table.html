@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="css/market.css">
+<script src="js/jquery.min.js"></script>
+<title>market</title>
+
+</head>
+<body>
+  
+<div class="t-table">
+				<table cellspacing="0" cellpadding="0" style="width: 388px; table-layout: auto">
+					<tr>
+						<td colspan="2">酒标设计（三选一）：</td>
+					</tr>
+					<tr>
+						<td class="t-title td-up">自主上传：</td>
+						<td width="270">
+						<!--图片上传-->
+							<div class="upload-wrap">
+									<input id="img2" class="btn-file" type="file" accept="image/*">
+							</div>
+							<div class="upload-list photo" id="photo2">
+								
+							</div>
+						<!--图片上传-->
+						</td>
+					</tr>
+					<tr>
+						<td class="t-title">现有酒标：</td>
+						<td id="w-logo">
+							<button class="btn-plus" id="plus"></button>
+							<div class="wine-logo" style="display: none">
+                 <i class="del-logo">×</i>
+							   <img src="images/jb02.jpg" id="wine-logo">
+							</div>
+							<!--弹出层-->
+							<div class="wine-pop" id="jb-pop">
+							  <i class="close" id="jb-close"></i>
+							  <div class="jb-list" id="jb-list">
+									<ul>
+										<li style="background-image: url(images/jb01.jpg)"></li>
+										<li style="background-image: url(images/jb02.jpg)"></li>
+										<li style="background-image: url(images/jb03.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+										<li style="background-image: url(images/jb03.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+										<li style="background-image: url(images/jb02.jpg)"></li>
+										<li style="background-image: url(images/jb04.jpg)"></li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<button class="btn" id="preview">预览</button>
+									<button class="btn" id="confirm">确定</button>
+								</div>
+							</div>
+							<!--//弹出层-->
+							<!--//预览-->
+              <div class="wine-pop preview-pop" id="preview-pop">
+                 <i class="close" id="preview-close"></i>
+                 <div class="jb-list tc">
+                   <img src="img" id="preview-logo" class="preview-img">
+                 </div>
+								 <div class="btn-wrap">
+									<button class="btn" id="preview-confirm">确定</button>
+								 </div>
+              </div>
+							<!--//预览-->
+							<div class="mask-pop"></div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="btn">在线生成酒标</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+</body>
+</html>
