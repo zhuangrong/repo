@@ -455,7 +455,7 @@ i.icon-sina{
   display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center; 
+	-webkit-align-items: flex-start; 
 	-webkit-box-align: center;
 	justify-content: center;
 }
@@ -1903,12 +1903,13 @@ i.icon-hospital03{
 		padding: 0 .2rem;
 	}
 	.plan ul{
-		flex-flow: wrap
+		flex-flow: wrap;
+    
 	}
 	.plan ul li{
-		flex: 0 0 100%;
-		margin-right: 0;
-		margin-bottom: 0.45rem;
+    flex: 0 0 -webkit-calc(50% - .25rem);
+    margin-right: .25rem;
+    margin-bottom: 0.45rem;
 	}
 	.plan ul li h3{
 		height: auto;
