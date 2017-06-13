@@ -455,7 +455,7 @@ i.icon-sina{
   display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center; 
+	-webkit-align-items: flex-start; 
 	-webkit-box-align: center;
 	justify-content: center;
 }
@@ -1160,7 +1160,6 @@ i.icon-hospital03{
 	line-height: 1.6rem;
 	font-size: 32px;
 	background-color: #F04A00;
-  padding-left: 20px;
 }
 .question{
 	display: -webkit-box;
@@ -1651,8 +1650,8 @@ i.icon-hospital03{
 }
 .team .swiper-button-next,
 .team .swiper-button-prev{
-	/*top:auto;
-	bottom: 0;*/
+	top:auto;
+	bottom: 0;
 }
 
 /*---------update 20170602---------*/
@@ -1678,60 +1677,26 @@ i.icon-hospital03{
   left:-webkit-calc(50% - 600px)
 }
 .article-nav li{
-  padding-left: 25px;
+  padding-left: 20px;
   background-image: url(../images/anchor.png);
   background-position: 0 center;
-  margin-bottom: 36px;
-  background-size: 18px;
+  margin-bottom: 10px;
+  background-size: 10px;
   font-size: 14px;
   position: relative;
 }
-.article-nav li.active,
 .article-nav li:hover{
   background-image: url(../images/anchor-active.png);
 }
-.article-nav li.active a,
-.article-nav li:hover a{
-  color: #EF4F19 !important;
-}
 .article-nav li:not(:last-child):after{
   position: absolute;
-  top: 19px;
-  left: 8px;
+  top: 16px;
+  left: 4px;
   content: '';
   display: block;
-  width: 2px;
-  height: 43px;
-  background-color: #EF4F19;
-}
-.article-nav ul{
-  position: relative;
-  margin-top: 45px;
-}
-.article-nav ul:after{
-  content: '目录';
-  position: absolute;
-  top: -55px;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  line-height: 15px;
-  border-radius: 50%;
-  background-color: #EF4F19;
-  text-indent: 25px;
-  color: #EF4F19;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-weight: bold;
-}
-.article-nav ul:before{
-  content: '';
-  position: absolute;
-  top: -40px;
-  left: 8px;
-  width: 2px;
-  height: 43px;
-  background-color: #EF4F19;
+  width: 1px;
+  height: 24px;
+  background-color: #ddd;
 }
 .an-float{
   position: fixed;
@@ -1938,12 +1903,13 @@ i.icon-hospital03{
 		padding: 0 .2rem;
 	}
 	.plan ul{
-		flex-flow: wrap
+		flex-flow: wrap;
+    
 	}
 	.plan ul li{
-		flex: 0 0 100%;
-		margin-right: 0;
-		margin-bottom: 0.45rem;
+    flex: 0 0 -webkit-calc(50% - .25rem);
+    margin-right: .25rem;
+    margin-bottom: 0.45rem;
 	}
 	.plan ul li h3{
 		height: auto;
@@ -2154,11 +2120,7 @@ i.icon-hospital03{
 		right: 0;
 		height: 80px;
 	}
-  /*------2017-06-13------*/
-  .bdw{
-    margin: 0 auto;
-	  width: 1200px;
-  }
+	
 }
 
 
