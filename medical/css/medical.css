@@ -1776,7 +1776,49 @@ i.icon-hospital03{
   transform: rotate3d(0, 0, 1, 180deg);
 }
 
-
+/*---------update 20170614---------*/
+.team2 ul{
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+  flex-wrap: wrap;
+	-webkit-align-items: center; 
+	-webkit-box-align: center;
+	justify-content: space-between;
+}
+.team2 li{
+  flex: 0 0 -webkit-calc(25% - .2rem);
+  text-align: center;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .2);
+  border: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-right: .2rem;
+  margin-bottom: .2rem;
+}
+.team2 li:nth-child(4n){
+  margin-right: 0;
+}
+.team2 li span {
+  display: block;
+  padding: 15px 0 0;
+}
+.team2 li span em{
+  color: #aaa;
+  display: block;
+  padding: 2px 0 15px;
+}
+.team2 li a{
+  display: block;
+  margin: 0 auto;
+  width: 112px;
+  line-height: 36px;
+  background-color: #EF4F19;
+  color: #fff;
+}
+.team2 h3{
+  font-size: .32rem;
+  margin-bottom: -.6rem;
+}
 /*-----------------------mobile 小于820px-----------------------*/
 @media (max-width: 820px) {
 	html {
@@ -1785,6 +1827,9 @@ i.icon-hospital03{
 	body{
 		font-size: .26rem;
 	}
+  .team2 li{
+    flex: 0 0 -webkit-calc(50% - .2rem);
+  }
   /*文章浮动*/
   .an-float,
   .article-nav{
