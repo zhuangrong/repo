@@ -31,10 +31,10 @@ $(function(){
   })
   // 切换新闻类型mobile
   $("#news-tabs > div").each(function(i){
-       $(this).on("click",function(){
-          $(this).addClass("active").siblings().removeClass("active");
-          $(".news-type > div").eq(i).addClass("news-mb").siblings().removeClass("news-mb");
-       })
+     $(this).on("click",function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".news-type > div").eq(i).addClass("news-mb").siblings().removeClass("news-mb");
+     })
   }) 
 })
 </script>

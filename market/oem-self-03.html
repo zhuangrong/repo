@@ -9,7 +9,7 @@
 <script>
 $(function(){
 	
-	//参赛图片上传
+	//---------------参赛图片上传
 	$('#img2').change(function() {
 			var file = this.files[0];
 			var r = new FileReader();
@@ -27,21 +27,53 @@ $(function(){
 		 $(this).parent().remove();
 	})
 	
-  //点击添加图片
+  //弹出层------------------点击加号
 	$("#plus").on("click",function(){
 			$(".mask-pop").fadeIn(300)
-		  $("#wine-pop").fadeIn(200);
+		  $("#jb-pop").fadeIn(200);
 	})
 	
-	//选中酒标
+	//弹出层-选中酒标
+  var imgSrc = ""
 	$("#jb-list li").each(function(){
 		$(this).click(function(){
 			 $(this).addClass("active").siblings().removeClass("active")
+       var str = $(this).css('backgroundImage');
+       imgSrc = str.substring(str.lastIndexOf("/")+1,str.length-2);
 		})
 	})
-
-})
-
+  
+  //弹出层-点击确定
+  $("#confirm").on("click",function(){
+    $(".mask-pop").hide()
+		$("#jb-pop").hide();
+    $(".wine-logo").css({display: "inline-block"})
+    $("#wine-logo").attr("src", "images/" + imgSrc)
+  })
+  
+  //酒标层-关闭
+  $("#jb-close").on("click",function(){
+    $(".mask-pop").hide()
+    $("#jb-pop").hide()
+  })
+  
+  //酒标缩略图-隐藏
+	$(document).on("click", ".del-logo", function(){
+		 $(this).parent().hide();
+	})
+  
+	//弹出------------------预览层
+	$("#preview").on("click",function(){
+		$("#preview-pop").fadeIn(200);
+    $("#preview-logo").attr("src", "images/" + imgSrc)
+    
+  })
+  
+  //预览层-确定和关闭
+  $("#preview-confirm, #preview-close").on("click",function(){
+    $("#preview-pop").hide()
+  })
+}) 
 </script>
 </head>
 <body>
@@ -143,7 +175,7 @@ $(function(){
 	<div class="f-box">
 		<div class="cont">
 			<div class="t-table">
-				<table cellspacing="0" cellpadding="0" style="width: 350px">
+				<table cellspacing="0" cellpadding="0" style="width: 388px; table-layout: auto">
 					<tr>
 						<td class="t-title">品名（中文）：</td>
 						<td width="270">
@@ -163,9 +195,9 @@ $(function(){
 	<div class="f-box">
 		<div class="cont">
 			<div class="t-table">
-				<table cellspacing="0" cellpadding="0" style="width: 350px">
+				<table cellspacing="0" cellpadding="0" style="width: 388px; table-layout: auto">
 					<tr>
-						<td colspan="2" width="350">酒标设计（三选一）：</td>
+						<td colspan="2">酒标设计（三选一）：</td>
 					</tr>
 					<tr>
 						<td class="t-title td-up">自主上传：</td>
@@ -182,14 +214,18 @@ $(function(){
 					</tr>
 					<tr>
 						<td class="t-title">现有酒标：</td>
-						<td>
+						<td id="w-logo">
 							<button class="btn-plus" id="plus"></button>
+							<div class="wine-logo" style="display: none">
+                 <i class="del-logo">×</i>
+							   <img src="images/jb02.jpg" id="wine-logo">
+							</div>
 							<!--弹出层-->
-							<div class="wine-pop">
-							  <i class="close"></i>
+							<div class="wine-pop" id="jb-pop">
+							  <i class="close" id="jb-close"></i>
 							  <div class="jb-list" id="jb-list">
 									<ul>
-										<li class="active" style="background-image: url(images/jb01.jpg)"></li>
+										<li style="background-image: url(images/jb01.jpg)"></li>
 										<li style="background-image: url(images/jb02.jpg)"></li>
 										<li style="background-image: url(images/jb03.jpg)"></li>
 										<li style="background-image: url(images/jb04.jpg)"></li>
@@ -200,11 +236,23 @@ $(function(){
 									</ul>
 								</div>
 								<div class="btn-wrap">
-									<button class="btn">预览</button>
-									<button class="btn">确定</button>
+									<button class="btn" id="preview">预览</button>
+									<button class="btn" id="confirm">确定</button>
 								</div>
 							</div>
 							<!--//弹出层-->
+							<!--//预览-->
+              <div class="wine-pop preview-pop" id="preview-pop">
+                 <i class="close" id="preview-close"></i>
+                 <div class="jb-list tc">
+                   <img src="img" id="preview-logo" class="preview-img">
+                 </div>
+								 <div class="btn-wrap">
+									<button class="btn" id="preview-confirm">确定</button>
+								 </div>
+              </div>
+							<!--//预览-->
+							<div class="mask-pop"></div>
 						</td>
 					</tr>
 					<tr>
@@ -219,7 +267,7 @@ $(function(){
 	<div class="f-box">
 		<div class="cont">
 			<div class="t-table">
-				<table cellspacing="0" cellpadding="0" style="width: 350px">
+				<table cellspacing="0" cellpadding="0" style="width: 388px; table-layout: auto">
 					<tr>
 						<td class="t-title">收货地址：</td>
 						<td width="270">

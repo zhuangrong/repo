@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>tiger</title>
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<link rel="stylesheet" href="css/tiger.css"> 
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<a class="icon-back" href="javascrit:">返回</a>
+	<span>标题</span>
+</div>
+<!--//header-->
+<!--banner-->
+<div class="banner">
+	<!--swiper-->
+	<div class="swiper-container swiper01">
+			<div class="swiper-wrapper">
+					<a href="#" class="swiper-slide" style="background-image: url(images/banner.jpg)">
+							<img src="images/banner01-text.png" class="pic01">
+					</a>
+					<a href="#" class="swiper-slide" style="background-image: url(images/banner.jpg)"></a>
+					<a href="#" class="swiper-slide" style="background-image: url(images/banner.jpg)"></a>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination sp1"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper01', {
+					pagination: '.sp1',
+					paginationClickable: true,
+          loop: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
+</div>
+<!--//banner-->
+<!--导航-->
+<div class="nav-wrap">
+	<!--swiper-->
+	<div class="swiper-container swiper02">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="#"><i class="icon-nav01"></i>景区门票</a>
+        <a href="#"><i class="icon-nav02"></i>酒店住宿</a>
+        <a href="#"><i class="icon-nav03"></i>美食餐饮</a>
+        <a href="#"><i class="icon-nav04"></i>特色商品</a>
+        <a href="#"><i class="icon-nav05"></i>跟 团 游</a>
+        <a href="#"><i class="icon-nav06"></i>自 由 行</a>
+        <a href="#"><i class="icon-nav07"></i>我的订单</a>
+        <a href="#"><i class="icon-nav08"></i>在线客服</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><i class="icon-nav01"></i>景区门票</a>
+        <a href="#"><i class="icon-nav02"></i>酒店住宿</a>
+        <a href="#"><i class="icon-nav03"></i>美食餐饮</a>
+        <a href="#"><i class="icon-nav04"></i>特色商品</a>
+        <a href="#"><i class="icon-nav05"></i>跟 团 游</a>
+        <a href="#"><i class="icon-nav06"></i>自 由 行</a>
+        <a href="#"><i class="icon-nav07"></i>我的订单</a>
+        <a href="#"><i class="icon-nav08"></i>在线客服</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><i class="icon-nav01"></i>景区门票</a>
+        <a href="#"><i class="icon-nav02"></i>酒店住宿</a>
+        <a href="#"><i class="icon-nav03"></i>美食餐饮</a>
+        <a href="#"><i class="icon-nav04"></i>特色商品</a>
+        <a href="#"><i class="icon-nav05"></i>跟 团 游</a>
+        <a href="#"><i class="icon-nav06"></i>自 由 行</a>
+        <a href="#"><i class="icon-nav07"></i>我的订单</a>
+        <a href="#"><i class="icon-nav08"></i>在线客服</a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp2"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper02', {
+					pagination: '.sp2',
+					paginationClickable: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
+</div>
+<!--//导航-->
+<!--广告1-->
+<div class="ad">
+  <img src="images/ad01.jpg">
+</div>
+<!--//广告1-->
+<div class="title">
+  热门推荐
+  <a href="#">更多</a>
+</div>
+<!--热门推荐-->
+<div class="recommend-wrap">
+  <div class="rec-l">
+    <!--左边-->
+    <a href="#" class="pic-article hot">
+      <div class="pic">
+        <img src="images/pic01.jpg">
+      </div>
+      <div class="info">
+        <h3>青城锦江酒店</h3>
+        <p class="summary">简介简介简介简介简介简介简介简介</p>
+        <p class="price01">市场价：199元</p>
+        <p class="ori-price"><em>￥</em>190.0</p>
+        <button>GO</button>
+      </div>
+    </a>
+    <!--左边-->
+    <a href="#" class="pic-article" style="margin-bottom: 0">
+      <div class="pic">
+        <img src="images/pic01b.jpg">
+      </div>
+      <div class="info">
+        <h3>青城锦江酒店</h3>
+        <p class="summary">简介简介简介简介简介简介简介简介</p>
+        <p class="price01">市场价：199元</p>
+        <p class="ori-price"><em>￥</em>190.0</p>
+        <button>GO</button>
+      </div>
+    </a>
+    <!--//左边-->
+  </div>
+  <div class="rec-r">
+    <a href="#" class="pic-show best" style="background-image: url(images/pic02.jpg)">
+      <div class="info">
+        <h3>飞沙堰</h3>
+        <p class="summary">简介简介简介简介简介简介简介简介</p>
+        <p class="price01">市场价：199元</p>
+        <p class="ori-price"><em>￥</em>190.0</p>
+        <button>GO</button>
+      </div>
+    </a>
+  </div>
+</div>
+<!--//热门推荐-->
+<div class="blank"></div>
+<div class="title">
+  景区推荐
+  <a href="#">更多</a>
+</div>
+<!--景区推荐-->
+<div class="scenic">
+  <div class="pic">
+    <img src="images/scenic-pic.jpg">
+  </div>
+  <div class="info">
+    <h3>侠天下 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<div class="scenic">
+  <div class="pic">
+    <img src="images/scenic-pic2.jpg">
+  </div>
+  <div class="info">
+    <h3>洋中漂流 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<div class="scenic">
+  <div class="pic">
+    <img src="images/scenic-pic3.jpg">
+  </div>
+  <div class="info">
+    <h3>新盛坊农庄 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<!--//景区推荐-->	
+<div class="blank"></div>
+<div class="title">
+  酒店推荐
+  <a href="#">更多</a>
+</div>
+<!--酒店推荐-->
+<div class="scenic">
+  <div class="pic">
+    <img src="images/hotel-pic.jpg">
+  </div>
+  <div class="info">
+    <h3>闽中大酒店 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<div class="scenic">
+  <div class="pic">
+    <img src="images/hotel-pic2.jpg">
+  </div>
+  <div class="info">
+    <h3>文公大饭店 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<div class="scenic">
+  <div class="pic">
+    <img src="images/hotel-pic3.jpg">
+  </div>
+  <div class="info">
+    <h3>尤溪宾馆 <span class="star"></span></h3>
+    <div class="info-text">
+      <p class="summary">
+        特色：豪华、舒适、有假山、喷泉、荷花塘和多 种花卉供宾客观赏，更有环湖路、湖心岛、石桥、 凉亭供游憩
+      </p>
+      <p class="price-wrap">
+        <span class="price02">市场价：199元</span>
+        <span class="ori-price2"><em>￥</em>190.0<em>起</em></span>
+      </p>
+      <a href="#" class="btn-buy">立即预定</a>
+    </div>
+  </div>
+</div>
+<!--//酒店推荐-->
+<div class="blank-footer"></div>
+<!--标签栏-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>我的订单</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>个人中心</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>在线客服</span></a>
+</nav>
+<!--//标签栏-->
+</body>
+</html>

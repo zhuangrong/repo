@@ -66,7 +66,7 @@ input, button, select, optgroup, textarea {
   -webkit-appearance: none;
   background-color: #fff;
   background-repeat: no-repeat;
-   -webkit-user-select: none;
+   -webkit-user-select: none;
   border: none;
   border-radius: 0;
   outline: 0;
@@ -838,9 +838,10 @@ html,body,div{
 	margin-right: 3px;
 	border-radius: .1rem;
 	background-color: #333;
-	width: 70px;
-	height: 70px;
+	width: 69px;
+	height: 69px;
 	overflow: hidden;
+	border: 1px solid #a0a0a0;
 }
 .photo div i.del{
 	position: absolute;
@@ -859,8 +860,8 @@ html,body,div{
 	cursor: pointer;
 }
 .photo img{
-	width: 70px;
-	height: 70px;
+	width: 69px;
+	height: 69px;
 }
 .upload-list{
 	position: relative;
@@ -873,12 +874,14 @@ html,body,div{
 
 .btn-plus{
 	display: inline-block;
+  vertical-align: middle;
 	width: 69px;
 	height: 69px;
 	border: 1px solid #A0A0A0;
 	background-color: #fff;
 	background-image: url(../images/plus.png);
 	background-position: center center;
+  cursor: pointer
 }
 .mask-pop {
 	position: fixed;
@@ -887,20 +890,23 @@ html,body,div{
 	bottom: 0;
 	right: 0;
 	z-index: 1;
-	background-color: rgba(255, 255, 255, .3);
+	background-color: rgba(255, 255, 255, .5);
 	display: none;
 }
 /*弹出层*/
 .wine-pop{
-	position: absolute;
-	top: 105px;
+	position: fixed;
+	top: 50%;
 	left: 50%;
 	margin-left: -456px;
+	margin-top: -275px;
 	width: 906px;
 	padding: 30px 0 15px;
-	height: 480px;
+	height: 550px;
 	background-color: #fff;
 	box-shadow: 0 0 15px 0 #ccc;
+  display: none;
+  z-index: 9999;
 }
 .wine-pop i.close{
 	position: absolute;
@@ -918,7 +924,7 @@ html,body,div{
 	padding-right: 0;
 	overflow: hidden;
 	overflow: auto;
-	height: 350px;
+	height: 430px;
 }
 .jb-list li{
 	float: left;
@@ -927,11 +933,51 @@ html,body,div{
 	border: 1px solid  #a0a0a0;
 	margin: 15px 15px;
 	background-position: center center;
+	background-size: contain;
 }
 .jb-list li.active,
 .jb-list li:hover{
 	border: 1px solid  #EB6111;
 }
 
-
-
+.wine-logo{
+  display: inline-block;
+  width: 69px;
+  height: 69px;
+  border: 1px solid #a0a0a0;
+  position: relative;
+  margin-left: 5px;
+}
+.wine-logo i.del-logo{
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	z-index: 99;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	color: #fff;
+	background-color: #EB6111;
+	cursor: pointer;
+}
+.wine-logo img{
+	width: 69px;
+	height: 69px;
+}
+.preview-img{
+  padding:20px;
+  border: 2px solid #a0a0a0;
+  background-color: #fff;
+  margin: 20px auto 0;
+}
+.preview-pop{
+  height: 660px;
+  margin-top: -330px;
+}
+.preview-pop .jb-list {
+  height: 590px;
+}
