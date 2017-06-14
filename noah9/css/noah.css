@@ -159,13 +159,14 @@ nav a i{
 
 .grid-rank .g-header{
   border-radius: .1rem;
-  line-height: 1rem;
-  padding: 0 .4rem;
+  line-height: 0.9rem;
+  padding: 0 .6rem;
   margin-bottom: .2rem;
   color: #FF5C81;
   background-image: url(../images/game-header.png);
   position: relative;
   z-index: 99999;
+  background-repeat: no-repeat;
 }
 .grid-rank .g-box{
   background-color: #fff;
@@ -1384,6 +1385,34 @@ div[class*="tab-box"] > div:not(:first-child){
   line-height: 1.62rem;
   padding: 0 .33rem;
 }
+/*----------20170614--------------*/
+/*名次背景*/
+.royal04,
+.royal03,
+.royal02,
+.royal01{
+	display: block;
+	margin: 0 auto;
+	width: .50rem;
+	height: .50rem;
+	background-image: url(../images/royal01.png);
+	background-repeat: no-repeat;
+}
+.royal02{
+	background-image: url(../images/royal02.png);
+}
+.royal03{
+	background-image: url(../images/royal03.png);
+}
+.royal04{
+	color: #000;
+	font: 12px;
+	font-weight: bold;
+	text-align: center;
+	line-height: .5rem;
+	background-image: url(../images/royal04.png);
+}
+
 /*
  ************************iphone5 小于320************************
 */
