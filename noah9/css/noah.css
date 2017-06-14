@@ -729,6 +729,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	border-right: 2px solid #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;
 }
 .vote-show-wrap .show-item h3 span{
 	margin-right: .3rem;
@@ -1409,6 +1410,18 @@ div[class*="tab-box"] > div:not(:first-child){
 	}
 }
 
+.btn-girl,
+.btn-rich {
+	width: 2.28rem;
+	height: .6rem;
+	display: block;
+	position: absolute;
+	top: 2.6rem;
+	left: .9rem;
+	background-image: url(../images/btn-rich.png);
+}
 
-
+.btn-girl{
+	background-image: url(../images/btn-girl.png);
+}
 
