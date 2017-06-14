@@ -381,7 +381,6 @@ i.icon-sina{
 	color: #EF4F19;
 	font-size: 18px;
 	text-align: center;
-	margin-right:15px;
 	
 }
 .btn-wrap{
@@ -396,13 +395,12 @@ i.icon-sina{
 	-webkit-align-items: center;
   -webkit-box-align: center;
 	justify-content: center;
-	height: 1.2rem;
+	height: 1.8rem;
 	font-size: .32rem;
 	color: #fff;
 }
 .help span{
 	flex:1;
-	margin-left:5px;
 }
 
 /*底部*/
@@ -847,7 +845,7 @@ i.icon-hospital03{
 .pages a:hover,
 .pages .current{
   color: #fff;
-/*  border:none; */
+  border:none;
   background-color: #666;
 }
 .pages .next,
@@ -1159,7 +1157,7 @@ i.icon-hospital03{
 /*常见问题*/
 .title-sub{
 	color: #fff;
-	line-height: 1.3rem;
+	line-height: 1.6rem;
 	font-size: 32px;
 	background-color: #F04A00;
   padding-left: 20px;
@@ -1240,7 +1238,7 @@ i.icon-hospital03{
 }
 .hop span:before{
   content: "联系电话:" !important;
-} 
+}
 .hop li p{
   overflow : hidden;
   text-overflow: ellipsis;
@@ -1776,17 +1774,6 @@ i.icon-hospital03{
 .an-float:hover:after{
   -webkit-transform: rotate3d(0, 0, 1, 180deg);
   transform: rotate3d(0, 0, 1, 180deg);
-}
-.an-float:hover ul:after{
-  content: '';
-  display: none;
-}
-.an-float:hover ul:before{
-  content: '';
-  display: none;
-}
-.an-float:hover ul{
-  margin-top: 0;
 }
 
 /*---------update 20170614---------*/
