@@ -65,16 +65,13 @@ em, h3 {
   text-align: center;
 }
 
-/*--------------------首页--------------------*/
-.indexBg{
-  background-image: url(../images/indexBg.jpg);
-  background-size: contain !important
-}
+
 
 
 /*--------------------得分--------------------*/
 .bg01{
   background-image: url(../images/bg.jpg);
+	background-position: center top !important;
 }
 .score-wrap{
   display: -webkit-box;
@@ -393,10 +390,62 @@ nav a i.icon-nav02{
     line-height: 1.8;
   }
 }
-
-/*--------------------登录--------------------*/
+/*--------------------首页--------------------*/
+.indexBg{
+	background-color: #FDF8F2;
+}
+.loginBg{
+	height: 9.86rem;
+	background-color: #FCFCFA;
+  background-image: url(../images/indexBg.jpg);
+	background-position: center top !important;
+  background-size: cover !important
+}
+.blank-login{
+	height: 5.5rem;
+}
 .login{
-  
+	width: 4.8rem;
+	margin: 0 auto;
+	color: #fff;
+	margin-bottom: .5rem;
+}
+.login li{
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; /*左对齐*/
+	-webkit-box-align: center;
+	justify-content: center;
+  height: .8rem;	
+}
+.login li label{
+  display: inline-block;
+	padding-right: .3rem;
+	font-size: 14px;
+}
+.login li input{
+  border: 1px solid  #fff;
+	width: 3.5rem;
+	height: .6rem;
+	line-height: .6rem;
+	padding: 0 .2rem;
+	color: #fff;
+}
+.activity{
+	height: 3.15rem;
+	padding: .2rem .3rem .2rem;
+	background-image: url(../images/activity-bg.jpg);
+	background-size: cover !important;
+	background-repeat: repeat-y!important
+}
+.activity h3{
+	font-weight: bold;
+	padding: .2rem 0;
+	font-size: 14px;
+}
+.activity p{
+	font-size: 12px;
 }
 
 
