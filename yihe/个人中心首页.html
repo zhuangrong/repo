@@ -14,31 +14,137 @@
 <script>
 
 </script>
+<style>
+.yihe-swiper{
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.swiper08 .swiper-wrapper{
+  padding-bottom: 25px;
+  background-color: #fff;
+}
+.swiper08 .swiper-pagination{
+  bottom: 10px !important;
+}
+.swiper08 .swiper-pagination-bullet {
+  background-color: #D2D2D2;
+	opacity: 1;
+}
+.swiper08 .swiper-pagination-bullet-active {
+	background-color: #531C59;
+}
+/*搜索*/
+.search2{
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #eee;
+  margin:0 auto 10px;
+  color: #999;
+}
+.search2:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+  width: 13px;
+  height: 13px;
+  background-image: url(images/icon-mall-search.png);
+  opacity: .6;
+  font-size: 14px;
+}
+</style>
 </head>
 <body>
 <div class="banner-yihe">
 	<img src="images/banner-yihe.png">
 </div>
 <!--分类-->
-<div class="nav-yihe">
-	<a href="#">
-		<i class="icon-yihe01"></i>
-		化妆美容
-	</a>
-	<a href="#">
-		<i class="icon-yihe02"></i>
-		心理咨询
-	</a>
-	<a href="#">
-		<i class="icon-yihe03"></i>
-		育婴师
-	</a>
-	<a href="#">
-		<i class="icon-yihe04"></i>
-		花艺培训
-	</a>
-</div>
+  <div class="yihe-swiper">
+	<!--swiper-->
+    <div class="swiper-container swiper08">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="nav-yihe">
+            <a href="#">
+              <i class="icon-yihe01"></i>
+              化妆美容
+            </a>
+            <a href="#">
+              <i class="icon-yihe02"></i>
+              心理咨询
+            </a>
+            <a href="#">
+              <i class="icon-yihe03"></i>
+              育婴师
+            </a>
+            <a href="#">
+              <i class="icon-yihe04"></i>
+              花艺培训
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="nav-yihe">
+            <a href="#">
+              <i class="icon-yihe01"></i>
+              化妆美容
+            </a>
+            <a href="#">
+              <i class="icon-yihe02"></i>
+              心理咨询
+            </a>
+            <a href="#">
+              <i class="icon-yihe03"></i>
+              育婴师
+            </a>
+            <a href="#">
+              <i class="icon-yihe04"></i>
+              花艺培训
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="nav-yihe">
+            <a href="#">
+              <i class="icon-yihe01"></i>
+              化妆美容
+            </a>
+            <a href="#">
+              <i class="icon-yihe02"></i>
+              心理咨询
+            </a>
+            <a href="#">
+              <i class="icon-yihe03"></i>
+              育婴师
+            </a>
+            <a href="#">
+              <i class="icon-yihe04"></i>
+              花艺培训
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination sp8"></div>
+    </div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper08', {
+					pagination: '.sp8',
+					paginationClickable: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
 <!--//分类-->
+<!--搜索-->
+<a href="/index.php?s=/Index/search.html" class="search2" >
+  搜索
+</a>
+<!--//搜索-->
 <!--项目列表-->
 <div class="pic-list-wrap">
 		<a href="#" class="pic-list">
