@@ -23,8 +23,7 @@ li {
 body {
   color: #333;
   height: 100%;
-	background-color: #5D0E66;
-  background-image: -webkit-linear-gradient( 90deg, rgb(253,9,106) 0%, rgb(244,48,126) 67%, rgb(235,87,146) 100%);
+	background-color: #9A00AB;
   font-size: 13px;
   line-height: 1.6;
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
@@ -108,7 +107,7 @@ nav{
 	display: -webkit-flex;
 	display: flex;
 	height: 1.16rem;
-	background-color: #FC8C64;
+	background-color: #000;
 	z-index: 9999999;
 }
 nav a{
@@ -136,8 +135,9 @@ nav a:not(:last-child):after{
 	height: .5rem;
 	background-color: #fff;
 }
+nav a.active i,
 nav a.active{
-	color: #fff;
+	color: #9A00AB;
 }
 nav a i{
 	color: #fff;
@@ -464,7 +464,7 @@ nav a i{
   top: -1.23rem;
   left: -1rem;
   width: 4.59rem;
-  height: 4.38rem;
+  height: 4.48rem;
   background-image: url(../images/star-bg.png);
   z-index: -1;
 }
@@ -714,12 +714,12 @@ div[class*="tab-box"] > div:not(:first-child){
 	float: right;
 	width: 1.12rem;
 	line-height: .48rem;
-	background-color: #ED7260;
+	background-color: #FF4343;
 	text-align: center;
 	color: #fff;
 	font-weight: bold;
 	border-radius: .05rem;
-	box-shadow: 2px 2px 0 #C93C2E;
+	box-shadow: 2px 2px 0 #790002;
 }
 /*
  ************************土豪排行榜************************
@@ -1144,7 +1144,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	left: -webkit-calc(50% - 1.1rem);
 	width: 2.6rem;
 	height: .4rem;
-	background-color: #F42E7D;
+	background-color: #9A00AB;
 	font-size: .32rem;
 	font-weight: bold;
 }
