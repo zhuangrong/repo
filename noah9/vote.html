@@ -10,6 +10,54 @@
 <link rel="stylesheet" href="css/noah.css"> 
 <link rel="stylesheet" href="fonts/iconfont.css">
 <script src="js/jquery-2.1.4.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+<style>
+.btn-best{
+	background-image: url(images/btn-best.png);
+}
+.v-tabs{
+	padding:.1rem .2rem;
+}
+.v-tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	background-image: url(images/v-tabs.png);
+	background-repeat: repeat-x !important;
+	background-size: auto !important;
+	box-shadow: 0px 6px 8px 0px rgba(237, 162, 187, 0.7);
+	border-radius: .1rem;
+	height: .68rem;
+	line-height: .68rem;
+}
+.v-tabs ul li{
+	flex: 0 0 20%;
+	text-align: center;
+	color: #FF5C81;
+	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;
+}
+.v-tabs ul li.curr{
+	color: #fff;
+	background-image: url(images/v-tabs-active.png);
+	background-repeat: repeat-x !important;
+	background-size: auto !important;
+	border-radius: .1rem;
+	text-shadow: 0 0 0 #fff, -0 -0 0 #fff;
+}
+</style>
 </head>
 <body class="flower-bg">
 <!--音乐&活动规则-->
@@ -17,58 +65,89 @@
 <i class="icon iconfont icon-tubiaozhizuomoban-"></i>
 <!--banner-->
 <div class="banner lg">
+	<a href="#" class="btn-girl btn-best"></a>
 	<img src="images/banner2.png" alt="">
 </div>
 <!--//banner-->
+<!--tab-0701-->
+<div class="v-tabs" id="tabs">
+	<ul>
+		<li class="curr">实力女神</li>
+		<li>青春女神</li>
+		<li>亲和女神</li>
+		<li>人气女神</li>
+		<li>活力女神</li>
+	</ul>
+</div>
+<!--//tab-0701-->
 <!--投票-->
-<div class="vote-show-wrap">
-	<div class="show-item gold">
-		<h3><span>26号</span>林梦瑶</h3>
-		<div class="girl">
-			<img src="images/girl.jpg" alt="">
+<div class="tab-box1">
+	<!--实力女神-->
+	<div class="vote-show-wrap">
+		<div class="show-item gold">
+			<h3><span>26号</span>林梦瑶</h3>
+			<div class="girl">
+				<img src="images/girl.jpg" alt="">
+			</div>
+			<div class="vote-ft">
+				 <span>LV.8</span>
+				 <em>131400</em>
+				 <button class="btn-vote"></button>
+				 <label><pre style="width:80%"></pre></label>
+			</div>
 		</div>
-		<div class="vote-ft">
-			 <span>LV.8</span>
-			 <em>131400</em>
-			 <button class="btn-vote"></button>
-			 <label><pre style="width:80%"></pre></label>
+		<div class="show-item">
+			<h3><span>26号</span>林梦瑶</h3>
+			<div class="girl">
+				<img src="images/girl.jpg" alt="">
+			</div>
+			<div class="vote-ft">
+				 <span>LV.8</span>
+				 <em>131400</em>
+				 <button class="btn-vote"></button>
+				 <label><pre style="width:80%"></pre></label>
+			</div>
+		</div>
+		<div class="show-item">
+			<h3><span>26号</span>林梦瑶</h3>
+			<div class="girl">
+				<img src="images/girl.jpg" alt="">
+			</div>
+			<div class="vote-ft">
+				 <span>LV.8</span>
+				 <em>131400</em>
+				 <button class="btn-vote"></button>
+				 <label><pre style="width:80%"></pre></label>
+			</div>
+		</div>
+		<div class="show-item">
+			<h3><span>26号</span>林梦瑶</h3>
+			<div class="girl">
+				<img src="images/girl.jpg" alt="">
+			</div>
+			<div class="vote-ft">
+				 <span>LV.8</span>
+				 <em>131400</em>
+				 <button class="btn-vote"></button>
+				 <label><pre style="width:80%"></pre></label>
+			</div>
 		</div>
 	</div>
-	<div class="show-item">
-		<h3><span>26号</span>林梦瑶</h3>
-		<div class="girl">
-			<img src="images/girl.jpg" alt="">
-		</div>
-		<div class="vote-ft">
-			 <span>LV.8</span>
-			 <em>131400</em>
-			 <button class="btn-vote"></button>
-			 <label><pre style="width:80%"></pre></label>
-		</div>
+	<!--青春女神-->
+	<div style="display: none">
+		青春女神
 	</div>
-	<div class="show-item">
-		<h3><span>26号</span>林梦瑶</h3>
-		<div class="girl">
-			<img src="images/girl.jpg" alt="">
-		</div>
-		<div class="vote-ft">
-			 <span>LV.8</span>
-			 <em>131400</em>
-			 <button class="btn-vote"></button>
-			 <label><pre style="width:80%"></pre></label>
-		</div>
+	<!--亲和女神-->
+	<div style="display: none">
+		亲和女神
 	</div>
-	<div class="show-item">
-		<h3><span>26号</span>林梦瑶</h3>
-		<div class="girl">
-			<img src="images/girl.jpg" alt="">
-		</div>
-		<div class="vote-ft">
-			 <span>LV.8</span>
-			 <em>131400</em>
-			 <button class="btn-vote"></button>
-			 <label><pre style="width:80%"></pre></label>
-		</div>
+	<!--人气女神-->
+	<div style="display: none">
+		人气女神
+	</div>
+	<!--活力女神-->
+	<div style="display: none">
+		活力女神
 	</div>
 </div>
 <!--//投票-->
