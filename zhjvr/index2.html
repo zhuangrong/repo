@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="zhjvr2.css"> 
+<script src="jquery-2.1.4.min.js"></script>
+<style>
+  body{
+    background-color: #1B1B1B;
+    font-size: 14px;
+    padding: 100px;
+  }
+*{
+  margin: 0;
+  padding: 0;
+} 
+  ul,li{list-style: none;}
+</style>
+</head>
+<body>
+<!-------------------------新闻------------------------->
+<div class="news2 w2">
+  <div class="n2-left">
+    <h3 class="n-title">
+      <a href="#">剪掉了VR头显的“那根绳”，VR看看看看看看</a>
+      <span>MAY 27</span>
+    </h3>
+    <div class="n-box"></div>
+  </div>
+  <div class="n2-mid">
+    <h3 class="n-title">
+      <a href="#">剪掉了VR头显的“那根绳”，VR看看看看看看</a>
+      <span>MAY 27</span>
+    </h3>
+    <div class="n-box"></div>
+  </div>
+  <div class="n2-right">
+    <h5 class="n-more"><a href="#">更多&gt;&gt;</a></h5>
+    <ul class="n-list">
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+      <li>
+        <a href="#">全程无尿点！Facebook推出VR社交平台的</a>
+        <span>MAY 27</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-------------------------//新闻------------------------->
+
+<!-------------------------联系我们------------------------->
+<div class="contact2-wrap">
+  <div class="contact2">
+    <h3>联系我们</h3>
+    <ul>
+      <li class="ipt-wrap ipt-pleft">
+        <label>您的姓名 :</label>
+        <input type="text" class="ipt">
+      </li>
+      <li class="ipt-wrap ipt-pright">
+        <label>*您的电话 : </label>
+        <input type="text" class="ipt">
+      </li>
+      <li class="ipt-wrap ipt-pleft">
+        <label>企业名称 :</label>
+        <input type="text" class="ipt">
+      </li>
+      <li class="ipt-wrap ipt-pright">
+        <label>&nbsp;&nbsp;所属行业 : </label>
+        <input type="text" class="ipt" id="industry">
+        <i class="select2"></i>
+        <div class="dropdown2" id="dropdown2" style="display: none">
+          <ul>
+            <li>合伙人</li>
+            <li>地产</li>
+            <li>家居家装</li>
+            <li>城市规划</li>
+            <li>旅游、博物馆</li>
+            <li>暖通、风能</li>
+            <li>工程建筑</li>
+            <li>影视</li>
+            <li>其他</li>
+          </ul>
+        </div>
+        <div class="mask2"></div>
+      </li>
+      <li>
+        <textarea class="texta" placeholder="简单介绍项目情况,以便我们更高效的为您提供营销方案（非必填）:"></textarea>
+      </li>
+    </ul>
+    <div class="btn-c-tc">
+      <button class="btn-contact2">提交留言</button>
+    </div>
+  </div>
+</div>
+<script>
+$(function(){
+  //所属行业
+	$("#industry, .select2").on("click",function(){
+			$(".mask2").show(300)
+		  $("#dropdown2").show();
+	})	
+	$("#dropdown2 li").on("click",function(e){
+	 	 e.stopPropagation();
+		 var txt = $(this).text();
+		 $("#industry").val(txt)
+		 $("#dropdown2").fadeOut(200);
+		 $(".mask2").fadeOut(300)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask2").on("click",function(e){
+			e.stopPropagation()
+			$(".mask2").fadeOut(300)
+		  $("#dropdown2").fadeOut(200)		
+	})
+})
+</script>        
+<!-------------------------//联系我们------------------------->
+
+</body>
+</html>
