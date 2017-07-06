@@ -494,6 +494,7 @@
   text-align: center;
   padding: 3px 6px;
   text-decoration: none;
+	background-color: #fff;
 }
 .news-author .news-at-right{
   padding-top: 25px;
@@ -543,15 +544,15 @@
 /*footer2*/
 .footer2-wrap{
   position: relative;
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   padding: 35px;  
-  min-height: 335px;
+  min-height: 300px;
   margin-top: 100px;
 }
 .footer2-wrap:after{
   content: '';
   position: absolute;
-  bottom: 100px;
+  bottom: 118px;
   left: 0;
   right: 0;
   height: 1px;
@@ -574,6 +575,7 @@
   float: left;
   margin-left: 40px;
   width: 342px;
+	overflow: hidden;
 }
 .footer2 .addr2-tabs{
   overflow: hidden;
@@ -621,14 +623,147 @@
 .bgw{
   min-width: 1020px;
 }
-.footer2 .contact-us2{
+.contact-us2{
   float: right;
   color: #fff;
+	width: 280px;
 }
 
+.cu2 h3{
+	float: left;
+	margin-right: 6px;
+	padding-top: 7px;
+}
+.cu2 ul{
+	float: left;
+}
+.cu2 li{
+	float: left;
+	margin: 0 9px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: #000;
+	position: relative;
+}
+.cu2 li.icon-contact01:hover{
+	background-color: #00A0E9;
+}
+.cu2 li.icon-contact02:hover{
+	background-color: #A40000;
+}
+.cu2 li.icon-contact03:hover{
+	background-color: #90C31F;
+}
+.cu2 li.icon-contact04:hover{
+	background-color: #22AC38;
+}
 
+.cu2 li label{
+	position: absolute;
+	top: -30px;
+	left: -40px;
+	min-width: 102px;
+	padding: 3px 5px;
+	background-color: #000;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+	display: none;
+}
 
+.cu2 li label:after{
+	content: '';
+	width: 10px;
+	height: 6px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	margin-left: 51px;
+	background-image: url(cu-arrow2.png);
+}
+.cu2 li.icon-contact03 label{
+	position: absolute;
+	top: 41px;
+	left: -38px;
+	min-width: 102px;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+	display: none;
+}
+.cu2 li.icon-contact03 label:after{
+	content: '';
+	width: 10px;
+	height: 6px;
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	margin-left: 51px;
+	background-image: url(cu-arrow-up.png);
+}
+.cu2 li:hover label{
+	display: block;
+}
+.cu2 li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+.cu2 .icon-contact01 a{
+	background-image: url(icon-contact01.png);
+}
+.cu2 .icon-contact02 a{
+	background-image: url(icon-contact02.png);
+}
+.cu2 .icon-contact03 a{
+	background-image: url(icon-contact03.png);
+}
+.cu2 .icon-contact04 a{
+	background-image: url(icon-contact04.png);
+}
 
+.hotline2{
+	clear: both;
+	padding-top: 30px;
+}
+.hotline2 h3{
+	float: left;
+	vertical-align: middle;
+	margin-right: 20px;
+	padding-top: 6px;
+}
+
+.ft-nav2{
+	width: 1020px;
+	clear: both;
+	margin: 199px auto 0;
+	overflow: hidden;
+}
+.ft-nav2 li{
+	width: 70px;
+	float: left;
+	margin-right: 65px;
+	text-align: center;
+	color: #666;
+}
+.ft-nav2 li:last-child{
+	margin-right: 0;
+}
+.ft-copyright2{
+	text-align: center;
+	color: #666;
+	font-size: 10px;
+	padding: 20px 0 10px;
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif
+}
 
 
 
