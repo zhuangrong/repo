@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="zhjvr2.css"> 
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+<style>
+  body{
+    background-color: #1B1B1B;
+    font-size: 14px;
+  }
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+ul,li{list-style: none;}
+  
+</style>
+   
+</head>
+<body class="bgw">
+<div class="wrap2">
+  <!--当前位置-->
+  <div class="location2">
+    当前位置：首页 &gt; 新闻 &gt; VR实体店运营分享 | 2017年“优胜劣汰”的中小型体验店的生意经 
+  </div>
+  <!--//当前位置-->
+  <!--新闻详情-->
+  <div class="news-detail2">
+    <div class="news-detail2-left">
+      <div class="news-dt2-header">
+        <h1>VR实体店运营分享 | 2017年“优胜劣汰”的中小型体验店的生意经</h1>
+        <span>2017-05-20   15:00</span>
+        <p>文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简</p>
+      </div>
+      <div class="news-dt2-cont">
+        <p>以下是宇硕分享内容的整理：</p>
+        <p>大家好，我是今天的分享者宇硕。首先感谢造梦平台给我这个与大家交流分享的机会，也谢谢大家来听我做分享。其实也并不是什么分享了，也是想借这个机会，来跟全国的体验店老板做一个交流。</p>
+        <p>“微漾网络”目前是吉林省HTC vive设备的代理商，也是omni跑步机的经销商。同时也会去做一些包括像教育、房产类的虚拟现实解决方案的事情，还有就是关于VR漾品牌体验店的加盟连锁方面。那么我今天分享的内容也根据我们公司之前在各个方面经营经验归类为四点：第一点经营方向；第二点是运营；第三点是精品游戏；第四点会重点分析一下《原罪》的正确打开方式。</p>
+        <p>★线下店的选址、定位有何讲究？</p>
+        <p>首先说的是今天的第一个内容方向；一个是店铺的选址，一个是投入预算，还有一个是市场调研。</p>
+        <p>首先是体验店，因为地点我想不用多说，各位老板心里都非常清楚，体验店的地址决定了我们这个体验店到底能不能发展下去很大的因素，也决定了你的目标消费群体、决定了应该投入什么样的设备、决定了运作的方向更决定了店铺的价值。在这里，我想着重的说一下这个市场调研因地制宜的合理投资问题。</p>
+        <p>我觉得大家应该先了解一下当地的消费水平，当地的同行，他们的这个体验店的价格是多少？还有一个回本周期的预算？市场价格，你是要高于它还是要低于它，决定到自己体验店的定位，你是考虑是做高端、中端、还是低端，一共是这三个档次。一般来讲的话，我们都会选择一个中端或者是一个中高端的形式去</p>
+      </div>
+      <div class="news-author">
+        <div class="news-at-left">
+          <ul>
+            <li>
+              标&nbsp;&nbsp;&nbsp;&nbsp;签：<label>VR游戏</label>  <label>VR游戏</label> <label>VR游戏</label>
+            </li> 
+            <li>作&nbsp;&nbsp;&nbsp;&nbsp;者：指挥家VR</li>
+            <li>版权所属：指挥家VR</li>
+            <li>版权申明：版权所有,转载时必须以链接形式注明作者和原始出处</li>
+          </ul>
+        </div>
+        <div class="news-at-right">
+          <img src="qrCode.jpg">
+          <span>更多内容,关注微信公众号<br>开放合伙人申请中......</span>
+        </div>
+      </div>
+    </div>
+    <div class="news-detail2-right">
+      <!--最新文章-->
+      <div class="news-laest">
+        <h3>最新文章</h3>
+        <div>
+          <a href="#">指挥家VR：代表新疆的VR样板间设计</a>
+          <a href="#">VR地产商业应用-VRoom，究竟能有多大用？</a>
+          <a href="#">VR实体店运营分享 | 2017年“优胜劣汰”的中小型体验店的生意经</a>
+          <a href="#">指挥家VR：代表新疆的VR样板间设计</a>
+          <a href="#">VR地产商业应用-VRoom，究竟能有多大用？</a>
+          <a href="#">VR实体店运营分享 | 2017年“优胜劣汰”的中小型体验店的生意经</a>
+          <a href="#">指挥家VR：代表新疆的VR样板间设计</a>
+          <a href="#">VR地产商业应用-VRoom，究竟能有多大用？</a>
+          <a href="#">VR实体店运营分享 | 2017年“优胜劣汰”的中小型体验店的生意经</a>
+        </div>
+      </div>
+      <!--//最新文章-->
+      <div class="blank2"></div>
+      <!--热门标签-->
+      <div class="hot-tabs">
+        <h3>热门标签</h3>
+        <a href="#">VR游戏</a>
+        <a href="#">VR游戏</a>
+        <a href="#">VR体验店</a>
+        <a href="#">VR游戏</a>
+        <a href="#">VR电影</a>
+        <a href="#">指挥家</a>
+        <a href="#">VR游戏</a>
+        <a href="#">VR游戏</a>
+        <a href="#">VR体验店</a>
+        <a href="#">VR游戏</a>
+        <a href="#">VR电影</a>
+        <a href="#">指挥家</a>
+        <a href="#">指挥家</a>
+        <a href="#">指挥家</a>
+        <a href="#">指挥家</a>
+        <a href="#">VR电影</a>
+        <a href="#">指挥家</a>
+      </div>
+      <!--//热门标签-->
+      
+    </div>
+  </div>
+  <!--//新闻详情-->
+</div>
+<!--footer2-->
+<div class="footer2-wrap">
+  <div class="footer2">
+    <div class="sologan"></div>
+    <div class="addr2">
+      <div class="addr2-tabs" id="tabs">
+        <ul>
+          <li>厦门</li>
+          <li class="curr">北京</li>
+          <li>上海</li>
+          <li>波恩</li>
+          <li>伦敦</li>
+          <li>多伦多</li>
+        </ul>
+      </div>
+      <div class="addr2-cont tab-box1">
+        <div style="display: none">福建省厦门市软件园二期望海路31号205单元 400-918-0228</div>
+        <div>北京市东城区北京站东街8号信通大厦B座7层07A室 400-918-0228</div>
+        <div style="display: none">上海市黄浦区宁波路276号2楼210室 400-918-0228</div>
+        <div style="display: none">Willings International Consulting GmbH +49 228 8503 8815</div>
+        <div style="display: none">Unit F12a Waterfront Studios 1Dock Road +44(0)7833695942</div>
+        <div style="display: none">Unit F12a Waterfront Studios 1Dock Road +44(0)7833695942</div>
+      </div>  
+    </div>
+    <div class="contact-us2">
+      关注我们
+    </div>
+  </div>
+</div>
+<!--//footer2-->
+</body>
+</html>

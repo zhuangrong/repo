@@ -29,9 +29,97 @@ $(function(){
   box-sizing: border-box;
 } 
 ul,li{list-style: none;}
+  .header{
+    height: 100px ;
+    background-color: #16191C;
+  }
+   </style>
+   
+   <style>
+  
+/*头部右边*/
+  .header-tip{
+    float: right;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    padding-right: 8px;
+    font-size: 14px;
+  }
+  .header-tip .icon-so,
+  .header-tip .icon-telephone{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 5px 5px;
+  }
+  .header-tip .icon-so{
+    background-image: url(icon-so.png);
+  }
+  .header-tip .icon-telephone{
+    background-image: url(icon-telephone.png);
+  }
+  .header-tip a{
+    color: #fff;
+    text-decoration: none
+  }
+  .header-tip a.active{
+    color: #8ABA2A;
+  }
+  .header-tip a.active{
+    color: #8ABA2A;
+  }
+  .header-tip .lang{
+    padding-left: 20px;
+  }
 </style>
 </head>
 <body class="bgw">
+  <header class="header clearfix normal_header">
+  <div class="wrapper clearfix" style="position: relative;">
+    <h1 class="logo"> <a href="http://www.zhjvr.com/"> <img src="/Public/Index/images/logo.png" title="指挥家"> </a> </h1>
+    <nav id="site-navigation" class="main_navigation">
+      <ul class="menu" id="menu-primary-navigation">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 index_index">
+                <a href="/Index/index.html">首页</a>
+                <!-- 二级菜单 -->
+                            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 about_index">
+                <a href="/About/index.html">关于我们</a>
+                <!-- 二级菜单 -->
+                            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 product_index">
+                <a href="/Product/index.html">产品</a>
+                <!-- 二级菜单 -->
+                <ul class="sub-menu" style="left: -44px;">
+                    <li><a href="/Product/index.html">VRoom</a></li><li><a href="/Product/shortfuse.html">Shortfuse Studio</a></li><li><a href="/Product/vrstory.html">VRstory</a></li>                     </ul>            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 news_index">
+                <a href="/News/index.html" style="color: rgb(143, 195, 31);">新闻</a>
+                <!-- 二级菜单 -->
+                            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 blog_index">
+                <a href="/Blog/index.html">博客</a>
+                <!-- 二级菜单 -->
+                            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 support_index">
+                <a href="/Support/index.html">支持</a>
+                <!-- 二级菜单 -->
+                            </li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663 about_join">
+                <a href="/About/job.html">加入我们</a>
+                <!-- 二级菜单 -->
+                <ul class="sub-menu" style="left: -28px;">
+                    <li><a href="/About/join.html">商务合作</a></li><li><a href="/About/job.html">加入我们</a></li>                     </ul>            </li>      </ul>
+<!--      <span class="taphover"><i></i></span> </nav>-->
+  </nav>
+    <div class="header-tip">
+       <i class="icon-so"></i>
+       <span><i class="icon-telephone"></i>400-918-0228</span>
+       <span class="lang">
+         <a href="#" class="active">简 |</a> 
+         <a href="#">EN |</a> 
+         <a href="#">DE</a>
+       </span>
+     </div>
+</div>
+</header>
+
+
 <!--搜索-->
 <div class="search2-wrap" style="background-image: url(http://www.zhjvr.com/Public/Index/images/news1.png)">
   <div class="search-ipt2">

@@ -420,6 +420,216 @@
 	text-decoration: none;
 }
 
+/*update 2017-07-06*/
+.wrap2{
+  width: 1020px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.location2{
+  padding: 15px 0;
+  color: #888;
+}
+.news-detail2{
+  overflow: hidden;
+}
+.news-detail2-left{
+  float: left;
+  width: 655px;
+}
+.news-detail2-right{
+  float: left;
+  width: 655px;
+}
+.news-detail2-right{
+  float: right;
+  width: 290px;
+}
+.news-dt2-header{
+  color: #666;
+}
+.news-dt2-header h1{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  color: #333;
+}
+.news-dt2-header span{
+  display: block;
+  padding: 10px 0;
+  color: #888;
+}
+.news-dt2-header p{
+  display: block;
+  padding: 15px;
+  background-color: #EEE;
+  font-size: 12px;
+}
+.news-dt2-cont{
+  padding: 20px 0;
+}
+.news-dt2-cont p{
+  padding: 0 0 32px;
+  color: #666;
+}
+/*作者*/
+.news-author{
+  padding: 15px 20px;
+  font-size: 12px;
+  overflow: hidden;
+  background-color: #eee;
+  color: #666;
+}
+.news-author .news-at-left{
+  float: left;
+}
+.news-author .news-at-left li{
+  padding: 5px 0;
+  color: #666;
+}
+.news-author .news-at-left li label{
+  display: inline-block;
+  border: 1px solid #90C320;
+  border-radius: 5px;
+  text-align: center;
+  padding: 3px 6px;
+  text-decoration: none;
+}
+.news-author .news-at-right{
+  padding-top: 25px;
+  float: right;
+  width: 270px;
+  font-size: 14px;
+  line-height: 1.8
+}
+.news-author .news-at-right img{
+  float: left;
+  margin-right: 8px;
+  margin-top: -20px;
+}
+
+/*最新文章*/
+.news-laest{
+	border: 1px solid  #90C320;
+}
+.news-laest h3{
+	background-color: #90C320;
+	color: #000;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+}
+.news-laest div{
+	padding:10px 20px 10px;
+}
+.news-laest a{
+	display: block;
+	font-size: 12px;
+	text-decoration: none;
+	color: #666;
+  padding: 15px;
+  border-bottom: 1px dashed  #666;
+  background-image: url(news-dot2.png);
+  background-position: 0 20px;
+  background-repeat: no-repeat;
+}
+.news-laest a:last-child{
+	border-bottom: none;
+}
+.blank2{
+  height: 20px;
+}
+
+/*footer2*/
+.footer2-wrap{
+  position: relative;
+  background-color: #1B1B1B;
+  padding: 35px;  
+  min-height: 335px;
+  margin-top: 100px;
+}
+.footer2-wrap:after{
+  content: '';
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  overflow: hidden;
+  background-color: #333;
+}
+.footer2{
+  width: 1020px;
+  margin: 0 auto;
+}
+.footer2 .sologan{
+  float: left;
+  width: 139px;
+  height: 129px;
+  background-image: url(ico.png);
+  background-repeat: no-repeat;
+  background-position: -126px 0;
+}
+.footer2 .addr2{
+  float: left;
+  margin-left: 40px;
+  width: 342px;
+}
+.footer2 .addr2-tabs{
+  overflow: hidden;
+  height: 32px;
+  position: relative;
+}
+.footer2 .addr2-tabs li.curr:after,
+.footer2 .addr2-tabs:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  overflow: hidden;
+  background-color: #7E7E7E;
+  z-index: 1;
+}
+.footer2 .addr2-tabs li{
+  float: left;
+  height: 32px;
+  margin-right: 20px;
+  padding: 0 5px;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+}
+.footer2 .addr2-tabs li.curr{
+  color: #fff;
+}
+.footer2 .addr2-tabs li.curr:after{
+  background-color: #90C31F;
+  z-index: 99;
+  height: 2px;
+}
+.footer2 .addr2-tabs li:last-child{
+  margin-right: 0;
+}
+.footer2 .addr2-cont{
+  clear: both;
+  margin-right: 0;
+  color: #fff;
+  padding-top: 15px;
+}
+.bgw{
+  min-width: 1020px;
+}
+.footer2 .contact-us2{
+  float: right;
+  color: #fff;
+}
+
+
+
+
+
 
 
 
