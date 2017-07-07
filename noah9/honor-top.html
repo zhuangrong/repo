@@ -22,18 +22,38 @@
 	display: -webkit-flex;
 	display: flex;
 	margin-bottom: .2rem;
+  box-shadow: 0px 4px 8px 0px rgba(237, 162, 187, 0.7);
 }
 .honor-top h3{
 	width: .68rem;
-	height: 2.2rem;
+	height: 2.4rem;
   background-image: -webkit-linear-gradient( 90deg, rgb(253,208,216) 0%, rgb(254,237,241) 100%);
-  box-shadow: 0px 4px 8px 0px rgba(237, 162, 187, 0.7);
 	text-align: center;
-	padding: .4rem .2rem 0;
-	line-height: 1.2;
-	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;
+  text-indent: -999px;
+  position: relative;
+/*	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;*/
 }
-
+.honor-top h3:after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+	width: .68rem;
+	height: 2.4rem;
+  -webkit-background-size: 28px auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+	text-align: center;
+}
+.honor-top:nth-child(1) h3:after{
+  background-image: url(images/tp01.png);
+}
+.honor-top:nth-child(2) h3:after{
+  background-image: url(images/tp02.png);
+}
+.honor-top:nth-child(3) h3:after{
+  background-image: url(images/tp03.png);
+}
 .honor-top ul{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
@@ -44,36 +64,53 @@
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: space-between;
-	padding: 0 .5rem;
+	padding: 0 .3rem;
 	flex-wrap: nowrap;
-	background-color: rgba(255,255,255,.5)
+	background-color: rgba(255,255,255,.5);
 }
 .honor-top ul li{
-	flex: 0 0 1.32rem;
-	width: 1.32rem;
-	height: 1.32rem;
+	flex: 0 0 1.69rem;
+	width: 1.69rem;
+	height: 1.69rem;
 	color: #FF5C81;
 	text-align: center;
 	font-size: .22rem;
+  position: relative;
 }
 .honor-top ul li i{
 	position: relative;
 	display: block;
-	width: 0.92rem;
-	height: 0.92rem;
+	width: 1.63rem;
+	height: 1.63rem;
 	border-radius: 50%;
-	margin: 0 auto .2rem;
+	margin: 0 auto 0;
 	color: #FF5C81;
+}
+.honor-top ul li:after{
+	content: '';
+	position: absolute;
+	top: -.16rem;
+  left: 1.25rem;
+	width: .56rem;
+	height: .56rem;
+	background-image: url(images/crown01.png);
+  z-index: 99999
 }
 .honor-top ul li i:after{
 	content: '';
 	position: absolute;
-	top: -.2rem;
-  left: -.22rem;
-	width: 1.32rem;
-	height: 1.32rem;
-	background-image: url(images/shop-top.png);
+	top: -.03rem;
+  left: -.02rem;
+	width: 1.69rem;
+	height: 1.69rem;
+	background-image: url(images/shop-top1.png);
 	z-index: -1;
+}
+.honor-top ul li:nth-child(1):after{
+	background-image: url(images/crown02.png);
+}
+.honor-top ul li:nth-child(3):after{
+	background-image: url(images/crown03.png);
 }
 .btn-vote3{
 	display: block;
@@ -82,6 +119,118 @@
 	background-image: url(images/btn-vote3.png);
 	margin: .2rem auto;
 }
+.tc{
+  position: fixed;
+  bottom: 0;
+  left: .5rem;
+  right: .5rem;
+  z-index: 99999999999;
+}
+/*  top-star*/
+  .top-star{
+    position: relative;
+    z-index: -1;
+    background-image: url(images/top-star-bg.png);
+    background-position: center top;
+    min-height: 4.68rem;
+    box-shadow: 0px 6px 10px 0px rgba(237, 162, 187, 0.7);
+    margin-bottom: .3rem;
+  }
+  .top-star ul{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: space-between;
+	padding: 0 .3rem;
+	flex-wrap: nowrap;
+/*	background-color: rgba(255,255,255,.5);*/
+}
+.top-star ul li{
+	flex: 0 0 1.69rem;
+	width: 1.69rem;
+	height: 1.69rem;
+	color: #FF5C81;
+	text-align: center;
+	font-size: .22rem;
+  position: relative;
+  margin-top: 2.2rem;
+	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;
+}
+.top-star ul li i{
+	position: relative;
+	display: block;
+	width: 1.63rem;
+	height: 1.63rem;
+	border-radius: 50%;
+	margin: 0 auto .06rem;
+	color: #FF5C81;
+}
+.top-star ul li i:after{
+	content: '';
+	position: absolute;
+	top: -.03rem;
+  left: -.02rem;
+	width: 1.69rem;
+	height: 1.69rem;
+	background-image: url(images/shop-top1.png);
+	z-index: -1;
+}
+.top-star ul li:nth-child(3):after,
+.top-star ul li:nth-child(1):after{
+	content: 'TOP2';
+  position: absolute;
+  top:-.5rem;
+  left: .5rem;
+  color: #FF5C81;
+  font-size: 16px;
+  font-weight: bold;
+	text-shadow: 0 0 0.6em #fff, -0 -0 0.6em #fff;
+}
+.top-star ul li:nth-child(3):after{
+	content: 'TOP3';
+}
+  
+.top-star ul li:nth-child(2){
+	flex: 0 0 2.0rem;
+	width: 2rem;
+	height: 2rem;
+  margin-top: 0;
+}
+.top-star ul li:nth-child(2) i{
+	flex: 0 0 2.0rem;
+	width: 1.9rem;
+	height: 1.9rem;
+}
+.top-star ul li:nth-child(2) i:after{
+	content: '';
+	position: absolute;
+	top: -.060rem;
+  left: -.040rem;
+	width: 2.0rem;
+	height: 2.0rem;
+	background-image: url(images/shop-top1.png);
+	z-index: -1;
+}
+.top-star ul li:nth-child(2) i:before{
+	content: '';
+	position: absolute;
+	top: -1.4rem;
+  left: -1.3rem;
+	width: 4.62rem;
+	height: 4.62rem;
+	background-image: url(images/top-star.png);
+	z-index: -2;
+}
+  .btn-global{
+    width: 2.78rem;
+    height: .8rem;
+	  background-image: url(images/btn-global.png);
+  }
 </style>
 </head>
 <body class="flower-bg">
@@ -90,10 +239,17 @@
 <i class="icon iconfont icon-tubiaozhizuomoban-"></i>
 <!--banner-->
 <div class="banner lg">
-	<a href="#" class="btn-girl btn-shop"></a>
+	<a href="#" class="btn-girl btn-global"></a>
 	<img src="images/banner2.png" alt="">
 </div>
 <!--//banner-->
+<div class="top-star">
+  <ul>
+    <li><i style="background-image: url(images/avatar.png)"></i>吴梦露</li>
+    <li><i style="background-image: url(images/avatar.png)"></i>吴梦露</li>
+    <li><i style="background-image: url(images/avatar.png)"></i>吴梦露</li>
+  </ul>
+</div>
 <!--门店排版版1-->
 <div class="honor-top-wrap">
 	<div class="honor-top">
@@ -122,14 +278,9 @@
 	</div>
 </div>
 <!--//门店排版版1-->
+<div class="blank"></div>
 <div class="tc">
 	<a href="#" class="btn-vote3"></a>
 </div>
-<div class="blank"></div>
-<nav>
-	<a href="#" class="active"><i class="icon iconfont icon-icon"></i><span>首页</span></a>
-	<a href="#"><i class="icon iconfont icon-paixing"></i><span>排行榜</span></a>
-	<a href="#"><i class="icon iconfont icon-sousuo_sousuo"></i><span>搜索</span></a>
-</nav>
 </body>
 </html>
