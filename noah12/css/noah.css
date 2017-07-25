@@ -99,7 +99,7 @@ em, h3 {
 */
 .bg-new{
   background-image: url(../images/bg.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 .bg-new:before{
   position: absolute;
@@ -246,7 +246,7 @@ nav a i{
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
-	color: #fff;
+	color: #77384B;
 	font-size: .28rem;
 }
 .rank-total li span{
@@ -261,7 +261,7 @@ nav a i{
 	width: 1px;
 	overflow: hidden;
 	height: .5rem;
-	background-color: #fff;
+	background-color: #77384B;
 }
 .rank-title {
 	margin: 0 .5rem .4rem;
@@ -565,7 +565,7 @@ nav a i{
 .btn,
 .btn-lg{
 	display: block;
-	background-color: #FC8C64;
+	background-image: -webkit-linear-gradient( 90deg, rgb(119,56,75) 0%, rgb(164,105,123) 100%);
 	margin: 0 .5rem;
 	line-height: .76rem;
 	border-radius: 0.38rem;
@@ -574,7 +574,7 @@ nav a i{
 	font-size: 0.35rem;
 	color: #fff;
 	font-weight: bold;
-	box-shadow: .05rem 0.12rem 0 #77384B;
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
 }
 .btn-wrap{
 	margin: .3rem .5rem .3rem;
@@ -810,6 +810,7 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .swiper01  .swiper-pagination-bullet{
 	opacity: 1;
+	bottom: 0;
 }
 .video-show{
 	width: 5.85rem;
@@ -1153,10 +1154,10 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .slogan{
 	position: relative;
-	border: 1px solid  #fff;
+	border: 1px solid  #77384B;
 	text-align: center;
 	padding: .4rem;
-	color: #fff;
+	color: #77384B;
 	margin: .4rem .6rem 0;
 }
 .slogan h3{
@@ -1165,7 +1166,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	left: -webkit-calc(50% - 1.1rem);
 	width: 2.6rem;
 	height: .4rem;
-	background-color: #9A00AB;
+	background-color: #FEF0F0;
 	font-size: .32rem;
 	font-weight: bold;
 }
@@ -1340,8 +1341,42 @@ div[class*="tab-box"] > div:not(:first-child){
 	color: #77384B;
 	text-align:justify
 }
-
-
+.avatar-update{
+	position: relative;
+	margin: 1rem auto .3rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 2px solid  #77384B;
+	background-position: center center;
+}
+.avatar-update:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	z-index: 1;
+}
+.avatar-update:before{
+	content: '点击修改';
+	display: block;
+	position: absolute;
+	width: 100%;
+	line-height: 2rem;
+	color: #fff;
+	text-align: center;
+	z-index: 9;
+	font-size: .3rem;
+}
+.tuhao{
+	position: fixed;
+	bottom: .6rem;
+	left: 0;
+	right: 0;
+}
 
 
 
