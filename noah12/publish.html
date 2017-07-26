@@ -51,7 +51,16 @@ $(function(){
 					$('#video').html('<video controls preload="auto" poster=""  src="' + this.result + '"></video>');
 			})
 	})	
-	
+  
+  //报名校验
+  $("#certify").on("click",function(){
+    $("#dialog-certify").fadeIn(200)
+  })
+	//点击遮罩层隐藏
+	$(".mask,.close").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog-certify").fadeOut(200)		 
+	})
 })
 
 </script>
@@ -91,11 +100,30 @@ $(function(){
 		</div>
 	</div>
 	<div class="f-row tc">
-		<button class="btn3">提交</button>
+		<button class="btn3" id="certify">提交</button>
 	</div>
 	
 </div>
 <!--//发布-->
 <div class="blank-shop"></div>
+<!--弹出层-报名校验-->
+<div id="dialog-certify" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog" style="width: 80%">
+		<span class="close">×</span>
+		<div class="dialog-body">
+		  <div class="certify-list">
+		    <ul>
+		      <li><input type="text" class="ipt01" placeholder="请输入手机号"></li>
+		      <li><input type="text" class="ipt01" placeholder="请输入验证码"><button class="getCt">获取验证码</button></li>
+		    </ul>
+		  </div>
+		</div>
+		<div class="dialog-footer">
+			<button class="btn3">确定</button>
+		</div>
+	</div>
+</div>
+<!--//弹出层-报名校验-->
 </body>
 </html>

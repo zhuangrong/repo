@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>noah</title>
+<link rel="stylesheet" href="css/noah.css"> 
+<link rel="stylesheet" href="fonts/iconfont.css">
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+  //二维码
+  $(".get-qrcode").on("click",function(){
+    $("#dialog-qrcode").fadeIn(200)
+  })
+	//点击遮罩层隐藏
+	$(".mask,.close").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog-qrcode").fadeOut(200)		 
+	})
+})
+</script>
+</head>
+<body class="bg-new">
+
+<!--代金券-->
+<div class="coupons-wrap">
+  <div class="coupons">
+    <dl>
+      <dt>￥100 <span>代金券</span></dt>
+      <dd>
+        <p>有效期：2016-07-18 ～ 2016-07-30</p>
+        <p>本券仅限GORDON和MOOP使用</p>
+        <a href="javascript:" class="get-qrcode">去使用&gt;</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>￥100 <span>代金券</span></dt>
+      <dd>
+        <p>有效期：2016-07-18 ～ 2016-07-30</p>
+        <p>本券仅限GORDON和MOOP使用</p>
+        <a href="javascript:" class="get-qrcode">去使用&gt;</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>￥100 <span>代金券</span></dt>
+      <dd>
+        <p>有效期：2016-07-18 ～ 2016-07-30</p>
+        <p>本券仅限GORDON和MOOP使用</p>
+        <a href="javascript:" class="get-qrcode">去使用&gt;</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>￥100 <span>代金券</span></dt>
+      <dd>
+        <p>有效期：2016-07-18 ～ 2016-07-30</p>
+        <p>本券仅限GORDON和MOOP使用</p>
+        <a href="javascript:" class="get-qrcode">去使用&gt;</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>￥100 <span>代金券</span></dt>
+      <dd>
+        <p>有效期：2016-07-18 ～ 2016-07-30</p>
+        <p>本券仅限GORDON和MOOP使用</p>
+        <a href="javascript:" class="get-qrcode">去使用&gt;</a>
+      </dd>
+    </dl>
+  </div>
+</div>
+<!--//代金券-->
+<!--弹出层-二维码-->
+<div id="dialog-qrcode" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog qrd" style="width: 80%">
+		<span class="close">×</span>
+		<div class="dialog-body">
+		  <img src="images/qrcode-moop.png">
+		</div>
+	</div>
+</div>
+<!--//弹出层-二维码-->
+
+
+<div class="blank"></div>
+<nav>
+	<a href="#" class="active"><i class="icon iconfont icon-icon"></i><span>首页</span></a>
+	<a href="#"><i class="icon iconfont icon-paixing"></i><span>排行榜</span></a>
+	<a href="#"><i class="icon iconfont icon-wode"></i><span>我的</span></a>
+	<a href="#"><i class="icon iconfont icon-sousuo_sousuo"></i><span>搜索</span></a>
+</nav>
+
+
+</body>
+</html>

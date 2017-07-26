@@ -1053,6 +1053,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	background-image: url(../images/search-bg.png);
+	background-size: cover;
 	color: #fff;
 	border-radius: .1rem;
 	/* overflow: hidden; */
@@ -1089,7 +1090,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	height: 1rem;
 	top: 5rem;
 	left: 59%;
-	margin-left: -1rem;
+	margin-left: -1.2rem;
 	z-index: 99;
 	background-image: url(../images/close.png);
 	border-radius: 50%;
@@ -1101,8 +1102,8 @@ div[class*="tab-box"] > div:not(:first-child){
 .remark{
 	font-size: .24rem;
 	text-align: center;
-	color: #fff;
-	margin-top: -.2rem;
+	color: #D50000;
+	margin-top: .2rem;
 	padding-bottom: .5rem;
 }
 
@@ -1123,16 +1124,16 @@ div[class*="tab-box"] > div:not(:first-child){
 	-webkit-box-flex: 0;
 	-webkit-flex: 0 0 24%;
 	flex: 0 0 24%;
-	color: #ED7260;
+	color: #77384B;
 	line-height: .7rem;
 	text-align: center;
 	background-color: #fff;
 	border-radius: .1rem;
-	border: 1px dashed #ED7260;
+	border: 1px dashed #77384B;
 	padding: 0 .05rem;
 }
 .sel-votes span.active{
-	background-color: #651E28;
+	background-color: #77384B;
 	color: #fff;
 }
 .sel-votes.sv1 span{
@@ -1454,9 +1455,74 @@ div[class*="tab-box"] > div:not(:first-child){
 	background-image: url(../images/royal03.png);
 }
 
+.coupons-wrap{
+  padding: 1rem .5rem;
+  width: 6.6rem;
+  margin: 0 auto;
+}
+.coupons{
+  padding: .2rem;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: .1rem;
+}
 
+.coupons dl{
+  border: 1px solid  #77384B;
+  border-radius: .08rem;
+  margin-bottom: .2rem;
+}
+.coupons dl dt{
+  height: .8rem;
+  padding: .1rem .2rem;
+  background-image: url(../images/coupons.png);
+  font-size: .42rem;
+  color: #fff;
+}
+.coupons dl dt span{
+  display: inline-block;
+  margin-left: .1rem;
+  font-size: .16rem;
+}
+.coupons dl dd{
+  position: relative;
+  padding: .1rem .2rem;
+  font-size: .2rem;
+  min-height: 1rem;
+}
+.coupons dl dd p{
+  color: #9C9C9C;
+}
+.coupons dl dd a{
+  color: #77384B;
+  position: absolute;
+  bottom: .1rem;
+  right: .1rem;
+  font-size: .22rem;
+}
+.certify-list li{
+  padding: .1rem;
+  position: relative;
+}
+.getCt{
+  position: absolute;
+  top: .2rem;
+  right: 0.2rem;
+  padding: 0 .3rem;
+  line-height: .6rem;
+  background-color: #77384B;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: .05rem;
+  font-size: .2rem;
+}
 
-
+.qrd{
+  background: none;
+}
+.dialog.qrd span.close{
+  top: 7rem;
+}
 
 
 
