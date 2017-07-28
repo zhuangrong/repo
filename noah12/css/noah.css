@@ -1279,6 +1279,9 @@ div[class*="tab-box"] > div:not(:first-child){
 		-webkit-flex: 0 0 1.48rem;
   		flex: 0 0 1.48rem;
 	}
+  .pic-show-wrap{
+    padding: 0 0;
+  }
 }
 
 .icon-tubiaozhizuomoban-1:before{
