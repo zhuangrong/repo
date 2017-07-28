@@ -1255,34 +1255,7 @@ div[class*="tab-box"] > div:not(:first-child){
 	background-size: contain;
 }
 
-/*
- ************************iphone5 小于320************************
-*/
-@media (max-width: 320px) {
-	.vote-list .vote-item .avatar{
-		width: 1.0rem;
-		height: 1.0rem;
-	}
-	.vote-list .vote-item label {
-		bottom: .19rem;
-	}
-	.photo div,
-	.photo img {
-    width: 1.9rem;
-    height: 1.9rem;
-	}
-	.promotion .qrcode {
-    width: 2rem;
-    height: 2rem;
-	}
-	.top-item-wrap.t4 .top-item{
-		-webkit-flex: 0 0 1.48rem;
-  		flex: 0 0 1.48rem;
-	}
-  .pic-show-wrap{
-    padding: 0 0;
-  }
-}
+
 
 .icon-tubiaozhizuomoban-1:before{
 	content: '';
@@ -1527,7 +1500,45 @@ div[class*="tab-box"] > div:not(:first-child){
   top: 7rem;
 }
 
-
+/*
+ ************************iphone5 小于320************************
+*/
+@media (max-width: 320px) {
+	.vote-list .vote-item .avatar{
+		width: 1.0rem;
+		height: 1.0rem;
+	}
+	.vote-list .vote-item label {
+		bottom: .19rem;
+	}
+	.photo div,
+	.photo img {
+    width: 1.9rem;
+    height: 1.9rem;
+	}
+	.promotion .qrcode {
+    width: 2rem;
+    height: 2rem;
+	}
+	.top-item-wrap.t4 .top-item{
+		-webkit-flex: 0 0 1.48rem;
+  		flex: 0 0 1.48rem;
+	}
+  .pic-show-wrap{
+    padding: 0 0;
+  }
+  .top-wrap{
+    width: 6.3rem;
+    height: 3.2rem;
+  }
+  .top-wrap .moop,
+  .top-wrap .gordon{
+    width: 2.8rem;
+    height: 3.2rem;
+    padding-top: 1.5rem;
+    font-size: .21rem;
+  }
+}
 
 
 
