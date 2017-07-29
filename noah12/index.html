@@ -10,6 +10,27 @@
 <link rel="stylesheet" href="css/noah.css"> 
 <link rel="stylesheet" href="fonts/iconfont.css">
 <script src="js/jquery-2.1.4.min.js"></script>
+<style>
+	.top-wrap > div{
+		position: relative;
+	}
+	.top-wrap > div .ticket-link{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+	  height: 2.5rem;
+		background-color: #00f;
+		opacity: 0;
+	}
+	.top-wrap > div .ticket-link:last-child{
+		bottom: 0;
+		top: auto;
+	  height: 1.2rem;
+		background-color: #0ff;
+	}
+</style>
 </head>
 <body class="bg-new">
 <!--音乐&活动规则-->
@@ -22,8 +43,16 @@
 <!--//banner-->
 <!--土豪排行榜-->
 <div class="top-wrap">
-	<a href="#" class="gordon">152060票</a>
-	<a href="#" class="moop">132050票</a>
+	<div class="gordon">
+		<a href="rich-top.html" class="ticket-link"></a>
+		<a href="rich-top-moop.html" class="ticket-link"></a>
+		152060票
+	</div>
+	<div class="moop">
+		<a href="rich-top.html" class="ticket-link"></a>
+		<a href="rich-top-moop.html" class="ticket-link"></a>
+		132050票
+	</div>
 </div>
 <!--//土豪排行榜-->
 
