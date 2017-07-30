@@ -1116,14 +1116,15 @@ div[class*="tab-box"] > div:not(:first-child){
 	flex-wrap: wrap;
 	-webkit-align-items: center;
 	-webkit-box-align: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 	padding: .1rem;
 	font-size: .32rem;
 }
 .sel-votes span{
 	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 24%;
-	flex: 0 0 24%;
+	-webkit-flex: 0 0 -webkit-calc( 25% - .1rem);
+	flex: 0 0 -webkit-calc( 25% - .1rem);
+	margin:0 .1rem .1rem 0;
 	color: #77384B;
 	line-height: .7rem;
 	text-align: center;
@@ -1131,6 +1132,9 @@ div[class*="tab-box"] > div:not(:first-child){
 	border-radius: .1rem;
 	border: 1px dashed #77384B;
 	padding: 0 .05rem;
+}
+.sel-votes span:nth-child(4n){
+	margin-right: 0;
 }
 .sel-votes span.active{
 	background-color: #77384B;
@@ -1539,10 +1543,50 @@ div[class*="tab-box"] > div:not(:first-child){
     font-size: .21rem;
   }
 }
+/*点赞*/
+.zhan{
+	position: absolute;
+	bottom: .1rem;
+	right: -.6rem;
+	width: 2.66rem;
+	height: 1rem;
+	color: #77384B;
+	z-index: 99999;
+	text-align: left;
+	padding: .3rem 0 0 .4rem;
+	background-image: url(../images/zhan-bg.png);
+}
+.zhan i{
+	display: inline-block;
+	width: .32rem;
+	height: .32rem;
+	vertical-align: middle;
+	margin-right: .05rem;
+	background-image: url(../images/icon-zhan.png);
+}
 
-
-
-
-
+/*排名图标英雄，勇士*/
+.vote-show-wrap .show-item .girl{
+	position: relative;
+}
+.top01,
+.top02,
+.top03{
+	position: absolute;
+	display: block;
+	top: .1rem;
+	left: .2rem;
+	width: .7rem;
+	height: .7rem;
+}
+.top01{
+	background-image: url(../images/top01.png);
+}
+.top02{
+	background-image: url(../images/top02.png);
+}
+.top03{
+	background-image: url(../images/top03.png);
+}
 
 
