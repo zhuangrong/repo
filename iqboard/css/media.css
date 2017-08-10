@@ -30,8 +30,10 @@
   .nav-sub-wrap{
     height: 165px;
   }
-  .swiper01 .swiper-slide {
-		height: 665px;
+  .swiper01 .swiper-slide,
+	.banner,
+	.banner-blank{
+		height: 1051px;
 	}
 }
 /*-----------------------mobile 小于820px-----------------------*/
