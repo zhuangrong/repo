@@ -1,0 +1,265 @@
+@charset "utf-8";
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+body{
+  font-size: 14px;
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #888;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+em,h3{
+	font:inherit
+}
+.c01{
+	color: #16438c;
+}
+.tc{
+	text-align: center;
+}
+.hide-mb {
+	display: block;
+}
+.hide-pc {
+	display: none;
+}
+
+/*--------------头部*--------------*/
+.header{
+  padding-top: 13px;
+  height: 80px;
+  background-color: #fff;
+}
+.header .logo{
+  float: left;
+  width: 316px;
+}
+.header .container {
+  margin: 0 auto;
+}
+/*导航*/
+.nav{
+  float: left;
+  padding-left: 150px;
+  padding-right: 28px;
+}
+.nav li{
+  display: inline-block;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #fff;
+}
+.nav li > a{
+  display:block;
+  line-height: 52px;
+}
+.hd-so{
+  float: right;
+  padding-top: 8px;
+}
+.hd-so input{
+  width: 190px;
+  height: 30px;
+  border: 1px solid  #000;
+  border-radius: 15px;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+.hd-so button{
+  display: inline-block;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url(../images/hd-so.png);
+  margin-left: 10px;
+  vertical-align: middle;
+}
+/*二级导航*/
+.nav-sub-wrap{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  display: none;
+  width: 100%;
+  height: 210px;
+  background-color: rgba(0,0,0,0.5);
+}
+.nav-sub{
+  padding-top: 40px;
+  text-align: center;
+}
+.nav-sub dl{
+  text-align: center;
+}
+.nav-sub dl dd{
+  display: inline-block;
+  text-align: left;
+  padding-right: 40px;
+}
+.nav-sub dl dd img{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.nav-sub dl dd p{
+  display: inline-block;
+}
+.nav li.nav-sub-arrow a{
+  position: relative; 
+}
+.nav li:nth-child(2).nav-sub-arrow a:after{
+  content: '';
+  display: block;
+  width: 45px;
+  height: 21px;
+  position: absolute;
+  top: 47px;
+  left: 21px;
+  background-color: #000;
+  background-image: url(../images/nav-sub-arrow.png);
+}
+
+/*--------------banner--------------*/
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 551px;
+}
+.swiper01 {
+	width: 100%;
+}
+.swiper01 .swiper-slide {
+	position: relative;
+	height: 551px;
+	background-position: top center;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.swiper01 .swiper-pagination-bullet {
+	width: 0.08rem !important;
+	height: 0.08rem !important;
+	background: none !important;
+	border: 0.03rem solid #fff !important;
+	margin: 0 0.08rem !important;
+	opacity: 1;
+}
+.swiper01 .swiper-pagination-bullet-active {
+	background: rgba(255, 255, 255, 0.9) !important;
+}
+/*--------------公司简介--------------*/
+.comp-intro{
+  margin-top: 300px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2.0;
+}
+.comp-intro h3{
+  font-size: 30px;
+  color: #e60012;
+  opacity:0.0;	
+	-webkit-animation:textIn 1.2s linear forwards;
+}
+.comp-intro p{
+  opacity:0.0;	
+	-webkit-animation:textIn 1.2s linear forwards 1.5s;
+}
+
+@-webkit-keyframes textIn {
+		0% {-webkit-transform:translateY(0); opacity: 0;}
+		100% { -webkit-transform:translateY(-20px); opacity: 1;}
+}
+
+/*--------------视频介绍--------------*/
+.video-wrap{
+  height: 540px;
+}
+.video-show{
+  width: 50%;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+.video-show .v-mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  -webkit-transition: opacity .6s linear ;
+}
+.video-show .v-title{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  background-color: rgba(230,0,18,.7);
+  -webkit-transition: height .6s linear;
+  overflow: hidden;
+}
+.v-title p{
+  margin-top: 35px;
+}
+.v-title span{
+  display: block;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.video-show:hover .v-mask{
+  opacity: 0
+}
+.video-show:hover .v-title{
+  height: 200px
+}
+
+
