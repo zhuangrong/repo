@@ -15,16 +15,34 @@
 <script src="js/common.js"></script> 
 <script></script>
 <title>iqboard</title>
+<script>
+$(function(){
+  $("#btn-fb").on("click",function(){
+    $("#feedback").toggle()
+  })
+  window.onscroll=tools; 
+})
+//浮动导航
+function tools(){
+	var top=$(document).scrollTop(); 
+	if(top > 80){
+		$(".header").addClass("hd-slide"); 
+	}
+	if(top <= 80){
+		$(".header").removeClass("hd-slide"); 
+	}
+}
+</script>
 </head>
 <body style="opacity: 1.3">
 <!--头部-->
-<div class="header" style="opacity: 1.2;">
+<div class="header" style="opacity: 1.2;display:none ">
   <div class="container">
-    <a href="#" class="logo">
+    <a href="#" class="logo" style="opacity: .1">
       <img src="images/logo.png" alt="">
     </a>
     <div class="nav-right">
-      <div class="nav" id="nav">
+      <div class="nav" id="nav" style="opacity: .1">
         <ul>
           <li  class="active"><a href="index.html">首页</a></li>
           <li>
@@ -69,18 +87,20 @@
         </ul>
       </div>
       <div class="hd-so hide-mb">
-        <input type="text"><button></button>
+        <input type="text">
+        <span></span>
+        <button></button>
       </div>
       <div class="header-tip hide-pc">
-          <i class="icon-qq"></i>
           <i class="nav-toggle"></i>
       </div>
     </div>
   </div>
 </div>
 <!--//头部-->
+<span id="backtop"></span>
 <!--banner-->
-<div class="banner" style="display: ">
+<div class="banner" style="display:none ">
 	<!--swiper-->
 	<div class="swiper-container swiper01">
     <div class="swiper-wrapper">
@@ -106,7 +126,7 @@
 </div>
 <!--//banner-->
 <!--公司简介-->
-<div class="comp-intro">
+<div class="comp-intro" style="display: none">
   <h3>全球知名智慧教育整体方案与产品提供商</h3>
   <p>锐达互动科技股份有限公司成立于2006年，是全球知名的智慧教育整体方案与产品提供商，</p>
   <p>主要致力于推进教育信息化建设，让互动科技提升教学效率，</p>
@@ -115,8 +135,58 @@
   <p>2016年2月22日，锐达在“新三板”实现挂牌，证券代码：836453，证券简称：锐达科技。</p>
 </div>
 <!--//公司简介-->
+<!--发展历程-->
+<div class="course" style="opacity: .3">
+	<!--swiper-->
+	<div class="swiper-container swiper02">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      	<span class="year">2012</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+      <div class="swiper-slide">
+      	<span class="year">2013</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+      <div class="swiper-slide">
+      	<span class="year">2014</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+      <div class="swiper-slide">
+      	<span class="year">2015</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+      <div class="swiper-slide">
+      	<span class="year">2016</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+      <div class="swiper-slide">
+      	<span class="year">2017</span>
+      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper02', {
+        pagination: '.sp2',
+        slidesPerView: 3,
+        centeredSlides: true,
+        paginationClickable: true,
+				autoplay: 1500,
+				autoplayDisableOnInteraction:false, 
+        spaceBetween: 30,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+	</script>
+	<!--//swiper-->
+</div>	
+<!--//发展历程-->
 <!--视频介绍-->
-<div class="video-wrap">
+<div class="video-wrap" style="display: none">
   <div class="video-show">
     <img src="images/video.jpg" alt="">
     <div class="v-mask"></div>
@@ -137,7 +207,8 @@
 <!--//视频介绍-->
 <!--留言-->
 <div class="fb-blank"></div>
-<div class="feedback">
+<div class="btn-fb" id="btn-fb" style="display:none "></div>
+<div class="feedback" id="feedback" style="display:none ">
   <div class="fb-wrap">
 		<div class="fb-left">
 			<ul>
@@ -164,13 +235,13 @@
 		</ul>
 	</div>
 </div>
-<div class="fb-blank"></div>
 <!--//留言-->
+<div class="fb-blank" style="opacity: 0"></div>
 <!--backtop-->
-<div class="backtop hide-mb">返回顶部</div>
+<a href="#backtop" class="backtop hide-mb">返回顶部</a>
 <!--//backtop-->
 <!--footer-->
-<div class="footer-wrap">
+<div class="footer-wrap" style="display:none ">
 	<div class="footer">
 		<div class="ft-left">
 	  	<ul>

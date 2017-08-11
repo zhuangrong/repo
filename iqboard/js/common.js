@@ -18,4 +18,19 @@ $(function(){
     $(this).find(".nav-sub-wrap").stop().hide();
   })
   
+  //搜索
+  $(".hd-so input").focus(function(){
+     $(".nav").hide()
+     $(".hd-so").addClass("long")
+  })
+  $(".hd-so input").blur(function(){
+     $(".hd-so").removeClass("long")
+      setTimeout(function(){
+         $(".nav").fadeIn()
+      },310)
+  })
+  $(".hd-so span").click(function(){
+     $(".hd-so input").val("")
+  })
+  
 })
