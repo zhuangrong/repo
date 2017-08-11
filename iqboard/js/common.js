@@ -33,4 +33,9 @@ $(function(){
      $(".hd-so input").val("")
   })
   
+  //留言
+  $("#btn-fb").on("click",function(){
+    $("#feedback").toggle()
+  })
+  
 })
