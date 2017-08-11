@@ -17,37 +17,19 @@
 <title>iqboard</title>
 <script>
 $(function(){
-  window.onscroll=tools; 
+
 })
-//浮动导航
-function tools(){
-	var top=$(document).scrollTop(); 
-	if(top > 80){
-		$(".header").addClass("hd-slide"); 
-	}
-	if(top <= 80){
-		$(".header").removeClass("hd-slide"); 
-	}
-}
-//打开视频
-function videoPlay(video){
-  $(".video-play").show()
-  $("#player").attr("src",video )
-}
-function videoClose(){
-  $(".video-play").hide()
-}
 </script>
 </head>
 <body>
 <!--头部-->
-<div class="header">
+<div class="header hd-sub">
   <div class="container">
     <a href="#" class="logo">
       <img src="images/logo.png" alt="">
     </a>
     <div class="nav-right">
-      <div class="nav"  id="nav">
+      <div class="nav" id="nav">
         <ul>
           <li  class="active"><a href="index.html">首页</a></li>
           <li>
@@ -103,120 +85,76 @@ function videoClose(){
   </div>
 </div>
 <!--//头部-->
-<span id="backtop"></span>
-<!--banner-->
-<div class="banner">
-	<!--swiper-->
-	<div class="swiper-container swiper01">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      	<img src="images/banner.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-      	<img src="images/banner2.jpg" alt="">
-      </div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination sp1"></div>
-	</div>
-	<script>
-		var swiper = new Swiper('.swiper01', {
-          effect : 'fade',
-					pagination: '.sp1',
-					paginationClickable: true,
-          autoplay:2000
-			});
-	</script>
-	<!--//swiper-->
-</div>
-<!--//banner-->
-<!--公司简介-->
-<div class="comp-intro">
-  <h3>全球知名智慧教育整体方案与产品提供商</h3>
-  <p>锐达互动科技股份有限公司成立于2006年，是全球知名的智慧教育整体方案与产品提供商，</p>
-  <p>主要致力于推进教育信息化建设，让互动科技提升教学效率，</p>
-  <p>丰富教学方法，改变教育模式。</p>
-  <p>&nbsp;</p>
-  <p>2016年2月22日，锐达在“新三板”实现挂牌，证券代码：836453，证券简称：锐达科技。</p>
-</div>
-<!--//公司简介-->
-<!--视频介绍-->
-<div class="video-wrap">
-  <div class="video-show" onClick="videoPlay('images/show.mp4')">
-    <img src="images/video.jpg" alt="">
-    <div class="v-mask"></div>
-    <div class="v-title">
-      <p>锐达互动科技股份有限公司</p>
-      <span>Future Class, IQ Class</span>
-    </div>
-  </div>
-  <div class="video-show" onClick="videoPlay('images/show.mp4')">
-    <img src="images/video2.jpg" alt="">
-    <div class="v-mask"></div>
-    <div class="v-title">
-      <p>锐达互动科技股份有限公司</p>
-      <span>Future Class, IQ Class</span>
-    </div>
-  </div>
-</div>
-<!--//视频介绍-->
-<div class="video-play">
-  <i class="video-close" onClick="videoClose()">&times;</i>
-  <video id="player" controls preload="auto" poster="" width="100%" height="100%"></video>
-</div>
 <div class="fb-blank"></div>
-<!--发展历程-->
-<div class="course" style="opacity: .999">
-	<!--swiper-->
-	<div class="swiper-container swiper02">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      	<span class="year">2012</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2013</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2014</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2015</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2016</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2017</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-    </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-	</div>
-	<script>
-		var swiper = new Swiper('.swiper02', {
-        pagination: '.sp2',
-        slidesPerView: 3,
-        centeredSlides: true,
-        paginationClickable: true,
-				autoplay: 1500,
-				autoplayDisableOnInteraction:false, 
-        spaceBetween: 30,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-    });
-	</script>
-	<!--//swiper-->
-</div>	
-<!--//发展历程-->
+<!--product list-->
+<div class="product-list">
+  <ul>
+    <li class="active">
+      <a href="#">
+        <span>IQBoard</span>
+        <p>互动电子白板</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>IQOne</span>
+        <p>教学一体机</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>IQAiO</span>
+        <p>互动白板一体机</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>IQTouch</span>
+        <p>液晶触摸一体机</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>Others</span>
+        <p>其他产品</p>
+      </a>
+    </li>
+  </ul>
+</div>
+<!--//product list-->
+<!--product item-->
+<div class="product-item">
+  <ul>
+    <li>
+      <a href="#">
+        <span>IQBoard IR <br>红外式互动电子白板</span>
+        <img src="images/wb01.png">
+        <label>IQBoard IR <br>红外式互动电子白板</label>
+        <p></p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>IQBoard DVT <br>影像触摸互动电子白板</span>
+        <img src="images/wb02.png">
+        <label>IQBoard DVT <br>影像触摸互动电子白板</label>
+        <p></p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span>IQBoard ET <br>电磁式互动电子白板</span>
+        <img src="images/wb03.png">
+        <label>IQBoard ET <br>电磁式互动电子白板</label>
+        <p></p>
+      </a>
+    </li>
+  </ul>
+</div>
+<!--//product item-->
+
+<div class="fb-blank"></div>
 <!--留言-->
-<div class="fb-blank"></div>
 <div class="btn-fb" id="btn-fb"></div>
 <div class="feedback" id="feedback">
   <div class="fb-wrap">

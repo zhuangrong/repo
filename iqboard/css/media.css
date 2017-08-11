@@ -92,6 +92,7 @@
   .nav li{
     display: block;
     font-size: 18px;
+    background-color: #fff;
     border-bottom: 1px solid  #ddd;
   }
   .nav li > a {
@@ -117,9 +118,9 @@
 	}
 	.comp-intro{
 		margin-top: -20px;
-		z-index: 9999;
+		z-index: 1;
 		line-height: 1.4;
-		height: auto
+		height: auto;
 	}
 	.comp-intro h3{
 		font-size: 15px;
@@ -190,6 +191,10 @@
 	.v-title p{
 		margin-top: 0;
 	}
+  .video-show{
+    float: none;
+    width: 100%;
+  }
 	.video-show:hover .v-title{
 		font-size: 12px;
 		height: auto;
@@ -205,6 +210,92 @@
   }
   .feedback{
     margin-top: -20px;
+  }
+  /*course*/
+  .course{
+    width: auto;
+    height: auto;
+  }
+  .swiper02 .swiper-slide span{
+    font-size: 26px;
+  }
+  .swiper02 .swiper-button-next,
+  .swiper02 .swiper-button-prev{
+    width: 31px;
+    height: 59px;
+  }
+  .swiper02:after,
+  .swiper02:before{
+    top: 8px;
+    left: 102px;
+    width: 16px;
+    height: 16px;
+  }
+  .swiper02:after{
+    left: auto;
+    right: 102px;
+  }
+  .swiper02 .swiper-slide{
+    height: 190px;
+  }
+  .swiper02 .swiper-slide p{
+    position: relative;
+  }
+  .swiper02 .swiper-slide p label{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 10px 0 5px;
+    font-size: 10px;
+  }
+  .swiper02 .swiper-slide p img{
+    margin-top: 50px;
+  }
+  .course:after,
+  .course:before{
+    display: none;
+  }
+  .product-item li,
+  .product-item{
+    height: auto;
+  }
+  .product-item li{
+    float: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid  #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .product-item li label{
+    font-size: 10px;
+  }
+  .product-list ul li span{
+    font-size: 18px;
+  }
+  .product-list ul li p{
+    font-size: 9px;
+  }
+  .product-list ul li{
+    float: none;
+    width: 100%;
+    padding: 10px;
+  }
+  /*product-feature*/
+  .product-feature{
+    width: auto;
+    padding-top: 20px;
+  }
+  .product-feature li{
+    width: auto;
+    float: none;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .product-feature li span{
+    padding-bottom: 20px;
   }
 }
 

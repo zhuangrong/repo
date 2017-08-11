@@ -17,37 +17,29 @@
 <title>iqboard</title>
 <script>
 $(function(){
-  window.onscroll=tools; 
+	$.TabChange("tabs",1)
+	
 })
-//浮动导航
-function tools(){
-	var top=$(document).scrollTop(); 
-	if(top > 80){
-		$(".header").addClass("hd-slide"); 
+/*tabs切换组件*/
+	$.TabChange = function(obj,num){
+		$("li","#" + obj).each(function(index){
+				$(this).click(function(i){
+					$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+					$(this).addClass("curr").siblings().removeClass("curr");
+				})													
+		})
 	}
-	if(top <= 80){
-		$(".header").removeClass("hd-slide"); 
-	}
-}
-//打开视频
-function videoPlay(video){
-  $(".video-play").show()
-  $("#player").attr("src",video )
-}
-function videoClose(){
-  $(".video-play").hide()
-}
 </script>
 </head>
 <body>
 <!--头部-->
-<div class="header">
+<div class="header hd-slide" style="display: none">
   <div class="container">
     <a href="#" class="logo">
       <img src="images/logo.png" alt="">
     </a>
     <div class="nav-right">
-      <div class="nav"  id="nav">
+      <div class="nav" id="nav">
         <ul>
           <li  class="active"><a href="index.html">首页</a></li>
           <li>
@@ -103,122 +95,149 @@ function videoClose(){
   </div>
 </div>
 <!--//头部-->
-<span id="backtop"></span>
-<!--banner-->
-<div class="banner">
-	<!--swiper-->
-	<div class="swiper-container swiper01">
+<div class="banner-dt" style="display: none">
+  <!--swiper-->
+  <div class="swiper-container swiper03">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-      	<img src="images/banner.jpg" alt="">
+        <img src="images/banner-d01.jpg" alt="">
       </div>
       <div class="swiper-slide">
-      	<img src="images/banner2.jpg" alt="">
+        <img src="images/banner-d01.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner-d01.jpg" alt="">
       </div>
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination sp1"></div>
-	</div>
-	<script>
-		var swiper = new Swiper('.swiper01', {
-          effect : 'fade',
-					pagination: '.sp1',
-					paginationClickable: true,
+    <div class="swiper-pagination sp3"></div>
+  </div>
+  <script>
+    var swiper = new Swiper('.swiper03', {
+  //        effect : 'fade',
+          pagination: '.sp3',
+          paginationClickable: true,
           autoplay:2000
-			});
-	</script>
-	<!--//swiper-->
-</div>
-<!--//banner-->
-<!--公司简介-->
-<div class="comp-intro">
-  <h3>全球知名智慧教育整体方案与产品提供商</h3>
-  <p>锐达互动科技股份有限公司成立于2006年，是全球知名的智慧教育整体方案与产品提供商，</p>
-  <p>主要致力于推进教育信息化建设，让互动科技提升教学效率，</p>
-  <p>丰富教学方法，改变教育模式。</p>
-  <p>&nbsp;</p>
-  <p>2016年2月22日，锐达在“新三板”实现挂牌，证券代码：836453，证券简称：锐达科技。</p>
-</div>
-<!--//公司简介-->
-<!--视频介绍-->
-<div class="video-wrap">
-  <div class="video-show" onClick="videoPlay('images/show.mp4')">
-    <img src="images/video.jpg" alt="">
-    <div class="v-mask"></div>
-    <div class="v-title">
-      <p>锐达互动科技股份有限公司</p>
-      <span>Future Class, IQ Class</span>
-    </div>
-  </div>
-  <div class="video-show" onClick="videoPlay('images/show.mp4')">
-    <img src="images/video2.jpg" alt="">
-    <div class="v-mask"></div>
-    <div class="v-title">
-      <p>锐达互动科技股份有限公司</p>
-      <span>Future Class, IQ Class</span>
-    </div>
-  </div>
-</div>
-<!--//视频介绍-->
-<div class="video-play">
-  <i class="video-close" onClick="videoClose()">&times;</i>
-  <video id="player" controls preload="auto" poster="" width="100%" height="100%"></video>
+      });
+  </script>
+  <!--//swiper-->
 </div>
 <div class="fb-blank"></div>
-<!--发展历程-->
-<div class="course" style="opacity: .999">
-	<!--swiper-->
-	<div class="swiper-container swiper02">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      	<span class="year">2012</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2013</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2014</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2015</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2016</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
-      </div>
-      <div class="swiper-slide">
-      	<span class="year">2017</span>
-      	<p><label>转型：智能教学与智慧校园技术方案提供商</label><img src="images/cours-pic.jpg" alt=""></p>
+
+<!--产品概述-->
+<div class="product-txt" style="display: none">
+  <p>时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。</p>
+  <p>时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。</p>
+  <p>时尚新锐，引领白板创新时代。</p>
+</div>
+<!--//产品概述-->
+<!--产品特色-->
+<div class="product-feature">
+  <ul>
+    <li>
+      <img src="images/icon-feature01.png" alt="">
+      <span>创新科技</span>
+      <p>基于光学影像触摸技术， <br>出色的防光干扰性能，功能稳定。</p>
+    </li>
+    <li>
+      <img src="images/icon-feature02.png" alt="">
+      <span>零成本维护</span>
+      <p>只需简单的更换电子部件， <br>即可完成维护， 方便快捷。</p>
+    </li>
+    <li>
+      <img src="images/icon-feature03.png" alt="">
+      <span>多点触控</span>
+      <p>支持多人同步书写，书写范围随心所欲，  <br>让教学模式更加自由。</p>
+    </li>
+    <li>
+      <img src="images/icon-feature04.png" alt="">
+      <span>超窄边框</span>
+      <p>超窄边框，超窄快捷键，  <br>最大限度的保证板体有效面积。</p>
+    </li>
+    <li>
+      <img src="images/icon-feature05.png" alt="">
+      <span>无需专用笔</span>
+      <p>手指或其他物体可流畅地书写操作，  <br>无需专用笔。</p>
+    </li>
+  </ul>
+</div>
+<!--//产品特色-->
+<!--性能参数-->
+<div class="product-specs">
+  <h3>性能参数</h3>
+  <div class="spces-tab" id="tabs">
+    <ul>
+      <li class="curr">DVTQK</li>
+      <li>DVTK</li>
+    </ul>
+  </div>
+  <div class="tab-box1">
+    <div>
+      <div class="spces-detail">
+        <dl>
+          <dt>屏幕参数</dt>
+          <dd>
+            <p>87"：</p>
+            <p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
+            <p>92"：</p>
+            <p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>触摸技术</dt>
+          <dd>
+            <p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>信号</dt>
+          <dd>
+             <p>87"：信号跟踪速度10m/s，功率≤1W，定位精度0.05mm，定位点数4点、9点、20点。</p>
+             <p>92"：信号跟踪速度8m/s，功率≤0.6W，定位精度0.05mm，定位点数4点、9点、20点。</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>屏幕参数</dt>
+          <dd>
+            <p>87"：</p>
+            <p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
+            <p>92"：</p>
+            <p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>触摸技术</dt>
+          <dd>
+            <p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>其他功能</dt>
+          <dd>
+             <p>面板具备可支持和不可支持水笔功能，有壁挂、推拉、移动支架三种安装固定措施，具备鼠标右键功能。</p>
+          </dd>
+        </dl>
+        <div class="specs-info">
+          本数据仅供市场宣传推广，具体参数以实物为准，安装施工及投标时请以实时图纸为准。
+        </div>
       </div>
     </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-	</div>
-	<script>
-		var swiper = new Swiper('.swiper02', {
-        pagination: '.sp2',
-        slidesPerView: 3,
-        centeredSlides: true,
-        paginationClickable: true,
-				autoplay: 1500,
-				autoplayDisableOnInteraction:false, 
-        spaceBetween: 30,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-    });
-	</script>
-	<!--//swiper-->
-</div>	
-<!--//发展历程-->
+    <div style="display: none">b</div>
+  </div>
+</div>
+<!--//性能参数-->
+<!--相关资源下载-->
+<div class="download">
+  <h3>相关资源下载</h3>
+  <div>
+    <img src="images/driver-download.png">
+    <p>驱动名称 <br>上传时间</p>
+  </div>
+</div>
+<!--//相关资源下载-->
 <!--留言-->
-<div class="fb-blank"></div>
-<div class="btn-fb" id="btn-fb"></div>
-<div class="feedback" id="feedback">
+<div class="btn-fb" id="btn-fb" style="display: none"></div>
+<div class="feedback" id="feedback" style="display: none">
   <div class="fb-wrap">
 		<div class="fb-left">
 			<ul>
@@ -248,10 +267,10 @@ function videoClose(){
 <!--//留言-->
 <div class="fb-blank"></div>
 <!--backtop-->
-<a href="#backtop" class="backtop hide-mb">返回顶部</a>
+<a href="#backtop" class="backtop hide-mb" style="display: none">返回顶部</a>
 <!--//backtop-->
 <!--footer-->
-<div class="footer-wrap">
+<div class="footer-wrap" style="display: none">
 	<div class="footer">
 		<div class="ft-left">
 	  	<ul>
