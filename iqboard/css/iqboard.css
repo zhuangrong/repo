@@ -780,6 +780,9 @@ em,h3{
   font-size: 12px;
   text-align: center;
 }
+.spces-h{
+	min-height: 400px;
+}
 /*download*/
 .download{
   padding: 60px 0;
@@ -788,13 +791,32 @@ em,h3{
 .download h3{
   font-size: 30px;
   color: #4FAAF7;
+	margin-bottom: 10px;
 }
 .download img{
-  font-size: 30px;
   color: #4FAAF7;
 }
+.download p{
+  font-size: 20px;
+	padding: 5px 0;
+}
+.bg-wrap{
+	background-color: #F2F2F2;
+}
 
-
-
+/*collection*/
+.collection{
+	overflow: hidden;
+}
+.collection .clet-right,
+.collection .clet-left{
+	float: left;
+	width: 50%;
+	padding-right: 2px;
+}
+.collection .clet-right{
+	float: right;
+	padding-left: 2px;
+}
 
 

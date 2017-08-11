@@ -297,6 +297,55 @@
   .product-feature li span{
     padding-bottom: 20px;
   }
+	.product-txt{
+		font-size: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		min-height: 105px;
+		padding: 40px 0 0;
+	}
+	.banner-dt{
+		padding-top: 0;
+	}
+  /*product-specs*/
+	.product-specs{
+		width: auto;
+		padding:20px 10px 10px;
+	}
+	.product-specs h3{
+		font-size: 15px;
+	}
+	.spces-detail {
+    margin-top: 15px;
+	}
+	.spces-detail dl dt {
+    width: 100px;
+    font-size: 12px;
+	}
+	.spces-detail dl dd {
+    margin-left: 100px;
+		font-size: 9px;
+	}
+	.spces-detail dl {
+    padding: 15px 0;
+	}
+	.specs-info{
+		padding-top: 10px;
+	}
+	.download {
+    padding: 30px 0;
+	}
+	.download h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+	}
+	.download img {
+		width: 50px;
+	}
+	.download p {
+    font-size: 14px;
+    padding: 3px 0;
+	}
 }
 
 
