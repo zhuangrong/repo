@@ -85,7 +85,9 @@ em,h3{
   background-color:rgba(255,255,255,1);
   box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.2);
 }
-
+.banner-dt{
+  padding-top: 80px;
+}
 /*导航*/
 .nav{
   float: left;
@@ -690,18 +692,107 @@ em,h3{
   left: -300px;
   opacity: 1;
 }
+.product-txt{
+  text-align: center;
+  background-color: #4FAAF7;
+  color: #fff;
+  min-height: 150px;
+  padding: 60px 0 0;
+  line-height: 1.6;
+}
+.product-txt p{
+  opacity:0;	
+	-webkit-animation:textIn .6s linear forwards;
+}
 
+/*feature*/
+.product-feature{
+  overflow: hidden;
+  width: 1258px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.product-feature li{
+  float: left;
+  text-align: center;
+  width: 33.333%;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+.product-feature li span{
+  display: block;
+  color: #0C89F3;
+  padding-bottom: 25px;
+}
+.product-feature p{
+  opacity:0;	
+	-webkit-animation:textIn .6s linear forwards;
+}
 
-
-
-
-
-
-
-
-
-
-
+/*性能参数*/
+.product-specs{
+  width: 1258px;
+  padding: 40px 0 20px;
+  margin: 0 auto;
+}
+.product-specs h3{
+  font-size: 30px;
+  color: #4FAAF7;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.spces-tab{
+  border: 1px solid  #999;
+  height: 42px;
+}
+.spces-tab li{
+  width: 50%;
+  padding-top: 12px;
+  height: 40px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+}
+.spces-tab li.curr{
+  color: #4FAAF7;
+  border-bottom: 2px solid  #4FAAF7;
+}
+.spces-detail{
+  margin-top: 30px;
+}
+.spces-detail dl{
+  border-top: 1px solid  #D4D4D4;
+  padding: 30px 0;
+}
+.spces-detail dl dt{
+  float: left;
+  width: 200px;
+  font-size: 18px;
+}
+.spces-detail dl dd{
+  margin-left: 200px;
+  color: #333;
+}
+.specs-info{
+  padding-top: 20px;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+/*download*/
+.download{
+  padding: 60px 0;
+  text-align: center;
+}
+.download h3{
+  font-size: 30px;
+  color: #4FAAF7;
+}
+.download img{
+  font-size: 30px;
+  color: #4FAAF7;
+}
 
 
 
