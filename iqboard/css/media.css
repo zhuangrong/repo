@@ -444,6 +444,31 @@
 	.sys-feature li img{
 		width: 130px;
 	}
+	.aboutus-list{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.aboutus-list a{
+		width: 33.333%;
+		margin-right: 0;
+		font-size: 14px;
+	}
+	.aboutus-list a i{
+		width: 50px;
+		height: 43px;
+		margin-bottom: 0;
+	}
+	/*news type*/
+	.news-type{
+		padding-top: 8px;
+	}
+	.news-type li{
+		padding-right: 5px;
+	}
+	.news-type li a{
+		line-height: 30px;
+		font-size: 18px;
+	}
 }
 
 
