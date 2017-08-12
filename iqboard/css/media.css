@@ -91,7 +91,7 @@
   }
   .nav li{
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #fff;
     border-bottom: 1px solid  #ddd;
   }
@@ -184,6 +184,9 @@
 	}
 	.footer .ft-left li{
 		padding-bottom: 10px;
+	}
+	.footer .ft-left h3{
+		font-size: 16px;
 	}
 	.footer .ft-right{
 		padding-top: 10px;
@@ -348,6 +351,25 @@
 	}
 	.smart-item a:nth-child(2n) span{
 		font-size: 12px;
+	}
+/*	solution*/
+	.solution dl{
+		width: 100%;
+		float: none;
+		margin-top: 5px;
+	}
+	.solution dl dd{
+		padding-left: 15px;
+	}
+	.solution dl dd h3{
+		font-size: 12px;
+	}
+	.solution dl dd span{
+		font-size: 9px;
+	}
+	.solution dl:nth-child(odd),
+	.solution dl:nth-child(even){
+		border: 0
 	}
 }
 
