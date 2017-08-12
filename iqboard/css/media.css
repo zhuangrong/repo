@@ -371,6 +371,22 @@
 	.solution dl:nth-child(even){
 		border: 0
 	}
+	.sys-tab{
+		width: auto;
+		padding: 0 10px;
+	}
+	.sys-tab li{
+		width: 48%;
+		font-size: 12px;
+		margin-right: 10px;
+		height: 32px;
+		line-height: 32px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.sys-tab li:nth-child(2n){
+		margin-right: 0;
+	}
 }
 
 
