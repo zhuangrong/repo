@@ -826,10 +826,12 @@ em,h3{
 .smart-item a{
 	float: left;
 	width: 33.333%;
+	display: block;
 }
 .smart-item a:nth-child(2n){
 	background-color: #5A5A5A;
 	position: relative;
+	z-index: 99999;
 }
 .smart-item a:nth-child(2n):hover{
 	background-color: #E60012;
@@ -844,24 +846,60 @@ em,h3{
 	width: 100%;
 	text-align: center;
 }
-.smart-item a:nth-child(2):after{
+.smart-item a:nth-child(even):after{
 	position: absolute;
-	bottom: -50px;
 	left: 50%;
-	margin-left: -30px;
 	content: '';
+	margin-left: -30px;
 	display: block;
   border-right: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-top: 30px solid transparent;
   border-left: 30px solid #5A5A5A;
   vertical-align: middle;
-  transform: rotate3d(0, 0, 1, 90deg);
   height: 0;
   width: 0;
+	z-index: 99999;
 }
-.smart-item a:nth-child(2):hover:after{
+.smart-item a:nth-child(2):after{
+	bottom: -50px;
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+.smart-item a:nth-child(6):after,
+.smart-item a:nth-child(4):after{
+	top: -50px;
+  transform: rotate3d(0, 0, 1, 270deg);
+}
+.smart-item a:nth-child(even):hover:after{
   border-left-color: #E60012;
 }
 
-
+.smart-item a:nth-child(odd){
+	overflow: hidden;
+	-webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: all .3s linear;
+	position: relative;
+	z-index: 9;
+}
+.smart-item a:nth-child(odd):before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.5);
+  -webkit-transition: all .3s linear;
+}
+.smart-item a:nth-child(odd):hover{
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+.smart-item a:nth-child(odd):hover:before{
+	background-color: rgba(0,0,0,.0);
+}
+.smart-item a:nth-child(5):hover{
+	z-index: 1;
+}
