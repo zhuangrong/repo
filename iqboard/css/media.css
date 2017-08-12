@@ -305,7 +305,8 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		min-height: 105px;
-		padding: 40px 0 0;
+		padding-top: 40px;
+		padding-bottom: 0;
 	}
 	.banner-dt{
 		padding-top: 0;
@@ -357,6 +358,7 @@
 		width: 100%;
 		float: none;
 		margin-top: 5px;
+		padding: 10px;
 	}
 	.solution dl dd{
 		padding-left: 15px;
@@ -386,6 +388,61 @@
 	}
 	.sys-tab li:nth-child(2n){
 		margin-right: 0;
+	}
+	.contmain{
+		width: auto;
+	}
+	.sysswiper{
+		width: auto;
+		height: 200px;
+	}
+	.myvideo{
+		width: 100%;
+		height: 100%;
+	}
+	.sysinfo{
+		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 10px;
+	}
+	.sysinfo-wrap{
+		min-height: 300px;
+		height: auto;
+		border-top: 2px solid #E60012;
+		padding: 0 0;
+		box-shadow: 0px 0 0 0px rgba(0, 0, 0, 0.3);
+	}
+	.swiper06 .swiper-pagination-bullet{
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		font-size: 10px;
+		margin-bottom: 8px !important;
+	}
+	.icon-play{
+		width: 80px;
+		height: 80px;
+		margin-left: -40px;
+		margin-top: -40px;
+	}
+	.sysinfo p{
+		margin-bottom: 10px;
+		padding-top: 0px;
+	}
+	.sp6:before{
+		content: '';
+	}
+	.sys-feature{
+		padding-top: 20px;
+	}
+	.sys-feature li{
+		width: 100%;
+		min-height: 150px;
+		margin-bottom: 15px;
+	}
+	.sys-feature li img{
+		width: 130px;
 	}
 }
 

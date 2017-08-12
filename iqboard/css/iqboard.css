@@ -1053,11 +1053,11 @@ em,h3{
 	margin-left: -75px;
 	margin-top: -75px;
 	background-image: url(../images/play.png);
+	background-size: 100%;
 }
 /*sys feature*/
 .sys-feature{
   overflow: hidden;
-  width: 1258px;
   margin: 0 auto;
   padding-top: 50px;
 }
@@ -1068,7 +1068,7 @@ em,h3{
   color: #666;
   line-height: 1.6;
   margin-bottom: 50px;
-	min-height: 305px;
+  min-height: 310px;
 }
 .sys-feature li img{
   opacity:0;	
@@ -1077,8 +1077,9 @@ em,h3{
   display: block;
   color: #0C89F3;
   padding-bottom: 25px;
-	padding-top: 20px;
-  opacity:0;	
+  padding-top: 20px;
+  opacity:0;
+  font-size: 16px;
 }
 .sys-feature p{
 	display: block;
@@ -1091,6 +1092,13 @@ em,h3{
 }
 .imgIn{
 	-webkit-animation:imgIn 1s linear .5s  forwards;
+}
+.myvideo{
+	width: 640px;
+	height: 360px;
+}
+.backlist{
+	bottom: 160px;
 }
 
 
