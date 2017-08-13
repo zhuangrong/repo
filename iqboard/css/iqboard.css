@@ -995,6 +995,11 @@ em,h3{
 	width: 1258px;
 	margin: 0 auto;
 }
+.contmain:after{
+	content: '';
+	display: block;
+	clear: both;
+}
 .sysswiper{
 	display: inline-block;
 	vertical-align: middle;
@@ -1192,7 +1197,8 @@ em,h3{
 }
 .news-type li.active a,
 .news-type li:hover a{
-	color: #e60012;
+	color: #fff;
+	background-color: #e60012;
 }
 .news-type li:last-child{
 	padding-right: 0;
@@ -1295,8 +1301,68 @@ em,h3{
 	text-indent: 9999px;
 	background-image: url(../images/page02.png);
 }
-
-
+/*新闻详情*/
+.news-detail{
+	position: relative;
+	float: left;
+	width: 850px;
+	padding: 0 90px;
+}
+.news-detail .news-title{
+	font-size: 28px;
+	font-weight: bold;
+}
+.news-detail .news-title span{
+	display: block;
+	padding-top: 10px;
+	font-size:14px;
+	font-weight: normal;
+	color: #666;
+}
+.news-detail .news-content{
+	padding:10px 0;
+	line-height:2;
+	text-align: left;
+	color: #333;
+}
+.news-detail .news-content p{
+	text-align: left;
+	margin-bottom: 10px;
+}
+.news-detail .news-content img{
+	clear: both;
+	margin: 10px auto;
+}
+.blank40{
+	height: 40px;
+}
+.back-news{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	display: block;
+	background-image: url(../images/back-news.png);
+}
+.news-comment{
+	float: right;
+	width: 400px;
+	border: 1px solid  #fecd21;
+	padding: 20px 45px 100px;
+	min-height: 500px;
+}
+.news-comment h3{
+	font-size: 26px;
+	padding: 10px 0;
+	border-bottom: 1px solid  #fecd21;
+}
+.news-comment li{
+	color: #999;
+	padding: 20px 0;
+	border-bottom: 1px solid  #fecd21;
+	text-align: justify
+}
 
 
 

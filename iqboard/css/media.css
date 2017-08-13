@@ -509,6 +509,29 @@
 		line-height: 30px;
 		margin: 0 2px;
 	}
+  /*news detail*/
+	.news-detail{
+		float: none;
+		width: auto;
+		padding: 0 10px;
+	}
+	.news-detail .news-title{
+		font-size: 16px;
+	}
+	.blank40{
+		height: 20px;
+	}
+	.news-comment {
+		float: none;
+		width: 95%;
+		border: 1px solid #fecd21;
+		padding: 10px 20px 20px;
+		min-height: auto;
+		margin: 0 auto;
+	}
+	.news-comment h3 {
+		font-size: 18px;
+	}
 }
 
 
