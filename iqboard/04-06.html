@@ -16,7 +16,14 @@
 <script></script>
 <title>iqboard</title>
 <script>
-
+$(function(){
+	$("#qa dt").each(function(){
+		$(this).click(function(){
+			$(this).toggleClass("expand")
+			$(this).next().toggle()
+		})
+	})
+})
 </script>
 </head>
 <body>
@@ -139,11 +146,91 @@
 <!--qa result-->
 <div class="qa-result">
 	<h3>搜索结果：</h3>
-	<div class="qa-result-list">
-		
+	<div class="qa-result-list" id="qa">
+		<dl>
+			<dt class="expand"><i></i>1. 白板上没有显示电脑图像</dt>
+			<dd>
+				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
+				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
+				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
+				<p>处理操作步骤：</p>
+				<p>1、清除操作系统自带校准程序校准数据。打开控制面板,找到TALBLETPC设置，点击TabletPC设置,选择[重置]后点击确认。</p>
+				<p>2、重启电脑（一般情况下不需要重启电脑）</p>
+				<p>3、重新定位</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
+			<dd style="display: none">
+				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
+				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
+				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
+				<p>处理操作步骤：</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
+			<dd style="display: none">
+				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
+				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
+				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
+				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
+			<dd style="display: none">
+				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
+				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
+				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
+				<p>处理操作步骤：</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
+			<dd style="display: none">
+				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
+				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
+				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
+				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
+			<dd style="display: none">
+				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
+				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
+				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
+				<p>处理操作步骤：</p>
+			</dd>
+		</dl>
+		<dl>
+			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
+			<dd style="display: none">
+				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
+				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
+				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
+				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
+			</dd>
+		</dl>
 	</div>
 </div>
 <!--//news result-->
+<div class="blank40"></div>
+<div class="contmain">
+	<!--翻页-->
+	<div class="news-page">
+		<div>
+			<a class="first" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
+			<a class="prev" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
+			<span class="current">1</span>
+			<a class="num" href="/index.php?s=/Home/Index/news/p/2.html">2</a>
+			<a class="next" href="/index.php?s=/Home/Index/news/p/2.html">&gt;</a>
+			<a class="last" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
+		</div>
+	</div>
+	<!--//翻页-->
+</div>
 <div class="fb-blank"></div>
 <!--留言-->
 <div class="btn-fb" id="btn-fb"></div>

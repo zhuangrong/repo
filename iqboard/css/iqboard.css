@@ -1409,6 +1409,7 @@ em,h3{
 	cursor: pointer;
 }
 .news-search button:hover{
+	background-color: #e60012;
 	background-image: url(../images/hd-so-active.png);
 }
 /*news-result*/
@@ -1456,6 +1457,40 @@ em,h3{
 .btn-download:hover{
 	background-color: #E60012;
 	color: #fff;
+}
+/*常见问题*/
+.qa-result{
+	width: 1000px;
+	margin: 0 auto;
+}
+.qa-result h3{
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.qa-result-list dl{
+	padding-bottom: 25px;
+}
+.qa-result-list dt{
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.qa-result-list dd{
+	padding-left: 40px;
+	padding-top: 10px;
+	line-height: 1.6;
+}
+.qa-result-list i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-size: 100%;
+  vertical-align: middle;
+	margin-right: 10px;
+	background-image: url(../images/icon-plus.png);
+}
+.qa-result-list dt.expand i{
+	background-image: url(../images/icon-minus.png);
 }
 
 
