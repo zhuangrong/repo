@@ -176,6 +176,10 @@
 	}
 	.footer{
 		width: auto;
+		padding-top: 15px;
+	}
+	.footer .ft-left{
+		display: none;
 	}
 	.footer .ft-right,
 	.footer .ft-left li,
@@ -573,9 +577,24 @@
 		font-size: 16px;
 		padding-bottom: 10px;
 	}
-	
-	
-	
+	.qa-result{
+		width: 95%;
+	}
+	.qa-result-list dt{
+		font-size: 16px;
+	}
+	.qa-result-list dd{
+		padding-top: 5px;
+		padding-left: 25px;
+	}
+	.qa-result-list dt i{
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+	}
+	.qa-result-list dl{
+		padding-bottom: 15px;
+	}
 	
 	
 	

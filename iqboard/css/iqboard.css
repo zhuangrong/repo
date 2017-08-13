@@ -1130,6 +1130,7 @@ em,h3{
 .aboutus-list a:last-child{
 	margin-right: 0;
 }
+.aboutus-list a.active,
 .aboutus-list a:hover{
 	color: #e60012;
 }
@@ -1492,7 +1493,61 @@ em,h3{
 .qa-result-list dt.expand i{
 	background-image: url(../images/icon-minus.png);
 }
-
+/*客服中心*/
+.service{
+	padding: 40px 0 20px;
+	border-top: 1px solid  #e60012;
+	border-bottom: 1px solid  #e60012;
+	text-align: center;
+}
+.service dl{
+	margin: 0 auto 20px;
+}
+.service dd,
+.service dt{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+.service dt{
+	width: 92px;
+	height: 92px;
+}
+.service dt i{
+	display: block;
+	width: 92px;
+	height: 92px;
+}
+.service dt i.service-man{
+	background-image: url(../images/service-man.png);
+}
+.service dt i.service-qq{
+	background-image: url(../images/service-qq.png);
+}
+.service dd{
+	padding-left: 20px;
+	line-height: 1.6;
+}
+.service dd h3{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.service dd h3 a{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 25px;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 10px;
+	padding-left: 23px;
+}
+.service dd h3 a.service-min-qq01{
+	background-image: url(../images/service-min-qq01.png);
+	background-size: 20px;
+	background-position: left top;
+}
 
 
 

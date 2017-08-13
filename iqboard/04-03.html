@@ -15,16 +15,6 @@
 <script src="js/common.js"></script> 
 <script></script>
 <title>iqboard</title>
-<script>
-$(function(){
-	$("#qa dt").each(function(){
-		$(this).click(function(){
-			$(this).toggleClass("expand")
-			$(this).next().toggle()
-		})
-	})
-})
-</script>
 </head>
 <body>
 <!--头部-->
@@ -100,7 +90,7 @@ $(function(){
 		<i class="icon-aboutus02"></i>
 		<p>联系我们</p>
 	</a>
-	<a href="#">
+	<a href="#" class="active">
 		<i class="icon-aboutus03"></i>
 		<p>客服中心</p>
 	</a>
@@ -112,106 +102,37 @@ $(function(){
 		<i class="icon-aboutus05"></i>
 		<p>下载中心</p>
 	</a>
-	<a href="#" class="active">
+	<a href="#">
 		<i class="icon-aboutus06"></i>
 		<p>常见问题</p>
 	</a>
 </div>
 <!--//aboutus list-->
-<!--news search-->
-<div class="news-search contmain">
-	<input type="text" placeholder="DVT"><button></button>
+<!--客服中心-->
+<div class="service contmain">
+	<dl>
+		<dt><i class="service-man"></i></dt>
+		<dd>
+			<h3>400热线服务及服务监督</h3>
+			<p>服务途径：400-666-8615</p>
+			<p>服务内容：售前、售中、售后免费咨询、导购；在线技术指导、故障排除</p>
+		</dd>
+	</dl>
+	<dl>
+		<dt><i class="service-qq"></i></dt>
+		<dd>
+			<h3>
+				QQ在线服务
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1263759581&amp;site=qq&amp;menu=yes" class="service-min-qq01">1263759581</a>
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1811402095&amp;site=qq&amp;menu=yes" class="service-min-qq01">1811402095</a>
+			</h3>
+			<p>服务途径：在线QQ </p>
+			<p>服务内容：售前、售中、售后免费咨询、导购；在线技术指导、故障排除</p>
+		</dd>
+	</dl>
 </div>
-<!--//news search-->
+<!--//客服中心-->
 <div class="blank40"></div>
-<!--qa result-->
-<div class="qa-result">
-	<h3>搜索结果：</h3>
-	<div class="qa-result-list" id="qa">
-		<dl>
-			<dt class="expand"><i></i>1. 白板上没有显示电脑图像</dt>
-			<dd>
-				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
-				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
-				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
-				<p>处理操作步骤：</p>
-				<p>1、清除操作系统自带校准程序校准数据。打开控制面板,找到TALBLETPC设置，点击TabletPC设置,选择[重置]后点击确认。</p>
-				<p>2、重启电脑（一般情况下不需要重启电脑）</p>
-				<p>3、重新定位</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
-			<dd style="display: none">
-				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
-				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
-				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
-				<p>处理操作步骤：</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
-			<dd style="display: none">
-				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
-				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
-				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
-				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
-			<dd style="display: none">
-				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
-				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
-				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
-				<p>处理操作步骤：</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
-			<dd style="display: none">
-				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
-				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
-				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
-				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>2. DVT出现定位正常书写偏移</dt>
-			<dd style="display: none">
-				<p>产品型号：DVT系列、IRx系列（免驱采用HUB数据线系列）</p>
-				<p>现象：定位正常，个别区域或者大部分书写偏移</p>
-				<p>原因：操作系统自带的触控程序未清除,导致白板定位数据错乱</p>
-				<p>处理操作步骤：</p>
-			</dd>
-		</dl>
-		<dl>
-			<dt><i></i>3. 白板书写过程中出现自动跳转钢笔等</dt>
-			<dd style="display: none">
-				<p>产品型号：白板书写过程中出现自动跳转钢笔等</p>
-				<p>现象：白板书写过程中出现自动跳转钢笔等</p>
-				<p>原因：白板书写过程中出现自动跳转钢笔等</p>
-				<p>处理操作步骤：白板书写过程中出现自动跳转钢笔等</p>
-			</dd>
-		</dl>
-	</div>
-</div>
-<!--//news result-->
-<div class="blank40"></div>
-<div class="contmain">
-	<!--翻页-->
-	<div class="news-page">
-		<div>
-			<a class="first" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
-			<a class="prev" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
-			<span class="current">1</span>
-			<a class="num" href="/index.php?s=/Home/Index/news/p/2.html">2</a>
-			<a class="next" href="/index.php?s=/Home/Index/news/p/2.html">&gt;</a>
-			<a class="last" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
-		</div>
-	</div>
-	<!--//翻页-->
-</div>
 <div class="fb-blank"></div>
 <!--留言-->
 <div class="btn-fb" id="btn-fb"></div>
