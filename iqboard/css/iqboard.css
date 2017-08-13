@@ -45,6 +45,9 @@ button {
 	border: none;
 	outline: 0;
 }
+input,button,textarea{
+	font-family: 'Microsoft yahei'
+}
 em,h3{
 	font:inherit
 }
@@ -120,9 +123,10 @@ em,h3{
   background-color: transparent;
   display: inline-block;
   vertical-align: middle;
-	padding-left: 15px;
-	padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   -webkit-transition: width .5s linear;
+  outline: 0;
 }
 .hd-so button{
   display: inline-block;
@@ -312,7 +316,7 @@ em,h3{
 	background-color: #fff;
 	display: none;
 	position: relative;
-	z-index: -1;
+	z-index: 1;
 }
 .feedback .fb-wrap{
 	overflow: hidden;
@@ -496,7 +500,9 @@ em,h3{
   height: 100px;
   background-image: url(../images/feedback.png);
   background-size: 100%;
-  cursor: pointer
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 /*course*/
@@ -1363,8 +1369,94 @@ em,h3{
 	border-bottom: 1px solid  #fecd21;
 	text-align: justify
 }
-
-
+/*news-search*/
+.news-search{
+	height: 44px;
+	position: relative;
+	padding-right: 100px;
+}
+.news-search button,
+.news-search input{
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	background-color: #fecd21;
+	outline: 0;
+}
+.news-search input{
+	border: 1px solid  #999;
+	width: 100%;
+	border-top-left-radius: 22px;
+	border-bottom-left-radius: 22px;
+	font-size: 22px;
+	padding: 0 20px;
+}
+.news-search input::-webkit-input-placeholder {
+	color:#000;
+}
+.news-search button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	border: 1px solid  #999;
+	border-left: 0;
+	border-top-right-radius: 22px;
+	border-bottom-right-radius: 22px;
+	background-image: url(../images/hd-so.png);
+	background-position: center center;
+	background-size: 30px;
+	cursor: pointer;
+}
+.news-search button:hover{
+	background-image: url(../images/hd-so-active.png);
+}
+/*news-result*/
+.news-result{
+	width: 1000px;
+	margin: 0 auto;
+}
+.news-result h3{
+	font-size: 20px;
+	border-bottom: 1px solid  #ccc;
+	padding-bottom: 20px;
+}
+.news-result ul{
+	border-bottom: 1px solid  #ccc;
+	overflow: hidden;
+}
+.news-result ul li{
+	padding: 20px 0 10px;
+	float: left;
+	width: 10%;
+}
+.news-result ul li:nth-child(1){
+	width: 60%;
+	font-size: 18px;
+}
+.news-result ul li:nth-child(4){
+	width: 20%;
+	text-align: right;
+	padding-top: 10px;
+}
+.btn-download{
+	display: block;
+	border: none;
+	width: 134px;
+	line-height: 44px;
+	border-radius: 5px;
+	color: #000;
+	text-align: center;
+	font-size: 20px;
+	background-color: #FECD21;
+	float: right;
+	cursor: pointer;
+	font-family: 'Microsoft yahei';
+}
+.btn-download:hover{
+	background-color: #E60012;
+	color: #fff;
+}
 
 
 
