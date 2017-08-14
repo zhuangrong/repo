@@ -15,15 +15,10 @@
 <script src="js/common.js"></script> 
 <script></script>
 <title>iqboard</title>
-<script>
-$(function(){
-
-})
-</script>
 </head>
 <body>
 <!--头部-->
-<div class="header hd-sub">
+<div class="header hd-slide">
   <div class="container">
     <a href="#" class="logo">
       <img src="images/logo.png" alt="">
@@ -85,75 +80,97 @@ $(function(){
   </div>
 </div>
 <!--//头部-->
-<span id="backtop"></span>
-<div class="fb-blank"></div>
-<!--product list-->
-<div class="product-list">
-  <ul>
-    <li class="active">
-      <a href="#">
-        <span>IQBoard</span>
-        <p>互动电子白板</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>IQOne</span>
-        <p>教学一体机</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>IQAiO</span>
-        <p>互动白板一体机</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>IQTouch</span>
-        <p>液晶触摸一体机</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>Others</span>
-        <p>其他产品</p>
-      </a>
-    </li>
-  </ul>
+<!--aboutus list-->
+<div class="aboutus-list banner-dt contmain">
+	<a href="#">
+		<i class="icon-aboutus01"></i>
+		<p>新闻中心</p>
+	</a>
+	<a href="#">
+		<i class="icon-aboutus02"></i>
+		<p>联系我们</p>
+	</a>
+	<a href="#" class="active">
+		<i class="icon-aboutus03"></i>
+		<p>客服中心</p>
+	</a>
+	<a href="#">
+		<i class="icon-aboutus04"></i>
+		<p>服务网点</p>
+	</a>
+	<a href="#">
+		<i class="icon-aboutus05"></i>
+		<p>下载中心</p>
+	</a>
+	<a href="#">
+		<i class="icon-aboutus06"></i>
+		<p>常见问题</p>
+	</a>
 </div>
-<!--//product list-->
-<!--product item-->
-<div class="product-item">
-  <ul>
-    <li>
-      <a href="#">
-        <span>IQBoard IR <br>红外式互动电子白板</span>
-        <img src="images/wb01.png">
-        <label>IQBoard IR <br>红外式互动电子白板</label>
-        <p></p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>IQBoard DVT <br>影像触摸互动电子白板</span>
-        <img src="images/wb02.png">
-        <label>IQBoard DVT <br>影像触摸互动电子白板</label>
-        <p></p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span>IQBoard ET <br>电磁式互动电子白板</span>
-        <img src="images/wb03.png">
-        <label>IQBoard ET <br>电磁式互动电子白板</label>
-        <p></p>
-      </a>
-    </li>
-  </ul>
+<!--//aboutus list-->
+<!--客服中心-->
+<div class="service contmain">
+	<dl>
+		<dt><i class="service-man"></i></dt>
+		<dd>
+			<h3>400热线服务及服务监督</h3>
+			<p>服务途径：400-666-8615</p>
+			<p>服务内容：售前、售中、售后免费咨询、导购；在线技术指导、故障排除</p>
+		</dd>
+	</dl>
+	<dl>
+		<dt><i class="service-qq"></i></dt>
+		<dd>
+			<h3>
+				QQ在线服务
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1263759581&amp;site=qq&amp;menu=yes" class="service-min-qq01">1263759581</a>
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1811402095&amp;site=qq&amp;menu=yes" class="service-min-qq01">1811402095</a>
+			</h3>
+			<p>服务途径：在线QQ </p>
+			<p>服务内容：售前、售中、售后免费咨询、导购；在线技术指导、故障排除</p>
+		</dd>
+	</dl>
 </div>
-<!--//product item-->
+<!--//客服中心-->
+<!--客服项目-->
+<div class="service-item contmain">
+	<div class="s-item">
+		<h3>硬件服务</h3>
+		<dl>
+			<dt>服务途径：</dt>
+			<dd>快件物流，人工检测、维修服务</dd>
+		</dl>
+		<dl>
+			<dt>服务内容：</dt>
+			<dd>客返品的快件收发服务，硬件故障诊断，<br>硬件设备更换、维修</dd>
+		</dl>
+	</div>
+	<div class="s-item">
+		<h3>软件服务</h3>
+		<dl>
+			<dt>服务途径：</dt>
+			<dd>具光盘、网站下载</dd>
+		</dl>
+		<dl>
+			<dt>服务内容：</dt>
+			<dd>驱动程序及应用工具提供和支持</dd>
+		</dl>
+	</div>
+	<div class="s-item">
+		<h3>备件服务</h3>
+		<dl>
+			<dt>服务途径：</dt>
+			<dd>邮寄、发货方式提供</dd>
+		</dl>
+		<dl>
+			<dt>服务内容：</dt>
+			<dd>为各代理提供产品附件、成品备件</dd>
+		</dl>
+	</div>
+</div>
+<!--//客服项目-->
 
+<div class="blank40"></div>
 <div class="fb-blank"></div>
 <!--留言-->
 <div class="btn-fb" id="btn-fb"></div>
@@ -189,6 +206,10 @@ $(function(){
 <!--backtop-->
 <a href="#backtop" class="backtop hide-mb">返回顶部</a>
 <!--//backtop-->
+<div class="footer-tip">
+	<img src="images/footer-tip.png" class="hide-mb" alt="">
+	<img src="images/footer-tip2.png" class="hide-pc" alt="">
+</div>
 <!--footer-->
 <div class="footer-wrap">
 	<div class="footer">

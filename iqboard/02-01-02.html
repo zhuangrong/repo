@@ -33,7 +33,7 @@ $(function(){
 </head>
 <body>
 <!--头部-->
-<div class="header hd-slide" style="display: none">
+<div class="header hd-slide">
   <div class="container">
     <a href="#" class="logo">
       <img src="images/logo.png" alt="">
@@ -95,7 +95,8 @@ $(function(){
   </div>
 </div>
 <!--//头部-->
-<div class="banner-dt" style="display: none">
+<span id="backtop"></span>
+<div class="banner-dt">
   <!--swiper-->
   <div class="swiper-container swiper03">
     <div class="swiper-wrapper">
@@ -114,7 +115,7 @@ $(function(){
   </div>
   <script>
     var swiper = new Swiper('.swiper03', {
-  //        effect : 'fade',
+          effect : 'fade',
           pagination: '.sp3',
           paginationClickable: true,
           autoplay:2000
@@ -122,10 +123,8 @@ $(function(){
   </script>
   <!--//swiper-->
 </div>
-<div class="fb-blank"></div>
-
 <!--产品概述-->
-<div class="product-txt" style="display: none">
+<div class="product-txt">
   <p>时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。</p>
   <p>时尚新锐，引领白板创新时代。时尚新锐，引领白板创新时代。</p>
   <p>时尚新锐，引领白板创新时代。</p>
@@ -163,81 +162,140 @@ $(function(){
 </div>
 <!--//产品特色-->
 <!--性能参数-->
-<div class="product-specs">
-  <h3>性能参数</h3>
-  <div class="spces-tab" id="tabs">
-    <ul>
-      <li class="curr">DVTQK</li>
-      <li>DVTK</li>
-    </ul>
-  </div>
-  <div class="tab-box1">
-    <div>
-      <div class="spces-detail">
-        <dl>
-          <dt>屏幕参数</dt>
-          <dd>
-            <p>87"：</p>
-            <p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
-            <p>92"：</p>
-            <p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>触摸技术</dt>
-          <dd>
-            <p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>信号</dt>
-          <dd>
-             <p>87"：信号跟踪速度10m/s，功率≤1W，定位精度0.05mm，定位点数4点、9点、20点。</p>
-             <p>92"：信号跟踪速度8m/s，功率≤0.6W，定位精度0.05mm，定位点数4点、9点、20点。</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>屏幕参数</dt>
-          <dd>
-            <p>87"：</p>
-            <p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
-            <p>92"：</p>
-            <p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>触摸技术</dt>
-          <dd>
-            <p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
-          </dd>
-        </dl>
-        <dl>
-          <dt>其他功能</dt>
-          <dd>
-             <p>面板具备可支持和不可支持水笔功能，有壁挂、推拉、移动支架三种安装固定措施，具备鼠标右键功能。</p>
-          </dd>
-        </dl>
-        <div class="specs-info">
-          本数据仅供市场宣传推广，具体参数以实物为准，安装施工及投标时请以实时图纸为准。
-        </div>
-      </div>
-    </div>
-    <div style="display: none">b</div>
-  </div>
+<div class="bg-wrap">
+	<div class="product-specs">
+		<h3>性能参数</h3>
+		<div class="spces-tab" id="tabs">
+			<ul>
+				<li class="curr">DVTQK</li>
+				<li>DVTK</li>
+			</ul>
+		</div>
+		<div class="tab-box1 spces-h">
+			<div>
+				<div class="spces-detail">
+					<dl>
+						<dt>屏幕参数</dt>
+						<dd>
+							<p>87"：</p>
+							<p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
+							<p>92"：</p>
+							<p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>触摸技术</dt>
+						<dd>
+							<p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>信号</dt>
+						<dd>
+							 <p>87"：信号跟踪速度10m/s，功率≤1W，定位精度0.05mm，定位点数4点、9点、20点。</p>
+							 <p>92"：信号跟踪速度8m/s，功率≤0.6W，定位精度0.05mm，定位点数4点、9点、20点。</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>屏幕参数</dt>
+						<dd>
+							<p>87"：</p>
+							<p>外边框1793mm*1309mm，有效感应尺寸1755mm*1271mm，投影尺寸1695mm*1271mm，画面比例4:3，分辨率32768*32768。</p>
+							<p>92"：</p>
+							<p>外边框2001mm*1228mm，有效感应尺寸1967mm1190mm，投影尺寸1695mm*1271mm，画面比例16:10，分辨率32768*32768。</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>触摸技术</dt>
+						<dd>
+							<p>10点触控，光学影像技术，手指触摸，可提供左右两侧快捷键。</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>其他功能</dt>
+						<dd>
+							 <p>面板具备可支持和不可支持水笔功能，有壁挂、推拉、移动支架三种安装固定措施，具备鼠标右键功能。</p>
+						</dd>
+					</dl>
+					<div class="specs-info">
+						本数据仅供市场宣传推广，具体参数以实物为准，安装施工及投标时请以实时图纸为准。
+					</div>
+				</div>
+			</div>
+			<div style="display: none">
+			<!--DVTK-->
+			DVTK
+			</div>
+		</div>
+	</div>
 </div>
 <!--//性能参数-->
 <!--相关资源下载-->
 <div class="download">
   <h3>相关资源下载</h3>
-  <div>
+  <a href="#">
     <img src="images/driver-download.png">
-    <p>驱动名称 <br>上传时间</p>
-  </div>
+    <p>驱动名称</p>
+    <label>上传时间</label>
+  </a>
 </div>
 <!--//相关资源下载-->
+<!--两个swiper-->
+<div class="collection">
+  <div class="clet-left">
+		<!--swiper-->
+		<div class="swiper-container swiper04">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/banner-pro01.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/banner-pro02.jpg" alt="">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination sp4"></div>
+		</div>
+		<script>
+			var swiper = new Swiper('.swiper04', {
+						effect : 'fade',
+						pagination: '.sp4',
+						paginationClickable: true,
+						autoplay:2000
+				});
+		</script>
+		<!--//swiper-->
+  </div>
+  <div class="clet-right">
+		<!--swiper-->
+		<div class="swiper-container swiper05">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/banner-pro02.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/banner-pro01.jpg" alt="">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination sp4"></div>
+		</div>
+		<script>
+			var swiper = new Swiper('.swiper05', {
+						effect : 'fade',
+						pagination: '.sp5',
+						paginationClickable: true,
+						autoplay:3000
+				});
+		</script>
+		<!--//swiper-->
+  </div>
+</div>
+<!--//两个swiper-->
+<div class="fb-blank"></div>
 <!--留言-->
-<div class="btn-fb" id="btn-fb" style="display: none"></div>
-<div class="feedback" id="feedback" style="display: none">
+<div class="btn-fb" id="btn-fb"></div>
+<div class="feedback" id="feedback">
   <div class="fb-wrap">
 		<div class="fb-left">
 			<ul>
@@ -267,10 +325,10 @@ $(function(){
 <!--//留言-->
 <div class="fb-blank"></div>
 <!--backtop-->
-<a href="#backtop" class="backtop hide-mb" style="display: none">返回顶部</a>
+<a href="#backtop" class="backtop hide-mb">返回顶部</a>
 <!--//backtop-->
 <!--footer-->
-<div class="footer-wrap" style="display: none">
+<div class="footer-wrap">
 	<div class="footer">
 		<div class="ft-left">
 	  	<ul>
@@ -316,6 +374,5 @@ $(function(){
 	</div>
 </div>	
 <!--//footer-->
-
 </body>
 </html>
