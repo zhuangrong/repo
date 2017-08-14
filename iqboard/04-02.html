@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="apple-mobile-web-app-title" content="Title"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/iqboard.css">
+<link rel="stylesheet" href="css/media.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/swiper.min.js"></script> 
+<script src="js/common.js"></script> 
+<script>
+$(function(){
+   
+  $(".map img").each(function(){
+    /*mouseenter*/
+    $(this).mouseenter(function(e){
+      $(this).css("opacity",1)
+      e = e || window.event;
+      var mousePX = e.pageX + 20;
+      var mousePY = e.pageY - 20;
+      console.log(mousePX)
+      //浮动层
+      $(".contact-pop").show().css({"top": mousePY + "px", "left": mousePX + "px"})
+      $(".map-txt").css({"opacity": 1})
+    })
+    /*mouseout*/
+    $(this).mouseout(function(){
+      $(this).css("opacity",0)
+      $(".contact-pop").hide()
+    })
+    
+  })
+})  
+</script>
+<style>
+
+</style>
+<title>iqboard</title>
+</head>
+<body>
+
+
+<!--contact pop-->
+<div class="contact-pop" style="display: none">
+   <div class="cpcont">
+    <h2>福州总部</h2>
+    <p>服务热线：400-666-8615</p>
+    <p>总机：0591-38205666</p>
+    <p>技服电话：0591-38202895</p>
+    <p>地址：福建省福州市</p>
+   </div>
+</div>
+<!--//contact pop-->
+<!--contact us-->
+<div class="contact-wrap">
+  <div class="contmain">
+    <!--地图-->
+    <div class="map hide-mb">
+      <img src="images/北京市.png" class="beijing zid">
+      <img src="images/天津市.png" class="tianjin zid">
+      <img src="images/新疆维吾尔自治区.png" class="xinjiang">
+      <img src="images/西藏自治区.png" class="xizang">
+      <img src="images/青海省.png" class="qinghai">
+      <img src="images/四川省.png" class="sichuan">
+      <img src="images/云南省.png" class="yunnan">
+      <img src="images/内蒙古自治区.png" class="neimenggu">
+      <img src="images/甘肃省.png" class="gansusheng">
+      <img src="images/宁夏回族自治区.png" class="linxia">
+      <img src="images/陕西省.png" class="sanxi">
+      <img src="images/江西省.png" class="jiangxi">
+      <img src="images/江苏省.png" class="jiangsu">
+      <img src="images/上海市.png" class="shanghai">
+      <img src="images/黑龙江省.png" class="heilongjiang">
+      <img src="images/吉林省.png" class="jilin">
+      <img src="images/辽宁省.png" class="liaoning">
+      <img src="images/山东省.png" class="shandong">
+      <img src="images/台湾省.png" class="taiwan">
+      <img src="images/湖南省.png" class="hunan">
+      <img src="images/湖北省.png" class="hubei">
+      <img src="images/重庆市.png" class="chongqing">
+      <img src="images/河南省.png" class="henan">
+      <img src="images/浙江省.png" class="zhejiang">
+      <img src="images/河北省.png" class="hebei">
+      <img src="images/广西壮族自治区.png" class="guangxi">
+      <img src="images/广东省.png" class="guangdong">
+      <img src="images/福建省.png" class="fujian">
+      <img src="images/澳门.png" class="aomen">
+      <img src="images/香港.png" class="xianggang">
+      <img src="images/安徽省.png" class="anwei">
+      <img src="images/安徽省.png" class="anwei">
+      <img src="images/海南省.png" class="hainan">
+      <img src="images/贵州省.png" class="guizhou">
+      <img src="images/山西省.png" class="shanxi">
+      <!--文字-->
+      <span class="beijing-txt zid">北京市</span>
+      <span class="tianjin-txt zid">天津市</span>
+      <span class="xinjiang-txt">新疆维吾尔自治区</span>
+      <span class="xizang-txt">西藏自治区</span> 
+      <span class="qinghai-txt">青海省</span>
+      <span class="sichuan-txt">四川省</span>
+      <span class="yunnan-txt">云南省</span>
+      <span class="neimenggu-txt">内蒙古自治区</span>
+      <span class="gansusheng-txt">甘肃省</span>
+      <span class="linxia-txt">宁夏回族自治区</span>
+      <span class="sanxi-txt">陕西省</span>
+      <span class="jiangxi-txt">江西省</span>
+      <span class="jiangsu-txt">江苏省</span>
+      <span class="shanghai-txt">上海市</span>
+      <span class="heilongjiang-txt">黑龙江省</span>
+      <span class="jilin-txt">吉林省</span>
+      <span class="liaoning-txt">辽宁省</span>
+      <span class="shandong-txt">山东省</span>
+      <span class="taiwan-txt">台湾省</span>
+      <span class="hunan-txt">湖南省</span>
+      <span class="hubei-txt">湖北省</span>
+      <span class="chongqing-txt">重庆市</span>
+      <span class="henan-txt">河南省</span>
+      <span class="zhejiang-txt">浙江省</span>
+      <span class="hebei-txt">河北省</span>
+      <span class="guangxi-txt">广西壮族自治区</span>
+      <span class="guangdong-txt">广东省</span>
+      <span class="fujian-txt">福建省</span>
+      <span class="aomen-txt">澳门</span>
+      <span class="xianggang-txt">香港</span>
+      <span class="anwei-txt">安徽省</span>
+      <span class="anwei-txt">安徽省</span>
+      <span class="hainan-txt">海南省</span>
+      <span class="guizhou-txt">贵州省</span>
+      <span class="shanxi-txt">山西省</span>
+    </div>
+    <!--//地图-->
+    <div class="contact-list" style="display: none">
+      <!--联系方式-->
+      <div class="contact-group">
+        <h2>福州总部</h2>
+        <p>服务热线：400-666-8615</p>
+        <p>总机：0591-38205666</p>
+        <p>技服电话：0591-38202895</p>
+        <p>地址：福建省福州市闽侯县上街镇海西高新技术产业园创新园一期6#楼</p>
+      </div>
+      <!--//联系方式-->
+      <div class="contact-so">
+        <input type="text" placeholder="搜索城市/联系人/其他">
+        <button></button>
+      </div>
+      <!--搜索结果-->
+      <h2 class="contact-result-title">搜索结果：</h2>
+      <div style="height: 380px">
+       <!-- Swiper -->
+       <div class="swiper-container swiper9">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide">
+            <div class="contact-result">
+              <ul>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+                <li>
+                  <h2>西安办事处</h2>
+                  <p>地址：西安市李家村万达广场２栋２单元2607单元</p>
+                  <p>联系人：杜炅 18144037151</p>
+                </li>
+              </ul>
+            </div>
+           </div>
+         </div>
+         <!-- Add Scroll Bar -->
+         <div class="swiper-scrollbar"></div>
+       </div>
+       <script>
+        var swiper = new Swiper('.swiper-container', {
+            scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            mousewheelControl: true,
+            scrollbarHide:false,
+            freeMode: true
+        });
+        </script>
+       <!-- //Swiper -->
+      </div>
+      <!--//搜索结果-->
+    </div>
+  </div>
+</div>
+<!--//contact us-->
+
+</body>
+</html>
