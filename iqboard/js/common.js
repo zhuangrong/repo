@@ -1,3 +1,5 @@
+
+
 $(function(){
   //移动端-导航点击
   $(".nav-toggle").on("click",function(){
@@ -22,12 +24,14 @@ $(function(){
   $(".hd-so input").focus(function(){
      $(".nav").hide()
      $(".hd-so").addClass("long")
+     $(".logo").addClass("long")
   })
   $(".hd-so input").blur(function(){
      $(".hd-so").removeClass("long")
+     $(".logo").removeClass("long")
       setTimeout(function(){
-         $(".nav").fadeIn()
-      },310)
+         $(".nav").show()
+      },500)
   })
   $(".hd-so span").click(function(){
      $(".hd-so input").val("")
@@ -37,5 +41,7 @@ $(function(){
   $("#btn-fb").on("click",function(){
     $("#feedback").toggle()
   })
+  
+  
   
 })

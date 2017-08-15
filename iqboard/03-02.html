@@ -18,8 +18,6 @@
 <script>
 
 $(function(){
-	$.TabChange2("tabs",1,2)
-	
 	//幻灯片播放视频
 	$("#myvideo").on("click",function(){
 		$(this)[0].play()
@@ -27,17 +25,19 @@ $(function(){
 	})
 	
 	window.onscroll= anni; 
+  
+  //tabs swiper07
+  $(".sys-tab li").on('click',function(e){
+    e.preventDefault()
+    $(".sys-tab .curr").removeClass('curr')
+    $(this).addClass('curr')
+    swiper07.slideTo($(this).index()) 
+    swiper07b.slideTo($(this).index()) 
+  })
 })
-/*tabs切换组件*/
-$.TabChange2 = function(obj, num, num2){
-	$("li","#" + obj).each(function(index){
-			$(this).click(function(i){
-				$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
-				$("div.tab-box" + num2 + " > div").eq(index).show().siblings().hide();
-				$(this).addClass("curr").siblings().removeClass("curr");
-			})													
-	})
-}
+
+
+
 //anni
 function anni(){
 	var sys = $(".sys-feature")
@@ -58,7 +58,7 @@ function anni(){
 </head>
 <body>
 <!--头部-->
-<div class="header hd-slide">
+<div class="header hd-slide" >
   <div class="container">
     <a href="#" class="logo">
       <img src="images/logo.png" alt="">
@@ -120,7 +120,7 @@ function anni(){
   </div>
 </div>
 <!--//头部-->
-<div class="banner-dt">
+<div class="banner-dt" >
   <!--swiper-->
   <div class="swiper-container swiper03">
     <div class="swiper-wrapper">
@@ -149,14 +149,14 @@ function anni(){
 </div>
 
 <!--智慧校园概述-->
-<div class="product-txt bg-white smart-txt">
+<div class="product-txt bg-white smart-txt" >
 	<p>精心创造信息技术高度融合、数字化应用深度整合、信息化终端广泛定制的信息化校园，</p>
 	<p>为信息化校园提供全新的业务处理空间、融合的网络和技术环境、广泛感知的信息终端、智能的管理与决策支持、快速综合的业务处理服务以及个性化的信息服务，</p>
 	<p>让身处校园环境的每一个个体尽享智慧化校园的真实体验。</p>
 </div>
 <!--//智慧校园概述-->
 <!--solution-->
-<div class="solution">
+<div class="solution" >
 	<dl>
 		<dt><img src="images/solution01.jpg" alt=""></dt>
 		<dd>
@@ -182,7 +182,7 @@ function anni(){
 <!--//solution-->
 <div class="fb-blank" id="backlist"></div>
 <!--systems-->
-<div class="sys-tab" id="tabs">
+<div class="sys-tab">
 	<ul>
 		<li class="curr">IQ校园门户系统</li>
 		<li>IQ排课选课系统</li>
@@ -196,114 +196,135 @@ function anni(){
 <div class="sysinfo-wrap">
 	<div class="contmain">
 		<div class="tab-box1">
-			<div>
-				<!--介绍图文-->
-				<div class="sysswiper">
-					<!--swiper-->
-					<div class="swiper-container swiper06">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<i class="icon-play"></i>
-								<video id="myvideo" src="images/show.mp4" controls preload="auto" poster="" class="myvideo"></video>
-							</div>
+			  <!-- Swiper07 -->
+        <div class="swiper-container swiper07">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!--介绍图文-->
+                  <div class="sysswiper">
+                    <!--swiper06-->
+                    <div class="swiper-container swiper06">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <i class="icon-play"></i>
+                          <video id="myvideo" src="images/show.mp4" controls preload="auto" poster="" class="myvideo"></video>
+                        </div>
 
-							<div class="swiper-slide">
-								<img src="images/banner-sys01.jpg" alt="">
-							</div>
-							<div class="swiper-slide">
-								<img src="images/banner-sys01.jpg" alt="">
-							</div>
-						</div>
-						<!-- Add Pagination -->
-						<div class="swiper-pagination sp6"></div>
-					</div>
-					<script>
-						var swiper = new Swiper('.swiper06', {
-									effect : 'fade',
-									pagination: '.sp6',
-									paginationClickable: true,
-									direction: 'vertical',
-									paginationBulletRender: function (swiper, index, className) {
-											return '<span class="' + className + '">' + (index + 1) + '</span>';
-									},
-									autoplay:2000
-							});
-					</script>
-					<!--//swiper-->
-				</div>
-				<div class="sysinfo">
-					<p>IQ校园门户系统位于智慧校园体系结构中的最上层，用以实现慧校园各应用系统与用户的交互服务过程，是智慧校园的信息集中展示的窗口，也是各应用系统中各种应用服务集成和部署的平台。</p>
-					<p>它把分立于各个业务系统的不同功能有效地组织起来，并为各类用户提供一个统一的信息服务入口。</p>
-				</div>
-				<!--//介绍图文-->
-			</div>
-			<div style="display: none">2</div>
-			<div style="display: none">3</div>
-			<div style="display: none">4</div>
-			<div style="display: none">5</div>
-			<div style="display: none">6</div>
-			<div style="display: none">7</div>
+                        <div class="swiper-slide">
+                          <img src="images/banner-sys01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/banner-sys01.jpg" alt="">
+                        </div>
+                      </div>
+                      <!-- Add Pagination -->
+                      <div class="swiper-pagination sp6"></div>
+                    </div>
+                    <script>
+                      var swiper06 = new Swiper('.swiper06', {
+                            effect : 'fade',
+                            pagination: '.sp6',
+                            paginationClickable: true,
+                            direction: 'vertical',
+                            paginationBulletRender: function (swiper, index, className) {
+                                return '<span class="' + className + '">' + (index + 1) + '</span>';
+                            },
+                            autoplay:2000
+                        });
+                    </script>
+                    <!--//swiper06-->
+                  </div>
+                  <div class="sysinfo">
+                    <p>IQ校园门户系统位于智慧校园体系结构中的最上层，用以实现慧校园各应用系统与用户的交互服务过程，是智慧校园的信息集中展示的窗口，也是各应用系统中各种应用服务集成和部署的平台。</p>
+                    <p>它把分立于各个业务系统的不同功能有效地组织起来，并为各类用户提供一个统一的信息服务入口。</p>
+                  </div>
+                  <!--//介绍图文-->
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+            </div>
+        </div>
+        <script>
+          var swiper07 = new Swiper('.swiper07');
+        </script>
+        <!-- Swiper07 -->
 		</div>
 	</div>
 </div>
-<div class="contmain">
-	<div class="tab-box2">
-		<div>
-			<!--系统特性-->
-			<div class="sys-feature">
-				<ul>
-					<li>
-						<img src="images/sys-feature01.png" alt="">
-						<span>多级门户、单点登录</span>
-						<p>
-							学校可以快速构建学校内部的各机构主页，便于学校内部主页<br>
-							操作风格的统一和整洁，同时提供多系统的统一认证，<br>
-							实现单点登录，减轻操作人员的负担。
-						</p>
-					</li>
-					<li>
-						<img src="images/sys-feature02.png" alt="">
-						<span>信息实时发布</span>
-						<p>
-							实时发布学校的新闻公告、教学成果、师生风采、班级社团、<br>
-							校园风光、校内团购和学校论坛等，通过该平台，让外部<br>
-							人员了解学校的办学成果，同时方便内部人员的沟通交流。
-						</p>
-					</li>
-					<li>
-						<img src="images/sys-feature03.png" alt="">
-						<span>个性化设置</span>
-						<p>平台门户可根据用户实际需要， <br>支持通过模板选择创建自定义频道及栏目功能。</p>
-					</li>
-					<li>
-						<img src="images/sys-feature04.png" alt="">
-						<span>校内资源共享</span>
-						<p>支持教师可以将他们的个人门户集成到教研组的门户站点中， <br>这使得他们能够与其他年级的老师进行知识共享。</p>
-					</li>
-					<li>
-						<img src="images/sys-feature05.png" alt="">
-						<span>多样的内容检索</span>
-						<p>支持用户根据索取目标自定义检索条件（发布日期、标题、关键词等）<br>进行检索，系统根据用户的访问权限 <br>提供全文搜索结果。</p>
-					</li>
-				</ul>
-			</div>
-			<!--//系统特性-->
-		</div>
-		<div style="display: none">2icon</div>
-		<div style="display: none">3icon</div>
-		<div style="display: none">4icon</div>
-		<div style="display: none">5icon</div>
-		<div style="display: none">6icon</div>
-		<div style="display: none">7icon</div>
-	</div>
+<div class="contmain" >
+  <!--系统特性-->
+  <!--swiper07b-->
+  <div class="swiper-container swiper07b">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="sys-feature">
+          <ul>
+            <li>
+              <img src="images/sys-feature01.png" alt="">
+              <span>多级门户、单点登录</span>
+              <p>
+                学校可以快速构建学校内部的各机构主页，便于学校内部主页<br>
+                操作风格的统一和整洁，同时提供多系统的统一认证，<br>
+                实现单点登录，减轻操作人员的负担。
+              </p>
+            </li>
+            <li>
+              <img src="images/sys-feature02.png" alt="">
+              <span>信息实时发布</span>
+              <p>
+                实时发布学校的新闻公告、教学成果、师生风采、班级社团、<br>
+                校园风光、校内团购和学校论坛等，通过该平台，让外部<br>
+                人员了解学校的办学成果，同时方便内部人员的沟通交流。
+              </p>
+            </li>
+            <li>
+              <img src="images/sys-feature03.png" alt="">
+              <span>个性化设置</span>
+              <p>平台门户可根据用户实际需要， <br>支持通过模板选择创建自定义频道及栏目功能。</p>
+            </li>
+            <li>
+              <img src="images/sys-feature04.png" alt="">
+              <span>校内资源共享</span>
+              <p>支持教师可以将他们的个人门户集成到教研组的门户站点中， <br>这使得他们能够与其他年级的老师进行知识共享。</p>
+            </li>
+            <li>
+              <img src="images/sys-feature05.png" alt="">
+              <span>多样的内容检索</span>
+              <p>支持用户根据索取目标自定义检索条件（发布日期、标题、关键词等）<br>进行检索，系统根据用户的访问权限 <br>提供全文搜索结果。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="swiper-slide">2-feature</div>
+      <div class="swiper-slide">3-feature</div>
+      <div class="swiper-slide">4-feature</div>
+      <div class="swiper-slide">5-feature</div>
+      <div class="swiper-slide">6-feature</div>
+      <div class="swiper-slide">7-feature</div>
+    </div>
+  </div>
+  <script>
+    var swiper07b = new Swiper('.swiper07b', {
+          effect : 'fade',
+          fade: {
+            crossFade: true
+          }
+      });
+  </script>
+  <!--//swiper07b-->
+  <!--//系统特性-->
 </div>
 		
 <!--//systems-->
 
 <div class="fb-blank"></div>
 <!--留言-->
-<div class="btn-fb" id="btn-fb"></div>
-<div class="feedback" id="feedback">
+<div class="btn-fb" id="btn-fb" ></div>
+<div class="feedback" id="feedback" >
   <div class="fb-wrap">
 		<div class="fb-left">
 			<ul>
@@ -333,11 +354,11 @@ function anni(){
 <!--//留言-->
 <div class="fb-blank"></div>
 <!--backtop-->
-<a href="#backtop" class="backtop hide-mb">返回顶部</a>
+<a href="#backtop" class="backtop hide-mb bt2">返回顶部</a>
 <a href="#backlist" class="backtop backlist hide-mb">返回列表</a>
 <!--//backtop-->
 <!--footer-->
-<div class="footer-wrap">
+<div class="footer-wrap"  >
 	<div class="footer">
 		<div class="ft-left">
 	  	<ul>

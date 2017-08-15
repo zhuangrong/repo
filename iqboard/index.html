@@ -17,7 +17,15 @@
 <title>iqboard</title>
 <script>
 $(function(){
-  window.onscroll=tools; 
+  window.onscroll=tools;
+  
+  //swiper02 鼠标滑过停止自动播放//鼠标滑过停止自动播放
+  $(".swiper02").mouseenter(function(){
+    swiper.stopAutoplay()
+  }) 
+  $(".swiper02").mouseleave(function(){
+    swiper.startAutoplay()
+  })
 })
 //浮动导航
 function tools(){
@@ -37,6 +45,7 @@ function videoPlay(video){
 function videoClose(){
   $(".video-play").hide()
 }
+
 </script>
 </head>
 <body>
