@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<script src="js/jquery.min.js"></script> 
+<script></script>
+<title>dc</title>
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<!--toper-->
+<div class="toper">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体 | </a>
+			<a href="#">中文繁体 | </a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<!--header-->
+<div class="header">
+	
+</div>
+<!--//header-->
+<!--nav-->
+<div class="nav-wrap">
+	<div class="nav">	
+		<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>网站首页</a></li>
+			<li><a href="#">厦门党建e家</a></li>
+			<li><a href="#">特区先锋互动</a></li>
+			<li><a href="#">园区服务</a></li>
+			<li><a href="#">凤凰木·梦空间</a></li>
+			<li class="last"><a href="#">党员积分</a></li>
+		</ul>
+		<div class="nav-tip-left"></div>
+		<div class="nav-tip-right"></div>
+	</div>
+	<div class="login-tip">
+		<a href="#">登录</a>&nbsp; | &nbsp;<a href="#">注册</a>
+	</div>
+</div>
+<!--//nav-->
+<div class="blank"></div>
+<!--第一块-->
+<div class="container">
+	<div class="news-slide-wrap">
+		<div class="news-slide">
+			swiper
+		</div>
+		<div class="enter-score">
+			<a href="#"></a>
+			<a href="#"></a>
+		</div>
+	</div>
+	<div class="news-list-wrap">
+		<!--新闻tab-->
+		<div class="news-list-tabs" id="tabs">
+			<ul class="pull-left">
+				<li class="curr">先锋广播</li>
+				<li>园区头条</li>
+				<li>空间动态</li>
+			</ul>
+			<a class="pull-right more" href="#">更多&gt;&gt;</a>
+		</div>
+		<div class="tab-box1 news-list-content">
+			<div>
+				<div class="news-list">
+					<ul>
+						<li>· 为深化改革扩大开放提供更多经验为深化改革扩大开放提供更多经验 <span>08-16</span></li>
+						<li>· 诚信兴商 共建信用厦门诚信兴商 共建信用厦门 <span>08-16</span></li>
+						<li>· 共建共享 让文明成为园区发展基因让文明成为园区发展基因<span>08-16</span></li>
+						<li>· 全面深化改革 提升百姓获得感全面深化改革 提升百姓获得感<span>08-16</span></li>
+						<li>· 集美区委第三轮第二批巡察展开集美区委第三轮第二批巡察展开<span>08-16</span></li>
+						<li>· 海沧区委开展精准帮扶专项巡察海沧区委开展精准帮扶专项巡察<span>08-16</span></li>
+						<li>· 集中共厦门市委十二届五次全会召开集中共厦门市委十二届五次全会召开<span>08-16</span></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div style="display: none">园区头条</div>
+			<div style="display: none">空间动态</div>
+		</div>
+		<!--//新闻tab-->
+	</div>
+</div>
+<!--//第一块-->
+<div class="blank"></div>
+<!--服务tab-->
+<div class="service-tabs" id="tabs2">
+	<ul>
+		<li class="curr"><i class="icon-service-gov"></i>空间服务</li>
+		<li><i class="icon-service-region"></i>园区服务</li>
+		<li><i class="icon-service-space"></i>空间服务</li>
+	</ul>
+</div>
+<div class="tab-box2 service-content">
+	<div>
+	  <div class="pull-left" style="width: 830px">
+			<!--政府资金-->
+			<div class="title">
+				<span>政府资金</span>
+				<a href="#" class="more">more&gt;&gt;</a>
+			</div>
+			<div class="money-type">
+				<a href="#">区级资金</a>
+				<a href="#">市级资金</a>
+				<a href="#">省级资金</a>
+				<a href="#">国家级资金</a>
+			</div>
+			<div class="news-list">
+				<ul>
+					<li>厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></li>
+					<li>厦门市中小微企业符合条件即可申报无偿资助<span>08-16</span></li>
+					<li>厦门市5个项目获科技部资助金额1005万元<span>08-16</span></li>
+					<li>厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></li>
+					<li>厦门市5个项目获科技部资助金额1005万元<span>08-16</span></li>
+				</ul>
+			</div>
+			<div class="blank"></div>
+			<!--//政府资金-->
+			<!--项目申报-->
+			<div class="title">
+				<span>项目申报</span>
+				<a href="#" class="more">more&gt;&gt;</a>
+			</div>
+			<div class="project-show">
+				<a href="#">
+					<img src="images/project011.jpg" alt="">
+					<p>厦门市中小微企业认定<span>2015年10月</span></p>
+					<em></em>
+				</a>
+				<a href="#">
+					<img src="images/project021.jpg" alt="">
+					<p>国家中小企业发展专项资金<span>2015年10月</span></p>
+					<em></em>
+				</a>
+				<a href="#">
+					<img src="images/project021.jpg" alt="">
+					<p>厦门市企业改选项目专项资金<span>2015年10月</span></p>
+					<em></em>
+				</a>
+				<a href="#">
+					<img src="images/project021.jpg" alt="">
+					<p>厦门市小微企业还贷应急资金<span>2015年10月</span></p>
+					<em></em>
+				</a>
+				<a href="#" class="last">
+					<img src="images/project021.jpg" alt="">
+					<p>厦门市中小微企业认定<span>2015年10月</span></p>
+					<em></em>
+				</a>
+			</div>
+			<!--//项目申报-->
+	  </div>
+	  <div class="pull-right" style="width: 470px;">
+	  <!--扶持政策-->
+	  <div class="title02">
+	  	<span>扶持政策</span>
+	  	<a href="#" class="more">更多&gt;&gt;</a>
+	  </div>
+	  <div class="box2">
+			<div class="news-list">
+				<ul>
+					<li>推荐园区招商引导和产业引导<span>08-16</span></li>
+					<li>湖里区促进电子商务发展实施方法<span>08-16</span></li>
+					<li>“550”高层次人才与培育计划<span>08-16</span></li>
+					<li>推荐园区招商引导和产业引导<span>08-16</span></li>
+					<li>湖里区促进电子商务发展实施方法<span>08-16</span></li>
+				</ul>
+			</div>
+	  </div>
+	  <!--//扶持政策-->
+	  <!-- 党建e家-->
+	  <div class="title02">
+	  	<span> 党建e家</span>
+	  </div>
+	  <div class="box2">
+			<div class="e-home">
+				<ul>
+					<li><i class="ehome01"></i>党员登录</li>
+					<li class="even"><i class="ehome02"></i>视频资料</li>
+				</ul>
+				<ul>
+					<li><i class="ehome03"></i>身份绑定</li>
+					<li class="even"><i class="ehome04"></i>主题教育</li>
+				</ul>
+				<ul class="last">
+					<li><i class="ehome05"></i>操作指南</li>
+					<li class="even"><i class="ehome06"></i>制度文件</li>
+				</ul>
+			</div>
+	  </div>
+	  <!--// 党建e家-->
+	  	
+	  </div>
+	</div>
+	<div style="display: none">园区服务</div>
+	<div style="display: none">空间服务</div>
+</div>
+<!--//服务tab-->
+</body>
+</html>

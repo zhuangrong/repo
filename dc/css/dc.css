@@ -1,0 +1,496 @@
+@charset "utf-8";
+body, html {
+	color: #333;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+body{
+  font-size: 16px;
+	min-width: 1360px;
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	color: #e41b1b;
+	outline: 0;
+	text-decoration: underline;
+}
+a.alink{
+	color: #e41b1b;
+	text-decoration: underline;
+}
+a.more{
+	color: #777;
+	font-size: 12px;
+	float: right;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+em,h3{
+	font:inherit
+}
+.c01{
+	color: #16438c;
+}
+.tc{
+	text-align: center;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+/*--------------top--------------*/
+.toper{
+	height: 40px;
+	background-image: url(../images/topbg.gif);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid  #D1D1D1;
+}
+.toper .main{
+	width: 1360px;
+	margin: 0 auto;
+	line-height: 40px;
+}
+.toper .main span{
+	margin-right: 10px;
+}
+/*header*/
+.header{
+	height: 301px;
+	background-image: url(../images/banner.jpg);
+}
+
+/*nav*/
+.login-tip,
+.nav,
+.nav-wrap{
+	height: 59px;
+	line-height: 59px;
+}
+.nav-wrap{
+	width: 1360px;
+	background-color: #E41B1B;
+	margin: -39px auto 0;
+	color: #fff;
+	font-size: 20px;
+	position: relative;
+}
+.nav{
+	float: left;
+}
+.nav a{
+	color: #fff;
+}
+.nav li{
+	display: inline-block;
+	background-image: url(../images/navbg.gif);
+	background-position: right center
+}
+.nav a{
+	display: inline-block;
+	padding: 0 35px;
+}
+.nav li.active a{
+	background-image: url(../images/nav-active-bg.png);
+	background-position: center center;
+}
+.nav li.last{
+	background: none;
+}
+.login-tip{
+	width: 135px;
+	padding-left: 98px;
+	float: right;
+	background-color: #D81414;
+	background-image: url(../images/icon-user.png);
+	background-position: 60px center;
+}
+.login-tip a{
+	color: #fff;
+}
+.icon-home{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/icon-home.png);
+	margin-right: 10px;
+	vertical-align: -3px;
+}
+.nav-tip-right,
+.nav-tip-left{
+	position: absolute;
+	width: 17px;
+	height: 20px;
+	top: 39px;
+}
+.nav-tip-left{
+	left: -17px;
+	background-image: url(../images/nav-tip-left.gif);
+}
+.nav-tip-right{
+	right: -17px;
+	background-image: url(../images/nav-tip-right.gif);
+}
+
+.blank{
+	height: 20px;
+}
+/*第一块*/
+.container{
+	overflow: hidden;
+	width: 1360px;
+	margin: 0 auto;
+}
+.news-slide-wrap{
+	float: left;
+	width: 670px;
+}
+.news-slide-wrap{
+	float: left;
+	width: 670px;
+}
+.news-list-wrap{
+	float: right;
+	width: 670px;
+}
+.news-slide{
+	padding: 10px;
+	background-color: #F5F5F5;
+}
+.enter-score{
+	width: 670px;
+	height: 54px;
+	background-image: url(../images/enter-score.png);
+}
+.enter-score a{
+	display: inline-block;
+	height: 54px;
+}
+
+/*新闻tab*/
+.news-list-tabs{
+	height: 40px;
+	background-color: #F6F6F6;
+	border: 1px solid  #D1D1D1;
+	border-left: none;
+}
+.news-list-tabs li{
+	display: inline-block;
+	height: 40px;
+	line-height: 36px;
+	text-align: center;
+	padding: 0 23px;
+	cursor: pointer;
+}
+.news-list-tabs li.curr{
+	height: 38px;
+	margin-top: -1px;
+	border-top: 4px solid #EC3636;
+	background-color: #fff;
+	border-left: 1px solid  #D1D1D1;
+	border-right: 1px solid  #D1D1D1;
+}
+.news-list-tabs a{
+	margin: 10px 10px 0 0;
+}
+
+.news-list{
+	line-height: 2.3;
+}
+.news-list span{
+	float: right;
+	color: #777;
+}
+.news-list-content{
+	border: 1px solid  #d1d1d1;
+	border-top: none;
+	padding: 10px;
+}
+
+
+/*服务tab*/
+.service-tabs{
+	height: 72px;
+	background-color: #F6F6F6;
+	border: 1px solid  #D1D1D1;
+	border-left: none;
+}
+.service-tabs li{
+	display: inline-block;
+	width: 33%;
+	height: 72px;
+	line-height: 65px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+}
+.service-tabs li.curr{
+	height: 70px;
+	margin-top: -1px;
+	border-top: 4px solid #EC3636;
+	background-color: #fff;
+	border-left: 1px solid  #D1D1D1;
+	border-right: 1px solid  #D1D1D1;
+}
+.service-tabs a{
+	font-size: 12px;
+	color: #777;
+	margin: 10px 10px 0 0;
+}
+.service-content{
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid  #d1d1d1;
+	border-top: none;
+	overflow: hidden;
+}
+.icon-service-gov,
+.icon-service-region,
+.icon-service-space{
+	width: 42px;
+	height: 42px;
+	display: inline-block;
+	vertical-align: -12px;
+	margin-right: 15px;
+}
+.icon-service-gov{
+	background-image: url(../images/icon-service-gov.png);
+}
+.icon-service-region{
+	background-image: url(../images/icon-service-region.png);
+}
+.icon-service-space{
+	background-image: url(../images/icon-service-space.png);
+}
+
+/*title*/
+.title{
+	height: 42px;
+	line-height: 42px;
+	background-image: url(../images/dot.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom
+}
+.title span{
+	float: left;
+	display: block;
+	padding-left: 20px;
+	width: 126px;
+	height: 42px;
+	line-height: 42px;
+	background-image: url(../images/title.png);
+	color: #fff;
+}
+.title a{
+	float: right;
+	margin: 2px 0px 0 0;
+}
+
+.money-type{
+	overflow: hidden;
+	padding: 10px 0;
+}
+.money-type a{
+	display: inline-block;
+	width: 98px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid  #D6D6D6;
+	background-color: #FAFAFA;
+	margin-right: 15px;
+}
+
+.clearfix{
+	overflow: hidden;
+}
+
+.project-show{
+	overflow: hidden;
+	padding-top: 10px;
+}
+.project-show a{
+	position: relative;
+	width: 157px;
+	float: left;
+	/* margin-left: 2px; */
+	background-color: #F6F6F6;
+	overflow: hidden;
+}
+.project-show p{
+	display: block;
+	text-align: center;
+	padding: 15px 20px 0px;
+}
+.project-show span{
+	display: block;
+	font-size: 14px;
+	padding: 15px;
+	color: #777;
+}
+.project-show a em{
+	position: absolute;
+	top: 127px;
+	left: 20px;
+	display: block;
+	width: 12px;
+	height: 9px;
+	background-image: url(../images/arrow.png);
+	z-index: 99999;
+}
+
+.project-show a:hover{
+	background-color: #FD5A5A;
+	text-decoration: none;
+	color: #fff;
+}
+.project-show a:hover em{
+	background-image: url(../images/arrow-active.png);
+}
+.project-show a:hover span{
+	color: #fff;
+}
+.project-show a.last{
+	margin-right: 0;
+}
+/*title02*/
+.title02{
+	height: 50px;
+	border: 1px solid  #d1d1d1;
+	border-bottom: none;
+	background-image: url(../images/dot.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	background-color: #FAFAFA;
+}
+.title02 span{
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	width: 112px;
+	color: #ec3636;
+	text-align: center;
+	background-image: url(../images/title02.png);
+	background-position: left bottom;
+}
+.title02 a{
+	margin: 18px 10px 0;
+}
+.box2{
+	padding: 20px;
+	border: 1px solid  #d1d1d1;
+	border-top: none;
+	margin-bottom: -1px;
+}
+
+/*e家*/
+.e-home{
+	font-size: 20px;
+}
+.e-home ul{
+	border-bottom: 1px solid  #d1d1d1;
+	padding: 0 0 15px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.e-home ul li{
+	float: left;
+	width: 49%;
+	border-right: 1px solid  #d1d1d1;
+	text-align: center;
+}
+.e-home ul li.even{
+	border-right: none;
+}
+.e-home i{
+	display: inline-block;
+	vertical-align: -14px;
+	margin-right: 10px;
+	width: 48px;
+	height: 48px;
+}
+.e-home .ehome01{
+	background-image: url(../images/ehome01.png);
+}
+.e-home .ehome02{
+	background-image: url(../images/ehome02.png);
+}
+.e-home .ehome03{
+	background-image: url(../images/ehome03.png);
+}
+.e-home .ehome05{
+	background-image: url(../images/ehome04.png);
+}
+.e-home .ehome05{
+	background-image: url(../images/ehome05.png);
+}
+.e-home .ehome06{
+	background-image: url(../images/ehome06.png);
+}
+.e-home .last{
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
