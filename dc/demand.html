@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script></script>
+<title>dc</title>
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<!--header-->
+<div class="header">
+	
+</div>
+<!--//header-->
+<!--nav-->
+<div class="nav-wrap">
+	<div class="nav">	
+		<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>网站首页</a></li>
+			<li><a href="#">厦门党建e家</a></li>
+			<li><a href="#">特区先锋互动</a></li>
+			<li><a href="#">园区服务</a></li>
+			<li><a href="#">凤凰木·梦空间</a></li>
+			<li class="last"><a href="#">党员积分</a></li>
+		</ul>
+		<div class="nav-tip-left"></div>
+		<div class="nav-tip-right"></div>
+	</div>
+	<div class="login-tip">
+		<a href="#">登录</a>&nbsp; | &nbsp;<a href="#">注册</a>
+	</div>
+</div>
+<!--//nav-->
+<div class="blank50"></div>
+<div class="container">
+  <!--企业服务分类-->
+  <div class="demand-wrap">
+    <div class="demand-list">
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>企业服务</dt>
+        <dd>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+          <a href="#">企业服务</a>
+        </dd>
+      </dl>
+    </div>
+    <div class="demand-banner">
+      <a href="#"><img src="images/demand-banner.jpg" alt=""></a>
+    </div>
+  </div>
+  <!--//企业服务分类-->
+  <div class="blank"></div>
+  <div class="container" style="background-color: #F4F4F4">
+    <!--我有需求-->
+    <div class="demand-title">
+      <div class="pull-left">我有需求</div>
+      <div class="pull-right" style="font-size: 16px" >
+        <span>您可能需要：</span>
+        <a href="#">新手帮助</a> &nbsp;|&nbsp;
+        <a href="#">全部服务商</a>
+      </div>
+    </div>
+    <div class="demand-flow"></div>
+    <div class="service-wrap">
+      <!--园区服务类型-->
+      <div class="service-item-wrap">
+        <div class="service-item">
+          <h3>信息化服务 <a href="#">更多&gt;</a></h3>
+          <div class="si-content">
+            <div class="si-pic">
+              <img src="images/si-pic.jpg">
+            </div>
+            <div class="si-info">
+              <h5>企业网站建设</h5>
+              <p>12个服务商可提供服务</p>
+              <a href="#">查看列表</a>
+            </div>
+          </div>
+          <div class="si-list">
+            <ul>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-item">
+          <h3>UI设计 <a href="#">更多&gt;</a></h3>
+          <div class="si-content">
+            <div class="si-pic">
+              <img src="images/si-pic.jpg">
+            </div>
+            <div class="si-info">
+              <h5>企业网站建设</h5>
+              <p>12个服务商可提供服务</p>
+              <a href="#">查看列表</a>
+            </div>
+          </div>
+          <div class="si-list">
+            <ul>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-item">
+          <h3>信息化服务 <a href="#">更多&gt;</a></h3>
+          <div class="si-content">
+            <div class="si-pic">
+              <img src="images/si-pic.jpg">
+            </div>
+            <div class="si-info">
+              <h5>广告类服务</h5>
+              <p>12个服务商可提供服务</p>
+              <a href="#">查看列表</a>
+            </div>
+          </div>
+          <div class="si-list">
+            <ul>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-item">
+          <h3>其他服务<a href="#">更多&gt;</a></h3>
+          <div class="si-content">
+            <div class="si-pic">
+              <img src="images/si-pic.jpg">
+            </div>
+            <div class="si-info">
+              <h5>广告类服务</h5>
+              <p>12个服务商可提供服务</p>
+              <a href="#">查看列表</a>
+            </div>
+          </div>
+          <div class="si-list">
+            <ul>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--//园区服务类型-->
+      <!--成交金额-->
+      <div class="service-rank">
+        <h3></h3>
+        <div class="rank-tab" id="tabs">
+          <ul>
+            <li class="curr">华美空间</li>
+            <li>文创口岸</li>
+            <li>海峡设计园</li>
+          </ul>
+        </div>
+        <div class="tab-box1">
+          <div>
+            <div class="rank-list">
+              <ul>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>丝柏科技<em>¥500000</em></p>
+                  <a href="#">雇佣TA</a>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>丝柏科技<em>¥500000</em></p>
+                  <a href="#">雇佣TA</a>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>丝柏科技<em>¥500000</em></p>
+                  <a href="#">雇佣TA</a>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>丝柏科技<em>¥500000</em></p>
+                  <a href="#">雇佣TA</a>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>丝柏科技<em>¥500000</em></p>
+                  <a href="#">雇佣TA</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style="display: none">文创口岸</div>
+          <div style="display: none">海峡设计园</div>
+        </div>
+      </div>
+      <!--//成交金额-->
+    </div>
+    <!--//我有需求-->
+    <!--我是服务商-->
+    <div class="demand-title">
+      <div class="pull-left">我是服务商</div>
+      <div class="pull-right" style="font-size: 16px" >
+        <span>您可能需要：</span>
+        <a href="#">新手帮助</a> &nbsp;|&nbsp;
+        <a href="#">全部需求</a>
+      </div>
+    </div>
+    <div class="service-wrap">
+      <!--开发的需求-->
+      <div class="demand-category">
+        <div class="dc-item">
+          <dl>
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+          <dl class="pull-right">
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+        </div>
+        <div class="dc-item">
+          <dl>
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+          <dl class="pull-right">
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+        </div>
+        <div class="dc-item" style="border: none">
+          <dl>
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+          <dl class="pull-right">
+            <dt>微信开发的需求</dt>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+            <dd>
+              <span><label>￥10000</label> 微信清粉软件开发</span>
+              <p>123<em>人投标</em></p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!--//开发的需求-->
+      <!--最近中标-->
+      <div class="service-rank laest">
+        <h3></h3>
+        <div>
+            <div class="rank-list">
+              <ul>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>
+                      昂扬网络 <span>成功中标了</span>
+                     <em>¥9000  <label>类似“滴滴打车”APP开发一期</label></em>
+                  </p>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>
+                      昂扬网络 <span>成功中标了</span>
+                     <em>¥9000  <label>类似“滴滴打车”APP开发一期</label></em>
+                  </p>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>
+                      昂扬网络 <span>成功中标了</span>
+                     <em>¥9000  <label>类似“滴滴打车”APP开发一期</label></em>
+                  </p>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>
+                      昂扬网络 <span>成功中标了</span>
+                     <em>¥9000  <label>类似“滴滴打车”APP开发一期</label></em>
+                  </p>
+                </li>
+                <li>
+                  <img src="images/rank-pic.png" alt="">
+                  <p>
+                      昂扬网络 <span>成功中标了</span>
+                     <em>¥9000  <label>类似“滴滴打车”APP开发一期</label></em>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <!--//最近中标-->
+    </div>
+    
+    <!--//我是服务商-->
+  </div>
+</div>
+
+
+<div class="blank50"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+<!--浮动层-->
+<div class="widget">
+  <a href="#"><i class="icon-wb"></i>政务微博</a>
+  <a href="#"><i class="icon-wx"></i>政务微信</a>
+  <a href="#"><i class="icon-app"></i>手机APp</a>
+  <a href="#top"><i class="icon-backtop"></i>返回顶部</a>
+</div>
+<!--//浮动层-->
+</body>
+</html>

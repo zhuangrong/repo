@@ -5,12 +5,39 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
 <script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
 <script></script>
 <title>dc</title>
+ <style type="text/css">
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #7A7A7A;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #EC3636;
+}
+</style>
 <script>
 $(function(){
   $.TabChange("tabs",1)
+  $.TabChange("tabs2",2)
+  
+  
 })
 /*tabs切换组件*/
 $.TabChange = function(obj,num){
@@ -25,15 +52,15 @@ $.TabChange = function(obj,num){
 </head>
 <body>
 <!--toper-->
-<div class="toper">
+<div class="toper" id="top">
 	<div class="main">
 		<div class="pull-left">
 			<span>今天是：2017年8月15日 星期二</span>
 			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
 		</div>
 		<div class="pull-right">
-			<a href="#">中文简体 | </a>
-			<a href="#">中文繁体 | </a>
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
 			<a href="#">English</a>
 		</div>
 	</div>
@@ -68,7 +95,49 @@ $.TabChange = function(obj,num){
 <div class="container">
 	<div class="news-slide-wrap">
 		<div class="news-slide">
-			swiper
+      <!--swiper-->
+      <div class="swiper-container" id="swiper-container1" style="height:270px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="news-pic">
+                <img src="images/news-pic.jpg" alt="">
+                <div>
+                  <h3>【南中国首个海外主题文创园】联发文创口岸</h3>
+                  <p>“外贸是拉动我市经济增长的重要力量，我市进出口企业要进一步苦练内功，结合生产性服务，优化出口产品结构。抓住“一带一路”和自贸区试验区建设的机遇，自身主动走出去，不断开辟新的市场。“</p>
+                  <p>联发文创口岸作为“南中国首个海外主题文创园”，结合“一带一路”与中国文化输出战略，以厦门作为西洋文化引入的过渡窗口为背书，打造专业的对外文化输出窗口，巩固厦门作为国际型都市的形象与地位，带动厦门的文化繁荣。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-pic">
+                <img src="images/news-pic.jpg" alt="">
+                <div>
+                  <h3>【南中国首个海外主题文创园】联发文创口岸</h3>
+                  <p>“外贸是拉动我市经济增长的重要力量，我市进出口企业要进一步苦练内功，结合生产性服务，优化出口产品结构。抓住“一带一路”和自贸区试验区建设的机遇，自身主动走出去，不断开辟新的市场。“</p>
+                  <p>联发文创口岸作为“南中国首个海外主题文创园”，结合“一带一路”与中国文化输出战略，以厦门作为西洋文化引入的过渡窗口为背书，打造专业的对外文化输出窗口，巩固厦门作为国际型都市的形象与地位，带动厦门的文化繁荣。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-pic">
+                <img src="images/news-pic.jpg" alt="">
+                <div>
+                  <h3>【南中国首个海外主题文创园】联发文创口岸</h3>
+                  <p>“外贸是拉动我市经济增长的重要力量，我市进出口企业要进一步苦练内功，结合生产性服务，优化出口产品结构。抓住“一带一路”和自贸区试验区建设的机遇，自身主动走出去，不断开辟新的市场。“</p>
+                  <p>联发文创口岸作为“南中国首个海外主题文创园”，结合“一带一路”与中国文化输出战略，以厦门作为西洋文化引入的过渡窗口为背书，打造专业的对外文化输出窗口，巩固厦门作为国际型都市的形象与地位，带动厦门的文化繁荣。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            &nbsp;</div>
+        </div>
+        <script language="javascript"> 
+        var mySwiper = new Swiper('.swiper-container',{
+                          pagination : '.pagination',
+                       })
+        </script>
+      <!--//swiper-->
 		</div>
 		<div class="enter-score">
 			<a href="#"></a>
@@ -89,13 +158,13 @@ $.TabChange = function(obj,num){
 			<div>
 				<div class="news-list">
 					<ul>
-						<li>· 为深化改革扩大开放提供更多经验为深化改革扩大开放提供更多经验 <span>08-16</span></li>
-						<li>· 诚信兴商 共建信用厦门诚信兴商 共建信用厦门 <span>08-16</span></li>
-						<li>· 共建共享 让文明成为园区发展基因让文明成为园区发展基因<span>08-16</span></li>
-						<li>· 全面深化改革 提升百姓获得感全面深化改革 提升百姓获得感<span>08-16</span></li>
-						<li>· 集美区委第三轮第二批巡察展开集美区委第三轮第二批巡察展开<span>08-16</span></li>
-						<li>· 海沧区委开展精准帮扶专项巡察海沧区委开展精准帮扶专项巡察<span>08-16</span></li>
-						<li>· 集中共厦门市委十二届五次全会召开集中共厦门市委十二届五次全会召开<span>08-16</span></li>
+						<li><a href="#">· 为深化改革扩大开放提供更多经验为深化改革扩大开放提供更多经验 <span>08-16</span></a></li>
+						<li><a href="#">· 诚信兴商 共建信用厦门诚信兴商 共建信用厦门 <span>08-16</span></a></li>
+						<li><a href="#">· 共建共享 让文明成为园区发展基因让文明成为园区发展基因<span>08-16</span></a></li>
+						<li><a href="#">· 全面深化改革 提升百姓获得感全面深化改革 提升百姓获得感<span>08-16</span></a></li>
+						<li><a href="#">· 集美区委第三轮第二批巡察展开集美区委第三轮第二批巡察展开<span>08-16</span></a></li>
+						<li><a href="#">· 海沧区委开展精准帮扶专项巡察海沧区委开展精准帮扶专项巡察<span>08-16</span></a></li>
+						<li><a href="#">· 集中共厦门市委十二届五次全会召开集中共厦门市委十二届五次全会召开<span>08-16</span></a></li>
 					</ul>
 				</div>
 				
@@ -108,118 +177,157 @@ $.TabChange = function(obj,num){
 </div>
 <!--//第一块-->
 <div class="blank"></div>
-<!--服务tab-->
-<div class="service-tabs" id="tabs2">
-	<ul>
-		<li class="curr"><i class="icon-service-gov"></i>空间服务</li>
-		<li><i class="icon-service-region"></i>园区服务</li>
-		<li><i class="icon-service-space"></i>空间服务</li>
-	</ul>
+<div class="container">
+  <!--服务tab-->
+  <div class="service-tabs" id="tabs2">
+    <ul>
+      <li class="curr"><i class="icon-service-gov"></i>政府服务</li>
+      <li><i class="icon-service-region"></i>园区服务</li>
+      <li><i class="icon-service-space"></i>空间服务</li>
+    </ul>
+  </div>
+  <div class="tab-box2 service-content">
+    <!--政府服务-->
+    <div>
+      <div class="pull-left" style="width: 830px">
+        <!--政府资金-->
+        <div class="title">
+          <span>政府资金</span>
+          <a href="#" class="more">more&gt;&gt;</a>
+        </div>
+        <div class="money-type">
+          <a href="#">区级资金</a>
+          <a href="#">市级资金</a>
+          <a href="#">省级资金</a>
+          <a href="#">国家级资金</a>
+        </div>
+        <div class="news-list">
+          <ul>
+            <li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+            <li><a href="#">厦门市中小微企业符合条件即可申报无偿资助<span>08-16</span></a></li>
+            <li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+            <li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+            <li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+          </ul>
+        </div>
+        <div class="blank"></div>
+        <!--//政府资金-->
+        <!--项目申报-->
+        <div class="title">
+          <span>项目申报</span>
+          <a href="#" class="more">more&gt;&gt;</a>
+        </div>
+        <div class="project-show">
+          <a href="#">
+            <img src="images/project01.jpg" alt="">
+            <p>厦门市中小微企业认定<span>2015年10月</span></p>
+            <em></em>
+          </a>
+          <a href="#">
+            <img src="images/project02.jpg" alt="">
+            <p>国家中小企业发展专项资金<span>2015年10月</span></p>
+            <em></em>
+          </a>
+          <a href="#">
+            <img src="images/project03.jpg" alt="">
+            <p>厦门市企业改选项目专项资金<span>2015年10月</span></p>
+            <em></em>
+          </a>
+          <a href="#">
+            <img src="images/project04.jpg" alt="">
+            <p>厦门市小微企业还贷应急资金<span>2015年10月</span></p>
+            <em></em>
+          </a>
+          <a href="#" class="last">
+            <img src="images/project05.jpg" alt="">
+            <p>厦门市中小微企业认定<span>2015年10月</span></p>
+            <em></em>
+          </a>
+        </div>
+        <!--//项目申报-->
+      </div>
+      <div class="pull-right" style="width: 470px;">
+      <!--扶持政策-->
+      <div class="title02">
+        <span>扶持政策</span>
+        <a href="#" class="more">更多&gt;&gt;</a>
+      </div>
+      <div class="box2">
+        <div class="news-list">
+          <ul>
+            <li><a href="#">推荐园区招商引导和产业引导<span>08-16</span></a></li>
+            <li><a href="#">湖里区促进电子商务发展实施方法<span>08-16</span></a></li>
+            <li><a href="#">“550”高层次人才与培育计划<span>08-16</span></a></li>
+            <li><a href="#">推荐园区招商引导和产业引导<span>08-16</span></a></li>
+            <li><a href="#">湖里区促进电子商务发展实施方法<span>08-16</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--//扶持政策-->
+      <!-- 党建e家-->
+      <div class="title02">
+        <span> 党建e家</span>
+      </div>
+      <div class="box2">
+        <div class="e-home">
+          <ul>
+            <li><a href="#"><i class="ehome01"></i>党员登录</a></li>
+            <li class="even"><a href="#"><i class="ehome02"></i>视频资料</a></li>
+          </ul>
+          <ul>
+            <li><a href="#"><i class="ehome03"></i>身份绑定</a></li>
+            <li class="even"><a href="#"><i class="ehome04"></i>主题教育</a></li>
+          </ul>
+          <ul class="last">
+            <li><a href="#"><i class="ehome05"></i>操作指南</a></li>
+            <li class="even"><a href="#"><i class="ehome06"></i>制度文件</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--// 党建e家-->
+
+      </div>
+    </div>
+    <!--//政府服务-->
+    <!--//园区服务-->
+    <div style="display: none">园区服务</div>
+    <!--//园区服务-->
+    <!--空间服务-->
+    <div style="display: none">空间服务</div>
+    <!--//空间服务-->
+  </div>
+  <!--//服务tab-->
 </div>
-<div class="tab-box2 service-content">
-	<div>
-	  <div class="pull-left" style="width: 830px">
-			<!--政府资金-->
-			<div class="title">
-				<span>政府资金</span>
-				<a href="#" class="more">more&gt;&gt;</a>
-			</div>
-			<div class="money-type">
-				<a href="#">区级资金</a>
-				<a href="#">市级资金</a>
-				<a href="#">省级资金</a>
-				<a href="#">国家级资金</a>
-			</div>
-			<div class="news-list">
-				<ul>
-					<li>厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></li>
-					<li>厦门市中小微企业符合条件即可申报无偿资助<span>08-16</span></li>
-					<li>厦门市5个项目获科技部资助金额1005万元<span>08-16</span></li>
-					<li>厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></li>
-					<li>厦门市5个项目获科技部资助金额1005万元<span>08-16</span></li>
-				</ul>
-			</div>
-			<div class="blank"></div>
-			<!--//政府资金-->
-			<!--项目申报-->
-			<div class="title">
-				<span>项目申报</span>
-				<a href="#" class="more">more&gt;&gt;</a>
-			</div>
-			<div class="project-show">
-				<a href="#">
-					<img src="images/project011.jpg" alt="">
-					<p>厦门市中小微企业认定<span>2015年10月</span></p>
-					<em></em>
-				</a>
-				<a href="#">
-					<img src="images/project021.jpg" alt="">
-					<p>国家中小企业发展专项资金<span>2015年10月</span></p>
-					<em></em>
-				</a>
-				<a href="#">
-					<img src="images/project021.jpg" alt="">
-					<p>厦门市企业改选项目专项资金<span>2015年10月</span></p>
-					<em></em>
-				</a>
-				<a href="#">
-					<img src="images/project021.jpg" alt="">
-					<p>厦门市小微企业还贷应急资金<span>2015年10月</span></p>
-					<em></em>
-				</a>
-				<a href="#" class="last">
-					<img src="images/project021.jpg" alt="">
-					<p>厦门市中小微企业认定<span>2015年10月</span></p>
-					<em></em>
-				</a>
-			</div>
-			<!--//项目申报-->
-	  </div>
-	  <div class="pull-right" style="width: 470px;">
-	  <!--扶持政策-->
-	  <div class="title02">
-	  	<span>扶持政策</span>
-	  	<a href="#" class="more">更多&gt;&gt;</a>
-	  </div>
-	  <div class="box2">
-			<div class="news-list">
-				<ul>
-					<li>推荐园区招商引导和产业引导<span>08-16</span></li>
-					<li>湖里区促进电子商务发展实施方法<span>08-16</span></li>
-					<li>“550”高层次人才与培育计划<span>08-16</span></li>
-					<li>推荐园区招商引导和产业引导<span>08-16</span></li>
-					<li>湖里区促进电子商务发展实施方法<span>08-16</span></li>
-				</ul>
-			</div>
-	  </div>
-	  <!--//扶持政策-->
-	  <!-- 党建e家-->
-	  <div class="title02">
-	  	<span> 党建e家</span>
-	  </div>
-	  <div class="box2">
-			<div class="e-home">
-				<ul>
-					<li><i class="ehome01"></i>党员登录</li>
-					<li class="even"><i class="ehome02"></i>视频资料</li>
-				</ul>
-				<ul>
-					<li><i class="ehome03"></i>身份绑定</li>
-					<li class="even"><i class="ehome04"></i>主题教育</li>
-				</ul>
-				<ul class="last">
-					<li><i class="ehome05"></i>操作指南</li>
-					<li class="even"><i class="ehome06"></i>制度文件</li>
-				</ul>
-			</div>
-	  </div>
-	  <!--// 党建e家-->
-	  	
-	  </div>
-	</div>
-	<div style="display: none">园区服务</div>
-	<div style="display: none">空间服务</div>
+<div class="blank"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
 </div>
-<!--//服务tab-->
+<!--//footer-->
+<!--浮动层-->
+<div class="widget">
+  <a href="#"><i class="icon-wb"></i>政务微博</a>
+  <a href="#"><i class="icon-wx"></i>政务微信</a>
+  <a href="#"><i class="icon-app"></i>手机APp</a>
+  <a href="#top"><i class="icon-backtop"></i>返回顶部</a>
+</div>
+<!--//浮动层-->
 </body>
 </html>
