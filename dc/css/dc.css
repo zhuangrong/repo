@@ -50,6 +50,7 @@ img {
 	vertical-align: middle;
 	border: 0;
 }
+input,
 button {
 	overflow:visible;
 	border: none;
@@ -1130,6 +1131,161 @@ em,h3{
 .demand-category .dc-item dl dd p em{
   color: #999;
 }
+
+/*共享空间*/
+.share-left{
+	float: left;
+	padding-left: 19px;
+	width: 910px;
+}
+.share-right{
+	float: right;
+	width: 400px;
+}
+.share-pic{
+	width: 910px;
+}
+
+.share-plaza{
+	border: 1px solid  #e8e8e8;
+	border-radius: 5px;
+	padding: 20px 15px;
+}
+.share-plaza h3{
+	font-size: 26px;
+	padding-left: 30px;
+	color: #000;
+	background-image: url(../images/share-title.png);
+	background-position: left center;
+}
+.share-plaza div{
+	color: #666;
+	padding-top: 20px;
+	padding-left: 30px;
+	line-height: 1.8;
+}
+.share-notice{
+	padding: 30px 20px;
+	background-color: #FEFFED;
+	border: 1px solid  #e8e8e8;
+	overflow: hidden;
+}
+.share-notice h3{
+	font-size: 26px;
+	float: left;
+	width: 128px;
+}
+.share-notice dl{
+	margin-left: 128px;
+	line-height: 2.0;
+}
+
+/*share-detail*/
+.share-detail h3{
+	font-size: 32px;
+	padding: 20px 0;
+}
+.share-detail .sd-money{
+	font-size: 32px;
+	color: #e41b1b;
+	border-bottom: 1px solid  #e8e8e8;
+	padding-bottom: 20px;
+}
+.share-detail .sd-money em{
+	font-size: 24px;
+}
+.share-detail .sd-info{
+	padding: 25px 0;
+	font-size: 20px;
+	color: #666;
+	border-bottom: 1px solid  #e8e8e8;
+}
+
+/*预定*/
+.share-reserve{
+	background-color: #d9e7fb;
+	border: 1px solid  #aacbff;
+	padding: 20px;
+}
+.share-reserve .box-in{
+	border: 1px solid  #aacbff;
+	overflow: hidden;
+	background-color: #fff;
+	margin-bottom: 20px;
+	background-image: url(../images/reserve-tr.png);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+.share-reserve li{
+	float: left;
+	width: 157px;
+	height: 42px;
+	line-height: 43px;
+	font-size: 18px;
+	padding: 0 10px;
+}
+.share-reserve input[type="text"]{
+	border: none;
+	height: 42px;
+	line-height: 42px;
+	padding: 0;
+	width: 158px;
+	font-size: 18px;
+	background-color: transparent;
+}
+.share-reserve .ipt-calendar{
+	background-image: url(../images/icon-calender.png);
+}
+.share-reserve .ipt-time{
+	background-image: url(../images/icon-time.png);
+}
+.share-reserve .ipt-select{
+	background-image: url(../images/icon-select.png);
+}
+.share-reserve .ipt-calendar,
+.share-reserve .ipt-time,
+.share-reserve .ipt-select{
+	background-position: 135px center;
+}
+.share-reserve li.even{
+	border-right: 1px solid  #aacbff;
+}
+.share-reserve li.long{
+	width: 355px;
+}
+.share-reserve input[type="text"].ipt-sm{
+	display: inline-block;
+	width: 70px !important;
+	background:none;
+	padding-left: 15px;
+}
+.bgn{
+	background: none;
+}
+.btn-reserve{
+	color: #fff;
+	background-color: #F4616D;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	width: 358px;
+	margin: 20px 0;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
