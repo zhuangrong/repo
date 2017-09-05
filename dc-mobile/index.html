@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+</head>
+<body>
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+<!--banner-->
+<div class="banner">
+	<!--swiper-->
+	<div class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      	<img src="images/banner.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+      	<img src="images/banner.jpg" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper01', {
+					pagination: '.sp1',
+					paginationClickable: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
+</div>
+<!--//banner-->
+<!--enter-->
+<div class="enter">
+  <ul>
+    <li><i class="enter01"></i>厦门党建e家</li>
+    <li><i class="enter02"></i>特区先锋互动</li>
+    <li><i class="enter03"></i>平台服务</li>
+    <li><i class="enter04"></i>新闻动态</li>
+    <li><i class="enter05"></i>凤凰木·梦空间</li>
+    <li><i class="enter06"></i>社区书院</li>
+  </ul>
+</div>
+<!--//enter-->
+<!--navbar-->
+<nav>
+	<a href="#" class="active"><i class="nav01"></i><span>首页</span></a>
+	<a href="#"><i class="nav02"></i><span>积分</span></a>
+	<a href="#"><i class="nav03"></i><span>我的</span></a>
+</nav>
+<!--//navbar-->
+</body>
+</html>

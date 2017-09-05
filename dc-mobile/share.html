@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+  //对话框
+	$("#btn-reserve").on("click",function(){
+		 $("#reserve-pop").fadeIn(200)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+			e.stopPropagation()
+			 $("#reserve-pop").fadeOut(200)		 
+	})
+}) 
+</script>
+</head>
+<body class="bg">
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+<div class="share-wrap">
+  <div class="share-pic">
+    <img src="images/share-pic.jpg" alt="">
+  </div>
+  <!--聚会场地-->
+  <div class="share-detail">
+    <h3>【团建&聚会首选】时光别墅轰趴-京城金牌聚会场地</h3>
+    <div class="sd-money">¥2780<em>/天</em></div>
+    <div class="sd-info">
+      <p>通州区 通州</p>
+      <p>北京市通州区永顺镇枫露皇苑1-57号</p>
+    </div>
+    <div class="sd-info">
+      <p>营业时间：周一至周日 00:00-24:00 </p>
+      <p>开业时间：2016年11月</p>
+    </div>
+  </div>
+  <!--//聚会场地-->
+  <div class="blank"></div>
+  <div class="share-plaza">
+    <h3>场地介绍</h3>
+    <div>
+      <p>开业时间：2016年11月     营业时间：周一至周日 00:00-24:00      装修时间：2016年11月    </p>
+      <p>拾光别墅轰趴致力于用完美贴心的服务给您一个最难忘的聚会体验。本馆位于独栋私家花园别墅高档小区内，自带独立大花园活动场地，环境悠闲雅致，能在身心愉悦的前提下最大限度的保障客户安全性及私密性，可举行私人派对、公司团队建设、求婚、交友、会议、各类社团活动、生日趴、姐妹趴、单身趴等。</p>
+      <p>在别墅亲们可以尽情的玩耍happy！聚餐！KTV包房！烧烤！涮肉！桌游！XBOX体感游戏！任玩到爆！！！一体服务，免除传统聚会来回奔波赶场。</p>
+      <p>那么这么高大上的别墅轰趴馆到底有什么呢？</p>
+    </div>
+  </div>
+  <div class="blank"></div>
+  <div class="share-notice">
+    <h3>温馨提示</h3>
+    <dl>
+      <dd>★因7-10月旺季影响，请尽量提前3天预定，预定需缴纳定金。</dd>
+      <dd>★交通：地铁六号线通州北关站B口出，打车至枫露皇苑1-57号（仅需起步价，也可骑共享单车，骑行时间预计10分钟），开车可直接导航枫露皇苑1-57号。</dd>
+      <dd>★以上价格是25人以内，超出25人加收100元/人</dd>
+      <dd>★可提供团餐（火锅、烧烤，具体标准请咨询管家）</dd>
+      <dd>★可停车</dd>
+      <dd>★可住宿</dd>
+      <dd>★可开发票，加收5%税点</dd>
+    </dl>
+  </div>
+</div>
+<!--立即预定-->
+<div class="reserve">
+  <span><i class="icon-zhan"></i></span>
+  <span><i class="icon-fav"></i></span>
+  <button id="btn-reserve">立即预定</button>
+</div>
+<!--//立即预定-->
+
+<!--底部弹出--预定-->
+<div id="reserve-pop" style=" display: ">
+	<div class="mask"></div>
+	<div class="share-pop" style="background-color: #D9E7FB">
+		<div class="pop-body">
+     <div class="share-reserve">
+  			<div class="box-in">
+  				<ul>
+  					<li class="even">
+  						<input type="text" class="ipt-calendar" value="2017-09-06">
+  					</li>
+  					<li>
+  						可选
+  					</li>
+  					<li>
+  						<input type="text" class="ipt-select" value="一天">
+  					</li>
+  					<li>
+  						<input type="text" class="ipt-time" value="入场时间">
+  					</li>
+  				</ul>
+  			</div>
+  			<div class="box-in bgn">
+  				<ul>
+  					<li class="even">
+  						<input type="text" class="ipt-select" value="选择活动类型">
+  					</li>
+  					<li>
+  						人数 <input type="text" class="ipt-select ipt-sm" placeholder="必填">
+  					</li>
+  					<li class="even">
+  						预算 <input type="text" class="ipt-select ipt-sm" placeholder="必填">
+  					</li>
+  					<li>
+  						姓名 <input type="text" class="ipt-select ipt-sm" placeholder="必填">
+  					</li>
+  					<li class="even long">
+  						手机 <input type="text" class="ipt-select ipt-sm"  placeholder="联系手机（必填）">
+  					</li>
+  					<li class="long">
+  						公司名称 <input type="text" class="ipt-select ipt-sm"   placeholder="非必填">
+  					</li>
+  				</ul>
+  			</div>
+  			<div class="btn-reserve">立即预定</div>
+  		</div>
+      
+		</div>
+	</div>
+</div>
+<!--//底部弹出--预定-->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+$(function(){
+  //对话框
+	$(".icon-share").on("click",function(){
+		 $("#share-pop").fadeIn(200)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+			e.stopPropagation()
+			 $("#share-pop").fadeOut(200)		 
+	})
+}) 
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+  <a href="javascript:;" class="icon-share"></a>
+</div>
+<!--//header-->
+<!--新闻详情-->
+<div class="news-detail">
+  <h1 class="news-title">推进党的建设新的伟大工程的根本遵循——深入 学习贯彻习近平总书记党建思想</h1>
+  <h2 class="sub-title">
+    <span>来自：人民网</span>
+    <span>张三</span>
+    <span>3小时前</span>
+  </h2>
+  <div class="summary">
+    ［内容导读］思想建党是马克思主义政党建设的基本原则和根本要求，也是中国共产党90多年来不断发展壮大的宝贵经验和重要法宝。
+  </div>
+  <p><img src="images/pic.jpg" alt=""></p>
+  <p>思想建党是马克思主义政党建设的基本原则和根本要求，也是中国共产党90多年来不断发展壮大的宝贵经验和重要法宝，更是党的十八大以来管党治党的鲜明特征和首要任务。</p>
+  <p>员教育是党的建设的重要基础工作和长期战略任务，在推进中国特色社会主义伟大事业和党的建设新的伟大工程中具有先导性、全局性、保障性作用。</p>
+  <h4>一、党的十八大以来思想建党和党员教育的新要求新实践</h4>
+  <p>党的十八大以来，以习近平同志为核心的党中央把全面从严治党纳入“四个全面”战略布局，开创了党的建设工作新局面。习近平总书记从思想建设的功能和任务出发，突出强调高举伟大旗帜、坚定理想信念，增强“四个意识”，做政治上的明白人，相继提出“理想信念是共产党人精神上的‘钙’，没有理想信念，精神上就会缺‘钙’，就会得‘软骨病’”；“必须加强思想政治建设，解决好世界观、人生观、价值观这个‘总开关’问题”；“坚持思想建党和制度治党紧密结合”，“要使加强制度治党的过程成为加强思想建党的过程，也要使加强思想建党的过程成为加强制度治党的过程”；“思想教育要突出重点，加强党性和道德教育，引导党员、干部坚定理想信念，坚守共产党人精神追求”；“把政治纪律和政治规矩挺在前面”；增强“政治意识、大局意识、核心意识、看齐意识”；“思想政治建设不可能毕其功于一役，要有韧劲、恒心”；要“推动党内教育从‘关键少数’向广大党员拓展，从集中性教育向经常性教育延伸”等一系列新思想新观点新论断，为新时期的思想建党和党员教育工作指明了方向、提供了遵循。近年来，中央颁布《中国共产党廉洁自律准则》《中国共产党纪律处分条例》《关于新形势下党内政治生活的若干准则》《中国共产党党内监督条例》等一系列党内法规，形成了思想建党与制度治党两手抓、两手硬的新格局。</p>
+  <h4>二、当前思想建党和党员教育面临严峻挑战</h4>
+  <p>当前，世情国情党情发生深刻变化，思想建党面临诸多考验。</p>
+  <p>思想建党面临的严峻考验也给党员教育带来了“四难”挑战：一是统一思想难，不易形成共识。在改革开放和社会主义市场经济深入推进的大背景下，各种知识理念、思想文化、意识形态鱼龙混杂、泥沙俱下，人们的价值观念呈现出多元多样多变的复杂局面，对党员坚持不忘初心、继续前进形成考验。二是全员覆盖难，教育存在空白点。受工作不稳定、所在单位没有党组织或是业主对党建工作不支持等因素影响，一些流动党员、非公有制经济组织和社会组织党员没有被纳入党员教育管理工作中。三是集中组织难，集体学习不易组织。在现代社会，人们的生活方式更趋于独立化、个性化，组织党员集中学习越来越难，加之一些党员个人主义、自由主义严重，导致基本的集体学习制度得不到落实。四是入脑入心难，教育效果不佳。有的讲大道理多、触及现实问题少，有的照本宣科简单灌输、创造性的转化创新少，教育的内容和形式不吸引人，有的不分层次、不分行业、不分对象，搞“一刀切”“一锅煮”，导致党员“听不进去”“看不下去”“不感兴趣”“不愿参加”，教育效果收效不大甚至有形无实、有花无果。</p>
+  <p><img src="images/share.png"  class="pull-right"></p>
+</div>
+<!--//新闻详情-->
+<!--底部弹出分享-->
+<div id="share-pop" style=" display: none">
+	<div class="mask"></div>
+	<div class="share-pop">
+	  <div class="pop-title">分享</div>
+		<div class="pop-body">
+      <div class="share-list">
+        <i class="share01"></i>
+        <i class="share02"></i>
+        <i class="share03"></i>
+        <i class="share04"></i>
+        <i class="share05"></i>
+      </div>
+		</div>
+	</div>
+</div>
+<!--//底部弹出分享-->
+</body>
+</html>

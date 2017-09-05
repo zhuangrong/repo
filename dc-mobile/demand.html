@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("a","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body class="bg">
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+<!--我有需求-->
+<div class="score-tabs t2" id="tabs">
+ <a href="#">我有需求</a>
+ <a href="#" class="curr">我是服务商</a>
+</div>
+<!--//积分tabs-->
+<div class="tab-box1">
+  <div style="display: none">
+    <!--园区服务类型-->
+    <div class="service-item-wrap">
+      <div class="service-item">
+        <h3>信息化服务 <a href="#">更多&gt;</a></h3>
+        <div class="si-content">
+          <div class="si-pic">
+            <img src="images/si-pic.jpg">
+          </div>
+          <div class="si-info">
+            <h5>企业网站建设</h5>
+            <p>12个服务商可提供服务</p>
+            <a href="#">查看列表</a>
+          </div>
+        </div>
+        <div class="si-list">
+          <ul>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-item">
+        <h3>UI设计 <a href="#">更多&gt;</a></h3>
+        <div class="si-content">
+          <div class="si-pic">
+            <img src="images/si-pic.jpg">
+          </div>
+          <div class="si-info">
+            <h5>企业网站建设</h5>
+            <p>12个服务商可提供服务</p>
+            <a href="#">查看列表</a>
+          </div>
+        </div>
+        <div class="si-list">
+          <ul>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-item">
+        <h3>信息化服务 <a href="#">更多&gt;</a></h3>
+        <div class="si-content">
+          <div class="si-pic">
+            <img src="images/si-pic.jpg">
+          </div>
+          <div class="si-info">
+            <h5>广告类服务</h5>
+            <p>12个服务商可提供服务</p>
+            <a href="#">查看列表</a>
+          </div>
+        </div>
+        <div class="si-list">
+          <ul>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-item">
+        <h3>其他服务<a href="#">更多&gt;</a></h3>
+        <div class="si-content">
+          <div class="si-pic">
+            <img src="images/si-pic.jpg">
+          </div>
+          <div class="si-info">
+            <h5>广告类服务</h5>
+            <p>12个服务商可提供服务</p>
+            <a href="#">查看列表</a>
+          </div>
+        </div>
+        <div class="si-list">
+          <ul>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/si-list01.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--//园区服务类型-->
+  </div>
+  <div style="display: ">
+    <!--我是服务商-->
+    <div class="demand-category">
+      <div class="dc-item">
+        <dl>
+          <dt>微信开发的需求</dt>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+        </dl>
+      </div>
+      <div class="dc-item">
+        <dl>
+          <dt>微信开发的需求</dt>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+          <dd>
+            <span><label>￥10000</label> 微信清粉软件开发</span>
+            <p>123<em>人投标</em></p>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <!--//我是服务商-->
+  </div>
+</div>
+</body>
+</html>
