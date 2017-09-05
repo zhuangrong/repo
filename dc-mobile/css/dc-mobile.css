@@ -762,9 +762,125 @@ nav a.active i.nav03{
 	padding-left: 15px;
 }
 
+/*login*/
+.login-wrap{
+	padding: 0 20px;
+}
+.login-bg{
+	background-color: #F7F5F9;
+}
+.logo-mb-wrap{
+  padding: 35px 0;
+	text-align: center;
+}
+.logo-mb{
+	display: block;
+	width: 73px;
+	height: 73px;
+	background-image: url(../images/logo-mb.png);
+	margin: 0 auto;
+}
+.login-form{
+	border: 1px solid  #ccc;
+}
+.login-form li{
+	height: 32px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #fff;
+}
+.login-form li:first-child{
+	border-bottom: 1px solid  #ccc;
+}
+.login-form li input{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+.login-form li i{
+	width: 28px;
+	height: 32px;
+	line-height: 32px;
+	display:block;
+	font-size: 18px;
+	color: #979797;
+}
+.login-form li .icon-user:before{
+	content: "\e603";
+}
+.login-form li .icon-psw:before{
+	content: "\e61d";
+}
+.btn-login{
+	margin-top: 10px;
+	border: none;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #D7161E;
+	color: #fff;
+	text-align: center;
+}
+.reg-wrap{
+	padding-top: 20px;
+	text-align: center;
+}
+.reg-wrap a{
+	margin: 0 10px;
+	color: #D7161E;
+}
 
-
-
+/*mobile user center*/
+.avatar-wrap2{
+	position: relative;
+	padding: 10px;
+	background-color: #DF181A;
+}
+.avatar-wrap2 .avatar{
+	display: inline-block;
+  width: 60px;
+  height: 60px;
+	border-radius: 50%;
+	background-color: #eee;
+	border: 1px solid  #fff;
+	vertical-align:middle;
+}
+.avatar-wrap2 span{
+	display: inline-block;
+	padding-top: 3px;
+	padding-left: 3px;
+	margin-top: -2px;
+	vertical-align:middle;
+	font-size: 18px;
+	color: #fff;
+}
+.avatar-wrap2 span em{
+	display: block;
+	color: #fff;
+	font-style: normal;
+	background-color: #AF0A0C;
+	font-size: 14px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 2px 6px;
+	margin-top: 5px;
+}
+.btn-sign{
+	position: absolute;
+	top: 30px;
+	right: 10px;
+	border-radius: 3px;
+	background-color: #FDB006;
+	color: #fff;
+	border: none;
+	font-size: 12px;
+	min-width: 60px;
+}
 
 
 
