@@ -1275,9 +1275,42 @@ em,h3{
 	cursor: pointer;
 }
 
+.sd-zhan{
+  clear: both;
+  overflow: hidden;
+  height: 130px
+}
+.sd-zhan li{
+  float: left;
+  display: inline-block;
+  width: 199px;
+  text-align: center;
+  padding-top: 30px;
+  color: #666;
+}
+.sd-zhan li i{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.sd-zhan li .icon-zhan{
+  background-image: url(../images/icon-zhan.png);
+}
+.sd-zhan li .icon-fav{
+  background-image: url(../images/icon-fav.png);
+}
+.sd-zhan li span{
+  display: block;
+  padding-top: 10px;
+}
 
-
-
+.share-bg{
+  height: 175px;
+  background-image: url(../images/share-bg.png);
+  background-position: center center;
+  background-color: #F7F7F7;
+}
 
 
 
