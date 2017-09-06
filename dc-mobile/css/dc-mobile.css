@@ -1019,5 +1019,50 @@ nav a.active i.nav03{
   padding-right: 10px;
 }
 
+.done-bd{
+	padding: 16px;
+	border-top: 1px solid  #E8E8E8;
+}
+/*任务金额*/
+.dm-money{
+}
+.dm-money h3{
+  float: left;
+  height: 27px;
+  border: 1px solid  #E60012;
+}
+.dm-money h3 label,
+.dm-money h3 span{
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+	padding: 0 10px;
+}
+.dm-money h3 span{
+  color: #fff;
+  background-color: #E60012;
+}
+.dm-money h3 label{
+  color: #E60012;
+  background-color: #fff;
+  font-weight: bold;
+}
+.dm-money > div{
+  float: right;
+}
+.dm-money > div a{
+  display: inline-block;
+  padding-left: 15px;
+  color: #E60012;
+  height: 16px;
+  line-height: 16px;
+  background-image: url(../images/icon-warn.png);
+	background-size: 16px 16px
+}
+
+
+
+
 
 
