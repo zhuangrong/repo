@@ -979,8 +979,45 @@ nav a.active i.nav03{
 
 }
 
+/*------------------找需求---------------------*/
+.dm-wrap{
+  padding: 16px;
+}
+.dm-info{
+  line-height: 1.8;
+  padding: 15px;
+}
+.dm-info h1{
+  font-weight: normal;
+  font-size: 15px;
+}
+.dm-info h2{
+  font-weight: normal;
+  font-size: 10px;
+  color: #999;
+}
+.dm-info h2 em{
+  color: #333;
+}
+.dm-info h3 em{
+  color: #e41b1b;
+}
 
-
+/*需求浏览统计*/
+.dm-view{
+  padding: 15px;
+  border-top: 1px solid  #D9DAD9;
+}
+.dm-view ul li{
+  display: inline-block;
+  color: #333;
+  margin-right: 35px;
+}
+.dm-view ul li p{
+  display: inline-block;
+  color: #999;
+  padding-right: 10px;
+}
 
 
 
