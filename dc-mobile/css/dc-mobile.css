@@ -883,10 +883,101 @@ nav a.active i.nav03{
 }
 
 
+/*党建活动*/
+.rank-total{
+  height: 50px;
+  background-color: #AF0A0C;
+}
+/*排行榜统计*/
+.rank-total ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.rank-total li{
+	position: relative;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	color: #fff;
+  text-align: center;
+  padding-top: 5px;
+}
+.rank-total li span{
+	display: block;
+  font-size: 14px;
+}
+.rank-total li{
+	font-size: 18px;
+}
+.rank-total li em{
+	font-size: 12px;
+}
 
+/*list*/
+.list{
+  margin-top: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ECECEC;
+}
+.list a{
+  display: block;
+  border-bottom: 1px solid #ECECEC;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 9px;
+  font-size: 18px;
+}
+.list a:active{
+  background-color: #fefefe;
+}
+.list i{
+  display: inline-block;  
+  font-size: 16px;
+  margin-right: 5px;
+}
+.list .icon01{
+  color: #FE745F;
+}
+.list .icon02{
+  color: #89D33E;
+}
+.list .icon03{
+  color: #FCB103;
+}
+.list .icon00{
+  color: #FE7454;
+}
+.list .icon04{
+  color: #409FF3;
+}
+.list .icon01:before{
+  content: "\e601";
+}
+.list .icon02:before{
+  content: "\e602";
+}
+.list .icon03:before{
+  content: "\e603";
+}
+.list .icon00:before{
+  content: "\e600";
+}
+.list .icon04:before{
+  content: "\e62a";
+}
 
+.btn-quit{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+  margin:10px;
+  text-align: center;
+  border-radius: 0;
+  color: #fff;
+  background-color: #D7161E;
 
-
+}
 
 
 

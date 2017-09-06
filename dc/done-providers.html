@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+<title>dc</title>
+ <style type="text/css">
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #aaa;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+</style>
+<script>
+$(function(){
+  
+})
+
+</script>
+</head>
+<body class="done-bg">
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<!--header-->
+<div class="header"></div>
+<!--//header-->
+<!--nav-->
+<div class="nav-wrap">
+	<div class="nav">	
+		<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>网站首页</a></li>
+			<li><a href="#">厦门党建e家</a></li>
+			<li><a href="#">特区先锋互动</a></li>
+			<li><a href="#">园区服务</a></li>
+			<li><a href="#">凤凰木·梦空间</a></li>
+			<li class="last"><a href="#">党员积分</a></li>
+		</ul>
+		<div class="nav-tip-left"></div>
+		<div class="nav-tip-right"></div>
+	</div>
+	<div class="login-tip">
+		<a href="#">登录</a>&nbsp; | &nbsp;<a href="#">注册</a>
+	</div>
+</div>
+<!--//nav-->
+<div class="blank50"></div>
+<div class="container">
+  <div class="done-left">
+     <!--服务信息-->
+     <div class="providers done-bd dm-padd">
+       <div class="providers-slide">
+        <!--swiper-->
+        <div class="swiper-container" id="swiper-container1" style="height:330px;background-color: #eee">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/providers-pic.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/providers-pic.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/providers-pic.jpg" alt="">
+              </div>
+            </div>
+            <div class="pagination">&nbsp;</div>
+          </div>
+          <script language="javascript"> 
+          var mySwiper = new Swiper('.swiper-container',{
+                            pagination : '.pagination',
+                         })
+          </script>
+        <!--//swiper-->
+       </div>
+       <div class="providers-info">
+         <h1>普通网站</h1>
+         <h5>服务分类：网站开发 &gt; 程序功能开发</h5>
+         <div class="prov-price">
+           <span>价格</span>
+           <p>价格面议</p>
+         </div>
+         <ul>
+           <li>近期交易：1</li>
+           <li class="odd">累计评价：0</li>
+         </ul>
+         <p>卖家保证金 0 元，承诺以下保障，违约先行赔付</p>
+         <br>
+         <img src="images/share-tool2.jpg" alt="">
+       </div>
+     </div>
+     <!--//服务信息-->
+     <div class="blank"></div>
+     <!--服务详情&评价-->
+     <div class="comment-tab" id="tabs"> 
+       <ul>
+         <li class="curr">服务详情</li>
+         <li>服务评价（0）</li>
+       </ul>
+     </div>
+     <div class="tab-box1 comment-box">
+       <div>
+         <div class="prov-service">
+           <p>服务按实际情况收费，具体请咨询！</p>
+           <p>专业建站团队，专业售后团队，专业运营团队</p>
+           <p>一个机会，一生放心！</p>
+           <p>联系电话：0591-38708898</p>
+           <p>技术咨询：18960972202</p>
+           <p>地址：福建省福州市东二环泰禾广场10号楼6层</p>
+         </div>
+       </div>
+       <div style="display: none">服务评价</div>
+     </div>
+     <!--//服务详情&评价-->
+     <div class="blank"></div>
+     <!--服务流程-->
+     <div class="service-flow">
+       <h3>服务流程 <span>满意后再付款</span></h3>
+       <div>
+         <img src="images/service-flow.png" alt="">
+       </div>
+     </div>
+     <!--//服务流程-->
+     <div class="blank"></div>
+     <!--公司介绍-->
+     <div class="company-intro">
+       <h3>公司介绍</h3>
+       <div class="ci-pic">
+          <img src="images/company-logo02.jpg" alt="">
+       </div>
+       <div class="ci-info">
+         <h1>福建优派网络科技有限公司</h1>
+         <p>公司主要的强项： 企业网站建设，PC商城，WAP商城，微信商城，微信分销系统，微信营销系统  商城APP开发</p>
+         <p>优派科技-由国内知名IT、数码科技、创业导师、运营顾问、互联网运营等核心成员组成。</p>
+         <p>运营团队有着丰富的互联网推广经验和资源，为商家提供一个更智能、更便捷的移动营销服务平台，根据实际出发，我们只为你更好的销售！只让你更好的管理！</p>
+         <p>我们秉承“尽心服务每个客户”的宗旨，以“一流的服务保证”的技术理念。定位致力于帮助中小企业走上电子商务的信息平台，我们深知，互联网技术是永无止境的，移动营销更要符合企业和市场发展的需要。</p>
+         <h2>技术优势</h2> 
+         <p>多年从业经验，专业软硬件开发，我们有热诚的心，用心意加创意创造每一次传奇！站在品牌的高度执行每一次案例，为您打造不一样的您！ </p>
+         <p>ASP是微软（Microsoft）所开发的一种后台脚本语言，它的语法和VisualBASIC类似，可以像SSI（Server SideInclude）那样把后台脚本代码内嵌到HTML页面中。虽然ASP简单易用，但是它自身存在着许多缺陷，最重要的就是安全性问题。目前在微软的 .net 战略中新推出的ASP.net 借鉴了Java技术的优点，使用C Sharp (C#) 语言作为ASP.net的推荐语言，同时改进了以前ASP的安全性差等缺点。但是，使用ASP/ASP.net仍有一定的局限性，因为从某种角度来说它们只能在微软的 Windows NT/2000/XP + IIS的服务器平台上良好运行（虽然像ChilliSoft提供了在UNIX/Linux上运行ASP的解决方案，但是目前ASP在UNIX/Linux上的应用可以说几乎为0）。所以平台的局限性和ASP自身的安全性限制了ASP的广泛应用。</p>
+       </div>
+     </div>
+     <!--//公司介绍-->
+  </div>
+  <div class="done-right">
+    <!--//联系-->
+    <div class="contact-prov done-bd dm-padd">
+      <img src="images/providers-logo.jpg" alt="">
+      <div class="contact-btn">
+        <a href="#" class="btn-pri">雇佣</a>
+        <a href="#" class="btn-pri m0">快速沟通</a>
+        <a href="#" class="btn-def">收藏</a>
+        <a href="#" class="btn-def m0">邀请</a>
+      </div>
+      <img src="images/share-tool3.jpg" alt="">
+    </div>
+    <!--//联系-->
+    <div class="blank"></div>
+    <!--其他服务-->
+    <div class="dm-other other-service done-bd">
+      <h3>该服务商所提供的其他服务 <a href="#"></a></h3>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="images/other-service01.png" alt="">
+            <p>移动微信端开发 <span>价格面议</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/other-service02.png" alt="">
+            <p>移动微信端开发 <span>价格面议</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/other-service03.png" alt="">
+            <p>移动微信端开发 <span>价格面议</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/other-service04.png" alt="">
+            <p>移动微信端开发 <span>价格面议</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/other-service05.png" alt="">
+            <p>移动微信端开发 <span>价格面议</span></p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--//其他服务-->
+    
+  </div>
+</div>
+<div class="blank50"></div>
+<div class="blank50"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+</body>
+</html>
