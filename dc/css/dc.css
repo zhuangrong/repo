@@ -196,16 +196,18 @@ em,h3{
 .news-slide{
 	padding: 10px;
 	background-color: #F5F5F5;
-  height: 270px;
-  overflow: hidden;
+	height: 270px;
+	overflow: hidden;
 }
 .news-pic img{
   width: 280px;
   height: 210px;
   display: inline-block;
   vertical-align: middle;
+  float: left;
 }
 .news-pic > div{
+  float: left;
   width: 330px;
   padding-left: 10px;
   display: inline-block;
@@ -1638,7 +1640,7 @@ em,h3{
   font-weight: bold;
   cursor: default;
 }
-.img-slide, .swiper-container {
+.img-slide, .img-slide.swiper-container {
   height: 480px;
   width: 360px;
   margin: 15px 0 0 0;
