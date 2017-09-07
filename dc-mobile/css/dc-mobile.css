@@ -24,7 +24,7 @@ body {
   font-family: "Microsoft yahei", -apple-system-font, "Helvetica Neue", sans-serif;
 }
 body, span, label, p, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input {
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
   background-position: 0 0;
   background-size: 100%;
 }
@@ -986,6 +986,7 @@ nav a.active i.nav03{
 .dm-info{
   line-height: 1.8;
   padding: 15px;
+  background: #fff;
 }
 .dm-info h1{
   font-weight: normal;
@@ -1007,6 +1008,7 @@ nav a.active i.nav03{
 .dm-view{
   padding: 15px;
   border-top: 1px solid  #D9DAD9;
+  background-color: #fff;
 }
 .dm-view ul li{
   display: inline-block;
@@ -1022,9 +1024,11 @@ nav a.active i.nav03{
 .done-bd{
 	padding: 16px;
 	border-top: 1px solid  #E8E8E8;
+	background: #fff;
 }
 /*任务金额*/
 .dm-money{
+  background-color: #fff;
 }
 .dm-money h3{
   float: left;
@@ -1060,9 +1064,444 @@ nav a.active i.nav03{
   background-image: url(../images/icon-warn.png);
 	background-size: 16px 16px
 }
+/*任务名称*/
+.dm-name{
+  background-color: #fff;
+}
+.dm-name span{
+  display: block;
+  padding: 10px 0;
+  font-size: 12px;
+}
+.dm-name h1{
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.dm-name p{
+  font-size: 12px;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*第三方要求*/
+.vender-require{
+  font-size: 10px !important;
+  background-color: #fff;
+}
+.vender-require .vr-logo{
+  float: left;
+  width: 62px;
+}
+.vender-require .vr-logo p{
+  display: block;
+  color: #999;
+  text-align: center;
+}
+.vender-require .vr-info{
+  margin-left: 75px;
+}
+.vender-require .vr-info h1{
+  font-size: 12px;
+  padding-left: 10px;
+  background-image: url(../images/share-title.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 2px auto;
+  margin-bottom: 10px;
+}
+.vender-require .vr-info ul{
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.vender-require .vr-info li{
+  display: inline-block;
+  min-width: 86px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid  #e8e8e8;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 10px;
+  padding: 0 5px;
+  color: #999;
+}
+.vender-require .vr-remark{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #FFEA7F;
+  font-size: 10px;
+  border-left: 2px solid  #E60012;
+}
+
+/*第三方列表*/
+.vender-company{
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+  overflow: hidden;
+}
+.vender-company .vc-pic{
+  width: 70px;
+  float: left;
+}
+.vender-company .vc-info{
+  margin-left: 80px;
+}
+.vender-company .vc-info h1{
+  font-size: 15px;
+  font-weight: normal;
+}
+.vender-company .vc-info h3{
+  color: #999;
+  padding: 5px 0;
+  font-weight: normal;
+}
+.vender-company .vc-info dl{
+  overflow: hidden;
+}
+.vender-company .vc-info dl dd,
+.vender-company .vc-info dl dt{
+  display: inline-block;
+}
+.vender-company .vc-info dl dd{
+  color: #fff;
+  margin-right: 5px;
+  background-color: #C6743C;
+  padding: 0 5px;
+}
+.vender-company .vc-info p{
+  margin: 5px 0;
+}
+.vender-company .vc-info p em{
+  color: #f00;
+  font-weight: bold;
+}
+.vender-company .vc-info .btn-vc{
+  padding-top: 0;
+}
+.vender-company .vc-info .btn-vc a{
+  float: left;
+  display: inline-block;
+  min-width: 45px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 3px;
+  border: 1px solid  #DBDCDB;
+  text-align: center;
+  background-color: #F8F8F8;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0 3px;
+}
+.vender-project{
+  border-top: 1px solid  #DBDCDB;
+  padding: 30px 0 0 0;
+}
+.vender-project ul{
+  overflow: hidden;
+}
+.vender-project li{
+  float: left;
+  width: 33.333%;
+  height: 60px;
+  display: inline-block;
+  color: #4EC0A9;
+  font-size: 16px;
+  text-align: center;
+}
+.vender-project li p{
+  display: block;
+  height: 12px;
+  line-height: 12px;
+  font-size: 10px;
+}
+.vender-project li span{
+  display: block;
+  background-color: #4EC0A9;
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+  margin-top: 10px;
+  font-size: 10px;
+}
+.vender-project li.project-day{
+  olor: #999;
+}
+.vender-project li.project-day span{
+  background-color: #999;
+}
+.vender-project li.project-addr{
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-project{
+  display: block;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 3px;
+  border: 1px solid  #DBDCDB;
+  text-align: center;
+  background-color: #F8F8F8;
+  margin: 5px auto 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/*发布类似需求*/
+.publish-tool{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	background-color: #fff;
+  height: 62px;
+	border-top: 1px solid #D4D4D3;
+}
+.publish-tool button{
+  -webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;	
+	height: 35px;
+  line-height: 35px;
+  border: none;
+	margin: 0px 5px;	
+	border-radius: 3px;
+	color: #333;
+  background-color: #E6E6E6;
+  text-align: center;
+}
+.publish-tool a{
+  display: block;
+  width: 81px;
+  height: 35px;
+  line-height: 35px;
+  border: none;
+  margin: 0px 5px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #E60012;
+  text-align: center;
+}
+.publish-tool span{
+  display: block;
+  width: 80px;
+  height: 35px; 
+  text-align: center;
+  font-size: 10px;
+}
+.publish-tool span i{
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+}
+.icon-contact{
+  background-image: url(../images/icon-contact.png);
+}
+
+.dm-padd{
+  padding: 15px;
+  background-color: #fff;
+}
+/*providers-info*/
+.providers-info{
+  
+}
+.providers-info h1{
+  font-size: 16px;
+  font-weight: normal;
+}
+.providers-info h5{
+  font-weight: normal;
+  padding: 5px 0;
+  color: #999;
+}
+.providers-info .prov-price{
+  font-size: 13px;
+  padding: 7px 0;
+  color: #999;
+}
+.providers-info .prov-price span{
+  display: inline-block;
+  margin-right: 10px;
+}
+.providers-info .prov-price p{
+  display: inline-block;
+  color: #E41B1B;
+  font-size: 13px;
+}
+.providers-info ul{
+  overflow: hidden;
+}
+.providers-info li{
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding-right: 20px;
+}
+.providers-info li.odd{
+  border-right: none
+}
+
+.providers-info p{
+  font-size: 14px;
+}
+/*联系*/
+.contact-prov img{
+  float: left;
+  width: 80px;
+}
+.contact-prov .contact-btn{
+  margin-left: 90px;
+}
+.btn-def,
+.btn-pri{
+  width: 56px;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.btn-def:hover{
+  color: #333;
+  text-decoration: none
+}
+.btn-pri:hover{
+  color: #fff;
+  text-decoration: none
+}
+.btn-pri{
+  background-color: #E60012;
+  color: #fff;
+}
+.btn-def{
+  background-color: #E6E6E6;
+}
+.contact-btn{
+  padding-top: 10px;
+}
+.contact-btn a{
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.contact-btn p{
+  font-size: 16px;
+  display: block;
+  padding: 5px 0 10px;
+}
+/*服务详情&评价*/
+.comment-tab{
+  min-height: 35px;
+}  
+.comment-tab li{
+  float: left;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 13px;
+  border-top: 2px solid  #F8F8F8; 
+  cursor: pointer;
+} 
+.comment-tab li.curr{
+  background-color: #fff;
+  border-top: 2px solid  #E60012; 
+}
+.comment-box{
+  background-color: #fff;
+  padding: 13px;
+}
 
 
+/*服务流程*/
+.service-flow{
+  background-color: #fff;
+}
+.service-flow h3{
+  height: 35px;
+  line-height: 35px;
+  padding: 0 12px 0 38px;
+  border-bottom: 1px solid  #E8E8E8;
+  background-image: url(../images/icon-flow.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 16px;
+  font-size: 16px;
+}
+.service-flow span{
+  display: block;
+  float: right;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 35px;
+  margin-top: 5px;
+  background-image: url(../images/icon-pay.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 16px;
+  font-size: 14px;
+}
+.service-flow > div{
+  text-align: center;
+  padding: 15px 10px;
+}
+.service-flow > div img{
+  margin: 0 auto;
+}
 
-
+/*公司介绍*/
+.company-intro{
+  background-color: #fff;
+  overflow: hidden;
+}
+.company-intro h3{
+  height: 35px;
+  line-height: 35px;
+  padding: 0 12px 0 38px;
+  border-bottom: 1px solid  #E8E8E8;
+  background-image: url(../images/icon-company.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 16px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.company-intro .ci-pic{
+  float: left;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+.company-intro .ci-info{
+  padding-right: 10px;
+}
+.company-intro .ci-info h1{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.company-intro .ci-info h2{
+  font-size: 14px;
+}
+.company-intro .ci-info p{
+  margin-bottom: 18px;
+  text-align: justify;
+  line-height: 1.6;
+}
 
 
