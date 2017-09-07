@@ -414,7 +414,7 @@ em,h3{
 
 .backtop{
 	position: fixed;
-	bottom: 230px;
+	bottom: 100px;
 	right: 0;
 	display: block;
 	width: 124px;
@@ -2048,8 +2048,51 @@ em,h3{
   bottom: 266px;
 }
 
-
-
+/*20170907--新鲜资讯*/
+.news-latest{
+	float: right;
+	width: 400px;
+	border: 1px solid #fecd21;
+	padding: 20px 45px 100px;
+	min-height: 500px;
+}
+.news-latest h3{
+	font-size: 26px;
+	padding: 10px 0;
+	border-bottom: 1px solid  #fecd21;
+}
+.news-latest dl{
+	border-bottom: 1px solid  #fecd21;
+}
+.news-latest dt{
+	font-size: 20px;
+  padding-right: 20px;
+  color: #000;
+  padding: 20px 0;
+}
+.news-latest dt:after{
+  content: '';
+  width: 12px;
+  height: 9px;
+  display: inline-block;
+  margin-left: 5px;
+  background-image: url(../images/news-title-arrow.png);
+}
+.news-latest dd{
+	border-left: 4px solid  #FECD21;
+  padding-left: 5px;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.news-latest dd a{
+  color: #999;
+}
+.news-latest dd a p{
+  font-size: 12px;
+  display: block;
+  padding-top: 10px;
+}
 
 
 

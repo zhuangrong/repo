@@ -29,6 +29,7 @@ $(function(){
 })
 //浮动导航
 function tools(){
+  console.log("index")
 	var top=$(document).scrollTop(); 
 	if(top > 80){
 		$(".header").addClass("hd-slide"); 
@@ -41,6 +42,7 @@ function tools(){
 function videoPlay(video){
   $(".video-play").show()
   $("#player").attr("src",video )
+  $("#player")[0].play()
 }
 function videoClose(){
   $(".video-play").hide()

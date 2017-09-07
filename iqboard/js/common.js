@@ -1,6 +1,11 @@
 
 
 $(function(){
+   
+   $(window).scroll(function(){
+     backtops()
+   });
+  
   //移动端-导航点击
   $(".nav-toggle").on("click",function(){
     if($(".nav").is(":visible")){
@@ -11,13 +16,13 @@ $(function(){
   })
   
   //显示隐藏二级导航
-  $("#nav li").mouseenter(function(){
+  $("#nav li:eq(1)").mouseenter(function(){
     $(this).addClass("nav-sub-arrow")
     $(this).find(".nav-sub-wrap").stop().show();
   })
-  $("#nav li").mouseleave(function(){
-    $(this).removeClass("nav-sub-arrow")
-    $(this).find(".nav-sub-wrap").stop().hide();
+  $(".nav-sub-wrap, #nav ul").mouseleave(function(){
+    $("#nav li:eq(1)").removeClass("nav-sub-arrow")
+    $(".nav-sub-wrap").stop().hide();
   })
   
   //搜索
@@ -42,6 +47,19 @@ $(function(){
     $("#feedback").toggle()
   })
   
-  
-  
 })
+
+//返回顶部动态位置
+function backtops(){
+  var top2=$(document).scrollTop(); 
+  var docH = $(document).height()
+  var screenH = $(window).height()
+  var footerH = $(".footer").height()
+  if((docH - top2) <= (screenH + footerH)){
+    $(".backtop").css("bottom", footerH + 50)
+    $(".backlist").css("bottom", footerH + 100)
+  }else{
+    $(".backtop").css("bottom", "100px")
+    $(".backlist").css("bottom", "150px")
+  }
+}
