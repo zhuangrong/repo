@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script></script>
+<title>dc</title>
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+  
+  /*下拉排序菜单*/
+  $("#tabs li i").click(function(){
+    if($(".space-sort").is(":visible")){
+			$(".space-sort").hide()
+		}else{
+			$(".space-sort").show()
+		}
+    
+  })
+  $("#tabs li dd").click(function(){
+    $(".space-sort").hide()
+  })
+  
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+        e.stopPropagation();
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<!--header-->
+<div class="header">
+	
+</div>
+<!--//header-->
+<!--nav-->
+<div class="nav-wrap">
+	<div class="nav">	
+		<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>网站首页</a></li>
+			<li><a href="#">厦门党建e家</a></li>
+			<li><a href="#">特区先锋互动</a></li>
+			<li><a href="#">园区服务</a></li>
+			<li><a href="#">凤凰木·梦空间</a></li>
+			<li class="last"><a href="#">党员积分</a></li>
+		</ul>
+		<div class="nav-tip-left"></div>
+		<div class="nav-tip-right"></div>
+	</div>
+	<div class="login-tip">
+		<a href="#">登录</a>&nbsp; | &nbsp;<a href="#">注册</a>
+	</div>
+</div>
+<!--//nav-->
+<div class="blank50"></div>
+<div class="container" style="padding:0 20px; width: 1320px">
+  <!--space tabs-->
+  <div class="space-tabs" id="tabs">
+    <ul>
+      <li class="curr">推荐</li>
+      <li>
+        价格
+      </li>
+      <li>
+        园区 <i></i>
+        <div class="space-sort" style="display: none">
+          <dl>
+            <dd>华美空间</dd>
+            <dd>海峡建筑设计文创园</dd>
+            <dd>联发·文创口岸</dd>
+          </dl>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-box1" style="min-height: 500px">
+    <div>
+      <!--推荐-->
+      <div class="space-list">
+        <ul>
+          <li>
+            <label class="space-tip">华美空间</label>
+            <img src="images/space01.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space02.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space03.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space04.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space05.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space06.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space07.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space08.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+          <li>
+            <img src="images/space09.jpg" alt="">
+            <h3>【团建&聚会首选】时光别墅轰趴-京城</h3>
+            <p>¥2780<em>/天 起</em></p>
+          </li>
+        </ul>
+      </div>
+      <!--//推荐-->
+      <!--翻页-->
+      <div class="news-page">
+        <div>
+          <a class="prev" href="/index.php?s=/Home/Index/news/p/2.html">&lt;</a>
+          <span class="current">1</span>
+          <a class="num" href="/index.php?s=/Home/Index/news/p/2.html">2</a>
+          <a class="next" href="/index.php?s=/Home/Index/news/p/2.html">&gt;</a>
+        </div>
+      </div>
+      <!--//翻页-->
+    </div>
+    <div style="display: none">
+      价格
+    </div>
+    <div style="display: none">
+      园区
+    </div>
+  </div>
+  <!--//space tabs-->
+</div>
+<div class="blank50"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+<!--浮动层-->
+<div class="widget">
+  <a href="#"><i class="icon-wb"></i>政务微博</a>
+  <a href="#"><i class="icon-wx"></i>政务微信</a>
+  <a href="#"><i class="icon-app"></i>手机APp</a>
+  <a href="#top"><i class="icon-backtop"></i>返回顶部</a>
+</div>
+<!--//浮动层-->
+</body>
+</html>
