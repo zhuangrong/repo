@@ -29,11 +29,31 @@ function tools(){
 }
 </script>
 <style>
-
+  .imgHover{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    border: 1px solid #000;
+  }
+.imgHover img{
+	overflow: hidden;
+	-webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: all .3s linear;
+	position: relative;
+	z-index: 9;
+}
+.imgHover:hover img{
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
 </style>
 <title></title>
 </head>
-<body>
+<body style="padding:100px">
+  <div class="imgHover">
+    <img src="images/smart01.jpg" alt="">
+  </div>
 <!--头部-->
 <div class="header" style="opacity: .1">
   <div class="container">
