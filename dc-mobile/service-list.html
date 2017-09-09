@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body class="bg">
+<!--header-->
+<div class="header" style="z-index: 9999999999999">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+<!--space tabs-->
+  <div class="space-tabs service-tabs" id="tabs">
+    <ul>
+      <li>政府服务</li>
+      <li class="curr">园区服务 </li>
+      <li>空间服务</li>
+    </ul>
+  </div>
+  <div class="tab-box1" style="min-height: 500px">
+    <div>
+			<div class="banner">
+				<img src="images/service-banner.jpg" alt="">
+			</div>
+      <!--热门服务-->
+      <div class="service-box">
+      	<h1>热门服务</h1>
+      	<h3>根据您的需求选择</h3>
+				<!--swiper-->
+				<div class="swiper-container swiper02" style="padding-bottom: 30px">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/service-hot01.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="images/service-hot02.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="images/service-hot03.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="images/service-hot01.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="images/service-hot02.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="images/service-hot03.jpg" alt="">
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination sp2"></div>
+				</div>
+				<script>
+					var swiper = new Swiper('.swiper02', {
+								pagination: '.sp2',
+								slidesPerView: 3,
+								spaceBetween: 10,
+								autoplay:2000
+						});
+				</script>
+				<!--//swiper-->
+      </div>
+      <!--//热门服务-->
+      <!--入园申请-->
+      <div class="service-box">
+      	<h1>入园申请</h1>
+      	<h3>在线填写申请表格，三个工作日内完成申请</h3>
+      	<div class="sb-pic">
+      		<img src="images/service01.jpg" alt="">
+      	</div>
+      	<h1>共享空间</h1>
+      	<h3>提供办公、会议、商洽等各类场所可在线免费预约</h3>
+      	<div class="sb-pic">
+      		<img src="images/service02.jpg" alt="">
+      	</div>
+      	<h1>企业直聘</h1>
+      	<h3>面向所有联盟园区，一键发布招聘需求</h3>
+      	<div class="sb-pic">
+      		<img src="images/service03.jpg" alt="">
+      	</div>
+      </div>
+      <!--//入园申请-->
+    </div>
+    <div style="display: none">
+      价格
+    </div>
+    <div style="display: none">
+      园区
+    </div>
+  </div>
+  <!--//space tabs-->
+  <div class="blank"></div>
+</body>
+</html>
