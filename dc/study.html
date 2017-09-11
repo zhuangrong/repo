@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script></script>
+<title>dc</title>
+ <style type="text/css">
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #7A7A7A;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #EC3636;
+}
+</style>
+<script>
+$(function(){
+  $.TabChange("tabs",1)
+  $.TabChange("tabs2",2)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<div class="container">
+	<img src="images/banner-ts.jpg" alt="">
+</div>
+<div class="blank"></div>
+<!--第一块-->
+<div class="container">
+	<div class="news-slide-wrap">
+		<div class="news-slide" style="padding: 0;height: 341px;border:1px solid #d1d1d1;background:#F0DED0">
+      <!--swiper-->
+      <div class="swiper-container" id="swiper-container1" style="height:307px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/study01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/study01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/study01.jpg" alt="">
+            </div>
+          </div>
+          <div class="pagination">
+            &nbsp;</div>
+        </div>
+        <script language="javascript"> 
+        var mySwiper = new Swiper('.swiper-container',{
+                          pagination : '.pagination',
+                       })
+        </script>
+      <!--//swiper-->
+		</div>
+	</div>
+	<div class="news-list-wrap">
+		<!--新闻tab-->
+		<div class="news-list-tabs" id="tabs">
+			<ul class="pull-left">
+				<li class="curr">两学一做</li>
+				<li>三会一课</li>
+				<li>学习廖俊波</li>
+			</ul>
+			<a class="pull-right more" href="#">更多&gt;&gt;</a>
+		</div>
+		<div class="tab-box1 news-list-content">
+			<div>
+				<div class="news-list">
+					<ul>
+						<li><a href="#">· 为深化改革扩大开放提供更多经验为深化改革扩大开放提供更多经验 <span>08-16</span></a></li>
+						<li><a href="#">· 诚信兴商 共建信用厦门诚信兴商 共建信用厦门 <span>08-16</span></a></li>
+						<li><a href="#">· 共建共享 让文明成为园区发展基因让文明成为园区发展基因<span>08-16</span></a></li>
+						<li><a href="#">· 全面深化改革 提升百姓获得感全面深化改革 提升百姓获得感<span>08-16</span></a></li>
+						<li><a href="#">· 集美区委第三轮第二批巡察展开集美区委第三轮第二批巡察展开<span>08-16</span></a></li>
+						<li><a href="#">· 海沧区委开展精准帮扶专项巡察海沧区委开展精准帮扶专项巡察<span>08-16</span></a></li>
+						<li><a href="#">· 集中共厦门市委十二届五次全会召开集中共厦门市委十二届五次全会召开<span>08-16</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div style="display: none">园区头条</div>
+			<div style="display: none">空间动态</div>
+		</div>
+		<!--//新闻tab-->
+	</div>
+</div>
+<!--//第一块-->
+<div class="blank"></div>
+<div class="container">
+  <div class="study-wrap">
+		<div class="title">
+			<span>学习资料</span>
+			<a href="#" class="more">more&gt;&gt;</a>
+		</div>
+	  <div class="clearfix">
+			<div class="pull-left study-w">	
+				<div class="study-title">
+					<img src="images/study-title01.png" alt="">
+				</div>
+				<!--学习资料-->
+				<div class="news-list study-list">
+					<ul>
+						<li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+						<li><a href="#">厦门市中小微企业符合条件即可申报无偿资助<span>08-16</span></a></li>
+						<li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+						<li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+						<li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+					</ul>
+				</div>
+				<div class="blank"></div>
+				<!--//学习资料-->
+			</div>
+			<div class="pull-right study-w">	
+				<div class="study-title">
+					<img src="images/study-title01.png" alt="">
+				</div>
+				<!--学习资料-->
+				<div class="news-list study-list">
+					<ul>
+						<li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+						<li><a href="#">厦门市中小微企业符合条件即可申报无偿资助<span>08-16</span></a></li>
+						<li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+						<li><a href="#">厦门市投放超10亿科技担保贷款服务中小科技企业<span>08-16</span></a></li>
+						<li><a href="#">厦门市5个项目获科技部资助金额1005万元<span>08-16</span></a></li>
+					</ul>
+				</div>
+				<div class="blank"></div>
+				<!--//学习资料-->
+			</div>
+	  </div>
+		<!--党员活动-->
+		<div class="title">
+			<span>党员活动</span>
+			<a href="#" class="more">more&gt;&gt;</a>
+		</div>
+		<div class="clearfix" style="padding-top:30px">
+		   <div class="study-dy-left">
+		   	  <img src="images/study-dy01.jpg" alt="">
+		   	  <p>韩庆祥：我们的理论自信从何而来</p>
+		   </div>
+		   <div class="study-dy-mid">
+		   	  <ul>
+		   	  	<li>
+		   	  		<img src="images/study-dy02.jpg" alt="">
+		   	  		<p>厦门市着力打造15支基层科技党建工作新品牌</p>
+		   	  	</li>
+		   	  	<li>
+		   	  		<img src="images/study-dy03.jpg" alt="">
+		   	  		<p>厦门市着力打造15支基层科技党建工作新品牌</p>
+		   	  	</li>
+		   	  	<li>
+		   	  		<img src="images/study-dy04.jpg" alt="">
+		   	  		<p>厦门市着力打造15支基层科技党建工作新品牌</p>
+		   	  	</li>
+		   	  </ul>
+		   </div>
+		   <div class="study-dy-right">
+		   	  <img src="images/study-dy05.jpg" alt="">
+		   </div>
+		</div>
+  </div>
+</div>
+<div class="blank"></div>
+<div class="blank50"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+</body>
+</html>

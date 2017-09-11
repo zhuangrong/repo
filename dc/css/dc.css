@@ -361,7 +361,8 @@ em,h3{
 	line-height: 42px;
 	background-image: url(../images/dot.gif);
 	background-repeat: repeat-x;
-	background-position: left bottom
+	background-position: left bottom;
+	overflow: hidden;
 }
 .title span{
 	float: left;
@@ -2572,6 +2573,62 @@ em,h3{
 .space-sort dd:hover{
   background-color: #eee;
 }
+
+/*study*/
+.study-wrap{
+	padding:20px;
+	border: 1px solid  #D1D1D1;
+	overflow: hidden;
+}
+.study-w{
+	width: 649px;
+}
+.study-title{
+	padding: 20px 0;
+}
+.study-list li{
+	background-image: url(../images/study-dot.gif);
+	padding-left: 15px;
+}
+
+.study-dy-left{
+	float: left;
+	width: 369px;
+	background-color: #B3AEAF;
+}
+.study-dy-left p{
+	display: block;
+	padding: 25px 40px;
+	height: 75px;
+	overflow: hidden;
+	color: #FFF;	
+}
+.study-dy-mid{
+	float: left;
+	width: 468px;
+	padding: 0 20px;
+}
+.study-dy-mid li{
+	margin-bottom: 27px;
+	clear: both;
+	overflow: hidden;
+	font-size: 20px;
+}
+.study-dy-mid li img{
+	float: left;
+	display: inline-block;
+}
+.study-dy-mid li p{
+	width: 242px;
+	padding-left: 10px;
+	float: left;
+	display: inline-block;
+}
+.study-dy-right{
+	float: right;
+	width: 434px;
+}
+
 
 
 
