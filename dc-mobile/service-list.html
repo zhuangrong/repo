@@ -49,7 +49,7 @@ $.TabChange = function(obj,num){
       	<h1>热门服务</h1>
       	<h3>根据您的需求选择</h3>
 				<!--swiper-->
-				<div class="swiper-container swiper02" style="padding-bottom: 30px">
+				<div class="swiper-container swiper02" style="padding-bottom: 30px;">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<img src="images/service-hot01.jpg" alt="">
@@ -70,15 +70,14 @@ $.TabChange = function(obj,num){
 							<img src="images/service-hot03.jpg" alt="">
 						</div>
 					</div>
-					<!-- Add Pagination -->
-					<div class="swiper-pagination sp2"></div>
 				</div>
 				<script>
 					var swiper = new Swiper('.swiper02', {
-								pagination: '.sp2',
-								slidesPerView: 3,
-								spaceBetween: 10,
-								autoplay:2000
+                initialSlide: 2,
+                slidesPerView: '4',
+                paginationClickable: true,
+                spaceBetween: 10,
+                centeredSlides: true
 						});
 				</script>
 				<!--//swiper-->

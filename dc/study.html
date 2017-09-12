@@ -10,27 +10,55 @@
 <script src="js/idangerous.swiper.min.js"></script> 
 <script></script>
 <title>dc</title>
- <style type="text/css">
+<style type="text/css">
+ .swiper-container{
+   padding-bottom: 35px
+ }
 .pagination {
   position: absolute;
   z-index: 20;
-  bottom: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
 .swiper-pagination-switch {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background: #7A7A7A;
-  margin: 0 5px;
-  opacity: 0.8;
+  width: 20%;
+  height: 35px;
+  line-height: 35px;
+  background: #fff;
   cursor: pointer;
+  font-size: 14px;
 }
 .swiper-active-switch {
-  background: #EC3636;
+  background: #882B38;
+  color: #fff;
 }
+/*箭头*/
+ .news-slide{
+   position: relative;
+ }
+.news-slide .arrow-right,
+.news-slide .arrow-left {
+  display: block;
+  background-image: url(images/swiper-button.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+  top: 42%;
+  width: 33px;
+  height: 33px;
+  z-index: 99999;
+}
+.news-slide .arrow-right {
+  background-image: url(images/swiper-button.png);
+  background-position: right center;
+  right: 0;
+  left: auto;
+}   
 </style>
 <script>
 $(function(){
@@ -71,10 +99,20 @@ $.TabChange = function(obj,num){
 <!--第一块-->
 <div class="container">
 	<div class="news-slide-wrap">
-		<div class="news-slide" style="padding: 0;height: 341px;border:1px solid #d1d1d1;background:#F0DED0">
+		<div class="news-slide" style="padding: 0;height: 341px;border:1px solid #d1d1d1;">
+      <!--箭头-->
+      <a class="arrow-left" href="javascript:;"></a> 
+      <a class="arrow-right" href="javascript:;"></a>
+      <!--箭头-->
       <!--swiper-->
       <div class="swiper-container" id="swiper-container1" style="height:307px;">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/study01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/study01.jpg" alt="">
+            </div>
             <div class="swiper-slide">
               <img src="images/study01.jpg" alt="">
             </div>
@@ -91,7 +129,25 @@ $.TabChange = function(obj,num){
         <script language="javascript"> 
         var mySwiper = new Swiper('.swiper-container',{
                           pagination : '.pagination',
+                          paginationClickable :true
                        })
+        
+        //添加标题
+        $(".pagination span:eq(0)").text("系列图解")
+        $(".pagination span:eq(1)").text("开展背景及时间")
+        $(".pagination span:eq(2)").text("总体要求")
+        $(".pagination span:eq(3)").text("学习教育内容")
+        $(".pagination span:eq(4)").text("主要措施")
+        
+        //箭头事件
+        $('.arrow-left').on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipePrev()
+        })
+        $('.arrow-right').on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipeNext()
+        })
         </script>
       <!--//swiper-->
 		</div>
