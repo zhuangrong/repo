@@ -112,6 +112,9 @@
      opacity: 0 !important;
      display: none !important;
   }
+  .nav li.nav-sub-arrow > a:after{
+    display: none !important;
+  }
 	.video-wrap{
 		height: auto;
 		overflow: hidden;
