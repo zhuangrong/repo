@@ -29,13 +29,13 @@ body, span, label, p, a, div, li, dt, dd, i, em, section, article, :after, :befo
   background-size: 100%;
 }
 a {
-  color: #fff;
+  color: #363639;
   text-decoration: none;
   background-color: transparent;
   -webkit-user-select: none;
 }
 a:active {
-  color: #fff;
+  color: #363639;
 }
 a:not([href]):focus {
   outline: 0;
@@ -195,7 +195,7 @@ nav .icon-nav06{
 	
 /*头像**/
 .avatar-wrap{
-	height: 150px;
+	height: 3rem;
 	padding-top: 1.8rem;
 	text-align: center;
 	background-image: url(../images/avatar-bg.jpg);
@@ -241,6 +241,47 @@ nav .icon-nav06{
   background-image: url(../images/icon-diamond.png);
   background-position: left center;
   background-size: .24rem;
+}
+	
+/*头像2**/
+.avatar-wrap2{
+  position: relative;
+	height: 4rem;
+	padding-top: 0.3rem;
+	text-align: center;
+	background-image: url(../images/avatar-bg2.jpg);
+}
+.avatar-wrap2 .avatar-vip{
+  position: relative;
+	display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+	margin: 0 auto;
+  background-image: url(../images/vip.png);
+}
+.avatar-wrap2 .avatar{
+  position: absolute;
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: 0.65rem;
+  left: 0.65rem;
+  border: 2px solid  #fff;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.avatar-wrap2 span{
+	display: block;
+	color: #fff;
+	margin-top: -0.3rem;
+	font-size: 17px;
+}
+.avatar-wrap2 .number{
+	position: absolute;
+	left: .3rem;
+	top: 3.1rem;
+	color: #fff;
+	font-size: 12px;
 }
 
 /*在线充值*/
@@ -308,8 +349,74 @@ nav .icon-nav06{
   font-size: 18px;
 }
 
+/*会员中心*/
+.member{
+  padding: 0 .3rem;
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+  flex-wrap: wrap;
+}
+.member a{
+  flex:0 0 -webkit-calc(50% - .1rem);
+  background-color: #fff;
+  height: 2.2rem;
+  text-align: center;
+  margin-right: .1rem;
+  margin-top: .1rem;
+  padding-top: 0.4rem;
+}
+.member a:nth-child(2n){
+  margin-right: 0;
+}
 
-
+.member a i{
+  display: block;
+	width: .8rem;
+	height: .8rem;
+  margin: 0 auto .05rem;
+}
+.member .icon-enter01{
+	background-image: url(../images/icon-enter01.png);
+}
+.member .icon-enter02{
+	background-image: url(../images/icon-enter02.png);
+}
+.member .icon-enter03{
+	background-image: url(../images/icon-enter03.png);
+}
+.member .icon-enter04{
+	background-image: url(../images/icon-enter04.png);
+}
+/*banner*/
+.banner{
+  padding: .3rem;
+}
+/*swiper*/
+.swiper01 {
+	width: 100%;
+  background-color: #eee;
+}
+.swiper01 .swiper-slide {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.swiper01 .swiper-pagination-bullet {
+	width: 8px !important;
+	height: 8px !important;
+	background: #eee !important;
+	border: 1 solid #fff !important;
+	margin: 3px !important;
+	opacity: 1;
+}
+.swiper01 .swiper-pagination-bullet-active {
+	background: #BC9B65 !important;
+}
+.swiper01 .sp1{
+	bottom: 0 !important;
+}
 
 
 

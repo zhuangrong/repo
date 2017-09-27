@@ -29,45 +29,58 @@ $(function(){
 </script>
 </head>
 <body>
-<!--header-->
-<header>
-	<a class="icon-back" href="javascrit:"></a>
-	<span></span>
-  <a class="icon-hamburg" href="javascrit:"></a>
-</header>
-<!--//header-->
-<!--导航侧边弹出-->
-<div class="mask"></div>
-<nav>
-  <a href="#"><i class="icon-nav01"></i>首页</a>
-  <a href="#"><i class="icon-nav02"></i>关于我们</a>
-  <a href="#"><i class="icon-nav03"></i>积分中心</a>
-  <a href="#"><i class="icon-nav04"></i>个人信息</a>
-  <a href="#"><i class="icon-nav05"></i>会员特权</a>
-  <a href="#"><i class="icon-nav06"></i>积分商城</a>
-</nav>
-<!--//导航侧边弹出-->
 <!--头像-->
-<div class="avatar-wrap">
-  <i class="avatar" style="background-image:url(images/avatar.jpg);"></i>
+<div class="avatar-wrap2">
+  <div class="avatar-vip">
+    <i class="avatar" style="background-image:url(images/avatar.jpg);"></i>
+  </div>
   <span>Randa</span>
-  <label>奢侈品才是我们的必需品</label>
+  <label class="number">NO.888 888 888</label>
 </div>
 <!--//头像-->
-<!--在线充值-->
-<div class="recharge">
-  <h1><i class="icon-wallet"></i>在线充值</h1>
-  <h3>充值金额</h3>
-  <input type="text" placeholder="0.00">
-  <span>充值金额不能小于1元</span>
+<!--入口-->
+<div class="member">
+    <a href="#">
+      <i class="icon-enter01"></i>20000
+    </a>
+    <a href="#">
+      <i class="icon-enter02"></i>个人信息
+    </a>
+    <a href="#">
+      <i class="icon-enter03"></i>会员特权
+    </a>
+    <a href="#">
+      <i class="icon-enter04"></i>积分商城
+    </a>
 </div>
-<!--//在线充值-->
-<!--充值说明-->
-<div class="recharge-intro">
-  <h3>充值说明</h3>
-  <p>充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明充值说明</p>
+<!--//入口-->
+<!--banner-->
+<div class="banner">
+	<!--swiper-->
+	<div class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      	<img src="images/banner.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+      	<img src="images/banner.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+      	<img src="images/banner.jpg" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+	</div>
+	<script>
+		var swiper = new Swiper('.swiper01', {
+					pagination: '.sp1',
+					paginationClickable: true,
+          autoplay:2000
+			});
+	</script>
+	<!--//swiper-->
 </div>
-<!--//充值说明-->
-<div class="btn">充值</div>
+<!--//banner-->
 </body>
 </html>
