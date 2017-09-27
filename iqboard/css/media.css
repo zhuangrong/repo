@@ -47,9 +47,81 @@
 		font-size: 18px;
 	}
 }
-/*-----------------------mobile 小于820px-----------------------*/
-@media (max-width: 820px){
+@media (max-width: 920px){
+  /*hide and show*/
+	.hide-mb {
+		display: none !important;
+	}
+	.hide-pc {
+		display: block;
+	}
+  .header{
+		position: static;
+    padding-top: 5px;
+    padding-left: 7px;
+		height: 40px;
+		background-color: #fff;
+	}
+	.header .logo{
+		width: 170px;
+	}
+  .header-tip{
+    float: right;
+  }
+	.nav-toggle {
+		display: block;
+		width: 39px;
+		height: 29px;
+		vertical-align: middle;
+		margin: 0 6px 0 0;
+		background-image: url(../images/nav-toggle.png);
+		background-size: 35px auto;
+	}
+  .nav{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav li{
+    display: block;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid  #ddd;
+    padding:0;
+  }
+  .nav li > a {
+    line-height: 46px;
+  }
+  .nav li.active,
+  .nav li:active{
+    background-color: #E60012;
+  }
+  .nav li.active a,
+  .nav li:active a{
+    color: #fff;
+  }
+  /*二级导航*/
+  .nav-sub,
+  .nav-sub-wrap{
+     opacity: 0 !important;
+     display: none !important;
+  }
+  .nav li.nav-sub-arrow > a:after{
+    display: none !important;
+  }
+}
+/*-----------------------mobile 小于1280px 且设备像素比大于2------------------------*/
+
+@media (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2){
   
+  .product-list ul{
+    width: auto;
+  }
   /*hide and show*/
 	.hide-mb {
 		display: none !important;
@@ -94,6 +166,7 @@
     font-size: 16px;
     background-color: #fff;
     border-bottom: 1px solid  #ddd;
+    padding:0;
   }
   .nav li > a {
     line-height: 46px;
@@ -635,12 +708,6 @@
   
   
 }
-
-
-
-
-
-
 
 
 

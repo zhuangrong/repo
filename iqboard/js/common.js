@@ -15,6 +15,13 @@ $(function(){
     }
   })
   
+  //移动端-点击一级导航跳转
+  $("#nav li > a").on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+  });
+  
   //显示隐藏二级导航
   $("#nav li:eq(1)").mouseenter(function(){
     $(this).addClass("nav-sub-arrow")
