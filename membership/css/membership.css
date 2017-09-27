@@ -18,9 +18,9 @@ li {
   list-style: none;
 }
 body {
-  color: #333;
+  color: #363639;
   background-color: #F2F2F2;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
 }
@@ -154,7 +154,7 @@ nav a{
 	text-decoration: none;
 	border-bottom: 1px solid  #E5E5E5;	
 	background-color: #fff;
-  color: #333;
+  color: #363639;
   background-image: url(../images/icon-arrow.png);
   background-position:  right center;
   background-size: .32rem;
@@ -193,14 +193,120 @@ nav .icon-nav06{
   background-image: url(../images/icon-nav06.png);
 }
 	
+/*头像**/
+.avatar-wrap{
+	height: 150px;
+	padding-top: 1.8rem;
+	text-align: center;
+	background-image: url(../images/avatar-bg.jpg);
+}
+.avatar-wrap .avatar{
+  position: relative;
+	display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+	margin: 0 auto;
+	border: 2px solid  #fff;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.avatar-wrap .avatar:before{
+	content: '';
+	display: block;
+	width: 1rem;
+	height: .5rem;
+	position: absolute;
+	top: -0.6rem;
+	left: 0.22rem;
+	background-image: url(../images/crown.png);
+}
+.avatar-wrap span{
+	display: block;
+  color: #363639;
+  font-size: 17px;
+}
+.avatar-wrap label{
+	display: block;
+  padding:0 .3rem;
+  color: #B2B2B2;
+  font-size: 12px;
+}
+.avatar-wrap label:before{
+  content: '';
+  width: .24rem;
+  height: .24rem;
+	display: inline-block;
+  vertical-align: middle;
+  margin:0 .1rem;
+  background-image: url(../images/icon-diamond.png);
+  background-position: left center;
+  background-size: .24rem;
+}
 
+/*在线充值*/
+.recharge{
+  height: 3rem;
+  background-image: url(../images/recharge.png);
+  padding:.2rem .3rem 0;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.recharge h1{
+  font-size: 17px;
+  text-align: center;
+  font-weight: normal;
+}
+.recharge h1 .icon-wallet{
+  text-decoration: none;
+  width: .36rem;
+  height: .36rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 .1rem;
+  background-image: url(../images/icon-wallet.png);
+}
+.recharge h3{
+  text-align: left;
+}
+.recharge input{
+  border: none;
+  background-color: #fff;
+  height: .9rem;
+  padding: 0 .2rem;
+  width: 100%;
+}
+.recharge input::-webkit-input-placeholder{
+  color: #B2B2B2;
+}
+.recharge span{
+  display: block;
+  text-align: right;
+}
 
+/*充值说明*/
+.recharge-intro{
+  padding: 0 .3rem;
+}
+.recharge-intro p{
+  padding: .1rem -0px;
+  color: #888;
+  line-height: 1.4;
+}
 
-
-
-
-
-
+/*按钮*/
+.btn{
+  display:block;
+  background-color:#C3A269;
+  outline: 0;
+  border: none;
+  border-radius:4px;
+  line-height:.94rem;
+  color:#fff;
+  text-decoration:none;
+  text-align: center;
+  margin: .1rem .3rem;
+  font-size: 18px;
+}
 
 
 
