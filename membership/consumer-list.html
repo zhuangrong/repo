@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/membership.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+	//导航侧边弹出
+	$(".icon-hamburg").on("click",function(){
+    $(".mask").fadeToggle(200)
+    $("nav").toggleClass('show')		 
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+    e.stopPropagation()
+    $(".mask").fadeOut(300)
+    $("nav").removeClass('show')			
+	})
+	
+	//tabs切换
+  $(function(){
+    $.TabChange("tabs",1)
+  })
+})
+
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<!--header-->
+<header>
+	<a class="icon-back" href="javascrit:"></a>
+	<span></span>
+  <a class="icon-hamburg" href="javascrit:"></a>
+</header>
+<!--//header-->
+<!--导航侧边弹出-->
+<div class="mask"></div>
+<nav>
+  <a href="#"><i class="icon-nav01"></i>首页</a>
+  <a href="#"><i class="icon-nav02"></i>关于我们</a>
+  <a href="#"><i class="icon-nav03"></i>积分中心</a>
+  <a href="#"><i class="icon-nav04"></i>个人信息</a>
+  <a href="#"><i class="icon-nav05"></i>会员特权</a>
+  <a href="#"><i class="icon-nav06"></i>积分商城</a>
+</nav>
+<!--//导航侧边弹出-->
+<!--头像-->
+<div class="avatar-wrap">
+  <i class="avatar" style="background-image:url(images/avatar.jpg);"></i>
+  <span>Randa</span>
+  <label>奢侈品才是我们的必需品</label>
+</div>
+<!--//头像-->
+<!--消费明细-->
+<div class="mb-title">
+  <i class="icon-score2"></i>
+  <span>余额</span>
+  <span>18888</span>
+</div>
+<!--//消费明细-->
+<div class="tabs" id="tabs">
+	<ul>
+		<li class="curr">充值记录</li>
+		<li>消费明细</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+	  <div class="score-list">
+	    <ul>
+	      <li>
+	        <label>2017-8-2</label>
+	        <span>充值<em>18888</em></span>
+	      </li>
+	      <li>
+	        <label>2017-8-2</label>
+	        <span>充值<em>18888</em></span>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+	<div style="display: none">
+	  <div class="score-list">
+	    <ul>
+	      <li>
+	        <label>2017-8-3</label>
+	        <span>消费<em>18888</em></span>
+	      </li>
+	      <li>
+	        <label>2017-8-3</label>
+	        <span>消费<em>18888</em></span>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+</div>
+</body>
+</html>

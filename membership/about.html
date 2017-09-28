@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/membership.css"> 
+<link rel="stylesheet" href="css/swiper.min.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+	//导航侧边弹出
+	$(".icon-hamburg").on("click",function(){
+    $(".mask").fadeToggle(200)
+    $("nav").toggleClass('show')		 
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+    e.stopPropagation()
+    $(".mask").fadeOut(300)
+    $("nav").removeClass('show')			
+	})
+	
+})
+</script>
+</head>
+<body class="bg01">
+<!--header-->
+<header>
+	<a class="icon-back" href="javascrit:"></a>
+	<span></span>
+  <a class="icon-hamburg" href="javascrit:"></a>
+</header>
+<!--//header-->
+<!--导航侧边弹出-->
+<div class="mask"></div>
+<nav>
+  <a href="#"><i class="icon-nav01"></i>首页</a>
+  <a href="#"><i class="icon-nav02"></i>关于我们</a>
+  <a href="#"><i class="icon-nav03"></i>积分中心</a>
+  <a href="#"><i class="icon-nav04"></i>个人信息</a>
+  <a href="#"><i class="icon-nav05"></i>会员特权</a>
+  <a href="#"><i class="icon-nav06"></i>积分商城</a>
+</nav>
+<!--//导航侧边弹出-->
+<!--关于我们-->
+<div class="about">
+  <h3></h3>
+  <p>福州泰朋投资管理有限公司（TP国际）是一家专业化国际高端奢侈品牌服饰（中国）运营商，集合品牌投资，品牌管理，品牌运作为一体的综合性战略公司。</p>
+  <p>企业开创于2000年，前身为福州泰普（国际）时装贸易有限公司。十年的发展使“TP国际”运营模式逐渐成熟，众多国际顶尖品牌在TP的通道上，整合、陈列，构成形象店、专卖店、复合店、概念店、情调店等各种特色店铺以及差异化解读，运用六大维度，让创新推动产业升级，奠定了创新的商业模式，在福建奢侈品运营行业中占据不可动摇的地位。</p>
+</div>
+<!--//关于我们-->
+
+</body>
+</html>

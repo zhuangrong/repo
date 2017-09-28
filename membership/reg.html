@@ -25,13 +25,31 @@ $(function(){
     $("nav").removeClass('show')			
 	})
 	
+	//tabs切换
+  $(function(){
+    $.TabChange("tabs",1)
+  })
 })
+
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
 </script>
-<style>
-.mask,nav{ top: 0 }
-</style>
 </head>
 <body>
+<!--header-->
+<header>
+	<a class="icon-back" href="javascrit:"></a>
+	<span></span>
+  <a class="icon-hamburg" href="javascrit:"></a>
+</header>
+<!--//header-->
 <!--导航侧边弹出-->
 <div class="mask"></div>
 <nav>
@@ -44,58 +62,36 @@ $(function(){
 </nav>
 <!--//导航侧边弹出-->
 <!--头像-->
-<div class="avatar-wrap2">
-  <div class="avatar-vip">
-    <i class="avatar" style="background-image:url(images/avatar.jpg);"></i>
-  </div>
+<div class="avatar-wrap">
+  <i class="avatar" style="background-image:url(images/avatar.jpg);"></i>
   <span>Randa</span>
-  <label class="number">NO.888 888 888</label>
-  <a class="icon-hamburg" href="javascrit:"></a>
+  <label>奢侈品才是我们的必需品</label>
 </div>
 <!--//头像-->
-<!--入口-->
-<div class="member">
-    <a href="#">
-      <i class="icon-enter01"></i>20000
-    </a>
-    <a href="#">
-      <i class="icon-enter02"></i>个人信息
-    </a>
-    <a href="#">
-      <i class="icon-enter03"></i>会员特权
-    </a>
-    <a href="#">
-      <i class="icon-enter04"></i>积分商城
-    </a>
+<!--注册-->
+<div class="reg">
+  <ul>
+    <li>
+      <i class="icon-reg01"></i>
+      <span>姓名</span>
+      <input type="text" value="" placeholder="姓名">
+    </li>
+    <li>
+      <i class="icon-reg02"></i>
+      <span>电话</span>
+      <input type="text" value="" placeholder="手机或固话">
+    </li>
+    <li>
+      <i class="icon-reg03"></i>
+      <span>邮箱</span>
+      <input type="text" value="" placeholder="邮箱地址">
+    </li>
+  </ul>
 </div>
-<!--//入口-->
-<!--banner-->
-<div class="banner">
-	<!--swiper-->
-	<div class="swiper-container swiper01">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      	<img src="images/banner.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-      	<img src="images/banner.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-      	<img src="images/banner.jpg" alt="">
-      </div>
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination sp1"></div>
-	</div>
-	<script>
-		var swiper = new Swiper('.swiper01', {
-					pagination: '.sp1',
-					paginationClickable: true,
-          autoplay:2000
-			});
-	</script>
-	<!--//swiper-->
+<div class="reg-btn-wrap">
+  <a href="#" class="btn default">提交</a>
+  <a href="#" class="btn">取消</a>
 </div>
-<!--//banner-->
+<!--//注册-->
 </body>
 </html>

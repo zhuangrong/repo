@@ -154,7 +154,6 @@ nav a{
 	text-decoration: none;
 	border-bottom: 1px solid  #E5E5E5;	
 	background-color: #fff;
-  color: #363639;
   background-image: url(../images/icon-arrow.png);
   background-position:  right center;
   background-size: .32rem;
@@ -222,7 +221,6 @@ nav .icon-nav06{
 }
 .avatar-wrap span{
 	display: block;
-  color: #363639;
   font-size: 17px;
 }
 .avatar-wrap label{
@@ -246,10 +244,10 @@ nav .icon-nav06{
 /*头像2**/
 .avatar-wrap2{
   position: relative;
-	height: 4rem;
-	padding-top: 0.3rem;
-	text-align: center;
-	background-image: url(../images/avatar-bg2.jpg);
+  height: 4rem;
+  padding-top: 0.0rem;
+  text-align: center;
+  background-image: url(../images/avatar-bg2.jpg);
 }
 .avatar-wrap2 .avatar-vip{
   position: relative;
@@ -270,6 +268,15 @@ nav .icon-nav06{
   background-color: #eee;
   border-radius: 50%;
 }
+.avatar-wrap2 a.icon-hamburg{
+  position: absolute;
+  display: block;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: .6rem;
+  height: .6rem;
+  background-image: url(../images/icon-hamburg2.png);
+}
 .avatar-wrap2 span{
 	display: block;
 	color: #fff;
@@ -280,6 +287,13 @@ nav .icon-nav06{
 	position: absolute;
 	left: .3rem;
 	top: 3.1rem;
+	color: #fff;
+	font-size: 12px;
+}
+.avatar-wrap2 .number{
+	position: absolute;
+	left: .3rem;
+	top: 2.9rem;
 	color: #fff;
 	font-size: 12px;
 }
@@ -352,10 +366,13 @@ nav .icon-nav06{
 /*会员中心*/
 .member{
   padding: 0 .3rem;
-  display: -webkit-box; 
-	display: -webkit-flex;
-	display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
   flex-wrap: wrap;
+  margin-top: -0.7rem;
+  z-index: 1;
+  position: relative;
 }
 .member a{
   flex:0 0 -webkit-calc(50% - .1rem);
@@ -418,23 +435,259 @@ nav .icon-nav06{
 	bottom: 0 !important;
 }
 
+/*关于我们*/
+.about{
+  min-height: 9rem;
+  background-image: url(../images/about-bg.jpg);
+  background-repeat: repeat !important;
+  margin: .8rem;
+  color: #fff;
+  font-size: 13px;
+}
+.about h3{
+  height: 3.1rem;
+  background-image: url(../images/about-header.png);
+  background-size: contain;
+}
+.about p{
+  padding: .3rem;
+}
+.bg01{
+  background-image: url(../images/bg01.png);
+}
+
+/*会员特权*/
+.privilege{
+  margin-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+.privilege h3{
+  color: #fff;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 17px;
+  background-image: url(../images/privilege.png);
+}
+.privilege dl{
+  margin-bottom: .1rem;
+  padding: 0 .3rem;
+  background-color: #fff;
+}
+.privilege dt{
+  height: 1rem;
+  border-bottom: 1px solid  #E5E5E5;
+  background-position: left center;
+  background-size: auto .5rem;
+}
+.privilege dt.leve01{
+  background-image: url(../images/leve01.png);
+}
+.privilege dt.leve02{
+  background-image: url(../images/leve02.png);
+}
+.privilege dt.leve03{
+  background-image: url(../images/leve03.png);
+}
+.privilege dd{
+  padding:.3rem 0;
+  color: #888;
+}
 
 
+/*会员中心*/
+.user-center{
+	margin-top: 1.7rem;
+	border-top: 1px solid  #E5E5E5;	
+}
+.user-center a{
+	display: block;
+	height: 1rem;
+  line-height: 1rem;
+	padding: 0 .15rem 0 .3rem;
+	text-align: left;
+	text-decoration: none;
+	border-bottom: 1px solid  #E5E5E5;	
+	background-color: #fff;
+  background-image: url(../images/icon-arrow.png);
+  background-position:  right center;
+  background-size: .32rem;
+  background-origin: content-box;
+}
+.user-center a:active{
+	background-color: #eee;
+  color: #000;
+}
+.user-center label{
+  display: block;
+  float: right;
+  margin-right: 0.5rem;
+  color: #B2B2B2;
+}
+.user-center i{
+  display: inline-block;
+  width: .44rem;
+  height: .44rem;
+  vertical-align: -0.08rem;
+  margin-right: .1rem;
+}
+.user-center .icon-uc01{
+  background-image: url(../images/icon-nav01.png);
+}
+.user-center .icon-uc02{
+  background-image: url(../images/icon-uc02.png);
+}
+.user-center .icon-uc03{
+  background-image: url(../images/icon-uc03.png);
+}
+.user-center .icon-uc04{
+  background-image: url(../images/icon-uc04.png);
+}
+.privi-box{
+  text-align: center;
+  padding: .3rem;
+}
+.card-shadow{
+  box-shadow:  0 5px 5px 1px #d2d2d2;
+}
 
 
+/*积分商城*/
+.mb-title{
+  height: 1.4rem;
+  line-height: 1.4rem;
+  background-color: #C3A269;
+  text-align: left;
+  font-size: 17px;
+  color: #fff;
+  margin-top: 1.5rem;
+  padding: 0 .3rem;
+}
+.mb-title .icon-money,
+.mb-title .icon-score2{
+  display: inline-block;
+  width: .64rem;
+  height: .64rem;
+  margin-right: .1rem;
+  vertical-align: middle;
+  background-image: url(../images/icon-score2.png);
+}
+.mb-title .icon-money{
+  background-image: url(../images/icon-money.png);
+}
+.mb-title span{
+  margin-right: .2rem;
+}
 
+/*选项卡*/
+.tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	width:0%;/*必须有*/
+	height: 1rem;
+	line-height: 1rem;
+	text-align:center;
+	background-color: #fff;
+}
+.tabs li.curr{
+	border-bottom: 2px solid #C3A269;
+}
 
+.score-list li{
+  background-color: #FFF;
+  border-bottom: 1px solid  #e5e5e5;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 .3rem;
+}
+.score-list li span{
+  margin: 0 .3rem;
+}
+.score-list li span em{
+  margin: 0 .1rem;
+}
+.score-list li label{
+  color: #b2b2b2;
+  margin: 0 .3rem;
+}
 
-
-
-
-
-
-
-
-
-
-
+/*注册*/
+.reg{
+  padding-left: .3rem;
+  border-top: 1px solid  #e5e5e5;
+  border-bottom: 1px solid  #e5e5e5;
+  background-color: #fff;
+  margin-top: 1.7rem;
+}
+.reg li{
+  width: 100%;
+  height: 1.1rem;
+  padding: 0 .1rem;
+  border-bottom: 1px solid  #e5e5e5;
+  font-size: 16px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.reg li:last-child{
+  border-bottom: none;
+}
+.reg li i{
+  margin-right: .1rem;
+  width: .4rem;
+  height: .4rem;
+  vertical-align: middle;
+}
+.reg li i.icon-reg01{
+  background-image: url(../images/icon-reg01.png);
+}
+.reg li i.icon-reg02{
+  background-image: url(../images/icon-reg02.png);
+}
+.reg li i.icon-reg03{
+  background-image: url(../images/icon-reg03.png);
+}
+.reg li span{
+  width: 1rem;
+}
+.reg li input{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+  width: 100%;
+  height: 1rem;
+  border: none;
+  padding: 0 .3rem;
+}
+.reg li input::-webkit-input-placeholder{
+	color: #b2b2b2;
+}
+.reg-btn-wrap{
+  padding: .6rem .2rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.reg-btn-wrap .btn{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+  margin: 0;
+}
+.btn.default{
+  background-color: #fff;
+  border: 1px solid  #C3A269;
+  color: #363639;
+  margin-right: .3rem;
+}
 
 
 
