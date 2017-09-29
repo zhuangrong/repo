@@ -96,9 +96,11 @@ em, h3 {
 
 .bg{
   background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #000;
 }
 .rule2{
-  color: #FC659A;
+  color: #fff;
   font-size: 10px;
   padding: 0 .6rem;
   margin-bottom: .2rem;
@@ -107,7 +109,7 @@ em, h3 {
   font-size: 15px;
 }
 .rule2 p{
-  margin-bottom: .2rem;
+  margin-bottom: .1rem;
 }
 .royal03, .royal02, .royal01 {
     display: block;
@@ -136,7 +138,7 @@ nav{
 	display: -webkit-flex;
 	display: flex;
 	height: .96rem;
-  background-image: -webkit-linear-gradient( 90deg, rgb(168,237,234) 0%, rgb(254,214,227) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(33,33,33) 100%);
 	z-index: 9999999;
 }
 nav a{
@@ -151,7 +153,7 @@ nav a{
 	-webkit-box-align: center;
 	justify-content: center;
 	font-size: 14px;
-	color: #FC659A;
+	color: #fff;
 	position: relative;
 }
 nav a:not(:last-child):after{
@@ -166,7 +168,7 @@ nav a:not(:last-child):after{
 }
 nav a.active i,
 nav a.active{
-	color: #FC659A;
+	color: #fff;
 }
 nav a i{
   display: none;
@@ -244,6 +246,9 @@ nav a i{
 }
 
 /*排行榜统计*/
+.rank-total{
+	margin-bottom: .3rem;
+}
 .rank-total ul{
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -262,7 +267,7 @@ nav a i{
 	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
-	color: #D772A5;
+	color: #fff;
 	font-size: .28rem;
 }
 .rank-total li span{
@@ -286,10 +291,12 @@ nav a i{
 /*banner*/
 .banner{
 	position: relative;
+	height: 5rem;
 }
 .banner.lg{
 	z-index: -1;
 	margin-bottom: 0;
+	height: 5rem;
 }
 .banner.lg:after{
 	display: none;
@@ -305,7 +312,7 @@ nav a i{
 	font-size: .8rem !important;
 	width: .83rem;
 	height: .83rem;
-	color:#B7CEE5;
+	color: #745A01;
 	z-index: 999;
 }
 .icon-tubiaozhizuomoban-1:before,
@@ -592,7 +599,6 @@ nav a i{
 	font-size: 0.35rem;
 	color: #fff;
 	font-weight: bold;
-	box-shadow: .05rem 0.12rem 0 #C93D2F;
 }
 .btn-wrap{
 	margin: .3rem .5rem .3rem;
@@ -619,8 +625,9 @@ nav a i{
 	margin: .3rem 1.2rem;
 	height: .7rem;
 	border-radius: 0.4rem;
-	border: 1px solid  #FC8C64;
+	/* border: 1px solid  #FC8C64; */
 	overflow: hidden;
+	background-color: #fff;
 }
 .vote-tabs ul{
 	display: -webkit-box; 
@@ -630,13 +637,16 @@ nav a i{
 .vote-tabs li{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
-  flex:1;
+	flex:1;
 	line-height: .7rem;
 	text-align:center;
-	color: #fff;
+	color: #8A680F;
 }
 .vote-tabs li.curr{
 	background-color: #FC8C64;
+	background-image: -webkit-linear-gradient( 90deg, rgb(202,29,43) 0%, rgb(144,16,77) 100%);
+	color: #fff;
+	box-shadow: inset 0px 4px 8px 0px rgba(237, 162, 187, 0.3);
 }
 div[class*="tab-box"] > div:not(:first-child){
 	display:none
@@ -684,6 +694,8 @@ div[class*="tab-box"] > div:not(:first-child){
 
 .flower-bg{
 	background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #000;
 }
 .btn2-wrap{
 	margin-top: -0.3rem;
@@ -692,8 +704,8 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .btn2{
 	display: inline-block;
-	width: 1.7rem;
-	line-height: .74rem;
+	width: 6.5rem;
+	line-height: 0.9rem;
 	background-image: url(../images/btn2.png);
 	font-size: .35rem;
 	color: #fff;
@@ -718,9 +730,10 @@ div[class*="tab-box"] > div:not(:first-child){
 	-webkit-box-flex: 0;
 	-webkit-flex: 0 0 48%;
 	flex: 0 0 48%;
-	color: #C93D2F;
+	color: #fff;
 	text-align: center;
-	background-color: #fff;
+	background-color: #91016F;
+	border: 1px solid #fff;
 	border-radius: .1rem;
 	margin-bottom: .32rem;
 }
@@ -748,14 +761,18 @@ div[class*="tab-box"] > div:not(:first-child){
 .vote-show-wrap .btn-vote{
 	display: inline-block;
 	float: right;
-	width: 1.12rem;
-	line-height: .48rem;
-	background-color: #FF4343;
+	width: .96rem;
+	height: .96rem;
+	margin-top: -.3rem;
+	background-color: #F58939;
+	border: 3px solid #F83D26;
 	text-align: center;
-	color: #fff;
+	color: #91016F;
 	font-weight: bold;
-	border-radius: .05rem;
-	box-shadow: 2px 2px 0 #790002;
+	border-radius: 50%;
+	font-size: 16px;
+	position: relative;
+	/* box-shadow: 2px 2px 0 #790002; */
 }
 /*
  ************************土豪排行榜************************
@@ -811,19 +828,23 @@ div[class*="tab-box"] > div:not(:first-child){
 /*幻灯片*/
 .swiper01{
 	width: 5.85rem;
-	height: 7.2rem;
+	height: 7.7rem;
+	padding-bottom: .5rem;
 	border-radius: .1rem;
 	margin: 0 auto;
 	text-align: center;
 }
 .swiper01 .swiper-pagination-bullet{
-	width:5px !important;
-	height:5px !important;
+	width:8px !important;
+	height:8px !important;
 	background:#fff !important;
-	margin:0 3px !important;
+	margin:0 6px !important;
 }
 .swiper01 .swiper-pagination-bullet-active {
-	background:rgba(255,255,255,0.6) !important;
+	background:#9B3FA0 !important;
+}
+.swiper01  .swiper-pagination{
+	bottom: -.1rem !important;
 }
 .swiper01  .swiper-pagination-bullet{
 	opacity: 1;
@@ -1023,15 +1044,11 @@ div[class*="tab-box"] > div:not(:first-child){
 
 .btn3{
 	margin: 0 auto;
-	width: 2rem;
-	line-height: .8rem;
-	background-color: #ED7260;
-	text-align: center;
-	color: #fff;
-	font-weight: bold;
-	border-radius: .05rem;
-	box-shadow: 3px 4px 0 #C93C2E;
-	font-size: .4rem;
+	width: 6.5rem;
+	height: 1rem;
+	background-image: url(../images/btn3.png);
+	background-color: transparent;
+	text-indent: -9999px;
 }
 
 /*弹出层*/
@@ -1053,10 +1070,10 @@ div[class*="tab-box"] > div:not(:first-child){
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	background-image: -webkit-linear-gradient( -71deg, rgb(235,85,144) 0%, rgb(252,9,107) 100%);
 	color: #fff;
 	border-radius: .1rem;
-	overflow: hidden;
+	/* overflow: hidden; */
+	background-color: #3B042A;
 }
 .dialog .dialog-header{
 	padding: 20px 10px 10px;
@@ -1077,23 +1094,27 @@ div[class*="tab-box"] > div:not(:first-child){
 	display: flex;
 }
 .dialog .dialog-footer .btn3{
-	width: 2rem;
-	height: .8rem;
-	border-radius: .1rem;
+	width: 3.36rem;
+	text-indent: -99999px;
+	border: none;
+	background-image: url(../images/btn-vote2.png);
 }
 .dialog span.close{
 	position: absolute;
-	top: .2rem;
-	right: .2rem;
+	text-indent: -9999px;
+	width: 1rem;
+	height: 1rem;
+	top: 5rem;
+	left: 59%;
+	margin-left: -1.2rem;
 	z-index: 99;
-	width: .6rem;
-	line-height: .6rem;
+	background-image: url(../images/close.png);
 	border-radius: 50%;
 	text-align: center;
 	font-size: .5rem;
 	font-style: normal;
 	color: #F03D84;
-	background-color: #fff;
+	display: block;
 }
 .remark{
 	font-size: .24rem;
@@ -1120,16 +1141,16 @@ div[class*="tab-box"] > div:not(:first-child){
 	-webkit-box-flex: 0;
 	-webkit-flex: 0 0 24%;
 	flex: 0 0 24%;
-	color: #ED7260;
+	color: #8A680F;
 	line-height: .7rem;
 	text-align: center;
 	background-color: #fff;
 	border-radius: .1rem;
-	border: 1px dashed #ED7260;
+	border: 1px dashed #8A680F;
 	padding: 0 .05rem;
 }
 .sel-votes span.active{
-	background-color: #651E28;
+	background-color: #700022;
 	color: #fff;
 }
 .sel-votes.sv1 span{
@@ -1176,11 +1197,11 @@ div[class*="tab-box"] > div:not(:first-child){
 }
 .slogan h3{
 	position: absolute;
-	top: -.26rem;
+	top: -0.42rem;
 	left: -webkit-calc(50% - 1.1rem);
 	width: 2.6rem;
 	height: .4rem;
-	background-color: #9A00AB;
+	/* background-color: #9A00AB; */
 	font-size: .32rem;
 	font-weight: bold;
 }
@@ -1251,6 +1272,23 @@ div[class*="tab-box"] > div:not(:first-child){
 	background-size: contain;
 }
 
+.mt2{
+	margin-top: .3rem !important;
+	width: 6.5rem;
+	height: 1rem;
+  background-image: url(../images/btn-vote.png);
+	background-color: transparent;
+}
+.btn-so{
+  background-image: url(../images/btn-so.png) !important;
+}
+.btn-edit{
+  background-image: url(../images/btn-edit.png) !important;
+  background-color: transparent;
+  text-indent: -999px;
+  width: 6.5rem;
+  height: 1rem;
+}
 /*
  ************************iphone5 小于320************************
 */

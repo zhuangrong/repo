@@ -52,13 +52,11 @@ $(function(){
 });
 </script>
 </head>
-<body>
+<body class="bg">
 <!--音乐&活动规则-->
-<i class="icon iconfont icon-tubiaozhizuomoban-1"></i>
-<i class="icon iconfont icon-tubiaozhizuomoban-"></i>
 <!--banner-->
-<div class="banner">
-	<img src="images/banner.png" alt="">
+<div class="banner" style="height: 4.0rem">
+	
 </div>
 <!--//banner-->
 <!--参赛宣言-->
@@ -77,52 +75,6 @@ $(function(){
 	</ul>
 </div>
 <!--//排行榜统计-->
-<a href="javascript:;" id="voteto" class="btn-lg">
-	给TA投票
-</a>
-<div class="btn-wrap">
-	<a href="javascript:;" class="btn" id="promotion">我要参加</a>
-	<a href="javascript:;" id="share" class="btn">帮TA拉票</a>	
-</div>
-<!--选手-->
-<div class="vote-list">
-	<div class="vote-item">
-		<i class="avatar" style="background-image:url(images/avatar.png);"></i>
-		<span>
-			Mranda<em>投给他/她 20 张</em>
-		</span>
-		<label>2017/06/05 12:08</label>
-	</div>
-	<div class="vote-item">
-		<i class="avatar" style="background-image:url(images/avatar.png);"></i>
-		<span>
-			Mranda<em>投给他/她 20 张</em>
-		</span>
-		<label>2017/06/05 12:08</label>
-	</div>
-	<div class="vote-item">
-		<i class="avatar" style="background-image:url(images/avatar.png);"></i>
-		<span>
-			Mranda<em>投给他/她 20 张</em>
-		</span>
-		<label>2017/06/05 12:08</label>
-	</div>
-	<div class="vote-item">
-		<i class="avatar" style="background-image:url(images/avatar.png);"></i>
-		<span>
-			Mranda<em>投给他/她 20 张</em>
-		</span>
-		<label>2017/06/05 12:08</label>
-	</div>
-</div>		
-<!--//选手-->
-<!--翻页-->
-<div class="vote-pages">
-	<a href="#">1</a>
-	<a href="#">2</a>
-	<a href="#">3</a>
-</div>
-<!--//翻页-->
 <!--图片视频展示-->
 <div class="pic-show-wrap">
 	<!--图片-->
@@ -142,13 +94,11 @@ $(function(){
 		<div class="swiper-pagination"></div>
 	</section>
 	<!--//图片-->
-	<!--视频-->
-	<div class="video-show">
-		<video controls preload="auto" poster="" src="images/show.mp4"></video>
-	</div>
-	<!--//视频-->
 </div>
 <!--//图片展示-->
+<a href="javascript:;" id="voteto" class="btn-lg mt2">
+	&nbsp;
+</a>
 <!--弹出层-搜索-->
 <div id="dialog-search" style=" display: none">
 	<div class="mask"></div>
@@ -158,7 +108,7 @@ $(function(){
 			<input type="text" class="ipt01 tc" placeholder="请输入选手的编号或昵称">
 		</div>
 		<div class="dialog-footer">
-			<button class="btn3">搜索</button>
+			<button class="btn3 btn-so">搜索</button>
 		</div>
 	</div>
 </div>
@@ -181,7 +131,7 @@ $(function(){
 			 </div>
 		</div>
 		<div class="dialog-footer">
-			<button class="btn3">投票</button>
+			<button class="btn3"></button>
 		</div>
 		<div class="remark">备注：1票1元，每天第一次可免费投一票</div>
 	</div>
