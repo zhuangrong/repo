@@ -2636,12 +2636,12 @@ em,h3{
 }
 .area01-mid{
 	float: left;
-	width: 500px;
+	width: 505px;
 	padding: 0 40px;
 }
 .area01-right{
 	float: right;
-	width: 271px;
+	width: 275px;
 }
 .cn19-slide{
 	background-color: #f6f6f6;	
@@ -2664,6 +2664,7 @@ em,h3{
 }
 
 .blank30{
+	clear: both;
 	height: 30px;
 }
 
@@ -2702,27 +2703,203 @@ em,h3{
 /*领导人*/
 .cn19-leader{
 	border: 1px solid  #e5e5e5;
-	padding: 25px;
+	padding: 25px 0 16px 25px;
+	overflow: hidden;
+}
+.cn19-leader h3{
+	text-align: center;
+	font-size: 16px;
+}
+.cn19-leader ul{
+	padding-top: 20px;
+}
+.cn19-leader img{
+	display: block;
+	margin: 0 auto 5px;
+}
+.cn19-leader li{
+	width: 98px;
+	margin-right: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+	float: left;
 }
 
 
+.cn19-leader-more{
+	clear: both;
+	padding-top: 15px;
+	width: 225px;
+	margin: 0 25px 0 0;
+	border-top: 1px solid  #E5E5E5;
+}
+.cn19-leader-more a{
+	display: block;
+	float: left;
+	width: 110px;
+	color: #999;
+	font-size: 14px;
+}
 
+.cn19-area02{
+	overflow: hidden;
+}
+.cn19-box{
+	width: 650px;
+	border: 1px solid  #E5E5E5;
+}
+.cn19-box h3{
+	font-size: 36px;
+	height: 84px;
+	line-height: 84px;
+	border-bottom: 1px solid  #E5E5E5;
+	padding: 0 25px;
+}
+.cn19-box ul{
+	padding: 25px;
+	line-height: 1.9;
+	font-size: 20px;
+}
+.mr0{
+	margin-right: 0;
+}
 
+.area03-left{
+	float: left;
+	width: 350px;
+}
+.area03-mid{
+	float: left;
+	margin-left: 50px;
+	width: 650px;
+}
+.area03-right{
+	float: right;
+	width: 270px;
+}
 
+/*学习微平台*/
+.cn19-mobile{
+	position: relative;
+	width: 350px;
+	height: 626px;
+	background-image: url(../images/cn19-mobile.png);
+}
+.cn19-qr{
+	display: none;
+	position: absolute;
+	top: 43px;
+	left: 20px;
+	width: 308px;
+	height: 530px;
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+}
+.cn19-qr img{
+	width: 140px;
+	height: 140px;
+	margin: 200px auto 0;
+}
+/*党员悦读*/
+.cn19-yuedu{
+	border: 1px solid  #E5E5E5;
+	padding: 10px 25px;
+}
+.cn19-yuedu h3{
+	font-size: 25px;
+	color: #333;
+}
+.cn19-yuedu > div{
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid  #e5e5e5;
+	font-size: 18px;
+}
+.cn19-yuedu .pic01{
+	float: left;
+	width: 245px;
+	text-align: center;
+}
+.cn19-yuedu .pic01 img{
+	margin-bottom: 5px;
+}
+.cn19-yuedu .info01{
+	width: 320px;
+	float: left;
+	padding-left: 25px;
+	line-height: 1.8;
+}
 
+.cn19-news-summary{
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: none !important;
+}
+.cn19-news-summary a{
+	color: #F00;
+	margin-right: 40px;
+}
 
+/*党建资料*/
+.cn19-resource{
+	padding: 10px 23px;
+	background-color: #F6F6F6;
+	overflow: hidden;
+}
+.cn19-resource h3{
+	font-size: 25px;
+	color: #333;
+	border-bottom: 1px solid  #EAEBEB;
+	padding-bottom: 10px;
+}
+.cn19-resource dl{
+	padding-top: 30px;
+}
+.cn19-resource dd{
+	float: left;
+	width: 90px;
+	background-color: #3F9AD6;
+	color: #fff;
+	padding: 5px;
+	margin: 2px 5px;
+	text-align: center;
+}
+.cn19-resource-icons{
+	text-align: center;
+}
+.cn19-resource-icons a{
+	display: block;
+	float: left;
+	width: 72px;
+	height: 72px;
+	background-color: #3F9AD6;
+	margin: 1px;
+	background-position: center center;
+} 
+.cn19-resource-icons a.icon01{
+	background-image: url(../images/cn19-icon01.png);
+} 
+.cn19-resource-icons a.icon02{
+	background-image: url(../images/cn19-icon02.png);
+} 
+.cn19-resource-icons a.icon03{
+	background-image: url(../images/cn19-icon03.png);
+} 
+.cn19-resource-icons a.icon04{
+	background-image: url(../images/cn19-icon04.png);
+} 
+.cn19-resource-icons a.icon05{
+	background-image: url(../images/cn19-icon05.png);
+} 
+.cn19-resource-icons a.icon06{
+	background-image: url(../images/cn19-icon06.png);
+} 
 
-
-
-
-
-
-
-
-
-
-
-
+.cn19-resource ul{
+	padding-top: 10px;
+	line-height: 1.6;
+	height: 150px;
+}
 
 
 
