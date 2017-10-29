@@ -2629,6 +2629,96 @@ em,h3{
 	width: 434px;
 }
 
+/*19大*/
+.area01-left{
+	float: left;
+	width: 500px;
+}
+.area01-mid{
+	float: left;
+	width: 500px;
+	padding: 0 40px;
+}
+.area01-right{
+	float: right;
+	width: 271px;
+}
+.cn19-slide{
+	background-color: #f6f6f6;	
+}
+.cn19-slide .swiper-slide{
+	position: relative;
+}
+.cn19-slide .swiper-slide h3{
+	position: absolute;
+	left: 0;
+	width: 500px;
+	bottom: 61px;
+	height: 68px;
+	line-height: 68px;
+	font-weight: bold;
+	background-color: rgba(0,0,0,.2);
+	text-align: center;
+	color: #fff;	
+	font-size: 14px;
+}
+
+.blank30{
+	height: 30px;
+}
+
+.cn19-category{
+	border: 1px solid  #e5e5e5;
+}
+.cn19-category a{
+	width: 164px;
+}
+.cn19-category .mr0{
+	margin-right: 0;
+}
+.cn19-category .mt3l{
+	margin-top: -10px;
+}
+
+/*会议动态*/
+.cn19-news-list{
+	border: 1px solid  #e5e5e5;
+	padding: 25px;
+	font-size: 20px;
+}
+.cn19-news-list ul{
+	line-height: 2.1;
+}
+.cn19-news-list h3{
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+.cn19-study{
+	height: 35px;
+	background-image: url(../images/cn19-study.png);
+	background-position: left center;
+	margin-bottom: 20px;
+}
+/*领导人*/
+.cn19-leader{
+	border: 1px solid  #e5e5e5;
+	padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

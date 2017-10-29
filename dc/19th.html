@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script></script>
+<title>dc</title>
+ <style type="text/css">
+/*cn19 banner*/
+#cn19-banner .pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+#cn19-banner .swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #7A7A7A;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+#cn19-banner .swiper-active-switch {
+  background: #fff;
+}
+/*swiper02*/
+#cn19-slide .pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+#cn19-slide .swiper-pagination-switch {
+  display: inline-block;
+  width: 36px;
+  height: 4px;
+  border-radius: 0;
+  background: #d9d5d4;
+  margin: 0 5px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+#cn19-slide .swiper-active-switch {
+  background: #cd3333;
+}
+</style>
+<script>
+$(function(){
+  
+})
+</script>
+</head>
+<body>
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<div class="container">
+	<!--swiper-->
+	<div class="swiper-container" id="cn19-banner" style="height:299px;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/banner19.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/banner19.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="images/banner19.jpg">
+				</div>
+			</div>
+			<div class="pagination cn-page">
+				&nbsp;</div>
+		</div>
+		<script language="javascript"> 
+		var mySwiper = new Swiper('#cn19-banner',{
+											pagination : '.cn-page',
+									 })
+		</script>
+	<!--//swiper-->
+</div>
+<div class="blank"></div>
+<!--第一块-->
+<div class="container">
+	<div class="area01-left">
+		 <div class="cn19-slide">
+      <!--swiper-->
+      <div class="swiper-container" id="cn19-slide" style="height:450px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+							<img src="images/19slide01.jpg" alt="">
+							<h3>【高清图集一】习近平的“十九大时间”</h3>
+            </div>
+            <div class="swiper-slide">
+							<img src="images/19slide01.jpg" alt="">
+							<h3>【高清图集二】习近平的“十九大时间”</h3>
+            </div>
+            <div class="swiper-slide">
+							<img src="images/19slide01.jpg" alt="">
+							<h3>【高清图集二】习近平的“十九大时间”</h3>
+            </div>
+            <div class="swiper-slide">
+							<img src="images/19slide01.jpg" alt="">
+							<h3>【高清图集二】习近平的“十九大时间”</h3>
+            </div>
+          </div>
+          <div class="pagination cn-slide-page">
+            &nbsp;</div>
+        </div>
+        <script language="javascript"> 
+        var mySwiper = new Swiper('#cn19-slide',{
+                          pagination : '.cn-slide-page',
+                       })
+        </script>
+      <!--//swiper-->
+		 </div>
+		  <div class="blank30"></div>
+      <!--新闻分类-->
+      <div class="news-category cn19-category">
+        <a href="#" class="red" style="padding-top: 5px; height: 175px"><img src="images/news-category.jpg"></a>
+        <a href="#"><p  class="mt3l">习近平系列<br>重要讲话<br>数据库</p></a>
+        <a href="#" class="blue mr0">中国政要<br>资料库</a>
+        <a href="#">寄语新一届<br>中央领导集体</a>
+        <a href="#" class="blue"><br>理上网来</a>
+        <a href="#" class="red"><br>学习词典</a>
+      </div>
+      <!--//新闻分类-->
+	</div>
+	<div class="area01-mid">
+		<!--学习路上-->
+		<div class="cn19-news-list">
+		  <div class="cn19-study"></div>
+			<ul>
+				<li>·习近平十九大多次提及全面从严建党</li>
+				<li>·【高清图集】习近平的“十九大时间”</li>
+			</ul>
+		</div>
+		<!--//学习路上-->
+		<div class="blank30"></div>
+		<!--/会议动态-->
+		<div class="cn19-news-list" style="height:177px">
+		  <h3>会议动态</h3>
+			<ul>
+				<li>·习近平应约同俄罗斯总统普京通电话</li>
+				<li>·党的新一届中央领导机构产生纪实</li>
+				<li>·十九届中共中央领导机构成员建立 组织结构</li>
+			</ul>
+		</div>
+		<!--//会议动态-->
+		<div class="blank30"></div>
+		<!--/党建要闻-->
+		<div class="cn19-news-list" style="height:312px">
+		  <h3>党建要闻</h3>
+			<ul>
+				<li>·中央军委召开学习贯彻十九大精神工作部署会</li>
+				<li>·孙春兰受中央委托向党外人士通报十九大精神</li>
+				<li>·各地干群迅速掀起学习贯彻十九大精神热潮</li>
+				<li>·人民论坛：新时代要有新气象新作为</li>
+				<li>·国资委发布4家央企13位领导人员变动</li>
+				<li>·有关部门负责人解读十九大报告亮点</li>
+			</ul>
+		</div>
+		<!--//党建要闻-->
+	</div>
+	<div class="area01-right">
+	<!--领导人-->
+	<div class="cn19-leader">
+		a
+	</div>
+	<!--//领导人-->
+	</div>
+	
+</div>
+<!--//第一块-->
+<div class="blank"></div>
+<div class="blank50"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+</body>
+</html>
