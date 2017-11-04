@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>miyou</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+	document.body.addEventListener('touchstart', function(){});
+	
+	/*分类选择*/
+	var flag;
+	$("#category-tabs li").each(function(index){
+		$(this).click(function(e){
+			e.preventDefault();
+			if($(this).hasClass("active")){
+				$(".dropdown-mask").hide();	
+				$("#dropdown div").eq(index).hide();
+				$("#category-tabs li").removeClass("active");
+			}else{
+				$(".dropdown-mask").show();
+				$(this).addClass("active").siblings().removeClass("active");
+				$("#dropdown > div").eq(index).show().siblings().hide();
+			}
+			flag=index;
+		})	
+	})
+	
+	$(".dropdown-mask").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dropdown div").eq(flag).hide();
+		$("#category-tabs li").removeClass("active");
+	})
+	
+	$("#dropdown li").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dropdown div").eq(flag).fadeOut("15");
+		$("#category-tabs li").removeClass("active");
+	})
+	/*弹出层-市区*/
+	$("#city").on("click",function(e){
+		 	e.preventDefault();
+			$(".city-pop").show();
+			$("#mask").show();
+	})
+	
+	$("#mask").on("click",function(e){
+		 	e.preventDefault();
+			$(".city-pop").hide();
+			$("#mask").hide();
+	})
+	/*选中市区*/
+	$("#city-list li").each(function(index){	
+		  $(this).on("click",function(e){
+				e.preventDefault();
+				$(".city-pop").hide();
+				$("#mask").hide();
+				//$("#city").text($(this).text());
+			})
+	})
+})
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>联盟商家</span>
+  <a></a>
+</div>
+<!--//头部-->
+<!--分类-->
+<div class="category">
+    <div class="category-tabs"  id="category-tabs">
+        <ul>
+            <li>位置<i></i></li>
+            <li>行业<i></i></li>
+            <li>排序<i></i></li>
+        </ul>
+    </div>
+    <div id="dropdown" class="dropdown">
+      <div style="display:none">
+        <ul class="c-item">
+            <li class="active"><span>全部地区</span></li>
+            <li><span>海沧区</span></li>
+            <li><span>集美区</span></li>
+            <li><span>湖里区</span></li>
+            <li><span>同安区</span></li>
+            <li><span>翔安区</span></li>
+            <li><span>思明区</span></li>
+        </ul>
+      </div>
+      <div style="display:none">
+        <ul class="c-item">
+            <li class="active"><span>全部行业</span></li>
+            <li><span>娱乐放松</span></li>
+            <li><span>中式餐饮</span></li>
+            <li><span>休闲美食</span></li>
+            <li><span>运动健身</span></li>
+            <li><span>亲子教育</span></li>
+            <li><span>其他行业</span></li>
+        </ul>
+      </div>
+      <div style="display:none">
+        <ul class="c-item2">
+            <li class="active"><span>最新上架</span></li>
+            <li><span>距离最近</span></li>
+            <li><span>最受欢迎</span></li>
+            <li><span>免费最多</span></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="dropdown-mask"></div>
+<!--//分类-->
+</body>
+</html>
