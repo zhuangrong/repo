@@ -21,7 +21,7 @@ $(function(){
 			e.preventDefault();
 			if($(this).hasClass("active")){
 				$(".dropdown-mask").hide();	
-				$("#dropdown div").eq(index).hide();
+				$("#dropdown > div").eq(index).hide();
 				$("#category-tabs li").removeClass("active");
 			}else{
 				$(".dropdown-mask").show();
@@ -34,36 +34,16 @@ $(function(){
 	
 	$(".dropdown-mask").on("click",function(e){
 		$(".dropdown-mask").hide();
-		$("#dropdown div").eq(flag).hide();
+		$("#dropdown > div").eq(flag).hide();
 		$("#category-tabs li").removeClass("active");
 	})
 	
-	$("#dropdown li").on("click",function(e){
-		$(".dropdown-mask").hide();
-		$("#dropdown div").eq(flag).fadeOut("15");
-		$("#category-tabs li").removeClass("active");
-	})
-	/*弹出层-市区*/
-	$("#city").on("click",function(e){
-		 	e.preventDefault();
-			$(".city-pop").show();
-			$("#mask").show();
-	})
-	
-	$("#mask").on("click",function(e){
-		 	e.preventDefault();
-			$(".city-pop").hide();
-			$("#mask").hide();
-	})
-	/*选中市区*/
-	$("#city-list li").each(function(index){	
-		  $(this).on("click",function(e){
-				e.preventDefault();
-				$(".city-pop").hide();
-				$("#mask").hide();
-				//$("#city").text($(this).text());
-			})
-	})
+//	$("#dropdown li").on("click",function(e){
+//		e.preventDefault();
+//		$(".dropdown-mask").hide();
+//		$("#dropdown > div").eq(flag).fadeOut("15");
+//		$("#category-tabs li").removeClass("active");
+//	})
 })
 </script>
 </head>
@@ -79,41 +59,65 @@ $(function(){
 <div class="category">
     <div class="category-tabs"  id="category-tabs">
         <ul>
-            <li>位置<i></i></li>
+            <li>区域<i></i></li>
             <li>行业<i></i></li>
-            <li>排序<i></i></li>
+            <li>更多<i></i></li>
         </ul>
     </div>
     <div id="dropdown" class="dropdown">
       <div style="display:none">
-        <ul class="c-item">
-            <li class="active"><span>全部地区</span></li>
-            <li><span>海沧区</span></li>
-            <li><span>集美区</span></li>
-            <li><span>湖里区</span></li>
-            <li><span>同安区</span></li>
-            <li><span>翔安区</span></li>
-            <li><span>思明区</span></li>
-        </ul>
+        <div class="union-sort">
+        	<div class="sort-box">
+        		<!--一级-->
+						<div class="sort-level">
+							<ul>
+								<li>附近</li>
+								<li class="active">区域</li>
+							</ul>
+						</div>
+        		<!--//一级-->
+        	</div>
+        	<div class="sort-box">
+        		<!--二级-->
+						<div class="sort-level">
+							<ul>
+								<li>附近</li>
+								<li class="active">仓山</li>
+								<li>晋安</li>
+								<li>鼓楼</li>
+								<li>闽侯</li>
+							</ul>
+						</div>
+        		<!--//二级-->
+        	</div>
+        	<div class="sort-box">
+        		<!--三级-->
+						<div class="sort-level">
+							<ul>                
+								<li><label><span>不限</span> <input name="level3" type="checkbox"></label></li>
+								<li><label><span>金山</span> <input name="level3" type="checkbox" checked></label></li>
+								<li><label><span>城南</span> <input name="level3" type="checkbox"></label></li>
+								<li><label><span>海峡奥体</span> <input name="level3" type="checkbox"></label></li>
+								<li><label><span>闽江</span> <input name="level3" type="checkbox"></label></li>
+							</ul>
+						</div>
+        		<!--//三级-->
+        	</div>
+        </div>
+        <div class="btn-union-wrap">
+        	<a href="javascript:;" class="btn-union default">重置</a>
+        	<a href="javascript:;" class="btn-union primary">确定</a>
+        </div>
       </div>
       <div style="display:none">
-        <ul class="c-item">
-            <li class="active"><span>全部行业</span></li>
-            <li><span>娱乐放松</span></li>
-            <li><span>中式餐饮</span></li>
-            <li><span>休闲美食</span></li>
-            <li><span>运动健身</span></li>
-            <li><span>亲子教育</span></li>
-            <li><span>其他行业</span></li>
-        </ul>
+        <!--行业内容-->
+        <p>行业</p><p>行业</p><p>行业</p>
+        <!--//行业内容-->
       </div>
       <div style="display:none">
-        <ul class="c-item2">
-            <li class="active"><span>最新上架</span></li>
-            <li><span>距离最近</span></li>
-            <li><span>最受欢迎</span></li>
-            <li><span>免费最多</span></li>
-        </ul>
+        <!--更多-->
+        <p>更多</p><p>更多</p><p>更多</p><p>更多</p>
+        <!--//更多-->
       </div>
     </div>
 </div>
@@ -145,6 +149,51 @@ $(function(){
 				<h3>东都西里便利店 <i class="icon-price"></i></h3>
 				<span>
 					<i class="star s2"></i>
+					<em>月售778单</em>
+				</span>
+				<p>福建省福州市福清市233号</p>
+			</li>
+		</ul>
+	</a>
+	<a href="#">
+		<label class="shop-logo">
+			<img src="images/shop-logo2.png" alt="">
+		</label>
+		<ul>
+			<li>
+				<h3>JOEYTERN服饰商城 <i class="icon-price"></i></h3>
+				<span>
+					<i class="star s3"></i>
+					<em>月售778单</em>
+				</span>
+				<p>福建省福州市福清市233号</p>
+			</li>
+		</ul>
+	</a>
+	<a href="#">
+		<label class="shop-logo">
+			<img src="images/shop-logo2.png" alt="">
+		</label>
+		<ul>
+			<li>
+				<h3>JOEYTERN服饰商城 <i class="icon-price"></i></h3>
+				<span>
+					<i class="star s3"></i>
+					<em>月售778单</em>
+				</span>
+				<p>福建省福州市福清市233号</p>
+			</li>
+		</ul>
+	</a>
+	<a href="#">
+		<label class="shop-logo">
+			<img src="images/shop-logo2.png" alt="">
+		</label>
+		<ul>
+			<li>
+				<h3>JOEYTERN服饰商城 <i class="icon-price"></i></h3>
+				<span>
+					<i class="star s3"></i>
 					<em>月售778单</em>
 				</span>
 				<p>福建省福州市福清市233号</p>
