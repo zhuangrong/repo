@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+	//底部弹出-选择原因
+	$(".btn-cancel").on("click",function(){		 
+		 $(".mask").fadeIn(200)
+		 $("#choose").addClass('show')		 
+	})
+	
+	//底部弹出-支付方式
+	$(".btn-pay").on("click",function(){		 
+		 $(".mask").fadeIn(200)
+		 $("#pay").addClass('show')		 
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask, .action-cancel").on("click",function(e){
+			e.stopPropagation()
+			$(".mask").fadeOut(300)
+		  $("#choose").removeClass('show')			
+		  $("#pay").removeClass('show')			
+	})
+	
+})
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>我的订单</span>
+  <a></a>
+</div>
+<!--//头部-->
+<div class="wx-container">
+ <div class="blank"></div>
+ <!--订单-->
+	<div class="order">
+		<div class="order-hd">
+			订单编号：SH20171030153504022292
+			<label>待付款</label>
+		</div>
+		<div class="order-bd">
+			<div class="order-pic">
+				<img src="images/order-pic01.png" alt="">
+			</div>
+			<div class="order-info">
+				<h3>香奈儿2016秋款新品时尚两用小牛皮水桶 香包两色可选   </h3>
+				<span>红色 意大利进口</span>
+				<p>￥5986 <em>x10</em></p>
+			</div>
+		</div>
+		<div class="order-ft">
+			<a href="#" class="btn-cancel">取消订单</a>
+			<a href="#" class="btn-pay">立即付款</a>
+		</div>
+	</div>
+	<div class="order">
+		<div class="order-hd">
+			订单编号：SH20171030153504022292
+			<label>待付款</label>
+		</div>
+		<div class="order-bd">
+			<div class="order-pic">
+				<img src="images/order-pic01.png" alt="">
+			</div>
+			<div class="order-info">
+				<h3>香奈儿2016秋款新品时尚两用小牛皮水桶 香包两色可选   </h3>
+				<span>红色 意大利进口</span>
+				<p>￥5986 <em>x10</em></p>
+			</div>
+		</div>
+		<div class="order-ft">
+			<a href="#" class="btn-cancel">取消订单</a>
+			<a href="#" class="btn-pay">立即付款</a>
+		</div>
+	</div>
+	<!--//订单-->
+</div>
+<!--底部弹出 -->
+<div>
+	<div class="mask"></div>
+	<!--选择原因-->
+	<div class="actionSheet" id="choose">
+	  <h3>
+	  	请选择原因
+	  	<span>订单一旦取消，无法恢复</span>
+	  </h3>
+		<div>
+		  <label class="cell">
+				<em>不想取消了</em>
+				<input type="radio" name="rad">
+			</label>
+		  <label class="cell">
+				<em>信息填写错误，重新拍</em>
+				<input type="radio" name="rad">
+			</label>
+		  <label class="cell">
+				<em>同城见面交易</em>
+				<input type="radio" name="rad">
+			</label>
+		  <label class="cell">
+				<em>卖家缺货</em>
+				<input type="radio" name="rad">
+			</label>
+		  <label class="cell">
+				<em>其他原因</em>
+				<input type="radio" name="rad">
+			</label>
+		</div>
+		<a href="javascript:;" class="action-cancel">提交</a>
+	</div>
+	<!--//选择原因-->
+	<!--支付方式-->
+	<div class="actionSheet" id="pay">
+	  <h3>
+	  	支付方式
+	  	<span>订单编号：SH20171030153504022292</span>
+	  </h3>
+		<div>
+		  <label class="cell">
+		  	<i class="icon-pay01"></i>
+				<em>余额支付<b>当前可用余额  ¥300</b></em>
+				<input type="radio" name="payitem">
+			</label>
+		  <label class="cell">
+		  	<i class="icon-pay02"></i>
+				<em>支付宝支付</em>
+				<input type="radio" name="payitem">
+			</label>
+		  <label class="cell">
+		  	<i class="icon-pay03"></i>
+				<em>微信支付</em>
+				<input type="radio" name="payitem">
+			</label>
+		  <label class="cell">
+		  	<i class="icon-pay04"></i>
+				<em>货到付款<b>收到商品后进行付款</b></em>
+				<input type="radio" name="payitem">
+			</label>
+		  <label class="cell">
+		  	<i class="icon-pay05"></i>
+				<em>微信找人代付<b>帮你代付的才叫真爱</b></em>
+				<input type="radio" name="payitem">
+			</label>
+		</div>
+		<a href="javascript:;" class="action-cancel">提交</a>
+	</div>
+	<!--//支付方式-->
+</div>
+<!--//底部弹出-->
+<!--导航-->
+<div class="nav-blank"></div>
+<nav>
+	<a href="index.html" class="active"><i class="icon-nav01"></i></a>
+	<a href="index.html"><i class="icon-nav02"></i></a>
+	<a href="index.html"><i class="icon-nav03"></i></a>
+	<a href="mine.html"><i class="icon-nav04"></i></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

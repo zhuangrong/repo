@@ -963,6 +963,199 @@ nav a.active i.icon-nav04{
 	color: #268BEA;
 }
 
+/*订单列表*/
+.order{
+	border-radius: .2rem;
+	background-color: #fff;
+	box-shadow: 0px 5px 12.22px 0.78px rgba(131, 178, 222, 0.41);
+	margin-bottom: .2rem;
+}
+.order .order-hd{
+	font-size: 11px;
+	color: #666;
+	padding: .1rem;
+}
+.order .order-hd label{
+	float: right;
+}
+
+.order .order-bd{
+	border-top: 1px solid  #F2F2F2;
+	border-bottom: 1px solid  #F2F2F2;
+	padding: .2rem .3rem;
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+
+.order .order-bd .order-pic{
+	width: 1.26rem;
+}
+.order .order-bd .order-info{
+	padding-left: .3rem;
+	font-size: 12px;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	line-height: 1.4;
+}
+.order .order-bd .order-info h3{
+	color: #333;
+}
+.order .order-bd .order-info span{
+	font-size: 10px;
+	color: #666;
+}
+.order .order-bd .order-info p{
+	color: #FE2641;
+}
+.order .order-bd .order-info p em{
+	float: right;
+	color: #666;
+}
+.order .order-ft{
+	text-align: right;
+	padding: .1rem .2rem;
+}
+.order .order-ft a{
+	display: inline-block;
+	width: 1.1rem;
+	height: .42rem;
+	line-height: .42rem;
+	text-align: center;
+	font-size: 10px;
+	border-radius: .1rem;
+	margin: 0 .05rem;
+}
+.order .btn-cancel{
+	border: 1px solid #595959;
+	color: #666;
+}
+.order .btn-pay{
+	border: 1px solid #268BEA;
+	color: #268BEA;
+}
+
+/*订单 底部弹出菜单*/
+.mask{
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.actionSheet{
+	position: fixed;
+	z-index: 9999;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(100%);
+	-webkit-transition: -webkit-transform .3s;
+	background-color: #ddd;
+}
+.actionSheet h3{
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+	background-color: #fff;
+	border-bottom: 1px solid  #E0E3E5;
+	line-height: 1.2;
+	padding: .05rem;
+}
+.actionSheet h3 span{
+	display: block;
+	font-size: 12px;
+	color: #666;
+}
+.actionSheet .cell{
+	padding: .2rem .4rem;
+	text-align: left;
+	border-bottom: 1px solid  #ececec;
+	background-color: #fff;
+	color: #000;
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	font-size: 16px;
+}
+.actionSheet .cell i{
+	display: block;
+	width: .6rem;
+	height: .6rem;
+	margin-right: .3rem;
+	margin-top: .05rem;
+}
+.actionSheet .cell .icon-pay01{
+	background-image: url(../images/icon-pay01.png);
+}
+.actionSheet .cell .icon-pay02{
+	background-image: url(../images/icon-pay02.png);
+}
+.actionSheet .cell .icon-pay03{
+	background-image: url(../images/icon-pay03.png);
+}
+.actionSheet .cell .icon-pay04{
+	background-image: url(../images/icon-pay04.png);
+}
+.actionSheet .cell .icon-pay05{
+	background-image: url(../images/icon-pay05.png);
+}
+.actionSheet .cell em{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	line-height: 1.2;
+}
+.actionSheet .cell em b{
+	display: block;
+	font-size: 11px;
+	color: #666;
+	font-weight: normal;
+}
+.actionSheet .cell input[type=radio]{
+	display: block;
+	width: .36rem;
+	height: .36rem;
+	background-color: transparent;
+}
+.actionSheet .cell input[type=radio]:checked{
+	background-image: url(../images/radio.png);
+}
+.actionSheet .cell:active{
+	background-color: #eee;
+}
+.actionSheet a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	color: inherit;
+	background-color: #fff;
+}
+.actionSheet.show{
+	-webkit-transform: translateY(0);
+}
+.actionSheet a.action-cancel{
+	background-color: #278BE9;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
