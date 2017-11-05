@@ -685,7 +685,7 @@ nav a.active i.icon-nav04{
   box-shadow: 0px 5px 12.22px 0.78px rgba(131, 178, 222, 0.41);
 }
 .address-add li{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center; /*左对齐*/
@@ -727,6 +727,9 @@ nav a.active i.icon-nav04{
 }
 .address-add li .icon-addr04{
 	background-image: url(../images/icon-addr04.png);
+}
+.address-add li .icon-addr05{
+	background-image: url(../images/icon-addr05.png);
 }
 
 .btn-default{
@@ -1145,8 +1148,53 @@ nav a.active i.icon-nav04{
 	color: #fff;
 }
 
+.welcome-title{
+	color: #A2A2A2;
+	padding: 0.2rem 0 .1rem .1rem;
+}
 
-
+.address-add .bank{
+	
+}
+.address-add .bank > div{
+	border-bottom: 1px solid  #ECEEF0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	font-size: 16px;
+	padding: .2rem .3rem;
+}
+.address-add .bank > div i{
+	width: .48rem;
+	height: .48rem;
+	margin-right: 0.2rem;
+}
+.address-add .bank > div i.icon-bank01{
+	background-image: url(../images/icon-bank01.png);
+}
+.address-add .bank > div i.icon-bank02{
+	background-image: url(../images/icon-bank02.png);
+}
+.address-add .bank > div i.icon-bank03{
+	background-image: url(../images/icon-bank03.png);
+}
+.address-add .bank > div i.icon-bank04{
+	background-image: url(../images/icon-bank04.png);
+}
+.address-add .bank > div i.icon-bank05{
+	background-image: url(../images/icon-bank05.png);
+}
+.address-add .bank > div i.icon-bank06{
+	background-image: url(../images/icon-bank06.png);
+}
+.address-add .bank b{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	font-weight: normal;
+	line-height: 1.4;
+}
 
 
 
