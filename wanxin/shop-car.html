@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script src="js/jquery.Spinner.js"></script> 
+<script>
+$(function(){
+	//spinner组件
+	$(".spinner").Spinner();
+	
+	//设置input初始值
+	var s1 = $("#s1").find(".Amount").val(1)
+	var s2 = $("#s2").find(".Amount").val(4)
+	
+	//设置对应的价格
+	$("#sp1").text('￥'+s1.val()*2000)
+	$("#sp2").text('￥'+s2.val()*2000)
+	
+	//总金额
+	$(document).on("click",".spinner a",function(){
+		$(this).parent().prev().text('￥'+$(this).parent().find(".Amount").val()*2000);/*个数乘以单价*/
+	})
+	
+	
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>购物车</span>
+  <a href="javascript:;" class="share">编辑</a>
+</div>
+<!--//头部-->
+<div class="wx-container">
+ <div class="blank"></div>
+ <!--订单-->
+	<div class="order">
+		<div class="order-hd">
+		  <div class="flex">
+				<input type="checkbox" class="checkbox">
+				<a href="javascript:;">福州香奈儿旗舰店</a>
+		  </div>
+		</div>
+		<div class="coupon">
+			<label>折扣</label>
+			<span>购满2件，第二件半价</span>
+		</div>
+		<div class="order-bd">
+		  <div class="order-check">
+		  	<input type="checkbox" class="checkbox">
+		  </div>
+			<div class="order-pic2">
+				<img src="images/order-pic01.png" alt="">
+			</div>
+			<div class="order-info2">
+				<h3>香奈儿2016秋款新品时尚两用小牛皮水桶 香包两色可选  </h3>
+				<span>颜色:纯白色</span>
+				<i class="baoyou">包邮</i>
+				<div class="price">
+					<em id="sp1">¥2000</em>
+					<p class="spinner" id="s1"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//订单-->
+</div>
+<!--提交订单-->
+<div class="order-bar choose">
+	<dl>
+		<dt>
+			<lable>
+				<input type="checkbox"  class="checkbox" checked> 全选
+			</lable>
+		</dt>
+	</dl>
+	<a href="#" class="del-car">结算（0）</a>
+</div>
+<!--//提交订单-->
+<!--导航-->
+<div class="nav-blank"></div>
+<nav>
+	<a href="index.html" class="active"><i class="icon-nav01"></i></a>
+	<a href="index.html"><i class="icon-nav02"></i></a>
+	<a href="index.html"><i class="icon-nav03"></i></a>
+	<a href="mine.html"><i class="icon-nav04"></i></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
