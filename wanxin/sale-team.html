@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body class="prod-bg">
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>我的团队</span>
+  <a></a>
+</div>
+<!--//头部-->
+
+<!--我的团队-->
+<div class="sale-list-tabs" id="tabs">
+	<ul>
+		<li class="curr">一级客户</li>
+		<li>二级客户</li>
+		<li>三级客户</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+	  <div class="sale-score">
+      <ul>
+        <li>
+          <i style="background-image: url(images/avatar.png)"></i>
+          <h3>
+            <p>今天一定要努力</p>
+            <label>16898675678</label>
+          </h3>
+          <span>消费300</span>
+        </li>
+        <li>
+          <i style="background-image: url(images/avatar.png)"></i>
+          <h3>
+            <p>今天一定要努力</p>
+            <label>16898675678</label>
+          </h3>
+          <span>消费300</span>
+        </li>
+        <li>
+          <i style="background-image: url(images/avatar.png)"></i>
+          <h3>
+            <p>今天一定要努力</p>
+            <label>16898675678</label>
+          </h3>
+          <span>消费300</span>
+        </li>
+      </ul>
+    </div>
+	  
+	</div>
+	<div style="display:none">二级客户</div>
+	<div style="display:none">三级客户</div>
+</div>
+<!--//我的团队-->
+</body>
+</html>

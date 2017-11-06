@@ -573,7 +573,6 @@ nav a.active i.icon-nav04{
 .order-manager a i.icon-om04{
 	background-image: url(../images/icon-om04.png);
 }
-
 .order-item a{
 	display: block;
 	border-radius: .2rem;
@@ -584,7 +583,9 @@ nav a.active i.icon-nav04{
 	padding: .2rem .3rem;
 	background-origin: content-box;
 	margin-top: .2rem;
+	box-shadow: 0px 1px 3px 0.6px rgba(131, 178, 222, 0.3);
 }
+
 .order-item a:active{
 	background-color: #efefef;
 }
@@ -2234,8 +2235,46 @@ nav a.active i.icon-nav04{
   font-size: 16px;
 }
 
-
-
+/*积分详情*/
+.sale-score li{
+  border-bottom: 1px solid #E1E4E6;
+  background-color: #fff;
+  padding: .25rem .35rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.sale-score li i{
+  display: block;
+  width: .68rem;
+  height: .68rem;
+  border-radius: 50%;
+  margin-right: .2rem;
+}
+.sale-score li h3{
+  font-size: 15px;
+  -webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+  line-height: 1.1;
+}
+.sale-score li h3 p{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; 
+}
+.sale-score li h3 label{
+  font-size: 12px;
+  color: #666;
+}
+.sale-score li span{
+  display: block;
+  color: #F60909;
+  font-size: 15px;
+  margin-top: .2rem;
+}
 
 
 
