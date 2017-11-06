@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+ /*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+<!--搜索-->
+<div class="prod-search">
+  <a href="javascript:;" class="icon-back03"></a>
+  <input type="text" placeholder="输入商品/厂家/经销商">
+  <a href="javascript:;" class="icon-humburg"></a>
+</div>
+<!--//搜索-->
+<!--产品选项卡-->
+<div class="prod-tabs" id="tabs">
+	<ul>
+		<li class="curr">综合排序</li>
+		<li>评分</li>
+		<li>销量优先</li>
+		<li>价格</li>
+	</ul>
+</div>
+<div class="blank"></div>
+<div class="tab-box1 wx-container">
+	<div>
+	  <!--综合排序-->
+	  <div class="product-list">
+    <a href="#">
+      <img src="images/space-pro.png" class="space-pro" style="background-image:url(images/product-pic01.jpg)">
+      <h3>2017新款双面羊毛呢子衣</h3>
+      <span>
+        <i class="baoyou">包邮</i>
+        福州
+      </span>
+      <span>
+        <em>￥998</em>
+        <label>1228人付款</label>
+      </span>
+    </a>
+    <a href="#">
+      <img src="images/space-pro.png" class="space-pro" style="background-image:url(images/product-pic01.jpg)">
+      <h3>2017新款双面羊毛呢子衣</h3>
+      <span>
+        <i class="baoyou">包邮</i>
+        福州
+      </span>
+      <span>
+        <em>￥998</em>
+        <label>1228人付款</label>
+      </span>
+    </a>
+    <a href="#">
+      <img src="images/space-pro.png" class="space-pro" style="background-image:url(images/product-pic01.jpg)">
+      <h3>2017新款双面羊毛呢子衣</h3>
+      <span>
+        <i class="baoyou">包邮</i>
+        福州
+      </span>
+      <span>
+        <em>￥998</em>
+        <label>1228人付款</label>
+      </span>
+    </a>
+    <a href="#">
+      <img src="images/space-pro.png" class="space-pro" style="background-image:url(images/product-pic01.jpg)">
+      <h3>2017新款双面羊毛呢子衣</h3>
+      <span>
+        <i class="baoyou">包邮</i>
+        福州
+      </span>
+      <span>
+        <em>￥998</em>
+        <label>1228人付款</label>
+      </span>
+    </a>
+  </div>
+	  <!--//综合排序-->
+	</div>
+	<div style="display: none">评分</div>
+	<div style="display: none">销量优先</div>
+	<div style="display: none">价格</div>
+</div>
+<!--//产品选项卡-->
+
+<!--导航-->
+<div class="nav-blank"></div>
+<nav>
+	<a href="index.html" class="active"><i class="icon-nav01"></i></a>
+	<a href="index.html"><i class="icon-nav02"></i></a>
+	<a href="index.html"><i class="icon-nav03"></i></a>
+	<a href="mine.html"><i class="icon-nav04"></i></a>
+</nav>
+<!--//导航-->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
