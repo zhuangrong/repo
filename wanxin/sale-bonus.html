@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+  
+  //弹出 提示层
+  $("#bonus-info").on("click",function(){
+    $(".bonus-pop").show()
+  })
+  //关闭弹出层
+  $("#close").on("click",function(){
+    $(".bonus-pop").hide()
+  })
+})
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>分销津贴</span>
+  <a class="icon-info" id="bonus-info" href="javascrit:;"></a>
+</div>
+<!--//头部-->
+<!--分销津贴-->
+<div class="sale-bonus-header">
+  <h3>12356.80</h3>
+  <p>可提现津贴（元）</p>
+</div>
+<!--//分销津贴-->
+<!--分销项目-->
+<div class="sale-bonus-item">
+  <ul>
+    <li>
+      <i class="icon-bonus01"></i>
+      <p>累计津贴</p>
+      <label>12356.80</label>
+    </li>
+    <li>
+      <i class="icon-bonus02"></i>
+      <p>待审核津贴</p>
+      <label>12356.80</label>
+    </li>
+    <li>
+      <i class="icon-bonus03"></i>
+      <p>未结算津贴</p>
+      <label>12356.80</label>
+    </li>
+    <li>
+      <i class="icon-bonus04"></i>
+      <p>津贴明细</p>
+    </li>
+  </ul>
+</div>
+<!--//分销项目-->
+<!--导航-->
+<div class="nav-blank"></div>
+<nav>
+	<a href="index.html" class="active"><i class="icon-nav01"></i></a>
+	<a href="index.html"><i class="icon-nav02"></i></a>
+	<a href="index.html"><i class="icon-nav03"></i></a>
+	<a href="mine.html"><i class="icon-nav04"></i></a>
+</nav>
+<!--//导航-->
+<!-- 弹出层--津贴说明-->
+<div class="bonus-pop" style="display: none">
+  <div class="bonus-pop-body">
+    <h3>有关津贴说明</h3>
+    <ul>
+      <li>买家确认收货后，立即获得津贴</li>
+      <li>结算期7天 后，津贴可提现</li>
+      <li>结算期内，买家退货，津贴将自 动扣除</li>
+      <li>现金满 100 元后才能申请提现</li>
+    </ul>
+    <button id="close">关闭</button>
+  </div>
+</div>
+<!-- //弹出层--津贴说明-->
+</body>
+</html>
