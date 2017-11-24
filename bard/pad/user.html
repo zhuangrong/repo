@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/bard.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function(){
+  //对话框
+	$("#btn2").on("click",function(){
+		 $("#dialog").fadeIn(200)
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask, .btn-get, .close").on("click",function(e){
+			e.stopPropagation()
+			 $(".pop").fadeOut(200)		 
+	})
+})
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<a class="icon-back" href="javascrit:"></a>
+	<span>港为人先2017输液港总决赛</span>
+	<a></a>
+</div>
+<!--//header-->
+<!--banner-->
+<div class="banner">
+  <img src="images/banner.png" alt="">
+</div>
+<!--//banner-->
+<!--user-->
+<div class="user-list">
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+  <a href="#">
+    <img src="images/space.png" alt="" style="background-image: url(images/user.jpg)">
+    <h3>张小小</h3>
+    <em>编号14</em>
+    <button class="btn sm">为TA评分</button>
+  </a>
+</div>
+<!--//user-->
+
+<div class="btn-wrap">
+  <button class="btn" id="btn2">开始评分</button>
+</div>
+<div class="copyright c01">
+  巴德医疗科技（上海）有限公司
+</div>
+<div class="blank"></div>
+
+<!--弹出窗口-->
+<div id="dialog" class="pop" style="display: none">
+	<div class="mask"></div>
+	<div class="dialog">
+    <span class="close">&times;</span>
+		<div class="dialog-body">
+      <div class="submit-info">
+        <i class="icon-p01"></i>
+        <p>提交信息成功</p>
+        <!--超时，评分无效 
+        <i class="icon-p02"></i>
+        <p class="c01">超时，评分无效</p>-->
+        
+        <!--评分不得超过100分
+        <i class="icon-p03"></i>
+        <p class="c01">评分不得超过100分</p>-->
+      </div>
+		</div>
+		<div class="dialog-footer">
+			<button class="btn-get">知道了</button>
+		</div>
+	</div>
+</div>
+<!--//弹出窗口-->
+</body>
+</html>

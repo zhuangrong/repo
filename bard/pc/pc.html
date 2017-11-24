@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/bard.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+  var times = 60 * 100; // 60秒
+  countTime = setInterval(function() {
+    times = --times < 0 ? 0 : times;
+    var ms = Math.floor(times / 100).toString();
+
+    if(ms.length <= 1) {
+      ms = "0" + ms;
+    }
+    var hm = Math.floor(times % 100).toString();
+    if(hm.length <= 1) {
+      hm = "0" + hm;
+    }
+    if(times == 0) {
+      alert("时间到");
+      clearInterval(countTime);
+    }
+    // 获取分钟、毫秒数
+    $(".a").html(ms);
+    $(".b").html(hm);
+  }, 10);
+});
+</script>
+</head>
+<body>
+<div class="bard-container">
+  <div class="banner">
+    <img src="images/banner.png" alt="">
+  </div>
+  <div class="pc-main">
+    <div class="left-cont">
+      <img src="images/qr-code.png" alt="">
+    </div>
+    <div class="mid-cont"></div>
+    <div class="right-cont">
+      <h3>张小小<span>本轮总得分</span></h3>
+      <p>00</p>
+    </div>
+  </div>
+  <!--倒计时-->
+  <div class="countdown">
+			评分截止时间 <span><strong class="a">111</strong>:<strong class="b"></strong></span>
+  </div>
+  <!--//倒计时-->
+  <div class="btn-wrap">
+    <button class="btn" id="btn2">开始评分</button>
+  </div>
+</div>
+</body>
+</html>
