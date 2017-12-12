@@ -367,6 +367,7 @@ em, h3 {
   background-color: #0188FB;
   color: #fff;
   z-index: 999;
+	font-size: 16px;
 }
 .btn-next:active{
   color: #fff;
@@ -447,7 +448,7 @@ em, h3 {
 }
 .form-info li h3{
   color: #0188FB;
-  font-size: 16px;
+  font-size: 14px;
 }
 .form-info li label{
   position: relative;

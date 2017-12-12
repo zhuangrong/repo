@@ -3,7 +3,6 @@ $(function(){
   $(".form-info li > label > input").on("keyup focus",function(e){
     e.stopPropagation()
     $(this).next().show()
-    console.log("1")
   })
   //点击关闭图标
   $(".form-info li i").on("click",function(e){
@@ -18,7 +17,6 @@ $(function(){
     var _this = this
     setTimeout(function(){
       $(_this).next().hide()
-    console.log("2")
     },200)
     
   })
