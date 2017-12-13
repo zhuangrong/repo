@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/wanxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+	//底部弹出-选择原因
+	$("#btnCancel").on("click",function(){		 
+		 $(".mask").fadeIn(200)
+		 $("#choose").addClass('show')		 
+	})
+	
+	//底部弹出-支付方式
+	$("#btnPay").on("click",function(){		 
+		 $(".mask").fadeIn(200)
+		 $("#pay").addClass('show')		 
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask, .action-cancel").on("click",function(e){
+			e.stopPropagation()
+			$(".mask").fadeOut(300)
+		  $("#choose").removeClass('show')			
+		  $("#pay").removeClass('show')			
+	})
+  
+  $.TabChange("tabs",1)
+	
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+<style>
+/*选项卡tabs*/
+.order-tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+  border: 1px solid  #E6E6E6;
+}
+.order-tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	width:0%;/*必须有*/
+	height:.7rem;
+	line-height: .7rem;
+	text-align:center;
+}
+.order-tabs li.curr{
+	color: #268BEA;	
+	border-bottom: 2px solid  #268BEA;
+}
+.order2-num{
+  padding: 0 .3rem;
+  line-height: .7rem;
+  border-bottom: 1px solid  #E6E6E6;
+  color: #666;
+}
+  .description .des-tit{
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+    padding: .4rem .2rem 0 0 ;
+  }
+  .description .star2{
+    display: inline-block;
+    height: .34rem;
+    width: 2.1rem;
+    background-repeat: repeat-x !important;
+    background-image: url(images/star2-gray.png);
+    background-size: auto .34rem;
+  }
+  .description .star2.s1:before,
+  .description .star2.s2:before,
+  .description .star2.s3:before,
+  .description .star2.s4:before,
+  .description .star2.s3:before{
+    content: '';
+    display: block;
+    height: .34rem;
+    background-repeat: repeat-x !important;
+    background-image: url(images/star2.png);
+    background-size: auto .34rem;
+  }
+  .description .star2.s1:before{
+    width: 20%;
+  }
+  .description .star2.s2:before{
+    width: 40%;
+  }
+  .description .star2.s3:before{
+    width: 60%;
+  }
+  .description .star2.s4:before{
+    width: 80%;
+  }
+  .description .star2.s5:before{
+    width: 100%;
+  }
+  .order2-area{
+    padding: .2rem;
+    border-bottom: 1px solid  #E6E6E6;
+  }
+  .order2-area textarea{
+    height: 100%;
+    width: 100%;
+  }
+  .order2-choose > label input[type=checkbox]{
+    display: inline-block;
+    width: .28rem;
+    height: .28rem;
+    background-image: url(images/check02.png);
+    margin-right: .1rem;
+    vertical-align: middle;
+    margin-bottom: .1rem;
+  }
+  .order2-choose > label input[type=checkbox]:checked{
+    background-image: url(images/check02.png);
+    background-position: 0 -.28rem;
+  }
+  .order2-choose{
+    padding: .2rem .3rem;
+    color: #C1C1C1;
+    display: -webkit-box; 
+    display: -webkit-flex;
+    display: flex;
+  }
+  .order2-choose label{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    font-size: 12px;
+  }
+  .order2-choose > a{
+    display: inline-block;
+    width: 1.1rem;
+    height: .42rem;
+    line-height: .42rem;
+    text-align: center;
+    font-size: 10px;
+    border-radius: .1rem;
+    margin: 0 .05rem;
+    border: 1px solid #268BEA;
+    color: #268BEA;
+  }
+</style>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>我的订单</span>
+  <a></a>
+</div>
+<!--//头部-->          　                              
+<div class="order-tabs" id="tabs">
+	<ul>
+		<li class="curr">全部订单</li>
+		<li>待付款</li>
+		<li>待发货</li>
+		<li>待收货</li>
+		<li>已完成</li>
+	</ul>
+</div>
+
+<div class="tab-box1">
+  <div>
+    <div class="order2-num">
+      订单编号：SH20171030153504022292
+    </div>
+    <div class="blank"></div>
+    <div class="wx-container">
+      <!--全部订单-->
+      <div class="order">
+        <div class="order-bd">
+          <div class="order-pic">
+            <img src="images/order-pic01.png" alt="">
+          </div>
+          <div class="order-info">
+            <div class="description">
+              <div class="des-tit">描述相符</div>
+              <div class="star2 s3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="order2-area">
+          <textarea name="" id="" rows="3" placeholder="说说宝贝的优点和美中不足的地方吧？"></textarea>
+        </div>
+        <div class="order2-choose">
+          <label><input type="checkbox">匿名(你写的评价会以匿名的形式展现)</label>
+          <a href="javascript:;">提交</a>
+        </div>
+      </div>
+      <!--//全部订单-->
+    </div>
+  </div>
+  <div style="display:none">待付款</div>
+  <div style="display:none">待发货</div>
+  <div style="display:none">待收货</div>
+  <div style="display:none">已完成</div>
+</div>
+  
+
+</body>
+</html>
