@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="font/iconfont.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<title>dc-mobile</title>
+<script>
+$(function(){
+  //点击验证码
+  $(".getCode").on("click",function(e){
+    e.stopPropagation()
+		settime($(this))
+  })
+  //倒计时
+	var countdown=60; 
+	function settime(val){ 
+		if (countdown == 0){ 
+			val.text("重新获取");
+			countdown=60; 
+			return
+		}else{ 
+			val.text(countdown + "s"); 
+			countdown--; 
+		} 
+		setTimeout(function(){ 
+			settime(val) 
+		},1000) 
+	} 
+})
+</script>
+</head>
+<body class="login-bg">
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+
+<div class="dc-form">
+	<ul>
+		<li>
+			<span>手机号</span>
+			<input type="text" placeholder="请输入手机号">
+		</li>
+		<li>
+			<span>验证码</span>
+			<input type="text" placeholder="请输入验证码">
+			<button class="getCode">获取验证码</button>
+		</li>
+		<li>
+			<span>昵称</span>
+			<input type="text" placeholder="昵称将会显示在个人主页里">
+		</li>
+	</ul>
+</div>
+<div class="btn2-wrap">
+  <a href="javascript:;" class="btn2">下一步</a>
+</div>
+
+</body>
+</html>

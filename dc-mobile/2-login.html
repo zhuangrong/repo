@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="font/iconfont.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<title>dc-mobile</title>
+<script>
+$(function(){
+	
+	//点击遮罩层隐藏
+	$(".mask, .qx").on("click",function(e){
+			e.stopPropagation()
+			 $("#dialog").fadeOut(200)		 
+	})
+})
+</script>
+</head>
+<body class="login-bg">
+<div class="avatar-wrap2">
+	<i class="avatar" style="background-image:url(images/avatar02.png);"></i>
+	<span>昵称<em>积极分子</em></span>
+	<button class="btn-sign">现场签到</button>
+</div>
+<!--统计-->
+<div class="rank-total">
+	<ul>
+		<li><label>0</label> <em>次</em><span>党建活动</span></li>
+		<li>0 <em>小时</em><span>学习教育</span></li>
+		<li>0 <em>分</em><span>我的积分</span></li>
+	</ul>
+</div>
+<!--//统计-->
+<!--列表 -->
+<div class="list">
+	<a href="#">
+     学习记录
+	</a>
+	<a href="#">
+     活动记录
+	</a>
+	<a href="#">
+     积分兑换
+	</a>
+	<a href="#">
+     个人收藏
+	</a>
+</div>
+<div class="list">
+	<a href="#">
+     个人资料
+	</a>
+	<a href="#">
+     退出登录
+	</a>
+</div>
+<!--//列表 -->
+
+<!--navbar-->
+<nav>
+	<a href="#"><i class="nav01"></i><span>首页</span></a>
+	<a href="#"><i class="nav02"></i><span>积分</span></a>
+	<a href="#" class="active"><i class="nav03"></i><span>我的</span></a>
+</nav>
+<!--//navbar-->
+<!--授权对话框-->
+<div id="dialog">
+	<div class="mask"></div>
+	<div class="dialog">
+		<div class="dialog-body">确定授权“特区先锋”获取您的用户名、头像等信息？ </div>
+		<div class="dialog-footer">
+			<button class="btn qx">取消</button>
+			<button class="btn">确定</button>
+		</div>
+	</div>
+</div>
+<!--//授权对话框-->
+</body>
+</html>
