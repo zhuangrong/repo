@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title></title>
+<link rel="stylesheet" href="css/dc-mobile.css"> 
+<link rel="stylesheet" href="font/iconfont.css"> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<title>dc-mobile</title>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body class="login-bg">
+<!--header-->
+<div class="header">
+  <i class="logo"></i>
+</div>
+<!--//header-->
+<!--tabs-->
+<div class="news-tabs" id="tabs">
+	<ul>
+		<li class="curr">先锋广播</li>
+		<li>园区头条</li>
+		<li>空间动态</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+    <!--list-->
+    <div class="dc-list">
+      <a href="javascript:;">
+        <h3><span>全市城市基层党建工作经验交流座谈会全市城市基层党建工作经</span> <em>2017-11-21</em></h3>
+      </a>
+      <a href="javascript:;">
+        <h3><span>全市城市基层党建工作经验交流座谈会</span> <em>2017-11-21</em></h3>
+      </a>
+    </div>
+    <!--//list-->
+	</div>
+	<div style="display: none">园区头条</div>
+	<div style="display: none">空间动态</div>
+</div>
+<!--//tabs-->
+</body>
+</html>
