@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<script src="js/jquery.min.js"></script> 
+<title>特区先锋</title>
+<script>
+  /*tabs切换组件*/
+  $.TabChange = function(obj,num){
+    $("li","#" + obj).each(function(index){
+        $(this).click(function(i){
+          $("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+          $(this).addClass("curr").siblings().removeClass("curr");
+        })													
+    })
+  }
+  $(function(){
+    
+    //tabs
+    $.TabChange("tabs",1)
+    
+    //头像上传--触发按键-鼠标滑过
+    $(".file-trigger").click(function(){ 
+      $("#uploader-file").trigger("click"); 
+    }).mouseover(function(){ 
+      $(this).css("opacity",0.8)
+    }).mouseout(function(){
+      $(this).css("opacity",0)
+    });
+    
+    //修改密码-点击验证码
+    $("#psw").on("click",function(e){
+      e.stopPropagation()
+      settime($(this))
+    })
+    //修改手机号-点击验证码
+    $("#phone").on("click",function(e){
+      e.stopPropagation()
+      settime($(this))
+    })
+    //倒计时
+    var countdown=60; 
+    function settime(val){ 
+      if (countdown == 0){ 
+        val.text("获取验证码");
+        countdown=60; 
+        return
+      }else{ 
+        val.text(countdown + "s"); 
+        countdown--; 
+      } 
+      setTimeout(function(){ 
+        settime(val) 
+      },1000) 
+    } 
+    
+  })
+  
+ //头像上传
+ function change(picId,fileId) {
+  var pic = document.getElementById(picId);
+  var file = document.getElementById(fileId);
+  if(window.FileReader){//chrome,firefox,opera,IE10,IE9，IE9也可以用滤镜来实现
+   oFReader = new FileReader();
+   oFReader.readAsDataURL(file.files[0]);
+   oFReader.onload = function (oFREvent) {pic.src = oFREvent.target.result;}; 
+   $(".file-trigger").css("opacity", 0)
+   
+  }else if (document.all) {//IE8-
+   file.select();
+   var reallocalpath = document.selection.createRange().text//IE下获取实际的本地文件路径
+   pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+   pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';//设置img的src为base64编码的透明图片，要不会显示红xx
+   $(".file-trigger").css('filter','alpha(opacity=0)')
+  }
+ }
+</script>
+</head>
+<body class="bg2">
+<!--toper-->
+<div class="toper" id="top">
+	<div class="main new-container">
+		<div class="pull-left">
+			<span>今天是：2017年8月15日 星期二</span>
+			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
+		</div>
+		<div class="pull-right">
+			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+			<a href="#">English</a>
+		</div>
+	</div>
+</div>
+<!--//toper-->
+<!--header-->
+<div class="header">
+	
+</div>
+<!--//header-->
+<!--nav-->
+<div class="nav-wrap new-container">
+	<div class="nav">	
+		<ul>
+			<li class="active"><a href="#"><i class="icon-home"></i>网站首页</a></li>
+			<li><a href="#">两学一做</a></li>
+			<li><a href="#">十九大专题</a></li>
+			<li><a href="#">城市基层党建</a></li>
+			<li><a href="#">厦门党建e家</a></li>
+			<li><a href="#">特区先锋互动</a></li>
+			<li><a href="#">园区服务</a></li>
+			<li class="last"><a href="#">党员积分</a></li>
+		</ul>
+		<div class="nav-tip-left"></div>
+		<div class="nav-tip-right"></div>
+	</div>
+</div>
+<!--//nav-->
+<div class="new-container">
+  <!--个人信息-->
+  <div class="page-info">
+    <div class="avatar-wrap2">
+      <i class="avatar" style="background-image:url(images/avatar02.jpg);"></i>
+      <span>用户5843<em>中共党员</em></span>
+    </div>
+    <a href="javascript:;" class="btn-exchange">积分兑换</a>
+    <div class="rank-total">
+      <ul>
+        <li><label>13次</label><span>党建活动</span></li>
+        <li><label>1.5小时</label> <span>学习教育</span></li>
+        <li><label>1000分</label> <span>我的积分</span></li>
+      </ul>
+    </div>
+  </div>
+  <!--//个人信息-->
+  <!--个人主页框架-->
+  <div class="page-wrap">
+    <div class="page-aside">
+      <a href="#">学习记录</a>
+      <a href="#">我的收藏</a>
+      <a href="#">通知中心</a>
+      <a href="#" class="active">资料设置</a>
+    </div>
+    <div class="page-main">
+      <!--tabs-->
+      <div class="page-header">
+        <div class="page-tabs" id="tabs">
+          <ul>
+            <li class="curr">资料设置</li>
+            <li>修改密码</li>
+            <li>修改手机号</li>
+          </ul>
+        </div>
+      </div>
+      <!--//tabs-->
+      <!--page form-->
+      <div class="tab-box1">
+        <div>
+          <!--更新资料-->
+          <div class="page-form">
+            <dl>
+              <dt>手机号</dt>
+              <dd>
+                <input type="text" class="ipt" value="15003456781" disabled>
+              </dd>
+            </dl>
+            <dl>
+              <dt>昵称</dt>
+              <dd>
+                <input type="text" class="ipt" value="用户1234">
+              </dd>
+            </dl>
+            <dl>
+              <dt>真实姓名</dt>
+              <dd>
+                <input type="text" class="ipt" placeholder="请输入真实姓名">
+              </dd>
+            </dl>
+            <dl>
+              <dt class="upload-label">头像</dt>
+              <dd>
+                <h3 class="upload-warn"><i></i>仅支持jpg、png格式, 图片大小为160x160</h3>
+                <div class="uploader-wrap">
+                  <div class="uploader-pic" >
+                    <img src="images/avatar02.jpg" id="uploader-pic" width="160" height="160" >
+                  </div>
+                  <div class="uploader-file">
+                    <button class="file-trigger"></button>
+                    <input id="uploader-file" type="file" accept="image/*" onchange="change('uploader-pic','uploader-file')"/>
+                  </div>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>身份选择</dt>
+              <dd>
+                <select name="" id="" class="sel">
+                  <option value="">请选择您的身份</option>
+                  <option value="">党员</option>
+                  <option value="">非党员</option>
+                </select>
+              </dd>
+            </dl>
+            <dl>
+              <dt>所属党支部</dt>
+              <dd>
+                <input type="text" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>身份证号</dt>
+              <dd>
+                <input type="text" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>&nbsp;</dt>
+              <dd>
+                <div class="btn2-wrap">
+                  <a href="javascript:;" class="btn2">更新资料</a>
+                </div>
+                <div class="form-tip">党员身份资料提交后需后台审核，请您耐心等待！</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="blank50"></div>
+          <!--//更新资料-->
+          
+        </div>
+        <div style="display:none">
+          <!--修改密码-->
+          <div class="page-form">
+            <dl>
+              <dt>手机号</dt>
+              <dd>
+                <input type="text" class="ipt" >
+                <button class="getCode" id="psw">获取验证码</button>
+              </dd>
+            </dl>
+            <dl>
+              <dt>验证码</dt>
+              <dd>
+                <input type="text" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>新密码</dt>
+              <dd>
+                <input type="password" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>确认密码</dt>
+              <dd>
+                <input type="password" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>&nbsp;</dt>
+              <dd>
+                <div class="btn2-wrap">
+                  <a href="javascript:;" class="btn2">提交</a>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <!--//修改密码-->
+        </div>
+        <div style="display:none">
+          <!--修改手机号-->
+          <div class="page-form">
+            <dl>
+              <dt>手机号</dt>
+              <dd>
+                <input type="text" class="ipt" >
+                <button class="getCode" id="phone">获取验证码</button>
+              </dd>
+            </dl>
+            <dl>
+              <dt>验证码</dt>
+              <dd>
+                <input type="text" class="ipt">
+              </dd>
+            </dl>
+            <dl>
+              <dt>&nbsp;</dt>
+              <dd>
+                <div class="btn2-wrap">
+                  <a href="javascript:;" class="btn2">提交</a>
+                </div>
+                <div class="form-tip">修改手机号成功，原先手机号将失效登录，需使用 修改后的手机号登录，请谨慎操作。</div>
+              </dd>
+            </dl>
+          </div>
+          <!--//修改手机号-->
+          
+        </div>
+      </div>
+      <!--//page form-->
+    </div>
+  </div>
+  <!--//个人主页框架-->
+</div>
+
+<div class="blank6"></div>
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>
+      友情链接：
+      <a href="#">厦门人才网</a>&nbsp;|&nbsp;
+      <a href="#">厦门市行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">湖里区行政服务中心</a>&nbsp;|&nbsp;
+      <a href="#">厦门市党建e家</a>&nbsp;|&nbsp;
+      <a href="#">湖里街道社区书院</a>
+    </p>
+    <p>
+      <a href="#">关于本站</a>&nbsp;|&nbsp;
+      <a href="#">联系我们</a>&nbsp;|&nbsp;
+      <a href="#">网站地图</a>&nbsp;|&nbsp;
+      <a href="#">版权声明</a>
+    </p>
+    <p>ICP备05001416号&nbsp;&nbsp;访问量12784903</p>
+  </div>
+  
+</div>
+<!--//footer-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
