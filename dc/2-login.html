@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<script src="js/jquery.min.js"></script> 
+<title>特区先锋</title>
+<style>
+.mask {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+}
+.login-pop {
+	position: absolute;
+  top: 50%;
+	left: 50%;
+  margin-top: -260px;
+  margin-left: -255px;
+	z-index: 9999;
+	width: 510px;
+  height: 400px;
+	background-color: #fff;
+  border: 1px solid  #d1d1d1;
+}
+  /*选项卡tabs*/
+.login-tabs ul{
+  height: 60px;
+  border-bottom: 1px solid  #d1d1d1;
+}
+.login-tabs li{
+  height: 60px;
+	width: 125px;
+  padding:0 65px;
+  float: left;
+  display: inline-block;
+}
+.login-tabs li span{
+  display: block;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+}
+.login-tabs li.curr span{
+  border-bottom: 7px solid  #E41B1B;
+	color: #E41B1B;	
+}
+.login-form{
+  padding: 50px 70px;
+  font-size: 16px;
+  position: relative;
+}
+.login-form .l-ipt{
+  width: 295px;
+  padding-left: 50px;
+  padding-right: 10px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid  #D1D1D1;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.login-form .l-ipt.phone02{
+  background-image: url(images/icon-login01.png);
+  background-position: 10px 13px;
+}
+.login-form .l-ipt.psw02{
+  background-image: url(images/icon-login02.png);
+  background-position: 10px 13px;
+}
+.login-form li{
+  margin-bottom: 15px;
+}
+.login-form .error{
+  color: #E41B1B;
+  padding-bottom: 15px;
+}
+.login-form .error i{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  background-image: url(images/login-info.png);
+}
+.login-btn2{
+  border-radius: 5px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: #E41B1B;
+  width: 100%;
+  cursor: pointer;
+}
+  .login-reg{
+    padding-top: 15px;
+  }
+  .login-close{
+    position: absolute;
+    top: -62px;
+    right: -32px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-image: url(images/login-close.png);
+    cursor: pointer;
+  }
+  .login-weixin{
+    text-align: center;
+  }
+  .login-weixin img{
+    margin: 30px auto ;
+    border: 3px solid  #E41B1B;
+    
+  }
+  
+  /*tabs图标*/
+  .login-tabs i{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    background-position: 0 0;
+  }
+  .login-tabs i.icon-tabs01{
+    background-image: url(images/login-tabs01.png);
+  }
+  .login-tabs i.icon-tabs02{
+    background-image: url(images/login-tabs02.png);
+  }
+  .login-tabs li.curr i{
+    background-position: 0 -24px;
+  }
+</style>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+  
+  //点击弹出层
+	$("#btn").on("click",function(e){
+			 $("#login").fadeIn(200)		 
+	})
+  //点击遮罩层隐藏
+	$(".mask, .login-close").on("click",function(e){
+			e.stopPropagation()
+			 $("#login").fadeOut(200)		 
+	})
+})
+</script>
+</head>
+<body>
+<button id="btn" style="width:100px;height:50px;margin: 50px;border-radius: 5px;">登录</button>
+<!--登录 弹出框-->
+<div id="login">
+	<div class="mask"></div>
+	<div class="login-pop">
+		<!--tab-->
+    <div class="login-tabs" id="tabs">
+      <ul>
+        <li class="curr"><span><i class="icon-tabs01"></i>手机</span></li>
+        <li><span><i class="icon-tabs02"></i>微信</span></li>
+      </ul>
+    </div>
+    <div class="tab-box1 login-form">
+      <i class="login-close"></i>
+      <div>
+        <ul>
+          <li>
+            <input type="text" class="l-ipt phone02" placeholder="请输入手机号">
+          </li>
+          <li>
+            <input type="text" class="l-ipt psw02" placeholder="请输入登录密码">
+          </li>
+        </ul>
+        <div class="error">
+          <i></i>信息错误提示-文字放这边
+        </div>
+        <button class="login-btn2">登录</button>
+        <div class="login-reg">
+          <a href="#" class="pull-left">没账号？立即注册</a>
+          <a href="#"  class="pull-right">忘记密码？</a>
+        </div>
+      </div>
+      <div style="display: none">
+        <div class="login-weixin">
+          <img src="images/login-weixin.png" alt="">
+          <p>请使用微信扫描二维码登录“特区先锋”</p>
+        </div>
+      </div>
+    </div>
+		<!--//tab-->
+	</div>
+</div>
+<!--//登录 弹出框-->
+</body>
+</html>
