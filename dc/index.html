@@ -31,11 +31,81 @@
 .swiper-active-switch {
   background: #EC3636;
 }
+   /*登录下拉框*/
+   .newlog-pop{
+     position: absolute;
+     width: 168px;
+     border: 1px solid  #d1d1d1;
+     background-color: #fff;
+     text-align: center;
+     top: 40px;
+     left: 0;
+     z-index: 99999;
+     font-size: 16px;
+     display: none;
+   }
+   .newlog-pop.show{
+     display: block;
+   }
+   .newlog-pop > dl > dt{
+     height: 64px;
+     line-height: 64px;
+     border-bottom: 1px solid  #d1d1d1;
+     color: #E41B1B;
+   }
+   .newlog-pop > dl > dd {
+     color: #999;
+     line-height: normal;
+   }
+   .newlog-pop > dl > dd:nth-child(5),
+   .newlog-pop > dl > dd:nth-child(3) {
+     border-bottom: 1px solid  #d1d1d1;
+   }
+   .newlog-pop > dl > dd > a{
+     display: block; 
+     padding: 18px 0;
+     color: #999;
+     text-decoration: none
+   }
+   .newlog-pop > a{
+     display: block;
+     height: 64px;
+     line-height: 64px;
+     text-align: center;
+     color: #333;
+     font-weight: bold;
+   }
+   .newlog-mask{
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0);
+      display: none;
+    }
 </style>
 <script>
+  
 $(function(){
+  
+  //登录弹出层
+	$("#btnlogin").on("click",function(){		 
+		 $(".newlog-mask").fadeIn(200)
+		 $(".newlog-pop").addClass('show')		 
+	})
+	$(".newlog-mask,#exit").on("click",function(e){
+			e.stopPropagation()
+			$(".newlog-mask").fadeOut(300)
+		  $(".newlog-pop").removeClass('show')			
+	})
+  
+  
   $.TabChange("tabs",1)
   $.TabChange("tabs2",2)
+  
+  
 })
 /*tabs切换组件*/
 $.TabChange = function(obj,num){
@@ -56,10 +126,22 @@ $.TabChange = function(obj,num){
 			<span>今天是：2017年8月15日 星期二</span>
 			<span>厦门： 今天 晴到多云 最低温度:26最高温度:35℃</span>
 		</div>
-		<div class="pull-right">
-			<a href="#">中文简体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-			<a href="#">中文繁体&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-			<a href="#">English</a>
+		<div class="pull-right" style="position: relative">
+			<a style="display: inline-block" href="/index.php?s=/User/notify.html"><i class="noticetroy"></i>&nbsp;&nbsp;</a>
+			<a style="display: inline-block" href="javascript:void(0)" id="btnlogin"><i class="logintroy"></i>用户登录</a>
+			<!--newlog-->
+      <div class="newlog-mask"></div>
+      <div class="newlog-pop">
+        <dl>
+          <dt>用户123</dt>
+          <dd><a href="#">学习记录</a></dd>
+          <dd><a href="#">学习记录</a></dd>
+          <dd><a href="#">学习记录</a></dd>
+          <dd><a href="#">学习记录</a></dd>
+        </dl>
+        <a href="#" id="exit">退出登录</a>
+      </div>
+      <!--//newlog-->
 		</div>
 	</div>
 </div>

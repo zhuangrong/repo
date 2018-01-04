@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="css/dc.css">
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<script src="js/jquery.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script></script>
+<title>dc</title>
+<style>
+  .money-wrap{
+    overflow: hidden;
+    border: 1px solid  #d1d1d1;
+  }
+  .money-wrap .money-left{
+    float: left;
+    width: 758px;
+    padding: 0 20px;
+  }
+  .money-wrap .money-right{
+    float: right;
+    width: 359px;
+    padding: 0 20px;
+    border-left: 1px solid  #d1d1d1;
+  }
+  /*选项卡tabs*/
+  .money-tabs ul{
+    height: 82px;
+    border-bottom: 1px solid  #d1d1d1;
+  }
+  .money-tabs li{
+    float: left;
+    display: inline-block;
+    width: 128px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-right: 20px;
+  }
+  .money-tabs li.curr{
+    color: #E41B1B;	
+    border-bottom: 6px solid #E41B1B;
+  }
+  
+  .money-news-list{
+    margin-bottom: 40px;
+  }
+  .money-news-list li{
+    border-bottom: 1px solid #d1d1d1;
+    font-size: 13px;
+    overflow: hidden;
+  }
+  .money-news-list li a{
+    display: block;
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 670px;
+    color: #333;
+  }
+  .money-news-list li span{
+    display: block;
+    color: #999;
+    float: right;
+    width: 80px;
+    height: 70px;
+    line-height: 70px;
+    text-align: right;
+  }
+  .money-title2{
+    padding: 30px 0;
+    font-size: 28px;
+    color: #e41b1b;
+  }
+  .money-title2 i{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: #e41b1b;
+  }
+  /*图片下一页*/
+  .pic-turn{
+    display: block;
+    background-color: #F5F5F5;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    line-height: 44px;
+  }
+  .pic-turn:hover{
+    text-decoration: none;
+  }
+  .money-pics {
+    overflow: hidden;
+    padding: 20px 0 0;
+  }
+  .money-pics a{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  .money-pics img{
+    margin-bottom: 10px;
+  }
+  
+    
+</style>
+<script>
+$(function(){
+	$.TabChange("tabs",1)
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})													
+	})
+}
+</script>
+</head>
+<body>
+<div class="blank" style="height: 30px"></div>
+<!--资金政策-->
+<div class="new-container">
+  <div class="money-wrap">
+    <div class="money-left">
+      <!--政府资金tabs-->
+      <div class="money-tabs" id="tabs">
+        <ul>
+          <li class="curr">资金政策</li>
+          <li>政策扶持</li>
+        </ul>
+      </div>
+      <div class="tab-box1">
+        <div>
+          <div class="money-news-list">
+            <ul>
+              <li><a href="#">市科技局：联合发布《厦门市科技计划申报指南（2017）》的通知</a><span>2017-11-21</span></li>
+              <li><a href="#">市科技局：联合发布《厦门市科技计划申报指南（2017）》的通知</a><span>2017-11-21</span></li>
+              <li><a href="#">市科技局：联合发布《厦门市科技计划申报指南（2017）》的通知</a><span>2017-11-21</span></li>
+              <li><a href="#">市科技局：联合发布《厦门市科技计划申报指南（2017）》的通知</a><span>2017-11-21</span></li>
+              <li><a href="#">市科技局：联合发布《厦门市科技计划申报指南（2017）》的通知</a><span>2017-11-21</span></li>
+            </ul>
+          </div>
+          <!--翻页-->
+          
+          <!--//翻页-->
+        </div>
+        <div style="display: none">政策扶持</div>
+      </div>
+      <!--//政府资金tabs-->
+    </div>
+    <div class="money-right">
+      <h3 class="money-title2"><i></i>组织生活</h3>
+      <!--图片列表下一页-->
+      <div class="money-pics-wrap">
+        <a href="javascript:;" class="pic-turn arrow-up">上一页</a>
+        <!--swiper-->
+        <div class="swiper-container" id="pic3" style="height: 1810px">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="money-pics">
+                <a href="#">
+                  <img src="images/money-pic01.jpg">1湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">2湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">3湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">4湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">5湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">6湖里区高层次人才，开通了
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="money-pics">
+                <a href="#">
+                  <img src="images/money-pic01.jpg">1湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">2湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">3湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">4湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">5湖里区高层次人才，开通了
+                </a>
+                <a href="#">
+                  <img src="images/money-pic01.jpg">6湖里区高层次人才，开通了
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:;" class="pic-turn t2 arrow-down">下一页</a>
+        <script language="javascript"> 
+        var mySwiper = new Swiper('#pic3',{
+                          loop:true,
+                          effect : 'fade',
+                          mode : 'vertical',
+                       })
+          $('.arrow-up').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipePrev()
+          })
+          $('.arrow-down').on('click', function(e){
+            e.preventDefault()
+            mySwiper.swipeNext()
+          })
+        </script>
+        <!--//swiper-->
+      </div>
+      <!--//图片列表下一页-->
+    </div>
+  </div>
+</div>
+<!--//资金政策-->
+<div class="blank" style="height: 42px"></div>
+</body>
+</html>
