@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/swiper.min.css" />   
+<link rel="stylesheet" href="css/youxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+	
+	//认证失败
+	$("#get-certify").on("click",function(){
+		 $("#dialog-certify").show()
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask, .btn02").on("click",function(e){
+			e.stopPropagation()
+			 $("#dialog-certify").hide()		 
+	})
+  
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>信息认证</span>
+  <a></a>
+</div>
+<!--//头部-->
+<!--信息认证-->
+<div class="certification">
+  <a href="javascript:;">
+    <i class="icon-certify01"></i>
+    <span class="c-go">基本信息认证</span>
+    <button class="c-go">去认证</button>
+  </a>
+  <a href="javascript:;">
+    <i class="icon-certify02"></i>
+    <span class="c-ok">运营商信息认证</span>
+    <button class="c-ok">已认证</button>
+  </a>
+  <a href="javascript:;">
+    <i class="icon-certify03"></i>
+    <span class="c-in">淘宝认证</span>
+    <button class="c-in">审核中</button>
+  </a>
+  <a href="javascript:;"  id="get-certify">
+    <i class="icon-certify04"></i>
+    <span class="c-redo">人脸识别</span>
+    <button class="c-redo">重新认证</button>
+  </a>
+</div>
+<!--//信息认证-->
+<div class="safe-info">
+  <i class="icon-safe"></i>有信金融信息安全加密&隐私保障
+</div>
+<div class="blank-bar"></div>
+<!--申请栏-->
+<div class="apply-bar">
+  <a href="javascript:;">申请</a>
+  <a href="javascript:;">平台介绍</a>
+</div>
+<!--//申请栏-->
+<!--认证失败-->
+<div id="dialog-certify" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog">
+     <div class="submit-cont">
+       <h3>
+         <i class="icon-warning"></i>
+         认证失败 <em>因为图片不清晰等原因</em>
+       </h3>
+       <a href="javascript:;" class="btn02">返回首页</a>
+     </div>
+	</div>
+</div>
+<!--//认证失败-->
+</body>
+</html>

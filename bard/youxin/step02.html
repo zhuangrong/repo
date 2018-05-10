@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/youxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>基本信息认证</span>
+  <a></a>
+</div>
+<!--//头部-->
+<div class="space-sm"></div>
+<!--步骤示意图-->
+<div class="step-indication">
+  <ul>
+    <li class="success">
+      <i>1</i>
+      <label>基本信息</label>
+    </li>
+    <li class="active">
+      <i>2</i>
+      <label>工作信息</label>
+    </li>
+    <li>
+      <i>3</i>
+      <label>亲属信息</label>
+    </li>
+    <li>
+      <i>4</i>
+      <label>资产信息</label>
+    </li>
+  </ul>
+</div>
+<!--//步骤示意图-->
+<div class="space-sm"></div>
+<!--基本信息-->
+<div class="form-info">
+  <ul>
+    <li>
+      <h3>工作单位</h3>
+      <label><input type="text" class="ipt" placeholder="请输入工作单位"><i>&times;</i></label>
+    </li>
+    <li>
+      <h3>单位电话</h3>
+      <label><input type="text" class="ipt" placeholder="请输入单位电话"><i>&times;</i></label>
+    </li>
+    <li>
+      <h3>单位地址</h3>
+      <label><input type="text" class="ipt" placeholder="请输入单位地址"><i>&times;</i></label>
+    </li>
+    <li id="colleagues">
+      <h3>同事姓名及电话</h3>
+      <div class="ipt2-wrap">
+        <label><input type="text" class="ipt" placeholder="姓名"></label>
+        <label><input type="text" class="ipt" placeholder="电话"><i>&times;</i></label>
+      </div>
+    </li>
+    <li>
+      <h3 id="addC">+增加同事</h3>
+    </li>
+  </ul>
+</div>
+<!--//基本信息-->
+<div class="blank-bar"></div>
+<!--下一步-->
+<a href="#" class="btn-next">下一步</a>
+<!--//下一步-->
+</body>
+</html>

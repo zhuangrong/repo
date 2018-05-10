@@ -1,0 +1,226 @@
+/*hide and show*/
+.hide-mb {
+	display: block;
+}
+.hide-pc {
+	display: none;
+}
+
+
+/*----------------------- 大于1400px-----------------------*/
+@media (min-width: 1400px){
+	.header .container {
+		width: 1400px;
+	}
+}
+
+/*-----------------------pc 大于820px 小于1320px----------------------*/
+@media (max-width: 1320px) and (min-width: 820px) {
+	.nav li{
+    padding: 0 20px 0;
+  }
+  .nav-sub dl dd{
+    padding-right: 10px;
+    font-size: 14px;
+  }
+  html{
+    font-size: 80px;
+  }
+  .banner-text{
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+}
+
+/*-----------------------iphone 小于820px----------------------*/
+@media (max-width: 820px){
+  html{
+    font-size: 50px;
+  }
+  .mainer{
+    width: 100%;
+  }
+  .banner-text{
+    font-size: .15rem;
+    max-width: 3.5rem;
+    margin-left: 1rem;
+  }
+  .banner-text h2{
+    font-size: .28rem;
+  }
+  .banner-text p{
+    padding: 0 0;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+  }
+  .search-bar{
+    width: 92%;
+  }
+  .swiper01 .swiper-button-next,
+  .swiper01 .swiper-button-prev{
+    width: .4rem;
+    height: .4rem;
+    margin-top: -.25rem;
+  }
+  /*hide and show*/
+	.hide-mb {
+		display: none !important;
+	}
+	.hide-pc {
+		display: block;
+	}
+  .header{
+		position: static;
+    padding-top: 5px;
+    padding-left: 7px;
+		height: 40px;
+		background-color: #ccc;
+	}
+	.header .logo{
+		width: 170px;
+    padding-top: 0;
+	}
+	.header .logo img{
+		height: 30px;
+	}
+  .header-tip{
+    float: right;
+  }
+	.nav-toggle {
+		display: block;
+		width: 39px;
+		height: 29px;
+		vertical-align: middle;
+		margin: 0 6px 0 0;
+		background-image: url(../images/nav-toggle.png);
+		background-size: 35px auto;
+	}
+  .nav{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav li{
+    display: block;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid  #ddd;
+    padding:0;
+    height: auto
+  }
+  .nav li.active,
+  .nav li:active{
+    background-color: #A08347;
+  }
+  .nav li.active a,
+  .nav li:active a{
+    color: #fff;
+  }
+  /*二级导航*/
+  .nav-sub,
+  .nav-sub-wrap{
+     opacity: 0 !important;
+     display: none !important;
+  }
+  .nav li.nav-sub-arrow > a:after{
+    display: none !important;
+  }
+}
+/*-----------------------ipad 小于1280px 且设备像素比大于2 ------------------------*/
+
+@media (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2){
+  html{
+    font-size: 50px;
+  }
+  /*hide and show*/
+	.hide-mb {
+		display: none !important;
+	}
+	.hide-pc {
+		display: block;
+	}
+	.header{
+		position: static;
+    padding-top: 5px;
+    padding-left: 7px;
+		height: 40px;
+		background-color: #fff;
+	}
+	.header .logo{
+		width: 170px;
+	}
+  .header-tip{
+    float: right;
+  }
+	.nav-toggle {
+		display: block;
+		width: 39px;
+		height: 29px;
+		vertical-align: middle;
+		margin: 0 6px 0 0;
+		background-image: url(../images/nav-toggle.png);
+		background-size: 35px auto;
+	}
+  .nav{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav li{
+    display: block;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid  #ddd;
+    padding:0;
+  }
+  .nav li > a {
+    line-height: 46px;
+  }
+  .nav li.active,
+  .nav li:active{
+    background-color: #E60012;
+  }
+  .nav li.active a,
+  .nav li:active a{
+    color: #fff;
+  }
+  /*二级导航*/
+  .nav-sub,
+  .nav-sub-wrap{
+     opacity: 0 !important;
+     display: none !important;
+  }
+}
+
+/*-----------------------pc端小屏预览 且设备像素比0------------------------*/
+@media  (max-width: 800px) and (-webkit-min-device-pixel-ratio:0){
+  html{
+    font-size: 70px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

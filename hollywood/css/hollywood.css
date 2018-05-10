@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+html {
+	font-size: 100px;
+}
+body, html {
+	color: #000;
+	font-family: tahoma, 'Microsoft yahei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+body{
+  font-size: 16px;
+}
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, a, nav{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+body, span, label, p, h1, h2, h3, h4, h5, h6, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input, textarea {
+	background-repeat: no-repeat !important;
+	background-position: center center;
+}
+li {
+	list-style: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+a {
+	color: #000;
+	text-decoration: none;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	/*解决Safari 点击时 标签文本被选中，有底色*/
+	-webkit-user-select: none;
+}
+a:active, a:hover {
+	color: #e60012;
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	max-width: 100% !important;
+	vertical-align: middle;
+	border: 0;
+}
+button {
+	overflow:visible;
+	border: none;
+	outline: 0;
+}
+input,button,textarea{
+	font-family: 'Microsoft yahei';
+  outline: 0;
+}
+em,h3{
+	font:inherit
+}
+.c01{
+	color: #16438c;
+}
+.tc{
+	text-align: center;
+}
+.hide-mb {
+	display: block;
+}
+.hide-pc {
+	display: none;
+}
+/*--------------头部*--------------*/
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999;
+	height: 130px;
+	background-color: rgba(170, 132, 65, .3);
+}
+.header .logo{
+  float: left;
+  width: 260px;
+  padding-top: 32px;
+}
+.header .container {
+  margin: 0 auto;
+}
+/*导航*/
+.nav{
+  float: left;
+  padding-left: 50px;
+  padding-right: 8px;
+}
+.nav li{
+  display: inline-block;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 18px;
+  height:  130px;
+  line-height: 130px;
+}
+.nav li.active,
+.nav li:hover{
+  background-color: #9A917F;
+}
+.nav li > a{
+  display:block;
+  color: #fff;
+}
+.hd-lang{
+  float: right;
+  padding-top: 42px;
+}
+.hd-lang button{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid  #fff;
+  background: transparent;
+  color:  #fff;
+  margin: 0 3px;
+  cursor: pointer;  
+}
+.hd-lang button.active{
+  border: none;
+  background-color: #A08347;
+  font-size:  16px;
+}
+/*二级导航*/
+.nav-sub-arrow{
+  position: relative;
+}
+.nav-sub-wrap{
+  position: absolute;
+  display:  none;
+  top: 130px;
+  left: 0;
+  right: 0;
+  background-color: #9A917F;
+}
+.nav-sub{
+  text-align: center;
+}
+.nav-sub dl{
+  text-align: center;
+}
+.nav-sub dl dd{
+  height: 70px;
+  line-height: 70px;
+}
+.nav-sub dl dd a{
+  color: #fff;
+}
+.nav-sub dl dd:hover {
+  background-color: #fff;
+}
+.nav-sub dl dd:hover a{
+  color: #AA8441;
+}
+/*适配全局宽度*/
+.mainer{
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+/*--------------banner--------------*/
+.swiper01 {
+	width: 100%;
+}
+.swiper01 .swiper-slide {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.swiper01 .swiper-button-next,
+.swiper01 .swiper-button-prev{
+  opacity: 1;
+  width: .63rem;
+  height: .63rem;
+  left: .25rem;
+  background-image: url(../images/swiper-button-prev.png);
+  background-size: 100%;
+  margin-top: .25rem;
+  cursor: pointer
+}
+.swiper01 .swiper-button-next{
+  right: .25rem;
+  left: auto;
+  background-image: url(../images/swiper-button-next.png);
+}
+.banner-text-wrap{
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height: 100%;
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.banner-text{
+  max-width: 4.5rem;
+  color: #999;
+}
+.banner-text h2{
+  font-weight: normal;
+	color: #333;
+  font-size: .38rem;
+}
+.banner-text h2 em{
+  display: block;
+	color: #828282;
+  font-size: .2rem;
+}
+.banner-text p{
+	padding: .25rem 0;
+}
+
+/*--------------搜索栏--------------*/
+.search-bar{
+  position: relative;
+  z-index: 999;
+  width: 9.8rem;
+  padding: 0 .7rem;
+  height: .85rem;
+	background-color: rgba(170, 132, 65, .3);
+  margin: -.4rem auto 0;
+}
+.search-bar input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  line-height: .85rem;
+  border: none;
+  font-size: .2rem !important;
+  color: #fff;
+}
+.search-bar input::-webkit-input-placeholder {
+  color:#fff;
+}
+.search-bar button{
+  position: absolute;
+  top: 0;
+  right: .7rem;
+  width: 0.28rem;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../images/search-bar.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

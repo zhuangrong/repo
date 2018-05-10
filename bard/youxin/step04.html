@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>wanxin</title>
+<link rel="stylesheet" href="css/youxin.css" />   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(function(){
+	  //图片上传-单张
+  $(".pic-upload").each(function(){
+		  var tmpl = '<li style="background-image:url(#url#)"></li>'
+      var $uploaderFile = $(this).find(".uploader-file-yes")
+      var $uploaderPic = $(this).find(".uploader-pic")
+      var _this = this
+      $uploaderFile.on("change", function(e){
+      var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;				
+          src = url.createObjectURL(files[0]);						
+          $(_this).find(".uploader-file").css({"opacity":"0"}); 
+          $uploaderPic.html($(tmpl.replace('#url#', src)));				
+      });
+  })
+  
+	//对话框
+	$("#submit-certify").on("click",function(){
+		 $("#dialog-success").show()
+	})
+	
+	//点击遮罩层隐藏
+	$(".mask").on("click",function(e){
+			e.stopPropagation()
+			 $("#dialog-success").hide()		 
+	})
+  
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>基本信息认证</span>
+  <a></a>
+</div>
+<!--//头部-->
+<div class="space-sm"></div>
+<!--步骤示意图-->
+<div class="step-indication">
+  <ul>
+    <li class="success">
+      <i>1</i>
+      <label>基本信息</label>
+    </li>
+    <li class="success">
+      <i>2</i>
+      <label>工作信息</label>
+    </li>
+    <li class="success">
+      <i>3</i>
+      <label>亲属信息</label>
+    </li>
+    <li class="active">
+      <i>4</i>
+      <label>资产信息</label>
+    </li>
+  </ul>
+</div>
+<!--//步骤示意图-->
+<div class="space-sm"></div>
+<!--基本信息-->
+<div class="form-info">
+  <ul>
+    <li>
+      <h3>未还借款/元</h3>
+      <label><input type="text" class="ipt" placeholder="10000"><i>&times;</i></label>
+    </li>
+    <li>
+      <h3>花呗额度/元</h3>
+      <label><input type="text" class="ipt" placeholder="30000"><i>&times;</i></label>
+    </li>
+    <li>
+      <h3>借呗额度/元</h3>
+      <label><input type="text" class="ipt" placeholder="30000"><i>&times;</i></label>
+    </li>
+    <li>
+      <h3>
+        有无房产 
+        <span>
+          <input type="radio" name="estate" class="rad" checked>
+          <input type="radio" name="estate" class="rad">
+        </span>
+      </h3>
+    </li>
+    <li>
+      <div class="pic-upload-wrap">
+        <div class="pic-upload">
+            <!--pic upload-->
+            <div class="uploader-wrap">
+              <ul class="uploader-pic" >
+                <!--<li style="background-image:url(images/avatar.png)"></li>-->
+              </ul>
+              <div class="uploader-file">
+                  <input class="uploader-file-yes" type="file" accept="image/*"/>
+                  <span>文字清晰，四角齐全</span>
+              </div>
+            </div>
+            <!--//pic upload-->
+        </div>
+        <div class="pic-upload">
+            <!--pic upload-->
+            <div class="uploader-wrap">
+              <ul class="uploader-pic">
+                <!--<li style="background-image:url(images/avatar.png)"></li>-->
+              </ul>
+              <div class="uploader-file">
+                  <input class="uploader-file-yes" type="file" accept="image/*"/>
+                  <span>文字清晰，四角齐全</span>
+              </div>
+            </div>
+            <!--//pic upload-->
+        </div>
+      </div>
+    </li>
+    <li>
+      <h3>
+        有无车辆
+        <span>
+          <input type="radio" name="car" class="rad" checked>
+          <input type="radio" name="car" class="rad">
+        </span>
+      </h3>
+    </li>
+    <li>
+      <div class="pic-upload-wrap">
+        <div class="pic-upload">
+            <!--pic upload-->
+            <div class="uploader-wrap">
+              <ul class="uploader-pic" >
+                <!--<li style="background-image:url(images/avatar.png)"></li>-->
+              </ul>
+              <div class="uploader-file">
+                  <input class="uploader-file-yes" type="file" accept="image/*"/>
+                  <span>文字清晰，四角齐全</span>
+              </div>
+            </div>
+            <!--//pic upload-->
+        </div>
+        <div class="pic-upload">
+            <!--pic upload-->
+            <div class="uploader-wrap">
+              <ul class="uploader-pic">
+                <!--<li style="background-image:url(images/avatar.png)"></li>-->
+              </ul>
+              <div class="uploader-file">
+                  <input class="uploader-file-yes" type="file" accept="image/*"/>
+                  <span>文字清晰，四角齐全</span>
+              </div>
+            </div>
+            <!--//pic upload-->
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<!--//基本信息-->
+<div class="blank-bar"></div>
+<!--下一步-->
+<a href="#" class="btn-next" id="submit-certify">提交认证</a>
+<!--//下一步-->
+
+<!--提交成功-->
+<div id="dialog-success" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog">
+     <div class="submit-cont">
+       <h3>
+         <i class="icon-ok"></i>
+         提交成功
+       </h3>
+       <a href="javascript:;" class="btn02">返回首页</a>
+     </div>
+	</div>
+</div>
+<!--//提交成功-->
+</body>
+</html>
