@@ -37,6 +37,15 @@
   html{
     font-size: 50px;
   }
+	.footer .ft-col-02,
+	.footer .ft-col-01{
+		-webkit-box-flex:0 0 100%;
+		-webkit-flex:0 0 100%;
+		flex:0 0 100%;
+	}
+	.footer .ft-col-03{
+		width: 100%;
+	}
   .mainer{
     width: 100%;
   }

@@ -83,6 +83,9 @@ em,h3{
   width: 260px;
   padding-top: 32px;
 }
+.header .logo img{
+  width: 1.8rem;
+}
 .header .container {
   margin: 0 auto;
 }
@@ -260,9 +263,101 @@ em,h3{
 
 
 
+/*--------------footer--------------*/
+.footer-wrap{
+	padding-top: .4rem;
+	height: 8rem;
+	background-image: url(../images/footer.jpg);
+	color: #fff;
+}
+.footer{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.footer .ft-col-02,
+.footer .ft-col-01{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+}
+.footer .ft-col-03{
+	width: 1.5rem;
+}
+.footer .ft-title{
+	font-size: .24rem;
+	height: 1rem;
+}
+.footer .ft-title:after{
+	content: '';
+	width: 1px;
+	height: .5rem;
+	background-color: #ffffff;
+	display: block;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.footer .ft-link a{
+	display: inline-block;
+	width: 1.38rem;
+	color: #fff;
+	margin-top: .1rem;
+}
+.footer .ft-link a.divide{
+	display: block;
+}
+.footer .ft-link a.line{
+	display: block;
+	width: 2.1rem;
+}
+.footer .ft-link a em{
+	font-size: .12rem;
+	display: block;
+}
 
 
-
+.footer .ft-contact li{
+	margin-top: .1rem;
+}
+.footer .ft-contact li em{
+	font-size: .12rem;
+	display: block;
+}
+.footer .ft-contact li.add:before,
+.footer .ft-contact li.tel:before{
+	content: '';
+	display: inline-block;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/icon-tel.png);
+	vertical-align: middle;
+}
+.footer .ft-contact li.add:before{
+	background-image: url(../images/icon-add.png);
+}
+.footer .ft-contact li.phone-num{
+	margin-top: .3rem;
+}
+.footer .ft-qr li{
+	display: block;
+	margin-bottom: .3rem;
+	text-align: center;
+}
+.footer .ft-qr li img{
+	margin-bottom: 5px;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+}
+.footer .ft-logo{
+	margin-top: 1.1rem;
+}
+.footer .ft-logo img{
+	width: 260px;
+}
 
 
 
