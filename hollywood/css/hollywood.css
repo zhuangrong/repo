@@ -81,7 +81,8 @@ em,h3{
 .header .logo{
   float: left;
   width: 260px;
-  padding-top: 32px;
+  padding-top: .4rem;
+  text-align: center;
 }
 .header .logo img{
   width: 1.8rem;
@@ -262,7 +263,49 @@ em,h3{
 }
 
 
-
+/*--------------商品类别--------------*/
+.goods-list{
+	background-color: #f2f2f2;
+	padding: 1rem 0;
+}
+.swiper03 .swiper-slide{
+	background-color: #fff;
+}
+.swiper03 .swiper-slide .goods-info{
+	background-color: #FBFBFB;
+	padding: 20px;
+	color: #9d9d9d;
+}
+.swiper03 .swiper-slide .goods-info a{
+	color: #9d9d9d;
+	float: right;
+	margin-top: -30px;
+	border-bottom: 3px solid #B29B6B;
+}
+.swiper03 .swiper-slide .goods-info h3{
+	color: #6d6d6d;
+	font-size: .22rem;
+	font-weight: normal;
+}
+.swiper03 .swiper-slide .goods-info span em{
+	display: block;
+}
+.swiper03 .swiper-button-next,
+.swiper03 .swiper-button-prev{
+  opacity: 1;
+  width: .62rem;
+  height: 1.18rem;
+  left: -.5rem;
+  background-image: url(../images/swiper-button-prev2.png);
+  background-size: 100%;
+  margin-top: -.55rem;
+  cursor: pointer
+}
+.swiper03 .swiper-button-next{
+  right: -14px;
+  left: auto;
+  background-image: url(../images/swiper-button-next2.png);
+}
 /*--------------footer--------------*/
 .footer-wrap{
 	padding-top: .4rem;
@@ -301,7 +344,7 @@ em,h3{
 }
 .footer .ft-link a{
 	display: inline-block;
-	width: 1.38rem;
+	width: 1.88rem;
 	color: #fff;
 	margin-top: .1rem;
 }

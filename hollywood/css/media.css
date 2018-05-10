@@ -8,10 +8,14 @@
 
 
 /*----------------------- 大于1400px-----------------------*/
-@media (min-width: 1400px){
+@media (min-width: 1360px){
 	.header .container {
 		width: 1400px;
 	}
+  .banner-text{
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+  }
 }
 
 /*-----------------------pc 大于820px 小于1320px----------------------*/
@@ -37,6 +41,17 @@
   html{
     font-size: 50px;
   }
+	.footer{
+		padding: 0 10px;
+	}
+	.footer-wrap{
+		background-color: #9A917F;
+		background-image: none;
+		height: auto;
+	}
+	.footer .ft-title{
+		margin-top: 0.4rem;
+	}
 	.footer .ft-col-02,
 	.footer .ft-col-01{
 		-webkit-box-flex:0 0 100%;
@@ -45,6 +60,9 @@
 	}
 	.footer .ft-col-03{
 		width: 100%;
+	}
+	.footer .ft-col-03 img{
+		margin: 0 auto;
 	}
   .mainer{
     width: 100%;

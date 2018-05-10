@@ -132,6 +132,60 @@ $(function(){
   <button></button>
 </div>
 <!--//搜索栏-->
+<!--商品类别-->
+<div class="goods-list">
+  <div class="mainer">
+		<!-- Swiper -->
+		<div class="swiper-container swiper03">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					 <img src="images/goods.png" alt="">
+					 <div class="goods-info">
+						 <h3>商品类别</h3>
+						 <span>大概个性化名称名称<em>￥1999</em></span>
+						 <a href="#">查看更多</a>
+					 </div>
+				</div>
+				<div class="swiper-slide">
+					 <img src="images/goods.png" alt="">
+					 <div class="goods-info">
+						 <h3>商品类别</h3>
+						 <span>大概个性化名称名称<em>￥1999</em></span>
+						 <a href="#">查看更多</a>
+					 </div>
+				</div>
+				<div class="swiper-slide">
+					 <img src="images/goods.png" alt="">
+					 <div class="goods-info">
+						 <h3>商品类别</h3>
+						 <span>大概个性化名称名称<em>￥1999</em></span>
+						 <a href="#">查看更多</a>
+					 </div>
+				</div>
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+		<!-- //Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper03', {
+					pagination: '.sp3',
+					paginationClickable: true,
+					slidesPerView: 3,
+					spaceBetween: 50,
+					breakpoints: {
+							820: {
+									slidesPerView: 3,
+									spaceBetween: 20
+							}
+					}
+			});
+		 </script>
+   </div>
+</div>
+<!--//商品类别
+-->
 <!--footer-->
 <div class="footer-wrap">
 	<div class="mainer">
@@ -148,7 +202,7 @@ $(function(){
 					<a href="#" class="line" >关于我们<em>ABOUT US</em></a>
 					<a href="#" class="line" >好莱坞商会<em>HOLLYWOOD CHAMBER OF COMMERCE</em></a>
 				</div>
-				<div class="ft-logo">
+				<div class="ft-logo hide-mb">
 					<img src="images/logo.png" alt="">
 				</div>
 			</div>
