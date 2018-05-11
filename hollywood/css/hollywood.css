@@ -291,6 +291,8 @@ em,h3{
 .swiper03 .swiper-slide .goods-info span em{
 	display: block;
 }
+.swiper05 .swiper-pagination-bullet-active,
+.swiper05 .swiper-pagination-bullet,
 .swiper02 .swiper-pagination-bullet-active,
 .swiper02 .swiper-pagination-bullet,
 .swiper03 .swiper-pagination-bullet-active,
@@ -302,6 +304,7 @@ em,h3{
 	margin: 0 5px !important;
 	opacity: 1;
 }
+.swiper05 .swiper-pagination-bullet-active,
 .swiper02 .swiper-pagination-bullet-active,
 .swiper03 .swiper-pagination-bullet-active {
 	background: rgba(160, 130, 70, 1) !important;
@@ -821,18 +824,22 @@ em,h3{
 }
 
 /*--------------swiper05--------------*/
-
 .swiper05 .swiper-slide{
-    -webkit-transform:scale(0.8);
-   -webkit-transition: all linear 0.6s;
+  -webkit-transform:scale(.8);
+  -webkit-transition: all linear 0.6s;
 }
 .swiper05 .swiper-slide-active{
   z-index: 999;
-    -webkit-transform:scale(2.0);
-    /*-webkit-transform:scale(2.0);当前显示的项目，覆盖左右两边的*/
-   -webkit-transition: all linear 0.6s;
+  -webkit-transform:scale(2);
+  /*-webkit-transform:scale(2.0);当前显示的项目，覆盖左右两边的*/
+  -webkit-transition: all linear 0.6s;
 }
-
+.swiper05.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: .2rem;
+}
+.project-container{
+  width: 13.8rem;
+}
 
 
 

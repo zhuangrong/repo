@@ -26,7 +26,8 @@ $(function(){
 <div class="header">
   <div class="container">
     <a href="#" class="logo">
-      <img src="images/logo.png" alt="">
+      <img src="images/logo.png" alt="" class="hide-mb">
+      <img src="images/logo-mobile.png" alt="" class="hide-pc">
     </a>
     <div class="nav-right">
       <div class="nav"  id="nav">
@@ -138,7 +139,7 @@ $(function(){
      <h3>我们的项目 <em>Our Project</em></h3>
   </div>
 </div>
-<div class="mainer" style="width:13.8rem">
+<div class="mainer project-container">
       <!-- Swiper -->
       <div class="swiper-container swiper05">
         <div class="swiper-wrapper">
@@ -158,11 +159,14 @@ $(function(){
              <img src="images/project-pic02.png" alt="">
           </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination sp5"></div>
+        
       </div>
       <!-- //Swiper -->
       <script>
         var swiper05 = new Swiper('.swiper05', {
-          pagination: '.sp2',
+          pagination: '.sp5',
           initialSlide: 1,
           slidesPerView: 3,
           centeredSlides: true,
