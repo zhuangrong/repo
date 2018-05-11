@@ -3,7 +3,7 @@
 	display: block;
 }
 .hide-pc {
-	display: none;
+	/* display: none; */
 }
 
 
@@ -13,8 +13,8 @@
 		width: 1400px;
 	}
   .banner-text{
-    margin-top: 1rem;
-    margin-left: 2.5rem;
+    margin-top: .5rem;
+    margin-left: 0.5rem;
   }
 }
 
@@ -41,9 +41,37 @@
   html{
     font-size: 50px;
   }
-	.footer{
-		padding: 0 10px;
-	}
+  .aboutus-wrap .aboutus-text{
+    padding-top: .5rem;
+  }
+  .team-wrap .team-info .team-text{
+    padding-top: 1rem;
+  }
+  .team-swiper{
+    padding-top: 0;
+    width: 100% !important;
+  }
+  .team-wrap .team-info .team-title h3:after{
+    width: 3rem;
+  }
+  .team-wrap .team-info .team-text{
+    padding-right: 0;
+  }
+  .news-wrap .news-left{
+    padding-right: 0;
+  }
+  .news-pic01 li label{
+    width: 2rem;
+  }
+  .news-pic01 li span{
+    padding: .1rem .15rem;
+  }
+  .swiper03 .swiper-slide .goods-info a{
+    float: none
+  }
+  .flex100{
+    flex: 0 0 100% !important;
+  }
 	.footer-wrap{
 		background-color: #9A917F;
 		background-image: none;
@@ -66,6 +94,7 @@
 	}
   .mainer{
     width: 100%;
+    padding: 0 .15rem;
   }
   .banner-text{
     font-size: .15rem;
@@ -172,7 +201,7 @@
 		display: none !important;
 	}
 	.hide-pc {
-		display: block;
+		/* display: block; */
 	}
 	.header{
 		position: static;
