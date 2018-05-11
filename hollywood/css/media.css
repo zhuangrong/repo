@@ -7,7 +7,7 @@
 }
 
 
-/*----------------------- 大于1400px-----------------------*/
+/*-----------------------pc 大于1400px-----------------------*/
 @media (min-width: 1360px){
 	.header .container {
 		width: 1400px;
@@ -19,7 +19,7 @@
 }
 
 /*-----------------------pc 大于820px 小于1320px----------------------*/
-@media (max-width: 1320px) and (min-width: 820px) {
+@media (max-width: 1360px) and (min-width: 820px) {
 	.nav li{
     padding: 0 20px 0;
   }

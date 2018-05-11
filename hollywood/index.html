@@ -135,6 +135,9 @@ $(function(){
 <!--商品类别-->
 <div class="goods-list">
   <div class="mainer">
+    
+		<div class="swiper-button-next-outside"></div>
+		<div class="swiper-button-prev-outside"></div>
 		<!-- Swiper -->
 		<div class="swiper-container swiper03">
 			<div class="swiper-wrapper">
@@ -162,14 +165,28 @@ $(function(){
 						 <a href="#">查看更多</a>
 					 </div>
 				</div>
+				<div class="swiper-slide">
+					 <img src="images/goods.png" alt="">
+					 <div class="goods-info">
+						 <h3>商品类别</h3>
+						 <span>大概个性化名称名称<em>￥1999</em></span>
+						 <a href="#">查看更多</a>
+					 </div>
+				</div>
+				<div class="swiper-slide">
+					 <img src="images/goods.png" alt="">
+					 <div class="goods-info">
+						 <h3>商品类别</h3>
+						 <span>大概个性化名称名称<em>￥1999</em></span>
+						 <a href="#">查看更多</a>
+					 </div>
+				</div>
 			</div>
 			<!-- Add Arrows -->
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
 		</div>
 		<!-- //Swiper -->
 		<script>
-			var swiper = new Swiper('.swiper03', {
+			var swiper03 = new Swiper('.swiper03', {
 					pagination: '.sp3',
 					paginationClickable: true,
 					slidesPerView: 3,
@@ -181,6 +198,14 @@ $(function(){
 							}
 					}
 			});
+			$('.swiper-button-prev-outside').on('click', function(e){
+				e.preventDefault()
+				swiper03.slidePrev()
+			})
+			$('.swiper-button-next-outside').on('click', function(e){
+				e.preventDefault()
+				swiper03.slideNext()
+			})
 		 </script>
    </div>
 </div>

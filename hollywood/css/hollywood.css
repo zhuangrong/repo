@@ -167,7 +167,7 @@ em,h3{
 }
 /*适配全局宽度*/
 .mainer{
-  width: 1300px;
+  width: 13rem;
   margin: 0 auto;
   position: relative;
 }
@@ -290,19 +290,21 @@ em,h3{
 .swiper03 .swiper-slide .goods-info span em{
 	display: block;
 }
-.swiper03 .swiper-button-next,
-.swiper03 .swiper-button-prev{
+.swiper-button-next-outside,
+.swiper-button-prev-outside{
+  z-index: 999999;
+  position: absolute;
   opacity: 1;
   width: .62rem;
   height: 1.18rem;
-  left: -.5rem;
+  top: 2rem;
+  left: -0.8rem;
   background-image: url(../images/swiper-button-prev2.png);
   background-size: 100%;
-  margin-top: -.55rem;
-  cursor: pointer
+  cursor: pointer;
 }
-.swiper03 .swiper-button-next{
-  right: -14px;
+.swiper-button-next-outside{
+  right: -.8rem;
   left: auto;
   background-image: url(../images/swiper-button-next2.png);
 }
