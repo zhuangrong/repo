@@ -139,24 +139,17 @@ $(function(){
      <h3>我们的项目 <em>Our Project</em></h3>
   </div>
 </div>
-<div class="mainer project-container">
+<div class="mainer">
       <!-- Swiper -->
       <div class="swiper-container swiper05">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
              <img src="images/project-pic02.png" alt="">
+      			 <span>娱乐板块 <a href="#">查看很多</a></span>
           </div>
           <div class="swiper-slide">
              <img src="images/project-pic.png" alt="">
-          </div>
-          <div class="swiper-slide">
-             <img src="images/project-pic02.png" alt="">
-          </div>
-          <div class="swiper-slide">
-             <img src="images/project-pic.png" alt="">
-          </div>
-          <div class="swiper-slide">
-             <img src="images/project-pic02.png" alt="">
+      			 <span>娱乐板块 <a href="#">查看很多</a></span>
           </div>
         </div>
         <!-- Add Pagination -->
@@ -166,15 +159,21 @@ $(function(){
       <!-- //Swiper -->
       <script>
         var swiper05 = new Swiper('.swiper05', {
-          pagination: '.sp5',
-          initialSlide: 1,
-          slidesPerView: 3,
-          centeredSlides: true,
-          paginationClickable: true,
-          autoplay: 1500,
-          autoplayDisableOnInteraction:false, //使用手势后，还会自动播放
-          loop:true,
-          spaceBetween: 30,
+					pagination: '.sp5',
+					initialSlide: 1,
+					slidesPerView : 2,
+					centeredSlides: true,
+					effect: 'coverflow',
+					grabCursor: true,
+					loop : true,
+					loopedSlides:5,
+					coverflow: {
+						rotate: 0,
+						stretch: 10,
+						depth: 300,
+						modifier: 1,
+						slideShadows : false
+					}
         });
        </script>
   </div>

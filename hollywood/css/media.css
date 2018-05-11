@@ -41,6 +41,17 @@
   html{
     font-size: 50px;
   }
+	
+	.swiper05 .swiper-slide span a:after{
+		top: .15rem;
+		right: .2rem;
+		width: .2rem;
+		height: .3rem;
+	}
+	.swiper05 .swiper-slide span{
+		height: .6rem;
+		line-height: .6rem;
+	}
   .projects-title{
     padding-top: .5rem;
     width: 2.52rem;
@@ -53,9 +64,6 @@
     left: .8rem;
     width: 2.6rem;
     height: 2.0rem;
-  }
-  .project-container{
-    width: 100%;
   }
 
   .aboutus-wrap .aboutus-text{
