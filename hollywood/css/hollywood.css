@@ -788,10 +788,50 @@ em,h3{
   flex-direction: row-reverse; 
 }
 
+/*--------------我们的项目--------------*/
+.projects-title{
+  padding-top: 1rem;
+  width: 2.52rem;
+  margin: 1.5rem auto;
+}
+.projects-title h3{
+  font-size: .5rem;
+  color: #A08347;
+  position: relative;
+}
+.projects-title h3:after{
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -1.6rem;
+  left: 1.0rem;
+  width: 3.68rem;
+  height: 3.1rem;
+  background-image: url(../images/w.png);
+  background-size: 100%;
+}
+.projects-title h3 em{
+  position: absolute;
+  display: block;
+  font-size: .38rem;
+  width: auto;
+  border-bottom: 4px solid  #A08347;
+  color: rgba(160,131,71,.5);
+}
 
+/*--------------swiper05--------------*/
 
-
-
+.swiper05 .swiper-slide{
+    -webkit-transform:scale(0.8);
+   -webkit-transition: all linear 0.6s;
+}
+.swiper05 .swiper-slide-active{
+  z-index: 999;
+    -webkit-transform:scale(2.0);
+    /*-webkit-transform:scale(2.0);当前显示的项目，覆盖左右两边的*/
+   -webkit-transition: all linear 0.6s;
+}
 
 
 

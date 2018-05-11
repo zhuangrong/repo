@@ -132,8 +132,49 @@ $(function(){
   <button></button>
 </div>
 <!--//搜索栏-->
-
-<!--我们的团队-->
+<!--我们的项目-->
+<div class="mainer">
+  <div class="projects-title">
+     <h3>我们的项目 <em>Our Project</em></h3>
+  </div>
+</div>
+<div class="mainer" style="width:13.8rem">
+      <!-- Swiper -->
+      <div class="swiper-container swiper05">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+             <img src="images/project-pic02.png" alt="">
+          </div>
+          <div class="swiper-slide">
+             <img src="images/project-pic.png" alt="">
+          </div>
+          <div class="swiper-slide">
+             <img src="images/project-pic02.png" alt="">
+          </div>
+          <div class="swiper-slide">
+             <img src="images/project-pic.png" alt="">
+          </div>
+          <div class="swiper-slide">
+             <img src="images/project-pic02.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- //Swiper -->
+      <script>
+        var swiper05 = new Swiper('.swiper05', {
+          pagination: '.sp2',
+          initialSlide: 1,
+          slidesPerView: 3,
+          centeredSlides: true,
+          paginationClickable: true,
+          autoplay: 1500,
+          autoplayDisableOnInteraction:false, //使用手势后，还会自动播放
+          loop:true,
+          spaceBetween: 30,
+        });
+       </script>
+  </div>
+<!--//我们的项目-->
 <!--关于我们-->
 <div class="mainer">
   <div class="aboutus-title">
@@ -161,6 +202,7 @@ $(function(){
   </div>
 </div>
 <!--//关于我们-->
+<!--我们的团队-->
 <div class="mainer">
   <div class="team-wrap">
     <div class="team-info flex100">
