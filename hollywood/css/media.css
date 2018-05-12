@@ -41,7 +41,16 @@
   html{
     font-size: 50px;
   }
-	
+	.development-pic {
+		padding: .2rem 0;
+	}
+	.development li{
+		flex: 0 0 -webkit-calc(33.333% - .2rem);
+		margin-right: .3rem;
+	}
+	.development-wrap {
+		padding-top: .1rem;
+	}
 	.join-us .join-us-right{
 		margin-top: .15rem;
 	}

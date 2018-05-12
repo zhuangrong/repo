@@ -902,7 +902,7 @@ em,h3{
 	background-color: #FBFBFB;
 	margin-bottom: .9rem;
 	text-align: center;
-	margin-right: .6rem;
+	margin-right: .9rem;
 }
 .goods-show li:nth-child(3n){
 	margin-right: 0;
@@ -1154,7 +1154,17 @@ em,h3{
 .join-us .j-contact .icon-join04{
 	background-image: url(../images/icon-join04.png);
 }
-
+.join-us .j-contact dl{
+	position: absolute;
+	top: 0.8rem;
+	left: 3.8rem;
+}
+.join-us .j-contact dl dd{
+	display: inline-block;
+	text-align: center;
+	width: 1rem;
+	margin: 0 10px;
+}
 .join-us .j-bus{
 	padding-left: .4rem;
 	line-height: 1.8;
@@ -1172,12 +1182,63 @@ em,h3{
 	left: .1rem;
 }
 
+/*--------------商品开发--------------*/
+.development-wrap{
+	padding: .8rem 0 0;
+	background-color: #FFFCF7;
+}
+.development ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.development li{
+	flex: 0 0 -webkit-calc(33.333% - .6rem);
+	margin-bottom: .5rem;
+	text-align: center;
+	margin-right: .9rem;
+}
+.development li:nth-child(3n){
+	margin-right: 0;
+}
+.development li span{
+	display: block;
+	padding-top: .1rem;
+}
 
-
-
-
-
-
+.development-title{
+	padding-top: .5rem;
+	color: #9A917F;
+	font-size: .39rem;
+	text-align: center;
+}
+.development-title em{
+	display: block;
+	padding-top: .1rem;
+	font-size: .22rem;
+	color: #9d9d9d;
+}
+.development-pic{
+	padding: .5rem 0;
+}
+.arrows-center{
+	padding: .3rem 0;
+	text-align: center;
+}
+.arrows-center:before,
+.arrows-center:after{
+	content: '';
+	display: block;
+	width: .36rem;
+	height: .22rem;
+	background-image: url(../images/arrow-title.png);
+	margin: 0 auto;
+}
+.arrows-center:after{
+	margin-top: -.1rem;
+}
 
 
 
