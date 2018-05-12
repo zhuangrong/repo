@@ -42,6 +42,22 @@
     font-size: 50px;
   }
 	
+	.join-us .join-us-right{
+		margin-top: .15rem;
+	}
+	.joinus-wrap {
+		padding: .5rem 0;
+	}
+	.arrows {
+		margin-top: -.2rem;
+		padding-bottom: .2rem !important;
+	}
+	.business {
+	  padding: .5rem 0;
+	}
+	.business .business-text {
+			padding: .2rem 0 0;
+	}
 	.swiper05 .swiper-slide span a:after{
 		top: .15rem;
 		right: .2rem;
@@ -177,6 +193,7 @@
 		vertical-align: middle;
 		margin: 0 6px 0 0;
 		background-image: url(../images/nav-toggle.png);
+		background-size: 100%;
 		background-size: 35px auto;
 	}
   .nav{
