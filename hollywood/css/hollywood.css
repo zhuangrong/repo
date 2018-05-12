@@ -985,7 +985,10 @@ em,h3{
 }
 .business .business-text,
 .business .business-pic{
-	flex: 0 0 50%
+	flex: 0 0 50%;
+}
+.business .business-pic{
+	text-align: right;
 }
 .business .business-text{
 	padding: .5rem .9rem 0;
@@ -1240,9 +1243,74 @@ em,h3{
 	margin-top: -.1rem;
 }
 
+/*--------------授权中心--------------*/
+.brand-bg .auth .business-text{
+    padding: .5rem 1.8rem 0 0;
+}
+.auth .business-text{
+    padding: .5rem 0 0 1.8rem;
+}
+.auth .business-text h3{
+    padding-top: .3rem;
+    padding-bottom: .5rem;
+}
+.auth .business-text h3 em{
+    margin-top: -0.9rem;
+}
+.auth .business-text h3:after{
+    margin-top: -0.8rem;
+}
+.auth .business-text .auth-btn{
+	display: block;
+	width: 1.7rem;
+	height: .6rem;
+	line-height: .6rem;
+	background-color: #A08347;
+	border: none;
+	text-align: center;
+	color: #fff;
+	font-size: .2rem;
+	margin-top: .2rem;
+	cursor: pointer;
+}
 
-
-
+/*--------------我们授权的宗旨--------------*/
+.purpose{
+	padding: .8rem 0;
+}
+.purpose ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.purpose ul li{
+	flex: 0 0 2.3rem;
+	text-align: center;
+	font-size: .2rem;
+}
+.purpose ul li i{
+	width: 2.3rem;
+	height: 2.3rem;
+	background-color: #E6F3FF;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	margin-bottom: .28rem;
+}
+.purpose ul li i.icon-auth01{
+	background-image: url(../images/icon-auth01.png);
+}
+.purpose ul li i.icon-auth02{
+	background-image: url(../images/icon-auth02.png);
+}
+.purpose ul li i.icon-auth03{
+	background-image: url(../images/icon-auth03.png);
+}
 
 
 

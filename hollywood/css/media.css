@@ -41,6 +41,9 @@
   html{
     font-size: 50px;
   }
+	.brand-bg .auth .business-text {
+		padding: .5rem 0 0 0;
+	}
 	.development-pic {
 		padding: .2rem 0;
 	}
