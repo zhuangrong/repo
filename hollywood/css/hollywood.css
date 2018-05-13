@@ -1506,12 +1506,12 @@ em,h3{
 .more-info{
 	width: 78%;
 }
-.team-info h5{
+.team-detail-info h5{
 	color: #A08347;
 	font-size: 0.2rem;
 	margin-bottom: .1rem;
 }
-.team-info h3{
+.team-detail-info h3{
 	margin-top: 1.2rem;
 	background-color: rgba(170,132,65,.3);
 	width: 4.9rem;
@@ -1528,7 +1528,7 @@ em,h3{
 	position: relative;
 	z-index: 99;
 }
-.team-info h3:after{
+.team-detail-info h3:after{
 	content: '';
 	display: block;
 	position: absolute;
@@ -1538,11 +1538,11 @@ em,h3{
 	width: 4.9rem;
 	height: 2rem;
 }
-.team-info p{
+.team-detail-info p{
 	padding-right: 48%;
 	font-size: .16rem;
 }
-.team-info img{
+.team-detail-info img{
 	position: absolute;
 	top: 0.6rem;
 	right: 1rem;
