@@ -667,6 +667,9 @@ em,h3{
 .blank{
   height: .5rem;
 }
+.blank2{
+  height: 2rem;
+}
 
 /*--------------关于我们--------------*/
 .aboutus-title{
@@ -1260,7 +1263,7 @@ em,h3{
 .auth .business-text h3:after{
     margin-top: -0.8rem;
 }
-.auth .business-text .auth-btn{
+.btn2{
 	display: block;
 	width: 1.7rem;
 	height: .6rem;
@@ -1311,6 +1314,243 @@ em,h3{
 .purpose ul li i.icon-auth03{
 	background-image: url(../images/icon-auth03.png);
 }
+
+.development .dev-info{
+	padding: .2rem .1rem;
+	background-color: #fff;
+}
+.development .dev-info h3{
+	font-size: .26rem;
+	text-align: left;
+	margin-bottom: .2rem;
+}
+.development .dev-info p{
+	color: #9d9d9d;
+	font-size: .16rem;
+	line-height: 1.6;
+}
+.development .btn-wrap{
+	display: block;
+	text-align: center;
+	padding-top: .3rem;
+}
+
+.development .btn-wrap .btn2{
+	margin: 0 auto;
+}
+.ent li .dev-box{
+	box-shadow: 0 0 30px 0 rgba(160,131,71,.2);
+}
+
+/*--------------我们的规范--------------*/
+.plan{
+	padding: .5rem 0;
+}
+.plan ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.plan li{
+	max-width: 3.6rem;
+	margin: 0 .3rem;
+	margin-bottom: .5rem;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+.plan li h3{
+	font-size: .28rem;
+	color: #9D9D9D;
+	text-align: left;
+	position: relative;
+}
+.plan li h3 em{
+	display: block;
+	font-size: .2rem;
+	color: #A08347;
+	padding-top: .2rem;
+}
+.plan li h3:after{
+	content: '';
+	display: block;
+	height: 6px;
+	background-color: #A08347;
+	position: absolute;
+	top: .4rem;
+	left: 0;
+	width: 1.45rem;
+}
+.plan .plan-info{
+	padding: .4rem;
+}
+
+/*--------------文旅板块--------------*/
+
+.plan-tabs{
+	margin-top: 1rem;
+}
+.plan-tabs ul{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.plan-tabs li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	background-color: #fff;
+	padding: .2rem 0 .38rem 1rem;
+	cursor: pointer;
+}
+.plan-tabs li.curr{
+	color: #fff;
+	background-color: #E5DAC6;
+}
+.plan-tabs li h3{
+	font-size: .45rem;
+	position: relative;
+}
+.plan-tabs li h3 i{
+	font-size: .70rem;
+	font-style: normal;
+}
+.plan-tabs li h3:after{
+	content: '';
+	display: block;
+	height: 3px;
+	background-color: #9D9D9D;
+	position: absolute;
+	top: 1.28rem;
+	left: 0;
+	width: 2.9rem;
+}
+.plan-tabs li.curr h3:after{
+	background-color: #fff;
+}
+.plan-tabs li h3 em{
+	font-size: .2rem;
+	display: block;
+	padding-top: .12rem;
+}
+
+/*-----------------授权中心-3级----------------*/
+.sub-auth-info{
+	display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.sub-auth-info .sub-right,
+.sub-auth-info .sub-left{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+}
+.sub-auth-info .sub-left{
+	padding-right: .4rem;
+	color: #9D9D9D;
+	font-size: .14rem;
+}
+
+.sub-auth-info h3{
+	margin-top: .5rem;
+	margin-left: .2rem;
+	background-color: #E5DAC6;
+	width: 6rem;
+	height: 2.45rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; 
+	-webkit-box-align: center;
+	justify-content: center;
+	flex-direction:column;
+	font-size: .38rem;
+	color: #AA8441;
+	position: relative;
+}
+.sub-auth-info h3:after{
+	content: '';
+	display: block;
+	position: absolute;
+	border: 2px solid #B29053;
+	top: .2rem;
+	left: -.2rem;
+	width: 6rem;
+	height: 2.45rem;
+}
+
+.sub-auth-info h3 em{ 
+	display: block;
+	font-size: .14rem;
+}
+
+.auth-apply{
+	text-align: center;
+}
+
+/*-----------------团队详情-3级----------------*/
+.team-info{
+	background-color: #EFEFEF;
+	height: 3.68rem;
+	padding: .6rem 1.1rem;
+	width: 88%;
+	margin: 0 auto 2.2rem;
+	font-size: .2rem;
+	position: relative;
+}
+.more-info{
+	width: 78%;
+}
+.team-info h5{
+	color: #A08347;
+	font-size: 0.2rem;
+	margin-bottom: .1rem;
+}
+.team-info h3{
+	margin-top: 1.2rem;
+	background-color: rgba(170,132,65,.3);
+	width: 4.9rem;
+	height: 2rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	flex-direction:column;
+	font-size: .38rem;
+	color: #AA8441;
+	position: relative;
+	z-index: 99;
+}
+.team-info h3:after{
+	content: '';
+	display: block;
+	position: absolute;
+	border: 2px solid #B29053;
+	top: -0.3rem;
+	left: 0.2rem;
+	width: 4.9rem;
+	height: 2rem;
+}
+.team-info p{
+	padding-right: 48%;
+	font-size: .16rem;
+}
+.team-info img{
+	position: absolute;
+	top: 0.6rem;
+	right: 1rem;
+	z-index: 0;
+}
+
+
+
 
 
 

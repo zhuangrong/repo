@@ -41,6 +41,49 @@
   html{
     font-size: 50px;
   }
+	.team-info p{
+		padding: 0;
+	}
+	.team-info{
+		padding: .3rem;
+		min-height: 3.3rem;
+	}
+	.more-info{
+		min-height: 2.3rem;
+		margin-bottom: 1rem;
+		width: 82%;
+	}
+	.more-info h3{
+		position: static;
+		width: auto;
+		height: 1.5rem;
+	}
+	.more-info h3:after{
+		display: none;
+	}
+	.blank2{
+		height: .8rem;
+	}
+	.sub-auth-info .sub-left {
+		padding: 0;
+	}
+	.sub-auth-info h3:after{
+		display: none;
+	}
+	.sub-auth-info h3{
+		margin: .3rem 0;
+		width: auto;
+		height: 2rem;
+	}
+	.plan-tabs li {
+    padding: .2rem 0 .38rem .1rem;
+	}
+	.plan-tabs li h3:after {
+    width: 95%;
+	}
+	.ent li {
+		flex: 0 0 100% !important;
+	}
 	.brand-bg .auth .business-text {
 		padding: .5rem 0 0 0;
 	}
