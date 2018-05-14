@@ -41,6 +41,32 @@
   html{
     font-size: 50px;
   }
+  .sel{
+    min-width: 1.0rem;
+  }
+  .reg .login-form li{
+    padding-right: .1rem;
+  }
+  .reg .login-form li label{
+    width: .9rem !important;
+  }
+  .login .login-box{
+    padding: .3rem .15rem;
+  }
+  .login .login-form li .sel-box,
+  .login .login-form li input{
+    margin: 0 .1rem;
+  }
+  .login .login-form li label{
+    width: .6rem;
+    padding-left: .05rem;
+  }
+  .login .login-form li a{
+    width: 1rem;
+  }
+  .login{
+    width: 90%;
+  }
 	.team-detail-info p{
 		padding: 0;
 	}
