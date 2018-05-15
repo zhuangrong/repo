@@ -20,7 +20,7 @@ li {
   list-style: none;
 }
 body {
-  color: #000;
+  color: #333;
 	background-color: #fff;
   font-size: 15px;
   line-height: 1.6;
@@ -124,8 +124,8 @@ em, h3 {
 	background-image: url(../images/icon-back.png);
 	margin-right: .16rem;
 }
-.header .icon-info{
-	background-image: url(../images/icon-info.png);
+.header .icon-search{
+	background-image: url(../images/icon-search.png);
 	width: .44rem !important;
 }
 .header .share{ /*用于文字*/
@@ -283,6 +283,178 @@ nav a.active i.icon-nav04{
   height: .6rem;
   line-height: .6rem;
 }
+
+/*材料清单*/
+.title2{
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #fff;
+  text-align: center;
+  color: #4572EF;
+}
+.project-content{
+  padding: 0 .7rem;
+}
+.project-content li{
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; 
+	-webkit-box-align: center;
+	justify-content: center;
+  padding: .3rem 0;
+  border-bottom: 1px solid  #D9D9D9;
+}
+.project-content li label{
+  padding: 0 .5rem;
+  width: 3.18rem;
+}
+.project-content li input{
+  height: .3rem;
+  line-height: .3rem;
+  border: none;
+}
+.project-content li i{
+  display: block;
+  width: .64rem;
+  height: .64rem;
+  background-position: center center;
+}
+.project-content li i.icon-m01{
+  background-image: url(../images/icon-m01.png);
+}
+.project-content li i.icon-m02{
+  background-image: url(../images/icon-m02.png);
+}
+.project-content li i.icon-m03{
+  background-image: url(../images/icon-m03.png);
+}
+.project-content li i.icon-m04{
+  background-image: url(../images/icon-m04.png);
+}
+.project-content li i.icon-m05{
+  background-image: url(../images/icon-m05.png);
+}
+.project-content li i.icon-m06{
+  background-image: url(../images/icon-m06.png);
+}
+.project-content li i.icon-m07{
+  background-image: url(../images/icon-m07.png);
+}
+.project-content li i.icon-m08{
+  background-image: url(../images/icon-m08.png);
+}
+
+.project-time{
+  color: #999;
+  padding-top: .3rem;
+  font-size: .12rem;
+}
+.project-time em{
+  padding-left: 0.15rem;
+}
+
+.blank{
+  height: .5rem;
+}
+.blank15{
+  height: 1.5rem;
+}
+
+.material-title{
+  height: 1.6rem;
+  background-image: -webkit-linear-gradient(180deg,  #608BFF, #BDA8FF);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+  color: #fff;
+  margin: .8rem 0 -.3rem;
+}
+/*材料清单列表*/
+.material-list{
+  background-color: #fff;
+  border-radius: .3rem;
+  padding: .5rem .5rem .3rem;
+  box-shadow: 10px 10px 20px 0 rgba(104,141,255,.3);
+  color: #4572EF;
+  width: 90%;
+  margin: 0 auto;
+}
+.material-list li{
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+  margin-bottom: .35rem;
+}
+.material-list li div{
+  -webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+}
+
+.material-list .m-col-6{
+  flex:0 0 55%
+}
+.material-list .m-col-2{
+  flex:0 0 22%
+}
+
+
+/*驳回通过*/
+.approve-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+}
+.approve-bar a{
+  -webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+  height: 1.15rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+  background-color: #D8E4FD;
+  color: #4572EF;
+  border-top: .28rem solid  #fff;
+}
+.approve-bar .pass{
+  background-color: #4572EF;
+  color: #fff;
+  border-top: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
