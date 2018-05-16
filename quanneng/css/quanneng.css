@@ -37,7 +37,7 @@ a {
   -webkit-user-select: none;
 }
 a:active {
-  color: #000;
+  color: #fff;
 }
 a:not([href]):focus {
   outline: 0;
@@ -634,6 +634,100 @@ nav a.active i.icon-nav04{
 .material-show{
   padding-left: 2rem;
 }
+
+/*闪屏*/
+.logo2{
+	text-align: center;
+}
+.logo2 img{
+	margin: 30% auto 0;
+	width: 2.3rem;
+}
+.flash-text{
+	font-size: 20px;
+	color: #4d4d4d;
+	text-align: center;
+	margin-top: 2rem;
+}
+.flash-text em{
+	display: block;
+	padding-top: .1rem;
+	font-size: 16px;
+}
+.flash-arrow{
+	width: 26px;
+	height: 22px;
+	display: block;
+	margin: 1rem auto 0;
+	background-image: url(../images/arrow.png);
+}
+
+.btn-login{
+	display: block;
+	background-color: #4572ef;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	width: 3.4rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	margin: 2rem auto 0;
+}
+
+
+
+/*登录*/
+.login-bg{
+	background-color: #f2f2f2;
+}
+.login{
+	margin-top: .6rem;
+	border-top: 1px solid  #f2f2f2;
+	border-bottom: 1px solid  #f2f2f2;
+	background-color: #fff;
+}
+.login ul{
+	padding: 0 .3rem;
+}
+.login li{
+	border-bottom: 1px solid  #f2f2f2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 0.1rem 0;
+}
+.login li input{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	border: none;
+	height: .7rem;
+}
+.login li label{
+	width: 1.3rem;
+	text-align: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
+.login li button{
+	width: 1.9rem;
+	height: .7rem;
+	line-height: .7rem;
+	background-color: #4572ef;
+	text-align: center;
+	color: #fff;
+	border-radius: .1rem;
+}
+
+
+
+
+
+
 
 
 
