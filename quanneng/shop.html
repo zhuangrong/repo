@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/quanneng.css" />   
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/jquery.Spinner.js"></script> 
+<script src="js/swiper.jquery.min.js"></script> 
 <script>
 $(function(){
 	/***query.Spinner***/
@@ -58,6 +59,23 @@ $(function(){
 <div class="material-show">
   <!--分类-->
   <div class="category">
+    <!--swiper-->
+    <section class="swiper-container swiper01" >
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">灯泡</div>
+          <div class="swiper-slide">灯泡</div>
+          <div class="swiper-slide">灯泡</div>
+          <div class="swiper-slide">灯泡</div>
+          <div class="swiper-slide">灯泡</div>
+      </div>
+    </section>
+    <script>
+		var swiper = new Swiper('.swiper01', {
+					paginationClickable: true,
+					direction: 'vertical'
+			});
+	  </script>
+    <!--//swiper-->
     <div class="icon-car"><em id="category-total">0</em></div>
   </div>
   <!--//分类-->
