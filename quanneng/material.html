@@ -11,6 +11,25 @@
 <link rel="stylesheet" href="css/quanneng.css" />   
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script> 
+<script>
+$(function(){
+  //通过-弹出层
+	$("#btn-pass").on("click",function(){
+		 $("#dialog-pass").fadeIn(200)
+	})
+  //驳回-弹出层
+	$("#btn-reject").on("click",function(){
+		 $("#dialog-reject").fadeIn(200)
+	})
+	
+	//关闭弹出层
+	$(".cancel").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog-pass").fadeOut(200)		 
+			$("#dialog-reject").fadeOut(200)		 
+	})
+})
+</script>
 </head>
 <body>
 <!--头部-->
@@ -139,9 +158,38 @@
 <div class="blank15"></div>
 <!--驳回通过-->
 <div class="approve-bar">
-  <a href="javascript:;">驳回</a>
-  <a href="javascript:;" class="pass">通过</a>
+  <a href="javascript:;" id="btn-reject">驳回</a>
+  <a href="javascript:;" class="pass" id="btn-pass" >通过</a>
 </div>
 <!--//驳回通过-->
+<!--弹出层-通过-->
+<div id="dialog-pass" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog">
+		<div class="dialog-header">系统消息</div>
+		<div class="dialog-body">
+      <div class="opinion pass">你的订单已成功审核！</div>
+		</div>
+		<div class="dialog-footer">
+			<button class="btn cancel">确定</button>
+		</div>
+	</div>
+</div>
+<!--//弹出层-通过-->
+<!--弹出层-驳回-->
+<div id="dialog-reject" style=" display: none">
+	<div class="mask"></div>
+	<div class="dialog">
+		<div class="dialog-header">驳回原因</div>
+		<div class="dialog-body">
+      <div class="opinion pass">很多材料不足！很多材料不足！很多材料不足！很多材料不足！</div>
+		</div>
+		<div class="dialog-footer">
+			<button class="btn cancel">取消驳回</button>
+			<button class="btn cancel">确定驳回</button>
+		</div>
+	</div>
+</div>
+<!--//弹出层窗口-->
 </body>
 </html>

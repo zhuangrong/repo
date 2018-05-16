@@ -212,6 +212,9 @@ nav a.active i.icon-nav04{
 	color: #9B9B9B;
   position: relative;
 }
+.tabs li.curr{
+	color: #4572EF;
+}
 .tabs li.curr:after{
   content: '';
   display: block;
@@ -257,13 +260,15 @@ nav a.active i.icon-nav04{
 	justify-content: center;
 }
 .project .project-link{
+  color: #4572EF;
   flex: 0 0 40%;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
+  flex-direction:column; 
 	-webkit-align-items: center; 
 	-webkit-box-align: center;
-	justify-content: flex-start;
+	justify-content: center;
 }
 .project .project-info p{
   font-size: 18px;
@@ -271,6 +276,13 @@ nav a.active i.icon-nav04{
 }
 .project .project-info span{
   font-size:  12px;
+}
+.project .project-link i{
+  background-image: url(../images/icon-pass.png);
+  background-size: 18px;
+  background-position: right center;
+  padding-right: .5rem;
+  font-style: normal;
 }
 .btn{
   border: none;
@@ -348,10 +360,10 @@ nav a.active i.icon-nav04{
 .project-time{
   color: #999;
   padding-top: .3rem;
-  font-size: .12rem;
+  font-size: 14px;
 }
 .project-time em{
-  padding-left: 0.15rem;
+  padding-left: 0.20rem;
 }
 
 .blank{
@@ -434,21 +446,194 @@ nav a.active i.icon-nav04{
   border-top: none;
 }
 
+/*对话框*/
+.mask {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+.dialog {
+	position: fixed;
+	z-index: 9999;
+	width: 80%;
+	max-width: 300px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	text-align: center;
+	border-radius: .2rem;
+	overflow: hidden;		
+}
+.dialog .dialog-header{
+	padding: .2rem 0;
+  background-color: #4572EF;
+  color: #fff;
+  font-size: 18px;
+}
+.dialog .dialog-body{
+  padding: .8rem;
+	text-align: left;
+	min-height: 2rem;
+	color: #999;
+}	
+.dialog .dialog-footer{
+	text-align: center;
+	min-height: 48px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+  justify-content: space-around
+}
+.dialog .dialog-footer .btn{
+	margin: 0 auto;
+  flex: 0 0 40%;
+  border-radius: .15rem;
+}
+
+.dialog span.close{ /*关闭*/
+	position: absolute;
+	display: block;
+	top: -15px;
+	right: -15px;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ED770D;
+}
+
+.opinion{
+  background-color: #F2F2F2;
+  font-size: 16px;
+  color: #9B9B9B;
+  border-radius: .2rem;
+  min-height: 2rem;
+  padding: .2rem;
+}
+.opinion.pass{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+}
 
 
 
 
 
+/*shop*/
+.shop-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box; 
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: flex-end;
+  background-color: rgba(69,114,239,.5);
+  overflow: auto;
+}
+.shop-bar a{
+  flex: 0 0 30%;
+  height: .9rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+  background-color: #4572EF;
+  color: #fff;
+}
+.shop-bar a.new{
+  background-color: #1C59C6;
+}
+
+.category{
+  position: fixed;
+  top: 2.12rem;
+  bottom: .9rem;
+  left: .3rem;
+  width: 1.4rem;
+  background-color: #D5E0FD;
+  z-index: 9999
+}
+
+.category .icon-car{
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: .1rem;
+  width: 1.18rem;
+  height: 1.18rem;
+  border-radius: 50%;
+  background-image: url(../images/icon-car.png);
+  background-color: rgba(131,133,255,.8);
+  background-size: 60%;
+  background-position: center center;
+}
+.category .icon-car em{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+	padding: 2px 5px;
+  min-width: 8px; 
+	border-radius: 18px;
+	background-color: #EF4D5D;
+	color: #FFFFFF;
+	line-height: 1.2;
+	text-align: center;
+	font-size: 12px;
+	vertical-align: 1px;
+}
 
 
-
-
-
-
-
-
-
-
+/*spinner数量加减*/
+.spinner{
+	overflow: hidden;
+}
+.spinner a{
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	text-indent: 999px;
+	vertical-align: middle;
+	margin: 0 0 0.3rem;
+}
+.spinner a.DisDe,
+.spinner a.Decrease{
+	background-image: url(../images/icon-decrease.png)
+}
+.spinner a.Increase{
+	background-image: url(../images/icon-increase.png)
+}
+.spinner input{
+	display: inline-block;
+	width: 38px;
+	height: 19px;
+	margin: 0 5px;
+	text-align: center;
+	color: #808080;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid  #b3b3b3;
+}
+.material-show{
+  padding-left: 2rem;
+}
 
 
 
