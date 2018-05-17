@@ -297,6 +297,8 @@ em,h3{
 .swiper03 .swiper-slide .goods-info span em{
 	display: block;
 }
+.swiper06 .swiper-pagination-bullet-active,
+.swiper06 .swiper-pagination-bullet,
 .swiper05 .swiper-pagination-bullet-active,
 .swiper05 .swiper-pagination-bullet,
 .swiper02 .swiper-pagination-bullet-active,
@@ -310,6 +312,7 @@ em,h3{
 	margin: 0 5px !important;
 	opacity: 1;
 }
+.swiper06 .swiper-pagination-bullet-active,
 .swiper05 .swiper-pagination-bullet-active,
 .swiper02 .swiper-pagination-bullet-active,
 .swiper03 .swiper-pagination-bullet-active {
@@ -1016,6 +1019,11 @@ em,h3{
 	font-size: .18rem;
 	color: #A08347;
 }
+.business .business-text h5{
+	font-size: .2rem;
+  margin: .5rem 0 0;
+  font-weight: normal;
+}
 
 .business .business-text .biz-intro{
 	padding-top: .5rem;
@@ -1026,6 +1034,7 @@ em,h3{
 .brand-bg{
 	background-color: #F5F5F5;
 }
+.reverse,
 .brand-bg .business{
 	flex-direction: row-reverse; 
 }
@@ -1550,7 +1559,22 @@ em,h3{
 	z-index: 0;
 }
 
-
+.team-detail .team-info{
+  width: 80%;
+  padding: .8rem;
+  background-color: #EFEFEF;
+  margin: 0 auto;
+  line-height: 1.6;
+  min-height: 4rem;
+  font-size: .18rem;
+}
+.team-detail .team-info h5{
+  color: #B29053;
+  font-size: .2rem;
+}
+.team-detail .team-info p{
+  margin: .3rem 0;
+}
 /*-----------------登录----------------*/
 .login{
   position: absolute;
@@ -1683,3 +1707,77 @@ em,h3{
   background-origin: content-box;
  background-size: 15px;
 }
+
+
+.join-pic{
+  margin-top: 1rem;
+  text-align: center;
+}
+.join-pic img{
+  margin: .5rem auto 0;
+  max-width: 6rem;
+}
+.join-pic h3{
+  font-size: .28rem;
+  color: #9D9D9D;
+  text-align: left;
+  position: relative;
+}
+.join-pic h3:before,
+.join-pic h3:after{
+  content: '';
+	position: absolute;
+	top: .4rem;
+	left: .2rem;
+	display: block;
+	width: .3rem;
+	height: .54rem;
+	background-image: url(../images/arrow-title.png);
+	background-size: 100%;
+}
+.join-pic h3:after{
+	top: .6rem;
+}
+
+/*关于我们*/
+.swiper06 .swiper-wrapper{
+    padding-bottom: 0.3rem;
+}
+.swiper06.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: 0;
+}
+
+.swiper06 .swiper-button-next,
+.swiper06 .swiper-button-prev{
+  opacity: 1;
+  width: .63rem;
+  height: .63rem;
+  left: .25rem;
+  background-image: url(../images/swiper-button-prev.png);
+  background-size: 100%;
+  margin-top: .25rem;
+  cursor: pointer
+}
+.swiper06 .swiper-button-next{
+  right: .25rem;
+  left: auto;
+  background-image: url(../images/swiper-button-next.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
