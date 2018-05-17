@@ -23,6 +23,17 @@ $.TabChange = function(obj,num){
 }
 $(function(){
 	$.TabChange("tabs",1)
+  
+  //查看-弹出层
+	$(".pop-review").on("click",function(){
+		 $("#dialog-review").show()
+	})
+  
+  //关闭弹出层
+	$(".mask, .reivew-close").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog-review").hide()		 
+	})
 })
 </script>
 </head>
@@ -30,20 +41,42 @@ $(function(){
 <!--头部-->
 <div class="header">
 	<a class="icon-back" href="javascrit:;"></a>
-	<span>财务</span>
+	<span>质量检测</span>
   <a></a>
 </div>
 <!--//头部-->
 <!--审核-->
 <div class="tabs" id="tabs">
 	<ul>
-		<li class="curr">未审核</li>
-		<li>已审核</li>
+		<li class="curr">已审核</li>
+		<li>未审核</li>
 	</ul>
 </div>
 <div class="divide"></div>
 <div class="tab-box1 project-wrap">
 	<div >
+	   <!--已审核-->
+	   <div class="project pop-review">
+	     <div class="project-info">
+	       <p>项目名称</p>
+	       <span>2018-05-05</span>
+	     </div>
+	     <div class="project-link">
+	       <i class="icon-pass">已通过</i>
+	     </div>
+	   </div>
+	   <div class="project pop-review">
+	     <div class="project-info">
+	       <p>项目名称</p>
+	       <span>2018-05-05</span>
+	     </div>
+	     <div class="project-link">
+	       <i class="icon-reject">未通过</i>
+	     </div>
+	   </div>
+	   <!--//已审核-->
+	</div>
+	<div style="display:none">
 	   <!--未审核-->
 	   <div class="project">
 	     <div class="project-info">
@@ -51,33 +84,11 @@ $(function(){
 	       <span>2018-05-05</span>
 	     </div>
 	     <div class="project-link">
-	       <a href="#" class="btn">查看</a>
-	     </div>
-	   </div>
-	   <div class="project">
-	     <div class="project-info">
-	       <p>项目名称</p>
-	       <span>2018-05-05</span>
-	     </div>
-	     <div class="project-link">
-	       <a href="#" class="btn">查看</a>
+	       <a href="#" class="btn">通过</a>
+	       <a href="#" class="btn">驳回</a>
 	     </div>
 	   </div>
 	   <!--//未审核-->
-	</div>
-	<div style="display:none">
-	   <!--已审核-->
-	   <div class="project">
-	     <div class="project-info">
-	       <p>项目名称</p>
-	       <span>2018-05-05</span>
-	     </div>
-	     <div class="project-link">
-         <i class="icon-pass">已通过</i>
-	       <a href="#" class="btn">查看</a>
-	     </div>
-	   </div>
-	   <!--//已审核-->
 	</div>
 </div>
 <!--//审核-->
@@ -90,5 +101,45 @@ $(function(){
 	<a href="#" class="active"><i class="icon-nav04"></i></a>
 </nav>
 <!--//导航-->
+
+<!--弹出层-查看-->
+<div id="dialog-review" style=" display: none">
+  <div class="mask"></div>
+	<div class="dialog">
+		<div class="dialog-body padd-new">
+      <div class="review-pic">
+        <img src="images/review-pic.png" alt="">
+      </div>
+      <!--项目信息-->
+      <div class="project-content">
+        <ul>
+          <li>
+            <i class="icon-m06"></i>
+            <label>所在小区</label>
+            <input type="text" placeholder="小区名+楼幢号">
+          </li>
+          <li>
+            <i class="icon-m02"></i>
+            <label>装修风格</label>
+            <input type="text" placeholder="简约">
+          </li>
+          <li>
+            <i class="icon-m01"></i>
+            <label>装修阶段</label>
+            <input type="text" placeholder="入住">
+          </li>
+          <li>
+            <i class="icon-m03"></i>
+            <label>项目经理</label>
+            <input type="text" placeholder="耶耶耶">
+          </li>
+        </ul>
+      </div>
+      <!--//项目信息-->
+		</div>
+		<div class="reivew-close"><i>&times;</i></div>
+	</div>
+</div>
+<!--//弹出层窗口-->
 </body>
 </html>
