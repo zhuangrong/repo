@@ -230,3 +230,6 @@ junhao/images/index-bg.png
 *.bat
 _notes/*
 *.mno
+
+.eslintrc.js
+stylelint.config.js
