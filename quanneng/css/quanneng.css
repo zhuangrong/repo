@@ -27,7 +27,7 @@ body {
   font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
 }
 body, span, label, p, a, div, li, dt, dd, i, em, section, article, :after, :before, button, input{
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 a {
@@ -165,16 +165,16 @@ nav a i{
 	width: 34px;
 	height: 34px;
 }
-nav a i.icon-nav01{	
+nav a i.icon-nav01{
 	background-image: url(../images/icon-nav01.png);
 }
-nav a i.icon-nav02{	
+nav a i.icon-nav02{
 	background-image: url(../images/icon-nav02.png);
 }
-nav a i.icon-nav03{	
+nav a i.icon-nav03{
 	background-image: url(../images/icon-nav03.png);
 }
-nav a i.icon-nav04{	
+nav a i.icon-nav04{
 	background-image: url(../images/icon-nav04.png);
 }
 nav a.active i.icon-nav01{
@@ -198,7 +198,7 @@ nav a.active i.icon-nav04{
 	background-color: #fff;
 }
 .tabs ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 }
@@ -242,7 +242,7 @@ nav a.active i.icon-nav04{
   border-radius: .3rem;
   background-color: #fff;
   box-shadow: 0 0 .25rem 0 rgba(162,162,162,.2);
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   justify-content: space-between
@@ -255,7 +255,7 @@ nav a.active i.icon-nav04{
 	display: -webkit-flex;
 	display: flex;
   flex-direction:column; /*纵向*/
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
 }
@@ -265,8 +265,8 @@ nav a.active i.icon-nav04{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-  flex-direction:column; 
-	-webkit-align-items: center; 
+  flex-direction:column;
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
 }
@@ -333,10 +333,10 @@ nav a.active i.icon-nav04{
   padding: 0 .7rem;
 }
 .project-content li{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
   padding: .3rem 0;
@@ -425,7 +425,7 @@ nav a.active i.icon-nav04{
   margin: 0 auto;
 }
 .material-list li{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   margin-bottom: .35rem;
@@ -450,7 +450,7 @@ nav a.active i.icon-nav04{
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 }
@@ -511,7 +511,7 @@ nav a.active i.icon-nav04{
 	text-align: left;
 	min-height: 2rem;
 	color: #999;
-}	
+}
 .dialog .dialog-footer{
 	text-align: center;
 	min-height: 48px;
@@ -621,7 +621,7 @@ nav a.active i.icon-nav04{
   right: 0;
   display: block;
 	padding: 2px 5px;
-  min-width: 8px; 
+  min-width: 8px;
 	border-radius: 18px;
 	background-color: #EF4D5D;
 	color: #FFFFFF;
@@ -773,10 +773,10 @@ nav a.active i.icon-nav04{
 .swiper01 .curr{
   background-color: #4572ef;
   color: #fff;
-  background-image: -webkit-linear-gradient(180deg, #5376FF, #938AFF); 
+  background-image: -webkit-linear-gradient(180deg, #5376FF, #938AFF);
 }
 .order{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   padding: .3rem 0;
@@ -855,7 +855,7 @@ nav a.active i.icon-nav04{
   margin: 0 auto;
 }
 .new-product li{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   border-bottom: 1px solid  #d9d9d9;
@@ -935,7 +935,7 @@ nav a.active i.icon-nav04{
 }
 .login-app{
   margin-top: .7rem;
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-align-items: center;
@@ -993,7 +993,3 @@ nav a.active i.icon-nav04{
   display: block;
   margin-top: .2rem;
 }
-
-
-
-
