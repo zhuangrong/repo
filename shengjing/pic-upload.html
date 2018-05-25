@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>shengjing</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/shengjing.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.Spinner.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+$(function(){
+  //通过-弹出层
+	$("#btn-signature").on("click",function(){
+		 $("#dialog-signature").show()
+	})
+
+	//关闭弹出层
+	$(".cancel").on("click",function(e){
+			e.stopPropagation()
+			$("#dialog-signature").hide()
+	})
+  // 图片上传
+  var tmpl = '<li style="background-image:url(#url#)"></li>',
+    $uploaderFile = $("#uploader-file"),
+    $uploaderPic = $("#uploader-pic")
+
+  $uploaderFile.on("change", function(e){
+    var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+        src = url.createObjectURL(files[0]);
+        $(".uploader-file").css({"opacity":"0"});
+        $uploaderPic.html($(tmpl.replace('#url#', src)));
+  })
+})
+</script>
+</head>
+<body class="login-bg">
+<!--头部-->
+<div class="header">
+	<a class="icon-back" href="javascrit:;"></a>
+	<span>清单</span>
+  <a></a>
+</div>
+<!--//头部-->
+  <a href="javascript:;" class="pass" id="btn-signature" >通过</a>
+<!--图片上传-弹出窗口-->
+<div id="dialog-signature" style="display: ">
+  <div class="mask"></div>
+	<div class="dialog">
+		<div class="dialog-header">插入电子签名</div>
+		<div class="dialog-body">
+      <div class="uploader-wrap">
+        <ul class="uploader-pic" id="uploader-pic">
+        </ul>
+        <div class="uploader-file">
+            <input id="uploader-file" type="file" accept="image/*"/>
+        </div>
+      </div>
+		</div>
+		<div class="dialog-footer">
+			<button class="btn cancel">确认上传</button>
+		</div>
+	</div>
+</div>
+<!--//图片上传-弹出窗口-->
+
+</body>
+</html>
