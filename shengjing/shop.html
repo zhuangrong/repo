@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>shengjing</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/shengjing.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.Spinner.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+$(function(){
+	/***query.Spinner***/
+	$(".spinner").Spinner();
+
+  /*单个材料类别数量总数*/
+  $(document).on("click",".spinner a",function(){
+    var sum = 0
+    $("#order01 .spinner").find(".Amount").each(function(){
+      sum  = sum + parseInt($(this).val());
+    });
+
+    $("#category-total").text(sum)
+	})
+
+  //tabs
+  $.TabChange("tabs",1)
+
+})
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+</script>
+</head>
+<body class="shop-bg">
+<div class="shop-header">
+  <!--头部-->
+  <div class="header">
+    <a class="icon-back" href="javascrit:;"></a>
+    <span>项目名称名称名称</span>
+    <a href="javascrit:;" class="icon-search"></a>
+  </div>
+  <!--//头部-->
+  <!--tabs-->
+  <div class="tabs t2" id="tabs">
+    <ul>
+      <li class="curr">类别1</li>
+      <li>类别2</li>
+      <li>类别3</li>
+      <li>类别4</li>
+    </ul>
+  </div>
+  <!--//tabs-->
+  <div class="divide"></div>
+</div>
+
+<div class="tab-box1">
+  <!--油漆辅料-->
+  <div class="material-show">
+    <!--分类-->
+    <div class="category">
+      <!--swiper-->
+      <section class="swiper-container swiper01" >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide curr">类别1-a</div>
+          <div class="swiper-slide">类别1-a</div>
+          <div class="swiper-slide">类别1-a</div>
+          <div class="swiper-slide">类别1-a</div>
+          <div class="swiper-slide">类别1-a</div>
+          <div class="swiper-slide">类别1-a1</div>
+        </div>
+      </section>
+      <script>
+      var swiper = new Swiper('.swiper01', {
+            direction: 'vertical',
+            slidesPerView: 7,
+            centeredSlides: false,
+            paginationClickable: true,
+            spaceBetween: 0,
+            onTap:function(){
+              //当前点击的swiper.clickedIndex
+              $(".order-box2 > div").eq(swiper.clickedIndex).show().siblings().hide()
+              var slideObj = $(".swiper01 .swiper-slide").eq(swiper.clickedIndex)
+              slideObj.addClass("curr").siblings().removeClass("curr")
+            }
+        })
+      </script>
+      <!--//swiper-->
+      <div class="icon-car"></div>
+    </div>
+    <!--//分类-->
+    <!--明细 tabs-->
+    <div class="order-box2">
+      <div id="order01">
+        <!--灯泡-->
+        <div class="order">
+          <div class="order-name">
+            <img src="images/project-pic.png">
+            <p>名称名称名称名称<em>罩子黑色布艺</em></p>
+          </div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div class="order">
+          <div class="order-name">
+            <img src="images/project-pic.png">
+            <p>名称名称名称名称<em>罩子黑色布艺</em></p>
+          </div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div class="order">
+          <div class="order-name">
+            <img src="images/project-pic.png">
+            <p>名称名称名称名称<em>罩子黑色布艺</em></p>
+          </div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div class="order">
+          <div class="order-name">
+            <img src="images/project-pic.png">
+            <p>名称名称名称名称<em>罩子黑色布艺</em></p>
+          </div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div class="order">
+          <div class="order-name">
+            <img src="images/project-pic.png">
+            <p>名称名称名称名称<em>罩子黑色布艺</em></p>
+          </div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <!--//灯泡-->
+      </div>
+      <div style="display: none">
+        <!--电线-->
+        <div class="order">
+          <div class="order-name">电线电线电线电线电线电线电线电线1</div>
+          <div class="order-num">
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <!--//电线-->
+      </div>
+      <div style="display: none">木板</div>
+      <div style="display: none">油漆</div>
+      <div style="display: none">墙纸</div>
+      <div style="display: none">其他</div>
+    </div>
+    <!--//明细-->
+    <div class="blank5"></div>
+  </div>
+  <!--油漆辅料-->
+  <!--水电材料-->
+  <div style="display: none">类别2</div>
+  <div style="display: none">类别3</div>
+  <div style="display: none">类别4</div>
+  <!--//水电材料-->
+
+</div>
+<div class="blank"></div>
+
+<!--购物车-->
+<div class="shop-bar">
+  <a href="javascript:;" class="new" id="btn-new">数量 <em class="numbers" id="category-total">0</em></a>
+  <a href="javascript:;" class="" id="btn-confirm" >提交</a>
+</div>
+<!--//购物车-->
+
+</body>
+</html>
