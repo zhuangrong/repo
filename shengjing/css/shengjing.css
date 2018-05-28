@@ -1174,6 +1174,42 @@ nav a.active i.icon-nav02{
   background-color: #DFE6F7;
   z-index: -1;
 }
-.mt0{
+.approval-item{
   margin-top: 0;
+}
+.approval-item .btn{
+  width: 80%;
+}
+.approval-pass{
+  background-position: 95% center;
+  background-image: url(../images/icon-pass2.png);
+  background-size: .36rem;
+}
+
+/* 头像 */
+.avatar{
+  padding: .35rem 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+}
+.avatar i{
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  box-shadow: 0 5px 8px 0 #ccc;
+}
+.avatar span{
+  padding-left: .5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  font-size: 18px;
 }
