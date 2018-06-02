@@ -26,6 +26,13 @@
 
 /* -----------------------iphone 小于820px---------------------- */
 @media (max-width: 820px){
+  .member{
+    width: auto;
+    padding: 0 .6rem;
+  }
+  .sub-bg{
+    min-height: 18rem;
+  }
   .company-pic{
     width: auto;
   }
