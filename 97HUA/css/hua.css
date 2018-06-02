@@ -449,3 +449,48 @@ em,h3{
   padding: .3rem 0;
   background-color: #363636;
 }
+/* 个人介绍 */
+.sub-bg{
+  background-image: url(../images/sub-bg.jpg);
+  min-height: 1080px;
+}
+.location{
+  padding: 20px 0;
+  font-size: 14px;
+}
+.location em{
+  font-weight: bold;
+  color: #82318E;
+}
+.member{
+  width: 680px;
+  margin: 150px auto 0;
+}
+.member h3{
+  text-align: center;
+  font-size: 14px;
+  line-height: 2.5;
+}
+.member h3 i{
+  display: block;
+  width: 126px;
+  height: 126px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 2px solid  #C3A2C8;
+  background-color: #fff;
+}
+.member h3 span{
+  display: block;
+  font-weight: bold;
+  color: #82318E;
+  font-size: 16px;
+}
+.member h3 em{
+  font-size: 14px;
+}
+.member p{
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
