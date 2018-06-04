@@ -189,16 +189,16 @@ nav a.active i.icon-nav02{
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  overflow: auto;
 }
 .tabs li{
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+  flex: 0 0 2rem;
   height: 1rem;
   line-height: 1rem;
   text-align: center;
   color: #fff;
   position: relative;
+  white-space: nowrap;
 }
 .tabs li.curr{
   background-color: #4572EF;

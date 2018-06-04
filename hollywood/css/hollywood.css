@@ -128,7 +128,7 @@ em,h3{
   background: transparent;
   color:  #fff;
   margin: 0 3px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 .hd-lang button.active{
   border: none;
@@ -347,7 +347,7 @@ em,h3{
 	color: #fff;
 }
 .footer{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -507,7 +507,7 @@ em,h3{
 
 /*--------------头条列表--------------*/
 .news-wrap{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -524,7 +524,7 @@ em,h3{
 }
 
 .news-pic01 li{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   padding: .3rem 0;
@@ -550,7 +550,7 @@ em,h3{
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
 }
 .news-pic02 li{
   margin-top: .5rem;
@@ -583,7 +583,7 @@ em,h3{
 
 
 .team-wrap{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -615,7 +615,7 @@ em,h3{
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
 }
 .team-wrap .team-info .team-text a{
   display: block;
@@ -705,7 +705,7 @@ em,h3{
   color: rgba(160,131,71,.5);
 }
 .aboutus-wrap{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   justify-content: space-between;
@@ -799,7 +799,7 @@ em,h3{
   left: auto;
 }
 .flex-reverse{
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 /*--------------我们的项目--------------*/
@@ -897,7 +897,7 @@ em,h3{
 	padding: 1.3rem 0;
 }
 .goods-show ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -981,7 +981,7 @@ em,h3{
 
 /*--------------商会--------------*/
 .business{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -1036,7 +1036,7 @@ em,h3{
 }
 .reverse,
 .brand-bg .business{
-	flex-direction: row-reverse; 
+	flex-direction: row-reverse;
 }
 
 /*arrows*/
@@ -1079,7 +1079,7 @@ em,h3{
 }
 
 .join-us{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -1203,7 +1203,7 @@ em,h3{
 	background-color: #FFFCF7;
 }
 .development ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -1291,7 +1291,7 @@ em,h3{
 	padding: .8rem 0;
 }
 .purpose ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
@@ -1357,7 +1357,7 @@ em,h3{
 	padding: .5rem 0;
 }
 .plan ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
@@ -1403,7 +1403,7 @@ em,h3{
 	margin-top: 1rem;
 }
 .plan-tabs ul{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 }
@@ -1448,7 +1448,7 @@ em,h3{
 
 /*-----------------授权中心-3级----------------*/
 .sub-auth-info{
-	display: -webkit-box; 
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap:wrap;
@@ -1475,7 +1475,7 @@ em,h3{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
 	flex-direction:column;
@@ -1494,7 +1494,7 @@ em,h3{
 	height: 2.45rem;
 }
 
-.sub-auth-info h3 em{ 
+.sub-auth-info h3 em{
 	display: block;
 	font-size: .14rem;
 }
@@ -1588,11 +1588,11 @@ em,h3{
   background-color: #fff;
 }
 .login .login-tabs{
-  
+
   background-color: #E2DAC7;
 }
 .login .login-tabs ul{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
   justify-content: center;
@@ -1613,10 +1613,10 @@ em,h3{
   padding: .5rem .3rem;
 }
 .login .login-form li{
-  display: -webkit-box; 
+  display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	-webkit-box-align: center;
 	justify-content: center;
   margin-bottom: .39rem;
@@ -1763,21 +1763,3 @@ em,h3{
   left: auto;
   background-image: url(../images/swiper-button-next.png);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
