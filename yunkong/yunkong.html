@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>shengjing</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/yunkong.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<style>
+/*底部弹出菜单*/
+.mask {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.actionSheet{
+	position: fixed;
+	z-index: 9999;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-transform: translateX(-100%);
+	-webkit-transition: -webkit-transform .3s;
+	background-color: #ddd;
+  width: 300px;
+}
+.actionSheet li{
+	text-align: center;
+  color: #333;
+	background-color: #fff;
+  text-align: left;
+  height: 126px;
+  line-height: 126px;
+  padding-left: 20px;
+}
+.actionSheet a:active,
+.actionSheet li:active{
+	background-color: #F7F7F7;
+  color: #2917CB;
+  border-left: 20px solid #2917CB;
+}
+.actionSheet a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+  margin:5px 0;
+  text-align: center;
+	text-decoration: none;
+	color: inherit;
+	background-color: #fff;
+}
+.actionSheet.show{
+	-webkit-transform: translateX(0);
+}
+</style>
+<script type="text/javascript">
+$(function(){
+  //底部弹出菜单
+  $(".btn2").on("click",function(){
+     $(".mask").fadeIn(200)
+     $(".actionSheet").addClass('show')
+  })
+
+  //点击遮罩层隐藏
+  $(".mask, .action-cancel").on("click",function(e){
+      e.stopPropagation()
+      $(".mask").fadeOut(300)
+      $(".actionSheet").removeClass('show')
+  })
+})
+
+</script>
+</head>
+<body>
+  <button class="btn2">菜单</button>
+  <div>
+  	<div class="mask"></div>
+  	<div class="actionSheet">
+  		<ul>
+  			<li><i class="icon-yun01.png"></i>动作一</li>
+  			<li>动作二</li>
+  			<li>动作三</li>
+  		</ul>
+  		<a href="javascript:;" class="action-cancel">取消</a>
+  	</div>
+  </div>
+</body>
+</html>
