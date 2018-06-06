@@ -73,23 +73,30 @@ $(function(){
   </div>
   <!-- //Swiper -->
   <script>
-    var swiper05 = new Swiper('.swiper05', {
-      pagination: '.sp5',
-      initialSlide: 1,
-      slidesPerView : 2,
-      centeredSlides: true,
-      effect: 'coverflow',
-      grabCursor: true,
-      loop : true,
-      loopedSlides:5,
-      coverflow: {
-        rotate: 0,
-        stretch: 10,
-        depth: 100,
-        modifier: 1,
-        slideShadows : false
-      }
-    });
+  var swiper05 = new Swiper('.swiper05', {
+    pagination: '.sp5',
+    initialSlide: 1,
+    slidesPerView : 2,
+    centeredSlides: true,
+    effect: 'coverflow',
+    grabCursor: true,
+    loop : true,
+    loopedSlides:5,
+    autoplay: 2000,
+    coverflow: {
+      rotate: 0,
+      stretch: 10,
+      depth: 100,
+      modifier: 2,
+      slideShadows : false
+    },
+    breakpoints: {
+        820: {
+          effect: 'slide',
+          slidesPerView: 1
+        }
+    }
+  });
    </script>
 </div>
 <!-- //banner -->
@@ -338,7 +345,9 @@ $(function(){
   <img src="images/company-pic.png" alt="">
 </div>
 <!-- //公司简介 -->
-<img src="images/culture.jpg" alt="">
+<div class="tc">
+  <img src="images/culture.jpg" alt="">
+</div>
 <div class="blank b-bg"></div>
 <!-- footer -->
 <div class="footer-wrap hide-mb">

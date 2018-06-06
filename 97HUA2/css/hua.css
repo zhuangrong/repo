@@ -171,12 +171,18 @@ em,h3{
 /* banner */
 .banner{
   padding: .2rem .7rem;
+  text-align: center;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .bsw img{
   box-shadow: 0 5px 5px 0 #bcbcbc;
 }
 .banner-copy{
   box-shadow: 0 5px 5px 0 #bcbcbc;
+}
+.sub-banner{
+  text-align: center;
 }
 /* 主标题 */
 .mtitle{
