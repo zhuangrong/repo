@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>shengjing</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/yunkong.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  //底部弹出菜单
+  $(".icon-nav").on("click",function(){
+    $(".mask").fadeIn(200)
+    $(".actionSheet").addClass('show')
+  })
+  //点击遮罩层隐藏
+  $(".mask, .action-cancel, .actionSheet a").on("click",function(e){
+    e.stopPropagation()
+    $(".mask").fadeOut(300)
+    $(".actionSheet").removeClass('show')
+  })
+  $(".actionSheet a").each(function(){
+    $(this).on("click", function(){
+      $(this).addClass("active").siblings().removeClass("active")
+    })
+  })
+})
+
+</script>
+</head>
+<body class="bg-padd">
+<!-- 导航 -->
+<div>
+	<div class="mask"></div>
+	<div class="actionSheet">
+    <span><i class="action-cancel"></i></span>
+    <div>
+      <a href="#xx01" class="active"><i class="icon-g01"></i>首页</a>
+      <a href="#xx02"><i class="icon-g02"></i>功能手册</a>
+      <a href="#xx03"><i class="icon-g03"></i>安装指南</a>
+      <a href="#xx04"><i class="icon-g04"></i>代理加盟</a>
+      <a href="#xx05"><i class="icon-g05"></i>联系我们</a>
+      <a href="#"><i class="icon-g06"></i>售后咨询</a>
+      <a href="#"><i class="icon-g07"></i>云控后台</a>
+    </div>
+
+	</div>
+</div>
+<!-- //导航 -->
+<!--头部-->
+<div class="header">
+  <a class="icon-nav" href="javascrit:;"></a>
+  <span>星星云控</span>
+  <a href="javascrit:;" class="icon-search"></a>
+</div>
+<!--//头部-->
+<!--banner-->
+<div class="banner" id="xx01">
+  <div>
+    <h3>星星云控<em>智慧云端</em></h3>
+    <p>国内领先的全云端集控的微信营销神器</p>
+  </div>
+  <img src="images/banner.jpg" alt="">
+</div>
+<!--//banner-->
+<!-- 箭头 -->
+<div class="arrow"></div>
+<!-- //箭头 -->
+<!-- 操作手册 -->
+<div class="manual"  id="xx02">
+  <ul>
+    <li>
+      <i class="icon-m01"></i>
+      <h3>深度养号</h3>
+      <p>全自动养号，账号随机互聊，完全模拟真实用户日常操作</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m02"></i>
+      <h3>全自动批量添加好友</h3>
+      <p>通讯录匹配或搜索的方式批量添加好友</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m03"></i>
+      <h3>一台电脑控制上百个微信</h3>
+      <p>您可以通过一台电脑控制上百微信号，全自动加人送广告</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m04"></i>
+      <h3>批量添加群好友</h3>
+      <p>通过采集微信群内所有成员微信号，批量添加好友</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m05"></i>
+      <h3>阅读公众号文章</h3>
+      <p>指定数百微信阅读公众号文章，为公众号增加流量</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m06"></i>
+      <h3>扫码进群</h3>
+      <p>通过批量进群功能，您可以瞬间让数百个微信号加入到群中，配合群发功能更能达到营销效果</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m07"></i>
+      <h3>附近的人虚拟定位</h3>
+      <p>将微信号虚拟定位在全国各地，等待附近的人来加您</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+    <li>
+      <i class="icon-m08"></i>
+      <h3>微信好友备份</h3>
+      <p>备份微信好友，确保客户资料不丢失</p>
+      <a href="#">了解更多&gt;&gt;</a>
+    </li>
+  </ul>
+</div>
+<!-- //操作手册 -->
+<!-- 产品价格 -->
+<div class="tip">
+  <img src="images/tip.png" alt="">
+</div>
+<div class="xx-title">
+  <span>产品价格</span>
+</div>
+<div class="xx-text">
+  <p>星星云控有1机1号、1机10号、1机50号等多种版本。对于手机设备充足的客户，我们推荐您采用1机1号版。对于营销推广类公司，我们推荐用1机10号或1机50号的版本，以此大幅降低硬件投入成本。</p>
+</div>
+<div class="price">
+  <!-- Swiper -->
+  <section class="swiper-container swiper02">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="price-list">
+          <h3>1机1号版</h3>
+          <p>￥<span>1280</span> /台/年</p>
+          <p>可控台数：<em>1000台</em></p>
+          <p>试用期：<em>3天</em></p>
+          <p>正式码授权年限：<em>1年</em></p>
+          <p>最小起订量：<em>30台起售</em></p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="price-list">
+          <h3>1机50号版</h3>
+          <p>￥<span>13800</span> /台/年</p>
+          <p>可控台数：<em>1000台</em></p>
+          <p>试用期：<em>3天</em></p>
+          <p>正式码授权年限：<em>1年</em></p>
+          <p>最小起订量：<em>30台起售</em></p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="price-list">
+          <h3>1机10号版</h3>
+          <p>￥<span>3880</span> /台/年</p>
+          <p>可控台数：<em>1000台</em></p>
+          <p>试用期：<em>3天</em></p>
+          <p>正式码授权年限：<em>1年</em></p>
+          <p>最小起订量：<em>30台起售</em></p>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+  </section>
+  <!-- //Swiper -->
+  <script>
+    var swiper02 = new Swiper('.swiper02', {
+      pagination: '.sp2',
+      initialSlide: 1,
+      slidesPerView: 3,
+      centeredSlides: true,
+      autoplay: 3000,
+      loop: true,
+      spaceBetween: 0,
+      paginationClickable: true,
+    });
+   </script>
+</div>
+<!-- //产品价格 -->
+<div class="tip tl">
+  <img src="images/tip.png">
+</div>
+<!-- 安装指南 -->
+<div class="xx-title"  id="xx03">
+  <span>安装指南</span>
+</div>
+<div class="xx-text lh16">
+  <p>星星云控使用方法：</p>
+  <p>1、注册云控后台 2、安装星星分身 3、下载云客服系统</p>
+  <p>具体安装过程参阅：<a href="#">《星星云控试用版安装教程》</a></p>
+</div>
+<div class="guide">
+  <ul>
+    <li>
+      <i class="icon-d01"><em>1</em></i>
+      <h3>星星云控后台</h3>
+      <p>星星云控后台用于通过网页端来控制手机</p>
+    </li>
+    <li>
+      <i class="icon-d02"><em>2</em></i>
+      <h3>星星分身下载</h3>
+      <p>星星分身基于硬件模拟技术，可在一台手机中模拟50部手机的运行环境，完美做到多开不封号</p>
+    </li>
+    <li>
+      <i class="icon-d03"><em>3</em></i>
+      <h3>云客服系统</h3>
+      <p>云客服系统无需扫码一键登录，像聊QQ一样简单</p>
+    </li>
+  </ul>
+</div>
+<!-- //安装指南 -->
+<!-- 代理商 -->
+<div class="agent"  id="xx04">
+  <h3>星星云控</h3>
+  <a href="#">申请成为代理商</a>
+</div>
+<!-- //代理商 -->
+<div class="blank"></div>
+<!-- 招商加盟 -->
+<div class="xx-title">
+  <span>招商加盟</span>
+</div>
+<div class="xx-text lh16">
+  <p>我们开创了国内的ios云控市场，短短几个月的时间已覆盖到各个重要领域无论电商还是金融业，都有我们的身影，但在更广阔的市场中，我们仍需要更多的合作伙伴的加入如果你具备一定的线下资源，且有软件产品的销售经验，我们期望你的到来申请成为代理商</p>
+</div>
+<!-- //招商加盟 -->
+<div class="blank"></div>
+<!-- footer -->
+<div class="footer"  id="xx05">
+  <div class="xx-title">
+    <span>招商加盟</span>
+  </div>
+  <div class="qr">
+    <img src="images/qr.png" alt="">
+  </div>
+  <p>联系微信：dkn9724105</p>
+</div>
+<!-- //footer -->
+</body>
+</html>
