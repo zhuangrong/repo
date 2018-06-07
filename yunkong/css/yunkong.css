@@ -287,7 +287,7 @@ em, h3 {
   display: block;
   margin: 0 auto;
   background-color: #455DE1;
-  background-size: 80%;
+  background-size: 65%;
   background-position: center center;
 }
 .manual li .icon-m01{
@@ -295,6 +295,7 @@ em, h3 {
 }
 .manual li .icon-m02{
   background-image: url(../images/icon-m02.png);
+  background-position: center bottom;
 }
 .manual li .icon-m03{
   background-image: url(../images/icon-m03.png);
@@ -313,6 +314,7 @@ em, h3 {
 }
 .manual li .icon-m08{
   background-image: url(../images/icon-m08.png);
+  background-size: 75%;
 }
 .manual li h3{
   font-size: 16px;
@@ -392,19 +394,30 @@ em, h3 {
 }
 .price{
   padding-top: 1rem;
-  padding-right: .3rem;
+}
+.swiper02 .swiper-container{
+  margin-left: .2rem;
+  margin-right: .2rem;
 }
 .swiper02 .swiper-slide{
-  -webkit-transform: scale(0.9);
+  -webkit-transform: scale(.9);
   -webkit-transition: all linear 0.6s;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.swiper02 .swiper-slide .price-list{
+  height: 100%;
   border: 1px solid transparent;
   background-color: #fff;
   box-shadow: 5px 10px 30px 0 rgba(41, 26, 204, .12);
 }
+.swiper02 .recommend .price-list{
+  border: 1px solid  #2C1EA5;
+}
 .swiper02 .swiper-slide-active{
   -webkit-transform: scale(1);
   -webkit-transition: all linear 0.6s;
-  border: 1px solid  #2C1EA5;
+  z-index: 99;
 }
 .swiper02 .recommend{
   position: relative;
@@ -413,7 +426,7 @@ em, h3 {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: .4rem;
   right: 0;
   background-image: url(../images/recommend.png);
   width: .4rem;
