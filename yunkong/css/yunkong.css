@@ -394,10 +394,6 @@ em, h3 {
   padding-top: 1rem;
   padding-right: .3rem;
 }
-.swiper01 .swiper-slide{
-  background-color: #fff;
-  border: 1px solid  #00f;
-}
 .swiper02 .swiper-slide{
   -webkit-transform: scale(0.9);
   -webkit-transition: all linear 0.6s;
@@ -409,6 +405,19 @@ em, h3 {
   -webkit-transform: scale(1);
   -webkit-transition: all linear 0.6s;
   border: 1px solid  #2C1EA5;
+}
+.swiper02 .recommend{
+  position: relative;
+}
+.swiper02 .recommend::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/recommend.png);
+  width: .4rem;
+  height: .4rem;
 }
 .price-list{
   padding-top: .3rem;
