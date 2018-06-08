@@ -295,7 +295,7 @@ em,h3{
 
 /* 案例资讯 */
 .case-news-wrap{
-  padding: .5rem 0;
+  padding: .5rem 0 .2rem;
   background-image: url(../images/c-bg02.jpg);
   background-size: cover;
 }
@@ -943,14 +943,18 @@ em,h3{
   min-width: 1rem;
   height: .5rem;
   line-height: .5rem;
-  color: #333;
+  color: #fff;
   text-align: center;
+  background-color: #82318E;
+}
+.news-page-mb a.dis{
+  color: #333;
   background-color: #eee;
 }
-.news-page-mb a:active{
+/* .news-page-mb a:active{
   background-color: #82318E;
   color: #fff;
-}
+} */
 /* 案例资讯 */
 .events-case{
   margin-top: 20px;
