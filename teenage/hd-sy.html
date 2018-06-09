@@ -5,21 +5,21 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes">
 <title>ing</title>
-<link rel="stylesheet" href="css/teen.css"> 
-<script src="js/jquery-2.1.4.min.js"></script> 
-<script src="js/iscroll.js"></script> 
+<link rel="stylesheet" href="css/teen.css">
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/iscroll.js"></script>
 <script>
 $(function(){
 	/*解决移动端active伪类效果*/
 	document.body.addEventListener('touchstart', function(){});
-	
+
 	/*弹出导航菜单*/
 	$("#city").on("click",function(e){
 		 	e.preventDefault();
 			$("#city-pop").show();
 			$("#mask").show();
 	})
-	
+
 	$("#mask").on("click",function(e){
 		 	e.preventDefault();
 			$("#city-pop").hide();
@@ -35,7 +35,7 @@ $(function(){
 		$(this).click(function(e){
 			e.preventDefault();
 			if($(this).hasClass("active")){
-				$(".dropdown-mask").hide();	
+				$(".dropdown-mask").hide();
 				$("#dropdown div").eq(index).hide();
 				$("#category-tabs li").removeClass("active");
 			}else{
@@ -45,32 +45,32 @@ $(function(){
 				if(index==0){
 					setTimeout(function () {
                             myScroll.refresh();
-					}, 0)	
+					}, 0)
 				}
 			}
 			flag=index;
-		})	
+		})
 	})
-	
+
 	$(".dropdown-mask").on("click",function(e){
 		$(".dropdown-mask").hide();
 		$("#dropdown div").eq(flag).hide();
 		$("#category-tabs li").removeClass("active");
 	})
-	
+
 	$("#dropdown li").on("click",function(e){
 		$(".dropdown-mask").hide();
 		$("#dropdown div").eq(flag).fadeOut("15");
 		$("#category-tabs li").removeClass("active");
 	})
-	
+
 })
 //滚动
 var myScroll;
 function loaded () {
 	myScroll = new IScroll('#wrapper',{
 			tap:true,
-			click:false, 
+			click:false,
 			preventDefaultException:{tagName:/.*/}//解除默认事件锁定，调用tab，click等事件,不支持swipeleft
 		});
 }
@@ -288,9 +288,9 @@ function loaded () {
 <!--//全部-->
 
 <footer>
-	<a href="#">首页</a> &nbsp; | &nbsp; 
-	<a href="#">个人中心</a> &nbsp; | &nbsp; 
-	<a href="#">注册</a> &nbsp; | &nbsp; 
+	<a href="#">首页</a> &nbsp; | &nbsp;
+	<a href="#">个人中心</a> &nbsp; | &nbsp;
+	<a href="#">注册</a> &nbsp; | &nbsp;
 	<a href="#">登录</a>
     <p>微信公众号：少年时 </p>
 </footer>
