@@ -226,7 +226,7 @@ junhao/images/banner-product.png
 junhao/images/index-bg3.png
 junhao/images/index-bg.png
 
-*/node_modules/*
+**/node_modules/
 *.bat
 _notes/*
 *.mno

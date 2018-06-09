@@ -154,6 +154,37 @@ $(function(){
 		<div class="dialog-body">
       <div class="opinion pass">你的订单已成功审核！</div>
 		</div>
+    <!-- 单位 -->
+    <div class="unit">
+      <ul>
+        <li>10w</li>
+        <li>20w</li>
+        <li>30w</li>
+        <li>30w</li>
+        <li>30w</li>
+        <li>30w</li>
+      </ul>
+    </div>
+    <!-- //单位 -->
+    <style>
+    .unit ul{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-flow: row wrap;
+      text-align: center;
+      justify-content: center;
+    }
+    .unit li{
+      flex: 0 0 80px;
+      white-space: nowrap;
+      border: 1px solid  #00f;
+      border-radius: 5px;
+      padding: 3px 5px;
+      background-color: #fff;
+      margin: 0 5px;
+    }
+    </style>
 		<div class="dialog-footer">
 			<button class="btn cancel">确定</button>
 		</div>
