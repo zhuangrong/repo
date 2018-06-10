@@ -79,31 +79,12 @@ $(function(){
   </div>
   <!-- //Swiper -->
   <script>
-  var swiper05 = new Swiper('.swiper05', {
-    pagination: '.sp5',
-    initialSlide: 1,
-    slidesPerView : 2,
-    centeredSlides: true,
-    effect: 'coverflow',
-    grabCursor: true,
-    loop : true,
-    loopedSlides:5,
-    autoplay: 2000,
-    coverflow: {
-      rotate: 0,
-      stretch: 10,
-      depth: 100,
-      modifier: 2,
-      slideShadows : false
-    },
-    breakpoints: {
-        820: {
-          effect: 'slide',
-          slidesPerView: 1
-        }
-    }
+  var swiper02 = new Swiper('.swiper05', {
+      pagination: '.sp5',
+      paginationClickable: true,
+      loop: true
   });
-   </script>
+  </script>
 </div>
 <!-- //banner -->
 <div class="blank"></div>
@@ -111,28 +92,34 @@ $(function(){
 <div class="mtitle">MAIN BUSINESS <em>—主营业务—</em></div>
 <div class="mcontent">
   <h3>软硬兼备 / 服务乡村</h3>
-  <p>结合地方特色和乡土性，融合城市景点旅游特色，</p>
-  <p>走创意化、规范化、和品牌一体化的道路，</p>
-  <p>实现乡村旅游产业化的基本目标，联结城与乡</p>
+  <span class="hide-mb">
+    <p>结合地方特色和乡土性，融合城市景点旅游特色，走创意化、规范化、和品牌一体化的道路，</p>
+    <p>实现乡村旅游产业化的基本目标，联结城与乡。</p>
+  </span>
+  <span class="hide-pc">
+    <p>结合地方特色和乡土性，融合城市景点旅游特色，</p>
+    <p>走创意化、规范化、和品牌一体化的道路，</p>
+    <p>实现乡村旅游产业化的基本目标，联结城与乡。</p>
+  </span>
 </div>
 <!-- //主营业务 -->
 <div class="blank"></div>
 <!-- 乡村项目 -->
-<div class="mainer">
-  <div class="village-item">
+<div class="mainer v-ts">
+  <div class="village-item ">
     <ul>
       <li>
         <i class="icon-vig01"></i>
         <span>
           <em>乡村振兴</em>
-          <p>以人气为导向做营销， 以影响力为导向造品牌。</p>
+          <p>以一二三产融合促乡村振兴，打造乡村新生活载体。</p>
         </span>
       </li>
       <li>
         <i class="icon-vig02"></i>
         <span>
           <em>品牌推广</em>
-          <p>为项目量身定制有创造性、可落地的执行方案。</p>
+          <p>以人气为导向做营销， 以影响力为导向造品牌。</p>
         </span>
       </li>
       <li>
@@ -296,7 +283,7 @@ $(function(){
     <div class="blank hide-mb"></div>
     <!-- 资讯  -->
     <div class="news-wrap">
-      <div class="news-title">资讯动态 <a href="brand.html">more&gt;&gt;</a></div>
+      <div class="news-title">资讯动态</div>
       <div class="news">
         <div class="news-info">
           <ul>
@@ -336,7 +323,7 @@ $(function(){
           <img src="images/news-pic-large.png" alt="">
         </div>
       </div>
-      <a href="yunding-case.html" class="news-more hide-pc">查看更多 +</a>
+      <a href="brand-item.html" class="news-more hide-pc">查看更多 +</a>
     </div>
     <!-- //资讯  -->
   </div>
@@ -354,7 +341,8 @@ $(function(){
   <img src="images/company-pic.png" alt="">
 </div>
 <!-- //公司简介 -->
-<div class="tc">
+<div class="culture-bg hide-mb"></div>
+<div class="tc hide-pc">
   <img src="images/culture.jpg" alt="">
 </div>
 <div class="blank b-bg"></div>

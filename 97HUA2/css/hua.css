@@ -170,21 +170,30 @@ em,h3{
 
 /* banner */
 .banner{
-  padding: .2rem .7rem;
+  padding: 0;
   text-align: center;
   max-width: 1920px;
   margin: 0 auto;
 }
+.banner img{
+  margin: 0 auto;
+}
 .bsw .swiper-slide img{
-  box-shadow: 0 5px 8px 0 rgba(55, 55, 55, .5);
+  /* box-shadow: 0 5px 8px 0 rgba(55, 55, 55, .5); */
 }
 .banner-copy{
   box-shadow: 0 5px 5px 0 #bcbcbc;
 }
 .sub-banner{
   text-align: center;
-  height: 300px;
   overflow: hidden;
+}
+.sub-about{
+  height: 300px;
+  background-image: url(../images/sub-banner-about.jpg);
+}
+.sub-about img{
+  margin-top: -1.8rem;
 }
 /* 主标题 */
 .mtitle{
@@ -221,24 +230,26 @@ em,h3{
   flex-flow: row wrap;
 }
 .village-item ul li{
-  flex: 0 0 -webkit-calc(20% - 10px);
+  flex: 0 0 -webkit-calc(20% - 5px);
   background-color: #ccc;
   font-size: 13px;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  padding: .1rem;
+  padding: .1rem .05rem .1rem .1rem;
   color: #82318e;
   background-image: url(../images/vig-item-bg.png);
+  background-size: 100%;
   margin-bottom: .15rem;
 }
 .village-item ul li i{
   display: block;
   background-color: #fff;
   border-radius: 50%;
-  width: .68rem;
-  height: .68rem;
+  width: .5rem;
+  height: .5rem;
   border: .04rem solid  rgba(130, 49, 142, 0.4);
+  margin-top: .05rem;
 }
 .village-item ul li .icon-vig01{
   background-image: url(../images/icon-vig01.png);
@@ -275,7 +286,7 @@ em,h3{
   -ms-flex: 1px;
   flex: 1px;
   padding-left: .05rem;
-  line-height: 1.6;
+  line-height: 1.5;
   padding-top: .05rem;
 }
 .village-item ul li span em{
@@ -287,6 +298,7 @@ em,h3{
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  letter-spacing: 0px;
 }
 .village-item ul li:hover{
   background-image: url(../images/vig-item-bg-active.png);
@@ -681,6 +693,8 @@ em,h3{
 .swiper05 .swiper-pagination-bullet-active {
   background: #82318E !important;
 }
+.swiper05 .swiper-pagination-bullet-active,
+.swiper05 .swiper-pagination-bullet,
 .swiper02 .swiper-pagination-bullet-active,
 .swiper02 .swiper-pagination-bullet{
   width: .1rem !important;
@@ -688,10 +702,10 @@ em,h3{
   margin: 0 .08rem !important;
 }
 .swiper05.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 40px;
+  bottom: 10px;
 }
 .swiper05{
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 .join{
   line-height: 2.1;
@@ -871,7 +885,7 @@ em,h3{
   flex: 0 0 -webkit-calc(33.333% - 10px);
   padding: .1rem;
   background-color: #82318E;
-  height: 1rem;
+  height: 0.7rem;
 }
 .contact-info li p{
   display: -webkit-box;
@@ -910,6 +924,9 @@ em,h3{
   -ms-flex: 1px;
   flex: 1px;
   padding-left: .05rem;
+}
+.contact-info li a{
+  color: #fff;
 }
 
 /* 翻页 */
@@ -1070,8 +1087,9 @@ em,h3{
   /* margin-bottom: -2.9rem; */
 }
 .sub-brand{
-  height: 4.5rem;
+  height: 4rem;
   margin-bottom: -3.4rem;
+  background-position: center top;
 }
 .b-reverse ul{
   flex-direction: row-reverse;
@@ -1119,4 +1137,23 @@ em,h3{
 .brand li span{
   position: relative;
   z-index: 9;
+}
+.culture-bg{
+  background-image: url(../images/culture.jpg);
+  background-position: center -50px;
+  background-size: 100%;
+  height: 260px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.brand-link a{
+  position: absolute;
+  display: block;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.sub3{
+  height: 300px;
 }
