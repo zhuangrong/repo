@@ -248,8 +248,9 @@ em,h3{
   border-radius: 50%;
   width: .5rem;
   height: .5rem;
-  border: .04rem solid  rgba(130, 49, 142, 0.4);
+  border: .04rem solid #C2A0C5;
   margin-top: .05rem;
+  background-size: 68%;
 }
 .village-item ul li .icon-vig01{
   background-image: url(../images/icon-vig01.png);
@@ -259,15 +260,19 @@ em,h3{
 }
 .village-item ul li .icon-vig03{
   background-image: url(../images/icon-vig03.png);
+  background-size: 50%;
 }
 .village-item ul li .icon-vig04{
   background-image: url(../images/icon-vig04.png);
+  background-size: 52%;
 }
 .village-item ul li .icon-vig05{
   background-image: url(../images/icon-vig05.png);
+  background-size: 55%;
 }
 .village-item ul li .icon-vig06{
   background-image: url(../images/icon-vig06.png);
+  background-size: 82%;
 }
 .village-item ul li .icon-vig07{
   background-image: url(../images/icon-vig07.png);
@@ -277,6 +282,7 @@ em,h3{
 }
 .village-item ul li .icon-vig09{
   background-image: url(../images/icon-vig09.png);
+  background-size: 75%;
 }
 .village-item ul li .icon-vig10{
   background-image: url(../images/icon-vig10.png);
