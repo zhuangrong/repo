@@ -1146,8 +1146,7 @@ em,h3{
 }
 .culture-bg{
   background-image: url(../images/culture.jpg);
-  background-position: center -50px;
-  background-size: 100%;
+  background-size: cover;
   height: 260px;
   max-width: 1920px;
   margin: 0 auto;
