@@ -317,6 +317,9 @@
   .news-title a {
     font-size: .24rem;
   }
+  .titlea{
+    font-size: 0 !important;
+  }
   .village-item ul li{
     flex: 0 0 -webkit-calc(50% - 5px);
     padding: .2rem .1rem;
