@@ -33,11 +33,14 @@
 
 /* -----------------------iphone 小于820px---------------------- */
 @media (max-width: 820px){
+  .contact-info li.cj-left p{
+    justify-content: flex-start;
+  }
   .sub-banner img{
     margin-top: auto;
   }
   .v-ts{
-    padding: 0 .2rem !important;
+    padding: 0 .1rem !important;
   }
   .events-case li h3{
     font-size: .28rem;
@@ -51,11 +54,11 @@
   }
   .maps,
   .maps ul{
-    padding: 0 .4rem;
+    padding: 0 .2rem;
   }
   .maps ul{
     padding: 0 .4rem;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 
   .maps li{
@@ -83,7 +86,7 @@
     font-size: .28rem;
   }
   .contact-info li .icon-contact03{
-    margin-bottom: -4px;
+    margin-bottom: 14px;
   }
   .sub-brand{
     height: 2.5rem !important;
@@ -187,6 +190,9 @@
   .company-intro > div{
     padding: .1rem .2rem;
     /* background-color: #fff; */
+  }
+  .company-intro > div p{
+    font-size: .28rem;
   }
   .sub-banner{
     position: relative;
@@ -322,12 +328,13 @@
   }
   .village-item ul li{
     flex: 0 0 -webkit-calc(50% - 5px);
-    padding: .2rem .1rem;
+    padding: .2rem .05rem;
+    font-size: 12px;
   }
   .village-item ul li i {
     background-size: 50%;
-    width: .8rem;
-    height: .8rem;
+    width: .6rem;
+    height: .6rem;
   }
   .village-item ul li span {
     padding-top: 0;

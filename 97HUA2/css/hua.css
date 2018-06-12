@@ -683,6 +683,7 @@ em,h3{
 }
 .team-slogan{
   text-align: center;
+  font-size: .28rem;
 }
 
 .swiper02 .swiper-pagination-bullet-active,
@@ -1167,4 +1168,8 @@ em,h3{
   background-image: url(../images/sub-banner031.jpg);
   background-position: center -181px !important;
   height: 300px;
+}
+.j-text{
+  text-align: center;
+  margin: .3rem 0 .4rem;
 }
