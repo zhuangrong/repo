@@ -218,6 +218,7 @@ em,h3{
   font-size: 14px;
   color: #666;
   font-weight:  bold;
+  margin-bottom: 8px;
 }
 .blank{
   height: .6rem;
@@ -241,6 +242,7 @@ em,h3{
   color: #82318e;
   background-image: url(../images/vig-item-bg.png);
   background-size: 100%;
+  background-repeat: repeat-x !important;
   margin-bottom: .15rem;
 }
 .village-item ul li i{
@@ -265,7 +267,7 @@ em,h3{
 }
 .village-item ul li .icon-vig04{
   background-image: url(../images/icon-vig04.png);
-  background-size: 52%;
+  background-size: 50%;
 }
 .village-item ul li .icon-vig05{
   background-image: url(../images/icon-vig05.png);
@@ -457,7 +459,7 @@ em,h3{
   -webkit-box-align: center;
   justify-content: center;
   background-color: #363636;
-  border-top: 20px solid  #82318E;
+  border-top: 15px solid  rgb(130, 49, 142);
   padding: 40px 0;
 }
 .footer .ft-info{
@@ -683,7 +685,7 @@ em,h3{
 }
 .team-slogan{
   text-align: center;
-  font-size: .28rem;
+  font-size: 22px;
 }
 
 .swiper02 .swiper-pagination-bullet-active,
@@ -1083,8 +1085,9 @@ em,h3{
 }
 .stick{
   display: inline-block;
-  width: .52rem;
-  height: .23rem;
+  width: .50rem;
+  em;
+  height: .18rem;
   background-image: url(../images/icon-stick.png);
   background-size: 100%;
   vertical-align: middle;

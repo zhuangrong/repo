@@ -33,6 +33,30 @@
 
 /* -----------------------iphone 小于820px---------------------- */
 @media (max-width: 820px){
+  .stick{
+    width: .63rem;
+    height: .23rem;
+  }
+  .village-item ul li .icon-vig10,
+  .village-item ul li .icon-vig07,
+  .village-item ul li .icon-vig02,
+  .village-item ul li .icon-vig01{
+    background-size: 66%;
+  }
+  .team-slogan{
+    font-size: .28rem;
+  }
+  .j-text{
+    padding: .2rem .2rem;
+    text-align: center;
+  }
+  .j-text img{
+    width: 85%;
+  }
+  .framework{
+    text-align: center;
+    padding: .2rem;
+  }
   .b-reverse ul{
     margin-top: -.15rem;
   }
@@ -78,6 +102,8 @@
     font-size: .28rem;
     line-height: 1.6;
     font-weight: normal;
+    text-align:  left;
+    text-align:  justify;
   }
   .news-more{
     margin-top: .13rem;
@@ -220,8 +246,8 @@
     margin-bottom: 0.3rem;
   }
   .about-team a i{
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
     margin-bottom: 0;
   }
   .produce-wrap .produce p{
@@ -335,7 +361,7 @@
     font-size: 12px;
   }
   .village-item ul li i {
-    background-size: 50%;
+    background-size: 58%;
     width: .6rem;
     height: .6rem;
   }
@@ -391,7 +417,7 @@
   .header-tip::before{
     content: '菜单';
     display: inline-block;
-    font-size: .4rem;
+    font-size: .37rem;
     position:  absolute;
     color: #82318E;
     top: 0.39rem;
@@ -419,17 +445,19 @@
     text-align: center;
   }
   .nav li{
-    display: inline-block;
     font-size: 14px;
+    float: left;
     background-color: transparent;
     padding: 0;
     height: 1.2rem;
     line-height: 1.2rem;
-    width: 31%;
+    width: 25%;
     position: relative;
+    min-width: auto;
   }
   .nav li:nth-child(3)::after,
-  .nav li:nth-child(2)::after{
+  .nav li:nth-child(2)::after,
+  .nav li:nth-child(1)::after{
     content: '';
     display: block;
     width: 1px;
