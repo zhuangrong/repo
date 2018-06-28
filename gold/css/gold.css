@@ -503,3 +503,38 @@ nav a.active i.icon-nav04{
   font-size: 16px;
   width: .6rem;
 }
+/* 搜索 */
+.search{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  height: .88rem;
+  color: #fff;
+  background-color: #09ABFF;
+  padding: 0 .3rem;
+}
+.search a.icon-back{
+  width: .44rem;
+  height: .44rem;
+  background-image: url(../images/icon-back.png);
+  margin-right: .1rem;
+}
+.search input[type=text]{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background-color: rgb(255, 255, 255, .3);
+  border-radius: .32rem;
+  height: .6rem;
+  line-height: .64rem;
+  padding: 0 .64rem;
+  background-image: url(../images/icon-search2.png);
+  background-position: .2rem center;
+  background-size: .24rem;
+  color: #fff;
+}
+.search input[type=text]::-webkit-input-placeholder{
+
+}
