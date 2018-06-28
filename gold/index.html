@@ -13,14 +13,44 @@
 <script src="js/swiper.jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
-
+  // 打开城市弹出层
+  $("#choose").on("click",function(){
+    $("#city-pop").show()
+  })
+  // 关闭
+  $("#city-close").on("click",function(){
+    $("#city-pop").hide()
+  })
 })
 </script>
 </head>
 <body>
+<!-- 城市选择 -->
+<div class="city" id="city-pop" style="display:none">
+  <div class="header">
+    <a class="icon-back" id="city-close" href="javascrit:;"></a>
+    <span>切换城市</span>
+    <a href="javascrit:;"></a>
+  </div>
+  <div class="city-list">
+    <a href="#" class="active">厦门</a>
+    <a href="#">福州</a>
+    <a href="#">莆田</a>
+    <a href="#">泉州</a>
+    <a href="#">漳州</a>
+    <a href="#">龙岩</a>
+    <a href="#">三明</a>
+    <a href="#">南平</a>
+    <a href="#">宁德</a>
+    <a href="#">其他</a>
+    <a href="#">其他</a>
+  </div>
+
+</div>
+<!-- //城市选择 -->
 <!-- banner -->
 <div class="banner">
-  <div class="location">
+  <div class="location" id="choose">
     <i></i> 厦门
   </div>
   <!-- Swiper -->
