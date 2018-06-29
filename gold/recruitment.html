@@ -11,9 +11,18 @@
 <link rel="stylesheet" href="css/gold.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
-<script type="text/javascript">
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
 $(function(){
-
+	$.TabChange("tabs",1)
 })
 </script>
 </head>
@@ -21,8 +30,115 @@ $(function(){
 <!--搜索-->
 <div class="search">
 	<a class="icon-back" href="javascrit:;"></a>
-	<input type="text" placeholder="请输入内容">
+  <span>厦门</span>
+	<input type="text" class="so2" placeholder="请输入内容">
+  <label>雇主</label>
 </div>
 <!--//搜索-->
+<!-- tabs -->
+<div class="tabs" id="tabs">
+	<ul>
+		<li class="curr">大众兼职</li>
+		<li>特色兼职</li>
+		<li>全职优选</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+    <!-- 大众兼职 -->
+    <!-- sub tabs -->
+    <div class="sub-tabs">
+      <ul>
+        <li>区域</li>
+        <li>岗位类别</li>
+        <li>适用人群</li>
+        <li>我的收藏</li>
+      </ul>
+    </div>
+    <!-- //sub tabs -->
+    <!-- recurit list -->
+    <div class="recruit-list-wrap">
+      <div class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">月结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </div>
+      <div class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">日结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>厦门二三四五有限公司</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </div>
+      <div class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职最多十六字</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">周结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </div>
+    </div>
+    <!-- //recurit list -->
+    <!-- //大众兼职 -->
+  </div>
+	<div style="display:none">
+    特色兼职
+  </div>
+  <div style="display: none">
+    <!-- 全职优选 -->
+    全职优选
+    <!-- //全职优选 -->
+  </div>
+</div>
+<!-- //tabs -->
+
+
 </body>
 </html>
