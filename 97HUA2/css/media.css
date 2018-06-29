@@ -33,11 +33,51 @@
 
 /* -----------------------iphone 小于820px---------------------- */
 @media (max-width: 820px){
+<<<<<<< HEAD
+=======
+  .news-relative{
+    font-size: .28rem;
+  }
+  .stick{
+    width: .63rem;
+    height: .23rem;
+  }
+  .village-item ul li .icon-vig10,
+  .village-item ul li .icon-vig07,
+  .village-item ul li .icon-vig02,
+  .village-item ul li .icon-vig01{
+    background-size: 66%;
+  }
+  .team-slogan{
+    font-size: .28rem;
+  }
+  .j-text{
+    padding: .2rem .2rem;
+    text-align: center;
+  }
+  .j-text img{
+    width: 85%;
+  }
+  .framework{
+    text-align: center;
+    padding: .2rem;
+  }
+  .b-reverse ul{
+    margin-top: -.15rem;
+  }
+  .contact-info li.cj-left p{
+    justify-content: flex-start;
+  }
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
   .sub-banner img{
     margin-top: auto;
   }
   .v-ts{
+<<<<<<< HEAD
     padding: 0 .2rem !important;
+=======
+    padding: 0 .1rem !important;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
   }
   .events-case li h3{
     font-size: .28rem;
@@ -51,12 +91,19 @@
   }
   .maps,
   .maps ul{
-    padding: 0 .4rem;
+    padding: 0 .2rem;
   }
+  .maps ul{
+    padding: 0 .4rem;
+    /* white-space: nowrap; */
+  }
+<<<<<<< HEAD
   .maps ul{
     padding: 0 .4rem;
     white-space: nowrap;
   }
+=======
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
 
   .maps li{
     padding: .2rem;
@@ -72,6 +119,8 @@
     font-size: .28rem;
     line-height: 1.6;
     font-weight: normal;
+    text-align:  left;
+    text-align:  justify;
   }
   .news-more{
     margin-top: .13rem;
@@ -83,11 +132,11 @@
     font-size: .28rem;
   }
   .contact-info li .icon-contact03{
-    margin-bottom: -4px;
+    margin-bottom: 14px;
   }
   .sub-brand{
-    height: 2.5rem !important;
-    margin-bottom: -1.8rem;
+    height: 4.5rem !important;
+    margin-bottom: -4.06rem;
   }
   .swiper05{
     padding-bottom: .2rem;
@@ -188,6 +237,9 @@
     padding: .1rem .2rem;
     /* background-color: #fff; */
   }
+  .company-intro > div p{
+    font-size: .28rem;
+  }
   .sub-banner{
     position: relative;
     height: auto;
@@ -211,13 +263,15 @@
     margin-bottom: 0.3rem;
   }
   .about-team a i{
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
     margin-bottom: 0;
   }
   .produce-wrap .produce p{
     line-height: 1.4;
     font-size: 12px;
+    text-indent: 2em;
+    text-align:  left;
   }
   .produce-wrap .produce h3{
     font-size: .34rem;
@@ -317,14 +371,18 @@
   .news-title a {
     font-size: .24rem;
   }
+  .titlea{
+    font-size: 0 !important;
+  }
   .village-item ul li{
     flex: 0 0 -webkit-calc(50% - 5px);
-    padding: .2rem .1rem;
+    padding: .2rem .05rem;
+    font-size: 12px;
   }
   .village-item ul li i {
-    background-size: 50%;
-    width: .8rem;
-    height: .8rem;
+    background-size: 58%;
+    width: .6rem;
+    height: .6rem;
   }
   .village-item ul li span {
     padding-top: 0;
@@ -378,10 +436,17 @@
   .header-tip::before{
     content: '菜单';
     display: inline-block;
+<<<<<<< HEAD
     font-size: .4rem;
     position:  absolute;
     color: #82318E;
     top: 0.39rem;
+=======
+    font-size: .37rem;
+    position:  absolute;
+    color: #82318E;
+    top: 0.37rem;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
     right: .92rem;
   }
   .nav-toggle {
@@ -406,17 +471,19 @@
     text-align: center;
   }
   .nav li{
-    display: inline-block;
     font-size: 14px;
+    float: left;
     background-color: transparent;
     padding: 0;
     height: 1.2rem;
     line-height: 1.2rem;
-    width: 31%;
+    width: 25%;
     position: relative;
+    min-width: auto;
   }
   .nav li:nth-child(3)::after,
-  .nav li:nth-child(2)::after{
+  .nav li:nth-child(2)::after,
+  .nav li:nth-child(1)::after{
     content: '';
     display: block;
     width: 1px;

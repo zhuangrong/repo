@@ -191,6 +191,10 @@ em,h3{
 .sub-about{
   height: 300px;
   background-image: url(../images/sub-banner-about.jpg);
+<<<<<<< HEAD
+=======
+  background-position: center -110px !important;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
 }
 .sub-about img{
   margin-top: -1.8rem;
@@ -217,6 +221,7 @@ em,h3{
   font-size: 14px;
   color: #666;
   font-weight:  bold;
+  margin-bottom: 8px;
 }
 .blank{
   height: .6rem;
@@ -240,6 +245,10 @@ em,h3{
   color: #82318e;
   background-image: url(../images/vig-item-bg.png);
   background-size: 100%;
+<<<<<<< HEAD
+=======
+  background-repeat: repeat-x !important;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
   margin-bottom: .15rem;
 }
 .village-item ul li i{
@@ -248,8 +257,14 @@ em,h3{
   border-radius: 50%;
   width: .5rem;
   height: .5rem;
+<<<<<<< HEAD
   border: .04rem solid  rgba(130, 49, 142, 0.4);
   margin-top: .05rem;
+=======
+  border: .04rem solid #C2A0C5;
+  margin-top: .05rem;
+  background-size: 68%;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
 }
 .village-item ul li .icon-vig01{
   background-image: url(../images/icon-vig01.png);
@@ -259,15 +274,19 @@ em,h3{
 }
 .village-item ul li .icon-vig03{
   background-image: url(../images/icon-vig03.png);
+  background-size: 50%;
 }
 .village-item ul li .icon-vig04{
   background-image: url(../images/icon-vig04.png);
+  background-size: 50%;
 }
 .village-item ul li .icon-vig05{
   background-image: url(../images/icon-vig05.png);
+  background-size: 55%;
 }
 .village-item ul li .icon-vig06{
   background-image: url(../images/icon-vig06.png);
+  background-size: 82%;
 }
 .village-item ul li .icon-vig07{
   background-image: url(../images/icon-vig07.png);
@@ -277,6 +296,7 @@ em,h3{
 }
 .village-item ul li .icon-vig09{
   background-image: url(../images/icon-vig09.png);
+  background-size: 75%;
 }
 .village-item ul li .icon-vig10{
   background-image: url(../images/icon-vig10.png);
@@ -450,7 +470,7 @@ em,h3{
   -webkit-box-align: center;
   justify-content: center;
   background-color: #363636;
-  border-top: 20px solid  #82318E;
+  border-top: 15px solid  rgb(130, 49, 142);
   padding: 40px 0;
 }
 .footer .ft-info{
@@ -676,6 +696,7 @@ em,h3{
 }
 .team-slogan{
   text-align: center;
+  font-size: 20px;
 }
 
 .swiper02 .swiper-pagination-bullet-active,
@@ -1075,8 +1096,9 @@ em,h3{
 }
 .stick{
   display: inline-block;
-  width: .52rem;
-  height: .23rem;
+  width: .50rem;
+  em;
+  height: .18rem;
   background-image: url(../images/icon-stick.png);
   background-size: 100%;
   vertical-align: middle;
@@ -1140,8 +1162,12 @@ em,h3{
 }
 .culture-bg{
   background-image: url(../images/culture.jpg);
+<<<<<<< HEAD
   background-position: center -50px;
   background-size: 100%;
+=======
+  background-size: cover;
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
   height: 260px;
   max-width: 1920px;
   margin: 0 auto;
@@ -1157,3 +1183,15 @@ em,h3{
 .sub3{
   height: 300px;
 }
+<<<<<<< HEAD
+=======
+.sub-item{
+  background-image: url(../images/sub-banner031.jpg);
+  background-position: center -181px !important;
+  height: 300px;
+}
+.j-text{
+  text-align: center;
+  margin: .3rem 0 .4rem;
+}
+>>>>>>> 945da87f2f0b7fb35300470001fbd3af0eceb4a6
