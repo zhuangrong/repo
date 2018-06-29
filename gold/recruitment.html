@@ -23,6 +23,34 @@ $.TabChange = function(obj,num){
 }
 $(function(){
 	$.TabChange("tabs",1)
+
+  //分类选择
+  var flag;
+  $("#dazhong .category-tabs li").each(function(index){
+    $(this).click(function(e){
+      e.preventDefault();
+      if($(this).hasClass("active")){
+        $(".dropdown-mask").hide();
+        $("#dazhong .dropdown div").eq(index).hide();
+        $("#dazhong .category-tabs li").removeClass("active");
+      }else{
+        $(".dropdown-mask").show();
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#dazhong .dropdown > div").eq(index).show().siblings().hide();
+        if(index==0){
+          setTimeout(function () {
+            myScroll.refresh();
+          }, 0)
+        }
+      }
+      flag=index;
+    })
+  })
+  $(".dropdown-mask").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dazhong .dropdown div").eq(flag).hide();
+		$("#dazhong .category-tabs li").removeClass("active");
+	})
 })
 </script>
 </head>
@@ -46,19 +74,58 @@ $(function(){
 <div class="tab-box1">
 	<div>
     <!-- 大众兼职 -->
-    <!-- sub tabs -->
-    <div class="sub-tabs">
-      <ul>
-        <li>区域</li>
-        <li>岗位类别</li>
-        <li>适用人群</li>
-        <li>我的收藏</li>
-      </ul>
+    <div class="category" id="dazhong">
+      <div class="category-tabs">
+        <ul>
+          <li>区域</li>
+          <li>岗位类别</li>
+          <li>适用人群</li>
+          <li>我的收藏</li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <!-- 区域 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>思明</li>
+            <li>湖里</li>
+            <li>集美</li>
+            <li>海沧</li>
+            <li>同安</li>
+            <li>杏林</li>
+            <li>翔安</li>
+          </ul>
+        </div>
+        <!-- //区域 -->
+        <!-- 岗位类别 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>大众销售类</li>
+            <li>大众服务类</li>
+            <li>大众外勤类</li>
+            <li>大众内勤类</li>
+            <li>大众综合类</li>
+            <li>大众管理类</li>
+          </ul>
+        </div>
+        <!-- //岗位类别 -->
+        <!-- 适用人群 -->
+        <div class="d-box" style="display:none">
+          适用人群
+        </div>
+        <!-- //适用人群 -->
+        <!-- 我的收藏 -->
+        <div class="d-box" style="display:none">
+          我的收藏
+        </div>
+        <!-- //我的收藏 -->
+      </div>
     </div>
-    <!-- //sub tabs -->
-    <!-- recurit list -->
+    <!-- 兼职列表 -->
     <div class="recruit-list-wrap">
-      <div class="recruit-list">
+      <a href="#" class="recruit-list">
         <div class="r-box">
           <div class="t-title">
             <h3>厦门UR湖里区门店兼职</h3>
@@ -79,8 +146,8 @@ $(function(){
           <em class="c02">名企</em>
           <em class="c03">口碑</em>
         </div>
-      </div>
-      <div class="recruit-list">
+      </a>
+      <a href="#" class="recruit-list">
         <div class="r-box">
           <div class="t-title">
             <h3>厦门UR湖里区门店兼职</h3>
@@ -92,29 +159,7 @@ $(function(){
           </div>
           <div class="t-time">
             <h3>150元/小时</h3>
-            <div class="info">日结</div>
-          </div>
-        </div>
-        <div class="t-type">
-          <span>厦门二三四五有限公司</span>
-          <em class="c01">爱心</em>
-          <em class="c02">名企</em>
-          <em class="c03">口碑</em>
-        </div>
-      </div>
-      <div class="recruit-list">
-        <div class="r-box">
-          <div class="t-title">
-            <h3>厦门UR湖里区门店兼职最多十六字</h3>
-            <div class="info">
-              <em class="icon-add">思明</em>
-              <em class="icon-time">长期招聘</em>
-              <em class="icon-check">限学生</em>
-            </div>
-          </div>
-          <div class="t-time">
-            <h3>150元/小时</h3>
-            <div class="info">周结</div>
+            <div class="info">月结</div>
           </div>
         </div>
         <div class="t-type">
@@ -123,9 +168,31 @@ $(function(){
           <em class="c02">名企</em>
           <em class="c03">口碑</em>
         </div>
-      </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">月结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </a>
     </div>
-    <!-- //recurit list -->
+    <!-- //兼职列表 -->
     <!-- //大众兼职 -->
   </div>
 	<div style="display:none">
@@ -133,12 +200,113 @@ $(function(){
   </div>
   <div style="display: none">
     <!-- 全职优选 -->
-    全职优选
+    <div class="category" id="quanzhi">
+      <div class="category-tabs">
+        <ul>
+          <li>区域</li>
+          <li>岗位类别</li>
+          <li>适用人群</li>
+          <li>我的收藏</li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <!-- 区域 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>思明</li>
+            <li>湖里</li>
+            <li>集美</li>
+            <li>海沧</li>
+            <li>同安</li>
+            <li>杏林</li>
+            <li>翔安</li>
+          </ul>
+        </div>
+        <!-- //区域 -->
+        <!-- 岗位类别 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>销售类</li>
+            <li>服务类</li>
+            <li>外勤类</li>
+            <li>内勤类</li>
+            <li>综合类</li>
+            <li>管理类</li>
+          </ul>
+        </div>
+        <!-- //岗位类别 -->
+        <!-- 适用人群 -->
+        <div class="d-box" style="display:none">
+          适用人群
+        </div>
+        <!-- //适用人群 -->
+        <!-- 我的收藏 -->
+        <div class="d-box" style="display:none">
+          我的收藏
+        </div>
+        <!-- //我的收藏 -->
+      </div>
+    </div>
+    <!-- 全职-列表 -->
+    <div class="recruit-list-wrap">
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- //全职-列表 -->
     <!-- //全职优选 -->
   </div>
+  <div class="dropdown-mask"></div>
 </div>
 <!-- //tabs -->
-
+<a href="javascrit:;" class="service"></a>
 
 </body>
 </html>
