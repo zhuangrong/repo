@@ -520,6 +520,11 @@ nav a.active i.icon-nav04{
 .header .icon-back{
   background-image: url(../images/icon-back.png);
 }
+.header .icon-jia{
+  background-image: url(../images/icon-plus-s.png);
+  background-size: 90%;
+  background-position: center;
+}
 .header .icon-share{
   background-image: url(../images/icon-share.png);
   background-position: center;
@@ -1321,6 +1326,12 @@ a.link{
 	margin-top: .2rem;
 	font-size: .26rem;
   line-height: 1.8;
+}
+.task-form li.full-txt .character{
+  color: #999;
+  font-size: .24rem;
+  text-align: right;
+  padding-right: .3rem;
 }
 .task-form li textarea{
   width: 100%;
@@ -2135,4 +2146,95 @@ dl {}
   bottom: .1rem;
   right: .1rem;
   width: 1.62rem;
+}
+
+.posts-list{
+  background-color: #fff;
+}
+.posts-list dl{
+  border-bottom: 1px solid  #f5f5f5;
+  padding: .2rem .3rem;
+}
+.posts-list dt{
+  margin-bottom: .2rem;
+}
+.posts-list dd,
+.posts-list dt{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.posts-list dt h3{
+  font-size: .32rem;
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  padding-right: .5rem;
+}
+.posts-list dt em{
+  color: #999;
+}
+.posts-list dt em::before{
+  content: '';
+  display: inline-block;
+  margin-right: .05rem;
+  font-size: .2rem;
+  width: .2rem;
+  height: .2rem;
+}
+.posts-list dt em.icon-add::before{
+  background-image: url(../images/icon-add.png);
+  width: .16rem;
+}
+.posts-list dd em{
+  color: #09ABFF;
+  font-size: .24rem;
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+}
+.posts-list dd a{
+  margin-left: .2rem;
+  font-size: .24rem;
+}
+.posts-list dd a::before{
+  content: '';
+  display: inline-block;
+  width: .24rem;
+  height: .24rem;
+  margin-right: .08rem;
+}
+.posts-list dd .icon-p01::before{
+  background-image: url(../images/icon-p01.png);
+}
+.posts-list dd .icon-p02::before{
+  background-image: url(../images/icon-p02.png);
+}
+.posts-list dd .icon-p03::before{
+  background-image: url(../images/icon-p03.png);
+}
+.posts-list dd .icon-p04::before{
+  background-image: url(../images/icon-p04.png);
+}
+.cg01{
+  color: #999 !important;
+}
+.btn-add-wrap{
+  background-color: #fff;
+  padding: .3rem 0;
+  text-align: center;
+}
+.btn-add{
+  display: block;
+  width:2.8rem;
+  line-height:0.8rem;
+  color: #09ABFF;
+  text-align: center;
+  border-radius:0.4rem;
+  border:0.02rem solid rgba(9,171,255,1);
+  margin: 0 auto;
+}
+.uped img{
+  width: 1.4rem;
+  height: 1.4rem;
 }
