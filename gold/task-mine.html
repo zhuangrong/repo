@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+<div class="segment" id="tabs">
+  <ul>
+    <li class="curr">未完成任务</li>
+    <li>已完成任务</li>
+  </ul>
+</div>
+<div class="tab-box1">
+  <div>
+    <div class="recruit-list-wrap">
+			<a href="#" class="recruit-list">
+				<div class="r-box">
+					<div class="t-title">
+						<h3>厦门银行票据信息录入</h3>
+						<div class="info">
+							<em class="icon-add">思明</em>
+							<em class="icon-time">截止时间：2018/12/31</em>
+						</div>
+					</div>
+					<div class="t-time">
+						<h3>佣金：100元</h3>
+						<div class="info cg9">未通过</div>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="recruit-list">
+				<div class="r-box">
+					<div class="t-title">
+						<h3>厦门银行票据信息录入</h3>
+						<div class="info">
+							<em class="icon-add">思明</em>
+							<em class="icon-time">截止时间：2018/12/31</em>
+						</div>
+					</div>
+					<div class="t-time">
+						<h3>佣金：100元</h3>
+						<div class="info c02">待审核</div>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="recruit-list">
+				<div class="r-box">
+					<div class="t-title">
+						<h3>厦门银行票据信息录入</h3>
+						<div class="info">
+							<em class="icon-add">思明</em>
+							<em class="icon-time">截止时间：2018/12/31</em>
+						</div>
+					</div>
+					<div class="t-time">
+						<h3>佣金：100元</h3>
+						<div class="info c01">待完成</div>
+					</div>
+				</div>
+			</a>
+		</div>
+  </div>
+  <div style="display:none">
+   s
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<title>ing</title>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script>
+$(function(){
+  $("#btn").on("click", function(){
+    $("#wrapper").show()
+    setTimeout(function () {
+                      myScroll.refresh();
+    }, 0)
+  })
+})
+//滚动
+var myScroll;
+function loaded () {
+	myScroll = new IScroll('#wrapper',{
+			tap:true,
+			click:false,
+			preventDefaultException:{tagName:/.*/}//解除默认事件锁定，调用tab，click等事件,不支持swipeleft
+		});
+}
+
+</script>
+<style>
+ul,li{
+  list-style: none;
+}
+#wrapper {
+	position:absolute;
+	height: 120px;
+  background-color: #eee;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+  width: 200px;
+}
+#scroller {
+	position: absolute;
+	left:5px;
+	right:5px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.box{
+
+}
+.box li{
+  border-bottom: 1px solid  #eee;
+  padding: 5px;
+}
+</style>
+
+</head>
+<button id="btn">弹出层</button>
+<p>&nbsp;</p>
+<body onload="loaded()" style="padding:100px">
+  <div  id="wrapper" style="display:none" >
+    <ul id="scroller" class="box">
+      <li><i class="icon-s-c1"></i>全部活动</li>
+      <li><i class="icon-s-c2"></i>亲子旅游</li>
+      <li><i class="icon-s-c3"></i>亲子周边游</li>
+      <li><i class="icon-s-c4"></i>兴趣班</li>
+      <li><i class="icon-s-c5"></i>兴趣班</li>
+      <li><i class="icon-s-c6"></i>夏令营</li>
+      <li><i class="icon-s-c7"></i>教学</li>
+      <li><i class="icon-s-c8"></i>团队定制</li>
+    </ul>
+  </div>
+</body>
+</html>

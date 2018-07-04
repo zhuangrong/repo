@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+
+  //分类选择
+  var flag;
+  $("#dazhong .category-tabs li").each(function(index){
+    $(this).click(function(e){
+      e.preventDefault();
+      if($(this).hasClass("active")){
+        $(".dropdown-mask").hide();
+        $("#dazhong .dropdown div").eq(index).hide();
+        $("#dazhong .category-tabs li").removeClass("active");
+      }else{
+        $(".dropdown-mask").show();
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#dazhong .dropdown > div").eq(index).show().siblings().hide();
+        if(index==0){
+          setTimeout(function () {
+            myScroll.refresh();
+          }, 0)
+        }
+      }
+      flag=index;
+    })
+  })
+  $(".dropdown-mask").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dazhong .dropdown div").eq(flag).hide();
+		$("#dazhong .category-tabs li").removeClass("active");
+	})
+})
+</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>我的应聘</span>
+  <a></a>
+</div>
+<!-- //header -->
+<div class="progress-wrap">
+  <h3>大堂助理</h3>
+  <div class="progress">
+    <ul>
+      <li><i class="over"></i><em>简历投递</em></li>
+      <li><i></i><em>初试</em></li>
+      <li><i></i><em>复试</em></li>
+      <li><i></i><em>录用</em></li>
+    </ul>
+  </div>
+</div>
+<div class="blank01"></div>
+<div class="progress-wrap">
+  <h3>大堂助理</h3>
+  <div class="progress">
+    <ul>
+      <li><i class="over"></i><em>简历投递</em></li>
+      <li><i></i><em>初试</em></li>
+      <li><i></i><em>复试</em></li>
+      <li><i></i><em>录用</em></li>
+    </ul>
+  </div>
+</div>
+<div class="blank01"></div>
+</body>
+</html>
