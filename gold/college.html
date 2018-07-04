@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+<!--搜索-->
+<div class="search">
+  <span>厦门</span>
+	<input type="text"  placeholder="搜索文章/作者">
+</div>
+<!--//搜索-->
+<!-- tabs -->
+<div class="tabs" id="tabs">
+	<ul>
+		<li class="curr">培训课堂</li>
+		<li>推粉之家</li>
+		<li>家园文化</li>
+		<li>八闽大地</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+    <!-- 培训课堂 -->
+    <div class="training">
+      <a href="#" class="clg01">
+        <h3>产品培训</h3>
+      </a href="#">
+      <a href="#" class="clg02">
+        <h3>技能培训</h3>
+      </a href="#">
+      <a href="#" class="clg03">
+        <h3>职业规划</h3>
+      </a href="#">
+      <a href="#" class="clg04">
+        <h3>课程推荐</h3>
+      </a href="#">
+    </div>
+    <!-- //培训课堂 -->
+    <!-- 图文 -->
+    <div class="pic-text pt02">
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""></dt>
+          <dd>
+            <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""></dt>
+          <dd>
+            <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""></dt>
+          <dd>
+            <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+          </dd>
+        </dl>
+      </a>
+    </div>
+    <!-- //图文 -->
+  </div>
+	<div style="display:none">
+    <!-- 推粉之家 -->
+    <div class="pic-fluid">
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic02.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic02.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dd>
+            <img src="images/active-pic.png" alt="">
+          </dd>
+          <dt>
+            <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+            <p>
+              <i style="background-image:url(images/avatar02.png)"></i>
+              微信名
+            </p>
+          </dt>
+        </dl>
+      </a>
+    </div>
+    <!-- //推粉之家 -->
+  </div>
+	<div style="display:none">
+    <!-- 家园文化 -->
+    <div class="pic-text pt02">
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>企业文化宣传使命愿景价值观及 幸福家风等</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>企业文化宣传使命愿景价值观及 幸福家风等</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>企业文化宣传使命愿景价值观及 幸福家风等</p>
+          </dd>
+        </dl>
+      </a>
+    </div>
+    <!-- //家园文化 -->
+  </div>
+	<div style="display:none">
+    <!-- 八闽大地 -->
+    <div class="pic-text pt02">
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>客家文化宁化县之旅客家文化宁 化县之旅</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>客家文化宁化县之旅客家文化宁 化县之旅</p>
+          </dd>
+        </dl>
+      </a>
+      <a href="#">
+        <dl>
+          <dt><img src="images/pic02.png" alt=""><em>阅读量：1.3w</em></dt>
+          <dd>
+            <p>客家文化宁化县之旅客家文化宁 化县之旅</p>
+          </dd>
+        </dl>
+      </a>
+    </div>
+    <!-- //八闽大地 -->
+  </div>
+</div>
+<!-- //tabs -->
+<a href="javascrit:;" class="service"></a>
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>任务</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>推学院</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
