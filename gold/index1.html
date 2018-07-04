@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 打开城市弹出层
+  $("#choose").on("click",function(){
+    $("#city-pop").show()
+  })
+  // 关闭
+  $("#city-close").on("click",function(){
+    $("#city-pop").hide()
+  })
+})
+</script>
+</head>
+<body>
+<!-- 城市选择 -->
+<div class="city" id="city-pop" style="display:none">
+  <div class="header">
+    <a class="icon-back" id="city-close" href="javascrit:;"></a>
+    <span>切换城市</span>
+    <a></a>
+  </div>
+  <div class="city-list">
+    <a href="#" class="active">厦门</a>
+    <a href="#">福州</a>
+    <a href="#">莆田</a>
+    <a href="#">泉州</a>
+    <a href="#">漳州</a>
+    <a href="#">龙岩</a>
+    <a href="#">三明</a>
+    <a href="#">南平</a>
+    <a href="#">宁德</a>
+    <a href="#">其他</a>
+    <a href="#">其他</a>
+  </div>
+
+</div>
+<!-- //城市选择 -->
+<!-- banner -->
+<div class="banner">
+  <div class="location" id="choose">
+    <i></i> 厦门
+  </div>
+  <!-- Swiper -->
+  <section class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+  </section>
+  <!-- //Swiper -->
+  <script>
+  var swiper01 = new Swiper('.swiper01', {
+      pagination: '.sp1',
+      paginationClickable: true,
+      autoplay: 2000,
+      loop: true
+  });
+  </script>
+</div>
+<!-- //banner -->
+<!-- entry -->
+<div class="entry">
+  <a href="#">
+    <i class="item01"></i>
+    <span>兼职优聘</span>
+  </a>
+  <a href="#">
+    <i class="item02"></i>
+    <span>任务精选</span>
+  </a>
+  <a href="#">
+    <i class="item03"></i>
+    <span>推粉之家</span>
+  </a>
+  <a href="#">
+    <i class="item04"></i>
+    <span>公益活动</span>
+  </a>
+</div>
+<!-- //entry -->
+<!-- 岗位推荐 -->
+<div class="m-box">
+  <h3>
+    <span></span>岗位推荐
+    <a href="#">更多&gt;</a>
+  </h3>
+  <div class="m-item">
+    <h5>推个金</h5>
+    <p>我在推个金，更放心</p>
+  </div>
+  <div class="m-item-group">
+    <ul>
+      <li class="linear01">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+      <li class="linear02">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+      <li class="linear03">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- //岗位推荐 -->
+<!-- 任务来了 -->
+<div class="m-box">
+  <h3>
+    <span></span>任务来了
+    <a href="#">更多&gt;</a>
+  </h3>
+  <div class="m-item m-other">
+    <h5>银行信息录入</h5>
+    <p><em>150</em> 元/天</p>
+  </div>
+  <div class="m-item-group">
+    <ul>
+      <li class="linear01">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+      <li class="linear02">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+      <li class="linear03">
+        <h5>五一中路宣传单发放</h5>
+        <p><em>150</em> 元/天</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- //任务来了 -->
+<!-- 图文 -->
+<div class="pic-text">
+  <a href="#">
+    <dl>
+      <dt><img src="images/pic02.png" alt=""></dt>
+      <dd>
+        <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+      </dd>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dt><img src="images/pic02.png" alt=""></dt>
+      <dd>
+        <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+      </dd>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dt><img src="images/pic02.png" alt=""></dt>
+      <dd>
+        <p>职场小白最容易犯的几个错误你 犯了几个？</p>
+      </dd>
+    </dl>
+  </a>
+</div>
+<!-- //图文 -->
+<!-- //图文流 -->
+<div class="pic-fluid">
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic02.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic02.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+  <a href="#">
+    <dl>
+      <dd>
+        <img src="images/active-pic.png" alt="">
+      </dd>
+      <dt>
+        <h3>职场小白最容易犯的几个错误你 犯了几个？</h3>
+        <p>
+          <i style="background-image:url(images/avatar02.png)"></i>
+          微信名
+        </p>
+      </dt>
+    </dl>
+  </a>
+</div>
+<!-- //图文流 -->
+<!-- 客服热线 -->
+<div class="hot-line">
+  客服热线，公安网信息，承保单位，网站备案
+</div>
+<!-- //客服热线 -->
+<div class="nav-blank blank-index"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>任务</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>推学院</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

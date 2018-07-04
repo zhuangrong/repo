@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+
+  //分类选择
+  var flag;
+  $("#dazhong .category-tabs li").each(function(index){
+    $(this).click(function(e){
+      e.preventDefault();
+      if($(this).hasClass("active")){
+        $(".dropdown-mask").hide();
+        $("#dazhong .dropdown div").eq(index).hide();
+        $("#dazhong .category-tabs li").removeClass("active");
+      }else{
+        $(".dropdown-mask").show();
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#dazhong .dropdown > div").eq(index).show().siblings().hide();
+        if(index==0){
+          setTimeout(function () {
+            myScroll.refresh();
+          }, 0)
+        }
+      }
+      flag=index;
+    })
+  })
+  $(".dropdown-mask").on("click",function(e){
+		$(".dropdown-mask").hide();
+		$("#dazhong .dropdown div").eq(flag).hide();
+		$("#dazhong .category-tabs li").removeClass("active");
+	})
+})
+</script>
+</head>
+<body>
+<!--搜索-->
+<div class="search">
+	<a class="icon-back" href="javascrit:;"></a>
+  <span>厦门</span>
+	<input type="text" class="so2" placeholder="请输入内容">
+  <label>雇主</label>
+</div>
+<!--//搜索-->
+<!-- tabs -->
+<div class="tabs" id="tabs">
+	<ul>
+		<li class="curr">大众兼职</li>
+		<li>特色兼职</li>
+		<li>全职臻选</li>
+	</ul>
+</div>
+<div class="tab-box1">
+	<div>
+    <!-- 大众兼职 -->
+    <div class="category" id="dazhong">
+      <div class="category-tabs">
+        <ul>
+          <li>区域</li>
+          <li>岗位类别</li>
+          <li>适用人群</li>
+          <li>我的收藏</li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <!-- 区域 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>思明</li>
+            <li>湖里</li>
+            <li>集美</li>
+            <li>海沧</li>
+            <li>同安</li>
+            <li>杏林</li>
+            <li>翔安</li>
+          </ul>
+        </div>
+        <!-- //区域 -->
+        <!-- 岗位类别 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>大众销售类</li>
+            <li>大众服务类</li>
+            <li>大众外勤类</li>
+            <li>大众内勤类</li>
+            <li>大众综合类</li>
+            <li>大众管理类</li>
+          </ul>
+        </div>
+        <!-- //岗位类别 -->
+        <!-- 适用人群 -->
+        <div class="d-box" style="display:none">
+          适用人群
+        </div>
+        <!-- //适用人群 -->
+        <!-- 我的收藏 -->
+        <div class="d-box" style="display:none">
+          我的收藏
+        </div>
+        <!-- //我的收藏 -->
+      </div>
+    </div>
+    <!-- 兼职列表 -->
+    <div class="recruit-list-wrap">
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">月结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">月结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>厦门UR湖里区门店兼职</h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-time">长期招聘</em>
+              <em class="icon-check">限学生</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>150元/小时</h3>
+            <div class="info">月结</div>
+          </div>
+        </div>
+        <div class="t-type">
+          <span>公司名称最多十二字十二字</span>
+          <em class="c01">爱心</em>
+          <em class="c02">名企</em>
+          <em class="c03">口碑</em>
+        </div>
+      </a>
+    </div>
+    <!-- //兼职列表 -->
+    <!-- //大众兼职 -->
+  </div>
+	<div style="display:none">
+    特色兼职
+  </div>
+  <div style="display: none">
+    <!-- 全职优选 -->
+    <div class="category" id="quanzhi">
+      <div class="category-tabs">
+        <ul>
+          <li>区域</li>
+          <li>岗位类别</li>
+          <li class="nodd">我的应聘</li>
+          <li class="nodd">我的简历</li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <!-- 区域 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>思明</li>
+            <li>湖里</li>
+            <li>集美</li>
+            <li>海沧</li>
+            <li>同安</li>
+            <li>杏林</li>
+            <li>翔安</li>
+          </ul>
+        </div>
+        <!-- //区域 -->
+        <!-- 岗位类别 -->
+        <div class="d-box" style="display:none">
+          <ul>
+            <li>不限</li>
+            <li>销售类</li>
+            <li>服务类</li>
+            <li>外勤类</li>
+            <li>内勤类</li>
+            <li>综合类</li>
+            <li>管理类</li>
+          </ul>
+        </div>
+        <!-- //岗位类别 -->
+        <!-- 适用人群 -->
+        <div class="d-box" style="display:none">
+          适用人群
+        </div>
+        <!-- //适用人群 -->
+        <!-- 我的收藏 -->
+        <div class="d-box" style="display:none">
+          我的收藏
+        </div>
+        <!-- //我的收藏 -->
+      </div>
+    </div>
+    <!-- 全职-列表 -->
+    <div class="recruit-list-wrap">
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="recruit-list">
+        <div class="r-box">
+          <div class="t-title">
+            <h3>大堂助理 <span>编码：020508</span></h3>
+            <div class="info">
+              <em class="icon-add">思明</em>
+              <em class="icon-check">银行</em>
+              <em class="icon-time">2018/6/22</em>
+            </div>
+          </div>
+          <div class="t-time">
+            <h3>9000元/月</h3>
+            <div class="info cc05">佣金：100元</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- //全职-列表 -->
+    <!-- //全职优选 -->
+  </div>
+  <div class="dropdown-mask"></div>
+</div>
+<!-- //tabs -->
+<a href="javascrit:;" class="service"></a>
+
+</body>
+</html>
