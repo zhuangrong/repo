@@ -1383,6 +1383,9 @@ a.link{
 }
 
 /*收入明细*/
+.income-list{
+  background-color: #fff;
+}
 .income-list .in-row{
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -1398,6 +1401,13 @@ a.link{
 	-webkit-box-align: center;
 	justify-content: center;
 	flex-direction:column;
+}
+.income-list .in-row > div > span{
+  display: block;
+  background-image: url(../images/col-arrow.png);
+  padding-right: .1rem;
+  background-position: right center;
+  background-size:  .2rem;
 }
 .income-list .in-row .col10{
 	flex: 0 0 10%;
@@ -1801,4 +1811,157 @@ dl {}
 }
 .team-list li .icon-wx{
   background-image: url(../images/icon-wx.png);
+}
+.income-total ul{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #fff;
+  border: 1px solid  #09ABFF;
+}
+.income-total li{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+  flex:1;
+	text-align: center;
+	font-size: .32rem;
+  padding: .2rem 0;
+  color: #09ABFF;
+}
+.income-total li.active{
+	color: #fff;
+	background-color: #09ABFF;
+}
+.income-total li h3{
+  color: inherit;
+  font-size: .28rem;
+}
+.income-total li p{
+  font-size: .32rem;
+}
+/* 我的简历 */
+.resume{
+  padding: .3rem;
+}
+.resume .rsm-title{
+  font-size: .28rem;
+  color: #999;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.resume .rsm-title span{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+}
+.resume .rsm-title i{
+  width: .28rem;
+  height: .28rem;
+  display: block;
+  background-image: url(../images/resume-edit.png);
+}
+.resume .rsm-avatar{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  padding: .3rem 0;
+}
+.resume .rsm-avatar i{
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+.resume .rsm-avatar span{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  font-size: .36rem;
+  padding-left: .3rem;
+}
+.resume .rsm-info dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: .2rem 0;
+}
+.resume .rsm-info dt{
+  width: 1.5rem;
+  color: #999;
+}
+.resume .rsm-info dd{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+}
+.resume .rsm-edu{
+  padding: .3rem .3rem .3rem .5rem;
+  position: relative;
+}
+.resume .rsm-edu dl dt{
+  position: relative;
+  font-size: .26rem;
+  color: #999;
+}
+.resume .rsm-edu dl dt::after{
+  content: '';
+  position: absolute;
+  display: block;
+  top: .1rem;
+  left: -0.4rem;
+  width:0.2rem;
+  height:0.2rem;
+  border-radius: 50%;
+  border:0.02rem solid #979797;
+}
+.resume .rsm-edu dd{
+  position: relative;
+  padding: .1rem 0 .5rem 0;
+  font-size: .3rem;
+}
+.resume .rsm-edu dd::before{
+  position: absolute;
+  top: -0.1rem;
+  left: -0.32rem;
+  bottom: -.1rem;
+  content: '';
+  display: block;
+  width:0.02rem;
+  background-color: #979797;
+}
+.resume .rsm-edu dl:last-child dd::before{
+  display: none;
+}
+.resume .rsm-skill{
+  padding: 0 .3rem;
+}
+.resume .rsm-skill dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: .3rem 0;
+}
+.resume .rsm-skill dl dt{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.resume .rsm-skill dl dd{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  padding-left: .3rem;
+}
+.resume .rsm-skill dl dd h3{
+  font-size: .28rem;
+}
+.resume .rsm-skill dl dd p{
+  font-size: .24rem;
+  color: #666;
 }
