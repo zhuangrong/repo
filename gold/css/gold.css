@@ -1609,6 +1609,27 @@ a.link{
 .list a .icon-me01{
   background-image: url(../images/icon-me01.png);
 }
+.list a .icon-me02{
+  background-image: url(../images/icon-me02.png);
+}
+.list a .icon-me03{
+  background-image: url(../images/icon-me03.png);
+}
+.list a .icon-me04{
+  background-image: url(../images/icon-me04.png);
+}
+.list a .icon-me05{
+  background-image: url(../images/icon-me05.png);
+}
+.list a .icon-me06{
+  background-image: url(../images/icon-me06.png);
+}
+.list a .icon-me07{
+  background-image: url(../images/icon-me07.png);
+}
+.list a .icon-me08{
+  background-image: url(../images/icon-me08.png);
+}
 .list a span{
   -webkit-flex: 1;
   -ms-flex: 1;
