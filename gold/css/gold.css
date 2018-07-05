@@ -834,19 +834,25 @@ nav a.active i.icon-nav04{
 .dropdown .d-box li:active{
   background-color: #f5f5f5;
 }
+.release,
 .service{
   display: block;
   width: 1.08rem;
   height: 1.08rem;
-  background-image: url(../images/service.png);
   position: fixed;
   right: .38rem;
   bottom: 1.62rem;
 }
-
+.release{
+  bottom: 2.92rem;
+  background-image: url(../images/release.png);
+}
+.service{
+  background-image: url(../images/service.png);
+}
 /* progress */
 .progress-wrap h3{
- padding: .2rem .3rem;
+  padding: .2rem .3rem;
 }
 .progress{
   padding: 0 .5rem;
@@ -1052,7 +1058,7 @@ nav a.active i.icon-nav04{
   top: .25rem;
   width: .44rem;
   height: .44rem;
-  background-size: center;
+  background-size:  contain;
 }
 .segment .icon-back02{
   left: .2rem;
@@ -1237,6 +1243,9 @@ a.link{
 .task-content{
 	line-height: 2;
 	padding: .3rem;
+}
+.t-indent p{
+  text-indent: 2em;
 }
 .open-info{
 	text-align: center;
@@ -2287,4 +2296,138 @@ dl {}
   box-shadow:0rem -0.02rem 0.04rem 0rem rgba(7,125,184,0.1);
   text-align: center;
   font-size: .32rem;
+}
+/* avatar-wrap2 */
+.avatar-wrap2{
+  height: 2.32rem;
+  background-image: url(../images/company-bg.png);
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  color: #fff;
+  font-size: .32rem;
+  padding: .3rem;
+}
+.avatar-wrap2 i{
+  width: 1rem;
+  height: 1rem;
+  border-radius: .1rem;
+  background-color: #fff;
+}
+.avatar-wrap2 span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: .4rem;
+}
+.more{
+  color: #999;
+  font-size: .24rem;
+}
+.task-link{
+  padding: .3rem;
+}
+.task-link a{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  border-bottom: 1px solid  #f5f5f5;
+  padding: .24rem 0;
+}
+.task-link a span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.task-link a::after {
+  content: '';
+  display: block;
+  width: .3rem;
+  height: .3rem;
+  margin-top: .1rem;
+  background-image: url(../images/item-arrow.png);
+}
+.recruit-list .comp-padd{
+  padding-left: .3rem;
+}
+.pl15{
+  padding: .15rem 0 0 .15rem  !important;
+}
+/* 推粉评价 */
+.fans{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: .3rem;
+}
+.fans a{
+  flex: 0 0 -webkit-calc(25% - .1rem);
+  width: 1rem;
+}
+.fans a i{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: .05rem;
+}
+.fans::after{
+  content: '';
+  display: block;
+  width: .28rem;
+  height: .32rem;
+  margin-top: .5rem;
+  background-image: url(../images/more2.png);
+}
+/* 工具栏3 */
+.tool3{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height:0.98rem;
+  background-color: #fff;
+  box-shadow:0rem -0.02rem 0.04rem 0rem rgba(7,125,184,0.1);
+}
+.tool3 a{
+  flex: 0 0 25%;
+  color: #09ABFF;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  flex-flow:column;
+  font-size: .2rem;
+}
+.tool3 a:last-child{
+  flex: 0 0 50%;
+  background-color: #09ABFF;
+  color: #fff;
+  font-size: .32rem;
+}
+.tool3 i{
+  display: block;
+  width: .44rem;
+  height: .44rem;
+}
+.tool3 .icon-t31{
+  background-image: url(../images/icon-t31.png);
+}
+.tool3 .icon-t32{
+  background-image: url(../images/icon-t32.png);
+}
+.btn-outline{
+  color: #09ABFF;
+  border: 1px solid  #09ABFF;
+  background-color: transparent;
 }

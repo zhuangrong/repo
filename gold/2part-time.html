@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+/*tabs切换组件*/
+$.TabChange = function(obj,num){
+	$("li","#" + obj).each(function(index){
+			$(this).click(function(i){
+			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+				$(this).addClass("curr").siblings().removeClass("curr");
+			})
+	})
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>兼职详情</span>
+  <a class="icon-share" href="javascrit:;"></a>
+</div>
+<!-- //header -->
+<div class="recruit-list-wrap">
+  <a href="javascript:;" class="recruit-list">
+    <div class="r-box">
+      <div class="t-title">
+        <h3>大堂助理 <span>编码：020508</span></h3>
+        <div class="info">
+          <em class="icon-add">思明</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
+        </div>
+      </div>
+      <div class="t-time">
+        <h3>9000元/月</h3>
+        <div class="info cc05">佣金：100元</div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="blank01"></div>
+<!-- 工作内容及要求- -->
+<div class="task-title t-padd">
+  <span>工作内容及要求</span>
+</div>
+<div class="task-content">
+  <p>工作内容：负责派发公司活动单页</p>
+  <p>任职要求：</p>
+  <p>1、学历不限,专业不限; </p>
+  <p>2、反应敏捷、 </p>
+  <p>3、有责任心,能承受工作压力，乐于挑战自我.</p>
+  <p>4、年龄18-35岁 上班时间早上9:00-下午5：30</p>
+</div>
+<div class="open-info">
+  <span>展开消息</span>
+</div>
+<div class="blank01"></div>
+<!-- //工作内容及要求- -->
+<!-- 联系方式- -->
+<div class="task-title t-padd">
+  <span>联系方式</span>
+</div>
+<div class="resume">
+  <div class="rsm-info">
+    <dl>
+      <dt>工作地址：</dt>
+      <dd>厦门思明区厦禾路XX号</dd>
+      <dd><a href="#" class="link"><i class="icon-daohan"></i>一键导航</a></dd>
+    </dl>
+    <dl>
+      <dt>联系人：</dt>
+      <dd>林先生</dd>
+    </dl>
+    <dl>
+      <dt>联系方式：</dt>
+      <dd>156 2345 6789</dd>
+    </dl>
+    <dl>
+      <dt>微信号：</dt>
+      <dd>156 2345 6789</dd>
+    </dl>
+  </div>
+</div>
+<div class="blank01"></div>
+<!-- //联系方式- -->
+<!-- 公司简介- -->
+<div class="task-title t-padd">
+  <span>公司简介</span>
+</div>
+<div class="recruit-list">
+  <div class="comp-padd"><b>在乎（厦门）信息技术有限公司</b></div>
+  <div class="t-type pl15">
+    <em class="c01">爱心</em>
+    <em class="c02">名企</em>
+    <em class="c03">口碑</em>
+  </div>
+</div>
+<div class="task-content t-indent">
+  <p>在乎（厦门）信息技术有限公司成立于2015年，是一家专注于移动互联网品牌互动营销领域的H5互动服务商。</p>
+</div>
+<div class="open-info">
+  <span>展开消息</span>
+</div>
+<div class="blank01"></div>
+<!-- //公司简介- -->
+<!-- 推粉评价- -->
+<div class="task-title t-padd">
+  <span>推粉评价</span>
+</div>
+<div class="fans">
+  <a href="#">
+    <i style="background-image: url(images/avatar.png)"></i>
+    微信号
+  </a>
+  <a href="#">
+    <i style="background-image: url(images/avatar.png)"></i>
+    微信号
+  </a>
+  <a href="#">
+    <i style="background-image: url(images/avatar.png)"></i>
+    微信号
+  </a>
+  <a href="#">
+    <i style="background-image: url(images/avatar.png)"></i>
+    微信号
+  </a>
+</div>
+<!-- 推粉评价- -->
+<div class="blank01"></div>
+<!-- 该公司其他工作- -->
+<div class="task-title t-padd">
+  <span>该公司其他工作</span>
+</div>
+<div class="recruit-list-wrap">
+  <a href="javascript:;" class="recruit-list">
+    <div class="r-box">
+      <div class="t-title">
+        <h3>厦门UR湖里区门店兼职</h3>
+        <div class="info">
+          <em class="icon-add">思明</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
+        </div>
+      </div>
+      <div class="t-time">
+        <h3>15元/小时</h3>
+        <div class="info">日结</div>
+      </div>
+    </div>
+  </a>
+  <a href="javascript:;" class="recruit-list">
+    <div class="r-box">
+      <div class="t-title">
+        <h3>厦门UR湖里区门店兼职</h3>
+        <div class="info">
+          <em class="icon-add">思明</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
+        </div>
+      </div>
+      <div class="t-time">
+        <h3>15元/小时</h3>
+        <div class="info">日结</div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="open-info">
+  <a href="#">查看更多</a>
+</div>
+<!-- //该公司其他工作- -->
+<div class="blank01"></div>
+<div class="tip02 c02">Tips:若发现实际工作内容与上述不符，请提高警惕并第一时间向我们举报。</div>
+<div class="blank-task"></div>
+<!-- 工具栏3 -->
+<div class="tool3">
+  <a href="javascript:;"><i class="icon-t31"></i>收藏</a>
+  <a href="javascript:;"><i class="icon-t32"></i>举报</a>
+  <a href="javascript:;">一键联系</a>
+</div>
+<!-- //工具栏 -->
+</body>
+</html>
