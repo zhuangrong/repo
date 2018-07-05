@@ -12,10 +12,63 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
 <script>
+$(function(){
+  //缴费 对公账户
+  $("#pay-pop .mp-close").on("click",function(){
+    $(".main-pop-mask").hide();
+    $("#pay-pop").hide();
+  })
 
+  //购买
+  $(".btn05").on("click",function(){
+    $(".main-pop-mask").show();
+    $("#buy-pop").show();
+  })
+  $("#buy-pop .mp-close").on("click",function(){
+    $(".main-pop-mask").hide();
+    $("#buy-pop").hide();
+  })
+})
 </script>
 </head>
 <body class="bg01">
+<!-- 缴费 对公账户 -->
+<div class="main-pop" id="pay-pop">
+  <i class="mp-close"></i>
+  <h3></h3>
+  <div class="mp-body">
+    <div class="pay-attention">
+      <h3>
+        <p>请将对应的款项打入以下对公账户</p>
+        <p>并备注好公司名称，购买套餐</p>
+        <p>人工审核结果将会在1~3个工作日内完成。</p>
+      </h3>
+      <div class="pa-sub">
+        <p>账户名：推个金</p>
+        <p>账户号：000000000000000000000 </p>
+        <p>开户行：中国交通银行股份有限公司 </p>
+        <p>开户支行：厦门市XX支行</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-pop-mask" style="display:block"></div>
+<!-- //缴费 对公账户 -->
+<!-- 购买 -->
+<div class="main-pop" id="buy-pop" style="display:none">
+  <i class="mp-close"></i>
+  <h3></h3>
+  <div class="mp-body">
+    <div class="buy-type">
+      <ul>
+        <li><a href="javascrit:;" class="buy-weixin">微信支付</a></li>
+        <li><a href="javascrit:;" class="buy-gong">对公转账</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="main-pop-mask" style="display:block"></div>
+<!-- //缴费 对公账户 -->
 <!-- header -->
 <div class="header">
   <a class="icon-back" href="javascrit:;"></a>
@@ -36,7 +89,7 @@
       <p>3、五个岗位，上架三个</p>
       <p>4、产品或服务优先推广</p>
     </div>
-    <button class="btn05">购买</button>
+    <button class="btn05" id="buy">购买</button>
   </div>
   <div class="pay">
     <h3>
@@ -49,7 +102,7 @@
       <p>3、五个岗位，上架三个</p>
       <p>4、产品或服务优先推广</p>
     </div>
-    <button class="btn05">购买</button>
+    <button class="btn05" id="buy">购买</button>
   </div>
   <div class="pay">
     <h3>
@@ -62,7 +115,7 @@
       <p>3、五个岗位，上架三个</p>
       <p>4、产品或服务优先推广</p>
     </div>
-    <button class="btn05">购买</button>
+    <button class="btn05" id="buy">购买</button>
   </div>
 </div>
 <!-- //缴费 -->

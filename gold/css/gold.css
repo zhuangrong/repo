@@ -2431,3 +2431,141 @@ dl {}
   border: 1px solid  #09ABFF;
   background-color: transparent;
 }
+/* 雇主 */
+.employer-pop-wrap{
+  display: none;
+}
+.employer-pop{
+  background-color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  padding: .5rem .3rem;
+  z-index: 9999999;
+  min-height: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+}
+.employer-pop a{
+  width: 1.5rem;
+  text-align: center;
+  margin: 0 .8rem;
+}
+.employer-pop a i{
+  width: .7rem;
+  height: .7rem;
+  display: block;
+  margin: 0 auto;
+}
+.employer-pop a .icon-employ01{
+  background-image: url(../images/icon-employ01.png);
+}
+.employer-pop a .icon-employ02{
+  background-image: url(../images/icon-employ02.png);
+}
+/* 岗位意向 */
+.main-pop-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: none;
+}
+/* 主弹出层 */
+.main-pop{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgba(255,255,255,1);
+  border-radius:0.2rem 0.2rem 0rem 0rem;
+  z-index: 9999999;
+}
+.main-pop > h3{
+  font-size: .34rem;
+  padding: .2rem .2rem;
+}
+.main-pop .mp-close{
+  position: absolute;
+  display: block;
+  top: 0.2rem;
+  right: .2rem;
+  width: .44rem;
+  height: .44rem;
+  background-image: url(../images/post-close.png);
+}
+/* 岗位意向 */
+.post-want li{
+  padding: .2rem .2rem;
+  border-bottom: 1px solid  #f5f5f5;
+}
+.post-want li label{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+}
+.post-want li span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.pay-attention{
+  width: 60%;
+  margin: 0 auto;
+  padding: .5rem 0;
+}
+.pay-attention h3{
+  text-align: center;
+  color: #09ABFF;
+  font-size: .26rem;
+}
+.pay-attention .pa-sub{
+  padding: .6rem 0;
+}
+.buy-type li{
+  text-align: center;
+  padding-top: .88rem;
+  padding-bottom: .88rem;
+}
+.buy-type li:first-child{
+  border-bottom: 1px solid  #f5f5f5;
+}
+.buy-type li a{
+  display: block;
+  width:2.84rem;
+  line-height:1.08rem;
+  border-radius:0.08rem;
+  margin: 0 auto;
+}
+.buy-type li .buy-weixin{
+  color: #30A338;
+  border:0.02rem solid rgba(48,163,56,1);
+}
+.buy-type li .buy-gong{
+  color: #09ABFF;
+  border:0.02rem solid rgba(9,171,255,1);
+}
+.buy-type li a::before{
+  display: inline-block;
+  content: '';
+  width: .7rem;
+  height: .7rem;
+  background-size: .6rem;
+  vertical-align: middle;
+}
+.buy-type li .buy-weixin::before{
+  background-image: url(../images/buy-weixin.png);
+}
+.buy-type li .buy-gong::before{
+  background-image: url(../images/buy-gong.png);
+}

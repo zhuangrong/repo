@@ -50,24 +50,88 @@ $(function(){
 		$(".dropdown-mask").hide();
 		$("#dazhong .dropdown div").eq(flag).hide();
 		$("#dazhong .category-tabs li").removeClass("active");
+    $(".employer-pop-wrap").hide()
 	})
+
+  //雇主
+  $("#employer").on("click",function(){
+    $(".dropdown-mask").show();
+    $(".employer-pop-wrap").show()
+  })
+
+  //岗位意向
+  $(".mp-close, #post-want-confirm").on("click",function(){
+    $(".main-pop-mask").hide();
+    $("#post-want-pop").hide();
+  })
 })
 </script>
 </head>
 <body>
+<!-- 岗位意向 -->
+<div class="main-pop" id="post-want-pop">
+  <i class="mp-close"></i>
+  <h3>岗位意向</h3>
+  <div class="mp-body">
+    <div class="post-want">
+      <ul>
+        <li>
+          <label>
+            <span>销售类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>服务类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>外勤类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>内勤类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>综合类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>管理类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mp-footer">
+    <a href="javascrit:;" class="btn05" id="post-want-confirm">确认</a>
+  </div>
+</div>
+<div class="main-pop-mask" style="display:block"></div>
+<!-- //岗位意向 -->
 <!--搜索-->
 <div class="search">
 	<a class="icon-back" href="javascrit:;"></a>
   <span>厦门</span>
 	<input type="text" class="so2" placeholder="请输入内容">
-  <label>雇主</label>
+  <label id="employer">雇主</label>
 </div>
 <!--//搜索-->
 <!-- tabs -->
 <div class="tabs" id="tabs">
 	<ul>
-		<li class="curr">大众兼职</li>
-		<li>特色兼职</li>
+		<li class="curr">兼职优聘</li>
 		<li>全职臻选</li>
 	</ul>
 </div>
@@ -195,9 +259,6 @@ $(function(){
     <!-- //兼职列表 -->
     <!-- //大众兼职 -->
   </div>
-	<div style="display:none">
-    特色兼职
-  </div>
   <div style="display: none">
     <!-- 全职优选 -->
     <div class="category" id="quanzhi">
@@ -206,7 +267,6 @@ $(function(){
           <li>区域</li>
           <li>岗位类别</li>
           <li class="nodd">我的应聘</li>
-          <li class="nodd">我的简历</li>
         </ul>
       </div>
       <div class="dropdown">
@@ -244,7 +304,7 @@ $(function(){
         <!-- //适用人群 -->
         <!-- 我的收藏 -->
         <div class="d-box" style="display:none">
-          我的收藏
+          我的应聘
         </div>
         <!-- //我的收藏 -->
       </div>
@@ -306,6 +366,20 @@ $(function(){
   <div class="dropdown-mask"></div>
 </div>
 <!-- //tabs -->
+<!-- 雇主 -->
+<div class="employer-pop-wrap">
+  <div class="employer-pop">
+    <a href="#">
+      <i class="icon-employ01"></i>
+      成为雇主
+    </a>
+    <a href="#">
+      <i class="icon-employ02"></i>
+      岗位管理
+    </a>
+  </div>
+</div>
+<!-- //雇主 -->
 <a href="javascrit:;" class="service"></a>
 
 </body>
