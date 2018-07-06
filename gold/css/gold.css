@@ -1918,7 +1918,7 @@ dl {}
 	-webkit-flex:1;
   flex:1;
 	text-align: center;
-	font-size: .32rem;
+	font-size: .28rem;
   padding: .2rem 0;
   color: #09ABFF;
 }
@@ -1926,10 +1926,12 @@ dl {}
 	color: #fff;
 	background-color: #09ABFF;
 }
+.income-total li p,
 .income-total li h3{
   color: inherit;
 }
-.income-total li p{
+.income-total li h3 em,
+.income-total li p em{
   font-size: .32rem;
 }
 /* 我的简历 */
