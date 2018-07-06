@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/picker.js"></script>
+<script>
+$(function(){
+  var picker = new Picker({
+            cid:"caseid005",
+            onConfirm: function(result){
+              $(".test").html(result)
+            }
+  });
+})
+</script>
+</head>
+<body class="bg01">
+  <button class="trigger" data-case="caseid005" >点击选择城市&gt;</button>
+  <p></p>
+  <div>你选择的城市：<span class="test"></span></div>
+  <!-- 城市选择 -->
+  <div class="poper picker" data-case="caseid005"   style="display:none">
+    <div class="header">
+      <a class="icon-back cancel" href="javascrit:;"></a>
+      <span>切换城市</span>
+      <a></a>
+    </div>
+    <div class="city-list pick-list">
+      <a href="#" class="active">厦门</a>
+      <a href="#">福州</a>
+      <a href="#">莆田</a>
+      <a href="#">泉州</a>
+      <a href="#">漳州</a>
+      <a href="#">龙岩</a>
+      <a href="#">三明</a>
+      <a href="#">南平</a>
+      <a href="#">宁德</a>
+      <a href="#">其他</a>
+      <a href="#">其他</a>
+    </div>
+  </div>
+  <!-- //城市选择 -->
+</body>
+</html>

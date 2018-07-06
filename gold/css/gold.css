@@ -455,7 +455,7 @@ nav a.active i.icon-nav04{
   background-color: #f5f5f5;
 }
 /* 城市选择 */
-.city{
+.poper{
   position: fixed;
   top: 0;
   left: 0;
@@ -464,7 +464,7 @@ nav a.active i.icon-nav04{
   background-color: #F5F5F5;
   z-index: 9999;
 }
-.city .city-list{
+.city-list{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -472,7 +472,7 @@ nav a.active i.icon-nav04{
   justify-content: flex-start;
   padding: .6rem .3rem;
 }
-.city .city-list a{
+.city-list a{
   flex: 0 0 -webkit-calc(33.333% - .6rem);
   height: .72rem;
   line-height: .72rem;
@@ -483,10 +483,10 @@ nav a.active i.icon-nav04{
   margin-right: .3rem;
   margin-left: .3rem;
 }
-.city .city-list a:nth-child(3n){
+.city-list a:nth-child(3n){
   margin-right: 0;
 }
-.city .city-list a.active{
+.city-list a.active{
   background-color: #09ABFF;
   color: #fff;
 }
@@ -1328,6 +1328,7 @@ a.link{
 .task-form li > label em{
 	color: #09ABFF;
 }
+.task-form li input[type=date],
 .task-form li input[type=text]{
 	-webkit-box-flex:1;
 	-webkit-flex:1;
@@ -2165,12 +2166,16 @@ dl {}
   -ms-flex: 1;
   flex: 1;
 }
-.simple-list{
+.pick-list{
   background-color: #fff;
 }
-.simple-list li{
+.pick-list a{
+  display: block;
   border-bottom: 1px solid  #f5f5f5;
   padding: .2rem .3rem;
+}
+.pick-list a:active{
+  background-color: #f8f8f8;
 }
 .pay-wrap{
   padding: .3rem;

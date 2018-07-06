@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/swiper.min.css" />
 <link rel="stylesheet" href="css/gold.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/swiper.jquery.min.js"></script>
+<script src="js/picker.js"></script>
 <script>
 $(function(){
 
@@ -33,7 +33,33 @@ $(function(){
     </li>
     <li class="l-link">
       <label>岗位类别<em>*</em></label>
-      <p>请选择</p>
+      <p class="trigger" data-case="c03" id="post" >请选择</p>
+      <!-- 岗位类别 pop -->
+      <div class="poper picker" data-case="c03" style="display:none">
+        <div class="header">
+          <a class="icon-back cancel" href="javascrit:;"></a>
+          <span>岗位类别</span>
+          <a></a>
+        </div>
+        <div class="pick-list">
+          <a href="javascrit:;">不限</a>
+          <a href="javascrit:;">营销类</a>
+          <a href="javascrit:;">服务类</a>
+          <a href="javascrit:;">外勤类</a>
+          <a href="javascrit:;">内勤类</a>
+          <a href="javascrit:;">综合类</a>
+          <a href="javascrit:;">管理类</a>
+        </div>
+      </div>
+      <script>
+      var picker = new Picker({
+                cid:"c03",
+                onConfirm: function(result){
+                  $("#post").html(result)
+                }
+      });
+      </script>
+      <!-- //岗位类别 pop -->
     </li>
     <li>
       <label>适用人群</label>
@@ -45,39 +71,74 @@ $(function(){
     </li>
     <li class="l-link">
       <label>截止日期<em>*</em></label>
-      <p><input type="date"></p>
+      <input type="date" name="" value="">
     </li>
     <li>
       <label>兼职薪资<em>*</em></label>
       <input type="text" placeholder="请输入">
       <b>元/天</b>
     </li>
-    <li class="l-link" id="payment">
+    <li class="l-link">
       <label>结算方式<em>*</em></label>
-      <p>请选择</p>
+      <p class="trigger" data-case="c05" id="payment">请选择</p>
     </li>
+    <!-- 结算方式 pop -->
+    <div class="poper picker" data-case="c05" style="display:none">
+      <div class="header">
+        <a class="icon-back cancel" href="javascrit:;"></a>
+        <span>薪资单位</span>
+        <a></a>
+      </div>
+      <div class="pick-list">
+        <a href="javascrit:;">元/小时</a>
+        <a href="javascrit:;">元/天</a>
+        <a href="javascrit:;">元/次</a>
+      </div>
+    </div>
+    <script>
+    var picker = new Picker({
+              cid:"c05",
+              onConfirm: function(result){
+                $("#payment").html(result)
+              }
+    });
+    </script>
+    <!-- //结算方式 pop -->
   </ul>
 </div>
-<!-- 结算方式 pop -->
-<div class="city" id="city-pop" style="display:none">
-  <div class="header">
-    <a class="icon-back close"  href="javascrit:;"></a>
-    <span>结算方式</span>
-    <a></a>
-  </div>
-  <div class="city-list">
-    <a href="#" class="active">厦门</a>
-    <a href="#">福州</a>
-    <a href="#">莆田</a>
-  </div>
-</div>
-<!-- //结算方式 -->
 <div class="blank01"></div>
 <div class="task-form">
   <ul>
     <li class="l-link">
       <label>工作区域<em>*</em></label>
-      <p>请选择</p>
+      <p class="trigger"  data-case="c02" id="wordspace">请选择</p>
+      <!-- 岗位类别 pop -->
+      <div class="poper picker" data-case="c02" style="display:none">
+        <div class="header">
+          <a class="icon-back cancel" href="javascrit:;"></a>
+          <span>岗位类别</span>
+          <a></a>
+        </div>
+        <div class="pick-list">
+          <a href="javascrit:;">不限</a>
+          <a href="javascrit:;">思明</a>
+          <a href="javascrit:;">湖里</a>
+          <a href="javascrit:;">集美</a>
+          <a href="javascrit:;">海沧</a>
+          <a href="javascrit:;">同安</a>
+          <a href="javascrit:;">杏林</a>
+          <a href="javascrit:;">翔安</a>
+        </div>
+      </div>
+      <script>
+      var picker = new Picker({
+                cid:"c02",
+                onConfirm: function(result){
+                  $("#wordspace").html(result)
+                }
+      });
+      </script>
+      <!-- //岗位类别 pop -->
     </li>
     <li>
       <label>详细地址<em>*</em></label>
