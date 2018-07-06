@@ -11,28 +11,27 @@
 <link rel="stylesheet" href="css/gold.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
+<script src="js/picker.js"></script>
 <script type="text/javascript">
 $(function(){
-  // 打开城市弹出层
-  $("#choose").on("click",function(){
-    $("#city-pop").show()
-  })
-  // 关闭
-  $("#city-close").on("click",function(){
-    $("#city-pop").hide()
-  })
+  var picker = new Picker({
+            cid:"c01",
+            onConfirm: function(result){
+              $("#city em").text(result)
+            }
+  });
 })
 </script>
 </head>
 <body>
-<!-- 城市选择 -->
-<div class="poper" id="city-pop" style="display:none">
+<!-- 城市选择 pop -->
+<div class="poper picker" data-case="c01" style="display:none">
   <div class="header">
-    <a class="icon-back" id="city-close" href="javascrit:;"></a>
+    <a class="icon-back cancel" href="javascrit:;"></a>
     <span>切换城市</span>
     <a></a>
   </div>
-  <div class="city-list">
+  <div class="city-list pick-list">
     <a href="#" class="active">厦门</a>
     <a href="#">福州</a>
     <a href="#">莆田</a>
@@ -43,14 +42,13 @@ $(function(){
     <a href="#">南平</a>
     <a href="#">宁德</a>
     <a href="#">其他</a>
-    <a href="#">其他</a>
   </div>
 </div>
-<!-- //城市选择 -->
+<!-- //城市选择 pop -->
 <!-- banner -->
 <div class="banner">
-  <div class="location" id="choose">
-    <i></i> 厦门
+  <div class="location trigger"  data-case="c01" id="city">
+    <i></i> <em>厦门</em>
   </div>
   <!-- Swiper -->
   <section class="swiper-container swiper01">
