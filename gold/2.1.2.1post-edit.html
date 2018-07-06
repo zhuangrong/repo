@@ -45,19 +45,33 @@ $(function(){
     </li>
     <li class="l-link">
       <label>截止日期<em>*</em></label>
-      <p>请选择</p>
+      <p><input type="date"></p>
     </li>
     <li>
       <label>兼职薪资<em>*</em></label>
       <input type="text" placeholder="请输入">
       <b>元/天</b>
     </li>
-    <li class="l-link">
+    <li class="l-link" id="payment">
       <label>结算方式<em>*</em></label>
       <p>请选择</p>
     </li>
   </ul>
 </div>
+<!-- 结算方式 pop -->
+<div class="city" id="city-pop" style="display:none">
+  <div class="header">
+    <a class="icon-back close"  href="javascrit:;"></a>
+    <span>结算方式</span>
+    <a></a>
+  </div>
+  <div class="city-list">
+    <a href="#" class="active">厦门</a>
+    <a href="#">福州</a>
+    <a href="#">莆田</a>
+  </div>
+</div>
+<!-- //结算方式 -->
 <div class="blank01"></div>
 <div class="task-form">
   <ul>
