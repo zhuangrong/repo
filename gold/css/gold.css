@@ -305,12 +305,15 @@ font-size: .26rem;
 }
 .m-box .m-item-group li.linear01{
   background:linear-gradient(133.4deg,rgba(119,193,218,1),rgba(142,204,233,1));
+  box-shadow:0rem 0.02rem 0.06rem 0rem rgba(111,191,253,1);
 }
 .m-box .m-item-group li.linear02{
   background:linear-gradient(135deg,rgba(255,167,171,1),rgba(255,184,189,1));
+  box-shadow:0rem 0.02rem 0.06rem 0rem rgba(255,180,185,1);
 }
 .m-box .m-item-group li.linear03{
   background:linear-gradient(135deg,rgba(95,224,194,1),rgba(143,230,210,1));
+  box-shadow:0rem 0.02rem 0.06rem 0rem rgba(106,225,198,1);
 }
 /* 图文 */
 .pic-text{

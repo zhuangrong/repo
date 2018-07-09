@@ -18,6 +18,10 @@ $.TabChange = function(obj,num){
 			$(this).click(function(i){
 			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
 				$(this).addClass("curr").siblings().removeClass("curr");
+        if(index == 1){
+          $("#post-want-pop").show();
+          $(".main-pop-mask").show();
+        }
 			})
 	})
 }
@@ -28,6 +32,7 @@ $(function(){
   var flag;
   $("#dazhong .category-tabs li").each(function(index){
     $(this).click(function(e){
+
       e.preventDefault();
       if($(this).hasClass("active")){
         $(".dropdown-mask").hide();
@@ -42,6 +47,11 @@ $(function(){
             myScroll.refresh();
           }, 0)
         }
+      }
+      //点击收藏 -- 加载我的搜索记录
+      if(index == 3){
+        $("#dazhong .dropdown > div").eq(3).hide();
+        $(".dropdown-mask").hide();
       }
       flag=index;
     })
@@ -69,7 +79,7 @@ $(function(){
 </head>
 <body>
 <!-- 岗位意向 -->
-<div class="main-pop" id="post-want-pop">
+<div class="main-pop" id="post-want-pop" style="display:none">
   <i class="mp-close"></i>
   <h3>岗位意向</h3>
   <div class="mp-body">
@@ -118,7 +128,7 @@ $(function(){
     <a href="javascrit:;" class="btn05" id="post-want-confirm">确认</a>
   </div>
 </div>
-<div class="main-pop-mask" style="display:block"></div>
+<div class="main-pop-mask"></div>
 <!-- //岗位意向 -->
 <!--搜索-->
 <div class="search">
