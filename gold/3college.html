@@ -12,6 +12,14 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
 <script>
+(function($){
+  $.getUrlParam = function(name)
+  {
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r!=null) return unescape(r[2]); return null;
+  }
+})(jQuery);
 /*tabs切换组件*/
 $.TabChange = function(obj,num){
 	$("li","#" + obj).each(function(index){
@@ -23,6 +31,11 @@ $.TabChange = function(obj,num){
 }
 $(function(){
 	$.TabChange("tabs",1)
+
+  //获取url参数
+  var tabNum = $.getUrlParam('tab')
+  $("#tabs li").eq(tabNum).trigger("click")
+
 })
 </script>
 </head>
@@ -36,8 +49,8 @@ $(function(){
 <!-- tabs -->
 <div class="tabs" id="tabs">
 	<ul>
-		<li>培训课堂</li>
-		<li class="curr">推粉之家</li>
+		<li class="curr">培训课堂</li>
+		<li>推粉之家</li>
 		<li>家园文化</li>
 		<li>八闽大地</li>
 	</ul>
