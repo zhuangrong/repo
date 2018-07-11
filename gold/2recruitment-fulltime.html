@@ -12,8 +12,8 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
 <script>
-$(function(){
 
+$(function(){
   //分类选择
   var flag;
   $("#dazhong .category-tabs li").each(function(index){
@@ -34,12 +34,12 @@ $(function(){
           }, 0)
         }
       }
-      //点击收藏 -- ajax加载我的搜索记录
-      if(index == 3){
+      //点击我的应聘 -- ajax加载我的搜索记录
+      if(index == 2){
         $("#dazhong .dropdown > div").eq(3).hide();
         $(".dropdown-mask").hide();
         //临时跳转到收藏页面，开发时用ajax加载数据，
-        window.location.href="2recruitment-fav.html"
+        window.location.href="2.3.2recruitment-apply.html"
       }
       flag=index;
     })
@@ -58,10 +58,67 @@ $(function(){
     $(".dropdown-mask").show()
   })
 
+  //岗位意向
+  $(".mp-close, #post-want-confirm").on("click",function(){
+    $(".main-pop-mask").hide();
+    $("#post-want-pop").hide();
+  })
 })
 </script>
 </head>
 <body>
+<!-- 岗位意向 -->
+<div class="main-pop" id="post-want-pop">
+  <i class="mp-close"></i>
+  <h3>岗位意向</h3>
+  <div class="mp-body">
+    <div class="post-want">
+      <ul>
+        <li>
+          <label>
+            <span>销售类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>服务类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>外勤类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>内勤类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>综合类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+        <li>
+          <label>
+            <span>管理类</span>
+            <input type="checkbox" class="c-box" name="pwnt" value="">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mp-footer">
+    <a href="javascrit:;" class="btn05" id="post-want-confirm">确认</a>
+  </div>
+</div>
+<div class="main-pop-mask" style="display:block"></div>
+<!-- //岗位意向 -->
 <!--搜索-->
 <div class="search">
 	<a class="icon-back" href="javascrit:;"></a>
@@ -73,18 +130,17 @@ $(function(){
 <!-- tabs -->
 <div class="tabs">
 	<ul>
-		<li class="curr">兼职优聘</li>
-		<li><a href="2recruitment-fulltime.html">全职臻选</a></li>
+		<li><a href="2recruitment.html">兼职优聘</a></li>
+		<li class="curr">全职臻选</li>
 	</ul>
 </div>
-<!-- 大众兼职 过滤 -->
+<!-- 全职优选 过滤 -->
 <div class="category" id="dazhong">
   <div class="category-tabs">
     <ul>
       <li>区域</li>
       <li>岗位类别</li>
-      <li>适用人群</li>
-      <li class="nodd">我的收藏</li>
+      <li class="nodd">我的应聘</li>
     </ul>
   </div>
   <div class="dropdown">
@@ -106,115 +162,86 @@ $(function(){
     <div class="d-box" style="display:none">
       <ul>
         <li>不限</li>
-        <li><h5>销售类</h5><em>销售/业务员/促销/导购/地推/经纪/电话销售/校园推广</em></li>
-        <li><h5>外勤类</h5><em>传单/快递/送餐/代驾/司机/问卷调查/活动协助/跑腿</em></li>
-        <li><h5>服务类</h5><em>客服/营业员/服务员/话务员/前台接待/家政服务/安保</em></li>
-        <li><h5>内勤类</h5><em>文员/行政/资料整理/电脑打字/信息录入/操作工/厨工</em></li>
-        <li><h5>技能类</h5><em>各种设计/技术开发/厨师电工/电脑维修/人事财务/艺术表演/礼 仪模特/摄影摄像/翻译/财务</em></li>
-        <li><h5>培训类</h5><em>家教/培训老师/教练/顾问/创意策划/文案创作</em></li>
-        <li><h5>其他类</h5></li>
+        <li>销售类</li>
+        <li>服务类</li>
+        <li>外勤类</li>
+        <li>内勤类</li>
+        <li>综合类</li>
+        <li>管理类</li>
       </ul>
     </div>
     <!-- //岗位类别 -->
     <!-- 适用人群 -->
     <div class="d-box" style="display:none">
-      <ul>
-        <li>不限</li>
-        <li>学生专属</li>
-        <li>可接受残疾人</li>
-      </ul>
+      适用人群
     </div>
     <!-- //适用人群 -->
     <!-- 我的收藏 -->
     <div class="d-box" style="display:none">
-      我的收藏
+      我的应聘
     </div>
     <!-- //我的收藏 -->
   </div>
 </div>
-<!-- //大众兼职 过滤 -->
-<!-- 兼职列表 -->
+<!-- //全职优选 过滤-->
+<!-- 全职-列表 -->
 <div class="recruit-list-wrap">
-  <a href="2part-time.html" class="recruit-list">
+  <a href="2company-post-detail.html" class="recruit-list">
     <div class="r-box">
       <div class="t-title">
-        <h3>厦门UR湖里区门店兼职</h3>
+        <h3>大堂助理 <span>编码：020508</span></h3>
         <div class="info">
           <em class="icon-add">思明</em>
-          <em class="icon-time">长期招聘</em>
-          <em class="icon-check">限学生</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
         </div>
       </div>
       <div class="t-time">
-        <h3>150元/小时</h3>
-        <div class="info">月结</div>
+        <h3>9000元/月</h3>
+        <div class="info cc05">佣金：100元</div>
       </div>
-    </div>
-    <div class="t-type">
-      <span>公司名称最多十二字十二字</span>
-      <em class="c01">爱心</em>
-      <em class="c02">名企</em>
-      <em class="c03">口碑</em>
     </div>
   </a>
-  <a href="2part-time.html" class="recruit-list">
+  <a href="2company-post-detail.html" class="recruit-list">
     <div class="r-box">
       <div class="t-title">
-        <h3>厦门UR湖里区门店兼职</h3>
+        <h3>大堂助理 <span>编码：020508</span></h3>
         <div class="info">
           <em class="icon-add">思明</em>
-          <em class="icon-time">长期招聘</em>
-          <em class="icon-check">限学生</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
         </div>
       </div>
       <div class="t-time">
-        <h3>150元/小时</h3>
-        <div class="info">月结</div>
+        <h3>9000元/月</h3>
+        <div class="info cc05">佣金：100元</div>
       </div>
-    </div>
-    <div class="t-type">
-      <span>公司名称最多十二字十二字</span>
-      <em class="c01">爱心</em>
-      <em class="c02">名企</em>
-      <em class="c03">口碑</em>
     </div>
   </a>
-  <a href="2part-time.html" class="recruit-list">
+  <a href="2company-post-detail.html" class="recruit-list">
     <div class="r-box">
       <div class="t-title">
-        <h3>厦门UR湖里区门店兼职</h3>
+        <h3>大堂助理 <span>编码：020508</span></h3>
         <div class="info">
           <em class="icon-add">思明</em>
-          <em class="icon-time">长期招聘</em>
-          <em class="icon-check">限学生</em>
+          <em class="icon-check">银行</em>
+          <em class="icon-time">2018/6/22</em>
         </div>
       </div>
       <div class="t-time">
-        <h3>150元/小时</h3>
-        <div class="info">月结</div>
+        <h3>9000元/月</h3>
+        <div class="info cc05">佣金：100元</div>
       </div>
-    </div>
-    <div class="t-type">
-      <span>公司名称最多十二字十二字</span>
-      <em class="c01">爱心</em>
-      <em class="c02">名企</em>
-      <em class="c03">口碑</em>
     </div>
   </a>
 </div>
-<!-- //兼职列表 -->
+<!-- //全职-列表 -->
 <div class="dropdown-mask"></div>
+<!-- //tabs -->
 <!-- 雇主 -->
 <div class="employer-pop-wrap">
   <div class="employer-pop">
-    <a href="2.1.1recruitment-employer-edit.html">
-      <i class="icon-employ01"></i>
-      成为雇主
-    </a>
-    <a href="2.1.2posts-manage.html">
-      <i class="icon-employ02"></i>
-      岗位管理
-    </a>
+    暂未开放此功能
   </div>
 </div>
 <!-- //雇主 -->
