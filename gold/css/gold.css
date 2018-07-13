@@ -1423,7 +1423,7 @@ a.link{
 	width: 1.36rem;
 	height: 1.36rem;
 	text-align: center;
-	border: 2px solid  #f5f5f5;
+	border: 1px solid #f5f5f5;
 }
 .insurance-list li .info{
 	-webkit-box-flex:1;
@@ -1452,6 +1452,7 @@ a.link{
 	text-align: right;
 	color: #F00000;
 	font-weight: bold;
+	text-decoration:  underline;
 }
 .insurance-list li p{
 	font-size: .2rem;
