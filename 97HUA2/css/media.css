@@ -171,6 +171,7 @@
   }
   .category .category-info h3{
     margin: 0 0 .08rem;
+    font-size: .28rem;
   }
   .category .category-info p{
     margin-bottom: .05rem;
@@ -187,7 +188,11 @@
   .category .category-pic{
     width: 2.8rem;
   }
-
+ .category .category-pic img{
+    width: 2.8rem;
+    height: 1.8rem;
+    object-fit:cover;
+  }
   .news-detail{
     width: auto;
     padding: 0 .4rem;
