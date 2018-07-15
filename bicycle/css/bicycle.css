@@ -137,15 +137,18 @@ h3{
 }
 /* 表单 */
 .m-form{
-	padding: .3rem 0 0 .3rem;
+	padding: 0;
 	background-color: #fff;
 }
 .m-form li{
-	padding: .24rem 0;
+	padding: .2rem .3rem;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	border-bottom: 1px solid  #EAEAEA;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	justify-content: center;
+	border-bottom: 1px solid  #CBCBCB;
 }
 .m-form li > label{
 	padding-right: .1rem;
@@ -167,6 +170,8 @@ h3{
 	width: 100%;
 	border: none;
 	color:  #666;
+  height: .6rem;
+  line-height: .6rem;
 }
 .m-form li button{
   width:1.5rem;
@@ -192,4 +197,14 @@ h3{
   color: #fff;
   text-align: center;
   margin: .5rem auto .1rem;
+}
+.tips{
+  padding: .2rem .3rem;
+  color: #2e6cf5;
+}
+.avatar{
+  display: inline-block;
+  width: 1.28rem;
+  height: 1.28rem;
+  border-radius: 50%;
 }
