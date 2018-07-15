@@ -582,3 +582,56 @@ h3{
 .add-list dd span em{
   color: #2E6CF5;
 }
+.btn-scan{
+  position: fixed;
+  bottom: .5rem;
+  left: .6rem;
+  right: .6rem;
+  border: none;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: .2rem;
+  font-size: .32rem;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(180deg,#5888F6,#3459FB);
+  box-shadow: 0 0 .3rem 0 rgba(51, 89, 251, 0.5)
+}
+.btn-scan::before{
+  content: '';
+  display: inline-block;
+  width: .36rem;
+  height: .36rem;
+  background-image: url(../images/btn-scan.png);
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+/* 弹窗 */
+.map-pop{
+  position: absolute;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 2rem;
+  z-index: 999999;
+  overflow: hidden;
+}
+.map-pop h3{
+  background-color: #2E6CF5;
+  padding: .3rem;
+  color: #fff;
+}
+.pop-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0,0,0,0.6);
+  z-index: 99;
+  display: none;
+}
