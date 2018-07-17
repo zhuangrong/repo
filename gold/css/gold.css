@@ -623,6 +623,10 @@ nav a.active i.icon-nav04{
   background-size: .28rem .28rem;
   background-position: .2rem center;
 }
+.search label.icon-doc{
+  background-image: url(../images/icon-doc.png);
+  background-size: .28rem .32rem;
+}
 .search .so2{
   background-position: 35% center !important;
   text-align: center;

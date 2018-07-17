@@ -26,6 +26,11 @@ $.TabChange = function(obj,num){
 			$(this).click(function(i){
 			 	$("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
 				$(this).addClass("curr").siblings().removeClass("curr");
+        if(index == 1){
+          $(".search label.icon-doc").show()
+        }else{
+          $(".search label.icon-doc").hide()
+        }
 			})
 	})
 }
@@ -44,6 +49,7 @@ $(function(){
 <div class="search">
   <span>厦门</span>
 	<input type="text"  placeholder="搜索文章/作者">
+  <label class="icon-doc" style="display:none">我的</label>
 </div>
 <!--//搜索-->
 <!-- tabs -->
