@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>gold</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/gold.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<style>
+/* 弹窗 */
+.popover{
+  position: absolute;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-height: 2.9rem;
+  z-index: 999999;
+}
+.popover > h3{
+  padding: .3rem;
+  color: #333;
+  font-size: .32rem;
+  text-align: center;
+}
+.popover .pop-box{
+  padding: .1rem .3rem .5rem;
+  color: #999;
+}
+.popover .pop-ft{
+  background: none;
+  border-top: 1px solid  #ddd;
+  text-align: center;
+}
+.popover .btn-pop{
+  border: none;
+  color: #09ABFF;
+  width: 100%;
+  padding: .2rem;
+  background: none;
+}
+.pop-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 99;
+  display: none;
+}
+</style>
+</head>
+<body>
+<button>点击弹出</button>
+  <!-- 弹窗 -->
+  <div class="popover">
+    <h3>佣金说明</h3>
+    <div class="pop-box">
+      <p>佣金说明佣金说明佣金说明佣金说明佣金说明佣金说明佣金说明</p>
+    </div>
+    <div class="pop-ft">
+      <button class="btn-pop">确定</button>
+    </div>
+  </div>
+  <div class="pop-mask" style="display:block"></div>
+  <!-- //弹窗 -->
+</body>
+</html>

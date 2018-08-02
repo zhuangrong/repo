@@ -13,6 +13,7 @@
 <script src="js/swiper.jquery.min.js"></script>
 <script>
 (function($){
+  // 获取url参数
   $.getUrlParam = function(name)
   {
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -20,6 +21,7 @@
     if (r!=null) return unescape(r[2]); return null;
   }
 })(jQuery);
+
 /*tabs切换组件*/
 $.TabChange = function(obj,num){
 	$("li","#" + obj).each(function(index){
