@@ -60,9 +60,9 @@
 </style>
 </head>
 <body>
-<button>点击弹出</button>
+<button id="open">点击弹出</button>
   <!-- 弹窗 -->
-  <div class="popover">
+  <div class="popover" style="display:none">
     <h3>佣金说明</h3>
     <div class="pop-box">
       <p>佣金说明佣金说明佣金说明佣金说明佣金说明佣金说明佣金说明</p>
@@ -71,7 +71,21 @@
       <button class="btn-pop">确定</button>
     </div>
   </div>
-  <div class="pop-mask" style="display:block"></div>
+  <div class="pop-mask"></div>
   <!-- //弹窗 -->
+  <script type="text/javascript">
+  $(function(){
+    // 显示
+      $("#open").on("click",function(){
+        $(".popover").show()
+        $(".pop-mask").show()
+      })
+    // 隐藏
+    $(".btn-pop").on("click",function(){
+      $(".popover").hide()
+      $(".pop-mask").hide()
+    })
+  })
+  </script>
 </body>
 </html>
