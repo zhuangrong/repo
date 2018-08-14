@@ -6,7 +6,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
-  font-size: 50px; 
+  font-size: 50px;
 }
 *,
 *::before,
@@ -2627,4 +2627,56 @@ a.link{
 }
 .buy-type li .buy-gong::before{
   background-image: url(../images/buy-gong.png);
+}
+
+/* update 2018-08-14 */
+/* 巨省钱 */
+.save-money{
+  padding: .3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.save-money a{
+  flex: 0 0 -webkit-calc(50% - .15rem);
+  margin-bottom: .2rem;
+}
+.save-money dl h3{
+  font-size: .26rem;
+  line-height: 1.4;
+}
+.save-money dl h3 em{
+  font-size: .22rem;
+  color: #333;
+}
+.save-money dl dd{
+  background-color: #fff;
+  padding: .1rem;
+}
+.save-money dl span{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: .1rem;
+}
+.save-money dl span label{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: .26rem;
+  color: #f00000;
+  line-height: 1.2;
+}
+.save-money dl span label em{
+  display: block;
+  color: #999;
+  font-size: .2rem;
+}
+.save-money .icon-qian{
+  display: block;
+  width: .44rem;
+  height: .44rem;
+  background-image: url(../images/qian.png);
 }

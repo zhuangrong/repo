@@ -16,6 +16,9 @@
     margin-top: .5rem;
     margin-left: 0.5rem;
   }
+  .news-detail {
+    padding: 0 2rem;
+  }
 }
 
 /*-----------------------pc 大于820px 小于1320px----------------------*/
@@ -33,6 +36,9 @@
   .banner-text{
     margin-top: 1rem;
     margin-left: 2rem;
+  }
+  .news-detail {
+    padding: 0 2rem;
   }
 }
 
