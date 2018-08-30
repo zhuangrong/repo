@@ -20,6 +20,14 @@ $(function(){
               $("#city em").text(result)
             }
   });
+
+  // 弹幕
+  setTimeout(function(){
+    $(".danmu").fadeIn()
+  },1000)
+  setTimeout(function(){
+    $(".danmu").fadeOut()
+  },3000)
 })
 </script>
 </head>
@@ -48,6 +56,14 @@ $(function(){
 <!-- //城市选择 pop -->
 <!-- banner -->
 <div class="banner">
+  <!-- 弹幕 -->
+  <div class="danmu" style="display:none">
+    <i style="background-image:url(images/avatar02.png)"></i>
+    <span>
+      新订单来自 <em>寿寿</em> <label>41秒前</label>
+    </span>
+  </div>
+  <!-- 弹幕 -->
   <div class="location trigger"  data-case="c01" id="city">
     <i></i> <em>厦门</em>
   </div>

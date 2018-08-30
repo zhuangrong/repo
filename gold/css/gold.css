@@ -2680,3 +2680,34 @@ a.link{
   height: .44rem;
   background-image: url(../images/qian.png);
 }
+
+
+/* 弹幕 2018-08-30*/
+.danmu{
+  position: fixed;
+  top: 1.3rem;
+  left: .6rem;
+  z-index: 999999999999999;
+  height: .6rem;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  padding: 0 .1rem 0 .03rem;
+  font-size: 12px;
+}
+.danmu > i{
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  border-radius: .25rem;
+  background-size: 100%;
+}
+.danmu > span{
+  padding-left: .1rem;
+}
