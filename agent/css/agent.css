@@ -472,3 +472,51 @@ nav a.active i.icon-nav04{
   padding-top: .3rem;
   font-size: .2rem;
 }
+
+/* 对话框 */
+.mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(128, 128, 128, .33);
+}
+.dialog {
+  position: fixed;
+  z-index: 9999;
+  width: 80%;
+  max-width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+.dialog .dialog-body{
+  padding: .5rem;
+  text-align: center;
+  min-height: 1rem;
+  font-size: .32rem;
+}
+.dialog .dialog-footer{
+  text-align: center;
+  min-height: .9rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #EAEAEA;
+  padding-top: .1rem;
+  font-size: .32rem;
+}
+.dialog .dialog-footer .btn{
+  margin: 0 auto;
+  flex: 0 0 100%;
+  background: none;
+  color: #6D87FB;
+}

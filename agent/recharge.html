@@ -35,6 +35,15 @@ $(function(){
 			 $(this).parent().remove();
 		})
 
+    // 弹窗
+    $(".btn").on("click",function(){
+    	 $("#dialog").fadeIn(200)
+    })
+    $("#confirm").on("click",function(e){
+    		e.stopPropagation()
+    		 $("#dialog").fadeOut(200)
+    })
+
 });
 </script>
 </head>
@@ -90,5 +99,16 @@ $(function(){
 	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
 </nav>
 <!--//导航-->
+<!-- 弹窗 -->
+<div id="dialog" style=" display: none">
+  <div class="mask"></div>
+  <div class="dialog">
+    <div class="dialog-body">已提交信息</div>
+    <div class="dialog-footer">
+      <button class="btn" id="confirm">确认</button>
+    </div>
+  </div>
+</div>
+<!-- //弹窗 -->
 </body>
 </html>
