@@ -403,3 +403,72 @@ nav a.active i.icon-nav04{
   background-color: #00f;
   background-image: url(../images/icon-me01.png);
 }
+
+/* tabs */
+.tabs{
+  background-color: #fff;
+}
+.tabs ul{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 3px solid rgb(234, 236, 245);
+}
+.tabs li{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+  color: #6D87FB;
+  position: relative;
+}
+.tabs li.curr:after{
+  content: '';
+  display: block;
+  height: 0.04rem;
+  position: absolute;
+  width: .4rem;
+  top: 98%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #09ABFF;
+}
+
+/* 储值 */
+.store-order dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: .1rem;
+  background-color: #fff;
+  padding-left: .7rem;
+  padding-right: .4rem;
+}
+.store-order dt,
+.store-order dd{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.store-order dd {
+  padding: .2rem 0;
+}
+.store-order dd p{
+  color: #6D87FB;
+  padding-top: .03rem;
+  padding-bottom: .03rem;
+  font-weight: bold;
+}
+.store-order dd p em{
+  margin-left: .1rem;
+  font-weight: normal;
+}
+.store-order dl dt{
+  color: #666;
+  text-align: right;
+  padding-top: .3rem;
+  font-size: .2rem;
+}

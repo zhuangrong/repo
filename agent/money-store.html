@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<link rel="stylesheet" href="css/agent.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$.TabChange = function(obj,num){
+  $("li","#" + obj).each(function(index){
+      $(this).click(function(i){
+        $("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+        $(this).addClass("curr").siblings().removeClass("curr");
+      })
+  })
+}
+$(function(){
+	$.TabChange("tabs",1)
+})
+</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>储值明细</span>
+  <a></a>
+</div>
+<!-- //header -->
+<!-- tabs -->
+<div class="tabs" id="tabs">
+  <ul>
+    <li class="curr">充值</li>
+    <li>花费</li>
+  </ul>
+</div>
+<div class="tab-box1">
+  <div>
+    <!-- 充值 -->
+    <div class="store-order">
+      <dl>
+        <dd>
+          <p>商品：<em>名称名称</em></p>
+          <p>金额：<em>2100</em></p>
+        </dd>
+        <dt>2018-05-06 21:00</dt>
+      </dl>
+      <dl>
+        <dd>
+          <p>商品：<em>名称名称</em></p>
+          <p>金额：<em>2100</em></p>
+        </dd>
+        <dt>2018-05-06 21:00</dt>
+      </dl>
+      <dl>
+        <dd>
+          <p>商品：<em>名称名称</em></p>
+          <p>金额：<em>2100</em></p>
+        </dd>
+        <dt>2018-05-06 21:00</dt>
+      </dl>
+    </div>
+    <!-- // 充值 -->
+  </div>
+  <div style="display:none">花费</div>
+</div>
+<!-- //tabs -->
+
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>我要订货</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>购物车</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
