@@ -162,8 +162,8 @@ h3{
 /* 按钮 */
 .btn{
   display: block;
-  height: 0.62rem;
-  line-height: 0.62rem;
+  height: 0.66rem;
+  line-height: 0.66rem;
   background-color: #6D87FB;
   border-radius: 0.2rem;
   margin: .2rem;
@@ -202,11 +202,11 @@ nav a{
   justify-content: center;
   text-align: center;
   font-size: .2rem;
-  color: #8E8E93;
+  color: #999;
 }
 nav a i{
-  width: .5rem;
-  height: .5rem;
+  width: .44rem;
+  height: .44rem;
 }
 nav a i.icon-nav01{
   background-image: url(../images/icon-nav01.png);
@@ -222,18 +222,6 @@ nav a i.icon-nav03{
 }
 nav a i.icon-nav04{
   background-image: url(../images/icon-nav04.png);
-}
-nav a.active i.icon-nav01{
-  background-image: url(../images/icon-nav01-active.png);
-}
-nav a.active i.icon-nav02{
-  background-image: url(../images/icon-nav02-active.png);
-}
-nav a.active i.icon-nav03{
-  background-image: url(../images/icon-nav03-active.png);
-}
-nav a.active i.icon-nav04{
-  background-image: url(../images/icon-nav04-active.png);
 }
 
 /* 打款截图 */
@@ -519,4 +507,152 @@ nav a.active i.icon-nav04{
   flex: 0 0 100%;
   background: none;
   color: #6D87FB;
+}
+
+/* 收货人 */
+.address{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: .2rem 0 .3rem;
+  padding: .2rem .2rem;
+  background-image: url(../images/arrow2.png);
+  background-position: right center;
+  background-origin: content-box;
+  background-size: .32rem;
+}
+.address ul{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #666;
+}
+.address i{
+  width: .45rem;
+  height: .55rem;
+  background-image: url(../images/location.png);
+  margin: 0 .3rem 0 .2rem;
+}
+/* 商品信息 */
+.goods{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: .28rem .6rem .28rem .8rem;
+  background-color: #fff;
+}
+.goods .goods-pic{
+  width: 1.8rem;
+}
+.goods .goods-pic img{
+  object-fit: cover;
+  height: 1.8rem;
+}
+.goods .goods-info{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: .2rem;
+}
+.goods .goods-info dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding-left: .7rem;
+}
+.goods .goods-info dl dt{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: .32rem;
+}
+.goods .goods-info dl dd{
+  color: #666;
+}
+.goods-mark li{
+  padding-left: .8rem;
+  border-top: 1px solid  #D6D6D6;
+  border-bottom: none !important;
+}
+.goods-mark li > label{
+  color: #666 !important;
+  width: 1.8rem;
+}
+.goods-mark span{
+  color: #666;
+  text-align: right;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: .6rem;
+}
+
+/* 支付信息条 */
+.paytool{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  background-color: #E6E6E6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  height: .96rem;
+  font-size: .36rem;
+  color: #808080;
+}
+.paytool span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: .8em;
+}
+.paytool button{
+  height: .96rem;
+  width: 2.36rem;
+  background-color: #FD5455;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+/* 扫码发货 */
+.scan{
+  background-color: #fff;
+  padding: .6rem;
+}
+.scan h3{
+  color: #666;
+  padding-top: .3rem;
+  padding-bottom: .2rem;
+}
+.scan ul li{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.scan ul li input[type=text]{
+  background-color: #E6E6E6;
+  text-align: center;
+  border-radius: .2rem;
+  height: .66rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.scan ul li a{
+  margin-left: .2rem;
+  width: .66rem;
+  height: .66rem;
+  background-image: url(../images/scan.png);
+}
+.btn2{
+  max-width: 2.6rem;
+  margin: .5rem auto 0;
 }
