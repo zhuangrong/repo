@@ -766,12 +766,12 @@ nav a i.icon-nav04{
 .agent-info ul li:nth-child(3){
   text-align: center;
 }
-.agent-info ul li:nth-child(3) a{
+.agent-info ul li:nth-child(3) a:nth-child(2){
   color: #6D87FB;
   position: relative;
   display: block;
 }
-.agent-info ul li:nth-child(3) a:after{
+.agent-info ul li:nth-child(3) a:nth-child(2)::after{
   content: '';
   position: absolute;
   top: .4rem;
@@ -790,4 +790,62 @@ nav a i.icon-nav04{
   height: .54rem;
   line-height: .54rem;
   width: 1.5rem;
+}
+/* 代理人工具条 */
+.agent-tool{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  background-color: #E6E6E6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  height: .96rem;
+  font-size: .36rem;
+  color: #808080;
+}
+.agent-tool label{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: .8em;
+}
+.agent-tool button{
+  height: .96rem;
+  width: 2.36rem;
+  background-color: #6D87FB;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+/* 收货地址 */
+.shipping-address dl{
+  background-color: #fff;
+  padding: .2rem .6rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: .2rem;
+}
+.shipping-address dl dd{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #666;
+  padding-right: .5rem;
+}
+.shipping-address dl dd p em{
+  margin-left: .3rem;
+  color: #999;
+}
+.shipping-address dl dd span{
+  display: block;
+  padding: .1rem 0;
+}
+.shipping-address dl dt a{
+  color: #6D87FB;
 }
