@@ -849,3 +849,42 @@ nav a i.icon-nav04{
 .shipping-address dl dt a{
   color: #6D87FB;
 }
+/* 下单 */
+.order{
+  padding: .35rem;
+}
+.order ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.order ul li{
+  flex:0 0 48%;
+  background-color: #fff;
+  margin-bottom: .35rem;
+}
+.order ul li p{
+  padding: .2rem;
+}
+.order ul li p label{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.order ul li p label em{
+  color: #FD5455;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.order ul li p label a{
+  height: .5rem;
+  line-height: .5rem;
+  width: 1.3rem;
+  border-radius: .25rem;
+  color: #fff;
+  background-color: #FD5455;
+  text-align: center;
+}
