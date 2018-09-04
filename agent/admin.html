@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<link rel="stylesheet" href="css/agent.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    // tabs
+    $.TabChange("tabs",1)
+})
+$.TabChange = function(obj,num){
+  $("li","#" + obj).each(function(index){
+      $(this).click(function(i){
+        $("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+        $(this).addClass("curr").siblings().removeClass("curr");
+      })
+  })
+}
+</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>代理商管理系统</span>
+  <a></a>
+</div>
+<!-- //header -->
+<!-- avatar -->
+<div class="avatar-wrap3">
+	<i class="avatar" style="background-image:url(images/avatar.png);"></i>
+	<span>代理账号<em>董事</em></span>
+</div>
+<!-- // avatar-->
+<!-- 余额充值等级 -->
+<div class="total">
+  <ul>
+    <li>
+      <i class="icon-total01"></i>
+      账户余额
+    </li>
+    <li>
+      <i class="icon-total02"></i>
+      充值
+    </li>
+    <li>
+      <i class="icon-total03"></i>
+      提升等级
+    </li>
+  </ul>
+</div>
+<!-- //余额充值等级 -->
+<!-- 管人管钱 -->
+<!-- tabs -->
+<div class="admin-tabs-wrap">
+  <div class="admin-tabs" id="tabs">
+    <ul>
+      <li class="curr">管人</li>
+      <li>管货</li>
+      <li>管钱</li>
+      <li>其他</li>
+    </ul>
+  </div>
+  <div class="tab-box1 admin-tabs-box">
+    <div>管人</div>
+    <div style="display:none">管货</div>
+    <div style="display: none">管钱</div>
+    <div style="display: none">
+      <div class="admin-tabs-other">
+        <a href="javascript:;">
+          <i class="icon-other01"></i>系统说明
+        </a>
+        <a href="javascript:;">
+          <i class="icon-other01"></i>系统说明
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //tabs -->
+<!-- //管人管钱 -->
+<!-- 订单管理 -->
+<div class="ag-box-wrap">
+  <div class="ag-box">
+    <div class="title">
+      <div>订单管理</div>
+      <i class="arrow"></i>
+    </div>
+    <div class="order-list">
+        <a href="javascript:;">
+          <i class="icon-order01"></i>全部订单
+        </a>
+        <a href="javascript:;">
+          <i class="icon-order01"></i>待发货
+        </a>
+        <a href="javascript:;">
+          <i class="icon-order01"></i>下级订单
+        </a>
+        <a href="javascript:;">
+          <i class="icon-order01"></i>已发货
+        </a>
+        <a href="javascript:;">
+          <i class="icon-order01"></i>收货地址
+        </a>
+    </div>
+  </div>
+  </div>
+<!-- //订单管理 -->
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>我要订货</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>购物车</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>

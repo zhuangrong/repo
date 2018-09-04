@@ -888,3 +888,174 @@ nav a i.icon-nav04{
   background-color: #FD5455;
   text-align: center;
 }
+/* 后台管理 */
+/* 居左 */
+.avatar-wrap3 {
+  padding: 5px;
+  height: 3rem;
+  background: linear-gradient(90deg, rgb(109, 135, 251), rgb(153, 195, 255));
+  color: #fff;
+  padding: .3rem .5rem;
+}
+.avatar-wrap3 .avatar {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.avatar-wrap3 span {
+  display: inline-block;
+  padding-top: 3px;
+  padding-left: 3px;
+  margin-top: -2px;
+  vertical-align: middle;
+  font-size: .34rem;
+}
+.avatar-wrap3 span em {
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* 余额充值等级 */
+.total{
+  background-color: #fff;
+  padding: .5rem 0;
+  -webkit-box-shadow: 0 10px 10px rgba(109, 135, 251, 0.12);
+  box-shadow: 0 10px 10px rgba(109, 135, 251, 0.12);
+  color: #808080;
+  margin: -1rem .3rem 0;
+  border-radius: .3rem;
+}
+.total ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.total ul li{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.total ul li:nth-child(2)::after,
+.total ul li:nth-child(1)::after{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0.1rem;
+  height: 0.6rem;
+  width: .03rem;
+  background-color: #808080;
+}
+.total li i{
+  display: block;
+  width: .45rem;
+  height: .45rem;
+  margin-bottom: .1rem;
+  margin: 0 auto;
+}
+.total li i.icon-total01{
+  background-image: url(../images/total01.png);
+}
+.total li i.icon-total02{
+  background-image: url(../images/total02.png);
+}
+.total li i.icon-total03{
+  background-image: url(../images/total03.png);
+}
+
+/* order */
+.order-list{
+  color: #808080;
+  padding: .3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+}
+.order-list a{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: .26rem;
+  text-align: center;
+  color: #808080;
+}
+.order-list a i{
+  display: block;
+  width: .56rem;
+  height: .56rem;
+  margin-bottom: .1rem;
+  margin: 0 auto;
+}
+.order-list a i.icon-order01{
+  background-image: url(../images/order01.png);
+}
+
+
+.admin-tabs-wrap{
+  background-color: #fff;
+  border-radius: .3rem;
+  margin: .5rem .3rem 0;
+}
+/* 管理后台tab */
+.admin-tabs{
+  background-color: #fff;
+}
+.admin-tabs ul{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.admin-tabs li{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: .78rem;
+  line-height: .78rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+.admin-tabs li.curr{
+  color: #09ABFF;
+}
+.admin-tabs li.curr:after{
+  content: '';
+  display: block;
+  height: 0.04rem;
+  position: absolute;
+  width: .54rem;
+  top: 91%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #09ABFF;
+}
+.admin-tabs-box{
+  padding: .3rem;
+}
+.admin-tabs-other a{
+  display: inline-block;
+  min-width: 1.3rem;
+  text-align: center;
+  color: #808080;
+  font-size: .24rem;
+}
+.admin-tabs-other a i{
+  display: block;
+  width: .56rem;
+  height: .56rem;
+  margin-bottom: .1rem;
+  margin: 0 auto;
+}
+.admin-tabs-other a i.icon-other01{
+  background-image: url(../images/icon-other01.png);
+}
