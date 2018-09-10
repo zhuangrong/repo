@@ -145,25 +145,46 @@ h3{
   background-color: #fff;
 }
 .main-form li{
-  padding: .3rem 0 .3rem .5rem;
+  padding: .3rem .3rem .3rem .5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
   border-bottom: 1px solid #D4D4D4;
 }
 .main-form li > label{
-  padding-right: .1rem;
-  width: 2.2rem;
+  width: 1.8rem;
   color: #6D87FB;
+}
+.main-form li > p{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.main-form li > input{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .main-form.gray li > label{
   color: #333;
 }
+.main-form li a{
+  height: .66rem;
+  line-height: .66rem;
+  background-color: #6D87FB;
+  color: #fff;
+  text-align: center;
+  border-radius: .33rem;
+  padding: 0 .2rem;
+}
 /* 按钮 */
 .btn{
   display: block;
-  height: 0.66rem;
-  line-height: 0.66rem;
+  height: 0.86rem;
+  line-height: 0.86rem;
   background-color: #6D87FB;
   border-radius: 0.2rem;
   margin: .2rem;
@@ -172,6 +193,10 @@ h3{
 }
 .btn-full{
   margin: .5rem .8rem;
+}
+.btn-shadow{
+  -webkit-box-shadow: 0 5px 10px rgba(109, 135, 251, 0.36);
+  box-shadow: 0 5px 10px rgba(109, 135, 251, 0.36);
 }
 .nav-blank{
   height: 1.6rem;
@@ -273,10 +298,10 @@ nav a i.icon-nav04{
   width: 1.6rem;
   height: 1.6rem;
   /* margin: 0 5px; */
-  border: 1px solid #D9D9D9;
+  border: 1px dashed rgb(111, 111, 111);
   background-image: url(../images/icon-plus.png);
-  background-size: 25px !important;
-  background-color: #B2B2B2;
+  background-size: 35px !important;
+  /* background-color: #fff; */
   background-position: center center;
   border-radius: .2rem;
 }
@@ -400,7 +425,7 @@ nav a i.icon-nav04{
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  border-bottom: 3px solid rgb(234, 236, 245);
+  /* border-bottom: 3px solid rgb(234, 236, 245); */
 }
 .tabs li{
   -webkit-box-flex: 1;
@@ -409,8 +434,11 @@ nav a i.icon-nav04{
   height: .88rem;
   line-height: .88rem;
   text-align: center;
-  color: #6D87FB;
+  color: #999999;
   position: relative;
+}
+.tabs li.curr{
+  color: #6D87FB;
 }
 .tabs li.curr:after{
   content: '';
@@ -469,7 +497,7 @@ nav a i.icon-nav04{
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(128, 128, 128, .33);
+  background: rgba(102, 102, 102, .5);
 }
 .dialog {
   position: fixed;
@@ -763,6 +791,9 @@ nav a i.icon-nav04{
   border-radius: 50%;
   background-color: #6D87FB;
 }
+.agent-info i.rectange{
+  border-radius: 0 !important;
+}
 .agent-info ul li:nth-child(3){
   text-align: center;
 }
@@ -998,7 +1029,18 @@ nav a i.icon-nav04{
 .order-list a i.icon-order01{
   background-image: url(../images/order01.png);
 }
-
+.order-list a i.icon-order02{
+  background-image: url(../images/order02.png);
+}
+.order-list a i.icon-order03{
+  background-image: url(../images/order03.png);
+}
+.order-list a i.icon-order04{
+  background-image: url(../images/order04.png);
+}
+.order-list a i.icon-order05{
+  background-image: url(../images/order05.png);
+}
 
 .admin-tabs-wrap{
   background-color: #fff;
@@ -1058,4 +1100,137 @@ nav a i.icon-nav04{
 }
 .admin-tabs-other a i.icon-other01{
   background-image: url(../images/icon-other01.png);
+}
+.weixin-logo{
+  text-align: center;
+  padding-top: .3rem;
+}
+.weixin-logo img{
+  margin: 0 auto;
+  width: .6rem;
+  height: .6rem;
+}
+input[type=text]::-webkit-input-placeholder {
+  color:#b2b2b2;
+}
+
+/* 订单管理 */
+.order-box-wrap{
+  padding: .3rem .3rem;
+}
+.order-box{
+  background-color: #fff;
+  margin-bottom: .3rem;
+  -webkit-box-shadow: 1px 1px 10px rgba(109, 135, 251, 0.18);
+  box-shadow: 1px 1px 10px rgba(109, 135, 251, 0.18);
+  border-radius: .3rem;
+}
+.order-box .title{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: flex-start;
+  color: #6D87FB;
+  padding: .1rem .2rem .1rem .6rem;
+  border-bottom: 1px solid  #E5E5E5;
+}
+.order-box .title i.arrow{
+  width: .32rem;
+  height: .32rem;
+  background-image: url(../images/arrow2.png);
+  margin-left: .3rem;
+}
+.order-box .title > div{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.order-box .title > div p{
+  color: #666;
+  display: inline-block;
+}
+.order-box .box-content{
+  padding: .2rem .6rem;
+}
+.order-box .box-content h3{
+  color: #FF4848;
+  padding-bottom: .1rem;
+}
+
+/* 买家已付款 */
+.payed-over{
+  background-color: #F5F5F5;
+  color: #6D87FB;
+  font-size: .4rem;
+  text-align: center;
+  padding: .35rem 0;
+}
+.payed-over p{
+  display: inline-block;
+  vertical-align: middle;
+}
+.payed-over i{
+  vertical-align: middle;
+  display: inline-block;
+  width: 1.48rem;
+  height: 1.33rem;
+  background-image: url(../images/order-over.png);
+}
+
+/* 订单详情 */
+.order-info{
+  background-color: #fff;
+  padding: .3rem .6rem .3rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.order-info img{
+  width: 1.56rem;
+  height: 1.56rem;
+}
+.order-info dl{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #666;
+  padding: 0 .3rem;
+  line-height: 1.6;
+}
+.order-info dl dd{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.order-info dl dd:nth-child(1){
+  font-size: .34rem;
+}
+.order-info dl span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.order-info .bianhao{
+  color: #808080;
+}
+
+/* 订单上传图片 */
+.order-upload{
+  margin-top: .1rem;
+  background-color: #fff;
+  padding: .1rem .6rem .3rem;
+}
+.order-upload h3{
+  font-size: .34rem;
+  color: #6D87FB;
+  padding-bottom: .2rem;
+}
+.order-upload .pic-info{
+  border-radius: .2rem;
+  overflow: hidden;
+}
+.mt10{
+  margin-top: .1rem;
 }
