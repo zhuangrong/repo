@@ -91,6 +91,9 @@ h3{
 .tc {
   text-align: center;
 }
+.c-gray01{
+  color: #808080 !important;
+}
 /* 头部 */
 .header{
   display: -webkit-box;
@@ -197,6 +200,10 @@ h3{
 .btn-shadow{
   -webkit-box-shadow: 0 5px 10px rgba(109, 135, 251, 0.36);
   box-shadow: 0 5px 10px rgba(109, 135, 251, 0.36);
+}
+.btn-text{
+  color: #6D87FB !important;
+  background-color: transparent !important;
 }
 .nav-blank{
   height: 1.6rem;
@@ -1084,12 +1091,19 @@ nav a i.icon-nav04{
 .admin-tabs-box{
   padding: .3rem;
 }
+.admin-tabs-other{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
 .admin-tabs-other a{
-  display: inline-block;
+  flex:0 0 25%;
   min-width: 1.3rem;
   text-align: center;
   color: #808080;
   font-size: .24rem;
+  margin-bottom: .2rem;
 }
 .admin-tabs-other a i{
   display: block;
@@ -1100,6 +1114,21 @@ nav a i.icon-nav04{
 }
 .admin-tabs-other a i.icon-other01{
   background-image: url(../images/icon-other01.png);
+}
+.admin-tabs-other a i.icon-goods01{
+  background-image: url(../images/icon-goods01.png);
+}
+.admin-tabs-other a i.icon-goods02{
+  background-image: url(../images/icon-goods02.png);
+}
+.admin-tabs-other a i.icon-goods03{
+  background-image: url(../images/icon-goods03.png);
+}
+.admin-tabs-other a i.icon-goods04{
+  background-image: url(../images/icon-goods04.png);
+}
+.admin-tabs-other a i.icon-goods05{
+  background-image: url(../images/icon-goods05.png);
 }
 .weixin-logo{
   text-align: center;
@@ -1152,7 +1181,7 @@ input[type=text]::-webkit-input-placeholder {
   display: inline-block;
 }
 .order-box .box-content{
-  padding: .2rem .6rem;
+  padding: .2rem .3rem .2rem .6rem;
 }
 .order-box .box-content h3{
   color: #FF4848;
@@ -1233,4 +1262,114 @@ input[type=text]::-webkit-input-placeholder {
 }
 .mt10{
   margin-top: .1rem;
+}
+
+/* 添加收货地址 */
+.icon-center{
+  text-align: center;
+}
+.icon-addr02,
+.icon-addr03,
+.icon-addr04,
+.icon-addr01{
+  display: block;
+  width: .6rem;
+  height: .6rem;
+  margin: 0 auto;
+}
+.icon-addr01{
+  background-image: url(../images/icon-addr01.png);
+}
+.icon-addr02{
+  background-image: url(../images/icon-addr02.png);
+}
+.icon-addr03{
+  background-image: url(../images/icon-addr03.png);
+}
+.icon-addr04{
+  background-image: url(../images/icon-addr04.png);
+}
+
+/* 搜索 */
+.goods-search{
+  background-color: #B7B7B7;
+  padding: .2rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.goods-search input[type=text]{
+  background-color: #fff;
+  border: none;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  height: .82rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 .3rem 0 0.8rem;
+  background-image: url(../images/search.png);
+  background-size: .36rem;
+  background-position: .3rem center;
+}
+.goods-search a{
+  display: block;
+  background-color: #fff;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  height: .82rem;
+  line-height:  .82rem;
+  color: #6D87FB;
+  width: 1.2rem;
+  font-size: .32rem;
+  text-align: center;
+}
+
+/* 全部分类 */
+.goods-category{
+  background-color: #fff;
+  padding: .3rem .3rem .3rem .6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  border-bottom: 1px solid  #9F9F9F;
+}
+.goods-category span{
+  color: #6D87FB;
+  font-size: .32rem;
+  width: 2rem;
+}
+.goods-category span::after{
+  content: '';
+  display: inline-block;
+  width: .36rem;
+  height: .29rem;
+  background-image: url(../images/caret02.png);
+  margin-left: .1rem;
+}
+.goods-category .caret::after{
+  background-image: url(../images/caret.png);
+}
+.goods-category div{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #808080;
+  padding: 0 .2rem;
+}
+.goods-category i{
+  background-image: url(../images/icon-set.png);
+  width: .4rem;
+  height: .4rem;
+}
+.goods-category-list li{
+  background-color: #fff;
+  border-bottom: 1px solid  #9F9F9F;
+  padding: .3rem 0;
+  color: #6D87FB;
+  padding-left: .6rem;
+  font-size: .32rem;
 }
