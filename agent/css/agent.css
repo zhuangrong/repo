@@ -183,6 +183,15 @@ h3{
   border-radius: .33rem;
   padding: 0 .2rem;
 }
+.main-form.form2{
+  background-color: transparent;
+}
+.main-form.form2 li{
+  margin-bottom: 0.1rem;
+  border: none;
+  background-color: #fff;
+}
+
 /* 按钮 */
 .btn{
   display: block;
@@ -555,7 +564,11 @@ nav a i.icon-nav04{
   background: none;
   color: #6D87FB;
 }
-
+.dialog .df01 .btn:nth-child(1){
+  background-color: transparent;
+  border: none;
+  color: #6D87FB;
+}
 /* 收货人 */
 .address{
   display: -webkit-box;
@@ -683,18 +696,18 @@ nav a i.icon-nav04{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  flex-flow: wrap;
 }
 .scan ul li input[type=text]{
   background-color: #E6E6E6;
   text-align: center;
   border-radius: .2rem;
   height: .66rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  width:100%;
+  flex: 0 0 100%;
 }
 .scan ul li a{
-  margin-left: .2rem;
+  margin: .3rem auto 0;
   width: .66rem;
   height: .66rem;
   background-image: url(../images/scan.png);
@@ -1145,6 +1158,18 @@ nav a i.icon-nav04{
 .admin-tabs-other a i.icon-goods05{
   background-image: url(../images/icon-goods05.png);
 }
+.admin-tabs-other a i.icon-money01{
+  background-image: url(../images/icon-money01.png);
+}
+.admin-tabs-other a i.icon-money02{
+  background-image: url(../images/icon-money02.png);
+}
+.admin-tabs-other a i.icon-money03{
+  background-image: url(../images/icon-money03.png);
+}
+.admin-tabs-other a i.icon-money04{
+  background-image: url(../images/icon-money04.png);
+}
 .weixin-logo{
   text-align: center;
   padding-top: .3rem;
@@ -1561,4 +1586,85 @@ input[type=text]::-webkit-input-placeholder {
   /* border: 1px solid  #b3b3b3; */
   vertical-align: middle;
   font-size: 18px;
+}
+/* 确认发货条 */
+.confirm-bar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  background-color: #E6E6E6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  font-size: .28rem;
+  color: #808080;
+}
+.confirm-bar span{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align:  right;
+  line-height: .9rem;
+  padding-right: .5rem;
+}
+.confirm-bar button{
+  height: .9rem;
+  width: 2.36rem;
+  background-color: #6D87FB;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+
+/* 发货列表 */
+.sale-list{
+  padding: .25rem;
+}
+.sale-list dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: .4rem;
+  background-color: #fff;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0  .08rem .5rem rgba(162, 173, 219, 0.3);
+  box-shadow: 0  .08rem .5rem rgba(162, 173, 219, 0.3);;
+  margin-bottom: .2rem;
+}
+.sale-list dl dt{
+  width: 1.12rem;
+  height: 1.12rem;
+}
+.sale-list dl dd{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: .2rem;
+}
+.sale-list dl dd h3{
+  color: #FF4848;
+  padding-bottom: .1rem;
+}
+.sale-list dl dd p{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.sale-list dl dd b{
+  color: #6D87FB;
+  font-weight: normal;
+}
+.sale-list dl dd p span{
+  color: #FF4848;
+}
+.sale-list dl dd p em{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #6D87FB;
+  text-align: right;
 }

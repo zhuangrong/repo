@@ -9,29 +9,54 @@
 <title>agent</title>
 <link rel="stylesheet" href="css/agent.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+  // 弹窗
+  $(".btn").on("click",function(){
+     $("#dialog").fadeIn(200)
+  })
+  $("#confirm").on("click",function(e){
+      e.stopPropagation()
+       $("#dialog").fadeOut(200)
+  })
+
+});
+</script>
 </head>
 <body>
 <!-- header -->
 <div class="header">
   <a class="icon-back" href="javascrit:;"></a>
-  <span>确认订单</span>
+  <span>零售发货</span>
   <a></a>
 </div>
 <!-- //header -->
-<!-- 扫码发货 -->
-<div class="scan">
-  <h3>输入代理商微信号/手机号/姓名选择发货给下 级的代理商、</h3>
+<!-- 信息 -->
+<div class="main-form form2">
   <ul>
     <li>
-      <input type="text">
-      <a href="javascript:;"></a>
+      <label>代理商</label>
+      <input type="text" placeholder="请输入内容">
+    </li>
+    <li>
+      <label>订单号</label>
+      <input type="text" placeholder="请输入单号">
     </li>
   </ul>
-  <a href="javascript:;"  class="btn btn-full">确认</a>
 </div>
-<!-- // 扫码发货-->
-
-<div class="nav-blank"></div>
+<a class="btn btn-full">确认</a>
+<!-- // 信息-->
+<!-- 弹窗 -->
+<div id="dialog" style=" display: none">
+  <div class="mask"></div>
+  <div class="dialog">
+    <div class="dialog-body">已提交信息</div>
+    <div class="dialog-footer df01">
+      <button class="btn" id="confirm">确认</button>
+    </div>
+  </div>
+</div>
+<!-- //弹窗 -->
 <!--导航-->
 <nav>
 	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>

@@ -9,29 +9,34 @@
 <title>agent</title>
 <link rel="stylesheet" href="css/agent.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+
+});
+</script>
 </head>
 <body>
 <!-- header -->
 <div class="header">
   <a class="icon-back" href="javascrit:;"></a>
-  <span>确认订单</span>
+  <span>物流查询</span>
   <a></a>
 </div>
 <!-- //header -->
-<!-- 扫码发货 -->
-<div class="scan">
-  <h3>输入代理商微信号/手机号/姓名选择发货给下 级的代理商、</h3>
+<!-- 信息 -->
+<div class="main-form form2">
   <ul>
     <li>
-      <input type="text">
-      <a href="javascript:;"></a>
+      <label>快递商家</label>
+      <input type="text" placeholder="圆通快递">
+    </li>
+    <li>
+      <label>物流单号</label>
+      <input type="text" placeholder="550989898707689">
     </li>
   </ul>
-  <a href="javascript:;"  class="btn btn-full">确认</a>
 </div>
-<!-- // 扫码发货-->
-
-<div class="nav-blank"></div>
+<!-- // 信息-->
 <!--导航-->
 <nav>
 	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
