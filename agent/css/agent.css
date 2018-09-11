@@ -533,11 +533,23 @@ nav a i.icon-nav04{
   display: -webkit-flex;
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid #EAEAEA;
   padding-top: .1rem;
   font-size: .32rem;
 }
 .dialog .dialog-footer .btn{
+  flex: 0 0 39%;
+  height: .66rem;
+  line-height: .60rem;
+}
+.dialog .dialog-footer .btn:nth-child(1){
+  background-color: #fff;
+  color: #666;
+  border: 1px solid  #808080;
+}
+.dialog .df01{
+  border-top: 1px solid #EAEAEA;
+}
+.dialog .df01 .btn{
   margin: 0 auto;
   flex: 0 0 100%;
   background: none;
@@ -925,6 +937,9 @@ nav a i.icon-nav04{
   color: #fff;
   background-color: #FD5455;
   text-align: center;
+}
+.order-sale ul li p label a{
+  background-color: #6D87FB;
 }
 /* 后台管理 */
 /* 居左 */
@@ -1376,8 +1391,8 @@ input[type=text]::-webkit-input-placeholder {
 /* 开关 */
 .sm-switch {
   position: relative;
-  width: 52px;
-  height: 32px;
+  width: .62rem;
+  height: .36rem;
   border: 1px solid #DFDFDF;
   outline: 0;
   border-radius: 16px;
@@ -1389,9 +1404,9 @@ input[type=text]::-webkit-input-placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 30px;
-  border-radius: 15px;
+  width: .6rem;
+  height: .34rem;
+  border-radius: .15rem;
   background-color: #FDFDFD;
   transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
 }
@@ -1400,21 +1415,150 @@ input[type=text]::-webkit-input-placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  width: .28rem;
+  height: .28rem;
+  border-radius: .14rem;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
 }
 
 .sm-switch:checked {
-  border-color: #78BB05;
-  background-color: #78BB05;
+  border-color: #4FD262;
+  background-color: #4FD262;
 }
 .sm-switch:checked:before {
   transform: scale(0);
 }
 .sm-switch:checked:after {
-  transform: translateX(20px);
+  transform: translateX(.3rem);
+}
+/* 设置 */
+.set-list ul{
+}
+.set-list ul li{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: .3rem .5rem;
+  margin-bottom: .1rem;
+}
+.set-list ul li span{
+  width: 1.8rem;
+  color: #6D87FB;
+  font-size: .32rem;
+}
+.set-list ul li p{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align:  right;
+}
+.set-list ul li input[type=text]{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  background: none;
+  text-align: right;
+}
+/* 发货bar */
+.sale-bar{
+  height: .88rem;
+  background-color: #E6E6E6;
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  padding: .3rem .6rem 0.66rem;
+}
+.sale-bar li{
+  display: inline-block;
+  color: #4D4D4D;
+  margin-right: 0.4rem;
+}
+.sale-bar a{
+  position: absolute;
+  display: block;
+  top: -0.45rem;
+  right: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url(../images/buy.png);
+}
+.sale-bar a em{
+  display: block;
+  position: absolute;
+  top: 0.1rem;
+  right: 0rem;
+  background-color: #EF4D5D;
+  color: #fff;
+  width: .32rem;
+  height: .32rem;
+  line-height: .32rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: .24rem;
+}
+.goods-numbers dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.goods-numbers dl dt{
+  width: 1.3rem;
+  text-align: left;
+}
+.goods-numbers dl dd{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.goods-numbers h3{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding-bottom: .2rem;
+}
+.goods-numbers h3 img{
+  width: 1.16rem;
+  height: 1.16rem;
+}
+.goods-numbers h3 span{
+  padding:0 .2rem;
+}
+/* spinner数量加减 */
+.spinner{
+  overflow: hidden;
+}
+.spinner a{
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  text-indent: 999px;
+  vertical-align: middle;
+}
+.spinner a.DisDe,
+.spinner a.Decrease{
+  background-image: url(../images/icon-decrease.png);
+}
+.spinner a.Increase{
+  background-image: url(../images/icon-increase.png);
+}
+.spinner input{
+  display: inline-block;
+  width: .4rem;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  color: #808080;
+  background-color: #fff;
+  /* border: 1px solid  #b3b3b3; */
+  vertical-align: middle;
+  font-size: 18px;
 }
