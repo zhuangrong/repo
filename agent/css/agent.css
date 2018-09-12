@@ -1781,7 +1781,7 @@ input[type=text]::-webkit-input-placeholder {
   font-size: .28rem;
 }
 .money-date{
-  margin: .5rem;
+  margin: .5rem .5rem .3rem;
   padding: .5rem;
   background-color: #fff;
   border-radius: .5rem;
@@ -1842,4 +1842,13 @@ input[type=text]::-webkit-input-placeholder {
 }
 .money-date ul li i.icon-date04{
   background-image: url(../images/icon-date04.png);
+}
+.btn-number{
+  display: block;
+  background-color: #fff;
+  color: #6D87FB;
+  border-radius: .2rem;
+  margin: .1rem .5rem;
+  line-height: .82rem;
+  text-align: center;
 }
