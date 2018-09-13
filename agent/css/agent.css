@@ -1172,6 +1172,30 @@ nav a i.icon-nav04{
 .admin-tabs-other a i.icon-money04{
   background-image: url(../images/icon-money04.png);
 }
+.admin-tabs-other a i.icon-man01{
+  background-image: url(../images/icon-man01.png);
+}
+.admin-tabs-other a i.icon-man02{
+  background-image: url(../images/icon-man02.png);
+}
+.admin-tabs-other a i.icon-man03{
+  background-image: url(../images/icon-man03.png);
+}
+.admin-tabs-other a i.icon-man04{
+  background-image: url(../images/icon-man04.png);
+}
+.admin-tabs-other a i.icon-man05{
+  background-image: url(../images/icon-man05.png);
+}
+.admin-tabs-other a i.icon-man06{
+  background-image: url(../images/icon-man06.png);
+}
+.admin-tabs-other a i.icon-man07{
+  background-image: url(../images/icon-man07.png);
+}
+.admin-tabs-other a i.icon-man08{
+  background-image: url(../images/icon-man08.png);
+}
 .weixin-logo{
   text-align: center;
   padding-top: .3rem;
@@ -1851,4 +1875,27 @@ input[type=text]::-webkit-input-placeholder {
   margin: .1rem .5rem;
   line-height: .82rem;
   text-align: center;
+}
+.fake-info{
+  text-align: center;
+  color: #6D87FB;
+  padding-top: .1rem;
+}
+.fake-effect ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 0 .6rem 0;
+  justify-content: space-between;
+}
+.fake-effect li{
+  flex: 0 0 45%;
+  text-align: center;
+}
+.fake-effect li img{
+  object-fit: cover;
+  width: 3rem;
+  height: 1.8rem;
+  margin-bottom: .15rem;
+  border-radius: .2rem;
 }
