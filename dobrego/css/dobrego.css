@@ -246,3 +246,97 @@ em, h3 {
   height: 1.4rem;
   background-image: url(../images/bear-error.png);
 }
+/* 水平 */
+.level{
+  background-color: #7DC6B3;
+  border-radius: .5rem;
+  width: 5.8rem;
+  margin: 1.5rem auto 0;
+  position: relative;
+  color: #fff;
+  font-size: .36rem;
+  text-align: justify;
+  line-height: 1.8;
+  padding-bottom: .3rem;
+}
+.level h3{
+  padding: .5rem .5rem 0;
+}
+.level .level-bg{
+  position: relative;
+  width: 5.8rem;
+  height: 5rem;
+  margin: .2rem auto .3rem;
+}
+.level .l01{
+  background-image: url(../images/level01.png);
+}
+.level .l02{
+  background-image: url(../images/level02.png);
+}
+.level .l03{
+  background-image: url(../images/level03.png);
+}
+.level .l04{
+  background-image: url(../images/level04.png);
+}
+.level .l05{
+  background-image: url(../images/level05.png);
+}
+.level .l06{
+  background-image: url(../images/level06.png);
+}
+.level .level-bg span{
+  font-size: .36rem;
+  color: rgb(98, 60, 45);
+  display: block;
+  padding: .6rem 0 0 2.6rem;
+  font-weight: bold;
+}
+.level .qr{
+  padding: 0 .36rem 0 .2rem;
+}
+.level .qr ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.level .qr ul li:nth-child(1) img{
+  height: 0.66rem;
+  margin-top: .3rem;
+}
+.level .qr ul li:nth-child(2) img{
+  height: 1.5rem;
+}
+.save-get{
+  padding: 0 .6rem 0;
+}
+.save-get ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.save-get li:nth-child(1) img{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  height: .9rem;
+  margin-top: 0.7rem;
+}
+.btn.more{
+  font-size: .28rem;
+  line-height: 1.5;
+  padding: .2rem 0;
+}
+.share{
+  display: block;
+  width: 3rem;
+  height: .88rem;
+  background-image: url(../images/share.png);
+  position: fixed;
+  top: 0.3rem;
+  right: 0.4rem;
+}
