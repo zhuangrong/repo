@@ -11,7 +11,10 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 $(function(){
-
+  $(".icon-music").on("click",function(){
+    $(this).toggleClass("play").toggleClass("mute")
+    $("#audio")[0].pause()
+  })
 
 })
 var level = 0
@@ -30,11 +33,17 @@ function pageNext(event,answer){
 
   // 评分
   $next.find(".level-bg").addClass("l0" + level)
+
 }
 
 </script>
 </head>
 <body class="bg">
+<!-- 音乐 -->
+<i class="icon-music play"></i>
+<audio autoplay="autoplay" id="audio" src="images/audio.mp3"></audio>
+<!-- // 音乐 -->
+
 <!-- 开始 -->
 <div class="page">
   <div class="logo">
