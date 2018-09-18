@@ -212,11 +212,9 @@ em, h3 {
 /* 答对了 */
 .result-title{
   font-size: .7rem;
-  color: #7DC6B3;
   text-align: center;
 }
 .result{
-  background-color: #7DC6B3;
   border-radius: .5rem;
   width: 5.80rem;
   margin: 1.5rem auto 0;
@@ -226,6 +224,12 @@ em, h3 {
   font-size: .36rem;
   text-align: justify;
   line-height: 1.8;
+}
+.result.error{
+  background-color: #F19A98;
+}
+.result.correct{
+  background-color: #7DC6B3;
 }
 .result.error::before,
 .result.correct::before{
@@ -245,6 +249,18 @@ em, h3 {
   width: 1.53rem;
   height: 1.4rem;
   background-image: url(../images/bear-error.png);
+}
+
+.result-title span{
+  display: none;
+}
+.result-title.correct span:nth-child(1){
+  display: block;
+  color: #7DC6B3;
+}
+.result-title.error span:nth-child(2){
+  display: block;
+  color: #F19A98;
 }
 /* 水平 */
 .level{
@@ -330,6 +346,9 @@ em, h3 {
   font-size: .28rem;
   line-height: 1.5;
   padding: .2rem 0;
+}
+.btn.error{
+  background:linear-gradient(0deg, #DD8684, #EF9896);
 }
 .share{
   display: block;
