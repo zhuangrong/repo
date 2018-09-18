@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>都博睿</title>
+<link rel="stylesheet" href="css/dobrego.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  var  flag = true
+  $(".icon-music").on("click",function(){
+    $(this).toggleClass("play").toggleClass("mute")
+    if(flag){
+      $("#audio")[0].pause()
+      flag = false
+    }else{
+      $("#audio")[0].play()
+      flag = true
+    }
+  })
+
+})
+var level = 0
+// 切换下一个页面
+function pageNext(event,answer){
+  var $ele = $(event)
+  var $next = $ele.parent().next()
+  $ele.parent().hide().next().show()
+  $next.find(".result-title").addClass(answer)
+  $next.find(".result").addClass(answer)
+  $next.find(".btn").addClass(answer)
+
+  if(answer == "correct"){
+    level = level + 1
+  }
+
+  // 评分
+  $next.find(".level-bg").addClass("l0" + level)
+
+}
+
+</script>
+</head>
+<body class="bg">
+<!-- 音乐 -->
+<i class="icon-music play"></i>
+<audio autoplay="autoplay" id="audio" src="images/audio.mp3"></audio>
+<!-- // 音乐 -->
+
+<!-- 开始 -->
+<div class="page">
+  <div class="logo">
+    <img src="images/logo.png">
+  </div>
+  <div class="blank02"></div>
+  <div class="pop01">
+    <img src="images/cup.png">
+  </div>
+  <div class="ready">
+    <img src="images/text-ready.png">
+    <img src="images/bear.png">
+  </div>
+  <a href="javascript:;" class="btn mt" id="start" onclick="pageNext(this)">马上参赛 </a>
+</div>
+<!-- // 开始 -->
+
+<!-- // Q1 -->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture">
+    <i style="background-image:url(images/baby01.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q1:对你瘪瘪嘴，你说我是想干啥？ </p>
+  </div>
+  <a href="javascript:;" class="btn"  onclick="pageNext(this, 'correct')">我有要求</a>
+  <a href="javascript:;" class="btn"  onclick="pageNext(this, 'error')">我饿了</a>
+</div>
+<!-- // Q1 -->
+<!-- // answer1-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>宝宝瘪起小嘴，好像受到委屈似的，这是啼哭的先兆，实际上是对妈妈有要求。这时需要妈妈细心观察宝宝的要求，适时地去满足，如吃奶、一起玩耍、抱抱等。</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer1 -->
+
+<!-- Q2-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture c02">
+    <i style="background-image:url(images/baby02.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q2:宝宝我脸红了因为？</p>
+  </div>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">拉臭臭</a>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'correct')">我饿了</a>
+</div>
+<!-- // Q2 -->
+<!-- // answer2-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>如果看到宝宝我眉筋突暴，脸部发红，目光发呆，这是明显的是宝宝内急了，得赶紧带宝宝去拉臭臭了。不然…不好意思，妈妈只好等着收拾宝宝的便便了~~~~</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer2 -->
+
+<!-- Q3 -->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture">
+    <i style="background-image:url(images/baby03.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q3:宝宝转头，怎么不想理妈妈了？  </p>
+  </div>
+  <a href="javascript:;" class="btn" onclick="pageNext(this, 'error')">宝宝想睡觉</a>
+  <a href="javascript:;" class="btn" onclick="pageNext(this, 'correct')">对妈妈生气</a>
+</div>
+<!-- // Q3 -->
+<!-- // answer3-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>玩着玩着，宝宝的眼光变得发散，对于外界的的反应也不再专注，还时不时的打哈欠，头转到一边不太理采妈妈，这就表示宝宝困了。这时，就不要再逗宝宝玩啦，宝宝要睡觉！</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer3 -->
+
+<!-- Q4 -->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture c02">
+    <i style="background-image:url(images/baby04.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q2:吸吸手手、吐吐泡泡，妈妈猜猜看宝宝在干嘛？</p>
+  </div>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'correct')">宝宝自己玩</a>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">宝宝想喝奶</a>
+</div>
+<!-- // Q4 -->
+<!-- // answer4-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>宝宝在吃饱、穿暖、尿布干净而且还没有睡意的时候，会自得其乐地玩弄自己的嘴唇、舌头，比方说吮手指、吐气泡什么的。这时宝宝更想独自玩耍，不愿意别人打扰。所以，妈妈就不要去打扰人家了~~</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer4 -->
+
+<!-- Q5 -->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture">
+    <i style="background-image:url(images/baby05.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q5:宝宝吃好、穿好 玩好，可还是爱哭？！</p>
+  </div>
+  <a href="javascript:;" class="btn" onclick="pageNext(this, 'correct')">宝宝脾气不好</a>
+  <a href="javascript:;" class="btn" onclick="pageNext(this, 'error')">宝宝在锻炼</a>
+</div>
+<!-- // Q5 -->
+<!-- // answer5-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>适当的哭泣是宝宝锻炼肺活量、声带和肌肉关节以及发展智力的重 要方式，而泪水所含的杀菌物质还能起到预防眼病的作用。如果宝宝哭闹的时候没有伴随其他的不良状况，而且哭声抑扬顿错，响亮且有节奏感时，你更是不必担忧。那只是宝宝在告诉你：“我的身体很健康，我在锻炼身体！”</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer5 -->
+
+<!-- Q6 -->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="pop-picture c02">
+    <i style="background-image:url(images/baby06.png)"></i>
+  </div>
+  <div class="question">
+    <p>Q6:宝宝最近特安静无精打采的~~肿么了？</p>
+  </div>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">宝宝要静静</a>
+  <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'correct')">宝宝生病了</a>
+</div>
+<!-- // Q6 -->
+<!-- // answer6-->
+<div class="page" style="display:none">
+  <div class="blank01"></div>
+  <div class="result-title">
+    <span>答对啦！</span>
+    <span>答错啦！</span>
+  </div>
+  <div class="result">
+    <p>健康的宝宝眼神总是明亮有神、转动自如的。若发现宝宝最近眼神黯然呆滞、无光少神，那很可能是身体不适的征兆，也许宝宝已经患上了疾病。这时最好带宝宝去看大夫，千万不要迟疑！</p>
+  </div>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <div class="blank01"></div>
+</div>
+<!-- answer6 -->
+<!-- level -->
+<div class="page" style="display:none">
+  <span class="share"></span>
+  <div class="level">
+    <h3><img src="images/report.png"></h3>
+    <div class="level-bg l01">
+      <span>DobreGo</span>
+    </div>
+    <div class="qr">
+      <ul>
+        <li>
+          <img src="images/logo02.png">
+        </li>
+        <li>
+          <img src="images/qr-code.png">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="save-get">
+    <ul>
+      <li>
+        <img src="images/save.png">
+      </li>
+      <li>
+        <a href="javascript:;" class="btn more">领取”妈妈加油”锦囊<br>让妈妈和宝宝更亲近</a>
+      </li>
+    </ul>
+  </div>
+  <div class="blank01"></div>
+</div>
+<!-- // level -->
+
+</body>
+</html>
