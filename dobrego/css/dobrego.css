@@ -345,9 +345,10 @@ em, h3 {
   height: .9rem;
   margin-top: 0.7rem;
 }
-.save-get li:nth-child(2) a{
+.save-get li img,
+.save-get li a{
   position: relative;
-  z-index: 9999999999
+  z-index: 9999999999;
 }
 .btn.more{
   font-size: .28rem;
