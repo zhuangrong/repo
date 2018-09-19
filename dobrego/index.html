@@ -46,7 +46,7 @@ function pageNext(event,answer){
 
 </script>
 </head>
-<body class="bg">
+<body >
 <!-- 音乐 -->
 <i class="icon-music play"></i>
 <audio autoplay="autoplay"  loop="loop" id="audio" src="images/audio.mp3"></audio>
@@ -237,7 +237,7 @@ function pageNext(event,answer){
 </div>
 <!-- answer6 -->
 <!-- level -->
-<div class="page"  id="capture">
+<div class="page page-level" id="capture">
   <span class="share"></span>
   <div class="level">
     <h3><img src="images/report.png"></h3>
@@ -265,6 +265,7 @@ function pageNext(event,answer){
       </li>
     </ul>
   </div>
+  <img src="" class="result-img">
   <div class="blank01"></div>
 </div>
 <script>
@@ -272,18 +273,11 @@ $(function(){
   setTimeout(function(){
     html2canvas($("#capture"), {
       onrendered: function(canvas) {
-        document.body.appendChild(canvas);
-        $("canvas").addClass("captures")
+        // document.body.appendChild(canvas);
+        $(".result-img").attr("src",canvas.toDataURL("image/png"))
       }
     });
-  }, 1000)
-  $(".more").on("click",function(){
-    alert("more")
-  })
-  $("#save").on("click",function(){
-    alert("save2")
-  })
-
+  }, 1500)
 });
 </script>
 <!-- // level -->
