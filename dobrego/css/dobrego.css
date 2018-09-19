@@ -290,6 +290,7 @@ em, h3 {
   height: 5rem;
   margin: .2rem auto .3rem;
 }
+.level .l00,
 .level .l01{
   background-image: url(../images/level01.png);
 }
