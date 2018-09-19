@@ -1899,3 +1899,84 @@ input[type=text]::-webkit-input-placeholder {
   margin-bottom: .15rem;
   border-radius: .2rem;
 }
+
+/* 2018-09-19 带状态栏界面成品 */
+.home-nav{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: .5rem .3rem;
+}
+.home-nav a{
+  flex: 0 0 25%;
+  width: 1rem;
+  font-size: .24rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.home-nav a i{
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/icon-homeBg.png);
+  text-align: center;
+  padding-top: .15rem;
+  margin: 0 auto;
+}
+.home-nav a i::after{
+  content: '';
+  display: block;
+  width: .6rem;
+  height: .6rem;
+  margin: 0 auto;
+}
+.home-nav a i.icon-home01::after{
+  background-image: url(../images/icon-home01.png);
+}
+.home-nav a i.icon-home02::after{
+  background-image: url(../images/icon-home02.png);
+}
+.home-nav a i.icon-home03::after{
+  background-image: url(../images/icon-home03.png);
+}
+.home-nav a i.icon-home04::after{
+  background-image: url(../images/icon-home04.png);
+}
+.home-nav a i.icon-home05::after{
+  background-image: url(../images/icon-home05.png);
+}
+.home-nav a i.icon-home06::after{
+  background-image: url(../images/icon-home06.png);
+}
+.home-nav a i.icon-home07::after{
+  background-image: url(../images/icon-home07.png);
+}
+.home-nav a i.icon-home08::after{
+  background-image: url(../images/icon-home08.png);
+}
+.home-nav a span{
+  padding-top: .01rem;
+  display: block;
+}
+/* 幻灯片 */
+.swiper01 .swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, .6) !important;
+  margin: 0 5px !important;
+  opacity: 1;
+}
+.swiper01 .swiper-pagination-bullet-active {
+  background: #6E4611 !important;
+}
+.swiper01.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 5px;
+}
+.home-logo{
+  text-align: center;
+  background-color: #fff;
+  padding: .3rem 0;
+}

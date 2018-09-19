@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<link rel="stylesheet" href="css/agent.css" />
+<link rel="stylesheet" href="css/swiper.min.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+</head>
+<body>
+<div class="home-logo">
+  <img src="images/home-logo.png">
+</div>
+<!-- banner -->
+<div class="banner">
+  <!-- Swiper -->
+  <section class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+  </section>
+  <!-- //Swiper -->
+  <script>
+  var swiper01 = new Swiper('.swiper01', {
+      pagination: '.sp1',
+      paginationClickable: true,
+      autoplay: 2000,
+      loop: true
+  });
+  </script>
+</div>
+<!-- // banner -->
+<!-- home -->
+<div class="home-nav">
+  <a href="#">
+    <i class="icon-home01"></i>
+    <span>产品展示</span>
+  </a>
+  <a href="#">
+    <i class="icon-home02"></i>
+    <span>公司简介</span>
+  </a>
+  <a href="#">
+    <i class="icon-home03"></i>
+    <span>代理查询</span>
+  </a>
+  <a href="#">
+    <i class="icon-home04"></i>
+    <span>防伪查询</span>
+  </a>
+  <a href="#">
+    <i class="icon-home05"></i>
+    <span>代理后台</span>
+  </a>
+  <a href="#">
+    <i class="icon-home06"></i>
+    <span>质检报告</span>
+  </a>
+  <a href="#">
+    <i class="icon-home07"></i>
+    <span>微信违规</span>
+  </a>
+  <a href="#">
+    <i class="icon-home08"></i>
+    <span>宣传素材</span>
+  </a>
+</div>
+<!-- //home -->
+</body>
+</html>

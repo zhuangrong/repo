@@ -79,14 +79,11 @@ textarea {
 em, h3 {
   font: inherit;
 }
+.page,
 .bg{
   background-image: url(../images/bg.png);
   background-repeat: repeat;
-}
-.page{
-  background-image: url(../images/bg.png);
   background-color: #fff;
-  background-repeat: repeat;
   background-position: center top;
 }
 .page-level{
