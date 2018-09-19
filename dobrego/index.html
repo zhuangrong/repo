@@ -9,6 +9,7 @@
 <title>都博睿</title>
 <link rel="stylesheet" href="css/dobrego.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/html2canvas.js"></script>
 <script type="text/javascript">
 $(function(){
   var  flag = true
@@ -52,7 +53,7 @@ function pageNext(event,answer){
 <!-- // 音乐 -->
 
 <!-- 开始 -->
-<div class="page">
+<div class="page" style="display:none" >
   <div class="logo">
     <img src="images/logo.png">
   </div>
@@ -236,7 +237,7 @@ function pageNext(event,answer){
 </div>
 <!-- answer6 -->
 <!-- level -->
-<div class="page" style="display:none">
+<div class="page"  id="capture">
   <span class="share"></span>
   <div class="level">
     <h3><img src="images/report.png"></h3>
@@ -257,7 +258,7 @@ function pageNext(event,answer){
   <div class="save-get">
     <ul>
       <li>
-        <img src="images/save.png">
+        <img src="images/save.png"  id="shot">
       </li>
       <li>
         <a href="javascript:;" class="btn more">领取”妈妈加油”锦囊<br>让妈妈和宝宝更亲近</a>
@@ -266,6 +267,18 @@ function pageNext(event,answer){
   </div>
   <div class="blank01"></div>
 </div>
+<script>
+$(function(){
+  setTimeout(function(){
+    html2canvas($("#capture"), {
+      onrendered: function(canvas) {
+        document.body.appendChild(canvas);
+        $("canvas").addClass("captures")
+      }
+    });
+  }, 1000)
+});
+</script>
 <!-- // level -->
 
 </body>
