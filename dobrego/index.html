@@ -258,7 +258,7 @@ function pageNext(event,answer){
   <div class="save-get">
     <ul>
       <li>
-        <img src="images/save.png">
+        <img src="images/save.png" id="save">
       </li>
       <li>
         <a href="javascript:;" class="btn more">领取”妈妈加油”锦囊<br>让妈妈和宝宝更亲近</a>
@@ -279,6 +279,9 @@ $(function(){
   }, 1000)
   $(".more").on("click",function(){
     alert("more")
+  })
+  $("#save").on("click",function(){
+    alert("save")
   })
 
 });
