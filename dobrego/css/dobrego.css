@@ -350,6 +350,9 @@ em, h3 {
   position: relative;
   z-index: 9999999999;
 }
+.save-get li img{
+  pointer-events:none;
+}
 .btn.more{
   font-size: .28rem;
   line-height: 1.5;
