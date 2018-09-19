@@ -345,7 +345,6 @@ em, h3 {
   height: .9rem;
   margin-top: 0.7rem;
 }
-.save-get li img,
 .save-get li a{
   position: relative;
   z-index: 9999999999;
@@ -391,8 +390,8 @@ em, h3 {
 	100%{-webkit-transform:rotate(360deg)}
 }
 .captures{
-  opacity: 0.51;
-  border: 1px solid  #000;
+  opacity: 1.51;
+  border: 2px solid  #000;
   position: absolute;
   top: 1.5rem;
   left: 0;
