@@ -334,6 +334,9 @@ em, h3 {
   display: flex;
   justify-content: space-between;
 }
+.save-get ul li{
+  position: relative;
+}
 .save-get li:nth-child(1) img{
   display: -webkit-flex;
   display: -ms-flex;
@@ -341,6 +344,10 @@ em, h3 {
   justify-content: space-between;
   height: .9rem;
   margin-top: 0.7rem;
+}
+.save-get li:nth-child(2) a{
+  position: relative;
+  z-index: 9999999999
 }
 .btn.more{
   font-size: .28rem;
@@ -380,10 +387,10 @@ em, h3 {
 	100%{-webkit-transform:rotate(360deg)}
 }
 .captures{
-  opacity: 0.01;
+  opacity: 0.51;
   border: 1px solid  #000;
   position: absolute;
   top: 1.5rem;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
 }
