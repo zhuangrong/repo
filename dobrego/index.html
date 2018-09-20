@@ -42,6 +42,9 @@ function pageNext(event,answer){
   // 评分
   $next.find(".level-bg").addClass("l0" + level)
 
+  //点击音效
+  $("#click")[0].play()
+
 }
 
 </script>
@@ -51,6 +54,9 @@ function pageNext(event,answer){
 <i class="icon-music play"></i>
 <audio autoplay="autoplay"  loop="loop" id="audio" src="images/audio.mp3"></audio>
 <!-- // 音乐 -->
+<!-- 点击音效 -->
+<audio id="click" src="images/click.mp3"></audio>
+<!-- // 点击音效 -->
 
 <!-- 开始 -->
 <div class="page">
@@ -232,7 +238,7 @@ function pageNext(event,answer){
   <div class="result">
     <p>健康的宝宝眼神总是明亮有神、转动自如的。若发现宝宝最近眼神黯然呆滞、无光少神，那很可能是身体不适的征兆，也许宝宝已经患上了疾病。这时最好带宝宝去看大夫，千万不要迟疑！</p>
   </div>
-  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)" id="lastBtn">下一题</a>
   <div class="blank01"></div>
 </div>
 <!-- answer6 -->
@@ -270,14 +276,26 @@ function pageNext(event,answer){
 </div>
 <script>
 $(function(){
-  setTimeout(function(){
-    html2canvas($("#capture"), {
-      onrendered: function(canvas) {
-        // document.body.appendChild(canvas);
-        $(".result-img").attr("src",canvas.toDataURL("image/png"))
+  $("#lastBtn").on("click",function(){
+    var times = 0;
+    var imgbase64= setInterval(function(){
+          captureImg()
+        }, 1000)
+
+    function captureImg(){
+      html2canvas($("#capture"), {
+        onrendered: function(canvas){
+          // document.body.appendChild(canvas);
+          $(".result-img").attr("src",canvas.toDataURL("image/png"))
+        }
+      })
+      times += 1
+      if(times > 5) {
+        clearInterval(imgbase64)
       }
-    });
-  }, 2000)
+    }
+
+  })
 });
 </script>
 <!-- // level -->
