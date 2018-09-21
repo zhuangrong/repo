@@ -37,6 +37,12 @@ function pageNext(event,answer){
 
   if(answer == "correct"){
     level = level + 1
+    $("#correct-audio")[0].currentTime = 0
+    $("#correct-audio")[0].play()
+  }
+  if(answer == "error"){
+    $("#error-audio")[0].currentTime = 0
+    $("#error-audio")[0].play()
   }
 
   // 评分
@@ -56,6 +62,8 @@ function pageNext(event,answer){
 <!-- // 音乐 -->
 <!-- 点击音效 -->
 <audio id="click" src="images/click.mp3"></audio>
+<audio id="error-audio" src="images/error.mp3"></audio>
+<audio id="correct-audio" src="images/correct.mp3"></audio>
 <!-- // 点击音效 -->
 
 <!-- 开始 -->
