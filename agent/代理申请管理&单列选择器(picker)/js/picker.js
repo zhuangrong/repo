@@ -17,6 +17,12 @@
 				}
 			},
 			onConfirm: function(result){},
+			onPrev: function(swp){
+				swp.slidePrev()
+			},
+			onNext: function(swp){
+				swp.slideNext()
+			},
 		 }
 		//融合配置项
 		$.extend(this.config,config)

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<link rel="stylesheet" href="css/agent.css" />
+<link rel="stylesheet" href="css/swiper.min.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/picker.js"></script>
+<script type="text/javascript">
+$(function(){
+  var picker = new Picker({
+            cid:"caseid005",
+            onConfirm: function(result){
+              $(".btn").text(result)
+            }
+  })
+})
+</script>
+</head>
+<body>
+  <a href="javascript:;" class="btn" data-case="caseid005" >选择器</a>
+  <!--picker-->
+  <div>
+    <div class="sm-mask"  data-case="caseid005"></div>
+    <div class="sm-picker"  data-case="caseid005">
+      <div class="picker-header">
+        <span>
+          <i class="icon-prev"></i>
+          <i class="icon-next"></i>
+        </span>
+        <a href="javascript:;">完成</a>
+      </div>
+      <div class="picker-body">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">飞机票</div>
+              <div class="swiper-slide">火车票</div>
+              <div class="swiper-slide">的士票</div>
+              <div class="swiper-slide">公交票</div>
+              <div class="swiper-slide">地铁票</div>
+              <div class="swiper-slide">其他</div>
+            </div>
+        </div>
+        <!--//swiper-->
+      </div>
+    </div>
+  </div>
+  <!--//picker-->
+</body>
+</html>
