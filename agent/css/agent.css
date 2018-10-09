@@ -784,8 +784,8 @@ nav a i.icon-nav04{
 /* checkbox */
 .c-box{
   display: inline-block;
-  width: .28rem;
-  height: .28rem;
+  width: .32rem;
+  height: .32rem;
   margin-right: .05rem;
   vertical-align: middle;
   margin-bottom: 0;
@@ -1979,4 +1979,136 @@ input[type=text]::-webkit-input-placeholder {
   text-align: center;
   background-color: #fff;
   padding: .3rem 0;
+}
+
+
+/* 2018-09-21 pm 代理申请管理，移动端下拉选择组件 */
+.ag-table .row{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.ag-table .row li{
+  background-color: #fff;
+  border-bottom: 1px solid  #D6D6D6;
+  text-align: center;
+  padding: .2rem .3rem;
+}
+.ag-table .thead li{
+  color: #6D87FB;
+  border-bottom: 2px solid  #D6D6D6;
+}
+.ag-table .row li:nth-child(1){
+  flex:0 0 30%;
+}
+.ag-table .row li:nth-child(2){
+  flex:0 0 20%;
+}
+.ag-table .row li:nth-child(3){
+  flex:0 0 30%;
+}
+.ag-table .row li:nth-child(4){
+  flex:0 0 20%;
+}
+
+/* picker */
+.sm-picker {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .3s;
+  background-color: #D0D5DC;
+}
+.sm-picker .picker-header {
+  padding: .1rem .15rem .1rem;
+  border-bottom: 1px solid #dedede;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #F1F1F2;
+}
+.sm-picker .picker-header span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: .1rem;
+}
+.sm-picker .picker-header span i {
+  display: inline-block;
+  width: .6rem;
+  height: .4rem;
+}
+.sm-picker .picker-header span i.icon-prev{
+  background-image: url(../images/picker-prev.png);
+}
+.sm-picker .picker-header span i.icon-next{
+  background-image: url(../images/picker-next.png);
+}
+.sm-picker .picker-header a{
+  width: 1rem;
+  text-align: right;
+  color: #6D87FB;
+  font-size: .32rem;
+}
+.sm-picker .picker-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.sm-picker .picker-body .swiper-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: 4.76rem;
+}
+.sm-picker .picker-body .swiper-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+}
+.sm-picker .picker-body .swiper-container:after {
+  content: '';
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  top: 102px;
+  z-index: 3;
+  border-top: 1px solid #AFB2B6;
+  border-bottom: 1px solid #AFB2B6;
+}
+.sm-picker .picker-body .swiper-slide {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  color: #666;
+}
+.sm-picker .picker-body .swiper-slide-active {
+  color: #000;
+}
+.sm-picker.toggle {
+  -webkit-transform: translate(0, 0);
+}
+.sm-mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
 }

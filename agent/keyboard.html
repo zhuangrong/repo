@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+$(function(){
+  $('input').on('focus',function(event){      
+       //自动反弹 输入法高度自适应
+        var target = this;
+        setTimeout(function(){
+            target.scrollIntoViewIfNeeded();
+            $("#show").text("a")
+        },100);
+    });
+})
+</script>
+<style>
+  html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+  }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  li {
+    list-style: none;
+  }
+  body {
+    color: #333;
+    background-color: #F5F5F5;
+    font-size: .28rem;
+    line-height: 1.6;
+    font-family: -apple-system-font, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
+  }
+  .publish{
+    height: 50px;
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px;
+    border-top: 1px solid  #ddd;
+  }
+  .publish input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body style="background-color:#fff">
+<div id="show"></div>
+<div class="publish">
+  <input type="date">
+</div>
+</body>
+</html>

@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no" />
-<title>都博睿</title>
+<title>首届婴语大赛</title>
 <link rel="stylesheet" href="css/dobrego.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/html2canvas.js"></script>
@@ -37,10 +37,19 @@ function pageNext(event,answer){
 
   if(answer == "correct"){
     level = level + 1
+    $("#correct-audio")[0].currentTime = 0
+    $("#correct-audio")[0].play()
+  }
+  if(answer == "error"){
+    $("#error-audio")[0].currentTime = 0
+    $("#error-audio")[0].play()
   }
 
   // 评分
   $next.find(".level-bg").addClass("l0" + level)
+
+  //点击音效
+  $("#click")[0].play()
 
 }
 
@@ -51,6 +60,11 @@ function pageNext(event,answer){
 <i class="icon-music play"></i>
 <audio autoplay="autoplay"  loop="loop" id="audio" src="images/audio.mp3"></audio>
 <!-- // 音乐 -->
+<!-- 点击音效 -->
+<audio id="click" src="images/click.mp3"></audio>
+<audio id="error-audio" src="images/error.mp3"></audio>
+<audio id="correct-audio" src="images/correct.mp3"></audio>
+<!-- // 点击音效 -->
 
 <!-- 开始 -->
 <div class="page">
@@ -103,7 +117,7 @@ function pageNext(event,answer){
   <div class="pop-picture c02">
     <i style="background-image:url(images/baby02.png)"></i>
   </div>
-  <div class="question">
+  <div class="question c02">
     <p>Q2:宝宝我脸红了因为？</p>
   </div>
   <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">我饿了</a>
@@ -159,8 +173,8 @@ function pageNext(event,answer){
   <div class="pop-picture c02">
     <i style="background-image:url(images/baby04.png)"></i>
   </div>
-  <div class="question">
-    <p>Q2:吸吸手手、吐吐泡泡，妈妈猜猜看宝宝在干嘛？</p>
+  <div class="question c02">
+    <p>Q4:吸吸手手、吐吐泡泡，妈妈猜猜看宝宝在干嘛？</p>
   </div>
   <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'correct')">宝宝自己玩</a>
   <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">宝宝想喝奶</a>
@@ -215,7 +229,7 @@ function pageNext(event,answer){
   <div class="pop-picture c02">
     <i style="background-image:url(images/baby06.png)"></i>
   </div>
-  <div class="question">
+  <div class="question c02">
     <p>Q6:宝宝最近特安静无精打采的~~肿么了？</p>
   </div>
   <a href="javascript:;" class="btn c02" onclick="pageNext(this, 'error')">宝宝要静静</a>
@@ -232,7 +246,7 @@ function pageNext(event,answer){
   <div class="result">
     <p>健康的宝宝眼神总是明亮有神、转动自如的。若发现宝宝最近眼神黯然呆滞、无光少神，那很可能是身体不适的征兆，也许宝宝已经患上了疾病。这时最好带宝宝去看大夫，千万不要迟疑！</p>
   </div>
-  <a href="javascript:;" class="btn mt" onclick="pageNext(this)">下一题</a>
+  <a href="javascript:;" class="btn mt" onclick="pageNext(this)" id="lastBtn">下一题</a>
   <div class="blank01"></div>
 </div>
 <!-- answer6 -->
@@ -261,7 +275,7 @@ function pageNext(event,answer){
         <img src="images/save.png" id="save">
       </li>
       <li>
-        <a href="javascript:;" class="btn more">领取”妈妈加油”锦囊<br>让妈妈和宝宝更亲近</a>
+        <a href="http://icarexm.com/" class="btn more">领取”妈妈加油”锦囊<br>让妈妈和宝宝更亲近</a>
       </li>
     </ul>
   </div>
@@ -270,14 +284,26 @@ function pageNext(event,answer){
 </div>
 <script>
 $(function(){
-  setTimeout(function(){
-    html2canvas($("#capture"), {
-      onrendered: function(canvas) {
-        // document.body.appendChild(canvas);
-        $(".result-img").attr("src",canvas.toDataURL("image/png"))
+  $("#lastBtn").on("click",function(){
+    var times = 0;
+    var imgbase64= setInterval(function(){
+          captureImg()
+        }, 1000)
+
+    function captureImg(){
+      html2canvas($("#capture"), {
+        onrendered: function(canvas){
+          // document.body.appendChild(canvas);
+          $(".result-img").attr("src",canvas.toDataURL("image/png"))
+        }
+      })
+      times += 1
+      if(times > 5) {
+        clearInterval(imgbase64)
       }
-    });
-  }, 2000)
+    }
+
+  })
 });
 </script>
 <!-- // level -->

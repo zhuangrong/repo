@@ -101,7 +101,7 @@ em, h3 {
   height: 1.8rem;
 }
 .blank01{
-  height: 1rem;
+  height: 0.7rem;
 }
 .pop01{
   background-color: #7DC6B3;
@@ -153,7 +153,7 @@ em, h3 {
   background:linear-gradient(0deg, #DD8685, #EF9896);
 }
 .btn.mt{
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 /* 头像图片 */
 .pop-picture{
@@ -209,6 +209,9 @@ em, h3 {
   margin: 0 auto;
   line-height: 1.4;
 }
+.question.c02 p{
+  color: #F19A98;
+}
 /* 屏幕小于360 */
 @media (max-width: 360px){
   html{
@@ -229,7 +232,7 @@ em, h3 {
   color: #fff;
   font-size: .36rem;
   text-align: justify;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 .result.error{
   background-color: #F19A98;
@@ -280,6 +283,17 @@ em, h3 {
   text-align: justify;
   line-height: 1.8;
   padding-bottom: .3rem;
+}
+.level::before{
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.19rem;
+  background-image: url(../images/identify.png);
+  position: absolute;
+  top: 2.1rem;
+  right: 0.7rem;
+  z-index: 999999;
 }
 .level h3{
   padding: .5rem .5rem 0;
@@ -383,8 +397,8 @@ em, h3 {
   height: .58rem;
   display: block;
   position: fixed;
-  top: 0.3rem;
-  left: 0.3rem;
+  top: 1.2rem;
+  right: 0.3rem;
   background-image: url(../images/icon-music.png);
 }
 .play{
