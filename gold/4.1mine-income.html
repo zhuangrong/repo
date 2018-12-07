@@ -11,9 +11,137 @@
 <link rel="stylesheet" href="css/gold.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
-<script>
-
+<script src="js/datePicker.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 弹出日期选择
+  var datePicker = new DatePicker({
+            cid:"caseid007",
+            onConfirm: function(result){
+              alert(result)
+              //根据实际情况窃取result中的数字
+            }
+      });
+})
 </script>
+<style>
+/* picker */
+.sm-picker {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .3s;
+  background-color: #D0D5DC;
+}
+.sm-picker .picker-header {
+  padding: .1rem .15rem .1rem;
+  border-bottom: 1px solid #dedede;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #F1F1F2;
+}
+.sm-picker .picker-header span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: .1rem;
+}
+.sm-picker .picker-header span i {
+  display: inline-block;
+  width: .6rem;
+  height: .4rem;
+}
+.sm-picker .picker-header span i.icon-prev{
+  background-image: url(../images/picker-prev.png);
+}
+.sm-picker .picker-header span i.icon-next{
+  background-image: url(../images/picker-next.png);
+}
+.sm-picker .picker-header a{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  color: #6D87FB;
+  font-size: .32rem;
+  text-align: left;
+}
+.sm-picker .picker-header a:last-child{
+  text-align: right;
+}
+.sm-picker .picker-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+}
+.sm-picker .picker-body:after  {
+  content: '-';
+  position: absolute;
+  top: 98px;
+  left: 49%;
+  font-size: .5rem;
+}
+.sm-picker .picker-body .swiper-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: 4.76rem;
+}
+.sm-picker .picker-body .swiper-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+}
+.sm-picker .picker-body .swiper-container:after {
+  content: '';
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  top: 102px;
+  z-index: 3;
+  border-top: 1px solid #AFB2B6;
+  border-bottom: 1px solid #AFB2B6;
+}
+.sm-picker .picker-body .swiper-slide {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  color: #666;
+}
+.sm-picker .picker-body .swiper-slide-active {
+  color: #000;
+  position: relative;
+}
+.sm-picker.toggle {
+  -webkit-transform: translate(0, 0);
+}
+.sm-mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+</style>
 </head>
 <body class="bg01">
 <!-- header -->
@@ -23,40 +151,28 @@
   <a></a>
 </div>
 <!-- //header -->
+<!-- 弹出日期 datePicker -->
+<div>
+  <div class="sm-mask" data-case="caseid007"></div>
+  <div class="sm-picker" data-case="caseid007">
+    <div class="picker-header">
+      <a href="javascript:;" class="cancel">取消</a>
+      <a href="javascript:;">确定</a>
+    </div>
+    <div class="picker-body">
+      <!--swiper-->
+    </div>
+  </div>
+</div>
+<!-- //datePicker -->
 <div class="income-list">
 	<div class="in-row">
-		<div class="col10"><span>日期</span></div>
+		<div class="col10"><span data-case="caseid007">日期</span></div>
 		<div class="col40">业务名称</div>
 		<div class="col20">办理人</div>
 		<div class="col15"><span>类型</span></div>
 		<div class="col15">金额</div>
 	</div>
-	<div class="in-row">
-		<div class="col10">12-31</div>
-		<div class="col40">业务名称最多九个字</div>
-		<div class="col20">陈杰</div>
-		<div class="col15">佣金</div>
-		<div class="col15">10</div>
-	</div>
-	<div class="in-row">
-		<div class="col10">12-31</div>
-		<div class="col40">业务名称最多九个字</div>
-		<div class="col20">陈杰</div>
-		<div class="col15">佣金</div>
-		<div class="col15">10</div>
-	</div>
-</div>
-<div class="income-total">
-  <ul>
-    <li>
-      <h3>业务收入：<em>99.6</em></h3>
-      <p>当月团金：<em>4.98</em></p>
-    </li>
-    <li class="active">
-      <h3>当月绩效：<em>104.45</em></h3>
-      <p>合计收入：<em>104.45</em></p>
-    </li>
-  </ul>
 </div>
 
 </body>
