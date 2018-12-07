@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>finance</title>
+<link rel="stylesheet" href="css/finance.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  //底部弹出菜单
+  $(".icon-menu").on("click",function(){
+    $("#menu").toggleClass('show')
+    $(".mask").toggle()
+  })
+
+  //点击遮罩层隐藏
+  $(".mask").on("click",function(e){
+    e.stopPropagation()
+    $(".mask").toggle()
+    $("#menu").toggleClass('show')
+  })
+})
+</script>
+</head>
+<body>
+  <div class="icon-menu"></div>
+
+
+  <div class="fn-wraper">
+    <!-- 导航 -->
+  	<div class="fn-menu" id="menu">
+        导航
+  	</div>
+    <!-- //导航 -->
+    <!-- 内容 -->
+    <div class="fn-container">
+      <div class="mask"></div>
+      内容
+    </div>
+    <!-- //内容 -->
+
+  </div>
+
+
+</body>
+</html>
