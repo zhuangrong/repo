@@ -20,7 +20,7 @@ li {
   list-style: none;
 }
 body {
-  color: #333;
+  color: #161616;
   background-color: #F5F5F5;
   font-size: .32rem;
   line-height: 1.6;
@@ -242,7 +242,7 @@ nav a i.icon-nav01{
   background-image: url(../images/icon-nav01.png);
 }
 nav a.active{
-  color: #6D87FB;
+  color: #0CE8B9;
 }
 nav a i.icon-nav02{
   background-image: url(../images/icon-nav02.png);
@@ -250,8 +250,14 @@ nav a i.icon-nav02{
 nav a i.icon-nav03{
   background-image: url(../images/icon-nav03.png);
 }
-nav a i.icon-nav04{
-  background-image: url(../images/icon-nav04.png);
+nav a.active i.icon-nav01{
+  background-image: url(../images/icon-nav01-active.png);
+}
+nav a.active i.icon-nav02{
+  background-image: url(../images/icon-nav02-active.png);
+}
+nav a.active i.icon-nav03{
+  background-image: url(../images/icon-nav03-active.png);
 }
 /* list 联系客服 */
 .list{
@@ -325,4 +331,96 @@ nav a i.icon-nav04{
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: #0BE8B9;
+}
+/* 总资产 */
+.total{
+  height: 1.5rem;
+  background: rgba(255,255,255,1);
+  box-shadow: 0.0rem 0.05rem .2rem 0.0rem rgba(119,119,119,0.16);
+  border-radius: .5rem;
+  margin: .4rem .5rem;
+}
+.total dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.total dl dt{
+  width: .88rem;
+  margin: .3rem .3rem .3rem .5rem;
+}
+.total dl dd{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+}
+.total dl dd h3{
+  margin-top: .2rem;
+}
+.total dl dd p label{
+  color: #0BE8B9;
+  margin-right: .3rem;
+}
+/* tabs2 */
+.tabs2{
+  background-color: #eee;
+}
+.tabs2 ul{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.tabs2 li{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: .88rem;
+  line-height: .88rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+.tabs2 li.curr{
+  color: #fff;
+  background-color: #0BE8B9;
+}
+/* 报单 */
+.order-list{
+  padding: .3rem;
+  background-color: #fff;
+}
+.order-list dl{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  border-bottom: 1px solid  #F2F2F2;
+  padding: .1rem 0;
+}
+.order-list dl dd{
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+}
+.order-list dl dt{
+  font-size: .36rem;
+  color: #0BE8B9;
+  padding: 0 .3rem;
+}
+.order-list dl dd h3 em{
+  display: inline-block;
+  border-radius: .1rem;
+  width: 1rem;
+  height: .3rem;
+  line-height: .3rem;
+  color: #0BE8B9;
+  font-size: .24rem;
+  border: 1px solid  #0BE8B9;
+  text-align: center;
+}
+.order-list dl dd span{
+  color: #666;
+  font-size: .24rem;
+}
+.bgw{
+  background-color: #fff !important;
 }
