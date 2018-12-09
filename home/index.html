@@ -6,9 +6,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no" />
-<title>agent</title>
+<title>home</title>
 <link rel="stylesheet" href="css/home.css" />
+<link rel="stylesheet" href="css/swiper.min.css" />
 <script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
   $.TabChange = function(obj,num){
@@ -27,90 +29,76 @@ $(function(){
 <!-- header -->
 <div class="header">
   <a class="icon-back" href="javascrit:;"></a>
-  <span>总资产</span>
+  <span>首页</span>
   <a></a>
 </div>
 <!-- //header -->
+<!-- banner -->
+<div class="banner">
+  <!-- Swiper -->
+  <section class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+  </section>
+  <!-- //Swiper -->
+  <script>
+  var swiper01 = new Swiper('.swiper01', {
+      pagination: '.sp1',
+      paginationClickable: true,
+      autoplay: 2000,
+      loop: true
+  });
+  </script>
+</div>
+<!-- // banner -->
+<script>
+var swiper01 = new Swiper('.swiper01', {
+    pagination: '.sp1',
+    paginationClickable: true,
+    autoplay: 2000,
+    loop: true
+});
+</script>
 <!-- 总资产 -->
-<div class="total">
+<div class="assets-item">
   <dl>
-    <dt><img src="images/pic01.png" alt=""></dt>
+    <dt><h3>总资产</h3><span>￥3595.00</span></dt>
     <dd>
-      <h3>总资产</h3>
-      <p><label>金额</label>￥0.060616</p>
+      <img src="images/pic01.png" alt="">
+    </dd>
+  </dl>
+  <dl>
+    <dt><h3>总资产</h3><span>￥3595.00</span></dt>
+    <dd>
+      <img src="images/pic01.png" alt="">
+    </dd>
+  </dl>
+  <dl>
+    <dt><h3>总资产</h3><span>￥3595.00</span></dt>
+    <dd>
+      <img src="images/pic02.png" alt="">
+    </dd>
+  </dl>
+  <dl>
+    <dt><h3>总资产</h3><span>￥3595.00</span></dt>
+    <dd>
+      <img src="images/pic02.png" alt="">
     </dd>
   </dl>
 </div>
 <!-- //总资产 -->
-<!-- tabs -->
-<div class="tabs2" id="tabs">
-  <ul>
-    <li>收益</li>
-    <li class="curr">消费</li>
-    <li>提现</li>
-  </ul>
-</div>
-<div class="tab-box1">
-  <div>
-    <!-- 收益 -->
-    <div class="order-list">
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-      <dl>
-        <dd>
-          <h3>报单 <em>ETH</em></h3>
-          <span>2018年10月14日</span>
-        </dd>
-        <dt>￥1530.00</dt>
-      </dl>
-    </div>
-    <!-- //收益 -->
-  </div>
-  <div style="display:none">
-    <!-- 消费 -->
-    消费
-    <!-- //消费 -->
-  </div>
-  <div style="display:none">
-    <!-- 提现 -->
-    提现
-    <!-- //提现 -->
-  </div>
-</div>
-<!-- //tabs -->
+
 
 
 <div class="nav-blank"></div>
