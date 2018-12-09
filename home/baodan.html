@@ -11,6 +11,7 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 $(function(){
+  // tabs
   $.TabChange = function(obj,num){
     $("li","#" + obj).each(function(index){
         $(this).click(function(i){
@@ -20,6 +21,19 @@ $(function(){
     })
   }
   $.TabChange("tabs",1)
+
+  // 图片上传
+  var tmpl = '<li style="background-image:url(#url#)"></li>'
+  $(".uploader-wrap").each(function(){
+    var _this = $(this)
+    $(this).find(".uploader-file input").on("change", function(e){
+      var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+          src = url.createObjectURL(files[0]);
+          _this.find(".uploader-file").css({"opacity":"0"});
+          _this.find(".uploader-pic").html($(tmpl.replace('#url#', src)));
+    })
+  })
+  
 })
 </script>
 </head>
@@ -93,6 +107,31 @@ $(function(){
           </li>
         </ul>
       </div>
+      <!-- 上传 -->
+      <div class="gold-upload">
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+      </div>
+      <!-- //上传 -->
     </div>
     <div class="bao-tip">
       第一次报单，用户直属上级可获得THT奖励
