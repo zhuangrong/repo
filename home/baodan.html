@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>agent</title>
+<link rel="stylesheet" href="css/home.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // tabs
+  $.TabChange = function(obj,num){
+    $("li","#" + obj).each(function(index){
+        $(this).click(function(i){
+          $("div.tab-box" + num + " > div").eq(index).show().siblings().hide();
+          $(this).addClass("curr").siblings().removeClass("curr");
+        })
+    })
+  }
+  $.TabChange("tabs",1)
+
+  // 图片上传
+  var tmpl = '<li style="background-image:url(#url#)"></li>'
+  $(".uploader-wrap").each(function(){
+    var _this = $(this)
+    $(this).find(".uploader-file input").on("change", function(e){
+      var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+          src = url.createObjectURL(files[0]);
+          _this.find(".uploader-file").css({"opacity":"0"});
+          _this.find(".uploader-pic").html($(tmpl.replace('#url#', src)));
+    })
+  })
+  
+})
+</script>
+</head>
+<body class="bgw">
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>报单系统</span>
+  <a></a>
+</div>
+<!-- //header -->
+<!-- 总资产 -->
+<div class="total">
+  <dl>
+    <dt><img src="images/pic01.png" alt=""></dt>
+    <dd>
+      <h3>余额</h3>
+      <p>
+        <label>ETH:</label>2000
+        <label>TET:</label>2000
+       </p>
+    </dd>
+  </dl>
+</div>
+<!-- //总资产 -->
+<!-- 报单人 -->
+<div class="form2">
+  <ul>
+    <li>
+      <label>报单人</label>
+      <input type="text" placeholder="">
+    </li>
+  </ul>
+</div>
+<!-- //报单人 -->
+<!-- tabs -->
+<div class="tabs2" id="tabs">
+  <ul>
+    <li class="curr">方式一</li>
+    <li>方式二</li>
+  </ul>
+</div>
+<div class="tab-box1">
+  <div>
+    <!-- 方式一 -->
+    <div class="bao-tip">
+      若暂无报单情况，则只可选择方式一
+    </div>
+    <div class="bao-box">
+      <div class="item-line">
+        <ul>
+          <li>
+            <i class="icon-bao01"></i>
+            <span>人民币</span>
+            <em>RMB</em>
+            <label>请选择</label>
+          </li>
+          <li>
+            <i class="icon-bao02"></i>
+            <span>ETH</span>
+            <em>≈</em>
+            <label>56</label>
+          </li>
+        </ul>
+      </div>
+      <div class="form2 fc02">
+        <ul>
+          <li>
+            <label>转币地址</label>
+            <input type="text" placeholder="请输入转币地址">
+          </li>
+        </ul>
+      </div>
+      <!-- 上传 -->
+      <div class="gold-upload">
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+        <div class="uploader-wrap">
+          <ul class="uploader-pic">
+          </ul>
+          <div class="uploader-file">
+              <input type="file" accept="image/*"/>
+          </div>
+        </div>
+      </div>
+      <!-- //上传 -->
+    </div>
+    <div class="bao-tip">
+      第一次报单，用户直属上级可获得THT奖励
+    </div>
+    <a class="btn btn-full">提交</a>
+    <!-- //方式一 -->
+  </div>
+  <div style="display:none">
+    <!-- 方式二 -->
+    方式二
+    <!-- //方式二 -->
+  </div>
+</div>
+<!-- //tabs -->
+
+
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>团队</span></a>
+	<a href="#"><i class="icon-nav03_active"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
