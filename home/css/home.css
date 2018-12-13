@@ -806,3 +806,101 @@ nav a.active i.icon-nav03{
   font-size: .28rem;
   margin: 0 0 .3rem;
 }
+/* 团队 */
+.team-wrap{
+  background-color: #F5F5F5;
+  position: relative;
+}
+.team{
+  margin-top: .1rem;
+}
+.team .bx{
+  width: 1.2rem;
+  height: .5rem;
+  line-height: .5rem;
+  border-radius: .1rem;
+  color: #fff;
+  background-color: #85BCFF;
+  position: absolute;
+  text-align: center;
+  font-size: .28rem;
+}
+.team .bx i{
+  position: absolute;
+  top: .1rem;
+  left: 1.45rem;
+  width: .3rem;
+  height: .3rem;
+}
+.team .bx i.plus{
+  background-image: url(../images/icon-plus2.png);
+}
+.team .bx i.minus{
+  background-image: url(../images/icon-minus.png);
+}
+.team .bx i::before{
+  content: '';
+  position: absolute;
+  top: 0.15rem;
+  right: 0.25rem;
+  width: .35rem;
+  height: 1px;
+  background-color: #85BCFF;
+  z-index: -1;
+}
+.team .bx i::after{
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  right: 0.14rem;
+  width: 1px;
+  height: 1.6rem;
+  background-color: #85BCFF;
+  z-index: -1;
+}
+.team .bx.level01{
+  top: 2rem;
+  left: 0.3rem;
+  background-color: #0BE8B9;
+}
+.team .bx.level02{
+  left: 2.3rem;
+}
+.team .bx.level03{
+  left: 4.3rem;
+}
+.team .bx.level03{
+  top: 0.65rem;
+}
+.team .bx.level02.first{
+  top: 1.15rem;
+}
+.team .bx.level02.second{
+  top: 2.75rem;
+}
+.team .bx:before{
+  position: absolute;
+  top: .25rem;
+  left: -.4rem;
+  content: '';
+  display: block;
+  width: .4rem;
+  height: 1px;
+  background-color: #85BCFF;
+}
+.team .bx.level01:before{
+  display: none;
+}
+.team .bx.level02 i::after{
+  top: -0.35rem;
+  height: 1rem;
+}
+.team .bx.level03.second{
+  top: 1.65rem;
+}
+.team .bx.level03.first.third{
+  top: 2.25rem;
+}
+.team .bx.level03.second.four{
+  top: 3.25rem;
+}
