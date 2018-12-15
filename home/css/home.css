@@ -851,15 +851,15 @@ nav a.active i.icon-nav03{
 .team .bx i::after{
   content: '';
   position: absolute;
-  top: -0.7rem;
+  top: -1.1rem;
   right: 0.14rem;
   width: 1px;
-  height: 1.6rem;
+  height: 2.8rem;
   background-color: #85BCFF;
   z-index: -1;
 }
 .team .bx.level01{
-  top: 2rem;
+  top: 3rem;
   left: 0.3rem;
   background-color: #0BE8B9;
 }
@@ -870,13 +870,13 @@ nav a.active i.icon-nav03{
   left: 4.3rem;
 }
 .team .bx.level03{
-  top: 0.65rem;
+  top: 1.05rem;
 }
 .team .bx.level02.first{
-  top: 1.15rem;
+  top: 1.75rem;
 }
 .team .bx.level02.second{
-  top: 2.75rem;
+  top: 4.55rem;
 }
 .team .bx:before{
   position: absolute;
@@ -892,15 +892,49 @@ nav a.active i.icon-nav03{
   display: none;
 }
 .team .bx.level02 i::after{
-  top: -0.35rem;
-  height: 1rem;
+  top: -0.55rem;
+  height: 1.4rem;
 }
 .team .bx.level03.second{
-  top: 1.65rem;
+  top: 2.45rem;
 }
 .team .bx.level03.first.third{
-  top: 2.25rem;
+  top: 3.85rem;
 }
 .team .bx.level03.second.four{
-  top: 3.25rem;
+  top: 5.25rem;
+}
+.team .bx.level03 i::after{
+  height: 0.8rem;
+  top: -0.25rem;
+}
+.team .bx.level03i::after{
+  top: -0.4rem;
+}
+.team .bx.level04{
+  left: 6.3rem;
+}
+.team .bx.level04.first{
+  top: 0.65rem;
+}
+.team .bx.level04.second{
+  top: 1.45rem;
+}
+.team .bx.level04.first.third{
+  top: 2.05rem;
+}
+.team .bx.level04.second.four{
+  top: 2.85rem;
+}
+.team .bx.level04.first.a{
+  top: 3.45rem;
+}
+.team .bx.level04.second.a{
+  top: 4.25rem;
+}
+.team .bx.level04.third.a{
+  top: 4.85rem;
+}
+.team .bx.level04.four.a{
+  top: 5.65rem;
 }
