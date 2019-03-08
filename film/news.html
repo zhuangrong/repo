@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>film</title>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<link rel="stylesheet" href="css/film.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+})
+</script>
+</head>
+<body>
+<div class="global-title">
+  <img src="images/global-title.png">
+</div>
+<!-- banner -->
+<div class="banner">
+  <div class="banner-clip">
+    <img src="images/banner-clip.png">
+  </div>
+  <!-- Swiper -->
+  <section class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner02.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner02.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner02.png" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+  </section>
+  <!-- //Swiper -->
+  <script>
+  var swiper01 = new Swiper('.swiper01', {
+      pagination: '.sp1',
+      paginationClickable: true,
+      autoplay: 2000,
+      loop: true
+  });
+  </script>
+</div>
+<!-- // banner -->
+<script>
+var swiper01 = new Swiper('.swiper01', {
+    pagination: '.sp1',
+    paginationClickable: true,
+    autoplay: 2000,
+    loop: true
+});
+</script>
+<!-- 资讯标题 -->
+<div class="news-title">
+
+</div>
+<!-- //资讯标题 -->
+<div class="m-wraper">
+  <!-- 资讯列表 -->
+  <div class="news-list">
+    <a href="#">
+      <h3>《风中有朵雨做的云》发布会，井柏然：娄烨帮我打开表的一扇窗</h3>
+      <ul>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+      </ul>
+      <span>猫眼资讯<em>33分钟前</em></span>
+    </a>
+    <a href="#">
+      <h3>《风中有朵雨做的云》发布会，井柏然：娄烨帮我打开表的一扇窗</h3>
+      <ul>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+      </ul>
+      <span>猫眼资讯<em>33分钟前</em></span>
+    </a>
+    <a href="#">
+      <h3>《风中有朵雨做的云》发布会，井柏然：娄烨帮我打开表的一扇窗</h3>
+      <ul>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+        <li>
+          <img src="images/news-pic.png">
+        </li>
+      </ul>
+      <span>猫眼资讯<em>33分钟前</em></span>
+    </a>
+  </div>
+  <!-- //资讯列表 -->
+</div>
+<!--导航-->
+<div class="nav-blank"></div>
+<nav>
+	<a href="#"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#" class="active"><i class="icon-nav02"></i><span>资讯</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>支持</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
