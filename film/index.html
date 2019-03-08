@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title>film</title>
+<link rel="stylesheet" href="css/film.css" />
+<link rel="stylesheet" href="css/swiper.min.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+})
+</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+  <a class="icon-back" href="javascrit:;"></a>
+  <span>首页</span>
+  <a></a>
+</div>
+<!-- //header -->
+<!-- banner -->
+<div class="banner">
+  <!-- Swiper -->
+  <section class="swiper-container swiper01">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner01.png" alt="">
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination sp1"></div>
+  </section>
+  <!-- //Swiper -->
+  <script>
+  var swiper01 = new Swiper('.swiper01', {
+      pagination: '.sp1',
+      paginationClickable: true,
+      autoplay: 2000,
+      loop: true
+  });
+  </script>
+</div>
+<!-- // banner -->
+<script>
+var swiper01 = new Swiper('.swiper01', {
+    pagination: '.sp1',
+    paginationClickable: true,
+    autoplay: 2000,
+    loop: true
+});
+</script>
+
+
+
+
+<div class="nav-blank"></div>
+<!--导航-->
+<nav>
+	<a href="#" class="active"><i class="icon-nav01"></i><span>首页</span></a>
+	<a href="#"><i class="icon-nav02"></i><span>资讯</span></a>
+	<a href="#"><i class="icon-nav03"></i><span>支持</span></a>
+	<a href="#"><i class="icon-nav04"></i><span>我的</span></a>
+</nav>
+<!--//导航-->
+</body>
+</html>
